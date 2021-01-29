@@ -68,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-splunk/sdk/go/splunk"
+	"github.com/pulumi/pulumi-splunk/sdk/go/splunk/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

@@ -3,7 +3,7 @@ title: "Module types/input"
 title_tag: "Module types/input | Package @pulumi/splunk | Node.js SDK"
 linktitle: "input"
 meta_desc: "Explore members of the input module in the @pulumi/splunk package."
-git_sha: "39b37550c4f3c485905c5b408488f2215b66da51"
+git_sha: "0f38d8cf474414dda4ca015d9c364aff5b28618a"
 block_external_search_index: true
 ---
 
@@ -42,994 +42,994 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="AppsLocalAcl" data-link-title="AppsLocalAcl">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L7">
         interface <strong>AppsLocalAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>AppsLocalAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="AppsLocalAcl-app">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L8">property <b>app</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L8">property <b>app</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>app?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AppsLocalAcl-canChangePerms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L9">property <b>canChangePerms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L9">property <b>canChangePerms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canChangePerms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AppsLocalAcl-canShareApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L10">property <b>canShareApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L10">property <b>canShareApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AppsLocalAcl-canShareGlobal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L11">property <b>canShareGlobal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L11">property <b>canShareGlobal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareGlobal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AppsLocalAcl-canShareUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L12">property <b>canShareUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L12">property <b>canShareUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AppsLocalAcl-canWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L13">property <b>canWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L13">property <b>canWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AppsLocalAcl-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L14">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L14">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AppsLocalAcl-reads">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L15">property <b>reads</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L15">property <b>reads</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reads?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AppsLocalAcl-removable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L16">property <b>removable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L16">property <b>removable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AppsLocalAcl-sharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L17">property <b>sharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L17">property <b>sharing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AppsLocalAcl-writes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L18">property <b>writes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L18">property <b>writes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ConfigsConfAcl" data-link-title="ConfigsConfAcl">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L21">
         interface <strong>ConfigsConfAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ConfigsConfAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="ConfigsConfAcl-app">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L22">property <b>app</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L22">property <b>app</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>app?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigsConfAcl-canChangePerms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L23">property <b>canChangePerms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L23">property <b>canChangePerms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canChangePerms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigsConfAcl-canShareApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L24">property <b>canShareApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L24">property <b>canShareApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigsConfAcl-canShareGlobal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L25">property <b>canShareGlobal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L25">property <b>canShareGlobal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareGlobal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigsConfAcl-canShareUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L26">property <b>canShareUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L26">property <b>canShareUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigsConfAcl-canWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L27">property <b>canWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L27">property <b>canWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigsConfAcl-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L28">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L28">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigsConfAcl-reads">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L29">property <b>reads</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L29">property <b>reads</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reads?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigsConfAcl-removable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L30">property <b>removable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L30">property <b>removable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigsConfAcl-sharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L31">property <b>sharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L31">property <b>sharing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigsConfAcl-writes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L32">property <b>writes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L32">property <b>writes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DataUiViewsAcl" data-link-title="DataUiViewsAcl">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L35">
         interface <strong>DataUiViewsAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DataUiViewsAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="DataUiViewsAcl-app">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L36">property <b>app</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L36">property <b>app</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>app?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataUiViewsAcl-canChangePerms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L37">property <b>canChangePerms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L37">property <b>canChangePerms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canChangePerms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataUiViewsAcl-canShareApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L38">property <b>canShareApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L38">property <b>canShareApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataUiViewsAcl-canShareGlobal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L39">property <b>canShareGlobal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L39">property <b>canShareGlobal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareGlobal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataUiViewsAcl-canShareUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L40">property <b>canShareUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L40">property <b>canShareUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataUiViewsAcl-canWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L41">property <b>canWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L41">property <b>canWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataUiViewsAcl-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L42">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L42">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataUiViewsAcl-reads">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L43">property <b>reads</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L43">property <b>reads</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reads?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataUiViewsAcl-removable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L44">property <b>removable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L44">property <b>removable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataUiViewsAcl-sharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L45">property <b>sharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L45">property <b>sharing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataUiViewsAcl-writes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L46">property <b>writes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L46">property <b>writes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="IndexesAcl" data-link-title="IndexesAcl">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L49">
         interface <strong>IndexesAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>IndexesAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="IndexesAcl-app">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L50">property <b>app</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L50">property <b>app</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>app?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IndexesAcl-canChangePerms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L51">property <b>canChangePerms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L51">property <b>canChangePerms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canChangePerms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IndexesAcl-canShareApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L52">property <b>canShareApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L52">property <b>canShareApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IndexesAcl-canShareGlobal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L53">property <b>canShareGlobal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L53">property <b>canShareGlobal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareGlobal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IndexesAcl-canShareUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L54">property <b>canShareUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L54">property <b>canShareUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IndexesAcl-canWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L55">property <b>canWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L55">property <b>canWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IndexesAcl-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L56">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L56">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IndexesAcl-reads">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L57">property <b>reads</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L57">property <b>reads</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reads?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IndexesAcl-removable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L58">property <b>removable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L58">property <b>removable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IndexesAcl-sharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L59">property <b>sharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L59">property <b>sharing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IndexesAcl-writes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L60">property <b>writes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L60">property <b>writes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="InputsHttpEventCollectorAcl" data-link-title="InputsHttpEventCollectorAcl">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L63">
         interface <strong>InputsHttpEventCollectorAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InputsHttpEventCollectorAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="InputsHttpEventCollectorAcl-app">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L64">property <b>app</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L64">property <b>app</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>app?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsHttpEventCollectorAcl-canChangePerms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L65">property <b>canChangePerms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L65">property <b>canChangePerms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canChangePerms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsHttpEventCollectorAcl-canShareApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L66">property <b>canShareApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L66">property <b>canShareApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsHttpEventCollectorAcl-canShareGlobal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L67">property <b>canShareGlobal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L67">property <b>canShareGlobal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareGlobal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsHttpEventCollectorAcl-canShareUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L68">property <b>canShareUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L68">property <b>canShareUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsHttpEventCollectorAcl-canWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L69">property <b>canWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L69">property <b>canWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsHttpEventCollectorAcl-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L70">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L70">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsHttpEventCollectorAcl-reads">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L71">property <b>reads</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L71">property <b>reads</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reads?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsHttpEventCollectorAcl-removable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L72">property <b>removable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L72">property <b>removable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsHttpEventCollectorAcl-sharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L73">property <b>sharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L73">property <b>sharing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsHttpEventCollectorAcl-writes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L74">property <b>writes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L74">property <b>writes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="InputsMonitorAcl" data-link-title="InputsMonitorAcl">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L77">
         interface <strong>InputsMonitorAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InputsMonitorAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="InputsMonitorAcl-app">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L78">property <b>app</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L78">property <b>app</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>app?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsMonitorAcl-canChangePerms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L79">property <b>canChangePerms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L79">property <b>canChangePerms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canChangePerms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsMonitorAcl-canShareApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L80">property <b>canShareApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L80">property <b>canShareApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsMonitorAcl-canShareGlobal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L81">property <b>canShareGlobal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L81">property <b>canShareGlobal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareGlobal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsMonitorAcl-canShareUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L82">property <b>canShareUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L82">property <b>canShareUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsMonitorAcl-canWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L83">property <b>canWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L83">property <b>canWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsMonitorAcl-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L84">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L84">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsMonitorAcl-reads">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L85">property <b>reads</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L85">property <b>reads</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reads?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsMonitorAcl-removable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L86">property <b>removable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L86">property <b>removable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsMonitorAcl-sharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L87">property <b>sharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L87">property <b>sharing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsMonitorAcl-writes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L88">property <b>writes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L88">property <b>writes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="InputsScriptAcl" data-link-title="InputsScriptAcl">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L91">
         interface <strong>InputsScriptAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InputsScriptAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="InputsScriptAcl-app">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L92">property <b>app</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L92">property <b>app</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>app?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsScriptAcl-canChangePerms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L93">property <b>canChangePerms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L93">property <b>canChangePerms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canChangePerms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsScriptAcl-canShareApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L94">property <b>canShareApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L94">property <b>canShareApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsScriptAcl-canShareGlobal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L95">property <b>canShareGlobal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L95">property <b>canShareGlobal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareGlobal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsScriptAcl-canShareUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L96">property <b>canShareUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L96">property <b>canShareUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsScriptAcl-canWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L97">property <b>canWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L97">property <b>canWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsScriptAcl-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L98">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L98">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsScriptAcl-reads">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L99">property <b>reads</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L99">property <b>reads</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reads?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsScriptAcl-removable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L100">property <b>removable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L100">property <b>removable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsScriptAcl-sharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L101">property <b>sharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L101">property <b>sharing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsScriptAcl-writes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L102">property <b>writes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L102">property <b>writes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="InputsTcpCookedAcl" data-link-title="InputsTcpCookedAcl">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L105">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L105">
         interface <strong>InputsTcpCookedAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InputsTcpCookedAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpCookedAcl-app">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L106">property <b>app</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L106">property <b>app</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>app?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpCookedAcl-canChangePerms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L107">property <b>canChangePerms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L107">property <b>canChangePerms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canChangePerms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpCookedAcl-canShareApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L108">property <b>canShareApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L108">property <b>canShareApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpCookedAcl-canShareGlobal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L109">property <b>canShareGlobal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L109">property <b>canShareGlobal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareGlobal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpCookedAcl-canShareUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L110">property <b>canShareUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L110">property <b>canShareUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpCookedAcl-canWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L111">property <b>canWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L111">property <b>canWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpCookedAcl-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L112">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L112">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpCookedAcl-reads">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L113">property <b>reads</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L113">property <b>reads</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reads?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpCookedAcl-removable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L114">property <b>removable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L114">property <b>removable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpCookedAcl-sharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L115">property <b>sharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L115">property <b>sharing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpCookedAcl-writes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L116">property <b>writes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L116">property <b>writes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="InputsTcpRawAcl" data-link-title="InputsTcpRawAcl">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L119">
         interface <strong>InputsTcpRawAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InputsTcpRawAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpRawAcl-app">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L120">property <b>app</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L120">property <b>app</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>app?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpRawAcl-canChangePerms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L121">property <b>canChangePerms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L121">property <b>canChangePerms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canChangePerms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpRawAcl-canShareApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L122">property <b>canShareApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L122">property <b>canShareApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpRawAcl-canShareGlobal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L123">property <b>canShareGlobal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L123">property <b>canShareGlobal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareGlobal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpRawAcl-canShareUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L124">property <b>canShareUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L124">property <b>canShareUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpRawAcl-canWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L125">property <b>canWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L125">property <b>canWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpRawAcl-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L126">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L126">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpRawAcl-reads">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L127">property <b>reads</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L127">property <b>reads</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reads?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpRawAcl-removable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L128">property <b>removable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L128">property <b>removable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpRawAcl-sharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L129">property <b>sharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L129">property <b>sharing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpRawAcl-writes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L130">property <b>writes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L130">property <b>writes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="InputsTcpSplunkTcpTokenAcl" data-link-title="InputsTcpSplunkTcpTokenAcl">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L133">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L133">
         interface <strong>InputsTcpSplunkTcpTokenAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InputsTcpSplunkTcpTokenAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpSplunkTcpTokenAcl-app">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L134">property <b>app</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L134">property <b>app</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>app?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpSplunkTcpTokenAcl-canChangePerms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L135">property <b>canChangePerms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L135">property <b>canChangePerms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canChangePerms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpSplunkTcpTokenAcl-canShareApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L136">property <b>canShareApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L136">property <b>canShareApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpSplunkTcpTokenAcl-canShareGlobal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L137">property <b>canShareGlobal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L137">property <b>canShareGlobal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareGlobal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpSplunkTcpTokenAcl-canShareUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L138">property <b>canShareUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L138">property <b>canShareUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpSplunkTcpTokenAcl-canWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L139">property <b>canWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L139">property <b>canWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpSplunkTcpTokenAcl-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L140">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L140">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpSplunkTcpTokenAcl-reads">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L141">property <b>reads</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L141">property <b>reads</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reads?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpSplunkTcpTokenAcl-removable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L142">property <b>removable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L142">property <b>removable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpSplunkTcpTokenAcl-sharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L143">property <b>sharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L143">property <b>sharing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsTcpSplunkTcpTokenAcl-writes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L144">property <b>writes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L144">property <b>writes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="InputsUdpAcl" data-link-title="InputsUdpAcl">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L147">
         interface <strong>InputsUdpAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InputsUdpAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="InputsUdpAcl-app">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L148">property <b>app</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L148">property <b>app</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>app?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsUdpAcl-canChangePerms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L149">property <b>canChangePerms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L149">property <b>canChangePerms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canChangePerms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsUdpAcl-canShareApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L150">property <b>canShareApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L150">property <b>canShareApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsUdpAcl-canShareGlobal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L151">property <b>canShareGlobal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L151">property <b>canShareGlobal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareGlobal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsUdpAcl-canShareUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L152">property <b>canShareUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L152">property <b>canShareUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsUdpAcl-canWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L153">property <b>canWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L153">property <b>canWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsUdpAcl-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L154">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L154">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsUdpAcl-reads">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L155">property <b>reads</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L155">property <b>reads</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reads?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsUdpAcl-removable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L156">property <b>removable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L156">property <b>removable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsUdpAcl-sharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L157">property <b>sharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L157">property <b>sharing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InputsUdpAcl-writes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L158">property <b>writes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L158">property <b>writes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OutputsTcpDefaultAcl" data-link-title="OutputsTcpDefaultAcl">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L161">
         interface <strong>OutputsTcpDefaultAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OutputsTcpDefaultAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpDefaultAcl-app">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L162">property <b>app</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L162">property <b>app</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>app?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpDefaultAcl-canChangePerms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L163">property <b>canChangePerms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L163">property <b>canChangePerms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canChangePerms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpDefaultAcl-canShareApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L164">property <b>canShareApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L164">property <b>canShareApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpDefaultAcl-canShareGlobal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L165">property <b>canShareGlobal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L165">property <b>canShareGlobal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareGlobal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpDefaultAcl-canShareUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L166">property <b>canShareUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L166">property <b>canShareUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpDefaultAcl-canWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L167">property <b>canWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L167">property <b>canWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpDefaultAcl-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L168">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L168">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpDefaultAcl-reads">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L169">property <b>reads</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L169">property <b>reads</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reads?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpDefaultAcl-removable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L170">property <b>removable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L170">property <b>removable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpDefaultAcl-sharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L171">property <b>sharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L171">property <b>sharing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpDefaultAcl-writes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L172">property <b>writes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L172">property <b>writes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OutputsTcpGroupAcl" data-link-title="OutputsTcpGroupAcl">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L175">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L175">
         interface <strong>OutputsTcpGroupAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OutputsTcpGroupAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpGroupAcl-app">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L176">property <b>app</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L176">property <b>app</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>app?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpGroupAcl-canChangePerms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L177">property <b>canChangePerms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L177">property <b>canChangePerms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canChangePerms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpGroupAcl-canShareApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L178">property <b>canShareApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L178">property <b>canShareApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpGroupAcl-canShareGlobal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L179">property <b>canShareGlobal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L179">property <b>canShareGlobal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareGlobal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpGroupAcl-canShareUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L180">property <b>canShareUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L180">property <b>canShareUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpGroupAcl-canWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L181">property <b>canWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L181">property <b>canWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpGroupAcl-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L182">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L182">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpGroupAcl-reads">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L183">property <b>reads</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L183">property <b>reads</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reads?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpGroupAcl-removable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L184">property <b>removable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L184">property <b>removable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpGroupAcl-sharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L185">property <b>sharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L185">property <b>sharing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpGroupAcl-writes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L186">property <b>writes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L186">property <b>writes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OutputsTcpServerAcl" data-link-title="OutputsTcpServerAcl">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L189">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L189">
         interface <strong>OutputsTcpServerAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OutputsTcpServerAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpServerAcl-app">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L190">property <b>app</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L190">property <b>app</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>app?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpServerAcl-canChangePerms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L191">property <b>canChangePerms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L191">property <b>canChangePerms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canChangePerms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpServerAcl-canShareApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L192">property <b>canShareApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L192">property <b>canShareApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpServerAcl-canShareGlobal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L193">property <b>canShareGlobal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L193">property <b>canShareGlobal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareGlobal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpServerAcl-canShareUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L194">property <b>canShareUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L194">property <b>canShareUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpServerAcl-canWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L195">property <b>canWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L195">property <b>canWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpServerAcl-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L196">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L196">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpServerAcl-reads">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L197">property <b>reads</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L197">property <b>reads</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reads?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpServerAcl-removable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L198">property <b>removable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L198">property <b>removable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpServerAcl-sharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L199">property <b>sharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L199">property <b>sharing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpServerAcl-writes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L200">property <b>writes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L200">property <b>writes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OutputsTcpSyslogAcl" data-link-title="OutputsTcpSyslogAcl">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L203">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L203">
         interface <strong>OutputsTcpSyslogAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OutputsTcpSyslogAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpSyslogAcl-app">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L204">property <b>app</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L204">property <b>app</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>app?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpSyslogAcl-canChangePerms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L205">property <b>canChangePerms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L205">property <b>canChangePerms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canChangePerms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpSyslogAcl-canShareApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L206">property <b>canShareApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L206">property <b>canShareApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpSyslogAcl-canShareGlobal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L207">property <b>canShareGlobal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L207">property <b>canShareGlobal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareGlobal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpSyslogAcl-canShareUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L208">property <b>canShareUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L208">property <b>canShareUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpSyslogAcl-canWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L209">property <b>canWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L209">property <b>canWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpSyslogAcl-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L210">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L210">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpSyslogAcl-reads">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L211">property <b>reads</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L211">property <b>reads</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reads?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpSyslogAcl-removable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L212">property <b>removable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L212">property <b>removable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpSyslogAcl-sharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L213">property <b>sharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L213">property <b>sharing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OutputsTcpSyslogAcl-writes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L214">property <b>writes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L214">property <b>writes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SavedSearchesAcl" data-link-title="SavedSearchesAcl">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L217">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L217">
         interface <strong>SavedSearchesAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SavedSearchesAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="SavedSearchesAcl-app">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L218">property <b>app</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L218">property <b>app</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>app?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SavedSearchesAcl-canChangePerms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L219">property <b>canChangePerms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L219">property <b>canChangePerms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canChangePerms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SavedSearchesAcl-canShareApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L220">property <b>canShareApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L220">property <b>canShareApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SavedSearchesAcl-canShareGlobal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L221">property <b>canShareGlobal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L221">property <b>canShareGlobal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareGlobal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SavedSearchesAcl-canShareUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L222">property <b>canShareUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L222">property <b>canShareUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canShareUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SavedSearchesAcl-canWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L223">property <b>canWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L223">property <b>canWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SavedSearchesAcl-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L224">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L224">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SavedSearchesAcl-reads">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L225">property <b>reads</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L225">property <b>reads</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reads?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SavedSearchesAcl-removable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L226">property <b>removable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L226">property <b>removable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SavedSearchesAcl-sharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L227">property <b>sharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L227">property <b>sharing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SavedSearchesAcl-writes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/types/input.ts#L228">property <b>writes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-splunk/blob/0f38d8cf474414dda4ca015d9c364aff5b28618a/sdk/nodejs/types/input.ts#L228">property <b>writes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
