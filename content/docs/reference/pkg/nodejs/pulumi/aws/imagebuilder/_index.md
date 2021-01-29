@@ -3,7 +3,7 @@ title: "Module imagebuilder"
 title_tag: "Module imagebuilder | Package @pulumi/aws | Node.js SDK"
 linktitle: "imagebuilder"
 meta_desc: "Explore members of the imagebuilder module in the @pulumi/aws package."
-git_sha: "3afde84dcfe31baf8d358c5e24483fd9a9089103"
+git_sha: "d072b346d2519850d0b24c72316f8d7487257ab0"
 block_external_search_index: true
 ---
 
@@ -66,7 +66,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Component" data-link-title="Component">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L34">
         Resource <strong>Component</strong>
     </a>
 </h3>
@@ -100,7 +100,7 @@ const example = new aws.imagebuilder.Component("example", {
  Certain resource arguments, such as `uri`, cannot be read via the API and imported into Terraform. Terraform will display a difference for these arguments the first run after import if declared in the Terraform configuration for an imported resource.
 
 <h4 class="pdoc-member-header" id="Component-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L118"> <b>constructor</b></a>
 </h4>
 
 
@@ -114,7 +114,7 @@ Create a Component resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Component-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -125,14 +125,14 @@ Get an existing Component resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Component-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Component-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -143,7 +143,7 @@ Returns true if the given object is an instance of Component.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Component-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L65">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L65">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -151,7 +151,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Required) Amazon Resource Name (ARN) of the component.
 
 <h4 class="pdoc-member-header" id="Component-changeDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L69">property <b>changeDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L69">property <b>changeDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>changeDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -159,12 +159,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Change description of the component.
 
 <h4 class="pdoc-member-header" id="Component-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L70">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L70">property <b>data</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Component-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L74">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L74">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dateCreated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -172,7 +172,7 @@ Change description of the component.
 Date the component was created.
 
 <h4 class="pdoc-member-header" id="Component-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L78">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L78">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ Date the component was created.
 Description of the component.
 
 <h4 class="pdoc-member-header" id="Component-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L82">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L82">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ Description of the component.
 Encryption status of the component.
 
 <h4 class="pdoc-member-header" id="Component-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -197,7 +197,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Component-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L86">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L86">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -205,7 +205,7 @@ deployments and may be missing (undefined) during planning phases.
 Amazon Resource Name (ARN) of the Key Management Service (KMS) Key used to encrypt the component.
 
 <h4 class="pdoc-member-header" id="Component-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L90">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L90">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -213,7 +213,7 @@ Amazon Resource Name (ARN) of the Key Management Service (KMS) Key used to encry
 Name of the component.
 
 <h4 class="pdoc-member-header" id="Component-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L94">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L94">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -221,7 +221,7 @@ Name of the component.
 Owner of the component.
 
 <h4 class="pdoc-member-header" id="Component-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L98">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L98">property <b>platform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>platform: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -229,7 +229,7 @@ Owner of the component.
 Platform of the component.
 
 <h4 class="pdoc-member-header" id="Component-supportedOsVersions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L102">property <b>supportedOsVersions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L102">property <b>supportedOsVersions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>supportedOsVersions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -237,7 +237,7 @@ Platform of the component.
 Set of Operating Systems (OS) supported by the component.
 
 <h4 class="pdoc-member-header" id="Component-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L106">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L106">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -245,7 +245,7 @@ Set of Operating Systems (OS) supported by the component.
 Key-value map of resource tags for the component.
 
 <h4 class="pdoc-member-header" id="Component-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L110">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L110">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -253,7 +253,7 @@ Key-value map of resource tags for the component.
 Type of the component.
 
 <h4 class="pdoc-member-header" id="Component-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L114">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L114">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -261,7 +261,7 @@ Type of the component.
 S3 URI with data of the component. Exactly one of `data` and `uri` can be specified.
 
 <h4 class="pdoc-member-header" id="Component-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -270,7 +270,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Component-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L118">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L118">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -278,7 +278,7 @@ deployments.
 Version of the component.
 
 <h3 class="pdoc-module-header" id="DistributionConfiguration" data-link-title="DistributionConfiguration">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L41">
         Resource <strong>DistributionConfiguration</strong>
     </a>
 </h3>
@@ -318,7 +318,7 @@ const example = new aws.imagebuilder.DistributionConfiguration("example", {
 ```
 
 <h4 class="pdoc-member-header" id="DistributionConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L96"> <b>constructor</b></a>
 </h4>
 
 
@@ -332,7 +332,7 @@ Create a DistributionConfiguration resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DistributionConfiguration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -343,14 +343,14 @@ Get an existing DistributionConfiguration resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DistributionConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DistributionConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -361,7 +361,7 @@ Returns true if the given object is an instance of DistributionConfiguration.  T
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DistributionConfiguration-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L72">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L72">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -369,7 +369,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Required) Amazon Resource Name (ARN) of the distribution configuration.
 
 <h4 class="pdoc-member-header" id="DistributionConfiguration-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L76">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L76">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dateCreated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -377,7 +377,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Date the distribution configuration was created.
 
 <h4 class="pdoc-member-header" id="DistributionConfiguration-dateUpdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L80">property <b>dateUpdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L80">property <b>dateUpdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dateUpdated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -385,7 +385,7 @@ Date the distribution configuration was created.
 Date the distribution configuration was updated.
 
 <h4 class="pdoc-member-header" id="DistributionConfiguration-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L84">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L84">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -393,7 +393,7 @@ Date the distribution configuration was updated.
 Description to apply to the distributed AMI.
 
 <h4 class="pdoc-member-header" id="DistributionConfiguration-distributions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L88">property <b>distributions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L88">property <b>distributions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>distributions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionConfigurationDistribution'>DistributionConfigurationDistribution</a>[]&gt;;</code></pre>
@@ -401,7 +401,7 @@ Description to apply to the distributed AMI.
 One or more configuration blocks with distribution settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="DistributionConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -410,7 +410,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DistributionConfiguration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L92">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -418,7 +418,7 @@ deployments and may be missing (undefined) during planning phases.
 Name to apply to the distributed AMI.
 
 <h4 class="pdoc-member-header" id="DistributionConfiguration-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L96">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L96">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -426,7 +426,7 @@ Name to apply to the distributed AMI.
 Key-value map of resource tags for the distribution configuration.
 
 <h4 class="pdoc-member-header" id="DistributionConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -435,7 +435,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Image" data-link-title="Image">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L32">
         Resource <strong>Image</strong>
     </a>
 </h3>
@@ -466,7 +466,7 @@ const example = new aws.imagebuilder.Image("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Image-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L111"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L111"> <b>constructor</b></a>
 </h4>
 
 
@@ -480,7 +480,7 @@ Create a Image resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Image-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -491,14 +491,14 @@ Get an existing Image resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Image-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Image-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -509,7 +509,7 @@ Returns true if the given object is an instance of Image.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Image-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L63">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L63">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -517,7 +517,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the image.
 
 <h4 class="pdoc-member-header" id="Image-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L67">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L67">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dateCreated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -525,7 +525,7 @@ Amazon Resource Name (ARN) of the image.
 Date the image was created.
 
 <h4 class="pdoc-member-header" id="Image-distributionConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L71">property <b>distributionConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L71">property <b>distributionConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>distributionConfigurationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -533,7 +533,7 @@ Date the image was created.
 Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 
 <h4 class="pdoc-member-header" id="Image-enhancedImageMetadataEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L75">property <b>enhancedImageMetadataEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L75">property <b>enhancedImageMetadataEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enhancedImageMetadataEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -541,7 +541,7 @@ Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 Whether additional information about the image being created is collected. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="Image-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -550,7 +550,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Image-imageRecipeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L79">property <b>imageRecipeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L79">property <b>imageRecipeArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageRecipeArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -558,7 +558,7 @@ deployments and may be missing (undefined) during planning phases.
 Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 
 <h4 class="pdoc-member-header" id="Image-imageTestsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L83">property <b>imageTestsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L83">property <b>imageTestsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageTestsConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ImageImageTestsConfiguration'>ImageImageTestsConfiguration</a>&gt;;</code></pre>
@@ -566,7 +566,7 @@ Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 Configuration block with image tests configuration. Detailed below.
 
 <h4 class="pdoc-member-header" id="Image-infrastructureConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L87">property <b>infrastructureConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L87">property <b>infrastructureConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>infrastructureConfigurationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -574,7 +574,7 @@ Configuration block with image tests configuration. Detailed below.
 Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 
 <h4 class="pdoc-member-header" id="Image-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L91">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L91">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -582,7 +582,7 @@ Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 Name of the AMI.
 
 <h4 class="pdoc-member-header" id="Image-osVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L95">property <b>osVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L95">property <b>osVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>osVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -590,7 +590,7 @@ Name of the AMI.
 Operating System version of the image.
 
 <h4 class="pdoc-member-header" id="Image-outputResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L99">property <b>outputResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L99">property <b>outputResources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outputResources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ImageOutputResource'>ImageOutputResource</a>[]&gt;;</code></pre>
@@ -598,7 +598,7 @@ Operating System version of the image.
 List of objects with resources created by the image.
 
 <h4 class="pdoc-member-header" id="Image-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L103">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L103">property <b>platform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>platform: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -606,7 +606,7 @@ List of objects with resources created by the image.
 Platform of the image.
 
 <h4 class="pdoc-member-header" id="Image-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L107">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L107">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -614,7 +614,7 @@ Platform of the image.
 Key-value map of resource tags for the Image Builder Image.
 
 <h4 class="pdoc-member-header" id="Image-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -623,7 +623,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Image-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L111">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L111">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -631,7 +631,7 @@ deployments.
 Version of the image.
 
 <h3 class="pdoc-module-header" id="ImagePipeline" data-link-title="ImagePipeline">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L34">
         Resource <strong>ImagePipeline</strong>
     </a>
 </h3>
@@ -664,7 +664,7 @@ const example = new aws.imagebuilder.ImagePipeline("example", {
 ```
 
 <h4 class="pdoc-member-header" id="ImagePipeline-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L125"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L125"> <b>constructor</b></a>
 </h4>
 
 
@@ -678,7 +678,7 @@ Create a ImagePipeline resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -689,14 +689,14 @@ Get an existing ImagePipeline resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ImagePipeline-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -707,7 +707,7 @@ Returns true if the given object is an instance of ImagePipeline.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L65">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L65">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -715,7 +715,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the image pipeline.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L69">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L69">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dateCreated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -723,7 +723,7 @@ Amazon Resource Name (ARN) of the image pipeline.
 Date the image pipeline was created.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-dateLastRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L73">property <b>dateLastRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L73">property <b>dateLastRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dateLastRun: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -731,7 +731,7 @@ Date the image pipeline was created.
 Date the image pipeline was last run.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-dateNextRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L77">property <b>dateNextRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L77">property <b>dateNextRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dateNextRun: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -739,7 +739,7 @@ Date the image pipeline was last run.
 Date the image pipeline will run next.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-dateUpdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L81">property <b>dateUpdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L81">property <b>dateUpdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dateUpdated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -747,7 +747,7 @@ Date the image pipeline will run next.
 Date the image pipeline was updated.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L85">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L85">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -755,7 +755,7 @@ Date the image pipeline was updated.
 Description of the image pipeline.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-distributionConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L89">property <b>distributionConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L89">property <b>distributionConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>distributionConfigurationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -763,7 +763,7 @@ Description of the image pipeline.
 Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-enhancedImageMetadataEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L93">property <b>enhancedImageMetadataEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L93">property <b>enhancedImageMetadataEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enhancedImageMetadataEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -771,7 +771,7 @@ Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 Whether additional information about the image being created is collected. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -780,7 +780,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-imageRecipeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L97">property <b>imageRecipeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L97">property <b>imageRecipeArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageRecipeArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -788,7 +788,7 @@ deployments and may be missing (undefined) during planning phases.
 Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-imageTestsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L101">property <b>imageTestsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L101">property <b>imageTestsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageTestsConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ImagePipelineImageTestsConfiguration'>ImagePipelineImageTestsConfiguration</a>&gt;;</code></pre>
@@ -796,7 +796,7 @@ Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 Configuration block with image tests configuration. Detailed below.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-infrastructureConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L105">property <b>infrastructureConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L105">property <b>infrastructureConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>infrastructureConfigurationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -804,7 +804,7 @@ Configuration block with image tests configuration. Detailed below.
 Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L109">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L109">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -812,7 +812,7 @@ Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 Name of the image pipeline.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L113">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L113">property <b>platform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>platform: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -820,7 +820,7 @@ Name of the image pipeline.
 Platform of the image pipeline.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L117">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L117">property <b>schedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ImagePipelineSchedule'>ImagePipelineSchedule</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -828,7 +828,7 @@ Platform of the image pipeline.
 Configuration block with schedule settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L121">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L121">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -836,7 +836,7 @@ Configuration block with schedule settings. Detailed below.
 Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Defaults to `ENABLED`.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L125">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L125">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -844,7 +844,7 @@ Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Default
 Key-value map of resource tags for the image pipeline.
 
 <h4 class="pdoc-member-header" id="ImagePipeline-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -853,7 +853,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ImageRecipe" data-link-title="ImageRecipe">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L42">
         Resource <strong>ImageRecipe</strong>
     </a>
 </h3>
@@ -894,7 +894,7 @@ const example = new aws.imagebuilder.ImageRecipe("example", {
 ```
 
 <h4 class="pdoc-member-header" id="ImageRecipe-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L117"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L117"> <b>constructor</b></a>
 </h4>
 
 
@@ -908,7 +908,7 @@ Create a ImageRecipe resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ImageRecipe-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -919,14 +919,14 @@ Get an existing ImageRecipe resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ImageRecipe-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ImageRecipe-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -937,7 +937,7 @@ Returns true if the given object is an instance of ImageRecipe.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ImageRecipe-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L73">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L73">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -945,7 +945,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Required) Amazon Resource Name (ARN) of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipe-blockDeviceMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L77">property <b>blockDeviceMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L77">property <b>blockDeviceMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blockDeviceMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ImageRecipeBlockDeviceMapping'>ImageRecipeBlockDeviceMapping</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -953,7 +953,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Configuration block(s) with block device mappings for the the image recipe. Detailed below.
 
 <h4 class="pdoc-member-header" id="ImageRecipe-components">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L81">property <b>components</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L81">property <b>components</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>components: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ImageRecipeComponent'>ImageRecipeComponent</a>[]&gt;;</code></pre>
@@ -961,7 +961,7 @@ Configuration block(s) with block device mappings for the the image recipe. Deta
 Ordered configuration block(s) with components for the image recipe. Detailed below.
 
 <h4 class="pdoc-member-header" id="ImageRecipe-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L85">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L85">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dateCreated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -969,7 +969,7 @@ Ordered configuration block(s) with components for the image recipe. Detailed be
 Date the image recipe was created.
 
 <h4 class="pdoc-member-header" id="ImageRecipe-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L89">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L89">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -977,7 +977,7 @@ Date the image recipe was created.
 Description of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipe-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -986,7 +986,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ImageRecipe-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L93">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -994,7 +994,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipe-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L97">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L97">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1002,7 +1002,7 @@ Name of the image recipe.
 Owner of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipe-parentImage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L101">property <b>parentImage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L101">property <b>parentImage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parentImage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1010,7 +1010,7 @@ Owner of the image recipe.
 Platform of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipe-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L105">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L105">property <b>platform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>platform: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1018,7 +1018,7 @@ Platform of the image recipe.
 Platform of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipe-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L109">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L109">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1026,7 +1026,7 @@ Platform of the image recipe.
 Key-value map of resource tags for the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipe-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1035,7 +1035,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ImageRecipe-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L113">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L113">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1043,7 +1043,7 @@ deployments.
 Version of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipe-workingDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L117">property <b>workingDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L117">property <b>workingDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workingDirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1051,7 +1051,7 @@ Version of the image recipe.
 The working directory to be used during build and test workflows.
 
 <h3 class="pdoc-module-header" id="InfrastructureConfiguration" data-link-title="InfrastructureConfiguration">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L49">
         Resource <strong>InfrastructureConfiguration</strong>
     </a>
 </h3>
@@ -1099,7 +1099,7 @@ const example = new aws.imagebuilder.InfrastructureConfiguration("example", {
 ```
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L136"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L136"> <b>constructor</b></a>
 </h4>
 
 
@@ -1113,7 +1113,7 @@ Create a InfrastructureConfiguration resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -1124,14 +1124,14 @@ Get an existing InfrastructureConfiguration resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1142,7 +1142,7 @@ Returns true if the given object is an instance of InfrastructureConfiguration. 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L80">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L80">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1150,7 +1150,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the configuration.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L84">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L84">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dateCreated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1158,7 +1158,7 @@ Amazon Resource Name (ARN) of the configuration.
 Date when the configuration was created.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-dateUpdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L88">property <b>dateUpdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L88">property <b>dateUpdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dateUpdated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1166,7 +1166,7 @@ Date when the configuration was created.
 Date when the configuration was updated.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L92">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L92">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1174,7 +1174,7 @@ Date when the configuration was updated.
 Description for the configuration.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1183,7 +1183,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-instanceProfileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L96">property <b>instanceProfileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L96">property <b>instanceProfileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceProfileName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1191,7 +1191,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of IAM Instance Profile.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-instanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L100">property <b>instanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L100">property <b>instanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1199,7 +1199,7 @@ Name of IAM Instance Profile.
 Set of EC2 Instance Types.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-keyPair">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L104">property <b>keyPair</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L104">property <b>keyPair</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyPair: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1207,7 +1207,7 @@ Set of EC2 Instance Types.
 Name of EC2 Key Pair.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-logging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L108">property <b>logging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L108">property <b>logging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logging: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InfrastructureConfigurationLogging'>InfrastructureConfigurationLogging</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1215,7 +1215,7 @@ Name of EC2 Key Pair.
 Configuration block with logging settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L112">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L112">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1223,7 +1223,7 @@ Configuration block with logging settings. Detailed below.
 Name for the configuration.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-resourceTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L116">property <b>resourceTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L116">property <b>resourceTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1231,7 +1231,7 @@ Name for the configuration.
 Key-value map of resource tags to assign to infrastructure created by the configuration.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L120">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L120">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1239,7 +1239,7 @@ Key-value map of resource tags to assign to infrastructure created by the config
 Set of EC2 Security Group identifiers.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L124">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L124">property <b>snsTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snsTopicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1247,7 +1247,7 @@ Set of EC2 Security Group identifiers.
 Amazon Resource Name (ARN) of SNS Topic.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L128">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L128">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1255,7 +1255,7 @@ Amazon Resource Name (ARN) of SNS Topic.
 EC2 Subnet identifier. Also requires `securityGroupIds` argument.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L132">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L132">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1263,7 +1263,7 @@ EC2 Subnet identifier. Also requires `securityGroupIds` argument.
 Key-value map of resource tags to assign to the configuration.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-terminateInstanceOnFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L136">property <b>terminateInstanceOnFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L136">property <b>terminateInstanceOnFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>terminateInstanceOnFailure: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1271,7 +1271,7 @@ Key-value map of resource tags to assign to the configuration.
 Enable if the instance should be terminated when the pipeline fails. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1282,7 +1282,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getComponent" data-link-title="getComponent">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L22">
         Function <strong>getComponent</strong>
     </a>
 </h3>
@@ -1305,7 +1305,7 @@ const example = pulumi.output(aws.imagebuilder.getComponent({
 ```
 
 <h3 class="pdoc-module-header" id="getDistributionConfiguration" data-link-title="getDistributionConfiguration">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L22">
         Function <strong>getDistributionConfiguration</strong>
     </a>
 </h3>
@@ -1328,7 +1328,7 @@ const example = pulumi.output(aws.imagebuilder.getDistributionConfiguration({
 ```
 
 <h3 class="pdoc-module-header" id="getImage" data-link-title="getImage">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L23">
         Function <strong>getImage</strong>
     </a>
 </h3>
@@ -1352,7 +1352,7 @@ const example = pulumi.output(aws.imagebuilder.getImage({
 ```
 
 <h3 class="pdoc-module-header" id="getImagePipeline" data-link-title="getImagePipeline">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L22">
         Function <strong>getImagePipeline</strong>
     </a>
 </h3>
@@ -1375,7 +1375,7 @@ const example = pulumi.output(aws.imagebuilder.getImagePipeline({
 ```
 
 <h3 class="pdoc-module-header" id="getImageRecipe" data-link-title="getImageRecipe">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L22">
         Function <strong>getImageRecipe</strong>
     </a>
 </h3>
@@ -1398,7 +1398,7 @@ const example = pulumi.output(aws.imagebuilder.getImageRecipe({
 ```
 
 <h3 class="pdoc-module-header" id="getInfrastructureConfiguration" data-link-title="getInfrastructureConfiguration">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L22">
         Function <strong>getInfrastructureConfiguration</strong>
     </a>
 </h3>
@@ -1423,7 +1423,7 @@ const example = pulumi.output(aws.imagebuilder.getInfrastructureConfiguration({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ComponentArgs" data-link-title="ComponentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L248">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L248">
         interface <strong>ComponentArgs</strong>
     </a>
 </h3>
@@ -1433,7 +1433,7 @@ const example = pulumi.output(aws.imagebuilder.getInfrastructureConfiguration({
 The set of arguments for constructing a Component resource.
 
 <h4 class="pdoc-member-header" id="ComponentArgs-changeDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L252">property <b>changeDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L252">property <b>changeDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>changeDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1441,12 +1441,12 @@ The set of arguments for constructing a Component resource.
 Change description of the component.
 
 <h4 class="pdoc-member-header" id="ComponentArgs-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L253">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L253">property <b>data</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>data?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ComponentArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L257">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L257">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1454,7 +1454,7 @@ Change description of the component.
 Description of the component.
 
 <h4 class="pdoc-member-header" id="ComponentArgs-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L261">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L261">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1462,7 +1462,7 @@ Description of the component.
 Amazon Resource Name (ARN) of the Key Management Service (KMS) Key used to encrypt the component.
 
 <h4 class="pdoc-member-header" id="ComponentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L265">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L265">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1470,7 +1470,7 @@ Amazon Resource Name (ARN) of the Key Management Service (KMS) Key used to encry
 Name of the component.
 
 <h4 class="pdoc-member-header" id="ComponentArgs-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L269">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L269">property <b>platform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platform: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1478,7 +1478,7 @@ Name of the component.
 Platform of the component.
 
 <h4 class="pdoc-member-header" id="ComponentArgs-supportedOsVersions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L273">property <b>supportedOsVersions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L273">property <b>supportedOsVersions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportedOsVersions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1486,7 +1486,7 @@ Platform of the component.
 Set of Operating Systems (OS) supported by the component.
 
 <h4 class="pdoc-member-header" id="ComponentArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L277">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L277">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1494,7 +1494,7 @@ Set of Operating Systems (OS) supported by the component.
 Key-value map of resource tags for the component.
 
 <h4 class="pdoc-member-header" id="ComponentArgs-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L281">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L281">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1502,7 +1502,7 @@ Key-value map of resource tags for the component.
 S3 URI with data of the component. Exactly one of `data` and `uri` can be specified.
 
 <h4 class="pdoc-member-header" id="ComponentArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L285">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L285">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1510,7 +1510,7 @@ S3 URI with data of the component. Exactly one of `data` and `uri` can be specif
 Version of the component.
 
 <h3 class="pdoc-module-header" id="ComponentState" data-link-title="ComponentState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L185">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L185">
         interface <strong>ComponentState</strong>
     </a>
 </h3>
@@ -1520,7 +1520,7 @@ Version of the component.
 Input properties used for looking up and filtering Component resources.
 
 <h4 class="pdoc-member-header" id="ComponentState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L189">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L189">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1528,7 +1528,7 @@ Input properties used for looking up and filtering Component resources.
 (Required) Amazon Resource Name (ARN) of the component.
 
 <h4 class="pdoc-member-header" id="ComponentState-changeDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L193">property <b>changeDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L193">property <b>changeDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>changeDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1536,12 +1536,12 @@ Input properties used for looking up and filtering Component resources.
 Change description of the component.
 
 <h4 class="pdoc-member-header" id="ComponentState-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L194">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L194">property <b>data</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>data?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ComponentState-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L198">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L198">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateCreated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1549,7 +1549,7 @@ Change description of the component.
 Date the component was created.
 
 <h4 class="pdoc-member-header" id="ComponentState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L202">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L202">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1557,7 +1557,7 @@ Date the component was created.
 Description of the component.
 
 <h4 class="pdoc-member-header" id="ComponentState-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L206">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L206">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1565,7 +1565,7 @@ Description of the component.
 Encryption status of the component.
 
 <h4 class="pdoc-member-header" id="ComponentState-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L210">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L210">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1573,7 +1573,7 @@ Encryption status of the component.
 Amazon Resource Name (ARN) of the Key Management Service (KMS) Key used to encrypt the component.
 
 <h4 class="pdoc-member-header" id="ComponentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L214">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L214">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1581,7 +1581,7 @@ Amazon Resource Name (ARN) of the Key Management Service (KMS) Key used to encry
 Name of the component.
 
 <h4 class="pdoc-member-header" id="ComponentState-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L218">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L218">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1589,7 +1589,7 @@ Name of the component.
 Owner of the component.
 
 <h4 class="pdoc-member-header" id="ComponentState-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L222">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L222">property <b>platform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1597,7 +1597,7 @@ Owner of the component.
 Platform of the component.
 
 <h4 class="pdoc-member-header" id="ComponentState-supportedOsVersions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L226">property <b>supportedOsVersions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L226">property <b>supportedOsVersions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportedOsVersions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1605,7 +1605,7 @@ Platform of the component.
 Set of Operating Systems (OS) supported by the component.
 
 <h4 class="pdoc-member-header" id="ComponentState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L230">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L230">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1613,7 +1613,7 @@ Set of Operating Systems (OS) supported by the component.
 Key-value map of resource tags for the component.
 
 <h4 class="pdoc-member-header" id="ComponentState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L234">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L234">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1621,7 +1621,7 @@ Key-value map of resource tags for the component.
 Type of the component.
 
 <h4 class="pdoc-member-header" id="ComponentState-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L238">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L238">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1629,7 +1629,7 @@ Type of the component.
 S3 URI with data of the component. Exactly one of `data` and `uri` can be specified.
 
 <h4 class="pdoc-member-header" id="ComponentState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/component.ts#L242">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/component.ts#L242">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1637,7 +1637,7 @@ S3 URI with data of the component. Exactly one of `data` and `uri` can be specif
 Version of the component.
 
 <h3 class="pdoc-module-header" id="DistributionConfigurationArgs" data-link-title="DistributionConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L178">
         interface <strong>DistributionConfigurationArgs</strong>
     </a>
 </h3>
@@ -1647,7 +1647,7 @@ Version of the component.
 The set of arguments for constructing a DistributionConfiguration resource.
 
 <h4 class="pdoc-member-header" id="DistributionConfigurationArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L182">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L182">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1655,7 +1655,7 @@ The set of arguments for constructing a DistributionConfiguration resource.
 Description to apply to the distributed AMI.
 
 <h4 class="pdoc-member-header" id="DistributionConfigurationArgs-distributions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L186">property <b>distributions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L186">property <b>distributions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>distributions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionConfigurationDistribution'>DistributionConfigurationDistribution</a>&gt;[]&gt;;</code></pre>
@@ -1663,7 +1663,7 @@ Description to apply to the distributed AMI.
 One or more configuration blocks with distribution settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="DistributionConfigurationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L190">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L190">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1671,7 +1671,7 @@ One or more configuration blocks with distribution settings. Detailed below.
 Name to apply to the distributed AMI.
 
 <h4 class="pdoc-member-header" id="DistributionConfigurationArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L194">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L194">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1679,7 +1679,7 @@ Name to apply to the distributed AMI.
 Key-value map of resource tags for the distribution configuration.
 
 <h3 class="pdoc-module-header" id="DistributionConfigurationState" data-link-title="DistributionConfigurationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L144">
         interface <strong>DistributionConfigurationState</strong>
     </a>
 </h3>
@@ -1689,7 +1689,7 @@ Key-value map of resource tags for the distribution configuration.
 Input properties used for looking up and filtering DistributionConfiguration resources.
 
 <h4 class="pdoc-member-header" id="DistributionConfigurationState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L148">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L148">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1697,7 +1697,7 @@ Input properties used for looking up and filtering DistributionConfiguration res
 (Required) Amazon Resource Name (ARN) of the distribution configuration.
 
 <h4 class="pdoc-member-header" id="DistributionConfigurationState-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L152">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L152">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateCreated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1705,7 +1705,7 @@ Input properties used for looking up and filtering DistributionConfiguration res
 Date the distribution configuration was created.
 
 <h4 class="pdoc-member-header" id="DistributionConfigurationState-dateUpdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L156">property <b>dateUpdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L156">property <b>dateUpdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateUpdated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1713,7 +1713,7 @@ Date the distribution configuration was created.
 Date the distribution configuration was updated.
 
 <h4 class="pdoc-member-header" id="DistributionConfigurationState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L160">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L160">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1721,7 +1721,7 @@ Date the distribution configuration was updated.
 Description to apply to the distributed AMI.
 
 <h4 class="pdoc-member-header" id="DistributionConfigurationState-distributions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L164">property <b>distributions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L164">property <b>distributions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>distributions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionConfigurationDistribution'>DistributionConfigurationDistribution</a>&gt;[]&gt;;</code></pre>
@@ -1729,7 +1729,7 @@ Description to apply to the distributed AMI.
 One or more configuration blocks with distribution settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="DistributionConfigurationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L168">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L168">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1737,7 +1737,7 @@ One or more configuration blocks with distribution settings. Detailed below.
 Name to apply to the distributed AMI.
 
 <h4 class="pdoc-member-header" id="DistributionConfigurationState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L172">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/distributionConfiguration.ts#L172">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1745,7 +1745,7 @@ Name to apply to the distributed AMI.
 Key-value map of resource tags for the distribution configuration.
 
 <h3 class="pdoc-module-header" id="GetComponentArgs" data-link-title="GetComponentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L39">
         interface <strong>GetComponentArgs</strong>
     </a>
 </h3>
@@ -1755,7 +1755,7 @@ Key-value map of resource tags for the distribution configuration.
 A collection of arguments for invoking getComponent.
 
 <h4 class="pdoc-member-header" id="GetComponentArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L43">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L43">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1763,7 +1763,7 @@ A collection of arguments for invoking getComponent.
 Amazon Resource Name (ARN) of the component.
 
 <h4 class="pdoc-member-header" id="GetComponentArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L47">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L47">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1771,7 +1771,7 @@ Amazon Resource Name (ARN) of the component.
 Key-value map of resource tags for the component.
 
 <h3 class="pdoc-module-header" id="GetComponentResult" data-link-title="GetComponentResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L53">
         interface <strong>GetComponentResult</strong>
     </a>
 </h3>
@@ -1781,12 +1781,12 @@ Key-value map of resource tags for the component.
 A collection of values returned by getComponent.
 
 <h4 class="pdoc-member-header" id="GetComponentResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L54">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L54">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetComponentResult-changeDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L58">property <b>changeDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L58">property <b>changeDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>changeDescription: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1794,7 +1794,7 @@ A collection of values returned by getComponent.
 Change description of the component.
 
 <h4 class="pdoc-member-header" id="GetComponentResult-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L62">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L62">property <b>data</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>data: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1802,7 +1802,7 @@ Change description of the component.
 Data of the component.
 
 <h4 class="pdoc-member-header" id="GetComponentResult-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L66">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L66">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateCreated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1810,7 +1810,7 @@ Data of the component.
 Date the component was created.
 
 <h4 class="pdoc-member-header" id="GetComponentResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L70">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1818,7 +1818,7 @@ Date the component was created.
 Description of the component.
 
 <h4 class="pdoc-member-header" id="GetComponentResult-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L74">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L74">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1826,7 +1826,7 @@ Description of the component.
 Encryption status of the component.
 
 <h4 class="pdoc-member-header" id="GetComponentResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1834,7 +1834,7 @@ Encryption status of the component.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetComponentResult-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L82">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L82">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1842,7 +1842,7 @@ The provider-assigned unique ID for this managed resource.
 Amazon Resource Name (ARN) of the Key Management Service (KMS) Key used to encrypt the component.
 
 <h4 class="pdoc-member-header" id="GetComponentResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L86">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1850,7 +1850,7 @@ Amazon Resource Name (ARN) of the Key Management Service (KMS) Key used to encry
 Name of the component.
 
 <h4 class="pdoc-member-header" id="GetComponentResult-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L90">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L90">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1858,7 +1858,7 @@ Name of the component.
 Owner of the component.
 
 <h4 class="pdoc-member-header" id="GetComponentResult-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L94">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L94">property <b>platform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platform: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1866,7 +1866,7 @@ Owner of the component.
 Platform of the component.
 
 <h4 class="pdoc-member-header" id="GetComponentResult-supportedOsVersions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L98">property <b>supportedOsVersions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L98">property <b>supportedOsVersions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportedOsVersions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1874,7 +1874,7 @@ Platform of the component.
 Operating Systems (OSes) supported by the component.
 
 <h4 class="pdoc-member-header" id="GetComponentResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L102">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L102">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1882,7 +1882,7 @@ Operating Systems (OSes) supported by the component.
 Key-value map of resource tags for the component.
 
 <h4 class="pdoc-member-header" id="GetComponentResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L106">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L106">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1890,7 +1890,7 @@ Key-value map of resource tags for the component.
 Type of the component.
 
 <h4 class="pdoc-member-header" id="GetComponentResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getComponent.ts#L110">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getComponent.ts#L110">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1898,7 +1898,7 @@ Type of the component.
 Version of the component.
 
 <h3 class="pdoc-module-header" id="GetDistributionConfigurationArgs" data-link-title="GetDistributionConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L39">
         interface <strong>GetDistributionConfigurationArgs</strong>
     </a>
 </h3>
@@ -1908,7 +1908,7 @@ Version of the component.
 A collection of arguments for invoking getDistributionConfiguration.
 
 <h4 class="pdoc-member-header" id="GetDistributionConfigurationArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L43">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L43">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1916,7 +1916,7 @@ A collection of arguments for invoking getDistributionConfiguration.
 Amazon Resource Name (ARN) of the distribution configuration.
 
 <h4 class="pdoc-member-header" id="GetDistributionConfigurationArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L47">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L47">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1924,7 +1924,7 @@ Amazon Resource Name (ARN) of the distribution configuration.
 Key-value map of resource tags for the distribution configuration.
 
 <h3 class="pdoc-module-header" id="GetDistributionConfigurationResult" data-link-title="GetDistributionConfigurationResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L53">
         interface <strong>GetDistributionConfigurationResult</strong>
     </a>
 </h3>
@@ -1934,12 +1934,12 @@ Key-value map of resource tags for the distribution configuration.
 A collection of values returned by getDistributionConfiguration.
 
 <h4 class="pdoc-member-header" id="GetDistributionConfigurationResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L54">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L54">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDistributionConfigurationResult-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L58">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L58">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateCreated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1947,7 +1947,7 @@ A collection of values returned by getDistributionConfiguration.
 Date the distribution configuration was created.
 
 <h4 class="pdoc-member-header" id="GetDistributionConfigurationResult-dateUpdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L62">property <b>dateUpdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L62">property <b>dateUpdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateUpdated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1955,7 +1955,7 @@ Date the distribution configuration was created.
 Date the distribution configuration was updated.
 
 <h4 class="pdoc-member-header" id="GetDistributionConfigurationResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L66">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L66">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1963,7 +1963,7 @@ Date the distribution configuration was updated.
 Description to apply to distributed AMI.
 
 <h4 class="pdoc-member-header" id="GetDistributionConfigurationResult-distributions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L70">property <b>distributions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L70">property <b>distributions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>distributions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDistributionConfigurationDistribution'>GetDistributionConfigurationDistribution</a>[];</code></pre>
@@ -1971,7 +1971,7 @@ Description to apply to distributed AMI.
 Set of distributions.
 
 <h4 class="pdoc-member-header" id="GetDistributionConfigurationResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L74">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1979,7 +1979,7 @@ Set of distributions.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDistributionConfigurationResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L78">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1987,7 +1987,7 @@ The provider-assigned unique ID for this managed resource.
 Name of the distribution configuration.
 
 <h4 class="pdoc-member-header" id="GetDistributionConfigurationResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L82">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getDistributionConfiguration.ts#L82">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1995,7 +1995,7 @@ Name of the distribution configuration.
 Key-value map of resource tags for the distribution configuration.
 
 <h3 class="pdoc-module-header" id="GetImageArgs" data-link-title="GetImageArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L40">
         interface <strong>GetImageArgs</strong>
     </a>
 </h3>
@@ -2005,7 +2005,7 @@ Key-value map of resource tags for the distribution configuration.
 A collection of arguments for invoking getImage.
 
 <h4 class="pdoc-member-header" id="GetImageArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L44">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L44">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2013,7 +2013,7 @@ A collection of arguments for invoking getImage.
 Amazon Resource Name (ARN) of the image. The suffix can either be specified with wildcards (`x.x.x`) to fetch the latest build version or a full build version (e.g. `2020.11.26/1`) to fetch an exact version.
 
 <h4 class="pdoc-member-header" id="GetImageArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L48">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L48">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2021,7 +2021,7 @@ Amazon Resource Name (ARN) of the image. The suffix can either be specified with
 Key-value map of resource tags for the image.
 
 <h3 class="pdoc-module-header" id="GetImagePipelineArgs" data-link-title="GetImagePipelineArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L39">
         interface <strong>GetImagePipelineArgs</strong>
     </a>
 </h3>
@@ -2031,7 +2031,7 @@ Key-value map of resource tags for the image.
 A collection of arguments for invoking getImagePipeline.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L43">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L43">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2039,7 +2039,7 @@ A collection of arguments for invoking getImagePipeline.
 Amazon Resource Name (ARN) of the image pipeline.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L47">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L47">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2047,7 +2047,7 @@ Amazon Resource Name (ARN) of the image pipeline.
 Key-value map of resource tags for the image pipeline.
 
 <h3 class="pdoc-module-header" id="GetImagePipelineResult" data-link-title="GetImagePipelineResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L53">
         interface <strong>GetImagePipelineResult</strong>
     </a>
 </h3>
@@ -2057,12 +2057,12 @@ Key-value map of resource tags for the image pipeline.
 A collection of values returned by getImagePipeline.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L54">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L54">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImagePipelineResult-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L58">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L58">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateCreated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2070,7 +2070,7 @@ A collection of values returned by getImagePipeline.
 Date the image pipeline was created.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineResult-dateLastRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L62">property <b>dateLastRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L62">property <b>dateLastRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateLastRun: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2078,7 +2078,7 @@ Date the image pipeline was created.
 Date the image pipeline was last run.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineResult-dateNextRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L66">property <b>dateNextRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L66">property <b>dateNextRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateNextRun: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2086,7 +2086,7 @@ Date the image pipeline was last run.
 Date the image pipeline will run next.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineResult-dateUpdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L70">property <b>dateUpdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L70">property <b>dateUpdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateUpdated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2094,7 +2094,7 @@ Date the image pipeline will run next.
 Date the image pipeline was updated.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L74">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L74">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2102,7 +2102,7 @@ Date the image pipeline was updated.
 Description of the image pipeline.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineResult-distributionConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L78">property <b>distributionConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L78">property <b>distributionConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>distributionConfigurationArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2110,7 +2110,7 @@ Description of the image pipeline.
 Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineResult-enhancedImageMetadataEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L82">property <b>enhancedImageMetadataEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L82">property <b>enhancedImageMetadataEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enhancedImageMetadataEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2118,7 +2118,7 @@ Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 Whether additional information about the image being created is collected.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L86">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2126,7 +2126,7 @@ Whether additional information about the image being created is collected.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineResult-imageRecipeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L90">property <b>imageRecipeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L90">property <b>imageRecipeArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageRecipeArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2134,7 +2134,7 @@ The provider-assigned unique ID for this managed resource.
 Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineResult-imageTestsConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L94">property <b>imageTestsConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L94">property <b>imageTestsConfigurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageTestsConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetImagePipelineImageTestsConfiguration'>GetImagePipelineImageTestsConfiguration</a>[];</code></pre>
@@ -2142,7 +2142,7 @@ Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 List of an object with image tests configuration.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineResult-infrastructureConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L98">property <b>infrastructureConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L98">property <b>infrastructureConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>infrastructureConfigurationArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2150,7 +2150,7 @@ List of an object with image tests configuration.
 Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L102">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2158,7 +2158,7 @@ Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 Name of the image pipeline.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineResult-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L106">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L106">property <b>platform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platform: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2166,7 +2166,7 @@ Name of the image pipeline.
 Platform of the image pipeline.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineResult-schedules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L110">property <b>schedules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L110">property <b>schedules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedules: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetImagePipelineSchedule'>GetImagePipelineSchedule</a>[];</code></pre>
@@ -2174,7 +2174,7 @@ Platform of the image pipeline.
 List of an object with schedule settings.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L114">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L114">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2182,7 +2182,7 @@ List of an object with schedule settings.
 Status of the image pipeline.
 
 <h4 class="pdoc-member-header" id="GetImagePipelineResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImagePipeline.ts#L118">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImagePipeline.ts#L118">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2190,7 +2190,7 @@ Status of the image pipeline.
 Key-value map of resource tags for the image pipeline.
 
 <h3 class="pdoc-module-header" id="GetImageRecipeArgs" data-link-title="GetImageRecipeArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L39">
         interface <strong>GetImageRecipeArgs</strong>
     </a>
 </h3>
@@ -2200,7 +2200,7 @@ Key-value map of resource tags for the image pipeline.
 A collection of arguments for invoking getImageRecipe.
 
 <h4 class="pdoc-member-header" id="GetImageRecipeArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L43">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L43">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2208,7 +2208,7 @@ A collection of arguments for invoking getImageRecipe.
 Amazon Resource Name (ARN) of the image recipe.
 
 <h4 class="pdoc-member-header" id="GetImageRecipeArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L47">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L47">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2216,7 +2216,7 @@ Amazon Resource Name (ARN) of the image recipe.
 Key-value map of resource tags for the image recipe.
 
 <h3 class="pdoc-module-header" id="GetImageRecipeResult" data-link-title="GetImageRecipeResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L53">
         interface <strong>GetImageRecipeResult</strong>
     </a>
 </h3>
@@ -2226,12 +2226,12 @@ Key-value map of resource tags for the image recipe.
 A collection of values returned by getImageRecipe.
 
 <h4 class="pdoc-member-header" id="GetImageRecipeResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L54">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L54">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageRecipeResult-blockDeviceMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L58">property <b>blockDeviceMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L58">property <b>blockDeviceMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blockDeviceMappings: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetImageRecipeBlockDeviceMapping'>GetImageRecipeBlockDeviceMapping</a>[];</code></pre>
@@ -2239,7 +2239,7 @@ A collection of values returned by getImageRecipe.
 Set of objects with block device mappings for the the image recipe.
 
 <h4 class="pdoc-member-header" id="GetImageRecipeResult-components">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L62">property <b>components</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L62">property <b>components</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>components: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetImageRecipeComponent'>GetImageRecipeComponent</a>[];</code></pre>
@@ -2247,7 +2247,7 @@ Set of objects with block device mappings for the the image recipe.
 List of objects with components for the image recipe.
 
 <h4 class="pdoc-member-header" id="GetImageRecipeResult-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L66">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L66">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateCreated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2255,7 +2255,7 @@ List of objects with components for the image recipe.
 Date the image recipe was created.
 
 <h4 class="pdoc-member-header" id="GetImageRecipeResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L70">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2263,7 +2263,7 @@ Date the image recipe was created.
 Description of the image recipe.
 
 <h4 class="pdoc-member-header" id="GetImageRecipeResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L74">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2271,7 +2271,7 @@ Description of the image recipe.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetImageRecipeResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L78">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2279,7 +2279,7 @@ The provider-assigned unique ID for this managed resource.
 Name of the image recipe.
 
 <h4 class="pdoc-member-header" id="GetImageRecipeResult-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L82">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L82">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2287,7 +2287,7 @@ Name of the image recipe.
 Owner of the image recipe.
 
 <h4 class="pdoc-member-header" id="GetImageRecipeResult-parentImage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L86">property <b>parentImage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L86">property <b>parentImage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentImage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2295,7 +2295,7 @@ Owner of the image recipe.
 Platform of the image recipe.
 
 <h4 class="pdoc-member-header" id="GetImageRecipeResult-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L90">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L90">property <b>platform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platform: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2303,7 +2303,7 @@ Platform of the image recipe.
 Platform of the image recipe.
 
 <h4 class="pdoc-member-header" id="GetImageRecipeResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L94">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L94">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2311,7 +2311,7 @@ Platform of the image recipe.
 Key-value map of resource tags for the image recipe.
 
 <h4 class="pdoc-member-header" id="GetImageRecipeResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L98">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L98">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2319,7 +2319,7 @@ Key-value map of resource tags for the image recipe.
 Version of the image recipe.
 
 <h4 class="pdoc-member-header" id="GetImageRecipeResult-workingDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImageRecipe.ts#L102">property <b>workingDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImageRecipe.ts#L102">property <b>workingDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workingDirectory: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2327,7 +2327,7 @@ Version of the image recipe.
 The working directory used during build and test workflows.
 
 <h3 class="pdoc-module-header" id="GetImageResult" data-link-title="GetImageResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L54">
         interface <strong>GetImageResult</strong>
     </a>
 </h3>
@@ -2337,12 +2337,12 @@ The working directory used during build and test workflows.
 A collection of values returned by getImage.
 
 <h4 class="pdoc-member-header" id="GetImageResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L55">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L55">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-buildVersionArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L59">property <b>buildVersionArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L59">property <b>buildVersionArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>buildVersionArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2350,7 +2350,7 @@ A collection of values returned by getImage.
 Build version Amazon Resource Name (ARN) of the image. This will always have the `#.#.#/#` suffix.
 
 <h4 class="pdoc-member-header" id="GetImageResult-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L63">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L63">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateCreated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2358,7 +2358,7 @@ Build version Amazon Resource Name (ARN) of the image. This will always have the
 Date the image was created.
 
 <h4 class="pdoc-member-header" id="GetImageResult-distributionConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L67">property <b>distributionConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L67">property <b>distributionConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>distributionConfigurationArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2366,7 +2366,7 @@ Date the image was created.
 Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 
 <h4 class="pdoc-member-header" id="GetImageResult-enhancedImageMetadataEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L71">property <b>enhancedImageMetadataEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L71">property <b>enhancedImageMetadataEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enhancedImageMetadataEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2374,7 +2374,7 @@ Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 Whether additional information about the image being created is collected.
 
 <h4 class="pdoc-member-header" id="GetImageResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L75">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L75">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2382,7 +2382,7 @@ Whether additional information about the image being created is collected.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetImageResult-imageRecipeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L79">property <b>imageRecipeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L79">property <b>imageRecipeArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageRecipeArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2390,7 +2390,7 @@ The provider-assigned unique ID for this managed resource.
 Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 
 <h4 class="pdoc-member-header" id="GetImageResult-imageTestsConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L83">property <b>imageTestsConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L83">property <b>imageTestsConfigurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageTestsConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetImageImageTestsConfiguration'>GetImageImageTestsConfiguration</a>[];</code></pre>
@@ -2398,7 +2398,7 @@ Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 List of an object with image tests configuration.
 
 <h4 class="pdoc-member-header" id="GetImageResult-infrastructureConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L87">property <b>infrastructureConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L87">property <b>infrastructureConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>infrastructureConfigurationArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2406,7 +2406,7 @@ List of an object with image tests configuration.
 Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 
 <h4 class="pdoc-member-header" id="GetImageResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L91">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L91">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2414,7 +2414,7 @@ Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 Name of the AMI.
 
 <h4 class="pdoc-member-header" id="GetImageResult-osVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L95">property <b>osVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L95">property <b>osVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>osVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2422,7 +2422,7 @@ Name of the AMI.
 Operating System version of the image.
 
 <h4 class="pdoc-member-header" id="GetImageResult-outputResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L99">property <b>outputResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L99">property <b>outputResources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputResources: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetImageOutputResource'>GetImageOutputResource</a>[];</code></pre>
@@ -2430,7 +2430,7 @@ Operating System version of the image.
 List of objects with resources created by the image.
 
 <h4 class="pdoc-member-header" id="GetImageResult-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L103">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L103">property <b>platform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platform: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2438,7 +2438,7 @@ List of objects with resources created by the image.
 Platform of the image.
 
 <h4 class="pdoc-member-header" id="GetImageResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L107">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L107">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2446,7 +2446,7 @@ Platform of the image.
 Key-value map of resource tags for the image.
 
 <h4 class="pdoc-member-header" id="GetImageResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getImage.ts#L111">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getImage.ts#L111">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2454,7 +2454,7 @@ Key-value map of resource tags for the image.
 Version of the image.
 
 <h3 class="pdoc-module-header" id="GetInfrastructureConfigurationArgs" data-link-title="GetInfrastructureConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L40">
         interface <strong>GetInfrastructureConfigurationArgs</strong>
     </a>
 </h3>
@@ -2464,7 +2464,7 @@ Version of the image.
 A collection of arguments for invoking getInfrastructureConfiguration.
 
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L44">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L44">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2472,7 +2472,7 @@ A collection of arguments for invoking getInfrastructureConfiguration.
 Amazon Resource Name (ARN) of the infrastructure configuration.
 
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationArgs-resourceTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L48">property <b>resourceTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L48">property <b>resourceTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceTags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2480,7 +2480,7 @@ Amazon Resource Name (ARN) of the infrastructure configuration.
 Key-value map of resource tags for the infrastructure created by the infrastructure configuration.
 
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L52">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L52">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2488,7 +2488,7 @@ Key-value map of resource tags for the infrastructure created by the infrastruct
 Key-value map of resource tags for the infrastructure configuration.
 
 <h3 class="pdoc-module-header" id="GetInfrastructureConfigurationResult" data-link-title="GetInfrastructureConfigurationResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L58">
         interface <strong>GetInfrastructureConfigurationResult</strong>
     </a>
 </h3>
@@ -2498,12 +2498,12 @@ Key-value map of resource tags for the infrastructure configuration.
 A collection of values returned by getInfrastructureConfiguration.
 
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L59">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L59">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationResult-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L63">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L63">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateCreated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2511,12 +2511,12 @@ A collection of values returned by getInfrastructureConfiguration.
 Date the infrastructure configuration was updated.
 
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationResult-dateUpdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L64">property <b>dateUpdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L64">property <b>dateUpdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateUpdated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L68">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L68">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2524,7 +2524,7 @@ Date the infrastructure configuration was updated.
 Description of the infrastructure configuration.
 
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2532,7 +2532,7 @@ Description of the infrastructure configuration.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationResult-instanceProfileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L76">property <b>instanceProfileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L76">property <b>instanceProfileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceProfileName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2540,7 +2540,7 @@ The provider-assigned unique ID for this managed resource.
 Name of the IAM Instance Profile associated with the configuration.
 
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationResult-instanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L80">property <b>instanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L80">property <b>instanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceTypes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2548,7 +2548,7 @@ Name of the IAM Instance Profile associated with the configuration.
 Set of EC2 Instance Types associated with the configuration.
 
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationResult-keyPair">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L84">property <b>keyPair</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L84">property <b>keyPair</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyPair: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2556,7 +2556,7 @@ Set of EC2 Instance Types associated with the configuration.
 Name of the EC2 Key Pair associated with the configuration.
 
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationResult-loggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L88">property <b>loggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L88">property <b>loggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggings: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInfrastructureConfigurationLogging'>GetInfrastructureConfigurationLogging</a>[];</code></pre>
@@ -2564,7 +2564,7 @@ Name of the EC2 Key Pair associated with the configuration.
 Nested list of logging settings.
 
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L92">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2572,7 +2572,7 @@ Nested list of logging settings.
 Name of the infrastructure configuration.
 
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationResult-resourceTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L96">property <b>resourceTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L96">property <b>resourceTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceTags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2580,7 +2580,7 @@ Name of the infrastructure configuration.
 Key-value map of resource tags for the infrastructure created by the infrastructure configuration.
 
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationResult-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L100">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L100">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2588,7 +2588,7 @@ Key-value map of resource tags for the infrastructure created by the infrastruct
 Set of EC2 Security Group identifiers associated with the configuration.
 
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationResult-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L104">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L104">property <b>snsTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsTopicArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2596,7 +2596,7 @@ Set of EC2 Security Group identifiers associated with the configuration.
 Amazon Resource Name (ARN) of the SNS Topic associated with the configuration.
 
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationResult-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L108">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L108">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2604,7 +2604,7 @@ Amazon Resource Name (ARN) of the SNS Topic associated with the configuration.
 Identifier of the EC2 Subnet associated with the configuration.
 
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L112">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L112">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2612,7 +2612,7 @@ Identifier of the EC2 Subnet associated with the configuration.
 Key-value map of resource tags for the infrastructure configuration.
 
 <h4 class="pdoc-member-header" id="GetInfrastructureConfigurationResult-terminateInstanceOnFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L116">property <b>terminateInstanceOnFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/getInfrastructureConfiguration.ts#L116">property <b>terminateInstanceOnFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terminateInstanceOnFailure: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2620,7 +2620,7 @@ Key-value map of resource tags for the infrastructure configuration.
 Whether instances are terminated on failure.
 
 <h3 class="pdoc-module-header" id="ImageArgs" data-link-title="ImageArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L232">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L232">
         interface <strong>ImageArgs</strong>
     </a>
 </h3>
@@ -2630,7 +2630,7 @@ Whether instances are terminated on failure.
 The set of arguments for constructing a Image resource.
 
 <h4 class="pdoc-member-header" id="ImageArgs-distributionConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L236">property <b>distributionConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L236">property <b>distributionConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>distributionConfigurationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2638,7 +2638,7 @@ The set of arguments for constructing a Image resource.
 Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 
 <h4 class="pdoc-member-header" id="ImageArgs-enhancedImageMetadataEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L240">property <b>enhancedImageMetadataEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L240">property <b>enhancedImageMetadataEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enhancedImageMetadataEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2646,7 +2646,7 @@ Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 Whether additional information about the image being created is collected. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ImageArgs-imageRecipeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L244">property <b>imageRecipeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L244">property <b>imageRecipeArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageRecipeArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2654,7 +2654,7 @@ Whether additional information about the image being created is collected. Defau
 Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 
 <h4 class="pdoc-member-header" id="ImageArgs-imageTestsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L248">property <b>imageTestsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L248">property <b>imageTestsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageTestsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ImageImageTestsConfiguration'>ImageImageTestsConfiguration</a>&gt;;</code></pre>
@@ -2662,7 +2662,7 @@ Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 Configuration block with image tests configuration. Detailed below.
 
 <h4 class="pdoc-member-header" id="ImageArgs-infrastructureConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L252">property <b>infrastructureConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L252">property <b>infrastructureConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>infrastructureConfigurationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2670,7 +2670,7 @@ Configuration block with image tests configuration. Detailed below.
 Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 
 <h4 class="pdoc-member-header" id="ImageArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L256">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L256">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2678,7 +2678,7 @@ Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 Key-value map of resource tags for the Image Builder Image.
 
 <h3 class="pdoc-module-header" id="ImagePipelineArgs" data-link-title="ImagePipelineArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L264">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L264">
         interface <strong>ImagePipelineArgs</strong>
     </a>
 </h3>
@@ -2688,7 +2688,7 @@ Key-value map of resource tags for the Image Builder Image.
 The set of arguments for constructing a ImagePipeline resource.
 
 <h4 class="pdoc-member-header" id="ImagePipelineArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L268">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L268">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2696,7 +2696,7 @@ The set of arguments for constructing a ImagePipeline resource.
 Description of the image pipeline.
 
 <h4 class="pdoc-member-header" id="ImagePipelineArgs-distributionConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L272">property <b>distributionConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L272">property <b>distributionConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>distributionConfigurationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2704,7 +2704,7 @@ Description of the image pipeline.
 Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 
 <h4 class="pdoc-member-header" id="ImagePipelineArgs-enhancedImageMetadataEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L276">property <b>enhancedImageMetadataEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L276">property <b>enhancedImageMetadataEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enhancedImageMetadataEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2712,7 +2712,7 @@ Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 Whether additional information about the image being created is collected. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ImagePipelineArgs-imageRecipeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L280">property <b>imageRecipeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L280">property <b>imageRecipeArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageRecipeArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2720,7 +2720,7 @@ Whether additional information about the image being created is collected. Defau
 Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 
 <h4 class="pdoc-member-header" id="ImagePipelineArgs-imageTestsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L284">property <b>imageTestsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L284">property <b>imageTestsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageTestsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ImagePipelineImageTestsConfiguration'>ImagePipelineImageTestsConfiguration</a>&gt;;</code></pre>
@@ -2728,7 +2728,7 @@ Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 Configuration block with image tests configuration. Detailed below.
 
 <h4 class="pdoc-member-header" id="ImagePipelineArgs-infrastructureConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L288">property <b>infrastructureConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L288">property <b>infrastructureConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>infrastructureConfigurationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2736,7 +2736,7 @@ Configuration block with image tests configuration. Detailed below.
 Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 
 <h4 class="pdoc-member-header" id="ImagePipelineArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L292">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L292">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2744,7 +2744,7 @@ Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 Name of the image pipeline.
 
 <h4 class="pdoc-member-header" id="ImagePipelineArgs-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L296">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L296">property <b>schedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ImagePipelineSchedule'>ImagePipelineSchedule</a>&gt;;</code></pre>
@@ -2752,7 +2752,7 @@ Name of the image pipeline.
 Configuration block with schedule settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="ImagePipelineArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L300">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L300">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2760,7 +2760,7 @@ Configuration block with schedule settings. Detailed below.
 Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Defaults to `ENABLED`.
 
 <h4 class="pdoc-member-header" id="ImagePipelineArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L304">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L304">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2768,7 +2768,7 @@ Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Default
 Key-value map of resource tags for the image pipeline.
 
 <h3 class="pdoc-module-header" id="ImagePipelineState" data-link-title="ImagePipelineState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L194">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L194">
         interface <strong>ImagePipelineState</strong>
     </a>
 </h3>
@@ -2778,7 +2778,7 @@ Key-value map of resource tags for the image pipeline.
 Input properties used for looking up and filtering ImagePipeline resources.
 
 <h4 class="pdoc-member-header" id="ImagePipelineState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L198">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L198">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2786,7 +2786,7 @@ Input properties used for looking up and filtering ImagePipeline resources.
 Amazon Resource Name (ARN) of the image pipeline.
 
 <h4 class="pdoc-member-header" id="ImagePipelineState-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L202">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L202">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateCreated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2794,7 +2794,7 @@ Amazon Resource Name (ARN) of the image pipeline.
 Date the image pipeline was created.
 
 <h4 class="pdoc-member-header" id="ImagePipelineState-dateLastRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L206">property <b>dateLastRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L206">property <b>dateLastRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateLastRun?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2802,7 +2802,7 @@ Date the image pipeline was created.
 Date the image pipeline was last run.
 
 <h4 class="pdoc-member-header" id="ImagePipelineState-dateNextRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L210">property <b>dateNextRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L210">property <b>dateNextRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateNextRun?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2810,7 +2810,7 @@ Date the image pipeline was last run.
 Date the image pipeline will run next.
 
 <h4 class="pdoc-member-header" id="ImagePipelineState-dateUpdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L214">property <b>dateUpdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L214">property <b>dateUpdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateUpdated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2818,7 +2818,7 @@ Date the image pipeline will run next.
 Date the image pipeline was updated.
 
 <h4 class="pdoc-member-header" id="ImagePipelineState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L218">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L218">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2826,7 +2826,7 @@ Date the image pipeline was updated.
 Description of the image pipeline.
 
 <h4 class="pdoc-member-header" id="ImagePipelineState-distributionConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L222">property <b>distributionConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L222">property <b>distributionConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>distributionConfigurationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2834,7 +2834,7 @@ Description of the image pipeline.
 Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 
 <h4 class="pdoc-member-header" id="ImagePipelineState-enhancedImageMetadataEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L226">property <b>enhancedImageMetadataEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L226">property <b>enhancedImageMetadataEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enhancedImageMetadataEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2842,7 +2842,7 @@ Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 Whether additional information about the image being created is collected. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ImagePipelineState-imageRecipeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L230">property <b>imageRecipeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L230">property <b>imageRecipeArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageRecipeArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2850,7 +2850,7 @@ Whether additional information about the image being created is collected. Defau
 Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 
 <h4 class="pdoc-member-header" id="ImagePipelineState-imageTestsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L234">property <b>imageTestsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L234">property <b>imageTestsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageTestsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ImagePipelineImageTestsConfiguration'>ImagePipelineImageTestsConfiguration</a>&gt;;</code></pre>
@@ -2858,7 +2858,7 @@ Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 Configuration block with image tests configuration. Detailed below.
 
 <h4 class="pdoc-member-header" id="ImagePipelineState-infrastructureConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L238">property <b>infrastructureConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L238">property <b>infrastructureConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>infrastructureConfigurationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2866,7 +2866,7 @@ Configuration block with image tests configuration. Detailed below.
 Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 
 <h4 class="pdoc-member-header" id="ImagePipelineState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L242">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L242">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2874,7 +2874,7 @@ Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 Name of the image pipeline.
 
 <h4 class="pdoc-member-header" id="ImagePipelineState-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L246">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L246">property <b>platform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2882,7 +2882,7 @@ Name of the image pipeline.
 Platform of the image pipeline.
 
 <h4 class="pdoc-member-header" id="ImagePipelineState-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L250">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L250">property <b>schedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ImagePipelineSchedule'>ImagePipelineSchedule</a>&gt;;</code></pre>
@@ -2890,7 +2890,7 @@ Platform of the image pipeline.
 Configuration block with schedule settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="ImagePipelineState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L254">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L254">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2898,7 +2898,7 @@ Configuration block with schedule settings. Detailed below.
 Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Defaults to `ENABLED`.
 
 <h4 class="pdoc-member-header" id="ImagePipelineState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imagePipeline.ts#L258">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imagePipeline.ts#L258">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2906,7 +2906,7 @@ Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Default
 Key-value map of resource tags for the image pipeline.
 
 <h3 class="pdoc-module-header" id="ImageRecipeArgs" data-link-title="ImageRecipeArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L235">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L235">
         interface <strong>ImageRecipeArgs</strong>
     </a>
 </h3>
@@ -2916,7 +2916,7 @@ Key-value map of resource tags for the image pipeline.
 The set of arguments for constructing a ImageRecipe resource.
 
 <h4 class="pdoc-member-header" id="ImageRecipeArgs-blockDeviceMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L239">property <b>blockDeviceMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L239">property <b>blockDeviceMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blockDeviceMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ImageRecipeBlockDeviceMapping'>ImageRecipeBlockDeviceMapping</a>&gt;[]&gt;;</code></pre>
@@ -2924,7 +2924,7 @@ The set of arguments for constructing a ImageRecipe resource.
 Configuration block(s) with block device mappings for the the image recipe. Detailed below.
 
 <h4 class="pdoc-member-header" id="ImageRecipeArgs-components">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L243">property <b>components</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L243">property <b>components</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>components: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ImageRecipeComponent'>ImageRecipeComponent</a>&gt;[]&gt;;</code></pre>
@@ -2932,7 +2932,7 @@ Configuration block(s) with block device mappings for the the image recipe. Deta
 Ordered configuration block(s) with components for the image recipe. Detailed below.
 
 <h4 class="pdoc-member-header" id="ImageRecipeArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L247">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L247">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2940,7 +2940,7 @@ Ordered configuration block(s) with components for the image recipe. Detailed be
 Description of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L251">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L251">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2948,7 +2948,7 @@ Description of the image recipe.
 Name of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipeArgs-parentImage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L255">property <b>parentImage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L255">property <b>parentImage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentImage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2956,7 +2956,7 @@ Name of the image recipe.
 Platform of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipeArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L259">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L259">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2964,7 +2964,7 @@ Platform of the image recipe.
 Key-value map of resource tags for the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipeArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L263">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L263">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2972,7 +2972,7 @@ Key-value map of resource tags for the image recipe.
 Version of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipeArgs-workingDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L267">property <b>workingDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L267">property <b>workingDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workingDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2980,7 +2980,7 @@ Version of the image recipe.
 The working directory to be used during build and test workflows.
 
 <h3 class="pdoc-module-header" id="ImageRecipeState" data-link-title="ImageRecipeState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L181">
         interface <strong>ImageRecipeState</strong>
     </a>
 </h3>
@@ -2990,7 +2990,7 @@ The working directory to be used during build and test workflows.
 Input properties used for looking up and filtering ImageRecipe resources.
 
 <h4 class="pdoc-member-header" id="ImageRecipeState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L185">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L185">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2998,7 +2998,7 @@ Input properties used for looking up and filtering ImageRecipe resources.
 (Required) Amazon Resource Name (ARN) of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipeState-blockDeviceMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L189">property <b>blockDeviceMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L189">property <b>blockDeviceMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blockDeviceMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ImageRecipeBlockDeviceMapping'>ImageRecipeBlockDeviceMapping</a>&gt;[]&gt;;</code></pre>
@@ -3006,7 +3006,7 @@ Input properties used for looking up and filtering ImageRecipe resources.
 Configuration block(s) with block device mappings for the the image recipe. Detailed below.
 
 <h4 class="pdoc-member-header" id="ImageRecipeState-components">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L193">property <b>components</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L193">property <b>components</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>components?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ImageRecipeComponent'>ImageRecipeComponent</a>&gt;[]&gt;;</code></pre>
@@ -3014,7 +3014,7 @@ Configuration block(s) with block device mappings for the the image recipe. Deta
 Ordered configuration block(s) with components for the image recipe. Detailed below.
 
 <h4 class="pdoc-member-header" id="ImageRecipeState-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L197">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L197">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateCreated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3022,7 +3022,7 @@ Ordered configuration block(s) with components for the image recipe. Detailed be
 Date the image recipe was created.
 
 <h4 class="pdoc-member-header" id="ImageRecipeState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L201">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L201">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3030,7 +3030,7 @@ Date the image recipe was created.
 Description of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipeState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L205">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L205">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3038,7 +3038,7 @@ Description of the image recipe.
 Name of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipeState-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L209">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L209">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3046,7 +3046,7 @@ Name of the image recipe.
 Owner of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipeState-parentImage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L213">property <b>parentImage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L213">property <b>parentImage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentImage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3054,7 +3054,7 @@ Owner of the image recipe.
 Platform of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipeState-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L217">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L217">property <b>platform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3062,7 +3062,7 @@ Platform of the image recipe.
 Platform of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipeState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L221">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L221">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3070,7 +3070,7 @@ Platform of the image recipe.
 Key-value map of resource tags for the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipeState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L225">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L225">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3078,7 +3078,7 @@ Key-value map of resource tags for the image recipe.
 Version of the image recipe.
 
 <h4 class="pdoc-member-header" id="ImageRecipeState-workingDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/imageRecipe.ts#L229">property <b>workingDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/imageRecipe.ts#L229">property <b>workingDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workingDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3086,7 +3086,7 @@ Version of the image recipe.
 The working directory to be used during build and test workflows.
 
 <h3 class="pdoc-module-header" id="ImageState" data-link-title="ImageState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L174">
         interface <strong>ImageState</strong>
     </a>
 </h3>
@@ -3096,7 +3096,7 @@ The working directory to be used during build and test workflows.
 Input properties used for looking up and filtering Image resources.
 
 <h4 class="pdoc-member-header" id="ImageState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L178">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L178">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3104,7 +3104,7 @@ Input properties used for looking up and filtering Image resources.
 Amazon Resource Name (ARN) of the image.
 
 <h4 class="pdoc-member-header" id="ImageState-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L182">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L182">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateCreated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3112,7 +3112,7 @@ Amazon Resource Name (ARN) of the image.
 Date the image was created.
 
 <h4 class="pdoc-member-header" id="ImageState-distributionConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L186">property <b>distributionConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L186">property <b>distributionConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>distributionConfigurationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3120,7 +3120,7 @@ Date the image was created.
 Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 
 <h4 class="pdoc-member-header" id="ImageState-enhancedImageMetadataEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L190">property <b>enhancedImageMetadataEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L190">property <b>enhancedImageMetadataEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enhancedImageMetadataEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3128,7 +3128,7 @@ Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
 Whether additional information about the image being created is collected. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ImageState-imageRecipeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L194">property <b>imageRecipeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L194">property <b>imageRecipeArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageRecipeArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3136,7 +3136,7 @@ Whether additional information about the image being created is collected. Defau
 Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 
 <h4 class="pdoc-member-header" id="ImageState-imageTestsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L198">property <b>imageTestsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L198">property <b>imageTestsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageTestsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ImageImageTestsConfiguration'>ImageImageTestsConfiguration</a>&gt;;</code></pre>
@@ -3144,7 +3144,7 @@ Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
 Configuration block with image tests configuration. Detailed below.
 
 <h4 class="pdoc-member-header" id="ImageState-infrastructureConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L202">property <b>infrastructureConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L202">property <b>infrastructureConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>infrastructureConfigurationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3152,7 +3152,7 @@ Configuration block with image tests configuration. Detailed below.
 Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 
 <h4 class="pdoc-member-header" id="ImageState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L206">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L206">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3160,7 +3160,7 @@ Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
 Name of the AMI.
 
 <h4 class="pdoc-member-header" id="ImageState-osVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L210">property <b>osVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L210">property <b>osVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>osVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3168,7 +3168,7 @@ Name of the AMI.
 Operating System version of the image.
 
 <h4 class="pdoc-member-header" id="ImageState-outputResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L214">property <b>outputResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L214">property <b>outputResources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputResources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ImageOutputResource'>ImageOutputResource</a>&gt;[]&gt;;</code></pre>
@@ -3176,7 +3176,7 @@ Operating System version of the image.
 List of objects with resources created by the image.
 
 <h4 class="pdoc-member-header" id="ImageState-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L218">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L218">property <b>platform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3184,7 +3184,7 @@ List of objects with resources created by the image.
 Platform of the image.
 
 <h4 class="pdoc-member-header" id="ImageState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L222">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L222">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3192,7 +3192,7 @@ Platform of the image.
 Key-value map of resource tags for the Image Builder Image.
 
 <h4 class="pdoc-member-header" id="ImageState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/image.ts#L226">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/image.ts#L226">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3200,7 +3200,7 @@ Key-value map of resource tags for the Image Builder Image.
 Version of the image.
 
 <h3 class="pdoc-module-header" id="InfrastructureConfigurationArgs" data-link-title="InfrastructureConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L266">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L266">
         interface <strong>InfrastructureConfigurationArgs</strong>
     </a>
 </h3>
@@ -3210,7 +3210,7 @@ Version of the image.
 The set of arguments for constructing a InfrastructureConfiguration resource.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L270">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L270">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3218,7 +3218,7 @@ The set of arguments for constructing a InfrastructureConfiguration resource.
 Description for the configuration.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationArgs-instanceProfileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L274">property <b>instanceProfileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L274">property <b>instanceProfileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceProfileName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3226,7 +3226,7 @@ Description for the configuration.
 Name of IAM Instance Profile.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationArgs-instanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L278">property <b>instanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L278">property <b>instanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3234,7 +3234,7 @@ Name of IAM Instance Profile.
 Set of EC2 Instance Types.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationArgs-keyPair">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L282">property <b>keyPair</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L282">property <b>keyPair</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyPair?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3242,7 +3242,7 @@ Set of EC2 Instance Types.
 Name of EC2 Key Pair.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationArgs-logging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L286">property <b>logging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L286">property <b>logging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InfrastructureConfigurationLogging'>InfrastructureConfigurationLogging</a>&gt;;</code></pre>
@@ -3250,7 +3250,7 @@ Name of EC2 Key Pair.
 Configuration block with logging settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L290">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L290">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3258,7 +3258,7 @@ Configuration block with logging settings. Detailed below.
 Name for the configuration.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationArgs-resourceTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L294">property <b>resourceTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L294">property <b>resourceTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3266,7 +3266,7 @@ Name for the configuration.
 Key-value map of resource tags to assign to infrastructure created by the configuration.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationArgs-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L298">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L298">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3274,7 +3274,7 @@ Key-value map of resource tags to assign to infrastructure created by the config
 Set of EC2 Security Group identifiers.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationArgs-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L302">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L302">property <b>snsTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3282,7 +3282,7 @@ Set of EC2 Security Group identifiers.
 Amazon Resource Name (ARN) of SNS Topic.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationArgs-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L306">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L306">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3290,7 +3290,7 @@ Amazon Resource Name (ARN) of SNS Topic.
 EC2 Subnet identifier. Also requires `securityGroupIds` argument.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L310">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L310">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3298,7 +3298,7 @@ EC2 Subnet identifier. Also requires `securityGroupIds` argument.
 Key-value map of resource tags to assign to the configuration.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationArgs-terminateInstanceOnFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L314">property <b>terminateInstanceOnFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L314">property <b>terminateInstanceOnFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terminateInstanceOnFailure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3306,7 +3306,7 @@ Key-value map of resource tags to assign to the configuration.
 Enable if the instance should be terminated when the pipeline fails. Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="InfrastructureConfigurationState" data-link-title="InfrastructureConfigurationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L200">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L200">
         interface <strong>InfrastructureConfigurationState</strong>
     </a>
 </h3>
@@ -3316,7 +3316,7 @@ Enable if the instance should be terminated when the pipeline fails. Defaults to
 Input properties used for looking up and filtering InfrastructureConfiguration resources.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L204">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L204">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3324,7 +3324,7 @@ Input properties used for looking up and filtering InfrastructureConfiguration r
 Amazon Resource Name (ARN) of the configuration.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationState-dateCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L208">property <b>dateCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L208">property <b>dateCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateCreated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3332,7 +3332,7 @@ Amazon Resource Name (ARN) of the configuration.
 Date when the configuration was created.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationState-dateUpdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L212">property <b>dateUpdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L212">property <b>dateUpdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dateUpdated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3340,7 +3340,7 @@ Date when the configuration was created.
 Date when the configuration was updated.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L216">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L216">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3348,7 +3348,7 @@ Date when the configuration was updated.
 Description for the configuration.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationState-instanceProfileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L220">property <b>instanceProfileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L220">property <b>instanceProfileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceProfileName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3356,7 +3356,7 @@ Description for the configuration.
 Name of IAM Instance Profile.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationState-instanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L224">property <b>instanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L224">property <b>instanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3364,7 +3364,7 @@ Name of IAM Instance Profile.
 Set of EC2 Instance Types.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationState-keyPair">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L228">property <b>keyPair</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L228">property <b>keyPair</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyPair?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3372,7 +3372,7 @@ Set of EC2 Instance Types.
 Name of EC2 Key Pair.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationState-logging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L232">property <b>logging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L232">property <b>logging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InfrastructureConfigurationLogging'>InfrastructureConfigurationLogging</a>&gt;;</code></pre>
@@ -3380,7 +3380,7 @@ Name of EC2 Key Pair.
 Configuration block with logging settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L236">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L236">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3388,7 +3388,7 @@ Configuration block with logging settings. Detailed below.
 Name for the configuration.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationState-resourceTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L240">property <b>resourceTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L240">property <b>resourceTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3396,7 +3396,7 @@ Name for the configuration.
 Key-value map of resource tags to assign to infrastructure created by the configuration.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationState-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L244">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L244">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3404,7 +3404,7 @@ Key-value map of resource tags to assign to infrastructure created by the config
 Set of EC2 Security Group identifiers.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationState-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L248">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L248">property <b>snsTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3412,7 +3412,7 @@ Set of EC2 Security Group identifiers.
 Amazon Resource Name (ARN) of SNS Topic.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationState-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L252">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L252">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3420,7 +3420,7 @@ Amazon Resource Name (ARN) of SNS Topic.
 EC2 Subnet identifier. Also requires `securityGroupIds` argument.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L256">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L256">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3428,7 +3428,7 @@ EC2 Subnet identifier. Also requires `securityGroupIds` argument.
 Key-value map of resource tags to assign to the configuration.
 
 <h4 class="pdoc-member-header" id="InfrastructureConfigurationState-terminateInstanceOnFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L260">property <b>terminateInstanceOnFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/imagebuilder/infrastructureConfiguration.ts#L260">property <b>terminateInstanceOnFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terminateInstanceOnFailure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>

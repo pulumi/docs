@@ -3,7 +3,7 @@ title: "Module signer"
 title_tag: "Module signer | Package @pulumi/aws | Node.js SDK"
 linktitle: "signer"
 meta_desc: "Explore members of the signer module in the @pulumi/aws package."
-git_sha: "3afde84dcfe31baf8d358c5e24483fd9a9089103"
+git_sha: "d072b346d2519850d0b24c72316f8d7487257ab0"
 block_external_search_index: true
 ---
 
@@ -45,7 +45,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="SigningJob" data-link-title="SigningJob">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L45">
         Resource <strong>SigningJob</strong>
     </a>
 </h3>
@@ -89,7 +89,7 @@ Signer signing jobs can be imported using the `job_id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="SigningJob-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L144"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L144"> <b>constructor</b></a>
 </h4>
 
 
@@ -103,7 +103,7 @@ Create a SigningJob resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SigningJob-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L55">method <b>get</b></a>
 </h4>
 
 
@@ -114,14 +114,14 @@ Get an existing SigningJob resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SigningJob-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L45">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L45">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SigningJob-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -132,7 +132,7 @@ Returns true if the given object is an instance of SigningJob.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SigningJob-completedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L76">property <b>completedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L76">property <b>completedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>completedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -140,7 +140,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
 
 <h4 class="pdoc-member-header" id="SigningJob-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L80">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L80">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -148,7 +148,7 @@ Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.
 Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
 
 <h4 class="pdoc-member-header" id="SigningJob-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L84">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L84">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SigningJobDestination'>SigningJobDestination</a>&gt;;</code></pre>
@@ -156,7 +156,7 @@ Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.
 The S3 bucket in which to save your signed object. See Destination below for details.
 
 <h4 class="pdoc-member-header" id="SigningJob-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -165,7 +165,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SigningJob-ignoreSigningJobFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L88">property <b>ignoreSigningJobFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L88">property <b>ignoreSigningJobFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ignoreSigningJobFailure: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -173,7 +173,7 @@ deployments and may be missing (undefined) during planning phases.
 Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
 
 <h4 class="pdoc-member-header" id="SigningJob-jobId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L92">property <b>jobId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L92">property <b>jobId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>jobId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -181,7 +181,7 @@ Set this argument to `true` to ignore signing job failures and retrieve failed s
 The ID of the signing job on output.
 
 <h4 class="pdoc-member-header" id="SigningJob-jobInvoker">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L96">property <b>jobInvoker</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L96">property <b>jobInvoker</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>jobInvoker: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -189,7 +189,7 @@ The ID of the signing job on output.
 The IAM entity that initiated the signing job.
 
 <h4 class="pdoc-member-header" id="SigningJob-jobOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L100">property <b>jobOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L100">property <b>jobOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>jobOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -197,7 +197,7 @@ The IAM entity that initiated the signing job.
 The AWS account ID of the job owner.
 
 <h4 class="pdoc-member-header" id="SigningJob-platformDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L104">property <b>platformDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L104">property <b>platformDisplayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>platformDisplayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -205,7 +205,7 @@ The AWS account ID of the job owner.
 A human-readable name for the signing platform associated with the signing job.
 
 <h4 class="pdoc-member-header" id="SigningJob-platformId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L108">property <b>platformId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L108">property <b>platformId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>platformId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -213,7 +213,7 @@ A human-readable name for the signing platform associated with the signing job.
 The platform to which your signed code image will be distributed.
 
 <h4 class="pdoc-member-header" id="SigningJob-profileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L112">property <b>profileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L112">property <b>profileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>profileName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -221,7 +221,7 @@ The platform to which your signed code image will be distributed.
 The name of the profile to initiate the signing operation.
 
 <h4 class="pdoc-member-header" id="SigningJob-profileVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L116">property <b>profileVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L116">property <b>profileVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>profileVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -229,7 +229,7 @@ The name of the profile to initiate the signing operation.
 The version of the signing profile used to initiate the signing job.
 
 <h4 class="pdoc-member-header" id="SigningJob-requestedBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L120">property <b>requestedBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L120">property <b>requestedBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestedBy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -237,7 +237,7 @@ The version of the signing profile used to initiate the signing job.
 The IAM principal that requested the signing job.
 
 <h4 class="pdoc-member-header" id="SigningJob-revocationRecords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L124">property <b>revocationRecords</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L124">property <b>revocationRecords</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>revocationRecords: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SigningJobRevocationRecord'>SigningJobRevocationRecord</a>[]&gt;;</code></pre>
@@ -245,7 +245,7 @@ The IAM principal that requested the signing job.
 A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
 
 <h4 class="pdoc-member-header" id="SigningJob-signatureExpiresAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L128">property <b>signatureExpiresAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L128">property <b>signatureExpiresAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signatureExpiresAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -253,7 +253,7 @@ A revocation record if the signature generated by the signing job has been revok
 The time when the signature of a signing job expires.
 
 <h4 class="pdoc-member-header" id="SigningJob-signedObjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L132">property <b>signedObjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L132">property <b>signedObjects</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signedObjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SigningJobSignedObject'>SigningJobSignedObject</a>[]&gt;;</code></pre>
@@ -261,7 +261,7 @@ The time when the signature of a signing job expires.
 Name of the S3 bucket where the signed code image is saved by code signing.
 
 <h4 class="pdoc-member-header" id="SigningJob-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L136">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L136">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SigningJobSource'>SigningJobSource</a>&gt;;</code></pre>
@@ -269,7 +269,7 @@ Name of the S3 bucket where the signed code image is saved by code signing.
 The S3 bucket that contains the object to sign. See Source below for details.
 
 <h4 class="pdoc-member-header" id="SigningJob-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L140">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L140">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -277,7 +277,7 @@ The S3 bucket that contains the object to sign. See Source below for details.
 Status of the signing job.
 
 <h4 class="pdoc-member-header" id="SigningJob-statusReason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L144">property <b>statusReason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L144">property <b>statusReason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>statusReason: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -285,7 +285,7 @@ Status of the signing job.
 String value that contains the status reason.
 
 <h4 class="pdoc-member-header" id="SigningJob-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L45">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L45">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -294,7 +294,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SigningProfile" data-link-title="SigningProfile">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L42">
         Resource <strong>SigningProfile</strong>
     </a>
 </h3>
@@ -335,7 +335,7 @@ Signer signing profiles can be imported using the `name`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="SigningProfile-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L110"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L110"> <b>constructor</b></a>
 </h4>
 
 
@@ -349,7 +349,7 @@ Create a SigningProfile resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SigningProfile-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -360,14 +360,14 @@ Get an existing SigningProfile resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SigningProfile-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SigningProfile-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -378,7 +378,7 @@ Returns true if the given object is an instance of SigningProfile.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SigningProfile-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L73">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L73">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -386,7 +386,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) for the signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfile-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -395,7 +395,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SigningProfile-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -403,12 +403,12 @@ deployments and may be missing (undefined) during planning phases.
 The name of the target signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfile-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L78">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L78">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SigningProfile-platformDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L82">property <b>platformDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L82">property <b>platformDisplayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>platformDisplayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -416,7 +416,7 @@ The name of the target signing profile.
 A human-readable name for the signing platform associated with the signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfile-platformId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L86">property <b>platformId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L86">property <b>platformId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>platformId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -424,7 +424,7 @@ A human-readable name for the signing platform associated with the signing profi
 The ID of the platform that is used by the target signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfile-revocationRecords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L90">property <b>revocationRecords</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L90">property <b>revocationRecords</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>revocationRecords: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SigningProfileRevocationRecord'>SigningProfileRevocationRecord</a>[]&gt;;</code></pre>
@@ -432,7 +432,7 @@ The ID of the platform that is used by the target signing profile.
 Revocation information for a signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfile-signatureValidityPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L94">property <b>signatureValidityPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L94">property <b>signatureValidityPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signatureValidityPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SigningProfileSignatureValidityPeriod'>SigningProfileSignatureValidityPeriod</a>&gt;;</code></pre>
@@ -440,7 +440,7 @@ Revocation information for a signing profile.
 The validity period for a signing job.
 
 <h4 class="pdoc-member-header" id="SigningProfile-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L98">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L98">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -448,7 +448,7 @@ The validity period for a signing job.
 The status of the target signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfile-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L102">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L102">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -456,7 +456,7 @@ The status of the target signing profile.
 A list of tags associated with the signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfile-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -465,7 +465,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SigningProfile-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L106">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L106">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -473,7 +473,7 @@ deployments.
 The current version of the signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfile-versionArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L110">property <b>versionArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L110">property <b>versionArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -481,7 +481,7 @@ The current version of the signing profile.
 The signing profile ARN, including the profile version.
 
 <h3 class="pdoc-module-header" id="SigningProfilePermission" data-link-title="SigningProfilePermission">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L56">
         Resource <strong>SigningProfilePermission</strong>
     </a>
 </h3>
@@ -537,7 +537,7 @@ Signer signing profile permission statements can be imported using profile_name/
 ```
 
 <h4 class="pdoc-member-header" id="SigningProfilePermission-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L101"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L101"> <b>constructor</b></a>
 </h4>
 
 
@@ -551,7 +551,7 @@ Create a SigningProfilePermission resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermission-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L66">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L66">method <b>get</b></a>
 </h4>
 
 
@@ -562,14 +562,14 @@ Get an existing SigningProfilePermission resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermission-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L56">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L56">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SigningProfilePermission-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L77">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L77">method <b>isInstance</b></a>
 </h4>
 
 
@@ -580,7 +580,7 @@ Returns true if the given object is an instance of SigningProfilePermission.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermission-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L87">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L87">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -588,7 +588,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 An AWS Signer action permitted as part of cross-account permissions. Valid values: `signer:StartSigningJob`, `signer:GetSigningProfile`, or `signer:RevokeSignature`.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermission-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -597,7 +597,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermission-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L91">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L91">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -605,7 +605,7 @@ deployments and may be missing (undefined) during planning phases.
 The AWS principal to be granted a cross-account permission.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermission-profileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L95">property <b>profileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L95">property <b>profileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>profileName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -613,7 +613,7 @@ The AWS principal to be granted a cross-account permission.
 Name of the signing profile to add the cross-account permissions.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermission-profileVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L99">property <b>profileVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L99">property <b>profileVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>profileVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -621,17 +621,17 @@ Name of the signing profile to add the cross-account permissions.
 The signing profile version that a permission applies to.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermission-statementId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L100">property <b>statementId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L100">property <b>statementId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>statementId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SigningProfilePermission-statementIdPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L101">property <b>statementIdPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L101">property <b>statementIdPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>statementIdPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SigningProfilePermission-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L56">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L56">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -642,7 +642,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getSigningJob" data-link-title="getSigningJob">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L22">
         Function <strong>getSigningJob</strong>
     </a>
 </h3>
@@ -665,7 +665,7 @@ const buildSigningJob = pulumi.output(aws.signer.getSigningJob({
 ```
 
 <h3 class="pdoc-module-header" id="getSigningProfile" data-link-title="getSigningProfile">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningProfile.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningProfile.ts#L22">
         Function <strong>getSigningProfile</strong>
     </a>
 </h3>
@@ -690,7 +690,7 @@ const productionSigningProfile = pulumi.output(aws.signer.getSigningProfile({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetSigningJobArgs" data-link-title="GetSigningJobArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L38">
         interface <strong>GetSigningJobArgs</strong>
     </a>
 </h3>
@@ -700,7 +700,7 @@ const productionSigningProfile = pulumi.output(aws.signer.getSigningProfile({
 A collection of arguments for invoking getSigningJob.
 
 <h4 class="pdoc-member-header" id="GetSigningJobArgs-jobId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L42">property <b>jobId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L42">property <b>jobId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jobId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -708,7 +708,7 @@ A collection of arguments for invoking getSigningJob.
 The ID of the signing job on output.
 
 <h3 class="pdoc-module-header" id="GetSigningJobResult" data-link-title="GetSigningJobResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L48">
         interface <strong>GetSigningJobResult</strong>
     </a>
 </h3>
@@ -718,7 +718,7 @@ The ID of the signing job on output.
 A collection of values returned by getSigningJob.
 
 <h4 class="pdoc-member-header" id="GetSigningJobResult-completedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L52">property <b>completedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L52">property <b>completedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>completedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -726,7 +726,7 @@ A collection of values returned by getSigningJob.
 Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
 
 <h4 class="pdoc-member-header" id="GetSigningJobResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L56">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L56">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -734,7 +734,7 @@ Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.
 Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
 
 <h4 class="pdoc-member-header" id="GetSigningJobResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L60">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -742,12 +742,12 @@ Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSigningJobResult-jobId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L61">property <b>jobId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L61">property <b>jobId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jobId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSigningJobResult-jobInvoker">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L65">property <b>jobInvoker</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L65">property <b>jobInvoker</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jobInvoker: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -755,7 +755,7 @@ The provider-assigned unique ID for this managed resource.
 The IAM entity that initiated the signing job.
 
 <h4 class="pdoc-member-header" id="GetSigningJobResult-jobOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L69">property <b>jobOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L69">property <b>jobOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jobOwner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -763,7 +763,7 @@ The IAM entity that initiated the signing job.
 The AWS account ID of the job owner.
 
 <h4 class="pdoc-member-header" id="GetSigningJobResult-platformDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L73">property <b>platformDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L73">property <b>platformDisplayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformDisplayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -771,7 +771,7 @@ The AWS account ID of the job owner.
 A human-readable name for the signing platform associated with the signing job.
 
 <h4 class="pdoc-member-header" id="GetSigningJobResult-platformId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L77">property <b>platformId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L77">property <b>platformId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -779,7 +779,7 @@ A human-readable name for the signing platform associated with the signing job.
 The platform to which your signed code image will be distributed.
 
 <h4 class="pdoc-member-header" id="GetSigningJobResult-profileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L81">property <b>profileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L81">property <b>profileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -787,7 +787,7 @@ The platform to which your signed code image will be distributed.
 The name of the profile that initiated the signing operation.
 
 <h4 class="pdoc-member-header" id="GetSigningJobResult-profileVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L85">property <b>profileVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L85">property <b>profileVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -795,7 +795,7 @@ The name of the profile that initiated the signing operation.
 The version of the signing profile used to initiate the signing job.
 
 <h4 class="pdoc-member-header" id="GetSigningJobResult-requestedBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L89">property <b>requestedBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L89">property <b>requestedBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestedBy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -803,7 +803,7 @@ The version of the signing profile used to initiate the signing job.
 The IAM principal that requested the signing job.
 
 <h4 class="pdoc-member-header" id="GetSigningJobResult-revocationRecords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L93">property <b>revocationRecords</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L93">property <b>revocationRecords</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revocationRecords: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSigningJobRevocationRecord'>GetSigningJobRevocationRecord</a>[];</code></pre>
@@ -811,7 +811,7 @@ The IAM principal that requested the signing job.
 A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
 
 <h4 class="pdoc-member-header" id="GetSigningJobResult-signatureExpiresAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L97">property <b>signatureExpiresAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L97">property <b>signatureExpiresAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureExpiresAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -819,7 +819,7 @@ A revocation record if the signature generated by the signing job has been revok
 The time when the signature of a signing job expires.
 
 <h4 class="pdoc-member-header" id="GetSigningJobResult-signedObjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L101">property <b>signedObjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L101">property <b>signedObjects</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signedObjects: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSigningJobSignedObject'>GetSigningJobSignedObject</a>[];</code></pre>
@@ -827,7 +827,7 @@ The time when the signature of a signing job expires.
 Name of the S3 bucket where the signed code image is saved by code signing.
 
 <h4 class="pdoc-member-header" id="GetSigningJobResult-sources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L105">property <b>sources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L105">property <b>sources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sources: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSigningJobSource'>GetSigningJobSource</a>[];</code></pre>
@@ -835,7 +835,7 @@ Name of the S3 bucket where the signed code image is saved by code signing.
 The object that contains the name of your S3 bucket or your raw code.
 
 <h4 class="pdoc-member-header" id="GetSigningJobResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L109">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L109">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -843,7 +843,7 @@ The object that contains the name of your S3 bucket or your raw code.
 Status of the signing job.
 
 <h4 class="pdoc-member-header" id="GetSigningJobResult-statusReason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningJob.ts#L113">property <b>statusReason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningJob.ts#L113">property <b>statusReason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statusReason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -851,7 +851,7 @@ Status of the signing job.
 String value that contains the status reason.
 
 <h3 class="pdoc-module-header" id="GetSigningProfileArgs" data-link-title="GetSigningProfileArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningProfile.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningProfile.ts#L39">
         interface <strong>GetSigningProfileArgs</strong>
     </a>
 </h3>
@@ -861,7 +861,7 @@ String value that contains the status reason.
 A collection of arguments for invoking getSigningProfile.
 
 <h4 class="pdoc-member-header" id="GetSigningProfileArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningProfile.ts#L43">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningProfile.ts#L43">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -869,7 +869,7 @@ A collection of arguments for invoking getSigningProfile.
 The name of the target signing profile.
 
 <h4 class="pdoc-member-header" id="GetSigningProfileArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningProfile.ts#L47">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningProfile.ts#L47">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -877,7 +877,7 @@ The name of the target signing profile.
 A list of tags associated with the signing profile.
 
 <h3 class="pdoc-module-header" id="GetSigningProfileResult" data-link-title="GetSigningProfileResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningProfile.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningProfile.ts#L53">
         interface <strong>GetSigningProfileResult</strong>
     </a>
 </h3>
@@ -887,7 +887,7 @@ A list of tags associated with the signing profile.
 A collection of values returned by getSigningProfile.
 
 <h4 class="pdoc-member-header" id="GetSigningProfileResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningProfile.ts#L57">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningProfile.ts#L57">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -895,7 +895,7 @@ A collection of values returned by getSigningProfile.
 The Amazon Resource Name (ARN) for the signing profile.
 
 <h4 class="pdoc-member-header" id="GetSigningProfileResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningProfile.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningProfile.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -903,12 +903,12 @@ The Amazon Resource Name (ARN) for the signing profile.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSigningProfileResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningProfile.ts#L62">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningProfile.ts#L62">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSigningProfileResult-platformDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningProfile.ts#L66">property <b>platformDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningProfile.ts#L66">property <b>platformDisplayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformDisplayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -916,7 +916,7 @@ The provider-assigned unique ID for this managed resource.
 A human-readable name for the signing platform associated with the signing profile.
 
 <h4 class="pdoc-member-header" id="GetSigningProfileResult-platformId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningProfile.ts#L70">property <b>platformId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningProfile.ts#L70">property <b>platformId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -924,7 +924,7 @@ A human-readable name for the signing platform associated with the signing profi
 The ID of the platform that is used by the target signing profile.
 
 <h4 class="pdoc-member-header" id="GetSigningProfileResult-revocationRecords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningProfile.ts#L74">property <b>revocationRecords</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningProfile.ts#L74">property <b>revocationRecords</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revocationRecords: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSigningProfileRevocationRecord'>GetSigningProfileRevocationRecord</a>[];</code></pre>
@@ -932,7 +932,7 @@ The ID of the platform that is used by the target signing profile.
 Revocation information for a signing profile.
 
 <h4 class="pdoc-member-header" id="GetSigningProfileResult-signatureValidityPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningProfile.ts#L78">property <b>signatureValidityPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningProfile.ts#L78">property <b>signatureValidityPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureValidityPeriods: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSigningProfileSignatureValidityPeriod'>GetSigningProfileSignatureValidityPeriod</a>[];</code></pre>
@@ -940,7 +940,7 @@ Revocation information for a signing profile.
 The validity period for a signing job.
 
 <h4 class="pdoc-member-header" id="GetSigningProfileResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningProfile.ts#L82">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningProfile.ts#L82">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -948,7 +948,7 @@ The validity period for a signing job.
 The status of the target signing profile.
 
 <h4 class="pdoc-member-header" id="GetSigningProfileResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningProfile.ts#L86">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningProfile.ts#L86">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -956,7 +956,7 @@ The status of the target signing profile.
 A list of tags associated with the signing profile.
 
 <h4 class="pdoc-member-header" id="GetSigningProfileResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningProfile.ts#L90">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningProfile.ts#L90">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -964,7 +964,7 @@ A list of tags associated with the signing profile.
 The current version of the signing profile.
 
 <h4 class="pdoc-member-header" id="GetSigningProfileResult-versionArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/getSigningProfile.ts#L94">property <b>versionArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/getSigningProfile.ts#L94">property <b>versionArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -972,7 +972,7 @@ The current version of the signing profile.
 The signing profile ARN, including the profile version.
 
 <h3 class="pdoc-module-header" id="SigningJobArgs" data-link-title="SigningJobArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L298">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L298">
         interface <strong>SigningJobArgs</strong>
     </a>
 </h3>
@@ -982,7 +982,7 @@ The signing profile ARN, including the profile version.
 The set of arguments for constructing a SigningJob resource.
 
 <h4 class="pdoc-member-header" id="SigningJobArgs-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L302">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L302">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SigningJobDestination'>SigningJobDestination</a>&gt;;</code></pre>
@@ -990,7 +990,7 @@ The set of arguments for constructing a SigningJob resource.
 The S3 bucket in which to save your signed object. See Destination below for details.
 
 <h4 class="pdoc-member-header" id="SigningJobArgs-ignoreSigningJobFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L306">property <b>ignoreSigningJobFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L306">property <b>ignoreSigningJobFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreSigningJobFailure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -998,7 +998,7 @@ The S3 bucket in which to save your signed object. See Destination below for det
 Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
 
 <h4 class="pdoc-member-header" id="SigningJobArgs-profileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L310">property <b>profileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L310">property <b>profileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1006,7 +1006,7 @@ Set this argument to `true` to ignore signing job failures and retrieve failed s
 The name of the profile to initiate the signing operation.
 
 <h4 class="pdoc-member-header" id="SigningJobArgs-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L314">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L314">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SigningJobSource'>SigningJobSource</a>&gt;;</code></pre>
@@ -1014,7 +1014,7 @@ The name of the profile to initiate the signing operation.
 The S3 bucket that contains the object to sign. See Source below for details.
 
 <h3 class="pdoc-module-header" id="SigningJobState" data-link-title="SigningJobState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L220">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L220">
         interface <strong>SigningJobState</strong>
     </a>
 </h3>
@@ -1024,7 +1024,7 @@ The S3 bucket that contains the object to sign. See Source below for details.
 Input properties used for looking up and filtering SigningJob resources.
 
 <h4 class="pdoc-member-header" id="SigningJobState-completedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L224">property <b>completedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L224">property <b>completedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>completedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1032,7 +1032,7 @@ Input properties used for looking up and filtering SigningJob resources.
 Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
 
 <h4 class="pdoc-member-header" id="SigningJobState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L228">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L228">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1040,7 +1040,7 @@ Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.
 Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
 
 <h4 class="pdoc-member-header" id="SigningJobState-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L232">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L232">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SigningJobDestination'>SigningJobDestination</a>&gt;;</code></pre>
@@ -1048,7 +1048,7 @@ Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.
 The S3 bucket in which to save your signed object. See Destination below for details.
 
 <h4 class="pdoc-member-header" id="SigningJobState-ignoreSigningJobFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L236">property <b>ignoreSigningJobFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L236">property <b>ignoreSigningJobFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreSigningJobFailure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1056,7 +1056,7 @@ The S3 bucket in which to save your signed object. See Destination below for det
 Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
 
 <h4 class="pdoc-member-header" id="SigningJobState-jobId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L240">property <b>jobId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L240">property <b>jobId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jobId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1064,7 +1064,7 @@ Set this argument to `true` to ignore signing job failures and retrieve failed s
 The ID of the signing job on output.
 
 <h4 class="pdoc-member-header" id="SigningJobState-jobInvoker">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L244">property <b>jobInvoker</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L244">property <b>jobInvoker</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jobInvoker?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1072,7 +1072,7 @@ The ID of the signing job on output.
 The IAM entity that initiated the signing job.
 
 <h4 class="pdoc-member-header" id="SigningJobState-jobOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L248">property <b>jobOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L248">property <b>jobOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jobOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1080,7 +1080,7 @@ The IAM entity that initiated the signing job.
 The AWS account ID of the job owner.
 
 <h4 class="pdoc-member-header" id="SigningJobState-platformDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L252">property <b>platformDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L252">property <b>platformDisplayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformDisplayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1088,7 +1088,7 @@ The AWS account ID of the job owner.
 A human-readable name for the signing platform associated with the signing job.
 
 <h4 class="pdoc-member-header" id="SigningJobState-platformId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L256">property <b>platformId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L256">property <b>platformId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1096,7 +1096,7 @@ A human-readable name for the signing platform associated with the signing job.
 The platform to which your signed code image will be distributed.
 
 <h4 class="pdoc-member-header" id="SigningJobState-profileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L260">property <b>profileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L260">property <b>profileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1104,7 +1104,7 @@ The platform to which your signed code image will be distributed.
 The name of the profile to initiate the signing operation.
 
 <h4 class="pdoc-member-header" id="SigningJobState-profileVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L264">property <b>profileVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L264">property <b>profileVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1112,7 +1112,7 @@ The name of the profile to initiate the signing operation.
 The version of the signing profile used to initiate the signing job.
 
 <h4 class="pdoc-member-header" id="SigningJobState-requestedBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L268">property <b>requestedBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L268">property <b>requestedBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestedBy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1120,7 +1120,7 @@ The version of the signing profile used to initiate the signing job.
 The IAM principal that requested the signing job.
 
 <h4 class="pdoc-member-header" id="SigningJobState-revocationRecords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L272">property <b>revocationRecords</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L272">property <b>revocationRecords</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revocationRecords?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SigningJobRevocationRecord'>SigningJobRevocationRecord</a>&gt;[]&gt;;</code></pre>
@@ -1128,7 +1128,7 @@ The IAM principal that requested the signing job.
 A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
 
 <h4 class="pdoc-member-header" id="SigningJobState-signatureExpiresAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L276">property <b>signatureExpiresAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L276">property <b>signatureExpiresAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureExpiresAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1136,7 +1136,7 @@ A revocation record if the signature generated by the signing job has been revok
 The time when the signature of a signing job expires.
 
 <h4 class="pdoc-member-header" id="SigningJobState-signedObjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L280">property <b>signedObjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L280">property <b>signedObjects</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signedObjects?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SigningJobSignedObject'>SigningJobSignedObject</a>&gt;[]&gt;;</code></pre>
@@ -1144,7 +1144,7 @@ The time when the signature of a signing job expires.
 Name of the S3 bucket where the signed code image is saved by code signing.
 
 <h4 class="pdoc-member-header" id="SigningJobState-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L284">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L284">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SigningJobSource'>SigningJobSource</a>&gt;;</code></pre>
@@ -1152,7 +1152,7 @@ Name of the S3 bucket where the signed code image is saved by code signing.
 The S3 bucket that contains the object to sign. See Source below for details.
 
 <h4 class="pdoc-member-header" id="SigningJobState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L288">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L288">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1160,7 +1160,7 @@ The S3 bucket that contains the object to sign. See Source below for details.
 Status of the signing job.
 
 <h4 class="pdoc-member-header" id="SigningJobState-statusReason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingJob.ts#L292">property <b>statusReason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingJob.ts#L292">property <b>statusReason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statusReason?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1168,7 +1168,7 @@ Status of the signing job.
 String value that contains the status reason.
 
 <h3 class="pdoc-module-header" id="SigningProfileArgs" data-link-title="SigningProfileArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L213">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L213">
         interface <strong>SigningProfileArgs</strong>
     </a>
 </h3>
@@ -1178,7 +1178,7 @@ String value that contains the status reason.
 The set of arguments for constructing a SigningProfile resource.
 
 <h4 class="pdoc-member-header" id="SigningProfileArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L217">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L217">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1186,12 +1186,12 @@ The set of arguments for constructing a SigningProfile resource.
 The name of the target signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfileArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L218">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L218">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SigningProfileArgs-platformId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L222">property <b>platformId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L222">property <b>platformId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1199,7 +1199,7 @@ The name of the target signing profile.
 The ID of the platform that is used by the target signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfileArgs-signatureValidityPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L226">property <b>signatureValidityPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L226">property <b>signatureValidityPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureValidityPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SigningProfileSignatureValidityPeriod'>SigningProfileSignatureValidityPeriod</a>&gt;;</code></pre>
@@ -1207,7 +1207,7 @@ The ID of the platform that is used by the target signing profile.
 The validity period for a signing job.
 
 <h4 class="pdoc-member-header" id="SigningProfileArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L230">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L230">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1215,7 +1215,7 @@ The validity period for a signing job.
 A list of tags associated with the signing profile.
 
 <h3 class="pdoc-module-header" id="SigningProfilePermissionArgs" data-link-title="SigningProfilePermissionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L177">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L177">
         interface <strong>SigningProfilePermissionArgs</strong>
     </a>
 </h3>
@@ -1225,7 +1225,7 @@ A list of tags associated with the signing profile.
 The set of arguments for constructing a SigningProfilePermission resource.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermissionArgs-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L181">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L181">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1233,7 +1233,7 @@ The set of arguments for constructing a SigningProfilePermission resource.
 An AWS Signer action permitted as part of cross-account permissions. Valid values: `signer:StartSigningJob`, `signer:GetSigningProfile`, or `signer:RevokeSignature`.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermissionArgs-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L185">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L185">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1241,7 +1241,7 @@ An AWS Signer action permitted as part of cross-account permissions. Valid value
 The AWS principal to be granted a cross-account permission.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermissionArgs-profileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L189">property <b>profileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L189">property <b>profileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1249,7 +1249,7 @@ The AWS principal to be granted a cross-account permission.
 Name of the signing profile to add the cross-account permissions.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermissionArgs-profileVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L193">property <b>profileVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L193">property <b>profileVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1257,17 +1257,17 @@ Name of the signing profile to add the cross-account permissions.
 The signing profile version that a permission applies to.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermissionArgs-statementId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L194">property <b>statementId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L194">property <b>statementId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statementId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SigningProfilePermissionArgs-statementIdPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L195">property <b>statementIdPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L195">property <b>statementIdPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statementIdPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SigningProfilePermissionState" data-link-title="SigningProfilePermissionState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L153">
         interface <strong>SigningProfilePermissionState</strong>
     </a>
 </h3>
@@ -1277,7 +1277,7 @@ The signing profile version that a permission applies to.
 Input properties used for looking up and filtering SigningProfilePermission resources.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermissionState-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L157">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L157">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1285,7 +1285,7 @@ Input properties used for looking up and filtering SigningProfilePermission reso
 An AWS Signer action permitted as part of cross-account permissions. Valid values: `signer:StartSigningJob`, `signer:GetSigningProfile`, or `signer:RevokeSignature`.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermissionState-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L161">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L161">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1293,7 +1293,7 @@ An AWS Signer action permitted as part of cross-account permissions. Valid value
 The AWS principal to be granted a cross-account permission.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermissionState-profileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L165">property <b>profileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L165">property <b>profileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1301,7 +1301,7 @@ The AWS principal to be granted a cross-account permission.
 Name of the signing profile to add the cross-account permissions.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermissionState-profileVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L169">property <b>profileVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L169">property <b>profileVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1309,17 +1309,17 @@ Name of the signing profile to add the cross-account permissions.
 The signing profile version that a permission applies to.
 
 <h4 class="pdoc-member-header" id="SigningProfilePermissionState-statementId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L170">property <b>statementId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L170">property <b>statementId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statementId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SigningProfilePermissionState-statementIdPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfilePermission.ts#L171">property <b>statementIdPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfilePermission.ts#L171">property <b>statementIdPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statementIdPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SigningProfileState" data-link-title="SigningProfileState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L166">
         interface <strong>SigningProfileState</strong>
     </a>
 </h3>
@@ -1329,7 +1329,7 @@ The signing profile version that a permission applies to.
 Input properties used for looking up and filtering SigningProfile resources.
 
 <h4 class="pdoc-member-header" id="SigningProfileState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L170">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L170">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1337,7 +1337,7 @@ Input properties used for looking up and filtering SigningProfile resources.
 The Amazon Resource Name (ARN) for the signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfileState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L174">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L174">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1345,12 +1345,12 @@ The Amazon Resource Name (ARN) for the signing profile.
 The name of the target signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfileState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L175">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L175">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SigningProfileState-platformDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L179">property <b>platformDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L179">property <b>platformDisplayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformDisplayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1358,7 +1358,7 @@ The name of the target signing profile.
 A human-readable name for the signing platform associated with the signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfileState-platformId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L183">property <b>platformId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L183">property <b>platformId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1366,7 +1366,7 @@ A human-readable name for the signing platform associated with the signing profi
 The ID of the platform that is used by the target signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfileState-revocationRecords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L187">property <b>revocationRecords</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L187">property <b>revocationRecords</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revocationRecords?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SigningProfileRevocationRecord'>SigningProfileRevocationRecord</a>&gt;[]&gt;;</code></pre>
@@ -1374,7 +1374,7 @@ The ID of the platform that is used by the target signing profile.
 Revocation information for a signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfileState-signatureValidityPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L191">property <b>signatureValidityPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L191">property <b>signatureValidityPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureValidityPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SigningProfileSignatureValidityPeriod'>SigningProfileSignatureValidityPeriod</a>&gt;;</code></pre>
@@ -1382,7 +1382,7 @@ Revocation information for a signing profile.
 The validity period for a signing job.
 
 <h4 class="pdoc-member-header" id="SigningProfileState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L195">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L195">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1390,7 +1390,7 @@ The validity period for a signing job.
 The status of the target signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfileState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L199">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L199">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1398,7 +1398,7 @@ The status of the target signing profile.
 A list of tags associated with the signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfileState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L203">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L203">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1406,7 +1406,7 @@ A list of tags associated with the signing profile.
 The current version of the signing profile.
 
 <h4 class="pdoc-member-header" id="SigningProfileState-versionArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/signer/signingProfile.ts#L207">property <b>versionArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/signer/signingProfile.ts#L207">property <b>versionArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
