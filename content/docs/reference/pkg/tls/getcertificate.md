@@ -63,6 +63,7 @@ import (
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/eks"
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi-tls/sdk/v3/go/tls"
+	"github.com/pulumi/pulumi-tls/sdk/v3/go/tls/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
