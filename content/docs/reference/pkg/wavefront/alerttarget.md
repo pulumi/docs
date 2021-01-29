@@ -157,6 +157,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-wavefront/sdk/go/wavefront"
+	"github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -245,7 +246,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-wavefront/sdk/go/wavefront"
+	"github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
