@@ -65,7 +65,7 @@ import (
 	"fmt"
 
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds"
-	"github.com/pulumi/pulumi-random/sdk/v3/go/random"
+	"github.com/pulumi/pulumi-random/sdk/v3/go/random/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
