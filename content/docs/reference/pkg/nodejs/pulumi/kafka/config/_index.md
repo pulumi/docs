@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/kafka | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/kafka package."
-git_sha: "56d0955865d51d874944c3a8f50b3e62584879aa"
+git_sha: "922693330e2c84bf36099185ca70573a7686ecf5"
 block_external_search_index: true
 ---
 
@@ -40,7 +40,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="bootstrapServers" data-link-title="bootstrapServers">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/config/vars.ts#L12">
         let <strong>bootstrapServers</strong>
     </a>
 </h3>
@@ -50,7 +50,7 @@ block_external_search_index: true
 A list of kafka brokers
 
 <h3 class="pdoc-module-header" id="caCert" data-link-title="caCert">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/config/vars.ts#L16">
         let <strong>caCert</strong>
     </a>
 </h3>
@@ -60,7 +60,7 @@ A list of kafka brokers
 CA certificate file to validate the server's certificate.
 
 <h3 class="pdoc-module-header" id="caCertFile" data-link-title="caCertFile">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/config/vars.ts#L20">
         let <strong>caCertFile</strong>
     </a>
 </h3>
@@ -70,7 +70,7 @@ CA certificate file to validate the server's certificate.
 Path to a CA certificate file to validate the server's certificate.
 
 <h3 class="pdoc-module-header" id="clientCert" data-link-title="clientCert">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/config/vars.ts#L24">
         let <strong>clientCert</strong>
     </a>
 </h3>
@@ -80,7 +80,7 @@ Path to a CA certificate file to validate the server's certificate.
 The client certificate.
 
 <h3 class="pdoc-module-header" id="clientCertFile" data-link-title="clientCertFile">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/config/vars.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/config/vars.ts#L28">
         let <strong>clientCertFile</strong>
     </a>
 </h3>
@@ -90,7 +90,7 @@ The client certificate.
 Path to a file containing the client certificate.
 
 <h3 class="pdoc-module-header" id="clientKey" data-link-title="clientKey">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/config/vars.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/config/vars.ts#L32">
         let <strong>clientKey</strong>
     </a>
 </h3>
@@ -100,7 +100,7 @@ Path to a file containing the client certificate.
 The private key that the certificate was issued for.
 
 <h3 class="pdoc-module-header" id="clientKeyFile" data-link-title="clientKeyFile">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/config/vars.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/config/vars.ts#L36">
         let <strong>clientKeyFile</strong>
     </a>
 </h3>
@@ -110,7 +110,7 @@ The private key that the certificate was issued for.
 Path to a file containing the private key that the certificate was issued for.
 
 <h3 class="pdoc-module-header" id="clientKeyPassphrase" data-link-title="clientKeyPassphrase">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/config/vars.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/config/vars.ts#L40">
         let <strong>clientKeyPassphrase</strong>
     </a>
 </h3>
@@ -120,7 +120,7 @@ Path to a file containing the private key that the certificate was issued for.
 The passphrase for the private key that the certificate was issued for.
 
 <h3 class="pdoc-module-header" id="saslMechanism" data-link-title="saslMechanism">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/config/vars.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/config/vars.ts#L44">
         let <strong>saslMechanism</strong>
     </a>
 </h3>
@@ -130,7 +130,7 @@ The passphrase for the private key that the certificate was issued for.
 SASL mechanism, can be plain, scram-sha512, scram-sha256
 
 <h3 class="pdoc-module-header" id="saslPassword" data-link-title="saslPassword">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/config/vars.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/config/vars.ts#L48">
         let <strong>saslPassword</strong>
     </a>
 </h3>
@@ -140,7 +140,7 @@ SASL mechanism, can be plain, scram-sha512, scram-sha256
 Password for SASL authentication.
 
 <h3 class="pdoc-module-header" id="saslUsername" data-link-title="saslUsername">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/config/vars.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/config/vars.ts#L52">
         let <strong>saslUsername</strong>
     </a>
 </h3>
@@ -150,7 +150,7 @@ Password for SASL authentication.
 Username for SASL authentication.
 
 <h3 class="pdoc-module-header" id="skipTlsVerify" data-link-title="skipTlsVerify">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/config/vars.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/config/vars.ts#L56">
         let <strong>skipTlsVerify</strong>
     </a>
 </h3>
@@ -160,7 +160,7 @@ Username for SASL authentication.
 Set this to true only if the target Kafka server is an insecure development instance.
 
 <h3 class="pdoc-module-header" id="timeout" data-link-title="timeout">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/config/vars.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/config/vars.ts#L60">
         let <strong>timeout</strong>
     </a>
 </h3>
@@ -170,7 +170,7 @@ Set this to true only if the target Kafka server is an insecure development inst
 Timeout in seconds
 
 <h3 class="pdoc-module-header" id="tlsEnabled" data-link-title="tlsEnabled">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/config/vars.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/config/vars.ts#L64">
         let <strong>tlsEnabled</strong>
     </a>
 </h3>

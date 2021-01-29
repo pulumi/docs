@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-kafka/sdk/v2/go/kafka"
+	"github.com/pulumi/pulumi-kafka/sdk/v2/go/kafka/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
