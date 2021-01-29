@@ -47,7 +47,7 @@ A Pulumi package for creating and managing splunk cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`splunk` Terraform Provider](https://github.com/splunk/terraform-provider-splunk).</dd>
 	<dt>Version</dt>
-	<dd>0.1.1</dd>
+	<dd>0.2.0</dd>
 </dl>
 
 
