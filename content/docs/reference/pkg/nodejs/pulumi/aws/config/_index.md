@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/aws | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/aws package."
-git_sha: "3afde84dcfe31baf8d358c5e24483fd9a9089103"
+git_sha: "d072b346d2519850d0b24c72316f8d7487257ab0"
 block_external_search_index: true
 ---
 
@@ -46,7 +46,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="accessKey" data-link-title="accessKey">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L15">
         let <strong>accessKey</strong>
     </a>
 </h3>
@@ -56,35 +56,35 @@ block_external_search_index: true
 The access key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
 
 <h3 class="pdoc-module-header" id="allowedAccountIds" data-link-title="allowedAccountIds">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L16">
         let <strong>allowedAccountIds</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> allowedAccountIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;string[]&gt;(&#34;allowedAccountIds&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="assumeRole" data-link-title="assumeRole">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L17">
         let <strong>assumeRole</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> assumeRole: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AssumeRole'>AssumeRole</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;outputs.config.AssumeRole&gt;(&#34;assumeRole&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="endpoints" data-link-title="endpoints">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L18">
         let <strong>endpoints</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> endpoints: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#Endpoints'>Endpoints</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;outputs.config.Endpoints[]&gt;(&#34;endpoints&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="forbiddenAccountIds" data-link-title="forbiddenAccountIds">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L19">
         let <strong>forbiddenAccountIds</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> forbiddenAccountIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;string[]&gt;(&#34;forbiddenAccountIds&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ignoreTags" data-link-title="ignoreTags">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L23">
         let <strong>ignoreTags</strong>
     </a>
 </h3>
@@ -94,7 +94,7 @@ The access key for API operations. You can retrieve this from the 'Security & Cr
 Configuration block with settings to ignore resource tags across all resources.
 
 <h3 class="pdoc-module-header" id="insecure" data-link-title="insecure">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L27">
         let <strong>insecure</strong>
     </a>
 </h3>
@@ -104,7 +104,7 @@ Configuration block with settings to ignore resource tags across all resources.
 Explicitly allow the provider to perform "insecure" SSL requests. If omitted,default value is `false`
 
 <h3 class="pdoc-module-header" id="maxRetries" data-link-title="maxRetries">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L31">
         let <strong>maxRetries</strong>
     </a>
 </h3>
@@ -114,7 +114,7 @@ Explicitly allow the provider to perform "insecure" SSL requests. If omitted,def
 The maximum number of times an AWS API request is being executed. If the API request still fails, an error is thrown.
 
 <h3 class="pdoc-module-header" id="profile" data-link-title="profile">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L35">
         let <strong>profile</strong>
     </a>
 </h3>
@@ -124,7 +124,7 @@ The maximum number of times an AWS API request is being executed. If the API req
 The profile for API operations. If not set, the default profile created with `aws configure` will be used.
 
 <h3 class="pdoc-module-header" id="region" data-link-title="region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L39">
         let <strong>region</strong>
     </a>
 </h3>
@@ -134,7 +134,7 @@ The profile for API operations. If not set, the default profile created with `aw
 The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
 
 <h3 class="pdoc-module-header" id="requireRegion" data-link-title="requireRegion">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/require.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/require.ts#L21">
         function <strong>requireRegion</strong>
     </a>
 </h3>
@@ -146,7 +146,7 @@ The region where AWS operations will take place. Examples are us-east-1, us-west
 requireRegion fetches the AWS region, requiring that it exists; if it has not been configured, an error is thrown.
 
 <h3 class="pdoc-module-header" id="s3ForcePathStyle" data-link-title="s3ForcePathStyle">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L45">
         let <strong>s3ForcePathStyle</strong>
     </a>
 </h3>
@@ -158,7 +158,7 @@ default, the S3 client will use virtual hosted bucket addressing when possible (
 Specific to the Amazon S3 service.
 
 <h3 class="pdoc-module-header" id="secretKey" data-link-title="secretKey">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L49">
         let <strong>secretKey</strong>
     </a>
 </h3>
@@ -168,7 +168,7 @@ Specific to the Amazon S3 service.
 The secret key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
 
 <h3 class="pdoc-module-header" id="sharedCredentialsFile" data-link-title="sharedCredentialsFile">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L53">
         let <strong>sharedCredentialsFile</strong>
     </a>
 </h3>
@@ -178,7 +178,7 @@ The secret key for API operations. You can retrieve this from the 'Security & Cr
 The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
 
 <h3 class="pdoc-module-header" id="skipCredentialsValidation" data-link-title="skipCredentialsValidation">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L58">
         let <strong>skipCredentialsValidation</strong>
     </a>
 </h3>
@@ -189,7 +189,7 @@ Skip the credentials validation via STS API. Used for AWS API implementations th
 available/implemented.
 
 <h3 class="pdoc-module-header" id="skipGetEc2Platforms" data-link-title="skipGetEc2Platforms">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L62">
         let <strong>skipGetEc2Platforms</strong>
     </a>
 </h3>
@@ -199,14 +199,14 @@ available/implemented.
 Skip getting the supported EC2 platforms. Used by users that don't have ec2:DescribeAccountAttributes permissions.
 
 <h3 class="pdoc-module-header" id="skipMetadataApiCheck" data-link-title="skipMetadataApiCheck">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L63">
         let <strong>skipMetadataApiCheck</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> skipMetadataApiCheck: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;skipMetadataApiCheck&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="skipRegionValidation" data-link-title="skipRegionValidation">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L68">
         let <strong>skipRegionValidation</strong>
     </a>
 </h3>
@@ -217,7 +217,7 @@ Skip static validation of region name. Used by users of alternative AWS-like API
 not public (yet).
 
 <h3 class="pdoc-module-header" id="skipRequestingAccountId" data-link-title="skipRequestingAccountId">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L72">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L72">
         let <strong>skipRequestingAccountId</strong>
     </a>
 </h3>
@@ -227,7 +227,7 @@ not public (yet).
 Skip requesting the account ID. Used for AWS API implementations that do not have IAM/STS API and/or metadata API.
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3afde84dcfe31baf8d358c5e24483fd9a9089103/sdk/nodejs/config/vars.ts#L76">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/config/vars.ts#L76">
         let <strong>token</strong>
     </a>
 </h3>
