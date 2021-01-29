@@ -33,7 +33,7 @@ A Pulumi package for creating and managing postgresql cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`postgresql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-postgresql).</dd>
 	<dt>Version</dt>
-	<dd>2.5.3</dd>
+	<dd>2.6.0</dd>
 </dl>
 
 

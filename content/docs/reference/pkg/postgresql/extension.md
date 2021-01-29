@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql"
+	"github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
