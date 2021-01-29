@@ -77,7 +77,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/"
 	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/plugins"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
