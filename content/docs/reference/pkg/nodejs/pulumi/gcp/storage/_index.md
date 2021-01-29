@@ -3,7 +3,7 @@ title: "Module storage"
 title_tag: "Module storage | Package @pulumi/gcp | Node.js SDK"
 linktitle: "storage"
 meta_desc: "Explore members of the storage module in the @pulumi/gcp package."
-git_sha: "4f8e44f390377bd82bfb0f66dbdf6c0c289fb396"
+git_sha: "5c935b05d99cd9c17d3f0db276edab8124e8c4fa"
 block_external_search_index: true
 ---
 
@@ -93,7 +93,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Bucket" data-link-title="Bucket">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L87">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L87">
         Resource <strong>Bucket</strong>
     </a>
 </h3>
@@ -179,7 +179,7 @@ Storage buckets can be imported using the `name` or
  `false` in state. If you've set it to `true` in config, run `terraform apply` to update the value set in state. If you delete this resource before updating the value, objects in the bucket will not be destroyed.
 
 <h4 class="pdoc-member-header" id="Bucket-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L192"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L192"> <b>constructor</b></a>
 </h4>
 
 
@@ -193,7 +193,7 @@ Create a Bucket resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Bucket-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L97">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L97">method <b>get</b></a>
 </h4>
 
 
@@ -204,14 +204,14 @@ Get an existing Bucket resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Bucket-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L87">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L87">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Bucket-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L108">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L108">method <b>isInstance</b></a>
 </h4>
 
 
@@ -222,7 +222,7 @@ Returns true if the given object is an instance of Bucket.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Bucket-onObjectArchived">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L112">method <b>onObjectArchived</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L112">method <b>onObjectArchived</b></a>
 </h4>
 
 
@@ -237,7 +237,7 @@ This event is only sent for versioning buckets.
 See https://cloud.google.com/storage/docs/object-versioning for more details.
 
 <h4 class="pdoc-member-header" id="Bucket-onObjectDeleted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L102">method <b>onObjectDeleted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L102">method <b>onObjectDeleted</b></a>
 </h4>
 
 
@@ -255,7 +255,7 @@ permanently deleted. Depending on the object versioning setting for a bucket thi
 See https://cloud.google.com/storage/docs/object-versioning for more details.
 
 <h4 class="pdoc-member-header" id="Bucket-onObjectEvent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L125">method <b>onObjectEvent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L125">method <b>onObjectEvent</b></a>
 </h4>
 
 
@@ -265,7 +265,7 @@ See https://cloud.google.com/storage/docs/object-versioning for more details.
 Generic helper for registering for any event.
 
 <h4 class="pdoc-member-header" id="Bucket-onObjectFinalized">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L89">method <b>onObjectFinalized</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L89">method <b>onObjectFinalized</b></a>
 </h4>
 
 
@@ -277,7 +277,7 @@ created (or an existing object is overwritten, and a new generation of that obje
 created) in this bucket.
 
 <h4 class="pdoc-member-header" id="Bucket-onObjectMetadataUpdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L120">method <b>onObjectMetadataUpdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L120">method <b>onObjectMetadataUpdated</b></a>
 </h4>
 
 
@@ -290,7 +290,7 @@ existing object changes.
 See https://cloud.google.com/storage/docs/metadata for more details.
 
 <h4 class="pdoc-member-header" id="Bucket-bucketPolicyOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L120">property <b>bucketPolicyOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L120">property <b>bucketPolicyOnly</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -302,7 +302,7 @@ Please use the uniform_bucket_level_access as this field has been renamed by Goo
 Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket. This field will be removed in the next major release of the provider.
 
 <h4 class="pdoc-member-header" id="Bucket-cors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L124">property <b>cors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L124">property <b>cors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketCor'>BucketCor</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -310,12 +310,12 @@ Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy
 The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Bucket-defaultEventBasedHold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L125">property <b>defaultEventBasedHold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L125">property <b>defaultEventBasedHold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultEventBasedHold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Bucket-encryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L129">property <b>encryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L129">property <b>encryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketEncryption'>BucketEncryption</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -323,7 +323,7 @@ The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/)
 The bucket's encryption configuration.
 
 <h4 class="pdoc-member-header" id="Bucket-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L135">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L135">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -333,7 +333,7 @@ boolean option will delete all contained objects. If you try to delete a
 bucket that contains objects, the provider will fail that run.
 
 <h4 class="pdoc-member-header" id="Bucket-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L87">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L87">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -342,7 +342,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Bucket-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L139">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L139">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -350,7 +350,7 @@ deployments and may be missing (undefined) during planning phases.
 A map of key/value label pairs to assign to the bucket.
 
 <h4 class="pdoc-member-header" id="Bucket-lifecycleRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L143">property <b>lifecycleRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L143">property <b>lifecycleRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lifecycleRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketLifecycleRule'>BucketLifecycleRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -358,7 +358,7 @@ A map of key/value label pairs to assign to the bucket.
 The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Bucket-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L147">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L147">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -366,7 +366,7 @@ The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#c
 The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 
 <h4 class="pdoc-member-header" id="Bucket-logging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L151">property <b>logging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L151">property <b>logging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logging: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketLogging'>BucketLogging</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -374,7 +374,7 @@ The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 
 <h4 class="pdoc-member-header" id="Bucket-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L155">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L155">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -382,7 +382,7 @@ The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/acces
 The name of the bucket.
 
 <h4 class="pdoc-member-header" id="Bucket-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L160">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L160">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -391,7 +391,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Bucket-requesterPays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L164">property <b>requesterPays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L164">property <b>requesterPays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requesterPays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -399,7 +399,7 @@ is not provided, the provider project is used.
 Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
 
 <h4 class="pdoc-member-header" id="Bucket-retentionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L168">property <b>retentionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L168">property <b>retentionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketRetentionPolicy'>BucketRetentionPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -407,7 +407,7 @@ Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) o
 Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Bucket-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L172">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L172">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -415,7 +415,7 @@ Configuration of the bucket's data retention policy for how long objects in the 
 The URI of the created resource.
 
 <h4 class="pdoc-member-header" id="Bucket-storageClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L176">property <b>storageClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L176">property <b>storageClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -423,7 +423,7 @@ The URI of the created resource.
 The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 
 <h4 class="pdoc-member-header" id="Bucket-uniformBucketLevelAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L180">property <b>uniformBucketLevelAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L180">property <b>uniformBucketLevelAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uniformBucketLevelAccess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -431,7 +431,7 @@ The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes
 Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
 
 <h4 class="pdoc-member-header" id="Bucket-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L184">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L184">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -439,7 +439,7 @@ Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/unif
 The base URL of the bucket, in the format `gs://<bucket-name>`.
 
 <h4 class="pdoc-member-header" id="Bucket-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L87">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L87">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -448,7 +448,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Bucket-versioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L188">property <b>versioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L188">property <b>versioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versioning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketVersioning'>BucketVersioning</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -456,7 +456,7 @@ deployments.
 The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 
 <h4 class="pdoc-member-header" id="Bucket-website">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L192">property <b>website</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L192">property <b>website</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>website: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketWebsite'>BucketWebsite</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -464,7 +464,7 @@ The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versionin
 Configuration if the bucket acts as a website. Structure is documented below.
 
 <h3 class="pdoc-module-header" id="BucketAccessControl" data-link-title="BucketAccessControl">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L54">
         Resource <strong>BucketAccessControl</strong>
     </a>
 </h3>
@@ -518,7 +518,7 @@ BucketAccessControl can be imported using any of these accepted formats
 ```
 
 <h4 class="pdoc-member-header" id="BucketAccessControl-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L116"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L116"> <b>constructor</b></a>
 </h4>
 
 
@@ -532,7 +532,7 @@ Create a BucketAccessControl resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BucketAccessControl-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L64">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L64">method <b>get</b></a>
 </h4>
 
 
@@ -543,14 +543,14 @@ Get an existing BucketAccessControl resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BucketAccessControl-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L54">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L54">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BucketAccessControl-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L75">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L75">method <b>isInstance</b></a>
 </h4>
 
 
@@ -561,7 +561,7 @@ Returns true if the given object is an instance of BucketAccessControl.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BucketAccessControl-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L85">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L85">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -569,7 +569,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the bucket.
 
 <h4 class="pdoc-member-header" id="BucketAccessControl-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L89">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L89">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -577,7 +577,7 @@ The name of the bucket.
 The domain associated with the entity.
 
 <h4 class="pdoc-member-header" id="BucketAccessControl-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L93">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L93">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -585,7 +585,7 @@ The domain associated with the entity.
 The email address associated with the entity.
 
 <h4 class="pdoc-member-header" id="BucketAccessControl-entity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L111">property <b>entity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L111">property <b>entity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -607,7 +607,7 @@ To refer to all members of the Google Apps for Business domain
 example.com, the entity would be domain-example.com.
 
 <h4 class="pdoc-member-header" id="BucketAccessControl-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L54">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L54">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -616,7 +616,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BucketAccessControl-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L116">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L116">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -625,7 +625,7 @@ The access permission for the entity.
 Possible values are `OWNER`, `READER`, and `WRITER`.
 
 <h4 class="pdoc-member-header" id="BucketAccessControl-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L54">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L54">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -634,7 +634,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BucketACL" data-link-title="BucketACL">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L41">
         Resource <strong>BucketACL</strong>
     </a>
 </h3>
@@ -675,7 +675,7 @@ const image_store_acl = new gcp.storage.BucketACL("image-store-acl", {
 This resource does not support import.
 
 <h4 class="pdoc-member-header" id="BucketACL-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -689,7 +689,7 @@ Create a BucketACL resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BucketACL-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -700,14 +700,14 @@ Get an existing BucketACL resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BucketACL-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BucketACL-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -718,7 +718,7 @@ Returns true if the given object is an instance of BucketACL.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BucketACL-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L72">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L72">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -726,7 +726,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the bucket it applies to.
 
 <h4 class="pdoc-member-header" id="BucketACL-defaultAcl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L76">property <b>defaultAcl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L76">property <b>defaultAcl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultAcl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -734,7 +734,7 @@ The name of the bucket it applies to.
 Configure this ACL to be the default ACL.
 
 <h4 class="pdoc-member-header" id="BucketACL-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -743,7 +743,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BucketACL-predefinedAcl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L80">property <b>predefinedAcl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L80">property <b>predefinedAcl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>predefinedAcl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -751,7 +751,7 @@ deployments and may be missing (undefined) during planning phases.
 The [canned GCS ACL](https://cloud.google.com/storage/docs/access-control/lists#predefined-acl) to apply. Must be set if `roleEntity` is not.
 
 <h4 class="pdoc-member-header" id="BucketACL-roleEntities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L84">property <b>roleEntities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L84">property <b>roleEntities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleEntities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -759,7 +759,7 @@ The [canned GCS ACL](https://cloud.google.com/storage/docs/access-control/lists#
 List of role/entity pairs in the form `ROLE:entity`. See [GCS Bucket ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/bucketAccessControls)  for more details. Must be set if `predefinedAcl` is not.
 
 <h4 class="pdoc-member-header" id="BucketACL-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -768,7 +768,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BucketIAMBinding" data-link-title="BucketIAMBinding">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L33">
         Resource <strong>BucketIAMBinding</strong>
     </a>
 </h3>
@@ -800,7 +800,7 @@ For all import syntaxes, the "resource in question" can take any of the followin
 full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 <h4 class="pdoc-member-header" id="BucketIAMBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L90"> <b>constructor</b></a>
 </h4>
 
 
@@ -814,7 +814,7 @@ Create a BucketIAMBinding resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BucketIAMBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -825,14 +825,14 @@ Get an existing BucketIAMBinding resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BucketIAMBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BucketIAMBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -843,7 +843,7 @@ Returns true if the given object is an instance of BucketIAMBinding.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BucketIAMBinding-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L64">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L64">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -851,7 +851,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="BucketIAMBinding-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L69">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L69">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketIAMBindingCondition'>BucketIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -860,7 +860,7 @@ Used to find the parent resource to bind the IAM policy to
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="BucketIAMBinding-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L73">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L73">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -868,7 +868,7 @@ Structure is documented below.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="BucketIAMBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -877,7 +877,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BucketIAMBinding-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L84">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L84">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -892,7 +892,7 @@ Each entry can have one of the following values:
 * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
 
 <h4 class="pdoc-member-header" id="BucketIAMBinding-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L90">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L90">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -902,7 +902,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="BucketIAMBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -911,7 +911,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BucketIAMMember" data-link-title="BucketIAMMember">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L33">
         Resource <strong>BucketIAMMember</strong>
     </a>
 </h3>
@@ -943,7 +943,7 @@ For all import syntaxes, the "resource in question" can take any of the followin
 full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 <h4 class="pdoc-member-header" id="BucketIAMMember-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L80"> <b>constructor</b></a>
 </h4>
 
 
@@ -957,7 +957,7 @@ Create a BucketIAMMember resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BucketIAMMember-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -968,14 +968,14 @@ Get an existing BucketIAMMember resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BucketIAMMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BucketIAMMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -986,7 +986,7 @@ Returns true if the given object is an instance of BucketIAMMember.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BucketIAMMember-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L64">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L64">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -994,7 +994,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="BucketIAMMember-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L69">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L69">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketIAMMemberCondition'>BucketIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1003,7 +1003,7 @@ Used to find the parent resource to bind the IAM policy to
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="BucketIAMMember-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L73">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L73">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1011,7 +1011,7 @@ Structure is documented below.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="BucketIAMMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1020,12 +1020,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BucketIAMMember-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L74">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L74">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BucketIAMMember-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L80">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L80">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1035,7 +1035,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="BucketIAMMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1044,7 +1044,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BucketIAMPolicy" data-link-title="BucketIAMPolicy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMPolicy.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMPolicy.ts#L32">
         Resource <strong>BucketIAMPolicy</strong>
     </a>
 </h3>
@@ -1076,7 +1076,7 @@ For all import syntaxes, the "resource in question" can take any of the followin
 full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 <h4 class="pdoc-member-header" id="BucketIAMPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMPolicy.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMPolicy.ts#L72"> <b>constructor</b></a>
 </h4>
 
 
@@ -1090,7 +1090,7 @@ Create a BucketIAMPolicy resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BucketIAMPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMPolicy.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMPolicy.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -1101,14 +1101,14 @@ Get an existing BucketIAMPolicy resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BucketIAMPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMPolicy.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMPolicy.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BucketIAMPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMPolicy.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMPolicy.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1119,7 +1119,7 @@ Returns true if the given object is an instance of BucketIAMPolicy.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BucketIAMPolicy-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMPolicy.ts#L63">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMPolicy.ts#L63">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1127,7 +1127,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="BucketIAMPolicy-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMPolicy.ts#L67">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMPolicy.ts#L67">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1135,7 +1135,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="BucketIAMPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMPolicy.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMPolicy.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1144,7 +1144,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BucketIAMPolicy-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMPolicy.ts#L72">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMPolicy.ts#L72">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1153,7 +1153,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="BucketIAMPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMPolicy.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMPolicy.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1162,7 +1162,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BucketObject" data-link-title="BucketObject">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L33">
         Resource <strong>BucketObject</strong>
     </a>
 </h3>
@@ -1195,7 +1195,7 @@ const picture = new gcp.storage.BucketObject("picture", {
 This resource does not support import.
 
 <h4 class="pdoc-member-header" id="BucketObject-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L130"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L130"> <b>constructor</b></a>
 </h4>
 
 
@@ -1209,7 +1209,7 @@ Create a BucketObject resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BucketObject-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -1220,14 +1220,14 @@ Get an existing BucketObject resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BucketObject-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BucketObject-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1238,7 +1238,7 @@ Returns true if the given object is an instance of BucketObject.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BucketObject-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L64">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L64">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1246,7 +1246,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the containing bucket.
 
 <h4 class="pdoc-member-header" id="BucketObject-cacheControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L69">property <b>cacheControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L69">property <b>cacheControl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cacheControl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1255,7 +1255,7 @@ The name of the containing bucket.
 directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
 
 <h4 class="pdoc-member-header" id="BucketObject-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L73">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L73">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1263,7 +1263,7 @@ directive to specify caching behavior of object data. If omitted and object is a
 Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: The `content` field is marked as sensitive.
 
 <h4 class="pdoc-member-header" id="BucketObject-contentDisposition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L77">property <b>contentDisposition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L77">property <b>contentDisposition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentDisposition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1271,7 +1271,7 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
 
 <h4 class="pdoc-member-header" id="BucketObject-contentEncoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L81">property <b>contentEncoding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L81">property <b>contentEncoding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentEncoding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1279,7 +1279,7 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
 
 <h4 class="pdoc-member-header" id="BucketObject-contentLanguage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L85">property <b>contentLanguage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L85">property <b>contentLanguage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentLanguage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1287,7 +1287,7 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
 
 <h4 class="pdoc-member-header" id="BucketObject-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L89">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L89">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1295,7 +1295,7 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
 
 <h4 class="pdoc-member-header" id="BucketObject-crc32c">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L93">property <b>crc32c</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L93">property <b>crc32c</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>crc32c: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1303,12 +1303,12 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 (Computed) Base 64 CRC32 hash of the uploaded data.
 
 <h4 class="pdoc-member-header" id="BucketObject-detectMd5hash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L94">property <b>detectMd5hash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L94">property <b>detectMd5hash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>detectMd5hash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BucketObject-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1317,7 +1317,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BucketObject-md5hash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L98">property <b>md5hash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L98">property <b>md5hash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>md5hash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1325,7 +1325,7 @@ deployments and may be missing (undefined) during planning phases.
 (Computed) Base 64 MD5 hash of the uploaded data.
 
 <h4 class="pdoc-member-header" id="BucketObject-mediaLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L102">property <b>mediaLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L102">property <b>mediaLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mediaLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1333,7 +1333,7 @@ deployments and may be missing (undefined) during planning phases.
 (Computed) A url reference to download this object.
 
 <h4 class="pdoc-member-header" id="BucketObject-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L106">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L106">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1341,7 +1341,7 @@ deployments and may be missing (undefined) during planning phases.
 User-provided metadata, in key/value pairs.
 
 <h4 class="pdoc-member-header" id="BucketObject-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L110">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L110">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1349,7 +1349,7 @@ User-provided metadata, in key/value pairs.
 The name of the object. If you're interpolating the name of this object, see `outputName` instead.
 
 <h4 class="pdoc-member-header" id="BucketObject-outputName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L115">property <b>outputName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L115">property <b>outputName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outputName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1358,7 +1358,7 @@ The name of the object. If you're interpolating the name of this object, see `ou
 `gcp.storage.ObjectACL` resources when your `gcp.storage.BucketObject` is recreated.
 
 <h4 class="pdoc-member-header" id="BucketObject-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L119">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L119">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1366,7 +1366,7 @@ The name of the object. If you're interpolating the name of this object, see `ou
 (Computed) A url reference to this object.
 
 <h4 class="pdoc-member-header" id="BucketObject-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L124">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L124">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Asset'>Asset</a> | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1375,7 +1375,7 @@ A path to the data you want to upload. Must be defined
 if `content` is not.
 
 <h4 class="pdoc-member-header" id="BucketObject-storageClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L130">property <b>storageClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L130">property <b>storageClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1385,7 +1385,7 @@ Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, 
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
 
 <h4 class="pdoc-member-header" id="BucketObject-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1394,7 +1394,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DefaultObjectAccessControl" data-link-title="DefaultObjectAccessControl">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L52">
         Resource <strong>DefaultObjectAccessControl</strong>
     </a>
 </h3>
@@ -1445,7 +1445,7 @@ DefaultObjectAccessControl can be imported using any of these accepted formats
 ```
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControl-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L124"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L124"> <b>constructor</b></a>
 </h4>
 
 
@@ -1459,7 +1459,7 @@ Create a DefaultObjectAccessControl resource with the given unique name, argumen
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControl-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L62">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L62">method <b>get</b></a>
 </h4>
 
 
@@ -1470,14 +1470,14 @@ Get an existing DefaultObjectAccessControl resource's state with the given name,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControl-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L52">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L52">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControl-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L73">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L73">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1488,7 +1488,7 @@ Returns true if the given object is an instance of DefaultObjectAccessControl.  
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControl-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L83">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L83">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1496,7 +1496,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the bucket.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControl-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L87">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L87">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1504,7 +1504,7 @@ The name of the bucket.
 The domain associated with the entity.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControl-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L91">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L91">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1512,7 +1512,7 @@ The domain associated with the entity.
 The email address associated with the entity.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControl-entity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L103">property <b>entity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L103">property <b>entity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1528,7 +1528,7 @@ The entity holding the permission, in one of the following forms:
 * allAuthenticatedUsers
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControl-entityId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L107">property <b>entityId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L107">property <b>entityId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entityId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1536,7 +1536,7 @@ The entity holding the permission, in one of the following forms:
 The ID for the entity
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControl-generation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L111">property <b>generation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L111">property <b>generation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>generation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1544,7 +1544,7 @@ The ID for the entity
 The content generation of the object, if applied to an object.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControl-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1553,7 +1553,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControl-object">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L115">property <b>object</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L115">property <b>object</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>object: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1561,7 +1561,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the object, if applied to an object.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControl-projectTeams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L119">property <b>projectTeams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L119">property <b>projectTeams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectTeams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DefaultObjectAccessControlProjectTeam'>DefaultObjectAccessControlProjectTeam</a>[]&gt;;</code></pre>
@@ -1569,7 +1569,7 @@ The name of the object, if applied to an object.
 The project team associated with the entity
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControl-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L124">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L124">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1578,7 +1578,7 @@ The access permission for the entity.
 Possible values are `OWNER` and `READER`.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControl-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L52">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L52">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1587,7 +1587,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DefaultObjectACL" data-link-title="DefaultObjectACL">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectACL.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectACL.ts#L44">
         Resource <strong>DefaultObjectACL</strong>
     </a>
 </h3>
@@ -1631,7 +1631,7 @@ const image_store_default_acl = new gcp.storage.DefaultObjectACL("image-store-de
 This resource does not support import.
 
 <h4 class="pdoc-member-header" id="DefaultObjectACL-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectACL.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectACL.ts#L81"> <b>constructor</b></a>
 </h4>
 
 
@@ -1645,7 +1645,7 @@ Create a DefaultObjectACL resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DefaultObjectACL-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectACL.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectACL.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -1656,14 +1656,14 @@ Get an existing DefaultObjectACL resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DefaultObjectACL-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectACL.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectACL.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DefaultObjectACL-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectACL.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectACL.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1674,7 +1674,7 @@ Returns true if the given object is an instance of DefaultObjectACL.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DefaultObjectACL-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectACL.ts#L75">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectACL.ts#L75">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1682,7 +1682,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the bucket it applies to.
 
 <h4 class="pdoc-member-header" id="DefaultObjectACL-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectACL.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectACL.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1691,7 +1691,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DefaultObjectACL-roleEntities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectACL.ts#L81">property <b>roleEntities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectACL.ts#L81">property <b>roleEntities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleEntities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1701,7 +1701,7 @@ See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_ap
 Omitting the field is the same as providing an empty list.
 
 <h4 class="pdoc-member-header" id="DefaultObjectACL-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectACL.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectACL.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1710,7 +1710,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="HmacKey" data-link-title="HmacKey">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L52">
         Resource <strong>HmacKey</strong>
     </a>
 </h3>
@@ -1762,7 +1762,7 @@ HmacKey can be imported using any of these accepted formats
 ```
 
 <h4 class="pdoc-member-header" id="HmacKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L110"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L110"> <b>constructor</b></a>
 </h4>
 
 
@@ -1776,7 +1776,7 @@ Create a HmacKey resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="HmacKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L62">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L62">method <b>get</b></a>
 </h4>
 
 
@@ -1787,14 +1787,14 @@ Get an existing HmacKey resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="HmacKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L52">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L52">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="HmacKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L73">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L73">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1805,7 +1805,7 @@ Returns true if the given object is an instance of HmacKey.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="HmacKey-accessId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L83">property <b>accessId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L83">property <b>accessId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1813,7 +1813,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The access ID of the HMAC Key.
 
 <h4 class="pdoc-member-header" id="HmacKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1822,7 +1822,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="HmacKey-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L88">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L88">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1831,7 +1831,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="HmacKey-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L92">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L92">property <b>secret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1839,7 +1839,7 @@ If it is not provided, the provider project is used.
 HMAC secret key material.
 
 <h4 class="pdoc-member-header" id="HmacKey-serviceAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L96">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L96">property <b>serviceAccountEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccountEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1847,7 +1847,7 @@ HMAC secret key material.
 The email address of the key's associated service account.
 
 <h4 class="pdoc-member-header" id="HmacKey-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L102">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L102">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1857,7 +1857,7 @@ Default value is `ACTIVE`.
 Possible values are `ACTIVE` and `INACTIVE`.
 
 <h4 class="pdoc-member-header" id="HmacKey-timeCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L106">property <b>timeCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L106">property <b>timeCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeCreated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1865,7 +1865,7 @@ Possible values are `ACTIVE` and `INACTIVE`.
 'The creation time of the HMAC key in RFC 3339 format. '
 
 <h4 class="pdoc-member-header" id="HmacKey-updated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L110">property <b>updated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L110">property <b>updated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1873,7 +1873,7 @@ Possible values are `ACTIVE` and `INACTIVE`.
 'The last modification time of the HMAC key metadata in RFC 3339 format.'
 
 <h4 class="pdoc-member-header" id="HmacKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L52">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L52">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1882,7 +1882,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Notification" data-link-title="Notification">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L65">
         Resource <strong>Notification</strong>
     </a>
 </h3>
@@ -1947,7 +1947,7 @@ Storage notifications can be imported using the notification `id` in the format 
 ```
 
 <h4 class="pdoc-member-header" id="Notification-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L127"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L127"> <b>constructor</b></a>
 </h4>
 
 
@@ -1961,7 +1961,7 @@ Create a Notification resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Notification-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L75">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L75">method <b>get</b></a>
 </h4>
 
 
@@ -1972,14 +1972,14 @@ Get an existing Notification resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Notification-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L65">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L65">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Notification-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L86">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L86">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1990,7 +1990,7 @@ Returns true if the given object is an instance of Notification.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Notification-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L96">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L96">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1998,7 +1998,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the bucket.
 
 <h4 class="pdoc-member-header" id="Notification-customAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L100">property <b>customAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L100">property <b>customAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2006,7 +2006,7 @@ The name of the bucket.
 A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
 
 <h4 class="pdoc-member-header" id="Notification-eventTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L104">property <b>eventTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L104">property <b>eventTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2014,7 +2014,7 @@ A set of key/value attribute pairs to attach to each Cloud PubSub message publis
 List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
 
 <h4 class="pdoc-member-header" id="Notification-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L65">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L65">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2023,7 +2023,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Notification-notificationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L108">property <b>notificationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L108">property <b>notificationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2031,7 +2031,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the created notification.
 
 <h4 class="pdoc-member-header" id="Notification-objectNamePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L112">property <b>objectNamePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L112">property <b>objectNamePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>objectNamePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2039,7 +2039,7 @@ The ID of the created notification.
 Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
 
 <h4 class="pdoc-member-header" id="Notification-payloadFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L116">property <b>payloadFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L116">property <b>payloadFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>payloadFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2047,7 +2047,7 @@ Specifies a prefix path filter for this notification config. Cloud Storage will 
 The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
 
 <h4 class="pdoc-member-header" id="Notification-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L120">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L120">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2055,7 +2055,7 @@ The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
 The URI of the created resource.
 
 <h4 class="pdoc-member-header" id="Notification-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L127">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L127">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2066,7 +2066,7 @@ i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`. If the project is 
 you will need to use the project-level name.
 
 <h4 class="pdoc-member-header" id="Notification-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L65">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L65">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2075,7 +2075,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ObjectAccessControl" data-link-title="ObjectAccessControl">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L56">
         Resource <strong>ObjectAccessControl</strong>
     </a>
 </h3>
@@ -2130,7 +2130,7 @@ ObjectAccessControl can be imported using any of these accepted formats
 ```
 
 <h4 class="pdoc-member-header" id="ObjectAccessControl-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L128"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L128"> <b>constructor</b></a>
 </h4>
 
 
@@ -2144,7 +2144,7 @@ Create a ObjectAccessControl resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControl-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L66">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L66">method <b>get</b></a>
 </h4>
 
 
@@ -2155,14 +2155,14 @@ Get an existing ObjectAccessControl resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControl-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L56">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L56">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ObjectAccessControl-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L77">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L77">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2173,7 +2173,7 @@ Returns true if the given object is an instance of ObjectAccessControl.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControl-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L87">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L87">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2181,7 +2181,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the bucket.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControl-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L91">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L91">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2189,7 +2189,7 @@ The name of the bucket.
 The domain associated with the entity.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControl-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L95">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L95">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2197,7 +2197,7 @@ The domain associated with the entity.
 The email address associated with the entity.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControl-entity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L107">property <b>entity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L107">property <b>entity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2213,7 +2213,7 @@ The entity holding the permission, in one of the following forms:
 * allAuthenticatedUsers
 
 <h4 class="pdoc-member-header" id="ObjectAccessControl-entityId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L111">property <b>entityId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L111">property <b>entityId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entityId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2221,7 +2221,7 @@ The entity holding the permission, in one of the following forms:
 The ID for the entity
 
 <h4 class="pdoc-member-header" id="ObjectAccessControl-generation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L115">property <b>generation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L115">property <b>generation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>generation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2229,7 +2229,7 @@ The ID for the entity
 The content generation of the object, if applied to an object.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControl-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2238,7 +2238,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControl-object">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L119">property <b>object</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L119">property <b>object</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>object: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2246,7 +2246,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the object to apply the access control to.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControl-projectTeams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L123">property <b>projectTeams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L123">property <b>projectTeams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectTeams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ObjectAccessControlProjectTeam'>ObjectAccessControlProjectTeam</a>[]&gt;;</code></pre>
@@ -2254,7 +2254,7 @@ The name of the object to apply the access control to.
 The project team associated with the entity
 
 <h4 class="pdoc-member-header" id="ObjectAccessControl-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L128">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L128">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2263,7 +2263,7 @@ The access permission for the entity.
 Possible values are `OWNER` and `READER`.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControl-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L56">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L56">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2272,7 +2272,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ObjectACL" data-link-title="ObjectACL">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L47">
         Resource <strong>ObjectACL</strong>
     </a>
 </h3>
@@ -2319,7 +2319,7 @@ const image_store_acl = new gcp.storage.ObjectACL("image-store-acl", {
 This resource does not support import.
 
 <h4 class="pdoc-member-header" id="ObjectACL-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L91"> <b>constructor</b></a>
 </h4>
 
 
@@ -2333,7 +2333,7 @@ Create a ObjectACL resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ObjectACL-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L57">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L57">method <b>get</b></a>
 </h4>
 
 
@@ -2344,14 +2344,14 @@ Get an existing ObjectACL resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ObjectACL-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L47">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L47">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ObjectACL-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L68">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L68">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2362,7 +2362,7 @@ Returns true if the given object is an instance of ObjectACL.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ObjectACL-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L78">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L78">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2370,7 +2370,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the bucket the object is stored in.
 
 <h4 class="pdoc-member-header" id="ObjectACL-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L47">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2379,7 +2379,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ObjectACL-object">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L82">property <b>object</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L82">property <b>object</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>object: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2387,7 +2387,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the object to apply the acl to.
 
 <h4 class="pdoc-member-header" id="ObjectACL-predefinedAcl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L86">property <b>predefinedAcl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L86">property <b>predefinedAcl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>predefinedAcl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2395,7 +2395,7 @@ The name of the object to apply the acl to.
 The "canned" [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `roleEntity` is not.
 
 <h4 class="pdoc-member-header" id="ObjectACL-roleEntities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L91">property <b>roleEntities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L91">property <b>roleEntities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleEntities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -2404,7 +2404,7 @@ List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documen
 Must be set if `predefinedAcl` is not.
 
 <h4 class="pdoc-member-header" id="ObjectACL-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L47">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L47">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2413,7 +2413,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TransferJob" data-link-title="TransferJob">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L93">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L93">
         Resource <strong>TransferJob</strong>
     </a>
 </h3>
@@ -2505,7 +2505,7 @@ Storage buckets can be imported using the Transfer Job's `project` and `name` wi
 ```
 
 <h4 class="pdoc-member-header" id="TransferJob-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L157"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L157"> <b>constructor</b></a>
 </h4>
 
 
@@ -2519,7 +2519,7 @@ Create a TransferJob resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TransferJob-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L103">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L103">method <b>get</b></a>
 </h4>
 
 
@@ -2530,14 +2530,14 @@ Get an existing TransferJob resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TransferJob-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L93">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L93">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TransferJob-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L114">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L114">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2548,7 +2548,7 @@ Returns true if the given object is an instance of TransferJob.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TransferJob-creationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L124">property <b>creationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L124">property <b>creationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>creationTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2556,7 +2556,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 When the Transfer Job was created.
 
 <h4 class="pdoc-member-header" id="TransferJob-deletionTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L128">property <b>deletionTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L128">property <b>deletionTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deletionTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2564,7 +2564,7 @@ When the Transfer Job was created.
 When the Transfer Job was deleted.
 
 <h4 class="pdoc-member-header" id="TransferJob-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L132">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L132">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2572,7 +2572,7 @@ When the Transfer Job was deleted.
 Unique description to identify the Transfer Job.
 
 <h4 class="pdoc-member-header" id="TransferJob-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L93">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L93">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2581,7 +2581,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TransferJob-lastModificationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L136">property <b>lastModificationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L136">property <b>lastModificationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastModificationTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2589,7 +2589,7 @@ deployments and may be missing (undefined) during planning phases.
 When the Transfer Job was last modified.
 
 <h4 class="pdoc-member-header" id="TransferJob-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L140">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L140">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2597,7 +2597,7 @@ When the Transfer Job was last modified.
 The name of the Transfer Job.
 
 <h4 class="pdoc-member-header" id="TransferJob-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L145">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L145">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2606,7 +2606,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TransferJob-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L149">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L149">property <b>schedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TransferJobSchedule'>TransferJobSchedule</a>&gt;;</code></pre>
@@ -2614,7 +2614,7 @@ is not provided, the provider project is used.
 Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
 
 <h4 class="pdoc-member-header" id="TransferJob-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L153">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L153">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2622,7 +2622,7 @@ Schedule specification defining when the Transfer Job should be scheduled to sta
 Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
 
 <h4 class="pdoc-member-header" id="TransferJob-transferSpec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L157">property <b>transferSpec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L157">property <b>transferSpec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transferSpec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TransferJobTransferSpec'>TransferJobTransferSpec</a>&gt;;</code></pre>
@@ -2630,7 +2630,7 @@ Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status 
 Transfer specification. Structure documented below.
 
 <h4 class="pdoc-member-header" id="TransferJob-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L93">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L93">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2641,7 +2641,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getBucketObject" data-link-title="getBucketObject">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L28">
         Function <strong>getBucketObject</strong>
     </a>
 </h3>
@@ -2670,7 +2670,7 @@ const picture = pulumi.output(gcp.storage.getBucketObject({
 ```
 
 <h3 class="pdoc-module-header" id="getBucketObjectContent" data-link-title="getBucketObjectContent">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L31">
         Function <strong>getBucketObjectContent</strong>
     </a>
 </h3>
@@ -2702,7 +2702,7 @@ export const encrypted = key.then(key => key.content);
 ```
 
 <h3 class="pdoc-module-header" id="getObjectSignedUrl" data-link-title="getObjectSignedUrl">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L45">
         Function <strong>getObjectSignedUrl</strong>
     </a>
 </h3>
@@ -2748,7 +2748,7 @@ const getUrl = gcp.storage.getObjectSignedUrl({
 ```
 
 <h3 class="pdoc-module-header" id="getProjectServiceAccount" data-link-title="getProjectServiceAccount">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getProjectServiceAccount.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getProjectServiceAccount.ts#L75">
         Function <strong>getProjectServiceAccount</strong>
     </a>
 </h3>
@@ -2824,7 +2824,7 @@ const bucket = new gcp.storage.Bucket("bucket", {encryption: {
 ```
 
 <h3 class="pdoc-module-header" id="getTransferProjectServieAccount" data-link-title="getTransferProjectServieAccount">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getTransferProjectServieAccount.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getTransferProjectServieAccount.ts#L21">
         Function <strong>getTransferProjectServieAccount</strong>
     </a>
 </h3>
@@ -2848,7 +2848,7 @@ export const defaultAccount = _default.then(_default => _default.email);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="BucketAccessControlArgs" data-link-title="BucketAccessControlArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L204">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L204">
         interface <strong>BucketAccessControlArgs</strong>
     </a>
 </h3>
@@ -2858,7 +2858,7 @@ export const defaultAccount = _default.then(_default => _default.email);
 The set of arguments for constructing a BucketAccessControl resource.
 
 <h4 class="pdoc-member-header" id="BucketAccessControlArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L208">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L208">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2866,7 +2866,7 @@ The set of arguments for constructing a BucketAccessControl resource.
 The name of the bucket.
 
 <h4 class="pdoc-member-header" id="BucketAccessControlArgs-entity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L226">property <b>entity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L226">property <b>entity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2888,7 +2888,7 @@ To refer to all members of the Google Apps for Business domain
 example.com, the entity would be domain-example.com.
 
 <h4 class="pdoc-member-header" id="BucketAccessControlArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L231">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L231">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2897,7 +2897,7 @@ The access permission for the entity.
 Possible values are `OWNER`, `READER`, and `WRITER`.
 
 <h3 class="pdoc-module-header" id="BucketAccessControlState" data-link-title="BucketAccessControlState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L163">
         interface <strong>BucketAccessControlState</strong>
     </a>
 </h3>
@@ -2907,7 +2907,7 @@ Possible values are `OWNER`, `READER`, and `WRITER`.
 Input properties used for looking up and filtering BucketAccessControl resources.
 
 <h4 class="pdoc-member-header" id="BucketAccessControlState-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L167">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L167">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2915,7 +2915,7 @@ Input properties used for looking up and filtering BucketAccessControl resources
 The name of the bucket.
 
 <h4 class="pdoc-member-header" id="BucketAccessControlState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L171">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L171">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2923,7 +2923,7 @@ The name of the bucket.
 The domain associated with the entity.
 
 <h4 class="pdoc-member-header" id="BucketAccessControlState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L175">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L175">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2931,7 +2931,7 @@ The domain associated with the entity.
 The email address associated with the entity.
 
 <h4 class="pdoc-member-header" id="BucketAccessControlState-entity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L193">property <b>entity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L193">property <b>entity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2953,7 +2953,7 @@ To refer to all members of the Google Apps for Business domain
 example.com, the entity would be domain-example.com.
 
 <h4 class="pdoc-member-header" id="BucketAccessControlState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketAccessControl.ts#L198">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketAccessControl.ts#L198">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2962,7 +2962,7 @@ The access permission for the entity.
 Possible values are `OWNER`, `READER`, and `WRITER`.
 
 <h3 class="pdoc-module-header" id="BucketACLArgs" data-link-title="BucketACLArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L148">
         interface <strong>BucketACLArgs</strong>
     </a>
 </h3>
@@ -2972,7 +2972,7 @@ Possible values are `OWNER`, `READER`, and `WRITER`.
 The set of arguments for constructing a BucketACL resource.
 
 <h4 class="pdoc-member-header" id="BucketACLArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L152">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L152">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2980,7 +2980,7 @@ The set of arguments for constructing a BucketACL resource.
 The name of the bucket it applies to.
 
 <h4 class="pdoc-member-header" id="BucketACLArgs-defaultAcl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L156">property <b>defaultAcl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L156">property <b>defaultAcl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAcl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2988,7 +2988,7 @@ The name of the bucket it applies to.
 Configure this ACL to be the default ACL.
 
 <h4 class="pdoc-member-header" id="BucketACLArgs-predefinedAcl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L160">property <b>predefinedAcl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L160">property <b>predefinedAcl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>predefinedAcl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2996,7 +2996,7 @@ Configure this ACL to be the default ACL.
 The [canned GCS ACL](https://cloud.google.com/storage/docs/access-control/lists#predefined-acl) to apply. Must be set if `roleEntity` is not.
 
 <h4 class="pdoc-member-header" id="BucketACLArgs-roleEntities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L164">property <b>roleEntities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L164">property <b>roleEntities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleEntities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3004,7 +3004,7 @@ The [canned GCS ACL](https://cloud.google.com/storage/docs/access-control/lists#
 List of role/entity pairs in the form `ROLE:entity`. See [GCS Bucket ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/bucketAccessControls)  for more details. Must be set if `predefinedAcl` is not.
 
 <h3 class="pdoc-module-header" id="BucketACLState" data-link-title="BucketACLState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L126">
         interface <strong>BucketACLState</strong>
     </a>
 </h3>
@@ -3014,7 +3014,7 @@ List of role/entity pairs in the form `ROLE:entity`. See [GCS Bucket ACL documen
 Input properties used for looking up and filtering BucketACL resources.
 
 <h4 class="pdoc-member-header" id="BucketACLState-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L130">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L130">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3022,7 +3022,7 @@ Input properties used for looking up and filtering BucketACL resources.
 The name of the bucket it applies to.
 
 <h4 class="pdoc-member-header" id="BucketACLState-defaultAcl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L134">property <b>defaultAcl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L134">property <b>defaultAcl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAcl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3030,7 +3030,7 @@ The name of the bucket it applies to.
 Configure this ACL to be the default ACL.
 
 <h4 class="pdoc-member-header" id="BucketACLState-predefinedAcl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L138">property <b>predefinedAcl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L138">property <b>predefinedAcl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>predefinedAcl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3038,7 +3038,7 @@ Configure this ACL to be the default ACL.
 The [canned GCS ACL](https://cloud.google.com/storage/docs/access-control/lists#predefined-acl) to apply. Must be set if `roleEntity` is not.
 
 <h4 class="pdoc-member-header" id="BucketACLState-roleEntities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketACL.ts#L142">property <b>roleEntities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketACL.ts#L142">property <b>roleEntities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleEntities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3046,7 +3046,7 @@ The [canned GCS ACL](https://cloud.google.com/storage/docs/access-control/lists#
 List of role/entity pairs in the form `ROLE:entity`. See [GCS Bucket ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/bucketAccessControls)  for more details. Must be set if `predefinedAcl` is not.
 
 <h3 class="pdoc-module-header" id="BucketArgs" data-link-title="BucketArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L345">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L345">
         interface <strong>BucketArgs</strong>
     </a>
 </h3>
@@ -3056,7 +3056,7 @@ List of role/entity pairs in the form `ROLE:entity`. See [GCS Bucket ACL documen
 The set of arguments for constructing a Bucket resource.
 
 <h4 class="pdoc-member-header" id="BucketArgs-bucketPolicyOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L351">property <b>bucketPolicyOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L351">property <b>bucketPolicyOnly</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3068,7 +3068,7 @@ Please use the uniform_bucket_level_access as this field has been renamed by Goo
 Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket. This field will be removed in the next major release of the provider.
 
 <h4 class="pdoc-member-header" id="BucketArgs-cors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L355">property <b>cors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L355">property <b>cors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketCor'>BucketCor</a>&gt;[]&gt;;</code></pre>
@@ -3076,12 +3076,12 @@ Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy
 The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="BucketArgs-defaultEventBasedHold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L356">property <b>defaultEventBasedHold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L356">property <b>defaultEventBasedHold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultEventBasedHold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BucketArgs-encryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L360">property <b>encryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L360">property <b>encryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketEncryption'>BucketEncryption</a>&gt;;</code></pre>
@@ -3089,7 +3089,7 @@ The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/)
 The bucket's encryption configuration.
 
 <h4 class="pdoc-member-header" id="BucketArgs-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L366">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L366">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3099,7 +3099,7 @@ boolean option will delete all contained objects. If you try to delete a
 bucket that contains objects, the provider will fail that run.
 
 <h4 class="pdoc-member-header" id="BucketArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L370">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L370">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3107,7 +3107,7 @@ bucket that contains objects, the provider will fail that run.
 A map of key/value label pairs to assign to the bucket.
 
 <h4 class="pdoc-member-header" id="BucketArgs-lifecycleRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L374">property <b>lifecycleRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L374">property <b>lifecycleRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lifecycleRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLifecycleRule'>BucketLifecycleRule</a>&gt;[]&gt;;</code></pre>
@@ -3115,7 +3115,7 @@ A map of key/value label pairs to assign to the bucket.
 The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="BucketArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L378">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L378">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3123,7 +3123,7 @@ The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#c
 The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 
 <h4 class="pdoc-member-header" id="BucketArgs-logging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L382">property <b>logging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L382">property <b>logging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLogging'>BucketLogging</a>&gt;;</code></pre>
@@ -3131,7 +3131,7 @@ The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 
 <h4 class="pdoc-member-header" id="BucketArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L386">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L386">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3139,7 +3139,7 @@ The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/acces
 The name of the bucket.
 
 <h4 class="pdoc-member-header" id="BucketArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L391">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L391">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3148,7 +3148,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="BucketArgs-requesterPays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L395">property <b>requesterPays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L395">property <b>requesterPays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requesterPays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3156,7 +3156,7 @@ is not provided, the provider project is used.
 Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
 
 <h4 class="pdoc-member-header" id="BucketArgs-retentionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L399">property <b>retentionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L399">property <b>retentionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketRetentionPolicy'>BucketRetentionPolicy</a>&gt;;</code></pre>
@@ -3164,7 +3164,7 @@ Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) o
 Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="BucketArgs-storageClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L403">property <b>storageClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L403">property <b>storageClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3172,7 +3172,7 @@ Configuration of the bucket's data retention policy for how long objects in the 
 The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 
 <h4 class="pdoc-member-header" id="BucketArgs-uniformBucketLevelAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L407">property <b>uniformBucketLevelAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L407">property <b>uniformBucketLevelAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uniformBucketLevelAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3180,7 +3180,7 @@ The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes
 Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
 
 <h4 class="pdoc-member-header" id="BucketArgs-versioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L411">property <b>versioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L411">property <b>versioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketVersioning'>BucketVersioning</a>&gt;;</code></pre>
@@ -3188,7 +3188,7 @@ Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/unif
 The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 
 <h4 class="pdoc-member-header" id="BucketArgs-website">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L415">property <b>website</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L415">property <b>website</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>website?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketWebsite'>BucketWebsite</a>&gt;;</code></pre>
@@ -3196,7 +3196,7 @@ The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versionin
 Configuration if the bucket acts as a website. Structure is documented below.
 
 <h3 class="pdoc-module-header" id="BucketContext" data-link-title="BucketContext">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L41">
         interface <strong>BucketContext</strong>
     </a>
 </h3>
@@ -3206,7 +3206,7 @@ Configuration if the bucket acts as a website. Structure is documented below.
 Shape of the [context] object passed to a Cloud Function when a bucket event fires.
 
 <h4 class="pdoc-member-header" id="BucketContext-eventId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/cloudfunctions/zMixins.ts#L30">property <b>eventId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudfunctions/zMixins.ts#L30">property <b>eventId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3214,7 +3214,7 @@ Shape of the [context] object passed to a Cloud Function when a bucket event fir
 A unique ID for the event. For example: "70172329041928".
 
 <h4 class="pdoc-member-header" id="BucketContext-eventType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L43">property <b>eventType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L43">property <b>eventType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventType: <span class='s2'>"google.storage.object.finalize"</span> | <span class='s2'>"google.storage.object.delete"</span> | <span class='s2'>"google.storage.object.archive"</span> | <span class='s2'>"google.storage.object.metadataUpdate"</span>;</code></pre>
@@ -3222,7 +3222,7 @@ A unique ID for the event. For example: "70172329041928".
 The type of the event.
 
 <h4 class="pdoc-member-header" id="BucketContext-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L46">property <b>resource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L46">property <b>resource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resource: {
@@ -3234,7 +3234,7 @@ The type of the event.
 The resource that emitted the event.
 
 <h4 class="pdoc-member-header" id="BucketContext-timestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/cloudfunctions/zMixins.ts#L33">property <b>timestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudfunctions/zMixins.ts#L33">property <b>timestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3242,7 +3242,7 @@ The resource that emitted the event.
 The date/time this event was created. For example: "2018-04-09T07:56:12.975Z".
 
 <h3 class="pdoc-module-header" id="BucketData" data-link-title="BucketData">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L58">
         interface <strong>BucketData</strong>
     </a>
 </h3>
@@ -3254,114 +3254,114 @@ Shape of the [data] object passed to a Cloud Function when a bucket event fires.
 See https://cloud.google.com/storage/docs/json_api/v1/objects for more details.
 
 <h4 class="pdoc-member-header" id="BucketData-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L61">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L61">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketData-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L62">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L62">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketData-crc32c">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L63">property <b>crc32c</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L63">property <b>crc32c</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>crc32c: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketData-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L64">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L64">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketData-generation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L65">property <b>generation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L65">property <b>generation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>generation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketData-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L66">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketData-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L59">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L59">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <span class='s2'>"storage#object"</span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketData-md5Hash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L67">property <b>md5Hash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L67">property <b>md5Hash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>md5Hash: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketData-mediaLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L68">property <b>mediaLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L68">property <b>mediaLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaLink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketData-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L69">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L69">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BucketData-metageneration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L70">property <b>metageneration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L70">property <b>metageneration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metageneration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketData-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketData-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L72">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L72">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketData-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L73">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L73">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketData-storageClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L74">property <b>storageClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L74">property <b>storageClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageClass: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketData-timeCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L75">property <b>timeCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L75">property <b>timeCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeCreated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketData-timeStorageClassUpdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L76">property <b>timeStorageClassUpdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L76">property <b>timeStorageClassUpdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeStorageClassUpdated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketData-updated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L77">property <b>updated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L77">property <b>updated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="BucketEventArgs" data-link-title="BucketEventArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L33">
         interface <strong>BucketEventArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BucketEventArgs</span></code></pre>
 <h4 class="pdoc-member-header" id="BucketEventArgs-failurePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L35">property <b>failurePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L35">property <b>failurePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>failurePolicy?: cloudfunctions.FailurePolicy;</code></pre>
 <h4 class="pdoc-member-header" id="BucketEventArgs-triggerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L34">property <b>triggerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L34">property <b>triggerType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerType: <span class='s2'>"finalize"</span> | <span class='s2'>"delete"</span> | <span class='s2'>"archive"</span> | <span class='s2'>"metadataUpdate"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="BucketEventCallbackFunctionArgs" data-link-title="BucketEventCallbackFunctionArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L12">
         interface <strong>BucketEventCallbackFunctionArgs</strong>
     </a>
 </h3>
@@ -3372,7 +3372,7 @@ Arguments that can be provided to control the Cloud Function created as the serv
 for a bucket event.
 
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-availableMemoryMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/cloudfunctions/zMixins.ts#L292">property <b>availableMemoryMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudfunctions/zMixins.ts#L292">property <b>availableMemoryMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableMemoryMb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3380,7 +3380,7 @@ for a bucket event.
 Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB.
 
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/cloudfunctions/zMixins.ts#L358">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudfunctions/zMixins.ts#L358">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: storage.Bucket;</code></pre>
@@ -3390,17 +3390,17 @@ to be placed in.  A fresh [storage.BucketObject] will be made there containing t
 code.
 
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L13">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L13">property <b>callback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callback?: <a href='#BucketEventHandler'>BucketEventHandler</a>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L14">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L14">property <b>callbackFactory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callbackFactory?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | () => <a href='#BucketEventHandler'>BucketEventHandler</a>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-codePathOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/cloudfunctions/zMixins.ts#L288">property <b>codePathOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudfunctions/zMixins.ts#L288">property <b>codePathOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</code></pre>
@@ -3409,7 +3409,7 @@ Options to control which paths/packages should be included or excluded in the zi
 the code for the GCP Function.
 
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/cloudfunctions/zMixins.ts#L296">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudfunctions/zMixins.ts#L296">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3417,7 +3417,7 @@ the code for the GCP Function.
 Description of the function.
 
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-environmentVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/cloudfunctions/zMixins.ts#L300">property <b>environmentVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudfunctions/zMixins.ts#L300">property <b>environmentVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environmentVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3425,17 +3425,17 @@ Description of the function.
 A set of key/value environment variable pairs to assign to the function.
 
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-eventTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L21">property <b>eventTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L21">property <b>eventTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventTrigger?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-httpsTriggerUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L19">property <b>httpsTriggerUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L19">property <b>httpsTriggerUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsTriggerUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-iamMember">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/cloudfunctions/zMixins.ts#L370">property <b>iamMember</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudfunctions/zMixins.ts#L370">property <b>iamMember</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamMember?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3445,7 +3445,7 @@ Available options are `allAuthenticatedUsers`, `user:{emailid}`, `serviceAccount
 `group:{emailid}` and `domain:{domain}:`
 
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-iamRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/cloudfunctions/zMixins.ts#L376">property <b>iamRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudfunctions/zMixins.ts#L376">property <b>iamRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3454,7 +3454,7 @@ The specific role to attach to the function. If not specified, then we default t
 Role must be in the format `roles/{role-name}`
 
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/cloudfunctions/zMixins.ts#L313">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudfunctions/zMixins.ts#L313">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3462,7 +3462,7 @@ Role must be in the format `roles/{role-name}`
 A set of key/value label pairs to assign to the function.
 
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/cloudfunctions/zMixins.ts#L317">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudfunctions/zMixins.ts#L317">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3470,7 +3470,7 @@ A set of key/value label pairs to assign to the function.
 Project of the function. If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/cloudfunctions/zMixins.ts#L321">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudfunctions/zMixins.ts#L321">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3478,7 +3478,7 @@ Project of the function. If it is not provided, the provider project is used.
 Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
 
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/cloudfunctions/zMixins.ts#L363">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudfunctions/zMixins.ts#L363">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3486,7 +3486,7 @@ Region of function. Currently can be only "us-central1". If it is not provided, 
 The specific runtime for the function. If not specified, a default will be applied
 
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-serviceAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/cloudfunctions/zMixins.ts#L325">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudfunctions/zMixins.ts#L325">property <b>serviceAccountEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3494,7 +3494,7 @@ The specific runtime for the function. If not specified, a default will be appli
 If provided, the self-provided service account to run the function with.
 
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/cloudfunctions/zMixins.ts#L329">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudfunctions/zMixins.ts#L329">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3502,19 +3502,19 @@ If provided, the self-provided service account to run the function with.
 Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
 
 <h4 class="pdoc-member-header" id="BucketEventCallbackFunctionArgs-triggerHttp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L20">property <b>triggerHttp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L20">property <b>triggerHttp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerHttp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="BucketEventHandler" data-link-title="BucketEventHandler">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L80">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L80">
         type <strong>BucketEventHandler</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> BucketEventHandler = cloudfunctions.Callback&lt;<a href='#BucketData'>BucketData</a>, <a href='#BucketContext'>BucketContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="BucketIAMBindingArgs" data-link-title="BucketIAMBindingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L176">
         interface <strong>BucketIAMBindingArgs</strong>
     </a>
 </h3>
@@ -3524,7 +3524,7 @@ Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be mo
 The set of arguments for constructing a BucketIAMBinding resource.
 
 <h4 class="pdoc-member-header" id="BucketIAMBindingArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L180">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L180">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3532,7 +3532,7 @@ The set of arguments for constructing a BucketIAMBinding resource.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="BucketIAMBindingArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L185">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L185">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketIAMBindingCondition'>BucketIAMBindingCondition</a>&gt;;</code></pre>
@@ -3541,7 +3541,7 @@ Used to find the parent resource to bind the IAM policy to
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="BucketIAMBindingArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L196">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L196">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3556,7 +3556,7 @@ Each entry can have one of the following values:
 * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
 
 <h4 class="pdoc-member-header" id="BucketIAMBindingArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L202">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L202">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3566,7 +3566,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="BucketIAMBindingState" data-link-title="BucketIAMBindingState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L140">
         interface <strong>BucketIAMBindingState</strong>
     </a>
 </h3>
@@ -3576,7 +3576,7 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering BucketIAMBinding resources.
 
 <h4 class="pdoc-member-header" id="BucketIAMBindingState-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L144">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L144">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3584,7 +3584,7 @@ Input properties used for looking up and filtering BucketIAMBinding resources.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="BucketIAMBindingState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L149">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L149">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketIAMBindingCondition'>BucketIAMBindingCondition</a>&gt;;</code></pre>
@@ -3593,7 +3593,7 @@ Used to find the parent resource to bind the IAM policy to
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="BucketIAMBindingState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L153">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L153">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3601,7 +3601,7 @@ Structure is documented below.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="BucketIAMBindingState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L164">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L164">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3616,7 +3616,7 @@ Each entry can have one of the following values:
 * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
 
 <h4 class="pdoc-member-header" id="BucketIAMBindingState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMBinding.ts#L170">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMBinding.ts#L170">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3626,7 +3626,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="BucketIAMMemberArgs" data-link-title="BucketIAMMemberArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L156">
         interface <strong>BucketIAMMemberArgs</strong>
     </a>
 </h3>
@@ -3636,7 +3636,7 @@ The role that should be applied. Only one
 The set of arguments for constructing a BucketIAMMember resource.
 
 <h4 class="pdoc-member-header" id="BucketIAMMemberArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L160">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L160">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3644,7 +3644,7 @@ The set of arguments for constructing a BucketIAMMember resource.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="BucketIAMMemberArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L165">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L165">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketIAMMemberCondition'>BucketIAMMemberCondition</a>&gt;;</code></pre>
@@ -3653,12 +3653,12 @@ Used to find the parent resource to bind the IAM policy to
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="BucketIAMMemberArgs-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L166">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L166">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BucketIAMMemberArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L172">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L172">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3668,7 +3668,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="BucketIAMMemberState" data-link-title="BucketIAMMemberState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L130">
         interface <strong>BucketIAMMemberState</strong>
     </a>
 </h3>
@@ -3678,7 +3678,7 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering BucketIAMMember resources.
 
 <h4 class="pdoc-member-header" id="BucketIAMMemberState-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L134">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L134">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3686,7 +3686,7 @@ Input properties used for looking up and filtering BucketIAMMember resources.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="BucketIAMMemberState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L139">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L139">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketIAMMemberCondition'>BucketIAMMemberCondition</a>&gt;;</code></pre>
@@ -3695,7 +3695,7 @@ Used to find the parent resource to bind the IAM policy to
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="BucketIAMMemberState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L143">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L143">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3703,12 +3703,12 @@ Structure is documented below.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="BucketIAMMemberState-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L144">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L144">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BucketIAMMemberState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMMember.ts#L150">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMMember.ts#L150">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3718,7 +3718,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="BucketIAMPolicyArgs" data-link-title="BucketIAMPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMPolicy.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMPolicy.ts#L134">
         interface <strong>BucketIAMPolicyArgs</strong>
     </a>
 </h3>
@@ -3728,7 +3728,7 @@ The role that should be applied. Only one
 The set of arguments for constructing a BucketIAMPolicy resource.
 
 <h4 class="pdoc-member-header" id="BucketIAMPolicyArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMPolicy.ts#L138">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMPolicy.ts#L138">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3736,7 +3736,7 @@ The set of arguments for constructing a BucketIAMPolicy resource.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="BucketIAMPolicyArgs-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMPolicy.ts#L143">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMPolicy.ts#L143">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3745,7 +3745,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h3 class="pdoc-module-header" id="BucketIAMPolicyState" data-link-title="BucketIAMPolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMPolicy.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMPolicy.ts#L115">
         interface <strong>BucketIAMPolicyState</strong>
     </a>
 </h3>
@@ -3755,7 +3755,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 Input properties used for looking up and filtering BucketIAMPolicy resources.
 
 <h4 class="pdoc-member-header" id="BucketIAMPolicyState-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMPolicy.ts#L119">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMPolicy.ts#L119">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3763,7 +3763,7 @@ Input properties used for looking up and filtering BucketIAMPolicy resources.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="BucketIAMPolicyState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMPolicy.ts#L123">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMPolicy.ts#L123">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3771,7 +3771,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="BucketIAMPolicyState-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketIAMPolicy.ts#L128">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketIAMPolicy.ts#L128">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3780,7 +3780,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h3 class="pdoc-module-header" id="BucketObjectArgs" data-link-title="BucketObjectArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L274">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L274">
         interface <strong>BucketObjectArgs</strong>
     </a>
 </h3>
@@ -3790,7 +3790,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 The set of arguments for constructing a BucketObject resource.
 
 <h4 class="pdoc-member-header" id="BucketObjectArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L278">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L278">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3798,7 +3798,7 @@ The set of arguments for constructing a BucketObject resource.
 The name of the containing bucket.
 
 <h4 class="pdoc-member-header" id="BucketObjectArgs-cacheControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L283">property <b>cacheControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L283">property <b>cacheControl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3807,7 +3807,7 @@ The name of the containing bucket.
 directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
 
 <h4 class="pdoc-member-header" id="BucketObjectArgs-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L287">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L287">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3815,7 +3815,7 @@ directive to specify caching behavior of object data. If omitted and object is a
 Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: The `content` field is marked as sensitive.
 
 <h4 class="pdoc-member-header" id="BucketObjectArgs-contentDisposition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L291">property <b>contentDisposition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L291">property <b>contentDisposition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentDisposition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3823,7 +3823,7 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
 
 <h4 class="pdoc-member-header" id="BucketObjectArgs-contentEncoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L295">property <b>contentEncoding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L295">property <b>contentEncoding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentEncoding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3831,7 +3831,7 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
 
 <h4 class="pdoc-member-header" id="BucketObjectArgs-contentLanguage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L299">property <b>contentLanguage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L299">property <b>contentLanguage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentLanguage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3839,7 +3839,7 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
 
 <h4 class="pdoc-member-header" id="BucketObjectArgs-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L303">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L303">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3847,12 +3847,12 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
 
 <h4 class="pdoc-member-header" id="BucketObjectArgs-detectMd5hash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L304">property <b>detectMd5hash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L304">property <b>detectMd5hash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectMd5hash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BucketObjectArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L308">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L308">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3860,7 +3860,7 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 User-provided metadata, in key/value pairs.
 
 <h4 class="pdoc-member-header" id="BucketObjectArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L312">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L312">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3868,7 +3868,7 @@ User-provided metadata, in key/value pairs.
 The name of the object. If you're interpolating the name of this object, see `outputName` instead.
 
 <h4 class="pdoc-member-header" id="BucketObjectArgs-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L317">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L317">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Asset'>Asset</a> | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;;</code></pre>
@@ -3877,7 +3877,7 @@ A path to the data you want to upload. Must be defined
 if `content` is not.
 
 <h4 class="pdoc-member-header" id="BucketObjectArgs-storageClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L323">property <b>storageClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L323">property <b>storageClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3887,7 +3887,7 @@ Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, 
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
 
 <h3 class="pdoc-module-header" id="BucketObjectState" data-link-title="BucketObjectState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L198">
         interface <strong>BucketObjectState</strong>
     </a>
 </h3>
@@ -3897,7 +3897,7 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
 Input properties used for looking up and filtering BucketObject resources.
 
 <h4 class="pdoc-member-header" id="BucketObjectState-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L202">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L202">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3905,7 +3905,7 @@ Input properties used for looking up and filtering BucketObject resources.
 The name of the containing bucket.
 
 <h4 class="pdoc-member-header" id="BucketObjectState-cacheControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L207">property <b>cacheControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L207">property <b>cacheControl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3914,7 +3914,7 @@ The name of the containing bucket.
 directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
 
 <h4 class="pdoc-member-header" id="BucketObjectState-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L211">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L211">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3922,7 +3922,7 @@ directive to specify caching behavior of object data. If omitted and object is a
 Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: The `content` field is marked as sensitive.
 
 <h4 class="pdoc-member-header" id="BucketObjectState-contentDisposition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L215">property <b>contentDisposition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L215">property <b>contentDisposition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentDisposition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3930,7 +3930,7 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
 
 <h4 class="pdoc-member-header" id="BucketObjectState-contentEncoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L219">property <b>contentEncoding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L219">property <b>contentEncoding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentEncoding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3938,7 +3938,7 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
 
 <h4 class="pdoc-member-header" id="BucketObjectState-contentLanguage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L223">property <b>contentLanguage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L223">property <b>contentLanguage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentLanguage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3946,7 +3946,7 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
 
 <h4 class="pdoc-member-header" id="BucketObjectState-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L227">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L227">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3954,7 +3954,7 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
 
 <h4 class="pdoc-member-header" id="BucketObjectState-crc32c">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L231">property <b>crc32c</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L231">property <b>crc32c</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>crc32c?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3962,12 +3962,12 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 (Computed) Base 64 CRC32 hash of the uploaded data.
 
 <h4 class="pdoc-member-header" id="BucketObjectState-detectMd5hash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L232">property <b>detectMd5hash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L232">property <b>detectMd5hash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectMd5hash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BucketObjectState-md5hash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L236">property <b>md5hash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L236">property <b>md5hash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>md5hash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3975,7 +3975,7 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 (Computed) Base 64 MD5 hash of the uploaded data.
 
 <h4 class="pdoc-member-header" id="BucketObjectState-mediaLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L240">property <b>mediaLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L240">property <b>mediaLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3983,7 +3983,7 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 (Computed) A url reference to download this object.
 
 <h4 class="pdoc-member-header" id="BucketObjectState-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L244">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L244">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3991,7 +3991,7 @@ Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: T
 User-provided metadata, in key/value pairs.
 
 <h4 class="pdoc-member-header" id="BucketObjectState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L248">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L248">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3999,7 +3999,7 @@ User-provided metadata, in key/value pairs.
 The name of the object. If you're interpolating the name of this object, see `outputName` instead.
 
 <h4 class="pdoc-member-header" id="BucketObjectState-outputName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L253">property <b>outputName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L253">property <b>outputName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4008,7 +4008,7 @@ The name of the object. If you're interpolating the name of this object, see `ou
 `gcp.storage.ObjectACL` resources when your `gcp.storage.BucketObject` is recreated.
 
 <h4 class="pdoc-member-header" id="BucketObjectState-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L257">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L257">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4016,7 +4016,7 @@ The name of the object. If you're interpolating the name of this object, see `ou
 (Computed) A url reference to this object.
 
 <h4 class="pdoc-member-header" id="BucketObjectState-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L262">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L262">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Asset'>Asset</a> | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;;</code></pre>
@@ -4025,7 +4025,7 @@ A path to the data you want to upload. Must be defined
 if `content` is not.
 
 <h4 class="pdoc-member-header" id="BucketObjectState-storageClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucketObject.ts#L268">property <b>storageClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucketObject.ts#L268">property <b>storageClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4035,7 +4035,7 @@ Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, 
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
 
 <h3 class="pdoc-module-header" id="BucketState" data-link-title="BucketState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L261">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L261">
         interface <strong>BucketState</strong>
     </a>
 </h3>
@@ -4045,7 +4045,7 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
 Input properties used for looking up and filtering Bucket resources.
 
 <h4 class="pdoc-member-header" id="BucketState-bucketPolicyOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L267">property <b>bucketPolicyOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L267">property <b>bucketPolicyOnly</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -4057,7 +4057,7 @@ Please use the uniform_bucket_level_access as this field has been renamed by Goo
 Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket. This field will be removed in the next major release of the provider.
 
 <h4 class="pdoc-member-header" id="BucketState-cors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L271">property <b>cors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L271">property <b>cors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketCor'>BucketCor</a>&gt;[]&gt;;</code></pre>
@@ -4065,12 +4065,12 @@ Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy
 The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="BucketState-defaultEventBasedHold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L272">property <b>defaultEventBasedHold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L272">property <b>defaultEventBasedHold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultEventBasedHold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BucketState-encryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L276">property <b>encryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L276">property <b>encryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketEncryption'>BucketEncryption</a>&gt;;</code></pre>
@@ -4078,7 +4078,7 @@ The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/)
 The bucket's encryption configuration.
 
 <h4 class="pdoc-member-header" id="BucketState-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L282">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L282">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4088,7 +4088,7 @@ boolean option will delete all contained objects. If you try to delete a
 bucket that contains objects, the provider will fail that run.
 
 <h4 class="pdoc-member-header" id="BucketState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L286">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L286">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4096,7 +4096,7 @@ bucket that contains objects, the provider will fail that run.
 A map of key/value label pairs to assign to the bucket.
 
 <h4 class="pdoc-member-header" id="BucketState-lifecycleRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L290">property <b>lifecycleRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L290">property <b>lifecycleRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lifecycleRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLifecycleRule'>BucketLifecycleRule</a>&gt;[]&gt;;</code></pre>
@@ -4104,7 +4104,7 @@ A map of key/value label pairs to assign to the bucket.
 The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="BucketState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L294">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L294">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4112,7 +4112,7 @@ The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#c
 The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 
 <h4 class="pdoc-member-header" id="BucketState-logging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L298">property <b>logging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L298">property <b>logging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLogging'>BucketLogging</a>&gt;;</code></pre>
@@ -4120,7 +4120,7 @@ The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 
 <h4 class="pdoc-member-header" id="BucketState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L302">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L302">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4128,7 +4128,7 @@ The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/acces
 The name of the bucket.
 
 <h4 class="pdoc-member-header" id="BucketState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L307">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L307">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4137,7 +4137,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="BucketState-requesterPays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L311">property <b>requesterPays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L311">property <b>requesterPays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requesterPays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4145,7 +4145,7 @@ is not provided, the provider project is used.
 Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
 
 <h4 class="pdoc-member-header" id="BucketState-retentionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L315">property <b>retentionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L315">property <b>retentionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketRetentionPolicy'>BucketRetentionPolicy</a>&gt;;</code></pre>
@@ -4153,7 +4153,7 @@ Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) o
 Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="BucketState-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L319">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L319">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4161,7 +4161,7 @@ Configuration of the bucket's data retention policy for how long objects in the 
 The URI of the created resource.
 
 <h4 class="pdoc-member-header" id="BucketState-storageClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L323">property <b>storageClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L323">property <b>storageClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4169,7 +4169,7 @@ The URI of the created resource.
 The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 
 <h4 class="pdoc-member-header" id="BucketState-uniformBucketLevelAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L327">property <b>uniformBucketLevelAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L327">property <b>uniformBucketLevelAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uniformBucketLevelAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4177,7 +4177,7 @@ The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes
 Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
 
 <h4 class="pdoc-member-header" id="BucketState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L331">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L331">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4185,7 +4185,7 @@ Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/unif
 The base URL of the bucket, in the format `gs://<bucket-name>`.
 
 <h4 class="pdoc-member-header" id="BucketState-versioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L335">property <b>versioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L335">property <b>versioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketVersioning'>BucketVersioning</a>&gt;;</code></pre>
@@ -4193,7 +4193,7 @@ The base URL of the bucket, in the format `gs://<bucket-name>`.
 The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 
 <h4 class="pdoc-member-header" id="BucketState-website">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/bucket.ts#L339">property <b>website</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/bucket.ts#L339">property <b>website</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>website?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketWebsite'>BucketWebsite</a>&gt;;</code></pre>
@@ -4201,7 +4201,7 @@ The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versionin
 Configuration if the bucket acts as a website. Structure is documented below.
 
 <h3 class="pdoc-module-header" id="DefaultObjectAccessControlArgs" data-link-title="DefaultObjectAccessControlArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L233">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L233">
         interface <strong>DefaultObjectAccessControlArgs</strong>
     </a>
 </h3>
@@ -4211,7 +4211,7 @@ Configuration if the bucket acts as a website. Structure is documented below.
 The set of arguments for constructing a DefaultObjectAccessControl resource.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControlArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L237">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L237">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4219,7 +4219,7 @@ The set of arguments for constructing a DefaultObjectAccessControl resource.
 The name of the bucket.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControlArgs-entity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L249">property <b>entity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L249">property <b>entity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4235,7 +4235,7 @@ The entity holding the permission, in one of the following forms:
 * allAuthenticatedUsers
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControlArgs-object">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L253">property <b>object</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L253">property <b>object</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>object?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4243,7 +4243,7 @@ The entity holding the permission, in one of the following forms:
 The name of the object, if applied to an object.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControlArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L258">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L258">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4252,7 +4252,7 @@ The access permission for the entity.
 Possible values are `OWNER` and `READER`.
 
 <h3 class="pdoc-module-header" id="DefaultObjectAccessControlState" data-link-title="DefaultObjectAccessControlState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L182">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L182">
         interface <strong>DefaultObjectAccessControlState</strong>
     </a>
 </h3>
@@ -4262,7 +4262,7 @@ Possible values are `OWNER` and `READER`.
 Input properties used for looking up and filtering DefaultObjectAccessControl resources.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControlState-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L186">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L186">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4270,7 +4270,7 @@ Input properties used for looking up and filtering DefaultObjectAccessControl re
 The name of the bucket.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControlState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L190">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L190">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4278,7 +4278,7 @@ The name of the bucket.
 The domain associated with the entity.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControlState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L194">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L194">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4286,7 +4286,7 @@ The domain associated with the entity.
 The email address associated with the entity.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControlState-entity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L206">property <b>entity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L206">property <b>entity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4302,7 +4302,7 @@ The entity holding the permission, in one of the following forms:
 * allAuthenticatedUsers
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControlState-entityId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L210">property <b>entityId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L210">property <b>entityId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entityId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4310,7 +4310,7 @@ The entity holding the permission, in one of the following forms:
 The ID for the entity
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControlState-generation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L214">property <b>generation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L214">property <b>generation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>generation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4318,7 +4318,7 @@ The ID for the entity
 The content generation of the object, if applied to an object.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControlState-object">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L218">property <b>object</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L218">property <b>object</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>object?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4326,7 +4326,7 @@ The content generation of the object, if applied to an object.
 The name of the object, if applied to an object.
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControlState-projectTeams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L222">property <b>projectTeams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L222">property <b>projectTeams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectTeams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DefaultObjectAccessControlProjectTeam'>DefaultObjectAccessControlProjectTeam</a>&gt;[]&gt;;</code></pre>
@@ -4334,7 +4334,7 @@ The name of the object, if applied to an object.
 The project team associated with the entity
 
 <h4 class="pdoc-member-header" id="DefaultObjectAccessControlState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectAccessControl.ts#L227">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectAccessControl.ts#L227">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4343,7 +4343,7 @@ The access permission for the entity.
 Possible values are `OWNER` and `READER`.
 
 <h3 class="pdoc-module-header" id="DefaultObjectACLArgs" data-link-title="DefaultObjectACLArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectACL.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectACL.ts#L135">
         interface <strong>DefaultObjectACLArgs</strong>
     </a>
 </h3>
@@ -4353,7 +4353,7 @@ Possible values are `OWNER` and `READER`.
 The set of arguments for constructing a DefaultObjectACL resource.
 
 <h4 class="pdoc-member-header" id="DefaultObjectACLArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectACL.ts#L139">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectACL.ts#L139">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4361,7 +4361,7 @@ The set of arguments for constructing a DefaultObjectACL resource.
 The name of the bucket it applies to.
 
 <h4 class="pdoc-member-header" id="DefaultObjectACLArgs-roleEntities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectACL.ts#L145">property <b>roleEntities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectACL.ts#L145">property <b>roleEntities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleEntities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4371,7 +4371,7 @@ See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_ap
 Omitting the field is the same as providing an empty list.
 
 <h3 class="pdoc-module-header" id="DefaultObjectACLState" data-link-title="DefaultObjectACLState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectACL.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectACL.ts#L119">
         interface <strong>DefaultObjectACLState</strong>
     </a>
 </h3>
@@ -4381,7 +4381,7 @@ Omitting the field is the same as providing an empty list.
 Input properties used for looking up and filtering DefaultObjectACL resources.
 
 <h4 class="pdoc-member-header" id="DefaultObjectACLState-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectACL.ts#L123">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectACL.ts#L123">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4389,7 +4389,7 @@ Input properties used for looking up and filtering DefaultObjectACL resources.
 The name of the bucket it applies to.
 
 <h4 class="pdoc-member-header" id="DefaultObjectACLState-roleEntities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/defaultObjectACL.ts#L129">property <b>roleEntities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/defaultObjectACL.ts#L129">property <b>roleEntities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleEntities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4399,7 +4399,7 @@ See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_ap
 Omitting the field is the same as providing an empty list.
 
 <h3 class="pdoc-module-header" id="GetBucketObjectArgs" data-link-title="GetBucketObjectArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L46">
         interface <strong>GetBucketObjectArgs</strong>
     </a>
 </h3>
@@ -4409,7 +4409,7 @@ Omitting the field is the same as providing an empty list.
 A collection of arguments for invoking getBucketObject.
 
 <h4 class="pdoc-member-header" id="GetBucketObjectArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L50">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L50">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4417,7 +4417,7 @@ A collection of arguments for invoking getBucketObject.
 The name of the containing bucket.
 
 <h4 class="pdoc-member-header" id="GetBucketObjectArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L54">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4425,7 +4425,7 @@ The name of the containing bucket.
 The name of the object.
 
 <h3 class="pdoc-module-header" id="GetBucketObjectContentArgs" data-link-title="GetBucketObjectContentArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L49">
         interface <strong>GetBucketObjectContentArgs</strong>
     </a>
 </h3>
@@ -4435,7 +4435,7 @@ The name of the object.
 A collection of arguments for invoking getBucketObjectContent.
 
 <h4 class="pdoc-member-header" id="GetBucketObjectContentArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L53">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L53">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4443,7 +4443,7 @@ A collection of arguments for invoking getBucketObjectContent.
 The name of the containing bucket.
 
 <h4 class="pdoc-member-header" id="GetBucketObjectContentArgs-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L57">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L57">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4451,7 +4451,7 @@ The name of the containing bucket.
 (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object content.
 
 <h4 class="pdoc-member-header" id="GetBucketObjectContentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4459,7 +4459,7 @@ The name of the containing bucket.
 The name of the object.
 
 <h3 class="pdoc-module-header" id="GetBucketObjectContentResult" data-link-title="GetBucketObjectContentResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L67">
         interface <strong>GetBucketObjectContentResult</strong>
     </a>
 </h3>
@@ -4469,17 +4469,17 @@ The name of the object.
 A collection of values returned by getBucketObjectContent.
 
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L68">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L68">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-cacheControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L69">property <b>cacheControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L69">property <b>cacheControl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheControl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L73">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L73">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4487,37 +4487,37 @@ A collection of values returned by getBucketObjectContent.
 (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object content.
 
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-contentDisposition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L74">property <b>contentDisposition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L74">property <b>contentDisposition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentDisposition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-contentEncoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L75">property <b>contentEncoding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L75">property <b>contentEncoding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentEncoding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-contentLanguage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L76">property <b>contentLanguage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L76">property <b>contentLanguage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentLanguage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L77">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L77">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-crc32c">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L78">property <b>crc32c</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L78">property <b>crc32c</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>crc32c: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-detectMd5hash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L79">property <b>detectMd5hash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L79">property <b>detectMd5hash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectMd5hash: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L83">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L83">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4525,47 +4525,47 @@ A collection of values returned by getBucketObjectContent.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-md5hash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L84">property <b>md5hash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L84">property <b>md5hash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>md5hash: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-mediaLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L85">property <b>mediaLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L85">property <b>mediaLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaLink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L86">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L86">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L87">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-outputName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L88">property <b>outputName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L88">property <b>outputName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L89">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L89">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L90">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L90">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectContentResult-storageClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObjectContent.ts#L91">property <b>storageClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObjectContent.ts#L91">property <b>storageClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageClass: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetBucketObjectResult" data-link-title="GetBucketObjectResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L60">
         interface <strong>GetBucketObjectResult</strong>
     </a>
 </h3>
@@ -4575,12 +4575,12 @@ The provider-assigned unique ID for this managed resource.
 A collection of values returned by getBucketObject.
 
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L61">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L61">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-cacheControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L66">property <b>cacheControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L66">property <b>cacheControl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheControl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4589,12 +4589,12 @@ A collection of values returned by getBucketObject.
 directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
 
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L67">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L67">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-contentDisposition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L71">property <b>contentDisposition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L71">property <b>contentDisposition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentDisposition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4602,7 +4602,7 @@ directive to specify caching behavior of object data. If omitted and object is a
 (Computed) [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
 
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-contentEncoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L75">property <b>contentEncoding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L75">property <b>contentEncoding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentEncoding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4610,7 +4610,7 @@ directive to specify caching behavior of object data. If omitted and object is a
 (Computed) [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
 
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-contentLanguage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L79">property <b>contentLanguage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L79">property <b>contentLanguage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentLanguage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4618,7 +4618,7 @@ directive to specify caching behavior of object data. If omitted and object is a
 (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
 
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L83">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L83">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4626,7 +4626,7 @@ directive to specify caching behavior of object data. If omitted and object is a
 (Computed) [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
 
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-crc32c">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L87">property <b>crc32c</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L87">property <b>crc32c</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>crc32c: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4634,12 +4634,12 @@ directive to specify caching behavior of object data. If omitted and object is a
 (Computed) Base 64 CRC32 hash of the uploaded data.
 
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-detectMd5hash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L88">property <b>detectMd5hash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L88">property <b>detectMd5hash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectMd5hash: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L92">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L92">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4647,7 +4647,7 @@ directive to specify caching behavior of object data. If omitted and object is a
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-md5hash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L96">property <b>md5hash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L96">property <b>md5hash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>md5hash: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4655,7 +4655,7 @@ The provider-assigned unique ID for this managed resource.
 (Computed) Base 64 MD5 hash of the uploaded data.
 
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-mediaLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L100">property <b>mediaLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L100">property <b>mediaLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaLink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4663,22 +4663,22 @@ The provider-assigned unique ID for this managed resource.
 (Computed) A url reference to download this object.
 
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L101">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L101">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L102">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-outputName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L103">property <b>outputName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L103">property <b>outputName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L107">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L107">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4686,12 +4686,12 @@ The provider-assigned unique ID for this managed resource.
 (Computed) A url reference to this object.
 
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L108">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L108">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBucketObjectResult-storageClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getBucketObject.ts#L114">property <b>storageClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getBucketObject.ts#L114">property <b>storageClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageClass: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4701,7 +4701,7 @@ Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, 
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
 
 <h3 class="pdoc-module-header" id="GetObjectSignedUrlArgs" data-link-title="GetObjectSignedUrlArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L68">
         interface <strong>GetObjectSignedUrlArgs</strong>
     </a>
 </h3>
@@ -4711,7 +4711,7 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
 A collection of arguments for invoking getObjectSignedUrl.
 
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L72">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L72">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4719,7 +4719,7 @@ A collection of arguments for invoking getObjectSignedUrl.
 The name of the bucket to read the object from
 
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlArgs-contentMd5">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L78">property <b>contentMd5</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L78">property <b>contentMd5</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentMd5?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4729,7 +4729,7 @@ Typically retrieved from `google_storage_bucket_object.object.md5hash` attribute
 If you provide this in the datasource, the client (e.g. browser, curl) must provide the `Content-MD5` HTTP header with this same value in its request.
 
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlArgs-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L82">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L82">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4737,7 +4737,7 @@ If you provide this in the datasource, the client (e.g. browser, curl) must prov
 If you specify this in the datasource, the client must provide the `Content-Type` HTTP header with the same value in its request.
 
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlArgs-credentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L87">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L87">property <b>credentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentials?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4746,7 +4746,7 @@ What Google service account credentials json should be used to sign the URL.
 This data source checks the following locations for credentials, in order of preference: data source `credentials` attribute, provider `credentials` attribute and finally the GOOGLE_APPLICATION_CREDENTIALS environment variable.
 
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlArgs-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L92">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L92">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duration?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4755,7 +4755,7 @@ For how long shall the signed URL be valid (defaults to 1 hour - i.e. `1h`).
 See [here](https://golang.org/pkg/time/#ParseDuration) for info on valid duration formats.
 
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlArgs-extensionHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L97">property <b>extensionHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L97">property <b>extensionHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extensionHeaders?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -4764,7 +4764,7 @@ As needed. The server checks to make sure that the client provides matching valu
 Any header starting with `x-goog-` is accepted but see the [Google Docs](https://cloud.google.com/storage/docs/xml-api/reference-headers) for list of headers that are supported by Google.
 
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlArgs-httpMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L101">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L101">property <b>httpMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpMethod?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4772,7 +4772,7 @@ Any header starting with `x-goog-` is accepted but see the [Google Docs](https:/
 What HTTP Method will the signed URL allow (defaults to `GET`)
 
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L105">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L105">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4780,7 +4780,7 @@ What HTTP Method will the signed URL allow (defaults to `GET`)
 The full path to the object inside the bucket
 
 <h3 class="pdoc-module-header" id="GetObjectSignedUrlResult" data-link-title="GetObjectSignedUrlResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L111">
         interface <strong>GetObjectSignedUrlResult</strong>
     </a>
 </h3>
@@ -4790,42 +4790,42 @@ The full path to the object inside the bucket
 A collection of values returned by getObjectSignedUrl.
 
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlResult-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L112">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L112">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlResult-contentMd5">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L113">property <b>contentMd5</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L113">property <b>contentMd5</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentMd5?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlResult-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L114">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L114">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlResult-credentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L115">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L115">property <b>credentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentials?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlResult-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L116">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L116">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duration?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlResult-extensionHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L117">property <b>extensionHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L117">property <b>extensionHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extensionHeaders?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlResult-httpMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L118">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L118">property <b>httpMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpMethod?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L122">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L122">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4833,12 +4833,12 @@ A collection of values returned by getObjectSignedUrl.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlResult-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L123">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L123">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetObjectSignedUrlResult-signedUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getObjectSignedUrl.ts#L127">property <b>signedUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getObjectSignedUrl.ts#L127">property <b>signedUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signedUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4846,7 +4846,7 @@ The provider-assigned unique ID for this managed resource.
 The signed URL that can be used to access the storage object without authentication.
 
 <h3 class="pdoc-module-header" id="GetProjectServiceAccountArgs" data-link-title="GetProjectServiceAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getProjectServiceAccount.ts#L93">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getProjectServiceAccount.ts#L93">
         interface <strong>GetProjectServiceAccountArgs</strong>
     </a>
 </h3>
@@ -4856,7 +4856,7 @@ The signed URL that can be used to access the storage object without authenticat
 A collection of arguments for invoking getProjectServiceAccount.
 
 <h4 class="pdoc-member-header" id="GetProjectServiceAccountArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getProjectServiceAccount.ts#L97">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getProjectServiceAccount.ts#L97">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4864,7 +4864,7 @@ A collection of arguments for invoking getProjectServiceAccount.
 The project the unique service account was created for. If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="GetProjectServiceAccountArgs-userProject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getProjectServiceAccount.ts#L102">property <b>userProject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getProjectServiceAccount.ts#L102">property <b>userProject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userProject?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4873,7 +4873,7 @@ The project the lookup originates from. This field is used if you are making the
 from a different account than the one you are finding the service account for.
 
 <h3 class="pdoc-module-header" id="GetProjectServiceAccountResult" data-link-title="GetProjectServiceAccountResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getProjectServiceAccount.ts#L108">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getProjectServiceAccount.ts#L108">
         interface <strong>GetProjectServiceAccountResult</strong>
     </a>
 </h3>
@@ -4883,7 +4883,7 @@ from a different account than the one you are finding the service account for.
 A collection of values returned by getProjectServiceAccount.
 
 <h4 class="pdoc-member-header" id="GetProjectServiceAccountResult-emailAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getProjectServiceAccount.ts#L113">property <b>emailAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getProjectServiceAccount.ts#L113">property <b>emailAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4892,7 +4892,7 @@ The email address of the service account. This value is often used to refer to t
 in order to grant IAM permissions.
 
 <h4 class="pdoc-member-header" id="GetProjectServiceAccountResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getProjectServiceAccount.ts#L117">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getProjectServiceAccount.ts#L117">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4900,17 +4900,17 @@ in order to grant IAM permissions.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetProjectServiceAccountResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getProjectServiceAccount.ts#L118">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getProjectServiceAccount.ts#L118">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProjectServiceAccountResult-userProject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getProjectServiceAccount.ts#L119">property <b>userProject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getProjectServiceAccount.ts#L119">property <b>userProject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userProject?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetTransferProjectServieAccountArgs" data-link-title="GetTransferProjectServieAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getTransferProjectServieAccount.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getTransferProjectServieAccount.ts#L38">
         interface <strong>GetTransferProjectServieAccountArgs</strong>
     </a>
 </h3>
@@ -4920,7 +4920,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getTransferProjectServieAccount.
 
 <h4 class="pdoc-member-header" id="GetTransferProjectServieAccountArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getTransferProjectServieAccount.ts#L42">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getTransferProjectServieAccount.ts#L42">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4928,7 +4928,7 @@ A collection of arguments for invoking getTransferProjectServieAccount.
 The project ID. If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="GetTransferProjectServieAccountResult" data-link-title="GetTransferProjectServieAccountResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getTransferProjectServieAccount.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getTransferProjectServieAccount.ts#L48">
         interface <strong>GetTransferProjectServieAccountResult</strong>
     </a>
 </h3>
@@ -4938,7 +4938,7 @@ The project ID. If it is not provided, the provider project is used.
 A collection of values returned by getTransferProjectServieAccount.
 
 <h4 class="pdoc-member-header" id="GetTransferProjectServieAccountResult-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getTransferProjectServieAccount.ts#L52">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getTransferProjectServieAccount.ts#L52">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4946,7 +4946,7 @@ A collection of values returned by getTransferProjectServieAccount.
 Email address of the default service account used by Storage Transfer Jobs running in this project
 
 <h4 class="pdoc-member-header" id="GetTransferProjectServieAccountResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getTransferProjectServieAccount.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getTransferProjectServieAccount.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4954,12 +4954,12 @@ Email address of the default service account used by Storage Transfer Jobs runni
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetTransferProjectServieAccountResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/getTransferProjectServieAccount.ts#L57">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/getTransferProjectServieAccount.ts#L57">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="HmacKeyArgs" data-link-title="HmacKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L195">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L195">
         interface <strong>HmacKeyArgs</strong>
     </a>
 </h3>
@@ -4969,7 +4969,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a HmacKey resource.
 
 <h4 class="pdoc-member-header" id="HmacKeyArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L200">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L200">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4978,7 +4978,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="HmacKeyArgs-serviceAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L204">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L204">property <b>serviceAccountEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4986,7 +4986,7 @@ If it is not provided, the provider project is used.
 The email address of the key's associated service account.
 
 <h4 class="pdoc-member-header" id="HmacKeyArgs-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L210">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L210">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4996,7 +4996,7 @@ Default value is `ACTIVE`.
 Possible values are `ACTIVE` and `INACTIVE`.
 
 <h3 class="pdoc-module-header" id="HmacKeyState" data-link-title="HmacKeyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L158">
         interface <strong>HmacKeyState</strong>
     </a>
 </h3>
@@ -5006,7 +5006,7 @@ Possible values are `ACTIVE` and `INACTIVE`.
 Input properties used for looking up and filtering HmacKey resources.
 
 <h4 class="pdoc-member-header" id="HmacKeyState-accessId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L162">property <b>accessId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L162">property <b>accessId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5014,7 +5014,7 @@ Input properties used for looking up and filtering HmacKey resources.
 The access ID of the HMAC Key.
 
 <h4 class="pdoc-member-header" id="HmacKeyState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L167">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L167">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5023,7 +5023,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="HmacKeyState-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L171">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L171">property <b>secret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5031,7 +5031,7 @@ If it is not provided, the provider project is used.
 HMAC secret key material.
 
 <h4 class="pdoc-member-header" id="HmacKeyState-serviceAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L175">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L175">property <b>serviceAccountEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5039,7 +5039,7 @@ HMAC secret key material.
 The email address of the key's associated service account.
 
 <h4 class="pdoc-member-header" id="HmacKeyState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L181">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L181">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5049,7 +5049,7 @@ Default value is `ACTIVE`.
 Possible values are `ACTIVE` and `INACTIVE`.
 
 <h4 class="pdoc-member-header" id="HmacKeyState-timeCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L185">property <b>timeCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L185">property <b>timeCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeCreated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5057,7 +5057,7 @@ Possible values are `ACTIVE` and `INACTIVE`.
 'The creation time of the HMAC key in RFC 3339 format. '
 
 <h4 class="pdoc-member-header" id="HmacKeyState-updated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/hmacKey.ts#L189">property <b>updated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/hmacKey.ts#L189">property <b>updated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5065,7 +5065,7 @@ Possible values are `ACTIVE` and `INACTIVE`.
 'The last modification time of the HMAC key metadata in RFC 3339 format.'
 
 <h3 class="pdoc-module-header" id="NotificationArgs" data-link-title="NotificationArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L224">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L224">
         interface <strong>NotificationArgs</strong>
     </a>
 </h3>
@@ -5075,7 +5075,7 @@ Possible values are `ACTIVE` and `INACTIVE`.
 The set of arguments for constructing a Notification resource.
 
 <h4 class="pdoc-member-header" id="NotificationArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L228">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L228">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5083,7 +5083,7 @@ The set of arguments for constructing a Notification resource.
 The name of the bucket.
 
 <h4 class="pdoc-member-header" id="NotificationArgs-customAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L232">property <b>customAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L232">property <b>customAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5091,7 +5091,7 @@ The name of the bucket.
 A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
 
 <h4 class="pdoc-member-header" id="NotificationArgs-eventTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L236">property <b>eventTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L236">property <b>eventTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5099,7 +5099,7 @@ A set of key/value attribute pairs to attach to each Cloud PubSub message publis
 List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
 
 <h4 class="pdoc-member-header" id="NotificationArgs-objectNamePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L240">property <b>objectNamePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L240">property <b>objectNamePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>objectNamePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5107,7 +5107,7 @@ List of event type filters for this notification config. If not specified, Cloud
 Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
 
 <h4 class="pdoc-member-header" id="NotificationArgs-payloadFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L244">property <b>payloadFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L244">property <b>payloadFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payloadFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5115,7 +5115,7 @@ Specifies a prefix path filter for this notification config. Cloud Storage will 
 The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
 
 <h4 class="pdoc-member-header" id="NotificationArgs-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L251">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L251">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5126,7 +5126,7 @@ i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`. If the project is 
 you will need to use the project-level name.
 
 <h3 class="pdoc-module-header" id="NotificationState" data-link-title="NotificationState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L183">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L183">
         interface <strong>NotificationState</strong>
     </a>
 </h3>
@@ -5136,7 +5136,7 @@ you will need to use the project-level name.
 Input properties used for looking up and filtering Notification resources.
 
 <h4 class="pdoc-member-header" id="NotificationState-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L187">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L187">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5144,7 +5144,7 @@ Input properties used for looking up and filtering Notification resources.
 The name of the bucket.
 
 <h4 class="pdoc-member-header" id="NotificationState-customAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L191">property <b>customAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L191">property <b>customAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5152,7 +5152,7 @@ The name of the bucket.
 A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
 
 <h4 class="pdoc-member-header" id="NotificationState-eventTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L195">property <b>eventTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L195">property <b>eventTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5160,7 +5160,7 @@ A set of key/value attribute pairs to attach to each Cloud PubSub message publis
 List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
 
 <h4 class="pdoc-member-header" id="NotificationState-notificationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L199">property <b>notificationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L199">property <b>notificationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5168,7 +5168,7 @@ List of event type filters for this notification config. If not specified, Cloud
 The ID of the created notification.
 
 <h4 class="pdoc-member-header" id="NotificationState-objectNamePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L203">property <b>objectNamePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L203">property <b>objectNamePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>objectNamePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5176,7 +5176,7 @@ The ID of the created notification.
 Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
 
 <h4 class="pdoc-member-header" id="NotificationState-payloadFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L207">property <b>payloadFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L207">property <b>payloadFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payloadFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5184,7 +5184,7 @@ Specifies a prefix path filter for this notification config. Cloud Storage will 
 The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
 
 <h4 class="pdoc-member-header" id="NotificationState-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L211">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L211">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5192,7 +5192,7 @@ The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
 The URI of the created resource.
 
 <h4 class="pdoc-member-header" id="NotificationState-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/notification.ts#L218">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/notification.ts#L218">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5203,7 +5203,7 @@ i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`. If the project is 
 you will need to use the project-level name.
 
 <h3 class="pdoc-module-header" id="ObjectAccessControlArgs" data-link-title="ObjectAccessControlArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L240">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L240">
         interface <strong>ObjectAccessControlArgs</strong>
     </a>
 </h3>
@@ -5213,7 +5213,7 @@ you will need to use the project-level name.
 The set of arguments for constructing a ObjectAccessControl resource.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControlArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L244">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L244">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5221,7 +5221,7 @@ The set of arguments for constructing a ObjectAccessControl resource.
 The name of the bucket.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControlArgs-entity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L256">property <b>entity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L256">property <b>entity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5237,7 +5237,7 @@ The entity holding the permission, in one of the following forms:
 * allAuthenticatedUsers
 
 <h4 class="pdoc-member-header" id="ObjectAccessControlArgs-object">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L260">property <b>object</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L260">property <b>object</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>object: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5245,7 +5245,7 @@ The entity holding the permission, in one of the following forms:
 The name of the object to apply the access control to.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControlArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L265">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L265">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5254,7 +5254,7 @@ The access permission for the entity.
 Possible values are `OWNER` and `READER`.
 
 <h3 class="pdoc-module-header" id="ObjectAccessControlState" data-link-title="ObjectAccessControlState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L189">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L189">
         interface <strong>ObjectAccessControlState</strong>
     </a>
 </h3>
@@ -5264,7 +5264,7 @@ Possible values are `OWNER` and `READER`.
 Input properties used for looking up and filtering ObjectAccessControl resources.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControlState-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L193">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L193">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5272,7 +5272,7 @@ Input properties used for looking up and filtering ObjectAccessControl resources
 The name of the bucket.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControlState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L197">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L197">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5280,7 +5280,7 @@ The name of the bucket.
 The domain associated with the entity.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControlState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L201">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L201">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5288,7 +5288,7 @@ The domain associated with the entity.
 The email address associated with the entity.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControlState-entity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L213">property <b>entity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L213">property <b>entity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5304,7 +5304,7 @@ The entity holding the permission, in one of the following forms:
 * allAuthenticatedUsers
 
 <h4 class="pdoc-member-header" id="ObjectAccessControlState-entityId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L217">property <b>entityId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L217">property <b>entityId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entityId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5312,7 +5312,7 @@ The entity holding the permission, in one of the following forms:
 The ID for the entity
 
 <h4 class="pdoc-member-header" id="ObjectAccessControlState-generation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L221">property <b>generation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L221">property <b>generation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>generation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5320,7 +5320,7 @@ The ID for the entity
 The content generation of the object, if applied to an object.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControlState-object">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L225">property <b>object</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L225">property <b>object</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>object?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5328,7 +5328,7 @@ The content generation of the object, if applied to an object.
 The name of the object to apply the access control to.
 
 <h4 class="pdoc-member-header" id="ObjectAccessControlState-projectTeams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L229">property <b>projectTeams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L229">property <b>projectTeams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectTeams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ObjectAccessControlProjectTeam'>ObjectAccessControlProjectTeam</a>&gt;[]&gt;;</code></pre>
@@ -5336,7 +5336,7 @@ The name of the object to apply the access control to.
 The project team associated with the entity
 
 <h4 class="pdoc-member-header" id="ObjectAccessControlState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectAccessControl.ts#L234">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectAccessControl.ts#L234">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5345,7 +5345,7 @@ The access permission for the entity.
 Possible values are `OWNER` and `READER`.
 
 <h3 class="pdoc-module-header" id="ObjectACLArgs" data-link-title="ObjectACLArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L159">
         interface <strong>ObjectACLArgs</strong>
     </a>
 </h3>
@@ -5355,7 +5355,7 @@ Possible values are `OWNER` and `READER`.
 The set of arguments for constructing a ObjectACL resource.
 
 <h4 class="pdoc-member-header" id="ObjectACLArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L163">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L163">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5363,7 +5363,7 @@ The set of arguments for constructing a ObjectACL resource.
 The name of the bucket the object is stored in.
 
 <h4 class="pdoc-member-header" id="ObjectACLArgs-object">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L167">property <b>object</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L167">property <b>object</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>object: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5371,7 +5371,7 @@ The name of the bucket the object is stored in.
 The name of the object to apply the acl to.
 
 <h4 class="pdoc-member-header" id="ObjectACLArgs-predefinedAcl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L171">property <b>predefinedAcl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L171">property <b>predefinedAcl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>predefinedAcl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5379,7 +5379,7 @@ The name of the object to apply the acl to.
 The "canned" [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `roleEntity` is not.
 
 <h4 class="pdoc-member-header" id="ObjectACLArgs-roleEntities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L176">property <b>roleEntities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L176">property <b>roleEntities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleEntities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5388,7 +5388,7 @@ List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documen
 Must be set if `predefinedAcl` is not.
 
 <h3 class="pdoc-module-header" id="ObjectACLState" data-link-title="ObjectACLState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L136">
         interface <strong>ObjectACLState</strong>
     </a>
 </h3>
@@ -5398,7 +5398,7 @@ Must be set if `predefinedAcl` is not.
 Input properties used for looking up and filtering ObjectACL resources.
 
 <h4 class="pdoc-member-header" id="ObjectACLState-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L140">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L140">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5406,7 +5406,7 @@ Input properties used for looking up and filtering ObjectACL resources.
 The name of the bucket the object is stored in.
 
 <h4 class="pdoc-member-header" id="ObjectACLState-object">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L144">property <b>object</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L144">property <b>object</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>object?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5414,7 +5414,7 @@ The name of the bucket the object is stored in.
 The name of the object to apply the acl to.
 
 <h4 class="pdoc-member-header" id="ObjectACLState-predefinedAcl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L148">property <b>predefinedAcl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L148">property <b>predefinedAcl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>predefinedAcl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5422,7 +5422,7 @@ The name of the object to apply the acl to.
 The "canned" [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `roleEntity` is not.
 
 <h4 class="pdoc-member-header" id="ObjectACLState-roleEntities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/objectACL.ts#L153">property <b>roleEntities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/objectACL.ts#L153">property <b>roleEntities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleEntities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5431,7 +5431,7 @@ List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documen
 Must be set if `predefinedAcl` is not.
 
 <h3 class="pdoc-module-header" id="SimpleBucketEventArgs" data-link-title="SimpleBucketEventArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L29">
         interface <strong>SimpleBucketEventArgs</strong>
     </a>
 </h3>
@@ -5443,12 +5443,12 @@ specialized behavior supported is to attempt retrying the Cloud Function.
 See [cloudfunctions.FailurePolicy] for more information on this.
 
 <h4 class="pdoc-member-header" id="SimpleBucketEventArgs-failurePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/zMixins.ts#L30">property <b>failurePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/zMixins.ts#L30">property <b>failurePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>failurePolicy?: cloudfunctions.FailurePolicy;</code></pre>
 <h3 class="pdoc-module-header" id="TransferJobArgs" data-link-title="TransferJobArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L258">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L258">
         interface <strong>TransferJobArgs</strong>
     </a>
 </h3>
@@ -5458,7 +5458,7 @@ See [cloudfunctions.FailurePolicy] for more information on this.
 The set of arguments for constructing a TransferJob resource.
 
 <h4 class="pdoc-member-header" id="TransferJobArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L262">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L262">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5466,7 +5466,7 @@ The set of arguments for constructing a TransferJob resource.
 Unique description to identify the Transfer Job.
 
 <h4 class="pdoc-member-header" id="TransferJobArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L267">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L267">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5475,7 +5475,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TransferJobArgs-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L271">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L271">property <b>schedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TransferJobSchedule'>TransferJobSchedule</a>&gt;;</code></pre>
@@ -5483,7 +5483,7 @@ is not provided, the provider project is used.
 Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
 
 <h4 class="pdoc-member-header" id="TransferJobArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L275">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L275">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5491,7 +5491,7 @@ Schedule specification defining when the Transfer Job should be scheduled to sta
 Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
 
 <h4 class="pdoc-member-header" id="TransferJobArgs-transferSpec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L279">property <b>transferSpec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L279">property <b>transferSpec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transferSpec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TransferJobTransferSpec'>TransferJobTransferSpec</a>&gt;;</code></pre>
@@ -5499,7 +5499,7 @@ Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status 
 Transfer specification. Structure documented below.
 
 <h3 class="pdoc-module-header" id="TransferJobState" data-link-title="TransferJobState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L215">
         interface <strong>TransferJobState</strong>
     </a>
 </h3>
@@ -5509,7 +5509,7 @@ Transfer specification. Structure documented below.
 Input properties used for looking up and filtering TransferJob resources.
 
 <h4 class="pdoc-member-header" id="TransferJobState-creationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L219">property <b>creationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L219">property <b>creationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5517,7 +5517,7 @@ Input properties used for looking up and filtering TransferJob resources.
 When the Transfer Job was created.
 
 <h4 class="pdoc-member-header" id="TransferJobState-deletionTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L223">property <b>deletionTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L223">property <b>deletionTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5525,7 +5525,7 @@ When the Transfer Job was created.
 When the Transfer Job was deleted.
 
 <h4 class="pdoc-member-header" id="TransferJobState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L227">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L227">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5533,7 +5533,7 @@ When the Transfer Job was deleted.
 Unique description to identify the Transfer Job.
 
 <h4 class="pdoc-member-header" id="TransferJobState-lastModificationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L231">property <b>lastModificationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L231">property <b>lastModificationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModificationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5541,7 +5541,7 @@ Unique description to identify the Transfer Job.
 When the Transfer Job was last modified.
 
 <h4 class="pdoc-member-header" id="TransferJobState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L235">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L235">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5549,7 +5549,7 @@ When the Transfer Job was last modified.
 The name of the Transfer Job.
 
 <h4 class="pdoc-member-header" id="TransferJobState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L240">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L240">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5558,7 +5558,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TransferJobState-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L244">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L244">property <b>schedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TransferJobSchedule'>TransferJobSchedule</a>&gt;;</code></pre>
@@ -5566,7 +5566,7 @@ is not provided, the provider project is used.
 Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
 
 <h4 class="pdoc-member-header" id="TransferJobState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L248">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L248">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5574,7 +5574,7 @@ Schedule specification defining when the Transfer Job should be scheduled to sta
 Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
 
 <h4 class="pdoc-member-header" id="TransferJobState-transferSpec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/storage/transferJob.ts#L252">property <b>transferSpec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/storage/transferJob.ts#L252">property <b>transferSpec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transferSpec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TransferJobTransferSpec'>TransferJobTransferSpec</a>&gt;;</code></pre>
