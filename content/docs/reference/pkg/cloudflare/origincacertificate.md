@@ -69,7 +69,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/"
 	"github.com/pulumi/pulumi-tls/sdk/v2/go/tls"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
