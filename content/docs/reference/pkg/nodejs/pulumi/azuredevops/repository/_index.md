@@ -3,7 +3,7 @@ title: "Module repository"
 title_tag: "Module repository | Package @pulumi/azuredevops | Node.js SDK"
 linktitle: "repository"
 meta_desc: "Explore members of the repository module in the @pulumi/azuredevops package."
-git_sha: "8f499c00158ea0335e120f29e31b3f2cfa1e56f5"
+git_sha: "beaf27004d238ef903548764f78de8273eb3740b"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Git" data-link-title="Git">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L65">
         Resource <strong>Git</strong>
     </a>
 </h3>
@@ -102,7 +102,7 @@ const repo = new azuredevops.Git("repo", {
 - [Azure DevOps Service REST API 5.1 - Git Repositories](https://docs.microsoft.com/en-us/rest/api/azure/devops/git/repositories?view=azure-devops-rest-5.1)
 
 <h4 class="pdoc-member-header" id="Git-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L137"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L137"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -117,7 +117,7 @@ azuredevops.repository.Git has been deprecated in favor of azuredevops.Git
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Git(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GitArgs'>GitArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="Git-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L75">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L75">method <b>get</b></a>
 </h4>
 
 
@@ -128,14 +128,14 @@ Get an existing Git resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Git-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L65">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L65">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Git-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L87">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L87">method <b>isInstance</b></a>
 </h4>
 
 
@@ -146,7 +146,7 @@ Returns true if the given object is an instance of Git.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Git-defaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L97">property <b>defaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L97">property <b>defaultBranch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultBranch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ref of the default branch. Will be used as the branch name for initialized repositories.
 
 <h4 class="pdoc-member-header" id="Git-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L65">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L65">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -163,7 +163,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Git-initialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L101">property <b>initialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L101">property <b>initialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>initialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#GitInitialization'>GitInitialization</a>&gt;;</code></pre>
@@ -171,7 +171,7 @@ deployments and may be missing (undefined) during planning phases.
 An `initialization` block as documented below.
 
 <h4 class="pdoc-member-header" id="Git-isFork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L105">property <b>isFork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L105">property <b>isFork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isFork: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -179,7 +179,7 @@ An `initialization` block as documented below.
 True if the repository was created as a fork.
 
 <h4 class="pdoc-member-header" id="Git-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L109">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L109">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -187,7 +187,7 @@ True if the repository was created as a fork.
 The name of the git repository.
 
 <h4 class="pdoc-member-header" id="Git-parentRepositoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L113">property <b>parentRepositoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L113">property <b>parentRepositoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parentRepositoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -195,7 +195,7 @@ The name of the git repository.
 The ID of a Git project from which a fork is to be created.
 
 <h4 class="pdoc-member-header" id="Git-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L117">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L117">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -203,7 +203,7 @@ The ID of a Git project from which a fork is to be created.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="Git-remoteUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L121">property <b>remoteUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L121">property <b>remoteUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>remoteUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -211,7 +211,7 @@ The project ID or project name.
 Git HTTPS URL of the repository
 
 <h4 class="pdoc-member-header" id="Git-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L125">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L125">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -219,7 +219,7 @@ Git HTTPS URL of the repository
 Size in bytes.
 
 <h4 class="pdoc-member-header" id="Git-sshUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L129">property <b>sshUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L129">property <b>sshUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sshUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -227,7 +227,7 @@ Size in bytes.
 Git SSH URL of the repository.
 
 <h4 class="pdoc-member-header" id="Git-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L133">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L133">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -235,7 +235,7 @@ Git SSH URL of the repository.
 REST API URL of the repository.
 
 <h4 class="pdoc-member-header" id="Git-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L65">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L65">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -244,7 +244,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Git-webUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L137">property <b>webUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L137">property <b>webUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>webUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -254,7 +254,7 @@ Web link to the repository.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getRepositories" data-link-title="getRepositories">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/getRepositories.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/getRepositories.ts#L35">
         Function <strong>getRepositories</strong>
     </a>
 </h3>
@@ -269,7 +269,7 @@ azuredevops.repository.getRepositories has been deprecated in favor of azuredevo
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetRepositoriesArgs" data-link-title="GetRepositoriesArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/getRepositories.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/getRepositories.ts#L55">
         interface <strong>GetRepositoriesArgs</strong>
     </a>
 </h3>
@@ -279,12 +279,12 @@ azuredevops.repository.getRepositories has been deprecated in favor of azuredevo
 A collection of arguments for invoking getRepositories.
 
 <h4 class="pdoc-member-header" id="GetRepositoriesArgs-includeHidden">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/getRepositories.ts#L56">property <b>includeHidden</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/getRepositories.ts#L56">property <b>includeHidden</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeHidden?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRepositoriesArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/getRepositories.ts#L60">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/getRepositories.ts#L60">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -292,7 +292,7 @@ A collection of arguments for invoking getRepositories.
 Name of the Git repository to retrieve; requires `projectId` to be specified as well
 
 <h4 class="pdoc-member-header" id="GetRepositoriesArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/getRepositories.ts#L64">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/getRepositories.ts#L64">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -300,7 +300,7 @@ Name of the Git repository to retrieve; requires `projectId` to be specified as 
 ID of project to list Git repositories
 
 <h3 class="pdoc-module-header" id="GetRepositoriesResult" data-link-title="GetRepositoriesResult">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/getRepositories.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/getRepositories.ts#L70">
         interface <strong>GetRepositoriesResult</strong>
     </a>
 </h3>
@@ -310,7 +310,7 @@ ID of project to list Git repositories
 A collection of values returned by getRepositories.
 
 <h4 class="pdoc-member-header" id="GetRepositoriesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/getRepositories.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/getRepositories.ts#L74">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -318,12 +318,12 @@ A collection of values returned by getRepositories.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRepositoriesResult-includeHidden">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/getRepositories.ts#L75">property <b>includeHidden</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/getRepositories.ts#L75">property <b>includeHidden</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeHidden?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRepositoriesResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/getRepositories.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/getRepositories.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -331,7 +331,7 @@ The provider-assigned unique ID for this managed resource.
 Git repository name.
 
 <h4 class="pdoc-member-header" id="GetRepositoriesResult-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/getRepositories.ts#L83">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/getRepositories.ts#L83">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -339,7 +339,7 @@ Git repository name.
 Project identifier to which the Git repository belongs.
 
 <h4 class="pdoc-member-header" id="GetRepositoriesResult-repositories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/getRepositories.ts#L87">property <b>repositories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/getRepositories.ts#L87">property <b>repositories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositories: <a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#GetRepositoriesRepository'>GetRepositoriesRepository</a>[];</code></pre>
@@ -347,7 +347,7 @@ Project identifier to which the Git repository belongs.
 A list of existing projects in your Azure DevOps Organization with details about every project which includes:
 
 <h3 class="pdoc-module-header" id="GitArgs" data-link-title="GitArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L249">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L249">
         interface <strong>GitArgs</strong>
     </a>
 </h3>
@@ -357,7 +357,7 @@ A list of existing projects in your Azure DevOps Organization with details about
 The set of arguments for constructing a Git resource.
 
 <h4 class="pdoc-member-header" id="GitArgs-defaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L253">property <b>defaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L253">property <b>defaultBranch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultBranch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -365,7 +365,7 @@ The set of arguments for constructing a Git resource.
 The ref of the default branch. Will be used as the branch name for initialized repositories.
 
 <h4 class="pdoc-member-header" id="GitArgs-initialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L257">property <b>initialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L257">property <b>initialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#GitInitialization'>GitInitialization</a>&gt;;</code></pre>
@@ -373,7 +373,7 @@ The ref of the default branch. Will be used as the branch name for initialized r
 An `initialization` block as documented below.
 
 <h4 class="pdoc-member-header" id="GitArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L261">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L261">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -381,7 +381,7 @@ An `initialization` block as documented below.
 The name of the git repository.
 
 <h4 class="pdoc-member-header" id="GitArgs-parentRepositoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L265">property <b>parentRepositoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L265">property <b>parentRepositoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentRepositoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -389,7 +389,7 @@ The name of the git repository.
 The ID of a Git project from which a fork is to be created.
 
 <h4 class="pdoc-member-header" id="GitArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L269">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L269">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -397,7 +397,7 @@ The ID of a Git project from which a fork is to be created.
 The project ID or project name.
 
 <h3 class="pdoc-module-header" id="GitState" data-link-title="GitState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L199">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L199">
         interface <strong>GitState</strong>
     </a>
 </h3>
@@ -407,7 +407,7 @@ The project ID or project name.
 Input properties used for looking up and filtering Git resources.
 
 <h4 class="pdoc-member-header" id="GitState-defaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L203">property <b>defaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L203">property <b>defaultBranch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultBranch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -415,7 +415,7 @@ Input properties used for looking up and filtering Git resources.
 The ref of the default branch. Will be used as the branch name for initialized repositories.
 
 <h4 class="pdoc-member-header" id="GitState-initialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L207">property <b>initialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L207">property <b>initialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#GitInitialization'>GitInitialization</a>&gt;;</code></pre>
@@ -423,7 +423,7 @@ The ref of the default branch. Will be used as the branch name for initialized r
 An `initialization` block as documented below.
 
 <h4 class="pdoc-member-header" id="GitState-isFork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L211">property <b>isFork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L211">property <b>isFork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isFork?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -431,7 +431,7 @@ An `initialization` block as documented below.
 True if the repository was created as a fork.
 
 <h4 class="pdoc-member-header" id="GitState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L215">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L215">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -439,7 +439,7 @@ True if the repository was created as a fork.
 The name of the git repository.
 
 <h4 class="pdoc-member-header" id="GitState-parentRepositoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L219">property <b>parentRepositoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L219">property <b>parentRepositoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentRepositoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -447,7 +447,7 @@ The name of the git repository.
 The ID of a Git project from which a fork is to be created.
 
 <h4 class="pdoc-member-header" id="GitState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L223">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L223">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -455,7 +455,7 @@ The ID of a Git project from which a fork is to be created.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="GitState-remoteUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L227">property <b>remoteUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L227">property <b>remoteUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remoteUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -463,7 +463,7 @@ The project ID or project name.
 Git HTTPS URL of the repository
 
 <h4 class="pdoc-member-header" id="GitState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L231">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L231">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -471,7 +471,7 @@ Git HTTPS URL of the repository
 Size in bytes.
 
 <h4 class="pdoc-member-header" id="GitState-sshUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L235">property <b>sshUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L235">property <b>sshUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -479,7 +479,7 @@ Size in bytes.
 Git SSH URL of the repository.
 
 <h4 class="pdoc-member-header" id="GitState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L239">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L239">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -487,7 +487,7 @@ Git SSH URL of the repository.
 REST API URL of the repository.
 
 <h4 class="pdoc-member-header" id="GitState-webUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/repository/git.ts#L243">property <b>webUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/repository/git.ts#L243">property <b>webUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

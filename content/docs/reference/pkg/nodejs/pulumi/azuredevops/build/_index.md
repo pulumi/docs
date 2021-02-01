@@ -3,7 +3,7 @@ title: "Module build"
 title_tag: "Module build | Package @pulumi/azuredevops | Node.js SDK"
 linktitle: "build"
 meta_desc: "Explore members of the build module in the @pulumi/azuredevops package."
-git_sha: "8f499c00158ea0335e120f29e31b3f2cfa1e56f5"
+git_sha: "beaf27004d238ef903548764f78de8273eb3740b"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="BuildDefinition" data-link-title="BuildDefinition">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L104">
         Resource <strong>BuildDefinition</strong>
     </a>
 </h3>
@@ -135,7 +135,7 @@ Azure DevOps Build Definitions can be imported using the project name/definition
 ```
 
 <h4 class="pdoc-member-header" id="BuildDefinition-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L172"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L172"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -150,7 +150,7 @@ azuredevops.build.BuildDefinition has been deprecated in favor of azuredevops.Bu
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> BuildDefinition(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#BuildDefinitionArgs'>BuildDefinitionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="BuildDefinition-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L114">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L114">method <b>get</b></a>
 </h4>
 
 
@@ -161,14 +161,14 @@ Get an existing BuildDefinition resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L104">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L104">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BuildDefinition-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L126">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L126">method <b>isInstance</b></a>
 </h4>
 
 
@@ -179,7 +179,7 @@ Returns true if the given object is an instance of BuildDefinition.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-agentPoolName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L136">property <b>agentPoolName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L136">property <b>agentPoolName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>agentPoolName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -187,7 +187,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The agent pool that should execute the build.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-ciTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L140">property <b>ciTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L140">property <b>ciTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ciTrigger: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#BuildDefinitionCiTrigger'>BuildDefinitionCiTrigger</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -195,7 +195,7 @@ The agent pool that should execute the build.
 Continuous Integration trigger.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L104">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L104">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -204,7 +204,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L144">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -212,7 +212,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L148">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L148">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -220,7 +220,7 @@ The name of the build definition.
 The folder path of the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L152">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L152">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -228,7 +228,7 @@ The folder path of the build definition.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-pullRequestTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L156">property <b>pullRequestTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L156">property <b>pullRequestTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pullRequestTrigger: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#BuildDefinitionPullRequestTrigger'>BuildDefinitionPullRequestTrigger</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -236,7 +236,7 @@ The project ID or project name.
 Pull Request Integration Integration trigger.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L160">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L160">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>repository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#BuildDefinitionRepository'>BuildDefinitionRepository</a>&gt;;</code></pre>
@@ -244,7 +244,7 @@ Pull Request Integration Integration trigger.
 A `repository` block as documented below.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-revision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L164">property <b>revision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L164">property <b>revision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>revision: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -252,7 +252,7 @@ A `repository` block as documented below.
 The revision of the build definition
 
 <h4 class="pdoc-member-header" id="BuildDefinition-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L104">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L104">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -261,7 +261,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-variableGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L168">property <b>variableGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L168">property <b>variableGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>variableGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -269,7 +269,7 @@ deployments.
 A list of variable group IDs (integers) to link to the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L172">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L172">property <b>variables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>variables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#BuildDefinitionVariable'>BuildDefinitionVariable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -280,7 +280,7 @@ A list of `variable` blocks, as documented below.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="BuildDefinitionArgs" data-link-title="BuildDefinitionArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L278">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L278">
         interface <strong>BuildDefinitionArgs</strong>
     </a>
 </h3>
@@ -290,7 +290,7 @@ A list of `variable` blocks, as documented below.
 The set of arguments for constructing a BuildDefinition resource.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-agentPoolName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L282">property <b>agentPoolName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L282">property <b>agentPoolName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>agentPoolName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -298,7 +298,7 @@ The set of arguments for constructing a BuildDefinition resource.
 The agent pool that should execute the build.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-ciTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L286">property <b>ciTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L286">property <b>ciTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ciTrigger?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BuildDefinitionCiTrigger'>BuildDefinitionCiTrigger</a>&gt;;</code></pre>
@@ -306,7 +306,7 @@ The agent pool that should execute the build.
 Continuous Integration trigger.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L290">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L290">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -314,7 +314,7 @@ Continuous Integration trigger.
 The name of the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L294">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L294">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -322,7 +322,7 @@ The name of the build definition.
 The folder path of the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L298">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L298">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -330,7 +330,7 @@ The folder path of the build definition.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-pullRequestTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L302">property <b>pullRequestTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L302">property <b>pullRequestTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pullRequestTrigger?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BuildDefinitionPullRequestTrigger'>BuildDefinitionPullRequestTrigger</a>&gt;;</code></pre>
@@ -338,7 +338,7 @@ The project ID or project name.
 Pull Request Integration Integration trigger.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L306">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L306">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BuildDefinitionRepository'>BuildDefinitionRepository</a>&gt;;</code></pre>
@@ -346,7 +346,7 @@ Pull Request Integration Integration trigger.
 A `repository` block as documented below.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-variableGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L310">property <b>variableGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L310">property <b>variableGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variableGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -354,7 +354,7 @@ A `repository` block as documented below.
 A list of variable group IDs (integers) to link to the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L314">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L314">property <b>variables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BuildDefinitionVariable'>BuildDefinitionVariable</a>&gt;[]&gt;;</code></pre>
@@ -362,7 +362,7 @@ A list of variable group IDs (integers) to link to the build definition.
 A list of `variable` blocks, as documented below.
 
 <h3 class="pdoc-module-header" id="BuildDefinitionState" data-link-title="BuildDefinitionState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L232">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L232">
         interface <strong>BuildDefinitionState</strong>
     </a>
 </h3>
@@ -372,7 +372,7 @@ A list of `variable` blocks, as documented below.
 Input properties used for looking up and filtering BuildDefinition resources.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-agentPoolName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L236">property <b>agentPoolName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L236">property <b>agentPoolName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>agentPoolName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -380,7 +380,7 @@ Input properties used for looking up and filtering BuildDefinition resources.
 The agent pool that should execute the build.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-ciTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L240">property <b>ciTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L240">property <b>ciTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ciTrigger?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BuildDefinitionCiTrigger'>BuildDefinitionCiTrigger</a>&gt;;</code></pre>
@@ -388,7 +388,7 @@ The agent pool that should execute the build.
 Continuous Integration trigger.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L244">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L244">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -396,7 +396,7 @@ Continuous Integration trigger.
 The name of the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L248">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L248">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -404,7 +404,7 @@ The name of the build definition.
 The folder path of the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L252">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L252">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -412,7 +412,7 @@ The folder path of the build definition.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-pullRequestTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L256">property <b>pullRequestTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L256">property <b>pullRequestTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pullRequestTrigger?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BuildDefinitionPullRequestTrigger'>BuildDefinitionPullRequestTrigger</a>&gt;;</code></pre>
@@ -420,7 +420,7 @@ The project ID or project name.
 Pull Request Integration Integration trigger.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L260">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L260">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repository?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BuildDefinitionRepository'>BuildDefinitionRepository</a>&gt;;</code></pre>
@@ -428,7 +428,7 @@ Pull Request Integration Integration trigger.
 A `repository` block as documented below.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-revision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L264">property <b>revision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L264">property <b>revision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revision?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -436,7 +436,7 @@ A `repository` block as documented below.
 The revision of the build definition
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-variableGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L268">property <b>variableGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L268">property <b>variableGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variableGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -444,7 +444,7 @@ The revision of the build definition
 A list of variable group IDs (integers) to link to the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/build/buildDefinition.ts#L272">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/build/buildDefinition.ts#L272">property <b>variables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BuildDefinitionVariable'>BuildDefinitionVariable</a>&gt;[]&gt;;</code></pre>

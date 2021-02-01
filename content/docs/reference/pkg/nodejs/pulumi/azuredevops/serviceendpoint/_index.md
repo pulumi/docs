@@ -3,7 +3,7 @@ title: "Module serviceendpoint"
 title_tag: "Module serviceendpoint | Package @pulumi/azuredevops | Node.js SDK"
 linktitle: "serviceendpoint"
 meta_desc: "Explore members of the serviceendpoint module in the @pulumi/azuredevops package."
-git_sha: "8f499c00158ea0335e120f29e31b3f2cfa1e56f5"
+git_sha: "beaf27004d238ef903548764f78de8273eb3740b"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AzureRM" data-link-title="AzureRM">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L76">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L76">
         Resource <strong>AzureRM</strong>
     </a>
 </h3>
@@ -119,7 +119,7 @@ Azure DevOps Service Endpoint Azure Resource Manage can be imported using **proj
 ```
 
 <h4 class="pdoc-member-header" id="AzureRM-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L137"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L137"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -134,7 +134,7 @@ azuredevops.serviceendpoint.AzureRM has been deprecated in favor of azuredevops.
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> AzureRM(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AzureRMArgs'>AzureRMArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="AzureRM-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L86">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L86">method <b>get</b></a>
 </h4>
 
 
@@ -145,14 +145,14 @@ Get an existing AzureRM resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AzureRM-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L76">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L76">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AzureRM-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L98">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L98">method <b>isInstance</b></a>
 </h4>
 
 
@@ -163,12 +163,12 @@ Returns true if the given object is an instance of AzureRM.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AzureRM-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L105">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L105">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AzureRM-azurermSpnTenantid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L109">property <b>azurermSpnTenantid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L109">property <b>azurermSpnTenantid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azurermSpnTenantid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -176,7 +176,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The tenant id if the service principal.
 
 <h4 class="pdoc-member-header" id="AzureRM-azurermSubscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L113">property <b>azurermSubscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L113">property <b>azurermSubscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azurermSubscriptionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -184,7 +184,7 @@ The tenant id if the service principal.
 The subscription Id of the Azure targets.
 
 <h4 class="pdoc-member-header" id="AzureRM-azurermSubscriptionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L117">property <b>azurermSubscriptionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L117">property <b>azurermSubscriptionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azurermSubscriptionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -192,7 +192,7 @@ The subscription Id of the Azure targets.
 The subscription Name of the targets.
 
 <h4 class="pdoc-member-header" id="AzureRM-credentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L121">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L121">property <b>credentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>credentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#AzureRMCredentials'>AzureRMCredentials</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -200,7 +200,7 @@ The subscription Name of the targets.
 A `credentials` block.
 
 <h4 class="pdoc-member-header" id="AzureRM-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L125">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L125">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -208,7 +208,7 @@ A `credentials` block.
 Service connection description.
 
 <h4 class="pdoc-member-header" id="AzureRM-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L76">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -217,7 +217,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AzureRM-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L129">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L129">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -225,7 +225,7 @@ deployments and may be missing (undefined) during planning phases.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="AzureRM-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L133">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L133">property <b>resourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -233,7 +233,7 @@ The project ID or project name.
 The resource group used for scope of automatic service endpoint.
 
 <h4 class="pdoc-member-header" id="AzureRM-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L137">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L137">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -241,7 +241,7 @@ The resource group used for scope of automatic service endpoint.
 The Service Endpoint name.
 
 <h4 class="pdoc-member-header" id="AzureRM-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L76">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L76">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -250,7 +250,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BitBucket" data-link-title="BitBucket">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L43">
         Resource <strong>BitBucket</strong>
     </a>
 </h3>
@@ -295,7 +295,7 @@ Azure DevOps Service Endpoint Bitbucket can be imported using **projectID/servic
 ```
 
 <h4 class="pdoc-member-header" id="BitBucket-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L93"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L93"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -310,7 +310,7 @@ azuredevops.serviceendpoint.BitBucket has been deprecated in favor of azuredevop
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> BitBucket(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#BitBucketArgs'>BitBucketArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="BitBucket-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -321,14 +321,14 @@ Get an existing BitBucket resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BitBucket-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BitBucket-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -339,17 +339,17 @@ Returns true if the given object is an instance of BitBucket.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BitBucket-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L72">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L72">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BitBucket-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L73">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L73">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BitBucket-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -358,7 +358,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BitBucket-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L77">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L77">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -366,7 +366,7 @@ deployments and may be missing (undefined) during planning phases.
 Bitbucket account password.
 
 <h4 class="pdoc-member-header" id="BitBucket-passwordHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L81">property <b>passwordHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L81">property <b>passwordHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordHash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -374,7 +374,7 @@ Bitbucket account password.
 A bcrypted hash of the attribute 'password'
 
 <h4 class="pdoc-member-header" id="BitBucket-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L85">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L85">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -382,7 +382,7 @@ A bcrypted hash of the attribute 'password'
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="BitBucket-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L89">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L89">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -390,7 +390,7 @@ The project ID or project name.
 The Service Endpoint name.
 
 <h4 class="pdoc-member-header" id="BitBucket-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -399,7 +399,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="BitBucket-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L93">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L93">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -407,7 +407,7 @@ deployments.
 Bitbucket account username.
 
 <h3 class="pdoc-module-header" id="DockerRegistry" data-link-title="DockerRegistry">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L55">
         Resource <strong>DockerRegistry</strong>
     </a>
 </h3>
@@ -464,7 +464,7 @@ Azure DevOps Service Endpoint Docker Registry can be imported using **projectID/
 ```
 
 <h4 class="pdoc-member-header" id="DockerRegistry-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L120"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L120"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -479,7 +479,7 @@ azuredevops.serviceendpoint.DockerRegistry has been deprecated in favor of azure
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> DockerRegistry(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DockerRegistryArgs'>DockerRegistryArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="DockerRegistry-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L65">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L65">method <b>get</b></a>
 </h4>
 
 
@@ -490,14 +490,14 @@ Get an existing DockerRegistry resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DockerRegistry-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L55">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L55">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DockerRegistry-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L77">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L77">method <b>isInstance</b></a>
 </h4>
 
 
@@ -508,12 +508,12 @@ Returns true if the given object is an instance of DockerRegistry.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DockerRegistry-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L84">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L84">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DockerRegistry-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L88">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L88">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -521,7 +521,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name you will use to refer to this service connection in task inputs.
 
 <h4 class="pdoc-member-header" id="DockerRegistry-dockerEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L92">property <b>dockerEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L92">property <b>dockerEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dockerEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -529,7 +529,7 @@ The name you will use to refer to this service connection in task inputs.
 The email for Docker account user.
 
 <h4 class="pdoc-member-header" id="DockerRegistry-dockerPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L96">property <b>dockerPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L96">property <b>dockerPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dockerPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -537,7 +537,7 @@ The email for Docker account user.
 The password for the account user identified above.
 
 <h4 class="pdoc-member-header" id="DockerRegistry-dockerPasswordHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L100">property <b>dockerPasswordHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L100">property <b>dockerPasswordHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dockerPasswordHash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -545,7 +545,7 @@ The password for the account user identified above.
 A bcrypted hash of the attribute 'docker_password'
 
 <h4 class="pdoc-member-header" id="DockerRegistry-dockerRegistry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L104">property <b>dockerRegistry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L104">property <b>dockerRegistry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dockerRegistry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -553,7 +553,7 @@ A bcrypted hash of the attribute 'docker_password'
 The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
 
 <h4 class="pdoc-member-header" id="DockerRegistry-dockerUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L108">property <b>dockerUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L108">property <b>dockerUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dockerUsername: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -561,7 +561,7 @@ The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
 The identifier of the Docker account user.
 
 <h4 class="pdoc-member-header" id="DockerRegistry-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L55">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -570,7 +570,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DockerRegistry-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L112">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L112">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -578,7 +578,7 @@ deployments and may be missing (undefined) during planning phases.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="DockerRegistry-registryType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L116">property <b>registryType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L116">property <b>registryType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>registryType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -586,7 +586,7 @@ The project ID or project name.
 Can be "DockerHub" or "Others" (Default "DockerHub")
 
 <h4 class="pdoc-member-header" id="DockerRegistry-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L120">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L120">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -594,7 +594,7 @@ Can be "DockerHub" or "Others" (Default "DockerHub")
 The name you will use to refer to this service connection in task inputs.
 
 <h4 class="pdoc-member-header" id="DockerRegistry-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L55">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L55">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -603,7 +603,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="GitHub" data-link-title="GitHub">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L68">
         Resource <strong>GitHub</strong>
     </a>
 </h3>
@@ -672,7 +672,7 @@ Azure DevOps Service Endpoint GitHub can be imported using **projectID/serviceEn
 ```
 
 <h4 class="pdoc-member-header" id="GitHub-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L114"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L114"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -687,7 +687,7 @@ azuredevops.serviceendpoint.GitHub has been deprecated in favor of azuredevops.S
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> GitHub(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GitHubArgs'>GitHubArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="GitHub-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L78">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L78">method <b>get</b></a>
 </h4>
 
 
@@ -698,14 +698,14 @@ Get an existing GitHub resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GitHub-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L68">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L68">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GitHub-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L90">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L90">method <b>isInstance</b></a>
 </h4>
 
 
@@ -716,7 +716,7 @@ Returns true if the given object is an instance of GitHub.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GitHub-authOauth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L100">property <b>authOauth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L100">property <b>authOauth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authOauth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#GitHubAuthOauth'>GitHubAuthOauth</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -724,7 +724,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 An `authOauth` block as documented below. Allows connecting using an Oauth token.
 
 <h4 class="pdoc-member-header" id="GitHub-authPersonal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L104">property <b>authPersonal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L104">property <b>authPersonal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authPersonal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#GitHubAuthPersonal'>GitHubAuthPersonal</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -732,17 +732,17 @@ An `authOauth` block as documented below. Allows connecting using an Oauth token
 An `authPersonal` block as documented below. Allows connecting using a personal access token.
 
 <h4 class="pdoc-member-header" id="GitHub-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L105">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L105">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GitHub-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L106">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L106">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GitHub-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L68">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L68">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -751,7 +751,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GitHub-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L110">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L110">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -759,7 +759,7 @@ deployments and may be missing (undefined) during planning phases.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="GitHub-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L114">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L114">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -767,7 +767,7 @@ The project ID or project name.
 The Service Endpoint name.
 
 <h4 class="pdoc-member-header" id="GitHub-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L68">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L68">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -776,7 +776,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Kubernetes" data-link-title="Kubernetes">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L25">
         Resource <strong>Kubernetes</strong>
     </a>
 </h3>
@@ -802,7 +802,7 @@ Azure DevOps Service Endpoint Kubernetes can be imported using **projectID/servi
 ```
 
 <h4 class="pdoc-member-header" id="Kubernetes-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L83"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -817,7 +817,7 @@ azuredevops.serviceendpoint.Kubernetes has been deprecated in favor of azuredevo
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Kubernetes(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#KubernetesArgs'>KubernetesArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="Kubernetes-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -828,14 +828,14 @@ Get an existing Kubernetes resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Kubernetes-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Kubernetes-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -846,7 +846,7 @@ Returns true if the given object is an instance of Kubernetes.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Kubernetes-apiserverUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L57">property <b>apiserverUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L57">property <b>apiserverUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiserverUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -854,12 +854,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Service Endpoint description.
 
 <h4 class="pdoc-member-header" id="Kubernetes-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L58">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L58">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Kubernetes-authorizationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L62">property <b>authorizationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L62">property <b>authorizationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -867,7 +867,7 @@ The Service Endpoint description.
 The authentication method used to authenticate on the Kubernetes cluster. The value should be one of AzureSubscription, Kubeconfig, ServiceAccount.
 
 <h4 class="pdoc-member-header" id="Kubernetes-azureSubscriptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L66">property <b>azureSubscriptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L66">property <b>azureSubscriptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azureSubscriptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#KubernetesAzureSubscription'>KubernetesAzureSubscription</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -875,12 +875,12 @@ The authentication method used to authenticate on the Kubernetes cluster. The va
 The configuration for authorization_type="AzureSubscription".
 
 <h4 class="pdoc-member-header" id="Kubernetes-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L67">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L67">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Kubernetes-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -889,7 +889,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Kubernetes-kubeconfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L71">property <b>kubeconfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L71">property <b>kubeconfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kubeconfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#KubernetesKubeconfig'>KubernetesKubeconfig</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -897,7 +897,7 @@ deployments and may be missing (undefined) during planning phases.
 The configuration for authorization_type="Kubeconfig".
 
 <h4 class="pdoc-member-header" id="Kubernetes-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L75">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L75">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -905,7 +905,7 @@ The configuration for authorization_type="Kubeconfig".
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="Kubernetes-serviceAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L79">property <b>serviceAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L79">property <b>serviceAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#KubernetesServiceAccount'>KubernetesServiceAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -913,7 +913,7 @@ The project ID or project name.
 The configuration for authorization_type="ServiceAccount". This type uses the credentials of a service account currently deployed to the cluster.
 
 <h4 class="pdoc-member-header" id="Kubernetes-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L83">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L83">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -921,7 +921,7 @@ The configuration for authorization_type="ServiceAccount". This type uses the cr
 The Service Endpoint name.
 
 <h4 class="pdoc-member-header" id="Kubernetes-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -933,7 +933,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AzureRMArgs" data-link-title="AzureRMArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L243">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L243">
         interface <strong>AzureRMArgs</strong>
     </a>
 </h3>
@@ -943,12 +943,12 @@ deployments.
 The set of arguments for constructing a AzureRM resource.
 
 <h4 class="pdoc-member-header" id="AzureRMArgs-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L244">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L244">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AzureRMArgs-azurermSpnTenantid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L248">property <b>azurermSpnTenantid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L248">property <b>azurermSpnTenantid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurermSpnTenantid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -956,7 +956,7 @@ The set of arguments for constructing a AzureRM resource.
 The tenant id if the service principal.
 
 <h4 class="pdoc-member-header" id="AzureRMArgs-azurermSubscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L252">property <b>azurermSubscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L252">property <b>azurermSubscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurermSubscriptionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -964,7 +964,7 @@ The tenant id if the service principal.
 The subscription Id of the Azure targets.
 
 <h4 class="pdoc-member-header" id="AzureRMArgs-azurermSubscriptionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L256">property <b>azurermSubscriptionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L256">property <b>azurermSubscriptionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurermSubscriptionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -972,7 +972,7 @@ The subscription Id of the Azure targets.
 The subscription Name of the targets.
 
 <h4 class="pdoc-member-header" id="AzureRMArgs-credentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L260">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L260">property <b>credentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#AzureRMCredentials'>AzureRMCredentials</a>&gt;;</code></pre>
@@ -980,7 +980,7 @@ The subscription Name of the targets.
 A `credentials` block.
 
 <h4 class="pdoc-member-header" id="AzureRMArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L264">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L264">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -988,7 +988,7 @@ A `credentials` block.
 Service connection description.
 
 <h4 class="pdoc-member-header" id="AzureRMArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L268">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L268">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -996,7 +996,7 @@ Service connection description.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="AzureRMArgs-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L272">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L272">property <b>resourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1004,7 +1004,7 @@ The project ID or project name.
 The resource group used for scope of automatic service endpoint.
 
 <h4 class="pdoc-member-header" id="AzureRMArgs-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L276">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L276">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1012,7 +1012,7 @@ The resource group used for scope of automatic service endpoint.
 The Service Endpoint name.
 
 <h3 class="pdoc-module-header" id="AzureRMState" data-link-title="AzureRMState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L204">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L204">
         interface <strong>AzureRMState</strong>
     </a>
 </h3>
@@ -1022,12 +1022,12 @@ The Service Endpoint name.
 Input properties used for looking up and filtering AzureRM resources.
 
 <h4 class="pdoc-member-header" id="AzureRMState-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L205">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L205">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AzureRMState-azurermSpnTenantid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L209">property <b>azurermSpnTenantid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L209">property <b>azurermSpnTenantid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurermSpnTenantid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1035,7 +1035,7 @@ Input properties used for looking up and filtering AzureRM resources.
 The tenant id if the service principal.
 
 <h4 class="pdoc-member-header" id="AzureRMState-azurermSubscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L213">property <b>azurermSubscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L213">property <b>azurermSubscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurermSubscriptionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1043,7 +1043,7 @@ The tenant id if the service principal.
 The subscription Id of the Azure targets.
 
 <h4 class="pdoc-member-header" id="AzureRMState-azurermSubscriptionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L217">property <b>azurermSubscriptionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L217">property <b>azurermSubscriptionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurermSubscriptionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1051,7 +1051,7 @@ The subscription Id of the Azure targets.
 The subscription Name of the targets.
 
 <h4 class="pdoc-member-header" id="AzureRMState-credentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L221">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L221">property <b>credentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#AzureRMCredentials'>AzureRMCredentials</a>&gt;;</code></pre>
@@ -1059,7 +1059,7 @@ The subscription Name of the targets.
 A `credentials` block.
 
 <h4 class="pdoc-member-header" id="AzureRMState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L225">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L225">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1067,7 +1067,7 @@ A `credentials` block.
 Service connection description.
 
 <h4 class="pdoc-member-header" id="AzureRMState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L229">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L229">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1075,7 +1075,7 @@ Service connection description.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="AzureRMState-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L233">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L233">property <b>resourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1083,7 +1083,7 @@ The project ID or project name.
 The resource group used for scope of automatic service endpoint.
 
 <h4 class="pdoc-member-header" id="AzureRMState-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/azureRM.ts#L237">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/azureRM.ts#L237">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1091,7 +1091,7 @@ The resource group used for scope of automatic service endpoint.
 The Service Endpoint name.
 
 <h3 class="pdoc-module-header" id="BitBucketArgs" data-link-title="BitBucketArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L181">
         interface <strong>BitBucketArgs</strong>
     </a>
 </h3>
@@ -1101,17 +1101,17 @@ The Service Endpoint name.
 The set of arguments for constructing a BitBucket resource.
 
 <h4 class="pdoc-member-header" id="BitBucketArgs-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L182">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L182">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BitBucketArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L183">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L183">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BitBucketArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L187">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L187">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1119,7 +1119,7 @@ The set of arguments for constructing a BitBucket resource.
 Bitbucket account password.
 
 <h4 class="pdoc-member-header" id="BitBucketArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L191">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L191">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1127,7 +1127,7 @@ Bitbucket account password.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="BitBucketArgs-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L195">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L195">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1135,7 +1135,7 @@ The project ID or project name.
 The Service Endpoint name.
 
 <h4 class="pdoc-member-header" id="BitBucketArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L199">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L199">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1143,7 +1143,7 @@ The Service Endpoint name.
 Bitbucket account username.
 
 <h3 class="pdoc-module-header" id="BitBucketState" data-link-title="BitBucketState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L153">
         interface <strong>BitBucketState</strong>
     </a>
 </h3>
@@ -1153,17 +1153,17 @@ Bitbucket account username.
 Input properties used for looking up and filtering BitBucket resources.
 
 <h4 class="pdoc-member-header" id="BitBucketState-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L154">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L154">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BitBucketState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L155">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L155">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BitBucketState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L159">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L159">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1171,7 +1171,7 @@ Input properties used for looking up and filtering BitBucket resources.
 Bitbucket account password.
 
 <h4 class="pdoc-member-header" id="BitBucketState-passwordHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L163">property <b>passwordHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L163">property <b>passwordHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1179,7 +1179,7 @@ Bitbucket account password.
 A bcrypted hash of the attribute 'password'
 
 <h4 class="pdoc-member-header" id="BitBucketState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L167">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L167">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1187,7 +1187,7 @@ A bcrypted hash of the attribute 'password'
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="BitBucketState-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L171">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L171">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1195,7 +1195,7 @@ The project ID or project name.
 The Service Endpoint name.
 
 <h4 class="pdoc-member-header" id="BitBucketState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/bitBucket.ts#L175">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/bitBucket.ts#L175">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1203,7 +1203,7 @@ The Service Endpoint name.
 Bitbucket account username.
 
 <h3 class="pdoc-module-header" id="DockerRegistryArgs" data-link-title="DockerRegistryArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L229">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L229">
         interface <strong>DockerRegistryArgs</strong>
     </a>
 </h3>
@@ -1213,12 +1213,12 @@ Bitbucket account username.
 The set of arguments for constructing a DockerRegistry resource.
 
 <h4 class="pdoc-member-header" id="DockerRegistryArgs-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L230">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L230">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DockerRegistryArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L234">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L234">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1226,7 +1226,7 @@ The set of arguments for constructing a DockerRegistry resource.
 The name you will use to refer to this service connection in task inputs.
 
 <h4 class="pdoc-member-header" id="DockerRegistryArgs-dockerEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L238">property <b>dockerEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L238">property <b>dockerEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1234,7 +1234,7 @@ The name you will use to refer to this service connection in task inputs.
 The email for Docker account user.
 
 <h4 class="pdoc-member-header" id="DockerRegistryArgs-dockerPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L242">property <b>dockerPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L242">property <b>dockerPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1242,7 +1242,7 @@ The email for Docker account user.
 The password for the account user identified above.
 
 <h4 class="pdoc-member-header" id="DockerRegistryArgs-dockerRegistry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L246">property <b>dockerRegistry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L246">property <b>dockerRegistry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerRegistry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1250,7 +1250,7 @@ The password for the account user identified above.
 The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
 
 <h4 class="pdoc-member-header" id="DockerRegistryArgs-dockerUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L250">property <b>dockerUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L250">property <b>dockerUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1258,7 +1258,7 @@ The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
 The identifier of the Docker account user.
 
 <h4 class="pdoc-member-header" id="DockerRegistryArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L254">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L254">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1266,7 +1266,7 @@ The identifier of the Docker account user.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="DockerRegistryArgs-registryType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L258">property <b>registryType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L258">property <b>registryType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registryType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1274,7 +1274,7 @@ The project ID or project name.
 Can be "DockerHub" or "Others" (Default "DockerHub")
 
 <h4 class="pdoc-member-header" id="DockerRegistryArgs-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L262">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L262">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1282,7 +1282,7 @@ Can be "DockerHub" or "Others" (Default "DockerHub")
 The name you will use to refer to this service connection in task inputs.
 
 <h3 class="pdoc-module-header" id="DockerRegistryState" data-link-title="DockerRegistryState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L186">
         interface <strong>DockerRegistryState</strong>
     </a>
 </h3>
@@ -1292,12 +1292,12 @@ The name you will use to refer to this service connection in task inputs.
 Input properties used for looking up and filtering DockerRegistry resources.
 
 <h4 class="pdoc-member-header" id="DockerRegistryState-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L187">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L187">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DockerRegistryState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L191">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L191">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1305,7 +1305,7 @@ Input properties used for looking up and filtering DockerRegistry resources.
 The name you will use to refer to this service connection in task inputs.
 
 <h4 class="pdoc-member-header" id="DockerRegistryState-dockerEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L195">property <b>dockerEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L195">property <b>dockerEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1313,7 +1313,7 @@ The name you will use to refer to this service connection in task inputs.
 The email for Docker account user.
 
 <h4 class="pdoc-member-header" id="DockerRegistryState-dockerPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L199">property <b>dockerPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L199">property <b>dockerPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1321,7 +1321,7 @@ The email for Docker account user.
 The password for the account user identified above.
 
 <h4 class="pdoc-member-header" id="DockerRegistryState-dockerPasswordHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L203">property <b>dockerPasswordHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L203">property <b>dockerPasswordHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerPasswordHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1329,7 +1329,7 @@ The password for the account user identified above.
 A bcrypted hash of the attribute 'docker_password'
 
 <h4 class="pdoc-member-header" id="DockerRegistryState-dockerRegistry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L207">property <b>dockerRegistry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L207">property <b>dockerRegistry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerRegistry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1337,7 +1337,7 @@ A bcrypted hash of the attribute 'docker_password'
 The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
 
 <h4 class="pdoc-member-header" id="DockerRegistryState-dockerUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L211">property <b>dockerUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L211">property <b>dockerUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1345,7 +1345,7 @@ The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
 The identifier of the Docker account user.
 
 <h4 class="pdoc-member-header" id="DockerRegistryState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L215">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L215">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1353,7 +1353,7 @@ The identifier of the Docker account user.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="DockerRegistryState-registryType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L219">property <b>registryType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L219">property <b>registryType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registryType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1361,7 +1361,7 @@ The project ID or project name.
 Can be "DockerHub" or "Others" (Default "DockerHub")
 
 <h4 class="pdoc-member-header" id="DockerRegistryState-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L223">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/dockerRegistry.ts#L223">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1369,7 +1369,7 @@ Can be "DockerHub" or "Others" (Default "DockerHub")
 The name you will use to refer to this service connection in task inputs.
 
 <h3 class="pdoc-module-header" id="GitHubArgs" data-link-title="GitHubArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L190">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L190">
         interface <strong>GitHubArgs</strong>
     </a>
 </h3>
@@ -1379,7 +1379,7 @@ The name you will use to refer to this service connection in task inputs.
 The set of arguments for constructing a GitHub resource.
 
 <h4 class="pdoc-member-header" id="GitHubArgs-authOauth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L194">property <b>authOauth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L194">property <b>authOauth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authOauth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#GitHubAuthOauth'>GitHubAuthOauth</a>&gt;;</code></pre>
@@ -1387,7 +1387,7 @@ The set of arguments for constructing a GitHub resource.
 An `authOauth` block as documented below. Allows connecting using an Oauth token.
 
 <h4 class="pdoc-member-header" id="GitHubArgs-authPersonal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L198">property <b>authPersonal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L198">property <b>authPersonal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authPersonal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#GitHubAuthPersonal'>GitHubAuthPersonal</a>&gt;;</code></pre>
@@ -1395,17 +1395,17 @@ An `authOauth` block as documented below. Allows connecting using an Oauth token
 An `authPersonal` block as documented below. Allows connecting using a personal access token.
 
 <h4 class="pdoc-member-header" id="GitHubArgs-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L199">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L199">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GitHubArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L200">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L200">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GitHubArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L204">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L204">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1413,7 +1413,7 @@ An `authPersonal` block as documented below. Allows connecting using a personal 
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="GitHubArgs-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L208">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L208">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1421,7 +1421,7 @@ The project ID or project name.
 The Service Endpoint name.
 
 <h3 class="pdoc-module-header" id="GitHubState" data-link-title="GitHubState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L166">
         interface <strong>GitHubState</strong>
     </a>
 </h3>
@@ -1431,7 +1431,7 @@ The Service Endpoint name.
 Input properties used for looking up and filtering GitHub resources.
 
 <h4 class="pdoc-member-header" id="GitHubState-authOauth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L170">property <b>authOauth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L170">property <b>authOauth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authOauth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#GitHubAuthOauth'>GitHubAuthOauth</a>&gt;;</code></pre>
@@ -1439,7 +1439,7 @@ Input properties used for looking up and filtering GitHub resources.
 An `authOauth` block as documented below. Allows connecting using an Oauth token.
 
 <h4 class="pdoc-member-header" id="GitHubState-authPersonal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L174">property <b>authPersonal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L174">property <b>authPersonal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authPersonal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#GitHubAuthPersonal'>GitHubAuthPersonal</a>&gt;;</code></pre>
@@ -1447,17 +1447,17 @@ An `authOauth` block as documented below. Allows connecting using an Oauth token
 An `authPersonal` block as documented below. Allows connecting using a personal access token.
 
 <h4 class="pdoc-member-header" id="GitHubState-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L175">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L175">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GitHubState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L176">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L176">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GitHubState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L180">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L180">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1465,7 +1465,7 @@ An `authPersonal` block as documented below. Allows connecting using a personal 
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="GitHubState-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/gitHub.ts#L184">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/gitHub.ts#L184">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1473,7 +1473,7 @@ The project ID or project name.
 The Service Endpoint name.
 
 <h3 class="pdoc-module-header" id="KubernetesArgs" data-link-title="KubernetesArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L183">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L183">
         interface <strong>KubernetesArgs</strong>
     </a>
 </h3>
@@ -1483,7 +1483,7 @@ The Service Endpoint name.
 The set of arguments for constructing a Kubernetes resource.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-apiserverUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L187">property <b>apiserverUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L187">property <b>apiserverUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiserverUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1491,12 +1491,12 @@ The set of arguments for constructing a Kubernetes resource.
 The Service Endpoint description.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L188">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L188">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesArgs-authorizationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L192">property <b>authorizationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L192">property <b>authorizationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1504,7 +1504,7 @@ The Service Endpoint description.
 The authentication method used to authenticate on the Kubernetes cluster. The value should be one of AzureSubscription, Kubeconfig, ServiceAccount.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-azureSubscriptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L196">property <b>azureSubscriptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L196">property <b>azureSubscriptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureSubscriptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#KubernetesAzureSubscription'>KubernetesAzureSubscription</a>&gt;[]&gt;;</code></pre>
@@ -1512,12 +1512,12 @@ The authentication method used to authenticate on the Kubernetes cluster. The va
 The configuration for authorization_type="AzureSubscription".
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L197">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L197">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesArgs-kubeconfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L201">property <b>kubeconfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L201">property <b>kubeconfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeconfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#KubernetesKubeconfig'>KubernetesKubeconfig</a>&gt;[]&gt;;</code></pre>
@@ -1525,7 +1525,7 @@ The configuration for authorization_type="AzureSubscription".
 The configuration for authorization_type="Kubeconfig".
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L205">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L205">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1533,7 +1533,7 @@ The configuration for authorization_type="Kubeconfig".
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-serviceAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L209">property <b>serviceAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L209">property <b>serviceAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#KubernetesServiceAccount'>KubernetesServiceAccount</a>&gt;[]&gt;;</code></pre>
@@ -1541,7 +1541,7 @@ The project ID or project name.
 The configuration for authorization_type="ServiceAccount". This type uses the credentials of a service account currently deployed to the cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L213">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L213">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1549,7 +1549,7 @@ The configuration for authorization_type="ServiceAccount". This type uses the cr
 The Service Endpoint name.
 
 <h3 class="pdoc-module-header" id="KubernetesState" data-link-title="KubernetesState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L147">
         interface <strong>KubernetesState</strong>
     </a>
 </h3>
@@ -1559,7 +1559,7 @@ The Service Endpoint name.
 Input properties used for looking up and filtering Kubernetes resources.
 
 <h4 class="pdoc-member-header" id="KubernetesState-apiserverUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L151">property <b>apiserverUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L151">property <b>apiserverUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiserverUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1567,12 +1567,12 @@ Input properties used for looking up and filtering Kubernetes resources.
 The Service Endpoint description.
 
 <h4 class="pdoc-member-header" id="KubernetesState-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L152">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L152">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesState-authorizationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L156">property <b>authorizationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L156">property <b>authorizationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1580,7 +1580,7 @@ The Service Endpoint description.
 The authentication method used to authenticate on the Kubernetes cluster. The value should be one of AzureSubscription, Kubeconfig, ServiceAccount.
 
 <h4 class="pdoc-member-header" id="KubernetesState-azureSubscriptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L160">property <b>azureSubscriptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L160">property <b>azureSubscriptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureSubscriptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#KubernetesAzureSubscription'>KubernetesAzureSubscription</a>&gt;[]&gt;;</code></pre>
@@ -1588,12 +1588,12 @@ The authentication method used to authenticate on the Kubernetes cluster. The va
 The configuration for authorization_type="AzureSubscription".
 
 <h4 class="pdoc-member-header" id="KubernetesState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L161">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L161">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesState-kubeconfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L165">property <b>kubeconfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L165">property <b>kubeconfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeconfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#KubernetesKubeconfig'>KubernetesKubeconfig</a>&gt;[]&gt;;</code></pre>
@@ -1601,7 +1601,7 @@ The configuration for authorization_type="AzureSubscription".
 The configuration for authorization_type="Kubeconfig".
 
 <h4 class="pdoc-member-header" id="KubernetesState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L169">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L169">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1609,7 +1609,7 @@ The configuration for authorization_type="Kubeconfig".
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="KubernetesState-serviceAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L173">property <b>serviceAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L173">property <b>serviceAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#KubernetesServiceAccount'>KubernetesServiceAccount</a>&gt;[]&gt;;</code></pre>
@@ -1617,7 +1617,7 @@ The project ID or project name.
 The configuration for authorization_type="ServiceAccount". This type uses the credentials of a service account currently deployed to the cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesState-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceendpoint/kubernetes.ts#L177">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/serviceendpoint/kubernetes.ts#L177">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

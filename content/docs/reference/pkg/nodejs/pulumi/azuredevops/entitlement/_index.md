@@ -3,7 +3,7 @@ title: "Module entitlement"
 title_tag: "Module entitlement | Package @pulumi/azuredevops | Node.js SDK"
 linktitle: "entitlement"
 meta_desc: "Explore members of the entitlement module in the @pulumi/azuredevops package."
-git_sha: "8f499c00158ea0335e120f29e31b3f2cfa1e56f5"
+git_sha: "beaf27004d238ef903548764f78de8273eb3740b"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="User" data-link-title="User">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L34">
         Resource <strong>User</strong>
     </a>
 </h3>
@@ -66,7 +66,7 @@ const user = new azuredevops.User("user", {
 The resources allows the import via the UUID of a user entitlement or by using the principal name of a user owning an entitlement.
 
 <h4 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L86"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -81,7 +81,7 @@ azuredevops.entitlement.User has been deprecated in favor of azuredevops.User
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> User(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#UserArgs'>UserArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -92,14 +92,14 @@ Get an existing User resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -110,7 +110,7 @@ Returns true if the given object is an instance of User.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="User-accountLicenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L66">property <b>accountLicenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L66">property <b>accountLicenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountLicenseType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -118,7 +118,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Type of Account License. Valid values: `advanced`, `earlyAdopter`, `express`, `none`, `professional`, or `stakeholder`. Defaults to `express`. In addition the value `basic` is allowed which is an alias for `express` and reflects the name of the `express` license used in the Azure DevOps web interface.
 
 <h4 class="pdoc-member-header" id="User-descriptor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L70">property <b>descriptor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L70">property <b>descriptor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>descriptor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -126,7 +126,7 @@ Type of Account License. Valid values: `advanced`, `earlyAdopter`, `express`, `n
 The descriptor is the primary way to reference the graph subject while the system is running. This field will uniquely identify the user graph subject.
 
 <h4 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -135,7 +135,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="User-licensingSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L74">property <b>licensingSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L74">property <b>licensingSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licensingSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -143,7 +143,7 @@ deployments and may be missing (undefined) during planning phases.
 The source of the licensing (e.g. Account. MSDN etc.) Valid values: `account` (Default), `auto`, `msdn`, `none`, `profile`, `trail`
 
 <h4 class="pdoc-member-header" id="User-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L78">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L78">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>origin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -151,7 +151,7 @@ The source of the licensing (e.g. Account. MSDN etc.) Valid values: `account` (D
 The type of source provider for the origin identifier.
 
 <h4 class="pdoc-member-header" id="User-originId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L82">property <b>originId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L82">property <b>originId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>originId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -159,7 +159,7 @@ The type of source provider for the origin identifier.
 The unique identifier from the system of origin. Typically a sid, object id or Guid. e.g. Used for member of other tenant on Azure Active Directory.
 
 <h4 class="pdoc-member-header" id="User-principalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L86">property <b>principalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L86">property <b>principalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principalName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -167,7 +167,7 @@ The unique identifier from the system of origin. Typically a sid, object id or G
 The principal name is the PrincipalName of a graph member from the source provider. Usually, e-mail address.
 
 <h4 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -179,7 +179,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="UserArgs" data-link-title="UserArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L162">
         interface <strong>UserArgs</strong>
     </a>
 </h3>
@@ -189,7 +189,7 @@ deployments.
 The set of arguments for constructing a User resource.
 
 <h4 class="pdoc-member-header" id="UserArgs-accountLicenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L166">property <b>accountLicenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L166">property <b>accountLicenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountLicenseType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -197,7 +197,7 @@ The set of arguments for constructing a User resource.
 Type of Account License. Valid values: `advanced`, `earlyAdopter`, `express`, `none`, `professional`, or `stakeholder`. Defaults to `express`. In addition the value `basic` is allowed which is an alias for `express` and reflects the name of the `express` license used in the Azure DevOps web interface.
 
 <h4 class="pdoc-member-header" id="UserArgs-licensingSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L170">property <b>licensingSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L170">property <b>licensingSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licensingSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -205,7 +205,7 @@ Type of Account License. Valid values: `advanced`, `earlyAdopter`, `express`, `n
 The source of the licensing (e.g. Account. MSDN etc.) Valid values: `account` (Default), `auto`, `msdn`, `none`, `profile`, `trail`
 
 <h4 class="pdoc-member-header" id="UserArgs-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L174">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L174">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -213,7 +213,7 @@ The source of the licensing (e.g. Account. MSDN etc.) Valid values: `account` (D
 The type of source provider for the origin identifier.
 
 <h4 class="pdoc-member-header" id="UserArgs-originId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L178">property <b>originId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L178">property <b>originId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>originId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -221,7 +221,7 @@ The type of source provider for the origin identifier.
 The unique identifier from the system of origin. Typically a sid, object id or Guid. e.g. Used for member of other tenant on Azure Active Directory.
 
 <h4 class="pdoc-member-header" id="UserArgs-principalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L182">property <b>principalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L182">property <b>principalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -229,7 +229,7 @@ The unique identifier from the system of origin. Typically a sid, object id or G
 The principal name is the PrincipalName of a graph member from the source provider. Usually, e-mail address.
 
 <h3 class="pdoc-module-header" id="UserState" data-link-title="UserState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L132">
         interface <strong>UserState</strong>
     </a>
 </h3>
@@ -239,7 +239,7 @@ The principal name is the PrincipalName of a graph member from the source provid
 Input properties used for looking up and filtering User resources.
 
 <h4 class="pdoc-member-header" id="UserState-accountLicenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L136">property <b>accountLicenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L136">property <b>accountLicenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountLicenseType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -247,7 +247,7 @@ Input properties used for looking up and filtering User resources.
 Type of Account License. Valid values: `advanced`, `earlyAdopter`, `express`, `none`, `professional`, or `stakeholder`. Defaults to `express`. In addition the value `basic` is allowed which is an alias for `express` and reflects the name of the `express` license used in the Azure DevOps web interface.
 
 <h4 class="pdoc-member-header" id="UserState-descriptor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L140">property <b>descriptor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L140">property <b>descriptor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriptor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -255,7 +255,7 @@ Type of Account License. Valid values: `advanced`, `earlyAdopter`, `express`, `n
 The descriptor is the primary way to reference the graph subject while the system is running. This field will uniquely identify the user graph subject.
 
 <h4 class="pdoc-member-header" id="UserState-licensingSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L144">property <b>licensingSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L144">property <b>licensingSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licensingSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -263,7 +263,7 @@ The descriptor is the primary way to reference the graph subject while the syste
 The source of the licensing (e.g. Account. MSDN etc.) Valid values: `account` (Default), `auto`, `msdn`, `none`, `profile`, `trail`
 
 <h4 class="pdoc-member-header" id="UserState-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L148">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L148">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -271,7 +271,7 @@ The source of the licensing (e.g. Account. MSDN etc.) Valid values: `account` (D
 The type of source provider for the origin identifier.
 
 <h4 class="pdoc-member-header" id="UserState-originId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L152">property <b>originId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L152">property <b>originId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>originId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -279,7 +279,7 @@ The type of source provider for the origin identifier.
 The unique identifier from the system of origin. Typically a sid, object id or Guid. e.g. Used for member of other tenant on Azure Active Directory.
 
 <h4 class="pdoc-member-header" id="UserState-principalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/entitlement/user.ts#L156">property <b>principalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/entitlement/user.ts#L156">property <b>principalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

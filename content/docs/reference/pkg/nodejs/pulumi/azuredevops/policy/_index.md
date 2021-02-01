@@ -3,7 +3,7 @@ title: "Module policy"
 title_tag: "Module policy | Package @pulumi/azuredevops | Node.js SDK"
 linktitle: "policy"
 meta_desc: "Explore members of the policy module in the @pulumi/azuredevops package."
-git_sha: "8f499c00158ea0335e120f29e31b3f2cfa1e56f5"
+git_sha: "beaf27004d238ef903548764f78de8273eb3740b"
 block_external_search_index: true
 ---
 
@@ -33,7 +33,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="BranchPolicyBuildValidation" data-link-title="BranchPolicyBuildValidation">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L74">
         Resource <strong>BranchPolicyBuildValidation</strong>
     </a>
 </h3>
@@ -108,7 +108,7 @@ Azure DevOps Branch Policies can be imported using the project ID and policy con
 ```
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L118"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -123,7 +123,7 @@ azuredevops.policy.BranchPolicyBuildValidation has been deprecated in favor of a
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> BranchPolicyBuildValidation(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#BranchPolicyBuildValidationArgs'>BranchPolicyBuildValidationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L84">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L84">method <b>get</b></a>
 </h4>
 
 
@@ -134,14 +134,14 @@ Get an existing BranchPolicyBuildValidation resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L74">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L74">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L96">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L96">method <b>isInstance</b></a>
 </h4>
 
 
@@ -152,7 +152,7 @@ Returns true if the given object is an instance of BranchPolicyBuildValidation. 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L106">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L106">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blocking: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L110">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L110">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -168,7 +168,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L74">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -177,7 +177,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L114">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L114">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -185,7 +185,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L118">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L118">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#BranchPolicyBuildValidationSettings'>BranchPolicyBuildValidationSettings</a>&gt;;</code></pre>
@@ -193,7 +193,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L74">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L74">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -202,7 +202,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BranchPolicyMinReviewers" data-link-title="BranchPolicyMinReviewers">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L60">
         Resource <strong>BranchPolicyMinReviewers</strong>
     </a>
 </h3>
@@ -263,7 +263,7 @@ Azure DevOps Branch Policies can be imported using the project ID and policy con
 ```
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L104"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L104"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -278,7 +278,7 @@ azuredevops.policy.BranchPolicyMinReviewers has been deprecated in favor of azur
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> BranchPolicyMinReviewers(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#BranchPolicyMinReviewersArgs'>BranchPolicyMinReviewersArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L70">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L70">method <b>get</b></a>
 </h4>
 
 
@@ -289,14 +289,14 @@ Get an existing BranchPolicyMinReviewers resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L60">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L60">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L82">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L82">method <b>isInstance</b></a>
 </h4>
 
 
@@ -307,7 +307,7 @@ Returns true if the given object is an instance of BranchPolicyMinReviewers.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L92">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L92">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blocking: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -315,7 +315,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L96">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L96">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -323,7 +323,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L60">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -332,7 +332,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L100">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L100">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -340,7 +340,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L104">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L104">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#BranchPolicyMinReviewersSettings'>BranchPolicyMinReviewersSettings</a>&gt;;</code></pre>
@@ -348,7 +348,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L60">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L60">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -360,7 +360,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="BranchPolicyBuildValidationArgs" data-link-title="BranchPolicyBuildValidationArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L188">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L188">
         interface <strong>BranchPolicyBuildValidationArgs</strong>
     </a>
 </h3>
@@ -370,7 +370,7 @@ deployments.
 The set of arguments for constructing a BranchPolicyBuildValidation resource.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationArgs-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L192">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L192">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blocking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -378,7 +378,7 @@ The set of arguments for constructing a BranchPolicyBuildValidation resource.
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L196">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L196">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -386,7 +386,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L200">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L200">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -394,7 +394,7 @@ A flag indicating if the policy should be enabled. Defaults to `true`.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationArgs-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L204">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L204">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BranchPolicyBuildValidationSettings'>BranchPolicyBuildValidationSettings</a>&gt;;</code></pre>
@@ -402,7 +402,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h3 class="pdoc-module-header" id="BranchPolicyBuildValidationState" data-link-title="BranchPolicyBuildValidationState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L166">
         interface <strong>BranchPolicyBuildValidationState</strong>
     </a>
 </h3>
@@ -412,7 +412,7 @@ Configuration for the policy. This block must be defined exactly once.
 Input properties used for looking up and filtering BranchPolicyBuildValidation resources.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationState-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L170">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L170">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blocking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -420,7 +420,7 @@ Input properties used for looking up and filtering BranchPolicyBuildValidation r
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L174">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L174">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -428,7 +428,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L178">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L178">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -436,7 +436,7 @@ A flag indicating if the policy should be enabled. Defaults to `true`.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationState-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L182">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyBuildValidation.ts#L182">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BranchPolicyBuildValidationSettings'>BranchPolicyBuildValidationSettings</a>&gt;;</code></pre>
@@ -444,7 +444,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h3 class="pdoc-module-header" id="BranchPolicyMinReviewersArgs" data-link-title="BranchPolicyMinReviewersArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L174">
         interface <strong>BranchPolicyMinReviewersArgs</strong>
     </a>
 </h3>
@@ -454,7 +454,7 @@ Configuration for the policy. This block must be defined exactly once.
 The set of arguments for constructing a BranchPolicyMinReviewers resource.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersArgs-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L178">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L178">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blocking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -462,7 +462,7 @@ The set of arguments for constructing a BranchPolicyMinReviewers resource.
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L182">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L182">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -470,7 +470,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L186">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L186">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -478,7 +478,7 @@ A flag indicating if the policy should be enabled. Defaults to `true`.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersArgs-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L190">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L190">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BranchPolicyMinReviewersSettings'>BranchPolicyMinReviewersSettings</a>&gt;;</code></pre>
@@ -486,7 +486,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h3 class="pdoc-module-header" id="BranchPolicyMinReviewersState" data-link-title="BranchPolicyMinReviewersState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L152">
         interface <strong>BranchPolicyMinReviewersState</strong>
     </a>
 </h3>
@@ -496,7 +496,7 @@ Configuration for the policy. This block must be defined exactly once.
 Input properties used for looking up and filtering BranchPolicyMinReviewers resources.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersState-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L156">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L156">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blocking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -504,7 +504,7 @@ Input properties used for looking up and filtering BranchPolicyMinReviewers reso
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L160">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L160">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -512,7 +512,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L164">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L164">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -520,7 +520,7 @@ A flag indicating if the policy should be enabled. Defaults to `true`.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersState-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L168">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/beaf27004d238ef903548764f78de8273eb3740b/sdk/nodejs/policy/branchPolicyMinReviewers.ts#L168">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BranchPolicyMinReviewersSettings'>BranchPolicyMinReviewersSettings</a>&gt;;</code></pre>

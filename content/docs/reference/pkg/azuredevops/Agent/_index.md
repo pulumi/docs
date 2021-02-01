@@ -30,7 +30,7 @@ Explore the resources and functions of the Agent module in the Azure DevOps pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
 	<dt>Version</dt>
-	<dd>1.1.1</dd>
+	<dd>1.2.0</dd>
 </dl>
 
 
