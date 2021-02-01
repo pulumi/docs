@@ -65,6 +65,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-cloudinit/sdk/go/cloudinit"
+	"github.com/pulumi/pulumi-cloudinit/sdk/go/cloudinit/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
