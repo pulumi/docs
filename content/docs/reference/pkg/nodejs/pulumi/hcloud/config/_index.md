@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/hcloud | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/hcloud package."
-git_sha: "a7d750837fe0d0a5a9b69e5d27c15cb7d2603812"
+git_sha: "13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040"
 block_external_search_index: true
 ---
 
@@ -28,14 +28,14 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="endpoint" data-link-title="endpoint">
-    <a href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/config/vars.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/config/vars.ts#L9">
         let <strong>endpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;endpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/config/vars.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/config/vars.ts#L13">
         let <strong>token</strong>
     </a>
 </h3>
