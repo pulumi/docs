@@ -426,7 +426,7 @@ $ brew install node
 
 {{< chooser os "macos,windows,linux" >}}
 {{% choosable os macos %}}
-MacOS includes Python, and versions shipped before December 2019 have Python 2.7 installed, which is deprecated. Pulumi requires Python 3.6 or higher. Use brew to install Python, which installs it as `/usr/bin/local/python3`.
+MacOS includes Python; however, versions shipped before December 2019 have Python 2.7 installed, which is deprecated. Pulumi requires Python 3.6 or higher. Use brew to install Python, which installs it at `/usr/bin/local/python3`.
 
 ```bash
 $ brew install python
