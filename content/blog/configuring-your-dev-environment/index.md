@@ -499,7 +499,7 @@ Use brew to install golang.
 $ brew install golang
 ```
 
-It is a best practice to create a local programming environment and set `GOPATH` as an environment variable,  although it is not required for golang versions after 1.8. Pulumi creates a new local environment and `go.mod` to work with modules each time you start a new Project with `pulumi new`.
+It is a best practice to create a local programming environment and set `GOPATH` as an environment variable, although it is not required for golang versions after 1.8. Pulumi creates a new local environment and `go.mod` to work with modules each time you start a new Project with `pulumi new`.
 
 {{% /choosable %}}
 {{% /chooser %}}
