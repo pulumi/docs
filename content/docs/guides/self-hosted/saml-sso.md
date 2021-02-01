@@ -58,5 +58,6 @@ For these values to take effect, you will need to restart the API Service.
 
 ## Enabling SAML SSO as an identity option
 
-Once you have completed the above steps, you may enable SAML SSO as a login option for your users.
-Set the `SAML_SSO_ENABLED` environment variable for the [console]({{< relref "console" >}}) container to `true` and restart the service.
+By default, the SAML SSO signin/signup option is not displayed to end users of the Console service.
+Set the `SAML_SSO_ENABLED` environment variable for the [console]({{< relref "console" >}}) container to `true`
+and restart the service.
