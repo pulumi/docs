@@ -954,6 +954,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="certificatedatabase64_csharp">
+<a href="#certificatedatabase64_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -1016,6 +1026,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="certificatedatabase64_go">
+<a href="#certificatedatabase64_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1084,6 +1104,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="certificatedatabase64_nodejs">
+<a href="#certificatedatabase64_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1149,6 +1179,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="certificate_data_base64_python">
+<a href="#certificate_data_base64_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>data_<wbr>base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1202,7 +1242,7 @@ Get an existing Certificate resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[CertificateCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateCertificateAttributeArgs]]</span> = None<span class="p">, </span><span class="nx">certificate_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_policy</span><span class="p">:</span> <span class="nx">Optional[CertificateCertificatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">thumbprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Certificate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[CertificateCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateCertificateAttributeArgs]]</span> = None<span class="p">, </span><span class="nx">certificate_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_policy</span><span class="p">:</span> <span class="nx">Optional[CertificateCertificatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">thumbprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Certificate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1337,6 +1377,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_certificatedatabase64_csharp">
+<a href="#state_certificatedatabase64_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_certificatepolicy_csharp">
 <a href="#state_certificatepolicy_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Policy</a>
 </span>
@@ -1453,6 +1503,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_certificatedatabase64_go">
+<a href="#state_certificatedatabase64_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_certificatepolicy_go">
 <a href="#state_certificatepolicy_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Policy</a>
 </span>
@@ -1559,6 +1619,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_certificatedatabase64_nodejs">
+<a href="#state_certificatedatabase64_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_certificatepolicy_nodejs">
 <a href="#state_certificatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Policy</a>
 </span>
@@ -1662,6 +1732,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_certificate_data_base64_python">
+<a href="#state_certificate_data_base64_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>data_<wbr>base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

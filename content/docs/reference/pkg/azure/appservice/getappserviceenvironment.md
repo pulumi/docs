@@ -248,6 +248,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="clustersettings_csharp">
+<a href="#clustersettings_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappserviceenvironmentclustersetting">List&lt;Get<wbr>App<wbr>Service<wbr>Environment<wbr>Cluster<wbr>Setting&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Zero or more `cluster_setting` blocks as defined below.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="frontendscalefactor_csharp">
 <a href="#frontendscalefactor_csharp" style="color: inherit; text-decoration: inherit;">Front<wbr>End<wbr>Scale<wbr>Factor</a>
 </span>
@@ -294,7 +304,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Cluster Setting.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="outboundipaddresses_csharp">
@@ -352,6 +363,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="clustersettings_go">
+<a href="#clustersettings_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappserviceenvironmentclustersetting">[]Get<wbr>App<wbr>Service<wbr>Environment<wbr>Cluster<wbr>Setting</a></span>
+    </dt>
+    <dd>{{% md %}}Zero or more `cluster_setting` blocks as defined below.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="frontendscalefactor_go">
 <a href="#frontendscalefactor_go" style="color: inherit; text-decoration: inherit;">Front<wbr>End<wbr>Scale<wbr>Factor</a>
 </span>
@@ -398,7 +419,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Cluster Setting.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="outboundipaddresses_go">
@@ -456,6 +478,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="clustersettings_nodejs">
+<a href="#clustersettings_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappserviceenvironmentclustersetting">Get<wbr>App<wbr>Service<wbr>Environment<wbr>Cluster<wbr>Setting[]</a></span>
+    </dt>
+    <dd>{{% md %}}Zero or more `cluster_setting` blocks as defined below.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="frontendscalefactor_nodejs">
 <a href="#frontendscalefactor_nodejs" style="color: inherit; text-decoration: inherit;">front<wbr>End<wbr>Scale<wbr>Factor</a>
 </span>
@@ -502,7 +534,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Cluster Setting.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="outboundipaddresses_nodejs">
@@ -560,6 +593,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="cluster_settings_python">
+<a href="#cluster_settings_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappserviceenvironmentclustersetting">Sequence[Get<wbr>App<wbr>Service<wbr>Environment<wbr>Cluster<wbr>Setting]</a></span>
+    </dt>
+    <dd>{{% md %}}Zero or more `cluster_setting` blocks as defined below.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="front_end_scale_factor_python">
 <a href="#front_end_scale_factor_python" style="color: inherit; text-decoration: inherit;">front_<wbr>end_<wbr>scale_<wbr>factor</a>
 </span>
@@ -606,7 +649,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Cluster Setting.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="outbound_ip_addresses_python">
@@ -655,6 +699,130 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the App Service Environment.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+
+
+
+## Supporting Types
+
+
+<h4 id="getappserviceenvironmentclustersetting">Get<wbr>App<wbr>Service<wbr>Environment<wbr>Cluster<wbr>Setting</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceEnvironmentClusterSetting">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#GetAppServiceEnvironmentClusterSetting">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.GetAppServiceEnvironmentClusterSetting.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this App Service Environment.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value for the Cluster Setting.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this App Service Environment.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value for the Cluster Setting.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this App Service Environment.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value for the Cluster Setting.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of this App Service Environment.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value for the Cluster Setting.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

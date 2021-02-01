@@ -213,7 +213,7 @@ const exampleDatasetDelimitedText = new azure.datafactory.DatasetDelimitedText("
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#pulumi_azure.datafactory.DatasetDelimitedText">DatasetDelimitedText</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">azure_blob_storage_location</span><span class="p">:</span> <span class="nx">Optional[DatasetDelimitedTextAzureBlobStorageLocationArgs]</span> = None<span class="p">, </span><span class="nx">column_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compression_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">escape_character</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_row_as_header</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_server_location</span><span class="p">:</span> <span class="nx">Optional[DatasetDelimitedTextHttpServerLocationArgs]</span> = None<span class="p">, </span><span class="nx">linked_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">null_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">quote_character</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">row_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatasetDelimitedTextSchemaColumnArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#pulumi_azure.datafactory.DatasetDelimitedText">DatasetDelimitedText</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">azure_blob_storage_location</span><span class="p">:</span> <span class="nx">Optional[DatasetDelimitedTextAzureBlobStorageLocationArgs]</span> = None<span class="p">, </span><span class="nx">column_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compression_codec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compression_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">escape_character</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_row_as_header</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_server_location</span><span class="p">:</span> <span class="nx">Optional[DatasetDelimitedTextHttpServerLocationArgs]</span> = None<span class="p">, </span><span class="nx">linked_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">null_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">quote_character</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">row_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatasetDelimitedTextSchemaColumnArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -456,6 +456,16 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="compressioncodec_csharp">
+<a href="#compressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The compression codec used to read/write text files. Valid values are `bzip2`, `gzip`, `deflate`, `ZipDeflate`, `TarGzip`, `Tar`, `snappy`, or `lz4`. Please note these values are case sensitive.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="compressionlevel_csharp">
 <a href="#compressionlevel_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Level</a>
 </span>
@@ -659,6 +669,16 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The column delimiter.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="compressioncodec_go">
+<a href="#compressioncodec_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The compression codec used to read/write text files. Valid values are `bzip2`, `gzip`, `deflate`, `ZipDeflate`, `TarGzip`, `Tar`, `snappy`, or `lz4`. Please note these values are case sensitive.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -868,6 +888,16 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="compressioncodec_nodejs">
+<a href="#compressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The compression codec used to read/write text files. Valid values are `bzip2`, `gzip`, `deflate`, `ZipDeflate`, `TarGzip`, `Tar`, `snappy`, or `lz4`. Please note these values are case sensitive.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="compressionlevel_nodejs">
 <a href="#compressionlevel_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Level</a>
 </span>
@@ -1071,6 +1101,16 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The column delimiter.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="compression_codec_python">
+<a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The compression codec used to read/write text files. Valid values are `bzip2`, `gzip`, `deflate`, `ZipDeflate`, `TarGzip`, `Tar`, `snappy`, or `lz4`. Please note these values are case sensitive.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1285,7 +1325,7 @@ Get an existing DatasetDelimitedText resource's state with the given name, ID, a
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">azure_blob_storage_location</span><span class="p">:</span> <span class="nx">Optional[DatasetDelimitedTextAzureBlobStorageLocationArgs]</span> = None<span class="p">, </span><span class="nx">column_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compression_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">escape_character</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_row_as_header</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_server_location</span><span class="p">:</span> <span class="nx">Optional[DatasetDelimitedTextHttpServerLocationArgs]</span> = None<span class="p">, </span><span class="nx">linked_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">null_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">quote_character</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">row_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatasetDelimitedTextSchemaColumnArgs]]</span> = None<span class="p">) -&gt;</span> DatasetDelimitedText</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">azure_blob_storage_location</span><span class="p">:</span> <span class="nx">Optional[DatasetDelimitedTextAzureBlobStorageLocationArgs]</span> = None<span class="p">, </span><span class="nx">column_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compression_codec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compression_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">escape_character</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_row_as_header</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_server_location</span><span class="p">:</span> <span class="nx">Optional[DatasetDelimitedTextHttpServerLocationArgs]</span> = None<span class="p">, </span><span class="nx">linked_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">null_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">quote_character</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">row_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatasetDelimitedTextSchemaColumnArgs]]</span> = None<span class="p">) -&gt;</span> DatasetDelimitedText</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1437,6 +1477,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The column delimiter.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_compressioncodec_csharp">
+<a href="#state_compressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The compression codec used to read/write text files. Valid values are `bzip2`, `gzip`, `deflate`, `ZipDeflate`, `TarGzip`, `Tar`, `snappy`, or `lz4`. Please note these values are case sensitive.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1646,6 +1696,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_compressioncodec_go">
+<a href="#state_compressioncodec_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The compression codec used to read/write text files. Valid values are `bzip2`, `gzip`, `deflate`, `ZipDeflate`, `TarGzip`, `Tar`, `snappy`, or `lz4`. Please note these values are case sensitive.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_compressionlevel_go">
 <a href="#state_compressionlevel_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Level</a>
 </span>
@@ -1852,6 +1912,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_compressioncodec_nodejs">
+<a href="#state_compressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The compression codec used to read/write text files. Valid values are `bzip2`, `gzip`, `deflate`, `ZipDeflate`, `TarGzip`, `Tar`, `snappy`, or `lz4`. Please note these values are case sensitive.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_compressionlevel_nodejs">
 <a href="#state_compressionlevel_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Level</a>
 </span>
@@ -2055,6 +2125,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The column delimiter.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_compression_codec_python">
+<a href="#state_compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The compression codec used to read/write text files. Valid values are `bzip2`, `gzip`, `deflate`, `ZipDeflate`, `TarGzip`, `Tar`, `snappy`, or `lz4`. Please note these values are case sensitive.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
