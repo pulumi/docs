@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/akamai | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/akamai package."
-git_sha: "d905d77c417a09f1243fecb34ad59ca0aa7657e1"
+git_sha: "252a5b7ed507b5da220e685e0df70bd30bd9b156"
 block_external_search_index: true
 ---
 
@@ -39,35 +39,35 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="appsecs" data-link-title="appsecs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/config/vars.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/config/vars.ts#L11">
         let <strong>appsecs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> appsecs: <a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#Appsecs'>Appsecs</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;outputs.config.Appsecs[]&gt;(&#34;appsecs&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="appsecSection" data-link-title="appsecSection">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/config/vars.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/config/vars.ts#L10">
         let <strong>appsecSection</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> appsecSection: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;appsecSection&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="cacheEnabled" data-link-title="cacheEnabled">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/config/vars.ts#L12">
         let <strong>cacheEnabled</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> cacheEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;cacheEnabled&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="config" data-link-title="config">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/config/vars.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/config/vars.ts#L13">
         let <strong>config</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> config: <a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#Config'>Config</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;outputs.config.Config&gt;(&#34;config&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="configSection" data-link-title="configSection">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/config/vars.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/config/vars.ts#L17">
         let <strong>configSection</strong>
     </a>
 </h3>
@@ -77,56 +77,56 @@ block_external_search_index: true
 The section of the edgerc file to use for configuration
 
 <h3 class="pdoc-module-header" id="dns" data-link-title="dns">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/config/vars.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/config/vars.ts#L18">
         let <strong>dns</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> dns: <a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#Dns'>Dns</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;outputs.config.Dns&gt;(&#34;dns&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="dnsSection" data-link-title="dnsSection">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/config/vars.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/config/vars.ts#L19">
         let <strong>dnsSection</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> dnsSection: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;dnsSection&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="edgerc" data-link-title="edgerc">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/config/vars.ts#L20">
         let <strong>edgerc</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> edgerc: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;edgerc&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="gtm" data-link-title="gtm">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/config/vars.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/config/vars.ts#L21">
         let <strong>gtm</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> gtm: <a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#Gtm'>Gtm</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;outputs.config.Gtm&gt;(&#34;gtm&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="gtmSection" data-link-title="gtmSection">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/config/vars.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/config/vars.ts#L22">
         let <strong>gtmSection</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> gtmSection: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;gtmSection&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="papiSection" data-link-title="papiSection">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/config/vars.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/config/vars.ts#L23">
         let <strong>papiSection</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> papiSection: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;papiSection&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="property" data-link-title="property">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/config/vars.ts#L24">
         let <strong>property</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> property: <a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#Property'>Property</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;outputs.config.Property&gt;(&#34;property&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="propertySection" data-link-title="propertySection">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/config/vars.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/config/vars.ts#L25">
         let <strong>propertySection</strong>
     </a>
 </h3>

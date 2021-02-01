@@ -30,7 +30,7 @@ Explore the resources and functions of the edgedns module in the Akamai package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).</dd>
 	<dt>Version</dt>
-	<dd>1.0.0</dd>
+	<dd>1.1.0</dd>
 </dl>
 
 

@@ -3,7 +3,7 @@ title: "Module edgedns"
 title_tag: "Module edgedns | Package @pulumi/akamai | Node.js SDK"
 linktitle: "edgedns"
 meta_desc: "Explore members of the edgedns module in the @pulumi/akamai package."
-git_sha: "d905d77c417a09f1243fecb34ad59ca0aa7657e1"
+git_sha: "252a5b7ed507b5da220e685e0df70bd30bd9b156"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="DnsRecord" data-link-title="DnsRecord">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L10">
         Resource <strong>DnsRecord</strong>
     </a>
 </h3>
@@ -53,7 +53,7 @@ akamai.edgedns.DnsRecord has been deprecated in favor of akamai.DnsRecord
 </div>
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>DnsRecord</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L95"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -68,7 +68,7 @@ akamai.edgedns.DnsRecord has been deprecated in favor of akamai.DnsRecord
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> DnsRecord(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DnsRecordArgs'>DnsRecordArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="DnsRecord-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -79,14 +79,14 @@ Get an existing DnsRecord resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DnsRecord-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L10">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L10">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DnsRecord-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -97,82 +97,82 @@ Returns true if the given object is an instance of DnsRecord.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DnsRecord-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L39">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L39">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>active: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L40">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L40">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>algorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-answerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L41">property <b>answerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L41">property <b>answerType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>answerType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L42">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L42">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-digest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L43">property <b>digest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L43">property <b>digest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>digest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-digestType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L44">property <b>digestType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L44">property <b>digestType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>digestType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-dnsName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L45">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L45">property <b>dnsName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-emailAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L46">property <b>emailAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L46">property <b>emailAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>emailAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-expiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L47">property <b>expiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L47">property <b>expiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expiration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-expiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L48">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L48">property <b>expiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expiry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L49">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L49">property <b>fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-fingerprintType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L50">property <b>fingerprintType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L50">property <b>fingerprintType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fingerprintType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-flags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L51">property <b>flags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L51">property <b>flags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>flags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-flagsnaptr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L52">property <b>flagsnaptr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L52">property <b>flagsnaptr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>flagsnaptr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-hardware">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L53">property <b>hardware</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L53">property <b>hardware</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hardware: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L10">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L10">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -181,202 +181,202 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DnsRecord-inception">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L54">property <b>inception</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L54">property <b>inception</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inception: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-iterations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L55">property <b>iterations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L55">property <b>iterations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iterations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L56">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L56">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-keytag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L57">property <b>keytag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L57">property <b>keytag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keytag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L58">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L58">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-mailbox">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L59">property <b>mailbox</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L59">property <b>mailbox</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mailbox: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-matchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L60">property <b>matchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L60">property <b>matchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>matchType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-nameServer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L62">property <b>nameServer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L62">property <b>nameServer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nameServer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-nextHashedOwnerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L63">property <b>nextHashedOwnerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L63">property <b>nextHashedOwnerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nextHashedOwnerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-nxdomainTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L64">property <b>nxdomainTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L64">property <b>nxdomainTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nxdomainTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-order">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L65">property <b>order</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L65">property <b>order</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-originalTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L66">property <b>originalTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L66">property <b>originalTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>originalTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L67">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L67">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-preference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L68">property <b>preference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L68">property <b>preference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L69">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L69">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-priorityIncrement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L70">property <b>priorityIncrement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L70">property <b>priorityIncrement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priorityIncrement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L71">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L71">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-recordSha">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L72">property <b>recordSha</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L72">property <b>recordSha</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recordSha: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-recordtype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L73">property <b>recordtype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L73">property <b>recordtype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recordtype: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-refresh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L74">property <b>refresh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L74">property <b>refresh</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>refresh: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-regexp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L75">property <b>regexp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L75">property <b>regexp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>regexp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-replacement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L76">property <b>replacement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L76">property <b>replacement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replacement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-retry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L77">property <b>retry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L77">property <b>retry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-salt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L78">property <b>salt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L78">property <b>salt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>salt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-selector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L79">property <b>selector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L79">property <b>selector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>selector: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-serial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L80">property <b>serial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L80">property <b>serial</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serial: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L81">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L81">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-signature">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L82">property <b>signature</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L82">property <b>signature</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signature: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-signer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L83">property <b>signer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L83">property <b>signer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-software">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L84">property <b>software</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L84">property <b>software</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>software: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-subtype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L85">property <b>subtype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L85">property <b>subtype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subtype: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-targets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L86">property <b>targets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L86">property <b>targets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L87">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L87">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-txt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L88">property <b>txt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L88">property <b>txt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>txt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-typeBitmaps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L89">property <b>typeBitmaps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L89">property <b>typeBitmaps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>typeBitmaps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-typeCovered">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L90">property <b>typeCovered</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L90">property <b>typeCovered</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>typeCovered: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-typeMnemonic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L91">property <b>typeMnemonic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L91">property <b>typeMnemonic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>typeMnemonic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-typeValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L92">property <b>typeValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L92">property <b>typeValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>typeValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L10">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L10">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -385,22 +385,22 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="DnsRecord-usage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L93">property <b>usage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L93">property <b>usage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L94">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L94">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecord-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L95">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L95">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DnsZone" data-link-title="DnsZone">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L11">
         Resource <strong>DnsZone</strong>
     </a>
 </h3>
@@ -411,7 +411,7 @@ akamai.edgedns.DnsZone has been deprecated in favor of akamai.DnsZone
 </div>
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>DnsZone</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="DnsZone-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L53"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L53"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -426,7 +426,7 @@ akamai.edgedns.DnsZone has been deprecated in favor of akamai.DnsZone
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> DnsZone(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DnsZoneArgs'>DnsZoneArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="DnsZone-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -437,14 +437,14 @@ Get an existing DnsZone resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DnsZone-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DnsZone-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -455,37 +455,37 @@ Returns true if the given object is an instance of DnsZone.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DnsZone-activationState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L40">property <b>activationState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L40">property <b>activationState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>activationState: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZone-aliasCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L41">property <b>aliasCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L41">property <b>aliasCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aliasCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZone-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L42">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L42">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZone-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L43">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L43">property <b>contract</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contract: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZone-endCustomerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L44">property <b>endCustomerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L44">property <b>endCustomerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endCustomerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZone-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L45">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L45">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZone-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -494,37 +494,37 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DnsZone-masters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L46">property <b>masters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L46">property <b>masters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZone-signAndServe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L47">property <b>signAndServe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L47">property <b>signAndServe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signAndServe: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZone-signAndServeAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L48">property <b>signAndServeAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L48">property <b>signAndServeAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signAndServeAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZone-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L49">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L49">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>target: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZone-tsigKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L50">property <b>tsigKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L50">property <b>tsigKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tsigKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#DnsZoneTsigKey'>DnsZoneTsigKey</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZone-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L51">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L51">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZone-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -533,19 +533,19 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="DnsZone-versionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L52">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L52">property <b>versionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZone-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L53">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L53">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAuthoritiesSet" data-link-title="getAuthoritiesSet">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getAuthoritiesSet.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getAuthoritiesSet.ts#L9">
         Function <strong>getAuthoritiesSet</strong>
     </a>
 </h3>
@@ -558,7 +558,7 @@ akamai.edgedns.getAuthoritiesSet has been deprecated in favor of akamai.getAutho
 <pre class="highlight"><code><span class='kd'></span>getAuthoritiesSet(args: <a href='#GetAuthoritiesSetArgs'>GetAuthoritiesSetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetAuthoritiesSetResult'>GetAuthoritiesSetResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getDnsRecordSet" data-link-title="getDnsRecordSet">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getDnsRecordSet.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getDnsRecordSet.ts#L9">
         Function <strong>getDnsRecordSet</strong>
     </a>
 </h3>
@@ -573,7 +573,7 @@ akamai.edgedns.getDnsRecordSet has been deprecated in favor of akamai.getDnsReco
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DnsRecordArgs" data-link-title="DnsRecordArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L315">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L315">
         interface <strong>DnsRecordArgs</strong>
     </a>
 </h3>
@@ -583,272 +583,272 @@ akamai.edgedns.getDnsRecordSet has been deprecated in favor of akamai.getDnsReco
 The set of arguments for constructing a DnsRecord resource.
 
 <h4 class="pdoc-member-header" id="DnsRecordArgs-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L316">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L316">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L317">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L317">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L318">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L318">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-digest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L319">property <b>digest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L319">property <b>digest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digest?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-digestType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L320">property <b>digestType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L320">property <b>digestType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digestType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-emailAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L321">property <b>emailAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L321">property <b>emailAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-expiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L322">property <b>expiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L322">property <b>expiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-expiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L323">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L323">property <b>expiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L324">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L324">property <b>fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-fingerprintType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L325">property <b>fingerprintType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L325">property <b>fingerprintType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fingerprintType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-flags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L326">property <b>flags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L326">property <b>flags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-flagsnaptr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L327">property <b>flagsnaptr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L327">property <b>flagsnaptr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flagsnaptr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-hardware">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L328">property <b>hardware</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L328">property <b>hardware</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hardware?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-inception">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L329">property <b>inception</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L329">property <b>inception</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inception?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-iterations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L330">property <b>iterations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L330">property <b>iterations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iterations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L331">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L331">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-keytag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L332">property <b>keytag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L332">property <b>keytag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keytag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L333">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L333">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-mailbox">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L334">property <b>mailbox</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L334">property <b>mailbox</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mailbox?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-matchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L335">property <b>matchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L335">property <b>matchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>matchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L336">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L336">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-nameServer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L337">property <b>nameServer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L337">property <b>nameServer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameServer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-nextHashedOwnerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L338">property <b>nextHashedOwnerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L338">property <b>nextHashedOwnerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nextHashedOwnerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-nxdomainTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L339">property <b>nxdomainTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L339">property <b>nxdomainTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nxdomainTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-order">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L340">property <b>order</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L340">property <b>order</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>order?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-originalTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L341">property <b>originalTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L341">property <b>originalTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>originalTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L342">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L342">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-preference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L343">property <b>preference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L343">property <b>preference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L344">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L344">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-priorityIncrement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L345">property <b>priorityIncrement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L345">property <b>priorityIncrement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priorityIncrement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L346">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L346">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-recordtype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L347">property <b>recordtype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L347">property <b>recordtype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordtype: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-refresh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L348">property <b>refresh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L348">property <b>refresh</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>refresh?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-regexp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L349">property <b>regexp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L349">property <b>regexp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regexp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-replacement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L350">property <b>replacement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L350">property <b>replacement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replacement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-retry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L351">property <b>retry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L351">property <b>retry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-salt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L352">property <b>salt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L352">property <b>salt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>salt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-selector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L353">property <b>selector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L353">property <b>selector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L354">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L354">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-signature">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L355">property <b>signature</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L355">property <b>signature</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signature?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-signer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L356">property <b>signer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L356">property <b>signer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-software">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L357">property <b>software</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L357">property <b>software</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>software?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-subtype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L358">property <b>subtype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L358">property <b>subtype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subtype?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-targets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L359">property <b>targets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L359">property <b>targets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L360">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L360">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-txt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L361">property <b>txt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L361">property <b>txt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>txt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-typeBitmaps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L362">property <b>typeBitmaps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L362">property <b>typeBitmaps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>typeBitmaps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-typeCovered">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L363">property <b>typeCovered</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L363">property <b>typeCovered</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>typeCovered?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-typeMnemonic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L364">property <b>typeMnemonic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L364">property <b>typeMnemonic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>typeMnemonic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-typeValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L365">property <b>typeValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L365">property <b>typeValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>typeValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-usage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L366">property <b>usage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L366">property <b>usage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L367">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L367">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L368">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L368">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DnsRecordState" data-link-title="DnsRecordState">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L252">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L252">
         interface <strong>DnsRecordState</strong>
     </a>
 </h3>
@@ -858,292 +858,292 @@ The set of arguments for constructing a DnsRecord resource.
 Input properties used for looking up and filtering DnsRecord resources.
 
 <h4 class="pdoc-member-header" id="DnsRecordState-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L253">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L253">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L254">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L254">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-answerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L255">property <b>answerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L255">property <b>answerType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>answerType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L256">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L256">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-digest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L257">property <b>digest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L257">property <b>digest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digest?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-digestType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L258">property <b>digestType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L258">property <b>digestType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digestType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-dnsName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L259">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L259">property <b>dnsName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-emailAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L260">property <b>emailAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L260">property <b>emailAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-expiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L261">property <b>expiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L261">property <b>expiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-expiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L262">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L262">property <b>expiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L263">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L263">property <b>fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-fingerprintType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L264">property <b>fingerprintType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L264">property <b>fingerprintType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fingerprintType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-flags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L265">property <b>flags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L265">property <b>flags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-flagsnaptr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L266">property <b>flagsnaptr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L266">property <b>flagsnaptr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flagsnaptr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-hardware">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L267">property <b>hardware</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L267">property <b>hardware</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hardware?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-inception">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L268">property <b>inception</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L268">property <b>inception</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inception?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-iterations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L269">property <b>iterations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L269">property <b>iterations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iterations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L270">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L270">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-keytag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L271">property <b>keytag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L271">property <b>keytag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keytag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L272">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L272">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-mailbox">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L273">property <b>mailbox</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L273">property <b>mailbox</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mailbox?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-matchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L274">property <b>matchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L274">property <b>matchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>matchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L275">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L275">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-nameServer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L276">property <b>nameServer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L276">property <b>nameServer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameServer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-nextHashedOwnerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L277">property <b>nextHashedOwnerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L277">property <b>nextHashedOwnerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nextHashedOwnerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-nxdomainTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L278">property <b>nxdomainTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L278">property <b>nxdomainTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nxdomainTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-order">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L279">property <b>order</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L279">property <b>order</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>order?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-originalTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L280">property <b>originalTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L280">property <b>originalTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>originalTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L281">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L281">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-preference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L282">property <b>preference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L282">property <b>preference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L283">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L283">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-priorityIncrement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L284">property <b>priorityIncrement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L284">property <b>priorityIncrement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priorityIncrement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L285">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L285">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-recordSha">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L286">property <b>recordSha</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L286">property <b>recordSha</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordSha?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-recordtype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L287">property <b>recordtype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L287">property <b>recordtype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordtype?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-refresh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L288">property <b>refresh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L288">property <b>refresh</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>refresh?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-regexp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L289">property <b>regexp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L289">property <b>regexp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regexp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-replacement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L290">property <b>replacement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L290">property <b>replacement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replacement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-retry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L291">property <b>retry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L291">property <b>retry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-salt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L292">property <b>salt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L292">property <b>salt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>salt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-selector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L293">property <b>selector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L293">property <b>selector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-serial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L294">property <b>serial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L294">property <b>serial</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serial?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L295">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L295">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-signature">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L296">property <b>signature</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L296">property <b>signature</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signature?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-signer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L297">property <b>signer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L297">property <b>signer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-software">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L298">property <b>software</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L298">property <b>software</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>software?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-subtype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L299">property <b>subtype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L299">property <b>subtype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subtype?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-targets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L300">property <b>targets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L300">property <b>targets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L301">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L301">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-txt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L302">property <b>txt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L302">property <b>txt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>txt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-typeBitmaps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L303">property <b>typeBitmaps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L303">property <b>typeBitmaps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>typeBitmaps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-typeCovered">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L304">property <b>typeCovered</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L304">property <b>typeCovered</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>typeCovered?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-typeMnemonic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L305">property <b>typeMnemonic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L305">property <b>typeMnemonic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>typeMnemonic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-typeValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L306">property <b>typeValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L306">property <b>typeValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>typeValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-usage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L307">property <b>usage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L307">property <b>usage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L308">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L308">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsRecordState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsRecord.ts#L309">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsRecord.ts#L309">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DnsZoneArgs" data-link-title="DnsZoneArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L147">
         interface <strong>DnsZoneArgs</strong>
     </a>
 </h3>
@@ -1153,62 +1153,62 @@ Input properties used for looking up and filtering DnsRecord resources.
 The set of arguments for constructing a DnsZone resource.
 
 <h4 class="pdoc-member-header" id="DnsZoneArgs-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L148">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L148">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneArgs-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L149">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L149">property <b>contract</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contract: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneArgs-endCustomerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L150">property <b>endCustomerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L150">property <b>endCustomerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endCustomerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneArgs-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L151">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L151">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneArgs-masters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L152">property <b>masters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L152">property <b>masters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneArgs-signAndServe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L153">property <b>signAndServe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L153">property <b>signAndServe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signAndServe?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneArgs-signAndServeAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L154">property <b>signAndServeAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L154">property <b>signAndServeAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signAndServeAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneArgs-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L155">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L155">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneArgs-tsigKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L156">property <b>tsigKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L156">property <b>tsigKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tsigKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#DnsZoneTsigKey'>DnsZoneTsigKey</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L157">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L157">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L158">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L158">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DnsZoneState" data-link-title="DnsZoneState">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L127">
         interface <strong>DnsZoneState</strong>
     </a>
 </h3>
@@ -1218,77 +1218,77 @@ The set of arguments for constructing a DnsZone resource.
 Input properties used for looking up and filtering DnsZone resources.
 
 <h4 class="pdoc-member-header" id="DnsZoneState-activationState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L128">property <b>activationState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L128">property <b>activationState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activationState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneState-aliasCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L129">property <b>aliasCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L129">property <b>aliasCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneState-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L130">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L130">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneState-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L131">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L131">property <b>contract</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contract?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneState-endCustomerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L132">property <b>endCustomerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L132">property <b>endCustomerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endCustomerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneState-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L133">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L133">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneState-masters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L134">property <b>masters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L134">property <b>masters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneState-signAndServe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L135">property <b>signAndServe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L135">property <b>signAndServe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signAndServe?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneState-signAndServeAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L136">property <b>signAndServeAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L136">property <b>signAndServeAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signAndServeAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneState-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L137">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L137">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneState-tsigKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L138">property <b>tsigKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L138">property <b>tsigKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tsigKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#DnsZoneTsigKey'>DnsZoneTsigKey</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L139">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L139">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneState-versionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L140">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L140">property <b>versionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/dnsZone.ts#L141">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/dnsZone.ts#L141">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GetAuthoritiesSetArgs" data-link-title="GetAuthoritiesSetArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getAuthoritiesSet.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getAuthoritiesSet.ts#L26">
         interface <strong>GetAuthoritiesSetArgs</strong>
     </a>
 </h3>
@@ -1298,12 +1298,12 @@ Input properties used for looking up and filtering DnsZone resources.
 A collection of arguments for invoking getAuthoritiesSet.
 
 <h4 class="pdoc-member-header" id="GetAuthoritiesSetArgs-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getAuthoritiesSet.ts#L27">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getAuthoritiesSet.ts#L27">property <b>contract</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contract: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetAuthoritiesSetResult" data-link-title="GetAuthoritiesSetResult">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getAuthoritiesSet.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getAuthoritiesSet.ts#L33">
         interface <strong>GetAuthoritiesSetResult</strong>
     </a>
 </h3>
@@ -1313,17 +1313,17 @@ A collection of arguments for invoking getAuthoritiesSet.
 A collection of values returned by getAuthoritiesSet.
 
 <h4 class="pdoc-member-header" id="GetAuthoritiesSetResult-authorities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getAuthoritiesSet.ts#L34">property <b>authorities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getAuthoritiesSet.ts#L34">property <b>authorities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorities: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAuthoritiesSetResult-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getAuthoritiesSet.ts#L35">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getAuthoritiesSet.ts#L35">property <b>contract</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contract: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAuthoritiesSetResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getAuthoritiesSet.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getAuthoritiesSet.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1331,7 +1331,7 @@ A collection of values returned by getAuthoritiesSet.
 The provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-module-header" id="GetDnsRecordSetArgs" data-link-title="GetDnsRecordSetArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getDnsRecordSet.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getDnsRecordSet.ts#L28">
         interface <strong>GetDnsRecordSetArgs</strong>
     </a>
 </h3>
@@ -1341,22 +1341,22 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getDnsRecordSet.
 
 <h4 class="pdoc-member-header" id="GetDnsRecordSetArgs-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getDnsRecordSet.ts#L29">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getDnsRecordSet.ts#L29">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDnsRecordSetArgs-recordType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getDnsRecordSet.ts#L30">property <b>recordType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getDnsRecordSet.ts#L30">property <b>recordType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDnsRecordSetArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getDnsRecordSet.ts#L31">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getDnsRecordSet.ts#L31">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDnsRecordSetResult" data-link-title="GetDnsRecordSetResult">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getDnsRecordSet.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getDnsRecordSet.ts#L37">
         interface <strong>GetDnsRecordSetResult</strong>
     </a>
 </h3>
@@ -1366,12 +1366,12 @@ A collection of arguments for invoking getDnsRecordSet.
 A collection of values returned by getDnsRecordSet.
 
 <h4 class="pdoc-member-header" id="GetDnsRecordSetResult-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getDnsRecordSet.ts#L38">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getDnsRecordSet.ts#L38">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDnsRecordSetResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getDnsRecordSet.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getDnsRecordSet.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1379,17 +1379,17 @@ A collection of values returned by getDnsRecordSet.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDnsRecordSetResult-rdatas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getDnsRecordSet.ts#L43">property <b>rdatas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getDnsRecordSet.ts#L43">property <b>rdatas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rdatas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDnsRecordSetResult-recordType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getDnsRecordSet.ts#L44">property <b>recordType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getDnsRecordSet.ts#L44">property <b>recordType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDnsRecordSetResult-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/edgedns/getDnsRecordSet.ts#L45">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/edgedns/getDnsRecordSet.ts#L45">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
