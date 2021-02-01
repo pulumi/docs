@@ -80,6 +80,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
