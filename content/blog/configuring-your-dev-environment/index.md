@@ -2,7 +2,7 @@
 title: "Building a Development Environment for Cloud Engineering"
 date: 2021-02-04
 meta_desc: "A complete guide to preparing your development environment for building infrastructure with code."
-meta_image: meta.png
+meta_image: anti-patterns.png
 authors:
     - sophia-parafina
 tags:
@@ -30,7 +30,7 @@ Before proceeding, you need to answer three questions:
 
 - Which operating system to use for building cloud resources: macOS, Windows, or Linux?
 - Which cloud provider are you using? This guide covers AWS, Azure, and Google Cloud.
-- Which programming language will you use?
+- Which programming language will you use. Pulumi supports Node.js (JavaScript and Typescript), Python 3.6 or higher, Golang, and .NET (C#, F#, and VB)?
 
 Once you've made these choices, you can follow this guide in a choose-your-own-adventure style.
 
