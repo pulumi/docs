@@ -358,7 +358,7 @@ Update done!
 
 Add the gcloud SDK to $PATH to your `~/.bash_profile` or `~/.profile`.
 
-```
+```bash
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
 ```
