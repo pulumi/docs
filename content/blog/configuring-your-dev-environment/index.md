@@ -395,7 +395,7 @@ Pulumi supports Node.js (JavaScript and Typescript), Python 3, Golang, and .NET 
 
 {{< chooser os "macos,windows,linux" >}}
 {{% choosable os macos %}}
-Use brew to install Node for JavaScript and Typescript.
+Use brew to install Node.js for JavaScript and Typescript.
 
 ```bash
 $ brew install node
