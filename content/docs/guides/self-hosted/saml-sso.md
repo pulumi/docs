@@ -55,3 +55,8 @@ Once the key pair has been generated, set the value of the following environment
 For these values to take effect, you will need to restart the API Service.
 
 > Restart the service only during a planned maintenance window.
+
+## Enabling SAML SSO as an identity option
+
+Once you have completed the above steps, you may enable SAML SSO as a login option for your users.
+Set the `SAML_SSO_ENABLED` environment variable for the [console]({{< relref "console" >}}) container to `true` and restart the service.
