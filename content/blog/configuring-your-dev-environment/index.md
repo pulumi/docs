@@ -404,7 +404,7 @@ $ brew install node
 {{% /choosable %}}
 
 {{% choosable os windows %}}
-Use chocolatey to install Node for JavaScript and Typescript.
+Use chocolatey to install Node.js for JavaScript and Typescript.
 
 ```cmd
 > choco install nodejs
