@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/linode | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/linode package."
-git_sha: "30177bf78e7304a2ade44e03edd8894c9f2462f1"
+git_sha: "1df7e34c08bd50825cdee34e17fe5bf06a316503"
 block_external_search_index: true
 ---
 
@@ -33,7 +33,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiVersion" data-link-title="apiVersion">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/30177bf78e7304a2ade44e03edd8894c9f2462f1/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/1df7e34c08bd50825cdee34e17fe5bf06a316503/sdk/nodejs/config/vars.ts#L12">
         let <strong>apiVersion</strong>
     </a>
 </h3>
@@ -43,7 +43,7 @@ block_external_search_index: true
 An HTTP User-Agent Prefix to prepend in API requests.
 
 <h3 class="pdoc-module-header" id="maxRetryDelayMs" data-link-title="maxRetryDelayMs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/30177bf78e7304a2ade44e03edd8894c9f2462f1/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/1df7e34c08bd50825cdee34e17fe5bf06a316503/sdk/nodejs/config/vars.ts#L16">
         let <strong>maxRetryDelayMs</strong>
     </a>
 </h3>
@@ -53,7 +53,7 @@ An HTTP User-Agent Prefix to prepend in API requests.
 Maximum delay in milliseconds before retrying a request.
 
 <h3 class="pdoc-module-header" id="minRetryDelayMs" data-link-title="minRetryDelayMs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/30177bf78e7304a2ade44e03edd8894c9f2462f1/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/1df7e34c08bd50825cdee34e17fe5bf06a316503/sdk/nodejs/config/vars.ts#L20">
         let <strong>minRetryDelayMs</strong>
     </a>
 </h3>
@@ -63,7 +63,7 @@ Maximum delay in milliseconds before retrying a request.
 Minimum delay in milliseconds before retrying a request.
 
 <h3 class="pdoc-module-header" id="skipInstanceReadyPoll" data-link-title="skipInstanceReadyPoll">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/30177bf78e7304a2ade44e03edd8894c9f2462f1/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/1df7e34c08bd50825cdee34e17fe5bf06a316503/sdk/nodejs/config/vars.ts#L24">
         let <strong>skipInstanceReadyPoll</strong>
     </a>
 </h3>
@@ -73,7 +73,7 @@ Minimum delay in milliseconds before retrying a request.
 Skip waiting for a linode_instance resource to be running.
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/30177bf78e7304a2ade44e03edd8894c9f2462f1/sdk/nodejs/config/vars.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/1df7e34c08bd50825cdee34e17fe5bf06a316503/sdk/nodejs/config/vars.ts#L28">
         let <strong>token</strong>
     </a>
 </h3>
@@ -83,7 +83,7 @@ Skip waiting for a linode_instance resource to be running.
 The token that allows you access to your Linode account
 
 <h3 class="pdoc-module-header" id="uaPrefix" data-link-title="uaPrefix">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/30177bf78e7304a2ade44e03edd8894c9f2462f1/sdk/nodejs/config/vars.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/1df7e34c08bd50825cdee34e17fe5bf06a316503/sdk/nodejs/config/vars.ts#L32">
         let <strong>uaPrefix</strong>
     </a>
 </h3>
@@ -93,7 +93,7 @@ The token that allows you access to your Linode account
 An HTTP User-Agent Prefix to prepend in API requests.
 
 <h3 class="pdoc-module-header" id="url" data-link-title="url">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/30177bf78e7304a2ade44e03edd8894c9f2462f1/sdk/nodejs/config/vars.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/1df7e34c08bd50825cdee34e17fe5bf06a316503/sdk/nodejs/config/vars.ts#L36">
         let <strong>url</strong>
     </a>
 </h3>
