@@ -70,7 +70,7 @@ A Pulumi package for creating and managing github cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`github` Terraform Provider](https://github.com/terraform-providers/terraform-provider-github).</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.0.1</dd>
 </dl>
 
 
