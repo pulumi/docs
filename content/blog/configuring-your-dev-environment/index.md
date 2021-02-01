@@ -209,7 +209,7 @@ Pulumi uses the AWS SDK to authenticate requests. Your AWS access keys are never
 
 To configure the AWS CLI with your credentials, use `aws configure`:
 
-```bash
+```cmd
 > aws configure
 AWS Access Key ID [None]: <YOUR_ACCESS_KEY_ID>
 AWS Secret Access Key [None]: <YOUR_SECRET_ACCESS_KEY>
