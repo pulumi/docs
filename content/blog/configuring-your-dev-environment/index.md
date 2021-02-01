@@ -389,7 +389,7 @@ Pulumi uses the Google Cloud SDK to authenticate requests. Your AWS access keys 
 
 ## Choose a Programming Language
 
-Pulumi supports Node (JavaScript and Typescript), Python 3, Golang, and .NET (C# and F#).
+Pulumi supports Node.js (JavaScript and Typescript), Python 3, Golang, and .NET Core (C#, VB, and F#) languages.
 
 ### Node
 
