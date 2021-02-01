@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/rancher2 | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/rancher2 package."
-git_sha: "f4a30a5baa3f694ea66a6d877632d1c723cf7f56"
+git_sha: "d67d63a97f57289da14653793a643bec36ba8258"
 block_external_search_index: true
 ---
 
@@ -34,7 +34,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="accessKey" data-link-title="accessKey">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/f4a30a5baa3f694ea66a6d877632d1c723cf7f56/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/d67d63a97f57289da14653793a643bec36ba8258/sdk/nodejs/config/vars.ts#L12">
         let <strong>accessKey</strong>
     </a>
 </h3>
@@ -44,7 +44,7 @@ block_external_search_index: true
 API Key used to authenticate with the rancher server
 
 <h3 class="pdoc-module-header" id="apiUrl" data-link-title="apiUrl">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/f4a30a5baa3f694ea66a6d877632d1c723cf7f56/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/d67d63a97f57289da14653793a643bec36ba8258/sdk/nodejs/config/vars.ts#L16">
         let <strong>apiUrl</strong>
     </a>
 </h3>
@@ -54,7 +54,7 @@ API Key used to authenticate with the rancher server
 The URL to the rancher API
 
 <h3 class="pdoc-module-header" id="bootstrap" data-link-title="bootstrap">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/f4a30a5baa3f694ea66a6d877632d1c723cf7f56/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/d67d63a97f57289da14653793a643bec36ba8258/sdk/nodejs/config/vars.ts#L20">
         let <strong>bootstrap</strong>
     </a>
 </h3>
@@ -64,7 +64,7 @@ The URL to the rancher API
 Bootstrap rancher server
 
 <h3 class="pdoc-module-header" id="caCerts" data-link-title="caCerts">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/f4a30a5baa3f694ea66a6d877632d1c723cf7f56/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/d67d63a97f57289da14653793a643bec36ba8258/sdk/nodejs/config/vars.ts#L24">
         let <strong>caCerts</strong>
     </a>
 </h3>
@@ -74,7 +74,7 @@ Bootstrap rancher server
 CA certificates used to sign rancher server tls certificates. Mandatory if self signed tls and insecure option false
 
 <h3 class="pdoc-module-header" id="insecure" data-link-title="insecure">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/f4a30a5baa3f694ea66a6d877632d1c723cf7f56/sdk/nodejs/config/vars.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/d67d63a97f57289da14653793a643bec36ba8258/sdk/nodejs/config/vars.ts#L28">
         let <strong>insecure</strong>
     </a>
 </h3>
@@ -84,7 +84,7 @@ CA certificates used to sign rancher server tls certificates. Mandatory if self 
 Allow insecure connections to Rancher. Mandatory if self signed tls and not ca_certs provided
 
 <h3 class="pdoc-module-header" id="retries" data-link-title="retries">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/f4a30a5baa3f694ea66a6d877632d1c723cf7f56/sdk/nodejs/config/vars.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/d67d63a97f57289da14653793a643bec36ba8258/sdk/nodejs/config/vars.ts#L32">
         let <strong>retries</strong>
     </a>
 </h3>
@@ -94,7 +94,7 @@ Allow insecure connections to Rancher. Mandatory if self signed tls and not ca_c
 Rancher connection retries
 
 <h3 class="pdoc-module-header" id="secretKey" data-link-title="secretKey">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/f4a30a5baa3f694ea66a6d877632d1c723cf7f56/sdk/nodejs/config/vars.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/d67d63a97f57289da14653793a643bec36ba8258/sdk/nodejs/config/vars.ts#L36">
         let <strong>secretKey</strong>
     </a>
 </h3>
@@ -104,7 +104,7 @@ Rancher connection retries
 API secret used to authenticate with the rancher server
 
 <h3 class="pdoc-module-header" id="tokenKey" data-link-title="tokenKey">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/f4a30a5baa3f694ea66a6d877632d1c723cf7f56/sdk/nodejs/config/vars.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/d67d63a97f57289da14653793a643bec36ba8258/sdk/nodejs/config/vars.ts#L40">
         let <strong>tokenKey</strong>
     </a>
 </h3>
