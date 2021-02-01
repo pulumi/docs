@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab"
+	"github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
