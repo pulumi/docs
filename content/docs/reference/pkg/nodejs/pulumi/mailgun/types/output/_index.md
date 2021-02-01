@@ -3,7 +3,7 @@ title: "Module types/output"
 title_tag: "Module types/output | Package @pulumi/mailgun | Node.js SDK"
 linktitle: "output"
 meta_desc: "Explore members of the output module in the @pulumi/mailgun package."
-git_sha: "81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556"
+git_sha: "26648bba67d425ceb3ea06ac608e0f043276ac9b"
 block_external_search_index: true
 ---
 
@@ -28,14 +28,14 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="DomainReceivingRecord" data-link-title="DomainReceivingRecord">
-    <a href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/types/output.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/types/output.ts#L7">
         interface <strong>DomainReceivingRecord</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DomainReceivingRecord</span></code></pre>
 <h4 class="pdoc-member-header" id="DomainReceivingRecord-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/types/output.ts#L11">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/types/output.ts#L11">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -43,7 +43,7 @@ block_external_search_index: true
 The priority of the record.
 
 <h4 class="pdoc-member-header" id="DomainReceivingRecord-recordType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/types/output.ts#L15">property <b>recordType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/types/output.ts#L15">property <b>recordType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -51,7 +51,7 @@ The priority of the record.
 The record type.
 
 <h4 class="pdoc-member-header" id="DomainReceivingRecord-valid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/types/output.ts#L19">property <b>valid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/types/output.ts#L19">property <b>valid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -59,7 +59,7 @@ The record type.
 `"valid"` if the record is valid.
 
 <h4 class="pdoc-member-header" id="DomainReceivingRecord-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/types/output.ts#L23">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/types/output.ts#L23">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -67,14 +67,14 @@ The record type.
 The value of the record.
 
 <h3 class="pdoc-module-header" id="DomainSendingRecord" data-link-title="DomainSendingRecord">
-    <a href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/types/output.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/types/output.ts#L26">
         interface <strong>DomainSendingRecord</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DomainSendingRecord</span></code></pre>
 <h4 class="pdoc-member-header" id="DomainSendingRecord-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/types/output.ts#L30">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/types/output.ts#L30">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -82,7 +82,7 @@ The value of the record.
 The domain to add to Mailgun
 
 <h4 class="pdoc-member-header" id="DomainSendingRecord-recordType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/types/output.ts#L34">property <b>recordType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/types/output.ts#L34">property <b>recordType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -90,7 +90,7 @@ The domain to add to Mailgun
 The record type.
 
 <h4 class="pdoc-member-header" id="DomainSendingRecord-valid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/types/output.ts#L38">property <b>valid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/types/output.ts#L38">property <b>valid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -98,7 +98,7 @@ The record type.
 `"valid"` if the record is valid.
 
 <h4 class="pdoc-member-header" id="DomainSendingRecord-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/types/output.ts#L42">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/types/output.ts#L42">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

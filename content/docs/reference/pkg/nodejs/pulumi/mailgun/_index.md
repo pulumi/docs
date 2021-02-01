@@ -3,7 +3,7 @@ title: "Package @pulumi/mailgun"
 title_tag: "Package @pulumi/mailgun | Node.js SDK"
 linktitle: "@pulumi/mailgun"
 meta_desc: "Explore members of the @pulumi/mailgun package."
-git_sha: "81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556"
+git_sha: "26648bba67d425ceb3ea06ac608e0f043276ac9b"
 block_external_search_index: true
 ---
 
@@ -68,7 +68,7 @@ import * as mailgun from "@pulumi/mailgun";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Domain" data-link-title="Domain">
-    <a href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L38">
         Resource <strong>Domain</strong>
     </a>
 </h3>
@@ -105,7 +105,7 @@ hcl
 ```
 
 <h4 class="pdoc-member-header" id="Domain-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L100"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L100"> <b>constructor</b></a>
 </h4>
 
 
@@ -119,7 +119,7 @@ Create a Domain resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Domain-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -130,14 +130,14 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Domain-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Domain-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -148,7 +148,7 @@ Returns true if the given object is an instance of Domain.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Domain-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -157,7 +157,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Domain-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L69">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -165,7 +165,7 @@ deployments and may be missing (undefined) during planning phases.
 The domain to add to Mailgun
 
 <h4 class="pdoc-member-header" id="Domain-receivingRecords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L73">property <b>receivingRecords</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L73">property <b>receivingRecords</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>receivingRecords: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/mailgun/types/output/#DomainReceivingRecord'>DomainReceivingRecord</a>[]&gt;;</code></pre>
@@ -173,7 +173,7 @@ The domain to add to Mailgun
 A list of DNS records for receiving validation.
 
 <h4 class="pdoc-member-header" id="Domain-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L77">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L77">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -181,7 +181,7 @@ A list of DNS records for receiving validation.
 The region where domain will be created. Default value is `us`.
 
 <h4 class="pdoc-member-header" id="Domain-sendingRecords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L81">property <b>sendingRecords</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L81">property <b>sendingRecords</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sendingRecords: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/mailgun/types/output/#DomainSendingRecord'>DomainSendingRecord</a>[]&gt;;</code></pre>
@@ -189,7 +189,7 @@ The region where domain will be created. Default value is `us`.
 A list of DNS records for sending validation.
 
 <h4 class="pdoc-member-header" id="Domain-smtpLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L85">property <b>smtpLogin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L85">property <b>smtpLogin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>smtpLogin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -197,7 +197,7 @@ A list of DNS records for sending validation.
 The login email for the SMTP server.
 
 <h4 class="pdoc-member-header" id="Domain-smtpPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L89">property <b>smtpPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L89">property <b>smtpPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>smtpPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -205,7 +205,7 @@ The login email for the SMTP server.
 Password for SMTP authentication
 
 <h4 class="pdoc-member-header" id="Domain-spamAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L95">property <b>spamAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L95">property <b>spamAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spamAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -215,7 +215,7 @@ filtering will occur for inbound messages. Tag, messages
 will be tagged with a spam header.
 
 <h4 class="pdoc-member-header" id="Domain-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -224,7 +224,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Domain-wildcard">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L100">property <b>wildcard</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L100">property <b>wildcard</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>wildcard: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -233,7 +233,7 @@ Boolean that determines whether
 the domain will accept email for sub-domains.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -246,7 +246,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -260,14 +260,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -278,14 +278,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -294,7 +294,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -303,7 +303,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Route" data-link-title="Route">
-    <a href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L38">
         Resource <strong>Route</strong>
     </a>
 </h3>
@@ -341,7 +341,7 @@ hcl
 ```
 
 <h4 class="pdoc-member-header" id="Route-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -355,7 +355,7 @@ Create a Route resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Route-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -366,14 +366,14 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Route-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Route-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -384,17 +384,17 @@ Returns true if the given object is an instance of Route.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Route-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L66">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L66">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Route-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L67">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L67">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Route-expression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L71">property <b>expression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L71">property <b>expression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -402,7 +402,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A filter expression like `match_recipient('.*@gmail.com')`
 
 <h4 class="pdoc-member-header" id="Route-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -411,7 +411,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Route-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L75">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L75">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -419,7 +419,7 @@ deployments and may be missing (undefined) during planning phases.
 Smaller number indicates higher priority. Higher priority routes are handled first.
 
 <h4 class="pdoc-member-header" id="Route-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L79">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L79">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -427,7 +427,7 @@ Smaller number indicates higher priority. Higher priority routes are handled fir
 The region where domain will be created. Default value is `us`.
 
 <h4 class="pdoc-member-header" id="Route-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -439,7 +439,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DomainArgs" data-link-title="DomainArgs">
-    <a href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L188">
+    <a href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L188">
         interface <strong>DomainArgs</strong>
     </a>
 </h3>
@@ -449,7 +449,7 @@ deployments.
 The set of arguments for constructing a Domain resource.
 
 <h4 class="pdoc-member-header" id="DomainArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L192">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L192">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -457,7 +457,7 @@ The set of arguments for constructing a Domain resource.
 The domain to add to Mailgun
 
 <h4 class="pdoc-member-header" id="DomainArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L196">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L196">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -465,7 +465,7 @@ The domain to add to Mailgun
 The region where domain will be created. Default value is `us`.
 
 <h4 class="pdoc-member-header" id="DomainArgs-smtpPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L200">property <b>smtpPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L200">property <b>smtpPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>smtpPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -473,7 +473,7 @@ The region where domain will be created. Default value is `us`.
 Password for SMTP authentication
 
 <h4 class="pdoc-member-header" id="DomainArgs-spamAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L206">property <b>spamAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L206">property <b>spamAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spamAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -483,7 +483,7 @@ filtering will occur for inbound messages. Tag, messages
 will be tagged with a spam header.
 
 <h4 class="pdoc-member-header" id="DomainArgs-wildcard">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L211">property <b>wildcard</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L211">property <b>wildcard</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wildcard?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -492,7 +492,7 @@ Boolean that determines whether
 the domain will accept email for sub-domains.
 
 <h3 class="pdoc-module-header" id="DomainState" data-link-title="DomainState">
-    <a href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L147">
         interface <strong>DomainState</strong>
     </a>
 </h3>
@@ -502,7 +502,7 @@ the domain will accept email for sub-domains.
 Input properties used for looking up and filtering Domain resources.
 
 <h4 class="pdoc-member-header" id="DomainState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L151">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L151">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -510,7 +510,7 @@ Input properties used for looking up and filtering Domain resources.
 The domain to add to Mailgun
 
 <h4 class="pdoc-member-header" id="DomainState-receivingRecords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L155">property <b>receivingRecords</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L155">property <b>receivingRecords</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>receivingRecords?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/mailgun/types/input/#DomainReceivingRecord'>DomainReceivingRecord</a>&gt;[]&gt;;</code></pre>
@@ -518,7 +518,7 @@ The domain to add to Mailgun
 A list of DNS records for receiving validation.
 
 <h4 class="pdoc-member-header" id="DomainState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L159">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L159">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -526,7 +526,7 @@ A list of DNS records for receiving validation.
 The region where domain will be created. Default value is `us`.
 
 <h4 class="pdoc-member-header" id="DomainState-sendingRecords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L163">property <b>sendingRecords</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L163">property <b>sendingRecords</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sendingRecords?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/mailgun/types/input/#DomainSendingRecord'>DomainSendingRecord</a>&gt;[]&gt;;</code></pre>
@@ -534,7 +534,7 @@ The region where domain will be created. Default value is `us`.
 A list of DNS records for sending validation.
 
 <h4 class="pdoc-member-header" id="DomainState-smtpLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L167">property <b>smtpLogin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L167">property <b>smtpLogin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>smtpLogin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -542,7 +542,7 @@ A list of DNS records for sending validation.
 The login email for the SMTP server.
 
 <h4 class="pdoc-member-header" id="DomainState-smtpPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L171">property <b>smtpPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L171">property <b>smtpPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>smtpPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -550,7 +550,7 @@ The login email for the SMTP server.
 Password for SMTP authentication
 
 <h4 class="pdoc-member-header" id="DomainState-spamAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L177">property <b>spamAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L177">property <b>spamAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spamAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -560,7 +560,7 @@ filtering will occur for inbound messages. Tag, messages
 will be tagged with a spam header.
 
 <h4 class="pdoc-member-header" id="DomainState-wildcard">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/domain.ts#L182">property <b>wildcard</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/domain.ts#L182">property <b>wildcard</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wildcard?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -569,7 +569,7 @@ Boolean that determines whether
 the domain will accept email for sub-domains.
 
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -578,7 +578,7 @@ the domain will accept email for sub-domains.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -587,7 +587,7 @@ the domain will accept email for sub-domains.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -596,7 +596,7 @@ the domain will accept email for sub-domains.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -605,7 +605,7 @@ the domain will accept email for sub-domains.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/provider.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/provider.ts#L55">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -615,12 +615,12 @@ the domain will accept email for sub-domains.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/provider.ts#L56">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/provider.ts#L56">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RouteArgs" data-link-title="RouteArgs">
-    <a href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L149">
         interface <strong>RouteArgs</strong>
     </a>
 </h3>
@@ -630,17 +630,17 @@ The set of arguments for constructing a Provider resource.
 The set of arguments for constructing a Route resource.
 
 <h4 class="pdoc-member-header" id="RouteArgs-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L150">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L150">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L151">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L151">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteArgs-expression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L155">property <b>expression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L155">property <b>expression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -648,7 +648,7 @@ The set of arguments for constructing a Route resource.
 A filter expression like `match_recipient('.*@gmail.com')`
 
 <h4 class="pdoc-member-header" id="RouteArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L159">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L159">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -656,7 +656,7 @@ A filter expression like `match_recipient('.*@gmail.com')`
 Smaller number indicates higher priority. Higher priority routes are handled first.
 
 <h4 class="pdoc-member-header" id="RouteArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L163">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L163">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -664,7 +664,7 @@ Smaller number indicates higher priority. Higher priority routes are handled fir
 The region where domain will be created. Default value is `us`.
 
 <h3 class="pdoc-module-header" id="RouteState" data-link-title="RouteState">
-    <a href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L129">
         interface <strong>RouteState</strong>
     </a>
 </h3>
@@ -674,17 +674,17 @@ The region where domain will be created. Default value is `us`.
 Input properties used for looking up and filtering Route resources.
 
 <h4 class="pdoc-member-header" id="RouteState-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L130">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L130">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L131">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L131">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteState-expression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L135">property <b>expression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L135">property <b>expression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -692,7 +692,7 @@ Input properties used for looking up and filtering Route resources.
 A filter expression like `match_recipient('.*@gmail.com')`
 
 <h4 class="pdoc-member-header" id="RouteState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L139">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L139">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -700,7 +700,7 @@ A filter expression like `match_recipient('.*@gmail.com')`
 Smaller number indicates higher priority. Higher priority routes are handled first.
 
 <h4 class="pdoc-member-header" id="RouteState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/route.ts#L143">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/route.ts#L143">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

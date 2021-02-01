@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/mailgun | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/mailgun package."
-git_sha: "81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556"
+git_sha: "26648bba67d425ceb3ea06ac608e0f043276ac9b"
 block_external_search_index: true
 ---
 
@@ -27,7 +27,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiKey" data-link-title="apiKey">
-    <a href="https://github.com/pulumi/pulumi-mailgun/blob/81eb20c4aa2c93cc09bdf5ea1bc23886a5cc7556/sdk/nodejs/config/vars.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-mailgun/blob/26648bba67d425ceb3ea06ac608e0f043276ac9b/sdk/nodejs/config/vars.ts#L9">
         let <strong>apiKey</strong>
     </a>
 </h3>
