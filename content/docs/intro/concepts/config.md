@@ -462,7 +462,7 @@ Pulumi supports the following encryption providers:
 * `awskms`: [AWS Key Management Service (KMS)](https://aws.amazon.com/kms/)
 * `azurekeyvault`: [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/)
 * `gcpkms`: [Google Cloud Key Management Service (KMS)](https://cloud.google.com/kms/)
-* `hashivault`: [HashiCorp Vault Transit Secrets Engine](https://www.vaultproject.io/docs/secrets/transit/index.html)
+* `hashivault`: [HashiCorp Vault Transit Secrets Engine](https://www.vaultproject.io/docs/secrets/transit)
 
 Each provider has its own unique `<provider-settings>` and authentication mechanisms.
 
