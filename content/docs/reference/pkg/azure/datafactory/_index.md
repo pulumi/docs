@@ -26,12 +26,14 @@ Explore the resources and functions of the datafactory module in the Azure packa
     <li><a href="linkedserviceazurefilestorage" title="LinkedServiceAzureFileStorage"><span class="symbol resource"></span>LinkedServiceAzureFileStorage</a></li>
     <li><a href="linkedserviceazurefunction" title="LinkedServiceAzureFunction"><span class="symbol resource"></span>LinkedServiceAzureFunction</a></li>
     <li><a href="linkedserviceazuresqldatabase" title="LinkedServiceAzureSqlDatabase"><span class="symbol resource"></span>LinkedServiceAzureSqlDatabase</a></li>
+    <li><a href="linkedserviceazuretablestorage" title="LinkedServiceAzureTableStorage"><span class="symbol resource"></span>LinkedServiceAzureTableStorage</a></li>
     <li><a href="linkedservicecosmosdb" title="LinkedServiceCosmosDb"><span class="symbol resource"></span>LinkedServiceCosmosDb</a></li>
     <li><a href="linkedservicedatalakestoragegen2" title="LinkedServiceDataLakeStorageGen2"><span class="symbol resource"></span>LinkedServiceDataLakeStorageGen2</a></li>
     <li><a href="linkedservicekeyvault" title="LinkedServiceKeyVault"><span class="symbol resource"></span>LinkedServiceKeyVault</a></li>
     <li><a href="linkedservicemysql" title="LinkedServiceMysql"><span class="symbol resource"></span>LinkedServiceMysql</a></li>
     <li><a href="linkedservicepostgresql" title="LinkedServicePostgresql"><span class="symbol resource"></span>LinkedServicePostgresql</a></li>
     <li><a href="linkedservicesftp" title="LinkedServiceSftp"><span class="symbol resource"></span>LinkedServiceSftp</a></li>
+    <li><a href="linkedservicesnowflake" title="LinkedServiceSnowflake"><span class="symbol resource"></span>LinkedServiceSnowflake</a></li>
     <li><a href="linkedservicesqlserver" title="LinkedServiceSqlServer"><span class="symbol resource"></span>LinkedServiceSqlServer</a></li>
     <li><a href="linkedservicesynapse" title="LinkedServiceSynapse"><span class="symbol resource"></span>LinkedServiceSynapse</a></li>
     <li><a href="linkedserviceweb" title="LinkedServiceWeb"><span class="symbol resource"></span>LinkedServiceWeb</a></li>
@@ -53,7 +55,7 @@ Explore the resources and functions of the datafactory module in the Azure packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.44.0</dd>
+	<dd>3.45.0</dd>
 </dl>
 
 

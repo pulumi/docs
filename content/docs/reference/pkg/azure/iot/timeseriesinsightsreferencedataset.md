@@ -342,7 +342,7 @@ The TimeSeriesInsightsReferenceDataSet resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeseriesinsightsreferencedatasetkeyproperty">List&lt;Time<wbr>Series<wbr>Insights<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A `key_property` block as defined below.
+    <dd>{{% md %}}A `key_property` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -362,7 +362,7 @@ The TimeSeriesInsightsReferenceDataSet resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The comparison behavior that will be used to compare keys. Valid values include `Ordinal` and `OrdinalIgnoreCase`. Defaults to `Ordinal`.
+    <dd>{{% md %}}The comparison behavior that will be used to compare keys. Valid values include `Ordinal` and `OrdinalIgnoreCase`. Defaults to `Ordinal`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -408,7 +408,7 @@ The TimeSeriesInsightsReferenceDataSet resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeseriesinsightsreferencedatasetkeyproperty">[]Time<wbr>Series<wbr>Insights<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property</a></span>
     </dt>
-    <dd>{{% md %}}A `key_property` block as defined below.
+    <dd>{{% md %}}A `key_property` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -428,7 +428,7 @@ The TimeSeriesInsightsReferenceDataSet resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The comparison behavior that will be used to compare keys. Valid values include `Ordinal` and `OrdinalIgnoreCase`. Defaults to `Ordinal`.
+    <dd>{{% md %}}The comparison behavior that will be used to compare keys. Valid values include `Ordinal` and `OrdinalIgnoreCase`. Defaults to `Ordinal`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -474,7 +474,7 @@ The TimeSeriesInsightsReferenceDataSet resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeseriesinsightsreferencedatasetkeyproperty">Time<wbr>Series<wbr>Insights<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property[]</a></span>
     </dt>
-    <dd>{{% md %}}A `key_property` block as defined below.
+    <dd>{{% md %}}A `key_property` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -494,7 +494,7 @@ The TimeSeriesInsightsReferenceDataSet resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The comparison behavior that will be used to compare keys. Valid values include `Ordinal` and `OrdinalIgnoreCase`. Defaults to `Ordinal`.
+    <dd>{{% md %}}The comparison behavior that will be used to compare keys. Valid values include `Ordinal` and `OrdinalIgnoreCase`. Defaults to `Ordinal`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -540,7 +540,7 @@ The TimeSeriesInsightsReferenceDataSet resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeseriesinsightsreferencedatasetkeyproperty">Sequence[Time<wbr>Series<wbr>Insights<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A `key_property` block as defined below.
+    <dd>{{% md %}}A `key_property` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -560,7 +560,7 @@ The TimeSeriesInsightsReferenceDataSet resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The comparison behavior that will be used to compare keys. Valid values include `Ordinal` and `OrdinalIgnoreCase`. Defaults to `Ordinal`.
+    <dd>{{% md %}}The comparison behavior that will be used to compare keys. Valid values include `Ordinal` and `OrdinalIgnoreCase`. Defaults to `Ordinal`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -796,7 +796,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The comparison behavior that will be used to compare keys. Valid values include `Ordinal` and `OrdinalIgnoreCase`. Defaults to `Ordinal`.
+    <dd>{{% md %}}The comparison behavior that will be used to compare keys. Valid values include `Ordinal` and `OrdinalIgnoreCase`. Defaults to `Ordinal`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -806,7 +806,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeseriesinsightsreferencedatasetkeyproperty">List&lt;Time<wbr>Series<wbr>Insights<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A `key_property` block as defined below.
+    <dd>{{% md %}}A `key_property` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -862,7 +862,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The comparison behavior that will be used to compare keys. Valid values include `Ordinal` and `OrdinalIgnoreCase`. Defaults to `Ordinal`.
+    <dd>{{% md %}}The comparison behavior that will be used to compare keys. Valid values include `Ordinal` and `OrdinalIgnoreCase`. Defaults to `Ordinal`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -872,7 +872,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeseriesinsightsreferencedatasetkeyproperty">[]Time<wbr>Series<wbr>Insights<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property</a></span>
     </dt>
-    <dd>{{% md %}}A `key_property` block as defined below.
+    <dd>{{% md %}}A `key_property` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -928,7 +928,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The comparison behavior that will be used to compare keys. Valid values include `Ordinal` and `OrdinalIgnoreCase`. Defaults to `Ordinal`.
+    <dd>{{% md %}}The comparison behavior that will be used to compare keys. Valid values include `Ordinal` and `OrdinalIgnoreCase`. Defaults to `Ordinal`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -938,7 +938,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeseriesinsightsreferencedatasetkeyproperty">Time<wbr>Series<wbr>Insights<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property[]</a></span>
     </dt>
-    <dd>{{% md %}}A `key_property` block as defined below.
+    <dd>{{% md %}}A `key_property` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -994,7 +994,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The comparison behavior that will be used to compare keys. Valid values include `Ordinal` and `OrdinalIgnoreCase`. Defaults to `Ordinal`.
+    <dd>{{% md %}}The comparison behavior that will be used to compare keys. Valid values include `Ordinal` and `OrdinalIgnoreCase`. Defaults to `Ordinal`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1004,7 +1004,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeseriesinsightsreferencedatasetkeyproperty">Sequence[Time<wbr>Series<wbr>Insights<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A `key_property` block as defined below.
+    <dd>{{% md %}}A `key_property` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1083,7 +1083,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the key property.
+    <dd>{{% md %}}The name of the key property. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1093,7 +1093,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data type of the key property. Valid values include `Bool`, `DateTime`, `Double`, `String`.
+    <dd>{{% md %}}The data type of the key property. Valid values include `Bool`, `DateTime`, `Double`, `String`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1109,7 +1109,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the key property.
+    <dd>{{% md %}}The name of the key property. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1119,7 +1119,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data type of the key property. Valid values include `Bool`, `DateTime`, `Double`, `String`.
+    <dd>{{% md %}}The data type of the key property. Valid values include `Bool`, `DateTime`, `Double`, `String`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1135,7 +1135,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the key property.
+    <dd>{{% md %}}The name of the key property. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1145,7 +1145,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data type of the key property. Valid values include `Bool`, `DateTime`, `Double`, `String`.
+    <dd>{{% md %}}The data type of the key property. Valid values include `Bool`, `DateTime`, `Double`, `String`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1161,7 +1161,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the key property.
+    <dd>{{% md %}}The name of the key property. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1171,7 +1171,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The data type of the key property. Valid values include `Bool`, `DateTime`, `Double`, `String`.
+    <dd>{{% md %}}The data type of the key property. Valid values include `Bool`, `DateTime`, `Double`, `String`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

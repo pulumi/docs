@@ -321,6 +321,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="certificatedatabase64_csharp">
+<a href="#certificatedatabase64_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The raw Key Vault Certificate data represented as a base64 string.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="certificatepolicies_csharp">
 <a href="#certificatepolicies_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Policies</a>
 </span>
@@ -413,6 +423,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="certificatedatabase64_go">
+<a href="#certificatedatabase64_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The raw Key Vault Certificate data represented as a base64 string.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -511,6 +531,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="certificatedatabase64_nodejs">
+<a href="#certificatedatabase64_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The raw Key Vault Certificate data represented as a base64 string.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="certificatepolicies_nodejs">
 <a href="#certificatepolicies_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Policies</a>
 </span>
@@ -603,6 +633,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="certificate_data_base64_python">
+<a href="#certificate_data_base64_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>data_<wbr>base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The raw Key Vault Certificate data represented as a base64 string.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
