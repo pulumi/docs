@@ -29,7 +29,7 @@ You might have heard of the French culinary term "mise-en-place," which means la
 Before proceeding, you need to answer three questions:
 
 - Which operating system to use for building cloud resources: macOS, Windows, or Linux?
-- Which cloud provider are you using? This guide covers AWS, Azure, and GCP.
+- Which cloud provider are you using? This guide covers AWS, Azure, and Google Cloud.
 - Which programming language will you use?
 
 Once you've made these choices, you can follow this guide in a choose-your-own-adventure style.
