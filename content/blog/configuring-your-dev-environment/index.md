@@ -413,7 +413,7 @@ Use chocolatey to install Node for JavaScript and Typescript.
 {{% /choosable %}}
 
 {{% choosable os linux %}}
-Use brew to install Node for JavaScript and Typescript.
+Use brew to install Node.js for JavaScript and Typescript.
 
 ```bash
 $ brew install node
