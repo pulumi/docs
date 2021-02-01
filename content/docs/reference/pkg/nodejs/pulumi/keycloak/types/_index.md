@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/keycloak | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/keycloak package."
-git_sha: "90cf5322bda063231fc908564343d879828df6f2"
+git_sha: "1d551cf7ecc66c1ce7bf00d8fadc16b50a234068"
 block_external_search_index: true
 ---
 

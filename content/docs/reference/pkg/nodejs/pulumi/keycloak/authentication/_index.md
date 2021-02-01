@@ -3,7 +3,7 @@ title: "Module authentication"
 title_tag: "Module authentication | Package @pulumi/keycloak | Node.js SDK"
 linktitle: "authentication"
 meta_desc: "Explore members of the authentication module in the @pulumi/keycloak package."
-git_sha: "90cf5322bda063231fc908564343d879828df6f2"
+git_sha: "1d551cf7ecc66c1ce7bf00d8fadc16b50a234068"
 block_external_search_index: true
 ---
 
@@ -39,7 +39,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Execution" data-link-title="Execution">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L55">
         Resource <strong>Execution</strong>
     </a>
 </h3>
@@ -94,7 +94,7 @@ Authentication executions can be imported using the formats`{{realmId}}/{{parent
 ```
 
 <h4 class="pdoc-member-header" id="Execution-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -108,7 +108,7 @@ Create a Execution resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Execution-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L65">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L65">method <b>get</b></a>
 </h4>
 
 
@@ -119,14 +119,14 @@ Get an existing Execution resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Execution-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L55">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L55">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Execution-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L76">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L76">method <b>isInstance</b></a>
 </h4>
 
 
@@ -137,7 +137,7 @@ Returns true if the given object is an instance of Execution.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Execution-authenticator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L86">property <b>authenticator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L86">property <b>authenticator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authenticator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -145,7 +145,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the authenticator. This can be found by experimenting with the GUI and looking at HTTP requests within the network tab of your browser's development tools.
 
 <h4 class="pdoc-member-header" id="Execution-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L55">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -154,7 +154,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Execution-parentFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L90">property <b>parentFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L90">property <b>parentFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parentFlowAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ deployments and may be missing (undefined) during planning phases.
 The alias of the flow this execution is attached to.
 
 <h4 class="pdoc-member-header" id="Execution-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L94">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L94">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ The alias of the flow this execution is attached to.
 The realm the authentication execution exists in.
 
 <h4 class="pdoc-member-header" id="Execution-requirement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L98">property <b>requirement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L98">property <b>requirement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requirement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -178,7 +178,7 @@ The realm the authentication execution exists in.
 The requirement setting, which can be one of `REQUIRED`, `ALTERNATIVE`, `OPTIONAL`, `CONDITIONAL`, or `DISABLED`. Defaults to `DISABLED`.
 
 <h4 class="pdoc-member-header" id="Execution-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L55">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L55">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -187,7 +187,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ExecutionConfig" data-link-title="ExecutionConfig">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L48">
         Resource <strong>ExecutionConfig</strong>
     </a>
 </h3>
@@ -235,7 +235,7 @@ Configurations can be imported using the format `{{realm}}/{{authenticationExecu
 ```
 
 <h4 class="pdoc-member-header" id="ExecutionConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L91"> <b>constructor</b></a>
 </h4>
 
 
@@ -249,7 +249,7 @@ Create a ExecutionConfig resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ExecutionConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -260,14 +260,14 @@ Get an existing ExecutionConfig resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ExecutionConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L48">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ExecutionConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -278,7 +278,7 @@ Returns true if the given object is an instance of ExecutionConfig.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ExecutionConfig-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L79">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L79">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -286,7 +286,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the configuration.
 
 <h4 class="pdoc-member-header" id="ExecutionConfig-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L83">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L83">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -294,7 +294,7 @@ The name of the configuration.
 The configuration. Keys are specific to each configurable authentication execution and not checked when applying.
 
 <h4 class="pdoc-member-header" id="ExecutionConfig-executionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L87">property <b>executionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L87">property <b>executionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>executionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -302,7 +302,7 @@ The configuration. Keys are specific to each configurable authentication executi
 The authentication execution this configuration is attached to.
 
 <h4 class="pdoc-member-header" id="ExecutionConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -311,7 +311,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ExecutionConfig-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L91">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L91">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -319,7 +319,7 @@ deployments and may be missing (undefined) during planning phases.
 The realm the authentication execution exists in.
 
 <h4 class="pdoc-member-header" id="ExecutionConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L48">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -328,7 +328,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Flow" data-link-title="Flow">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L44">
         Resource <strong>Flow</strong>
     </a>
 </h3>
@@ -372,7 +372,7 @@ Authentication flows can be imported using the format `{{realmId}}/{{authenticat
 ```
 
 <h4 class="pdoc-member-header" id="Flow-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -386,7 +386,7 @@ Create a Flow resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Flow-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -397,14 +397,14 @@ Get an existing Flow resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Flow-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Flow-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -415,7 +415,7 @@ Returns true if the given object is an instance of Flow.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Flow-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L75">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L75">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -423,7 +423,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The alias for this authentication flow.
 
 <h4 class="pdoc-member-header" id="Flow-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L79">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L79">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -431,7 +431,7 @@ The alias for this authentication flow.
 A description for the authentication flow.
 
 <h4 class="pdoc-member-header" id="Flow-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -440,7 +440,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Flow-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L83">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L83">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>providerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -448,7 +448,7 @@ deployments and may be missing (undefined) during planning phases.
 The type of authentication flow to create. Valid choices include `basic-flow` and `client-flow`. Defaults to `basic-flow`.
 
 <h4 class="pdoc-member-header" id="Flow-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L87">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L87">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -456,7 +456,7 @@ The type of authentication flow to create. Valid choices include `basic-flow` an
 The realm that the authentication flow exists in.
 
 <h4 class="pdoc-member-header" id="Flow-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -465,14 +465,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Subflow" data-link-title="Subflow">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L7">
         Resource <strong>Subflow</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Subflow</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Subflow-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L44"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L44"> <b>constructor</b></a>
 </h4>
 
 
@@ -486,7 +486,7 @@ Create a Subflow resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Subflow-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -497,14 +497,14 @@ Get an existing Subflow resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Subflow-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Subflow-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -515,12 +515,12 @@ Returns true if the given object is an instance of Subflow.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Subflow-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L35">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L35">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Subflow-authenticator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L39">property <b>authenticator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L39">property <b>authenticator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authenticator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -528,12 +528,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Might be needed to be set with certain custom subflow with specific authenticator, in general this will remain empty
 
 <h4 class="pdoc-member-header" id="Subflow-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L40">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L40">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Subflow-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -542,27 +542,27 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Subflow-parentFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L41">property <b>parentFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L41">property <b>parentFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parentFlowAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Subflow-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L42">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L42">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>providerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Subflow-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L43">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L43">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Subflow-requirement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L44">property <b>requirement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L44">property <b>requirement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requirement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Subflow-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -574,7 +574,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ExecutionArgs" data-link-title="ExecutionArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L168">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L168">
         interface <strong>ExecutionArgs</strong>
     </a>
 </h3>
@@ -584,7 +584,7 @@ deployments.
 The set of arguments for constructing a Execution resource.
 
 <h4 class="pdoc-member-header" id="ExecutionArgs-authenticator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L172">property <b>authenticator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L172">property <b>authenticator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -592,7 +592,7 @@ The set of arguments for constructing a Execution resource.
 The name of the authenticator. This can be found by experimenting with the GUI and looking at HTTP requests within the network tab of your browser's development tools.
 
 <h4 class="pdoc-member-header" id="ExecutionArgs-parentFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L176">property <b>parentFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L176">property <b>parentFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentFlowAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -600,7 +600,7 @@ The name of the authenticator. This can be found by experimenting with the GUI a
 The alias of the flow this execution is attached to.
 
 <h4 class="pdoc-member-header" id="ExecutionArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L180">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L180">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -608,7 +608,7 @@ The alias of the flow this execution is attached to.
 The realm the authentication execution exists in.
 
 <h4 class="pdoc-member-header" id="ExecutionArgs-requirement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L184">property <b>requirement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L184">property <b>requirement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requirement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -616,7 +616,7 @@ The realm the authentication execution exists in.
 The requirement setting, which can be one of `REQUIRED`, `ALTERNATIVE`, `OPTIONAL`, `CONDITIONAL`, or `DISABLED`. Defaults to `DISABLED`.
 
 <h3 class="pdoc-module-header" id="ExecutionConfigArgs" data-link-title="ExecutionConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L164">
         interface <strong>ExecutionConfigArgs</strong>
     </a>
 </h3>
@@ -626,7 +626,7 @@ The requirement setting, which can be one of `REQUIRED`, `ALTERNATIVE`, `OPTIONA
 The set of arguments for constructing a ExecutionConfig resource.
 
 <h4 class="pdoc-member-header" id="ExecutionConfigArgs-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L168">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L168">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -634,7 +634,7 @@ The set of arguments for constructing a ExecutionConfig resource.
 The name of the configuration.
 
 <h4 class="pdoc-member-header" id="ExecutionConfigArgs-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L172">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L172">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -642,7 +642,7 @@ The name of the configuration.
 The configuration. Keys are specific to each configurable authentication execution and not checked when applying.
 
 <h4 class="pdoc-member-header" id="ExecutionConfigArgs-executionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L176">property <b>executionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L176">property <b>executionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -650,7 +650,7 @@ The configuration. Keys are specific to each configurable authentication executi
 The authentication execution this configuration is attached to.
 
 <h4 class="pdoc-member-header" id="ExecutionConfigArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L180">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L180">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -658,7 +658,7 @@ The authentication execution this configuration is attached to.
 The realm the authentication execution exists in.
 
 <h3 class="pdoc-module-header" id="ExecutionConfigState" data-link-title="ExecutionConfigState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L142">
         interface <strong>ExecutionConfigState</strong>
     </a>
 </h3>
@@ -668,7 +668,7 @@ The realm the authentication execution exists in.
 Input properties used for looking up and filtering ExecutionConfig resources.
 
 <h4 class="pdoc-member-header" id="ExecutionConfigState-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L146">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L146">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -676,7 +676,7 @@ Input properties used for looking up and filtering ExecutionConfig resources.
 The name of the configuration.
 
 <h4 class="pdoc-member-header" id="ExecutionConfigState-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L150">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L150">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -684,7 +684,7 @@ The name of the configuration.
 The configuration. Keys are specific to each configurable authentication execution and not checked when applying.
 
 <h4 class="pdoc-member-header" id="ExecutionConfigState-executionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L154">property <b>executionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L154">property <b>executionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -692,7 +692,7 @@ The configuration. Keys are specific to each configurable authentication executi
 The authentication execution this configuration is attached to.
 
 <h4 class="pdoc-member-header" id="ExecutionConfigState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/executionConfig.ts#L158">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/executionConfig.ts#L158">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -700,7 +700,7 @@ The authentication execution this configuration is attached to.
 The realm the authentication execution exists in.
 
 <h3 class="pdoc-module-header" id="ExecutionState" data-link-title="ExecutionState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L146">
         interface <strong>ExecutionState</strong>
     </a>
 </h3>
@@ -710,7 +710,7 @@ The realm the authentication execution exists in.
 Input properties used for looking up and filtering Execution resources.
 
 <h4 class="pdoc-member-header" id="ExecutionState-authenticator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L150">property <b>authenticator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L150">property <b>authenticator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -718,7 +718,7 @@ Input properties used for looking up and filtering Execution resources.
 The name of the authenticator. This can be found by experimenting with the GUI and looking at HTTP requests within the network tab of your browser's development tools.
 
 <h4 class="pdoc-member-header" id="ExecutionState-parentFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L154">property <b>parentFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L154">property <b>parentFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentFlowAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -726,7 +726,7 @@ The name of the authenticator. This can be found by experimenting with the GUI a
 The alias of the flow this execution is attached to.
 
 <h4 class="pdoc-member-header" id="ExecutionState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L158">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L158">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -734,7 +734,7 @@ The alias of the flow this execution is attached to.
 The realm the authentication execution exists in.
 
 <h4 class="pdoc-member-header" id="ExecutionState-requirement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/execution.ts#L162">property <b>requirement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/execution.ts#L162">property <b>requirement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requirement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -742,7 +742,7 @@ The realm the authentication execution exists in.
 The requirement setting, which can be one of `REQUIRED`, `ALTERNATIVE`, `OPTIONAL`, `CONDITIONAL`, or `DISABLED`. Defaults to `DISABLED`.
 
 <h3 class="pdoc-module-header" id="FlowArgs" data-link-title="FlowArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L154">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L154">
         interface <strong>FlowArgs</strong>
     </a>
 </h3>
@@ -752,7 +752,7 @@ The requirement setting, which can be one of `REQUIRED`, `ALTERNATIVE`, `OPTIONA
 The set of arguments for constructing a Flow resource.
 
 <h4 class="pdoc-member-header" id="FlowArgs-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L158">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L158">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -760,7 +760,7 @@ The set of arguments for constructing a Flow resource.
 The alias for this authentication flow.
 
 <h4 class="pdoc-member-header" id="FlowArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L162">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L162">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -768,7 +768,7 @@ The alias for this authentication flow.
 A description for the authentication flow.
 
 <h4 class="pdoc-member-header" id="FlowArgs-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L166">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L166">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -776,7 +776,7 @@ A description for the authentication flow.
 The type of authentication flow to create. Valid choices include `basic-flow` and `client-flow`. Defaults to `basic-flow`.
 
 <h4 class="pdoc-member-header" id="FlowArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L170">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L170">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -784,7 +784,7 @@ The type of authentication flow to create. Valid choices include `basic-flow` an
 The realm that the authentication flow exists in.
 
 <h3 class="pdoc-module-header" id="FlowState" data-link-title="FlowState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L132">
         interface <strong>FlowState</strong>
     </a>
 </h3>
@@ -794,7 +794,7 @@ The realm that the authentication flow exists in.
 Input properties used for looking up and filtering Flow resources.
 
 <h4 class="pdoc-member-header" id="FlowState-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L136">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L136">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -802,7 +802,7 @@ Input properties used for looking up and filtering Flow resources.
 The alias for this authentication flow.
 
 <h4 class="pdoc-member-header" id="FlowState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L140">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L140">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -810,7 +810,7 @@ The alias for this authentication flow.
 A description for the authentication flow.
 
 <h4 class="pdoc-member-header" id="FlowState-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L144">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L144">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -818,7 +818,7 @@ A description for the authentication flow.
 The type of authentication flow to create. Valid choices include `basic-flow` and `client-flow`. Defaults to `basic-flow`.
 
 <h4 class="pdoc-member-header" id="FlowState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/flow.ts#L148">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/flow.ts#L148">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -826,7 +826,7 @@ The type of authentication flow to create. Valid choices include `basic-flow` an
 The realm that the authentication flow exists in.
 
 <h3 class="pdoc-module-header" id="SubflowArgs" data-link-title="SubflowArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L114">
         interface <strong>SubflowArgs</strong>
     </a>
 </h3>
@@ -836,12 +836,12 @@ The realm that the authentication flow exists in.
 The set of arguments for constructing a Subflow resource.
 
 <h4 class="pdoc-member-header" id="SubflowArgs-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L115">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L115">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubflowArgs-authenticator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L119">property <b>authenticator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L119">property <b>authenticator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -849,32 +849,32 @@ The set of arguments for constructing a Subflow resource.
 Might be needed to be set with certain custom subflow with specific authenticator, in general this will remain empty
 
 <h4 class="pdoc-member-header" id="SubflowArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L120">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L120">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubflowArgs-parentFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L121">property <b>parentFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L121">property <b>parentFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentFlowAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubflowArgs-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L122">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L122">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubflowArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L123">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L123">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubflowArgs-requirement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L124">property <b>requirement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L124">property <b>requirement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requirement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SubflowState" data-link-title="SubflowState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L98">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L98">
         interface <strong>SubflowState</strong>
     </a>
 </h3>
@@ -884,12 +884,12 @@ Might be needed to be set with certain custom subflow with specific authenticato
 Input properties used for looking up and filtering Subflow resources.
 
 <h4 class="pdoc-member-header" id="SubflowState-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L99">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L99">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubflowState-authenticator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L103">property <b>authenticator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L103">property <b>authenticator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -897,27 +897,27 @@ Input properties used for looking up and filtering Subflow resources.
 Might be needed to be set with certain custom subflow with specific authenticator, in general this will remain empty
 
 <h4 class="pdoc-member-header" id="SubflowState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L104">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L104">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubflowState-parentFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L105">property <b>parentFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L105">property <b>parentFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentFlowAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubflowState-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L106">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L106">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubflowState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L107">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L107">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubflowState-requirement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/authentication/subflow.ts#L108">property <b>requirement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/authentication/subflow.ts#L108">property <b>requirement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requirement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

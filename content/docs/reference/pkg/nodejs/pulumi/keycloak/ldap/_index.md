@@ -3,7 +3,7 @@ title: "Module ldap"
 title_tag: "Module ldap | Package @pulumi/keycloak | Node.js SDK"
 linktitle: "ldap"
 meta_desc: "Explore members of the ldap module in the @pulumi/keycloak package."
-git_sha: "90cf5322bda063231fc908564343d879828df6f2"
+git_sha: "1d551cf7ecc66c1ce7bf00d8fadc16b50a234068"
 block_external_search_index: true
 ---
 
@@ -54,7 +54,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="FullNameMapper" data-link-title="FullNameMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L52">
         Resource <strong>FullNameMapper</strong>
     </a>
 </h3>
@@ -106,7 +106,7 @@ LDAP mappers can be imported using the format `{{realm_id}}/{{ldap_user_federati
 ```
 
 <h4 class="pdoc-member-header" id="FullNameMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L103"> <b>constructor</b></a>
 </h4>
 
 
@@ -120,7 +120,7 @@ Create a FullNameMapper resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FullNameMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L62">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L62">method <b>get</b></a>
 </h4>
 
 
@@ -131,14 +131,14 @@ Get an existing FullNameMapper resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FullNameMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L52">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L52">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FullNameMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L73">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L73">method <b>isInstance</b></a>
 </h4>
 
 
@@ -149,7 +149,7 @@ Returns true if the given object is an instance of FullNameMapper.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FullNameMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -158,7 +158,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FullNameMapper-ldapFullNameAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L83">property <b>ldapFullNameAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L83">property <b>ldapFullNameAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ldapFullNameAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -166,7 +166,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the LDAP attribute containing the user's full name.
 
 <h4 class="pdoc-member-header" id="FullNameMapper-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L87">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L87">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ldapUserFederationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -174,7 +174,7 @@ The name of the LDAP attribute containing the user's full name.
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="FullNameMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L91">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L91">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -182,7 +182,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="FullNameMapper-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L95">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L95">property <b>readOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>readOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -190,7 +190,7 @@ Display name of this mapper when displayed in the console.
 When `true`, updates to a user within Keycloak will not be written back to LDAP. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="FullNameMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L99">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L99">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -198,7 +198,7 @@ When `true`, updates to a user within Keycloak will not be written back to LDAP.
 The realm that this LDAP mapper will exist in.
 
 <h4 class="pdoc-member-header" id="FullNameMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L52">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L52">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -207,7 +207,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="FullNameMapper-writeOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L103">property <b>writeOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L103">property <b>writeOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>writeOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -215,7 +215,7 @@ deployments.
 When `true`, this mapper will only be used to write updates to LDAP. Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="GroupMapper" data-link-title="GroupMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L58">
         Resource <strong>GroupMapper</strong>
     </a>
 </h3>
@@ -273,7 +273,7 @@ LDAP mappers can be imported using the format `{{realm_id}}/{{ldap_user_federati
 ```
 
 <h4 class="pdoc-member-header" id="GroupMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L157"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L157"> <b>constructor</b></a>
 </h4>
 
 
@@ -287,7 +287,7 @@ Create a GroupMapper resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GroupMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L68">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L68">method <b>get</b></a>
 </h4>
 
 
@@ -298,14 +298,14 @@ Get an existing GroupMapper resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GroupMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L58">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L58">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GroupMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L79">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L79">method <b>isInstance</b></a>
 </h4>
 
 
@@ -316,7 +316,7 @@ Returns true if the given object is an instance of GroupMapper.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GroupMapper-dropNonExistingGroupsDuringSync">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L89">property <b>dropNonExistingGroupsDuringSync</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L89">property <b>dropNonExistingGroupsDuringSync</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dropNonExistingGroupsDuringSync: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -324,7 +324,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 When `true`, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="GroupMapper-groupNameLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L93">property <b>groupNameLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L93">property <b>groupNameLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupNameLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -332,7 +332,7 @@ When `true`, groups that no longer exist within LDAP will be dropped in Keycloak
 The name of the LDAP attribute that is used in group objects for the name and RDN of the group. Typically `cn`.
 
 <h4 class="pdoc-member-header" id="GroupMapper-groupObjectClasses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L97">property <b>groupObjectClasses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L97">property <b>groupObjectClasses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupObjectClasses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -340,7 +340,7 @@ The name of the LDAP attribute that is used in group objects for the name and RD
 List of strings representing the object classes for the group. Must contain at least one.
 
 <h4 class="pdoc-member-header" id="GroupMapper-groupsLdapFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L101">property <b>groupsLdapFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L101">property <b>groupsLdapFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsLdapFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -348,7 +348,7 @@ List of strings representing the object classes for the group. Must contain at l
 When specified, adds an additional custom filter to be used when querying for groups. Must start with `(` and end with `)`.
 
 <h4 class="pdoc-member-header" id="GroupMapper-groupsPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L105">property <b>groupsPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L105">property <b>groupsPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -356,7 +356,7 @@ When specified, adds an additional custom filter to be used when querying for gr
 Keycloak group path the LDAP groups are added to. For example if value `/Applications/App1` is used, then LDAP groups will be available in Keycloak under group `App1`, which is the child of top level group `Applications`. The configured group path must already exist in Keycloak when creating this mapper.
 
 <h4 class="pdoc-member-header" id="GroupMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L58">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L58">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -365,7 +365,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GroupMapper-ignoreMissingGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L109">property <b>ignoreMissingGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L109">property <b>ignoreMissingGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ignoreMissingGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -373,7 +373,7 @@ deployments and may be missing (undefined) during planning phases.
 When `true`, missing groups in the hierarchy will be ignored.
 
 <h4 class="pdoc-member-header" id="GroupMapper-ldapGroupsDn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L113">property <b>ldapGroupsDn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L113">property <b>ldapGroupsDn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ldapGroupsDn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -381,7 +381,7 @@ When `true`, missing groups in the hierarchy will be ignored.
 The LDAP DN where groups can be found.
 
 <h4 class="pdoc-member-header" id="GroupMapper-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L117">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L117">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ldapUserFederationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -389,7 +389,7 @@ The LDAP DN where groups can be found.
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="GroupMapper-mappedGroupAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L121">property <b>mappedGroupAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L121">property <b>mappedGroupAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mappedGroupAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -397,7 +397,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.
 
 <h4 class="pdoc-member-header" id="GroupMapper-memberofLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L125">property <b>memberofLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L125">property <b>memberofLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memberofLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -405,7 +405,7 @@ Array of strings representing attributes on the LDAP group which will be mapped 
 Specifies the name of the LDAP attribute on the LDAP user that contains the groups the user is a member of. Defaults to `memberOf`.
 
 <h4 class="pdoc-member-header" id="GroupMapper-membershipAttributeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L129">property <b>membershipAttributeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L129">property <b>membershipAttributeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>membershipAttributeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -413,7 +413,7 @@ Specifies the name of the LDAP attribute on the LDAP user that contains the grou
 Can be one of `DN` or `UID`. Defaults to `DN`.
 
 <h4 class="pdoc-member-header" id="GroupMapper-membershipLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L133">property <b>membershipLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L133">property <b>membershipLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>membershipLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -421,7 +421,7 @@ Can be one of `DN` or `UID`. Defaults to `DN`.
 The name of the LDAP attribute that is used for membership mappings.
 
 <h4 class="pdoc-member-header" id="GroupMapper-membershipUserLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L137">property <b>membershipUserLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L137">property <b>membershipUserLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>membershipUserLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -429,7 +429,7 @@ The name of the LDAP attribute that is used for membership mappings.
 The name of the LDAP attribute on a user that is used for membership mappings.
 
 <h4 class="pdoc-member-header" id="GroupMapper-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L141">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L141">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -437,7 +437,7 @@ The name of the LDAP attribute on a user that is used for membership mappings.
 Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
 
 <h4 class="pdoc-member-header" id="GroupMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L145">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L145">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -445,7 +445,7 @@ Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="GroupMapper-preserveGroupInheritance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L149">property <b>preserveGroupInheritance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L149">property <b>preserveGroupInheritance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preserveGroupInheritance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -453,7 +453,7 @@ Display name of this mapper when displayed in the console.
 When `true`, group inheritance will be propagated from LDAP to Keycloak. When `false`, all LDAP groups will be propagated as top level groups within Keycloak.
 
 <h4 class="pdoc-member-header" id="GroupMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L153">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L153">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -461,7 +461,7 @@ When `true`, group inheritance will be propagated from LDAP to Keycloak. When `f
 The realm that this LDAP mapper will exist in.
 
 <h4 class="pdoc-member-header" id="GroupMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L58">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L58">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -470,7 +470,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="GroupMapper-userRolesRetrieveStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L157">property <b>userRolesRetrieveStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L157">property <b>userRolesRetrieveStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userRolesRetrieveStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -478,14 +478,14 @@ deployments.
 Can be one of `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`, `GET_GROUPS_FROM_USER_MEMBEROF_ATTRIBUTE`, or `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE_RECURSIVELY`. Defaults to `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`.
 
 <h3 class="pdoc-module-header" id="HardcodedGroupMapper" data-link-title="HardcodedGroupMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L7">
         Resource <strong>HardcodedGroupMapper</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>HardcodedGroupMapper</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="HardcodedGroupMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L50"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L50"> <b>constructor</b></a>
 </h4>
 
 
@@ -499,7 +499,7 @@ Create a HardcodedGroupMapper resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="HardcodedGroupMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -510,14 +510,14 @@ Get an existing HardcodedGroupMapper resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="HardcodedGroupMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="HardcodedGroupMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -528,7 +528,7 @@ Returns true if the given object is an instance of HardcodedGroupMapper.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="HardcodedGroupMapper-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L38">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L38">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -536,7 +536,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Group to grant to user.
 
 <h4 class="pdoc-member-header" id="HardcodedGroupMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -545,7 +545,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="HardcodedGroupMapper-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L42">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L42">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ldapUserFederationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -553,7 +553,7 @@ deployments and may be missing (undefined) during planning phases.
 The ldap user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="HardcodedGroupMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -561,7 +561,7 @@ The ldap user federation provider to attach this mapper to.
 Display name of the mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="HardcodedGroupMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L50">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L50">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -569,7 +569,7 @@ Display name of the mapper when displayed in the console.
 The realm in which the ldap user federation provider exists.
 
 <h4 class="pdoc-member-header" id="HardcodedGroupMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -578,7 +578,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="HardcodedRoleMapper" data-link-title="HardcodedRoleMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L95">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L95">
         Resource <strong>HardcodedRoleMapper</strong>
     </a>
 </h3>
@@ -673,7 +673,7 @@ LDAP mappers can be imported using the format `{{realm_id}}/{{ldap_user_federati
 ```
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L138"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L138"> <b>constructor</b></a>
 </h4>
 
 
@@ -687,7 +687,7 @@ Create a HardcodedRoleMapper resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L105">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L105">method <b>get</b></a>
 </h4>
 
 
@@ -698,14 +698,14 @@ Get an existing HardcodedRoleMapper resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L95">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L95">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L116">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L116">method <b>isInstance</b></a>
 </h4>
 
 
@@ -716,7 +716,7 @@ Returns true if the given object is an instance of HardcodedRoleMapper.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L95">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L95">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -725,7 +725,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapper-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L126">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L126">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ldapUserFederationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -733,7 +733,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L130">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -741,7 +741,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L134">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L134">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -749,7 +749,7 @@ Display name of this mapper when displayed in the console.
 The realm that this LDAP mapper will exist in.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapper-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L138">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L138">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -757,7 +757,7 @@ The realm that this LDAP mapper will exist in.
 The name of the role which should be assigned to the users. Client roles should use the format `{{client_id}}.{{client_role_name}}`.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L95">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L95">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -766,7 +766,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="MsadLdsUserAccountControlMapper" data-link-title="MsadLdsUserAccountControlMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L55">
         Resource <strong>MsadLdsUserAccountControlMapper</strong>
     </a>
 </h3>
@@ -821,7 +821,7 @@ LDAP mappers can be imported using the format `{{realm_id}}/{{ldap_user_federati
 ```
 
 <h4 class="pdoc-member-header" id="MsadLdsUserAccountControlMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L94"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L94"> <b>constructor</b></a>
 </h4>
 
 
@@ -835,7 +835,7 @@ Create a MsadLdsUserAccountControlMapper resource with the given unique name, ar
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MsadLdsUserAccountControlMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L65">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L65">method <b>get</b></a>
 </h4>
 
 
@@ -846,14 +846,14 @@ Get an existing MsadLdsUserAccountControlMapper resource's state with the given 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MsadLdsUserAccountControlMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L55">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L55">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MsadLdsUserAccountControlMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L76">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L76">method <b>isInstance</b></a>
 </h4>
 
 
@@ -864,7 +864,7 @@ Returns true if the given object is an instance of MsadLdsUserAccountControlMapp
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MsadLdsUserAccountControlMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L55">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -873,7 +873,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MsadLdsUserAccountControlMapper-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L86">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L86">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ldapUserFederationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -881,7 +881,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="MsadLdsUserAccountControlMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L90">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L90">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -889,7 +889,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="MsadLdsUserAccountControlMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L94">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L94">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -897,7 +897,7 @@ Display name of this mapper when displayed in the console.
 The realm that this LDAP mapper will exist in.
 
 <h4 class="pdoc-member-header" id="MsadLdsUserAccountControlMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L55">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L55">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -906,7 +906,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="MsadUserAccountControlMapper" data-link-title="MsadUserAccountControlMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L55">
         Resource <strong>MsadUserAccountControlMapper</strong>
     </a>
 </h3>
@@ -961,7 +961,7 @@ LDAP mappers can be imported using the format `{{realm_id}}/{{ldap_user_federati
 ```
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -975,7 +975,7 @@ Create a MsadUserAccountControlMapper resource with the given unique name, argum
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L65">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L65">method <b>get</b></a>
 </h4>
 
 
@@ -986,14 +986,14 @@ Get an existing MsadUserAccountControlMapper resource's state with the given nam
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L55">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L55">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L76">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L76">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1004,7 +1004,7 @@ Returns true if the given object is an instance of MsadUserAccountControlMapper.
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L55">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1013,7 +1013,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapper-ldapPasswordPolicyHintsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L86">property <b>ldapPasswordPolicyHintsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L86">property <b>ldapPasswordPolicyHintsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ldapPasswordPolicyHintsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1021,7 +1021,7 @@ deployments and may be missing (undefined) during planning phases.
 When `true`, advanced password policies, such as password hints and previous password history will be used when writing new passwords to AD. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapper-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L90">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L90">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ldapUserFederationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1029,7 +1029,7 @@ When `true`, advanced password policies, such as password hints and previous pas
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L94">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L94">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1037,7 +1037,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L98">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L98">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1045,7 +1045,7 @@ Display name of this mapper when displayed in the console.
 The realm that this LDAP mapper will exist in.
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L55">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L55">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1054,14 +1054,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RoleMapper" data-link-title="RoleMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L7">
         Resource <strong>RoleMapper</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>RoleMapper</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="RoleMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L58"> <b>constructor</b></a>
 </h4>
 
 
@@ -1075,7 +1075,7 @@ Create a RoleMapper resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RoleMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -1086,14 +1086,14 @@ Get an existing RoleMapper resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RoleMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RoleMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1104,12 +1104,12 @@ Returns true if the given object is an instance of RoleMapper.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RoleMapper-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L35">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L35">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1118,12 +1118,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RoleMapper-ldapRolesDn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L36">property <b>ldapRolesDn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L36">property <b>ldapRolesDn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ldapRolesDn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapper-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L40">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L40">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ldapUserFederationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1131,32 +1131,32 @@ deployments and may be missing (undefined) during planning phases.
 The ldap user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="RoleMapper-memberofLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L41">property <b>memberofLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L41">property <b>memberofLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memberofLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapper-membershipAttributeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L42">property <b>membershipAttributeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L42">property <b>membershipAttributeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>membershipAttributeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapper-membershipLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L43">property <b>membershipLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L43">property <b>membershipLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>membershipLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapper-membershipUserLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L44">property <b>membershipUserLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L44">property <b>membershipUserLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>membershipUserLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapper-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L45">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L45">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1164,7 +1164,7 @@ The ldap user federation provider to attach this mapper to.
 Display name of the mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="RoleMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L53">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L53">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1172,22 +1172,22 @@ Display name of the mapper when displayed in the console.
 The realm in which the ldap user federation provider exists.
 
 <h4 class="pdoc-member-header" id="RoleMapper-roleNameLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L54">property <b>roleNameLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L54">property <b>roleNameLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleNameLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapper-roleObjectClasses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L55">property <b>roleObjectClasses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L55">property <b>roleObjectClasses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleObjectClasses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapper-rolesLdapFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L56">property <b>rolesLdapFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L56">property <b>rolesLdapFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rolesLdapFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1196,17 +1196,17 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="RoleMapper-useRealmRolesMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L57">property <b>useRealmRolesMapping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L57">property <b>useRealmRolesMapping</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>useRealmRolesMapping: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapper-userRolesRetrieveStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L58">property <b>userRolesRetrieveStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L58">property <b>userRolesRetrieveStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userRolesRetrieveStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="UserAttributeMapper" data-link-title="UserAttributeMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L54">
         Resource <strong>UserAttributeMapper</strong>
     </a>
 </h3>
@@ -1260,7 +1260,7 @@ LDAP mappers can be imported using the format `{{realm_id}}/{{ldap_user_federati
 ```
 
 <h4 class="pdoc-member-header" id="UserAttributeMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L113"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L113"> <b>constructor</b></a>
 </h4>
 
 
@@ -1274,7 +1274,7 @@ Create a UserAttributeMapper resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L64">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L64">method <b>get</b></a>
 </h4>
 
 
@@ -1285,14 +1285,14 @@ Get an existing UserAttributeMapper resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L54">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L54">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UserAttributeMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L75">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L75">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1303,7 +1303,7 @@ Returns true if the given object is an instance of UserAttributeMapper.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapper-alwaysReadValueFromLdap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L85">property <b>alwaysReadValueFromLdap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L85">property <b>alwaysReadValueFromLdap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alwaysReadValueFromLdap: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1311,7 +1311,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 When `true`, the value fetched from LDAP will override the value stored in Keycloak. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L54">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L54">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1320,7 +1320,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapper-isMandatoryInLdap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L89">property <b>isMandatoryInLdap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L89">property <b>isMandatoryInLdap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isMandatoryInLdap: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1328,7 +1328,7 @@ deployments and may be missing (undefined) during planning phases.
 When `true`, this attribute must exist in LDAP. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapper-ldapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L93">property <b>ldapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L93">property <b>ldapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ldapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1336,7 +1336,7 @@ When `true`, this attribute must exist in LDAP. Defaults to `false`.
 Name of the mapped attribute on the LDAP object.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapper-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L97">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L97">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ldapUserFederationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1344,7 +1344,7 @@ Name of the mapped attribute on the LDAP object.
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L101">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L101">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1352,7 +1352,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapper-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L105">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L105">property <b>readOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>readOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1360,7 +1360,7 @@ Display name of this mapper when displayed in the console.
 When `true`, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L109">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L109">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1368,7 +1368,7 @@ When `true`, this attribute is not saved back to LDAP when the user attribute is
 The realm that this LDAP mapper will exist in.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L54">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L54">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1377,7 +1377,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapper-userModelAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L113">property <b>userModelAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L113">property <b>userModelAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userModelAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1385,7 +1385,7 @@ deployments.
 Name of the user property or attribute you want to map the LDAP attribute into.
 
 <h3 class="pdoc-module-header" id="UserFederation" data-link-title="UserFederation">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L58">
         Resource <strong>UserFederation</strong>
     </a>
 </h3>
@@ -1442,7 +1442,7 @@ LDAP user federation providers can be imported using the format `{{realm_id}}/{{
 ```
 
 <h4 class="pdoc-member-header" id="UserFederation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L205"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L205"> <b>constructor</b></a>
 </h4>
 
 
@@ -1456,7 +1456,7 @@ Create a UserFederation resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="UserFederation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L68">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L68">method <b>get</b></a>
 </h4>
 
 
@@ -1467,14 +1467,14 @@ Get an existing UserFederation resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UserFederation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L58">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L58">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UserFederation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L79">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L79">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1485,7 +1485,7 @@ Returns true if the given object is an instance of UserFederation.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UserFederation-batchSizeForSync">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L89">property <b>batchSizeForSync</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L89">property <b>batchSizeForSync</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>batchSizeForSync: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1493,7 +1493,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The number of users to sync within a single transaction. Defaults to `1000`.
 
 <h4 class="pdoc-member-header" id="UserFederation-bindCredential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L93">property <b>bindCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L93">property <b>bindCredential</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bindCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1501,7 +1501,7 @@ The number of users to sync within a single transaction. Defaults to `1000`.
 Password of LDAP admin. This attribute must be set if `bindDn` is set.
 
 <h4 class="pdoc-member-header" id="UserFederation-bindDn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L97">property <b>bindDn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L97">property <b>bindDn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bindDn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1509,7 +1509,7 @@ Password of LDAP admin. This attribute must be set if `bindDn` is set.
 DN of LDAP admin, which will be used by Keycloak to access LDAP server. This attribute must be set if `bindCredential` is set.
 
 <h4 class="pdoc-member-header" id="UserFederation-cache">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L101">property <b>cache</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L101">property <b>cache</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cache: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#UserFederationCache'>UserFederationCache</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1517,7 +1517,7 @@ DN of LDAP admin, which will be used by Keycloak to access LDAP server. This att
 A block containing the cache settings.
 
 <h4 class="pdoc-member-header" id="UserFederation-cachePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L107">property <b>cachePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L107">property <b>cachePolicy</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1529,7 +1529,7 @@ use cache.policy instead
 **Deprecated** Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
 
 <h4 class="pdoc-member-header" id="UserFederation-changedSyncPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L111">property <b>changedSyncPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L111">property <b>changedSyncPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>changedSyncPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1537,7 +1537,7 @@ use cache.policy instead
 How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users sync.
 
 <h4 class="pdoc-member-header" id="UserFederation-connectionTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L115">property <b>connectionTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L115">property <b>connectionTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1545,7 +1545,7 @@ How frequently Keycloak should sync changed LDAP users, in seconds. Omit this pr
 LDAP connection timeout in the format of a [Go duration string](https://golang.org/pkg/time/#Duration.String).
 
 <h4 class="pdoc-member-header" id="UserFederation-connectionUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L119">property <b>connectionUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L119">property <b>connectionUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectionUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1553,7 +1553,7 @@ LDAP connection timeout in the format of a [Go duration string](https://golang.o
 Connection URL to the LDAP server.
 
 <h4 class="pdoc-member-header" id="UserFederation-customUserSearchFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L123">property <b>customUserSearchFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L123">property <b>customUserSearchFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customUserSearchFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1561,7 +1561,7 @@ Connection URL to the LDAP server.
 Additional LDAP filter for filtering searched users. Must begin with `(` and end with `)`.
 
 <h4 class="pdoc-member-header" id="UserFederation-editMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L127">property <b>editMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L127">property <b>editMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>editMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1569,7 +1569,7 @@ Additional LDAP filter for filtering searched users. Must begin with `(` and end
 Can be one of `READ_ONLY`, `WRITABLE`, or `UNSYNCED`. `UNSYNCED` allows user data to be imported but not synced back to LDAP. Defaults to `READ_ONLY`.
 
 <h4 class="pdoc-member-header" id="UserFederation-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L131">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L131">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1577,7 +1577,7 @@ Can be one of `READ_ONLY`, `WRITABLE`, or `UNSYNCED`. `UNSYNCED` allows user dat
 When `false`, this provider will not be used when performing queries for users. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserFederation-fullSyncPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L135">property <b>fullSyncPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L135">property <b>fullSyncPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fullSyncPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1585,7 +1585,7 @@ When `false`, this provider will not be used when performing queries for users. 
 How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
 
 <h4 class="pdoc-member-header" id="UserFederation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L58">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L58">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1594,7 +1594,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UserFederation-importEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L139">property <b>importEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L139">property <b>importEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>importEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1602,7 +1602,7 @@ deployments and may be missing (undefined) during planning phases.
 When `true`, LDAP users will be imported into the Keycloak database. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserFederation-kerberos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L143">property <b>kerberos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L143">property <b>kerberos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kerberos: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#UserFederationKerberos'>UserFederationKerberos</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1610,7 +1610,7 @@ When `true`, LDAP users will be imported into the Keycloak database. Defaults to
 A block containing the kerberos settings.
 
 <h4 class="pdoc-member-header" id="UserFederation-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L147">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L147">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1618,7 +1618,7 @@ A block containing the kerberos settings.
 Display name of the provider when displayed in the console.
 
 <h4 class="pdoc-member-header" id="UserFederation-pagination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L151">property <b>pagination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L151">property <b>pagination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pagination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1626,7 +1626,7 @@ Display name of the provider when displayed in the console.
 When true, Keycloak assumes the LDAP server supports pagination. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserFederation-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L155">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L155">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1634,7 +1634,7 @@ When true, Keycloak assumes the LDAP server supports pagination. Defaults to `tr
 Priority of this provider when looking up users. Lower values are first. Defaults to `0`.
 
 <h4 class="pdoc-member-header" id="UserFederation-rdnLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L159">property <b>rdnLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L159">property <b>rdnLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rdnLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1642,7 +1642,7 @@ Priority of this provider when looking up users. Lower values are first. Default
 Name of the LDAP attribute to use as the relative distinguished name.
 
 <h4 class="pdoc-member-header" id="UserFederation-readTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L163">property <b>readTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L163">property <b>readTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>readTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1650,7 +1650,7 @@ Name of the LDAP attribute to use as the relative distinguished name.
 LDAP read timeout in the format of a [Go duration string](https://golang.org/pkg/time/#Duration.String).
 
 <h4 class="pdoc-member-header" id="UserFederation-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L167">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L167">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1658,7 +1658,7 @@ LDAP read timeout in the format of a [Go duration string](https://golang.org/pkg
 The realm that this provider will provide user federation for.
 
 <h4 class="pdoc-member-header" id="UserFederation-searchScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L173">property <b>searchScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L173">property <b>searchScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>searchScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1668,7 +1668,7 @@ Can be one of `ONE_LEVEL` or `SUBTREE`:
 - `SUBTREE`: Search entire LDAP subtree.
 
 <h4 class="pdoc-member-header" id="UserFederation-syncRegistrations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L177">property <b>syncRegistrations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L177">property <b>syncRegistrations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>syncRegistrations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1676,7 +1676,7 @@ Can be one of `ONE_LEVEL` or `SUBTREE`:
 When `true`, newly created users will be synced back to LDAP. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserFederation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L58">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L58">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1685,7 +1685,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="UserFederation-useTruststoreSpi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L181">property <b>useTruststoreSpi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L181">property <b>useTruststoreSpi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>useTruststoreSpi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1693,7 +1693,7 @@ deployments.
 Can be one of `ALWAYS`, `ONLY_FOR_LDAPS`, or `NEVER`:
 
 <h4 class="pdoc-member-header" id="UserFederation-userObjectClasses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L185">property <b>userObjectClasses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L185">property <b>userObjectClasses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userObjectClasses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1701,7 +1701,7 @@ Can be one of `ALWAYS`, `ONLY_FOR_LDAPS`, or `NEVER`:
 Array of all values of LDAP objectClass attribute for users in LDAP. Must contain at least one.
 
 <h4 class="pdoc-member-header" id="UserFederation-usernameLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L189">property <b>usernameLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L189">property <b>usernameLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usernameLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1709,7 +1709,7 @@ Array of all values of LDAP objectClass attribute for users in LDAP. Must contai
 Name of the LDAP attribute to use as the Keycloak username.
 
 <h4 class="pdoc-member-header" id="UserFederation-usersDn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L193">property <b>usersDn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L193">property <b>usersDn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usersDn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1717,7 +1717,7 @@ Name of the LDAP attribute to use as the Keycloak username.
 Full DN of LDAP tree where your users are.
 
 <h4 class="pdoc-member-header" id="UserFederation-uuidLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L197">property <b>uuidLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L197">property <b>uuidLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uuidLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1725,7 +1725,7 @@ Full DN of LDAP tree where your users are.
 Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.
 
 <h4 class="pdoc-member-header" id="UserFederation-validatePasswordPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L201">property <b>validatePasswordPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L201">property <b>validatePasswordPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>validatePasswordPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1733,7 +1733,7 @@ Name of the LDAP attribute to use as a unique object identifier for objects in L
 When `true`, Keycloak will validate passwords using the realm policy before updating it.
 
 <h4 class="pdoc-member-header" id="UserFederation-vendor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L205">property <b>vendor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L205">property <b>vendor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vendor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1744,7 +1744,7 @@ Can be one of `OTHER`, `EDIRECTORY`, `AD`, `RHDS`, or `TIVOLI`. When this is sel
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="FullNameMapperArgs" data-link-title="FullNameMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L185">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L185">
         interface <strong>FullNameMapperArgs</strong>
     </a>
 </h3>
@@ -1754,7 +1754,7 @@ Can be one of `OTHER`, `EDIRECTORY`, `AD`, `RHDS`, or `TIVOLI`. When this is sel
 The set of arguments for constructing a FullNameMapper resource.
 
 <h4 class="pdoc-member-header" id="FullNameMapperArgs-ldapFullNameAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L189">property <b>ldapFullNameAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L189">property <b>ldapFullNameAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapFullNameAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1762,7 +1762,7 @@ The set of arguments for constructing a FullNameMapper resource.
 The name of the LDAP attribute containing the user's full name.
 
 <h4 class="pdoc-member-header" id="FullNameMapperArgs-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L193">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L193">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapUserFederationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1770,7 +1770,7 @@ The name of the LDAP attribute containing the user's full name.
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="FullNameMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L197">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L197">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1778,7 +1778,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="FullNameMapperArgs-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L201">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L201">property <b>readOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1786,7 +1786,7 @@ Display name of this mapper when displayed in the console.
 When `true`, updates to a user within Keycloak will not be written back to LDAP. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="FullNameMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L205">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L205">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1794,7 +1794,7 @@ When `true`, updates to a user within Keycloak will not be written back to LDAP.
 The realm that this LDAP mapper will exist in.
 
 <h4 class="pdoc-member-header" id="FullNameMapperArgs-writeOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L209">property <b>writeOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L209">property <b>writeOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writeOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1802,7 +1802,7 @@ The realm that this LDAP mapper will exist in.
 When `true`, this mapper will only be used to write updates to LDAP. Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="FullNameMapperState" data-link-title="FullNameMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L155">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L155">
         interface <strong>FullNameMapperState</strong>
     </a>
 </h3>
@@ -1812,7 +1812,7 @@ When `true`, this mapper will only be used to write updates to LDAP. Defaults to
 Input properties used for looking up and filtering FullNameMapper resources.
 
 <h4 class="pdoc-member-header" id="FullNameMapperState-ldapFullNameAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L159">property <b>ldapFullNameAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L159">property <b>ldapFullNameAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapFullNameAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1820,7 +1820,7 @@ Input properties used for looking up and filtering FullNameMapper resources.
 The name of the LDAP attribute containing the user's full name.
 
 <h4 class="pdoc-member-header" id="FullNameMapperState-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L163">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L163">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapUserFederationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1828,7 +1828,7 @@ The name of the LDAP attribute containing the user's full name.
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="FullNameMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L167">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L167">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1836,7 +1836,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="FullNameMapperState-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L171">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L171">property <b>readOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1844,7 +1844,7 @@ Display name of this mapper when displayed in the console.
 When `true`, updates to a user within Keycloak will not be written back to LDAP. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="FullNameMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L175">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L175">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1852,7 +1852,7 @@ When `true`, updates to a user within Keycloak will not be written back to LDAP.
 The realm that this LDAP mapper will exist in.
 
 <h4 class="pdoc-member-header" id="FullNameMapperState-writeOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/fullNameMapper.ts#L179">property <b>writeOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/fullNameMapper.ts#L179">property <b>writeOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writeOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1860,7 +1860,7 @@ The realm that this LDAP mapper will exist in.
 When `true`, this mapper will only be used to write updates to LDAP. Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="GroupMapperArgs" data-link-title="GroupMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L323">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L323">
         interface <strong>GroupMapperArgs</strong>
     </a>
 </h3>
@@ -1870,7 +1870,7 @@ When `true`, this mapper will only be used to write updates to LDAP. Defaults to
 The set of arguments for constructing a GroupMapper resource.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-dropNonExistingGroupsDuringSync">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L327">property <b>dropNonExistingGroupsDuringSync</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L327">property <b>dropNonExistingGroupsDuringSync</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropNonExistingGroupsDuringSync?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1878,7 +1878,7 @@ The set of arguments for constructing a GroupMapper resource.
 When `true`, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-groupNameLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L331">property <b>groupNameLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L331">property <b>groupNameLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupNameLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1886,7 +1886,7 @@ When `true`, groups that no longer exist within LDAP will be dropped in Keycloak
 The name of the LDAP attribute that is used in group objects for the name and RDN of the group. Typically `cn`.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-groupObjectClasses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L335">property <b>groupObjectClasses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L335">property <b>groupObjectClasses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupObjectClasses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1894,7 +1894,7 @@ The name of the LDAP attribute that is used in group objects for the name and RD
 List of strings representing the object classes for the group. Must contain at least one.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-groupsLdapFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L339">property <b>groupsLdapFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L339">property <b>groupsLdapFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsLdapFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1902,7 +1902,7 @@ List of strings representing the object classes for the group. Must contain at l
 When specified, adds an additional custom filter to be used when querying for groups. Must start with `(` and end with `)`.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-groupsPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L343">property <b>groupsPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L343">property <b>groupsPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1910,7 +1910,7 @@ When specified, adds an additional custom filter to be used when querying for gr
 Keycloak group path the LDAP groups are added to. For example if value `/Applications/App1` is used, then LDAP groups will be available in Keycloak under group `App1`, which is the child of top level group `Applications`. The configured group path must already exist in Keycloak when creating this mapper.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-ignoreMissingGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L347">property <b>ignoreMissingGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L347">property <b>ignoreMissingGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreMissingGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1918,7 +1918,7 @@ Keycloak group path the LDAP groups are added to. For example if value `/Applica
 When `true`, missing groups in the hierarchy will be ignored.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-ldapGroupsDn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L351">property <b>ldapGroupsDn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L351">property <b>ldapGroupsDn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapGroupsDn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1926,7 +1926,7 @@ When `true`, missing groups in the hierarchy will be ignored.
 The LDAP DN where groups can be found.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L355">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L355">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapUserFederationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1934,7 +1934,7 @@ The LDAP DN where groups can be found.
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-mappedGroupAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L359">property <b>mappedGroupAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L359">property <b>mappedGroupAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mappedGroupAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1942,7 +1942,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-memberofLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L363">property <b>memberofLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L363">property <b>memberofLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberofLdapAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1950,7 +1950,7 @@ Array of strings representing attributes on the LDAP group which will be mapped 
 Specifies the name of the LDAP attribute on the LDAP user that contains the groups the user is a member of. Defaults to `memberOf`.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-membershipAttributeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L367">property <b>membershipAttributeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L367">property <b>membershipAttributeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>membershipAttributeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1958,7 +1958,7 @@ Specifies the name of the LDAP attribute on the LDAP user that contains the grou
 Can be one of `DN` or `UID`. Defaults to `DN`.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-membershipLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L371">property <b>membershipLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L371">property <b>membershipLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>membershipLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1966,7 +1966,7 @@ Can be one of `DN` or `UID`. Defaults to `DN`.
 The name of the LDAP attribute that is used for membership mappings.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-membershipUserLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L375">property <b>membershipUserLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L375">property <b>membershipUserLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>membershipUserLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1974,7 +1974,7 @@ The name of the LDAP attribute that is used for membership mappings.
 The name of the LDAP attribute on a user that is used for membership mappings.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L379">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L379">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1982,7 +1982,7 @@ The name of the LDAP attribute on a user that is used for membership mappings.
 Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L383">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L383">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1990,7 +1990,7 @@ Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-preserveGroupInheritance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L387">property <b>preserveGroupInheritance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L387">property <b>preserveGroupInheritance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preserveGroupInheritance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1998,7 +1998,7 @@ Display name of this mapper when displayed in the console.
 When `true`, group inheritance will be propagated from LDAP to Keycloak. When `false`, all LDAP groups will be propagated as top level groups within Keycloak.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L391">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L391">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2006,7 +2006,7 @@ When `true`, group inheritance will be propagated from LDAP to Keycloak. When `f
 The realm that this LDAP mapper will exist in.
 
 <h4 class="pdoc-member-header" id="GroupMapperArgs-userRolesRetrieveStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L395">property <b>userRolesRetrieveStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L395">property <b>userRolesRetrieveStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userRolesRetrieveStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2014,7 +2014,7 @@ The realm that this LDAP mapper will exist in.
 Can be one of `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`, `GET_GROUPS_FROM_USER_MEMBEROF_ATTRIBUTE`, or `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE_RECURSIVELY`. Defaults to `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`.
 
 <h3 class="pdoc-module-header" id="GroupMapperState" data-link-title="GroupMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L245">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L245">
         interface <strong>GroupMapperState</strong>
     </a>
 </h3>
@@ -2024,7 +2024,7 @@ Can be one of `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`, `GET_GROUPS_FROM_USER_MEMBEROF_
 Input properties used for looking up and filtering GroupMapper resources.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-dropNonExistingGroupsDuringSync">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L249">property <b>dropNonExistingGroupsDuringSync</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L249">property <b>dropNonExistingGroupsDuringSync</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropNonExistingGroupsDuringSync?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2032,7 +2032,7 @@ Input properties used for looking up and filtering GroupMapper resources.
 When `true`, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-groupNameLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L253">property <b>groupNameLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L253">property <b>groupNameLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupNameLdapAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2040,7 +2040,7 @@ When `true`, groups that no longer exist within LDAP will be dropped in Keycloak
 The name of the LDAP attribute that is used in group objects for the name and RDN of the group. Typically `cn`.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-groupObjectClasses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L257">property <b>groupObjectClasses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L257">property <b>groupObjectClasses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupObjectClasses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2048,7 +2048,7 @@ The name of the LDAP attribute that is used in group objects for the name and RD
 List of strings representing the object classes for the group. Must contain at least one.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-groupsLdapFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L261">property <b>groupsLdapFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L261">property <b>groupsLdapFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsLdapFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2056,7 +2056,7 @@ List of strings representing the object classes for the group. Must contain at l
 When specified, adds an additional custom filter to be used when querying for groups. Must start with `(` and end with `)`.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-groupsPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L265">property <b>groupsPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L265">property <b>groupsPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2064,7 +2064,7 @@ When specified, adds an additional custom filter to be used when querying for gr
 Keycloak group path the LDAP groups are added to. For example if value `/Applications/App1` is used, then LDAP groups will be available in Keycloak under group `App1`, which is the child of top level group `Applications`. The configured group path must already exist in Keycloak when creating this mapper.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-ignoreMissingGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L269">property <b>ignoreMissingGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L269">property <b>ignoreMissingGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreMissingGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2072,7 +2072,7 @@ Keycloak group path the LDAP groups are added to. For example if value `/Applica
 When `true`, missing groups in the hierarchy will be ignored.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-ldapGroupsDn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L273">property <b>ldapGroupsDn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L273">property <b>ldapGroupsDn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapGroupsDn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2080,7 +2080,7 @@ When `true`, missing groups in the hierarchy will be ignored.
 The LDAP DN where groups can be found.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L277">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L277">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapUserFederationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2088,7 +2088,7 @@ The LDAP DN where groups can be found.
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-mappedGroupAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L281">property <b>mappedGroupAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L281">property <b>mappedGroupAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mappedGroupAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2096,7 +2096,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-memberofLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L285">property <b>memberofLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L285">property <b>memberofLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberofLdapAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2104,7 +2104,7 @@ Array of strings representing attributes on the LDAP group which will be mapped 
 Specifies the name of the LDAP attribute on the LDAP user that contains the groups the user is a member of. Defaults to `memberOf`.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-membershipAttributeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L289">property <b>membershipAttributeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L289">property <b>membershipAttributeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>membershipAttributeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2112,7 +2112,7 @@ Specifies the name of the LDAP attribute on the LDAP user that contains the grou
 Can be one of `DN` or `UID`. Defaults to `DN`.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-membershipLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L293">property <b>membershipLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L293">property <b>membershipLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>membershipLdapAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2120,7 +2120,7 @@ Can be one of `DN` or `UID`. Defaults to `DN`.
 The name of the LDAP attribute that is used for membership mappings.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-membershipUserLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L297">property <b>membershipUserLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L297">property <b>membershipUserLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>membershipUserLdapAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2128,7 +2128,7 @@ The name of the LDAP attribute that is used for membership mappings.
 The name of the LDAP attribute on a user that is used for membership mappings.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L301">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L301">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2136,7 +2136,7 @@ The name of the LDAP attribute on a user that is used for membership mappings.
 Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L305">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L305">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2144,7 +2144,7 @@ Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-preserveGroupInheritance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L309">property <b>preserveGroupInheritance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L309">property <b>preserveGroupInheritance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preserveGroupInheritance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2152,7 +2152,7 @@ Display name of this mapper when displayed in the console.
 When `true`, group inheritance will be propagated from LDAP to Keycloak. When `false`, all LDAP groups will be propagated as top level groups within Keycloak.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L313">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L313">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2160,7 +2160,7 @@ When `true`, group inheritance will be propagated from LDAP to Keycloak. When `f
 The realm that this LDAP mapper will exist in.
 
 <h4 class="pdoc-member-header" id="GroupMapperState-userRolesRetrieveStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/groupMapper.ts#L317">property <b>userRolesRetrieveStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/groupMapper.ts#L317">property <b>userRolesRetrieveStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userRolesRetrieveStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2168,7 +2168,7 @@ The realm that this LDAP mapper will exist in.
 Can be one of `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`, `GET_GROUPS_FROM_USER_MEMBEROF_ATTRIBUTE`, or `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE_RECURSIVELY`. Defaults to `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`.
 
 <h3 class="pdoc-module-header" id="HardcodedGroupMapperArgs" data-link-title="HardcodedGroupMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L120">
         interface <strong>HardcodedGroupMapperArgs</strong>
     </a>
 </h3>
@@ -2178,7 +2178,7 @@ Can be one of `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`, `GET_GROUPS_FROM_USER_MEMBEROF_
 The set of arguments for constructing a HardcodedGroupMapper resource.
 
 <h4 class="pdoc-member-header" id="HardcodedGroupMapperArgs-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L124">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L124">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2186,7 +2186,7 @@ The set of arguments for constructing a HardcodedGroupMapper resource.
 Group to grant to user.
 
 <h4 class="pdoc-member-header" id="HardcodedGroupMapperArgs-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L128">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L128">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapUserFederationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2194,7 +2194,7 @@ Group to grant to user.
 The ldap user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="HardcodedGroupMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L132">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L132">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2202,7 +2202,7 @@ The ldap user federation provider to attach this mapper to.
 Display name of the mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="HardcodedGroupMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L136">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L136">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2210,7 +2210,7 @@ Display name of the mapper when displayed in the console.
 The realm in which the ldap user federation provider exists.
 
 <h3 class="pdoc-module-header" id="HardcodedGroupMapperState" data-link-title="HardcodedGroupMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L98">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L98">
         interface <strong>HardcodedGroupMapperState</strong>
     </a>
 </h3>
@@ -2220,7 +2220,7 @@ The realm in which the ldap user federation provider exists.
 Input properties used for looking up and filtering HardcodedGroupMapper resources.
 
 <h4 class="pdoc-member-header" id="HardcodedGroupMapperState-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L102">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L102">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2228,7 +2228,7 @@ Input properties used for looking up and filtering HardcodedGroupMapper resource
 Group to grant to user.
 
 <h4 class="pdoc-member-header" id="HardcodedGroupMapperState-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L106">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L106">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapUserFederationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2236,7 +2236,7 @@ Group to grant to user.
 The ldap user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="HardcodedGroupMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L110">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L110">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2244,7 +2244,7 @@ The ldap user federation provider to attach this mapper to.
 Display name of the mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="HardcodedGroupMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L114">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedGroupMapper.ts#L114">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2252,7 +2252,7 @@ Display name of the mapper when displayed in the console.
 The realm in which the ldap user federation provider exists.
 
 <h3 class="pdoc-module-header" id="HardcodedRoleMapperArgs" data-link-title="HardcodedRoleMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L208">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L208">
         interface <strong>HardcodedRoleMapperArgs</strong>
     </a>
 </h3>
@@ -2262,7 +2262,7 @@ The realm in which the ldap user federation provider exists.
 The set of arguments for constructing a HardcodedRoleMapper resource.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapperArgs-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L212">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L212">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapUserFederationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2270,7 +2270,7 @@ The set of arguments for constructing a HardcodedRoleMapper resource.
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L216">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L216">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2278,7 +2278,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L220">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L220">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2286,7 +2286,7 @@ Display name of this mapper when displayed in the console.
 The realm that this LDAP mapper will exist in.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapperArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L224">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L224">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2294,7 +2294,7 @@ The realm that this LDAP mapper will exist in.
 The name of the role which should be assigned to the users. Client roles should use the format `{{client_id}}.{{client_role_name}}`.
 
 <h3 class="pdoc-module-header" id="HardcodedRoleMapperState" data-link-title="HardcodedRoleMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L186">
         interface <strong>HardcodedRoleMapperState</strong>
     </a>
 </h3>
@@ -2304,7 +2304,7 @@ The name of the role which should be assigned to the users. Client roles should 
 Input properties used for looking up and filtering HardcodedRoleMapper resources.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapperState-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L190">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L190">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapUserFederationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2312,7 +2312,7 @@ Input properties used for looking up and filtering HardcodedRoleMapper resources
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L194">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L194">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2320,7 +2320,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L198">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L198">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2328,7 +2328,7 @@ Display name of this mapper when displayed in the console.
 The realm that this LDAP mapper will exist in.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleMapperState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L202">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/hardcodedRoleMapper.ts#L202">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2336,7 +2336,7 @@ The realm that this LDAP mapper will exist in.
 The name of the role which should be assigned to the users. Client roles should use the format `{{client_id}}.{{client_role_name}}`.
 
 <h3 class="pdoc-module-header" id="MsadLdsUserAccountControlMapperArgs" data-link-title="MsadLdsUserAccountControlMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L155">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L155">
         interface <strong>MsadLdsUserAccountControlMapperArgs</strong>
     </a>
 </h3>
@@ -2346,7 +2346,7 @@ The name of the role which should be assigned to the users. Client roles should 
 The set of arguments for constructing a MsadLdsUserAccountControlMapper resource.
 
 <h4 class="pdoc-member-header" id="MsadLdsUserAccountControlMapperArgs-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L159">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L159">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapUserFederationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2354,7 +2354,7 @@ The set of arguments for constructing a MsadLdsUserAccountControlMapper resource
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="MsadLdsUserAccountControlMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L163">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L163">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2362,7 +2362,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="MsadLdsUserAccountControlMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L167">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L167">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2370,7 +2370,7 @@ Display name of this mapper when displayed in the console.
 The realm that this LDAP mapper will exist in.
 
 <h3 class="pdoc-module-header" id="MsadLdsUserAccountControlMapperState" data-link-title="MsadLdsUserAccountControlMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L137">
         interface <strong>MsadLdsUserAccountControlMapperState</strong>
     </a>
 </h3>
@@ -2380,7 +2380,7 @@ The realm that this LDAP mapper will exist in.
 Input properties used for looking up and filtering MsadLdsUserAccountControlMapper resources.
 
 <h4 class="pdoc-member-header" id="MsadLdsUserAccountControlMapperState-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L141">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L141">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapUserFederationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2388,7 +2388,7 @@ Input properties used for looking up and filtering MsadLdsUserAccountControlMapp
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="MsadLdsUserAccountControlMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L145">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L145">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2396,7 +2396,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="MsadLdsUserAccountControlMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L149">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadLdsUserAccountControlMapper.ts#L149">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2404,7 +2404,7 @@ Display name of this mapper when displayed in the console.
 The realm that this LDAP mapper will exist in.
 
 <h3 class="pdoc-module-header" id="MsadUserAccountControlMapperArgs" data-link-title="MsadUserAccountControlMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L165">
         interface <strong>MsadUserAccountControlMapperArgs</strong>
     </a>
 </h3>
@@ -2414,7 +2414,7 @@ The realm that this LDAP mapper will exist in.
 The set of arguments for constructing a MsadUserAccountControlMapper resource.
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapperArgs-ldapPasswordPolicyHintsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L169">property <b>ldapPasswordPolicyHintsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L169">property <b>ldapPasswordPolicyHintsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapPasswordPolicyHintsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2422,7 +2422,7 @@ The set of arguments for constructing a MsadUserAccountControlMapper resource.
 When `true`, advanced password policies, such as password hints and previous password history will be used when writing new passwords to AD. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapperArgs-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L173">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L173">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapUserFederationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2430,7 +2430,7 @@ When `true`, advanced password policies, such as password hints and previous pas
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L177">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L177">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2438,7 +2438,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L181">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L181">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2446,7 +2446,7 @@ Display name of this mapper when displayed in the console.
 The realm that this LDAP mapper will exist in.
 
 <h3 class="pdoc-module-header" id="MsadUserAccountControlMapperState" data-link-title="MsadUserAccountControlMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L143">
         interface <strong>MsadUserAccountControlMapperState</strong>
     </a>
 </h3>
@@ -2456,7 +2456,7 @@ The realm that this LDAP mapper will exist in.
 Input properties used for looking up and filtering MsadUserAccountControlMapper resources.
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapperState-ldapPasswordPolicyHintsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L147">property <b>ldapPasswordPolicyHintsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L147">property <b>ldapPasswordPolicyHintsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapPasswordPolicyHintsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2464,7 +2464,7 @@ Input properties used for looking up and filtering MsadUserAccountControlMapper 
 When `true`, advanced password policies, such as password hints and previous password history will be used when writing new passwords to AD. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapperState-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L151">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L151">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapUserFederationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2472,7 +2472,7 @@ When `true`, advanced password policies, such as password hints and previous pas
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L155">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L155">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2480,7 +2480,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="MsadUserAccountControlMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L159">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/msadUserAccountControlMapper.ts#L159">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2488,7 +2488,7 @@ Display name of this mapper when displayed in the console.
 The realm that this LDAP mapper will exist in.
 
 <h3 class="pdoc-module-header" id="RoleMapperArgs" data-link-title="RoleMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L170">
         interface <strong>RoleMapperArgs</strong>
     </a>
 </h3>
@@ -2498,17 +2498,17 @@ The realm that this LDAP mapper will exist in.
 The set of arguments for constructing a RoleMapper resource.
 
 <h4 class="pdoc-member-header" id="RoleMapperArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L171">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L171">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperArgs-ldapRolesDn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L172">property <b>ldapRolesDn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L172">property <b>ldapRolesDn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapRolesDn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperArgs-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L176">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L176">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapUserFederationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2516,32 +2516,32 @@ The set of arguments for constructing a RoleMapper resource.
 The ldap user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="RoleMapperArgs-memberofLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L177">property <b>memberofLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L177">property <b>memberofLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberofLdapAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperArgs-membershipAttributeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L178">property <b>membershipAttributeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L178">property <b>membershipAttributeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>membershipAttributeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperArgs-membershipLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L179">property <b>membershipLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L179">property <b>membershipLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>membershipLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperArgs-membershipUserLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L180">property <b>membershipUserLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L180">property <b>membershipUserLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>membershipUserLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperArgs-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L181">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L181">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L185">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L185">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2549,7 +2549,7 @@ The ldap user federation provider to attach this mapper to.
 Display name of the mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="RoleMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L189">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L189">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2557,32 +2557,32 @@ Display name of the mapper when displayed in the console.
 The realm in which the ldap user federation provider exists.
 
 <h4 class="pdoc-member-header" id="RoleMapperArgs-roleNameLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L190">property <b>roleNameLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L190">property <b>roleNameLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleNameLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperArgs-roleObjectClasses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L191">property <b>roleObjectClasses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L191">property <b>roleObjectClasses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleObjectClasses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperArgs-rolesLdapFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L192">property <b>rolesLdapFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L192">property <b>rolesLdapFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rolesLdapFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperArgs-useRealmRolesMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L193">property <b>useRealmRolesMapping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L193">property <b>useRealmRolesMapping</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useRealmRolesMapping?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperArgs-userRolesRetrieveStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L194">property <b>userRolesRetrieveStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L194">property <b>userRolesRetrieveStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userRolesRetrieveStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RoleMapperState" data-link-title="RoleMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L140">
         interface <strong>RoleMapperState</strong>
     </a>
 </h3>
@@ -2592,17 +2592,17 @@ The realm in which the ldap user federation provider exists.
 Input properties used for looking up and filtering RoleMapper resources.
 
 <h4 class="pdoc-member-header" id="RoleMapperState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L141">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L141">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperState-ldapRolesDn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L142">property <b>ldapRolesDn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L142">property <b>ldapRolesDn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapRolesDn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperState-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L146">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L146">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapUserFederationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2610,32 +2610,32 @@ Input properties used for looking up and filtering RoleMapper resources.
 The ldap user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="RoleMapperState-memberofLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L147">property <b>memberofLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L147">property <b>memberofLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberofLdapAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperState-membershipAttributeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L148">property <b>membershipAttributeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L148">property <b>membershipAttributeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>membershipAttributeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperState-membershipLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L149">property <b>membershipLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L149">property <b>membershipLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>membershipLdapAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperState-membershipUserLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L150">property <b>membershipUserLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L150">property <b>membershipUserLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>membershipUserLdapAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperState-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L151">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L151">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L155">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L155">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2643,7 +2643,7 @@ The ldap user federation provider to attach this mapper to.
 Display name of the mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="RoleMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L159">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L159">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2651,32 +2651,32 @@ Display name of the mapper when displayed in the console.
 The realm in which the ldap user federation provider exists.
 
 <h4 class="pdoc-member-header" id="RoleMapperState-roleNameLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L160">property <b>roleNameLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L160">property <b>roleNameLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleNameLdapAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperState-roleObjectClasses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L161">property <b>roleObjectClasses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L161">property <b>roleObjectClasses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleObjectClasses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperState-rolesLdapFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L162">property <b>rolesLdapFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L162">property <b>rolesLdapFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rolesLdapFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperState-useRealmRolesMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L163">property <b>useRealmRolesMapping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L163">property <b>useRealmRolesMapping</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useRealmRolesMapping?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleMapperState-userRolesRetrieveStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/roleMapper.ts#L164">property <b>userRolesRetrieveStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/roleMapper.ts#L164">property <b>userRolesRetrieveStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userRolesRetrieveStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="UserAttributeMapperArgs" data-link-title="UserAttributeMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L210">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L210">
         interface <strong>UserAttributeMapperArgs</strong>
     </a>
 </h3>
@@ -2686,7 +2686,7 @@ The realm in which the ldap user federation provider exists.
 The set of arguments for constructing a UserAttributeMapper resource.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapperArgs-alwaysReadValueFromLdap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L214">property <b>alwaysReadValueFromLdap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L214">property <b>alwaysReadValueFromLdap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alwaysReadValueFromLdap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2694,7 +2694,7 @@ The set of arguments for constructing a UserAttributeMapper resource.
 When `true`, the value fetched from LDAP will override the value stored in Keycloak. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapperArgs-isMandatoryInLdap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L218">property <b>isMandatoryInLdap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L218">property <b>isMandatoryInLdap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isMandatoryInLdap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2702,7 +2702,7 @@ When `true`, the value fetched from LDAP will override the value stored in Keycl
 When `true`, this attribute must exist in LDAP. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapperArgs-ldapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L222">property <b>ldapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L222">property <b>ldapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2710,7 +2710,7 @@ When `true`, this attribute must exist in LDAP. Defaults to `false`.
 Name of the mapped attribute on the LDAP object.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapperArgs-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L226">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L226">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapUserFederationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2718,7 +2718,7 @@ Name of the mapped attribute on the LDAP object.
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L230">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L230">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2726,7 +2726,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapperArgs-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L234">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L234">property <b>readOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2734,7 +2734,7 @@ Display name of this mapper when displayed in the console.
 When `true`, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L238">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L238">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2742,7 +2742,7 @@ When `true`, this attribute is not saved back to LDAP when the user attribute is
 The realm that this LDAP mapper will exist in.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapperArgs-userModelAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L242">property <b>userModelAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L242">property <b>userModelAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userModelAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2750,7 +2750,7 @@ The realm that this LDAP mapper will exist in.
 Name of the user property or attribute you want to map the LDAP attribute into.
 
 <h3 class="pdoc-module-header" id="UserAttributeMapperState" data-link-title="UserAttributeMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L172">
         interface <strong>UserAttributeMapperState</strong>
     </a>
 </h3>
@@ -2760,7 +2760,7 @@ Name of the user property or attribute you want to map the LDAP attribute into.
 Input properties used for looking up and filtering UserAttributeMapper resources.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapperState-alwaysReadValueFromLdap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L176">property <b>alwaysReadValueFromLdap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L176">property <b>alwaysReadValueFromLdap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alwaysReadValueFromLdap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2768,7 +2768,7 @@ Input properties used for looking up and filtering UserAttributeMapper resources
 When `true`, the value fetched from LDAP will override the value stored in Keycloak. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapperState-isMandatoryInLdap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L180">property <b>isMandatoryInLdap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L180">property <b>isMandatoryInLdap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isMandatoryInLdap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2776,7 +2776,7 @@ When `true`, the value fetched from LDAP will override the value stored in Keycl
 When `true`, this attribute must exist in LDAP. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapperState-ldapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L184">property <b>ldapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L184">property <b>ldapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2784,7 +2784,7 @@ When `true`, this attribute must exist in LDAP. Defaults to `false`.
 Name of the mapped attribute on the LDAP object.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapperState-ldapUserFederationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L188">property <b>ldapUserFederationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L188">property <b>ldapUserFederationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ldapUserFederationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2792,7 +2792,7 @@ Name of the mapped attribute on the LDAP object.
 The ID of the LDAP user federation provider to attach this mapper to.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L192">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L192">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2800,7 +2800,7 @@ The ID of the LDAP user federation provider to attach this mapper to.
 Display name of this mapper when displayed in the console.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapperState-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L196">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L196">property <b>readOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2808,7 +2808,7 @@ Display name of this mapper when displayed in the console.
 When `true`, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L200">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L200">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2816,7 +2816,7 @@ When `true`, this attribute is not saved back to LDAP when the user attribute is
 The realm that this LDAP mapper will exist in.
 
 <h4 class="pdoc-member-header" id="UserAttributeMapperState-userModelAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userAttributeMapper.ts#L204">property <b>userModelAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userAttributeMapper.ts#L204">property <b>userModelAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userModelAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2824,7 +2824,7 @@ The realm that this LDAP mapper will exist in.
 Name of the user property or attribute you want to map the LDAP attribute into.
 
 <h3 class="pdoc-module-header" id="UserFederationArgs" data-link-title="UserFederationArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L441">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L441">
         interface <strong>UserFederationArgs</strong>
     </a>
 </h3>
@@ -2834,7 +2834,7 @@ Name of the user property or attribute you want to map the LDAP attribute into.
 The set of arguments for constructing a UserFederation resource.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-batchSizeForSync">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L445">property <b>batchSizeForSync</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L445">property <b>batchSizeForSync</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchSizeForSync?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2842,7 +2842,7 @@ The set of arguments for constructing a UserFederation resource.
 The number of users to sync within a single transaction. Defaults to `1000`.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-bindCredential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L449">property <b>bindCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L449">property <b>bindCredential</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2850,7 +2850,7 @@ The number of users to sync within a single transaction. Defaults to `1000`.
 Password of LDAP admin. This attribute must be set if `bindDn` is set.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-bindDn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L453">property <b>bindDn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L453">property <b>bindDn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindDn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2858,7 +2858,7 @@ Password of LDAP admin. This attribute must be set if `bindDn` is set.
 DN of LDAP admin, which will be used by Keycloak to access LDAP server. This attribute must be set if `bindCredential` is set.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-cache">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L457">property <b>cache</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L457">property <b>cache</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cache?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#UserFederationCache'>UserFederationCache</a>&gt;;</code></pre>
@@ -2866,7 +2866,7 @@ DN of LDAP admin, which will be used by Keycloak to access LDAP server. This att
 A block containing the cache settings.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-cachePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L463">property <b>cachePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L463">property <b>cachePolicy</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2878,7 +2878,7 @@ use cache.policy instead
 **Deprecated** Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-changedSyncPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L467">property <b>changedSyncPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L467">property <b>changedSyncPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>changedSyncPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2886,7 +2886,7 @@ use cache.policy instead
 How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users sync.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-connectionTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L471">property <b>connectionTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L471">property <b>connectionTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2894,7 +2894,7 @@ How frequently Keycloak should sync changed LDAP users, in seconds. Omit this pr
 LDAP connection timeout in the format of a [Go duration string](https://golang.org/pkg/time/#Duration.String).
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-connectionUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L475">property <b>connectionUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L475">property <b>connectionUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2902,7 +2902,7 @@ LDAP connection timeout in the format of a [Go duration string](https://golang.o
 Connection URL to the LDAP server.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-customUserSearchFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L479">property <b>customUserSearchFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L479">property <b>customUserSearchFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customUserSearchFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2910,7 +2910,7 @@ Connection URL to the LDAP server.
 Additional LDAP filter for filtering searched users. Must begin with `(` and end with `)`.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-editMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L483">property <b>editMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L483">property <b>editMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>editMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2918,7 +2918,7 @@ Additional LDAP filter for filtering searched users. Must begin with `(` and end
 Can be one of `READ_ONLY`, `WRITABLE`, or `UNSYNCED`. `UNSYNCED` allows user data to be imported but not synced back to LDAP. Defaults to `READ_ONLY`.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L487">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L487">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2926,7 +2926,7 @@ Can be one of `READ_ONLY`, `WRITABLE`, or `UNSYNCED`. `UNSYNCED` allows user dat
 When `false`, this provider will not be used when performing queries for users. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-fullSyncPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L491">property <b>fullSyncPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L491">property <b>fullSyncPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fullSyncPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2934,7 +2934,7 @@ When `false`, this provider will not be used when performing queries for users. 
 How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-importEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L495">property <b>importEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L495">property <b>importEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>importEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2942,7 +2942,7 @@ How frequently Keycloak should sync all LDAP users, in seconds. Omit this proper
 When `true`, LDAP users will be imported into the Keycloak database. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-kerberos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L499">property <b>kerberos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L499">property <b>kerberos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kerberos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#UserFederationKerberos'>UserFederationKerberos</a>&gt;;</code></pre>
@@ -2950,7 +2950,7 @@ When `true`, LDAP users will be imported into the Keycloak database. Defaults to
 A block containing the kerberos settings.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L503">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L503">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2958,7 +2958,7 @@ A block containing the kerberos settings.
 Display name of the provider when displayed in the console.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-pagination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L507">property <b>pagination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L507">property <b>pagination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pagination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2966,7 +2966,7 @@ Display name of the provider when displayed in the console.
 When true, Keycloak assumes the LDAP server supports pagination. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L511">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L511">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2974,7 +2974,7 @@ When true, Keycloak assumes the LDAP server supports pagination. Defaults to `tr
 Priority of this provider when looking up users. Lower values are first. Defaults to `0`.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-rdnLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L515">property <b>rdnLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L515">property <b>rdnLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rdnLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2982,7 +2982,7 @@ Priority of this provider when looking up users. Lower values are first. Default
 Name of the LDAP attribute to use as the relative distinguished name.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-readTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L519">property <b>readTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L519">property <b>readTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2990,7 +2990,7 @@ Name of the LDAP attribute to use as the relative distinguished name.
 LDAP read timeout in the format of a [Go duration string](https://golang.org/pkg/time/#Duration.String).
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L523">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L523">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2998,7 +2998,7 @@ LDAP read timeout in the format of a [Go duration string](https://golang.org/pkg
 The realm that this provider will provide user federation for.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-searchScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L529">property <b>searchScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L529">property <b>searchScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>searchScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3008,7 +3008,7 @@ Can be one of `ONE_LEVEL` or `SUBTREE`:
 - `SUBTREE`: Search entire LDAP subtree.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-syncRegistrations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L533">property <b>syncRegistrations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L533">property <b>syncRegistrations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>syncRegistrations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3016,7 +3016,7 @@ Can be one of `ONE_LEVEL` or `SUBTREE`:
 When `true`, newly created users will be synced back to LDAP. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-useTruststoreSpi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L537">property <b>useTruststoreSpi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L537">property <b>useTruststoreSpi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useTruststoreSpi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3024,7 +3024,7 @@ When `true`, newly created users will be synced back to LDAP. Defaults to `false
 Can be one of `ALWAYS`, `ONLY_FOR_LDAPS`, or `NEVER`:
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-userObjectClasses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L541">property <b>userObjectClasses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L541">property <b>userObjectClasses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userObjectClasses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3032,7 +3032,7 @@ Can be one of `ALWAYS`, `ONLY_FOR_LDAPS`, or `NEVER`:
 Array of all values of LDAP objectClass attribute for users in LDAP. Must contain at least one.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-usernameLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L545">property <b>usernameLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L545">property <b>usernameLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usernameLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3040,7 +3040,7 @@ Array of all values of LDAP objectClass attribute for users in LDAP. Must contai
 Name of the LDAP attribute to use as the Keycloak username.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-usersDn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L549">property <b>usersDn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L549">property <b>usersDn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usersDn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3048,7 +3048,7 @@ Name of the LDAP attribute to use as the Keycloak username.
 Full DN of LDAP tree where your users are.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-uuidLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L553">property <b>uuidLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L553">property <b>uuidLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uuidLdapAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3056,7 +3056,7 @@ Full DN of LDAP tree where your users are.
 Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-validatePasswordPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L557">property <b>validatePasswordPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L557">property <b>validatePasswordPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validatePasswordPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3064,7 +3064,7 @@ Name of the LDAP attribute to use as a unique object identifier for objects in L
 When `true`, Keycloak will validate passwords using the realm policy before updating it.
 
 <h4 class="pdoc-member-header" id="UserFederationArgs-vendor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L561">property <b>vendor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L561">property <b>vendor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vendor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3072,7 +3072,7 @@ When `true`, Keycloak will validate passwords using the realm policy before upda
 Can be one of `OTHER`, `EDIRECTORY`, `AD`, `RHDS`, or `TIVOLI`. When this is selected in the GUI, it provides reasonable defaults for other fields. When used with the Keycloak API, this attribute does nothing, but is still required. Defaults to `OTHER`.
 
 <h3 class="pdoc-module-header" id="UserFederationState" data-link-title="UserFederationState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L315">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L315">
         interface <strong>UserFederationState</strong>
     </a>
 </h3>
@@ -3082,7 +3082,7 @@ Can be one of `OTHER`, `EDIRECTORY`, `AD`, `RHDS`, or `TIVOLI`. When this is sel
 Input properties used for looking up and filtering UserFederation resources.
 
 <h4 class="pdoc-member-header" id="UserFederationState-batchSizeForSync">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L319">property <b>batchSizeForSync</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L319">property <b>batchSizeForSync</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchSizeForSync?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3090,7 +3090,7 @@ Input properties used for looking up and filtering UserFederation resources.
 The number of users to sync within a single transaction. Defaults to `1000`.
 
 <h4 class="pdoc-member-header" id="UserFederationState-bindCredential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L323">property <b>bindCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L323">property <b>bindCredential</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3098,7 +3098,7 @@ The number of users to sync within a single transaction. Defaults to `1000`.
 Password of LDAP admin. This attribute must be set if `bindDn` is set.
 
 <h4 class="pdoc-member-header" id="UserFederationState-bindDn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L327">property <b>bindDn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L327">property <b>bindDn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindDn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3106,7 +3106,7 @@ Password of LDAP admin. This attribute must be set if `bindDn` is set.
 DN of LDAP admin, which will be used by Keycloak to access LDAP server. This attribute must be set if `bindCredential` is set.
 
 <h4 class="pdoc-member-header" id="UserFederationState-cache">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L331">property <b>cache</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L331">property <b>cache</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cache?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#UserFederationCache'>UserFederationCache</a>&gt;;</code></pre>
@@ -3114,7 +3114,7 @@ DN of LDAP admin, which will be used by Keycloak to access LDAP server. This att
 A block containing the cache settings.
 
 <h4 class="pdoc-member-header" id="UserFederationState-cachePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L337">property <b>cachePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L337">property <b>cachePolicy</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3126,7 +3126,7 @@ use cache.policy instead
 **Deprecated** Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
 
 <h4 class="pdoc-member-header" id="UserFederationState-changedSyncPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L341">property <b>changedSyncPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L341">property <b>changedSyncPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>changedSyncPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3134,7 +3134,7 @@ use cache.policy instead
 How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users sync.
 
 <h4 class="pdoc-member-header" id="UserFederationState-connectionTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L345">property <b>connectionTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L345">property <b>connectionTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3142,7 +3142,7 @@ How frequently Keycloak should sync changed LDAP users, in seconds. Omit this pr
 LDAP connection timeout in the format of a [Go duration string](https://golang.org/pkg/time/#Duration.String).
 
 <h4 class="pdoc-member-header" id="UserFederationState-connectionUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L349">property <b>connectionUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L349">property <b>connectionUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3150,7 +3150,7 @@ LDAP connection timeout in the format of a [Go duration string](https://golang.o
 Connection URL to the LDAP server.
 
 <h4 class="pdoc-member-header" id="UserFederationState-customUserSearchFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L353">property <b>customUserSearchFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L353">property <b>customUserSearchFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customUserSearchFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3158,7 +3158,7 @@ Connection URL to the LDAP server.
 Additional LDAP filter for filtering searched users. Must begin with `(` and end with `)`.
 
 <h4 class="pdoc-member-header" id="UserFederationState-editMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L357">property <b>editMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L357">property <b>editMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>editMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3166,7 +3166,7 @@ Additional LDAP filter for filtering searched users. Must begin with `(` and end
 Can be one of `READ_ONLY`, `WRITABLE`, or `UNSYNCED`. `UNSYNCED` allows user data to be imported but not synced back to LDAP. Defaults to `READ_ONLY`.
 
 <h4 class="pdoc-member-header" id="UserFederationState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L361">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L361">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3174,7 +3174,7 @@ Can be one of `READ_ONLY`, `WRITABLE`, or `UNSYNCED`. `UNSYNCED` allows user dat
 When `false`, this provider will not be used when performing queries for users. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserFederationState-fullSyncPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L365">property <b>fullSyncPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L365">property <b>fullSyncPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fullSyncPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3182,7 +3182,7 @@ When `false`, this provider will not be used when performing queries for users. 
 How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
 
 <h4 class="pdoc-member-header" id="UserFederationState-importEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L369">property <b>importEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L369">property <b>importEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>importEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3190,7 +3190,7 @@ How frequently Keycloak should sync all LDAP users, in seconds. Omit this proper
 When `true`, LDAP users will be imported into the Keycloak database. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserFederationState-kerberos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L373">property <b>kerberos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L373">property <b>kerberos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kerberos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#UserFederationKerberos'>UserFederationKerberos</a>&gt;;</code></pre>
@@ -3198,7 +3198,7 @@ When `true`, LDAP users will be imported into the Keycloak database. Defaults to
 A block containing the kerberos settings.
 
 <h4 class="pdoc-member-header" id="UserFederationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L377">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L377">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3206,7 +3206,7 @@ A block containing the kerberos settings.
 Display name of the provider when displayed in the console.
 
 <h4 class="pdoc-member-header" id="UserFederationState-pagination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L381">property <b>pagination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L381">property <b>pagination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pagination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3214,7 +3214,7 @@ Display name of the provider when displayed in the console.
 When true, Keycloak assumes the LDAP server supports pagination. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserFederationState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L385">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L385">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3222,7 +3222,7 @@ When true, Keycloak assumes the LDAP server supports pagination. Defaults to `tr
 Priority of this provider when looking up users. Lower values are first. Defaults to `0`.
 
 <h4 class="pdoc-member-header" id="UserFederationState-rdnLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L389">property <b>rdnLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L389">property <b>rdnLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rdnLdapAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3230,7 +3230,7 @@ Priority of this provider when looking up users. Lower values are first. Default
 Name of the LDAP attribute to use as the relative distinguished name.
 
 <h4 class="pdoc-member-header" id="UserFederationState-readTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L393">property <b>readTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L393">property <b>readTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3238,7 +3238,7 @@ Name of the LDAP attribute to use as the relative distinguished name.
 LDAP read timeout in the format of a [Go duration string](https://golang.org/pkg/time/#Duration.String).
 
 <h4 class="pdoc-member-header" id="UserFederationState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L397">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L397">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3246,7 +3246,7 @@ LDAP read timeout in the format of a [Go duration string](https://golang.org/pkg
 The realm that this provider will provide user federation for.
 
 <h4 class="pdoc-member-header" id="UserFederationState-searchScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L403">property <b>searchScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L403">property <b>searchScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>searchScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3256,7 +3256,7 @@ Can be one of `ONE_LEVEL` or `SUBTREE`:
 - `SUBTREE`: Search entire LDAP subtree.
 
 <h4 class="pdoc-member-header" id="UserFederationState-syncRegistrations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L407">property <b>syncRegistrations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L407">property <b>syncRegistrations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>syncRegistrations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3264,7 +3264,7 @@ Can be one of `ONE_LEVEL` or `SUBTREE`:
 When `true`, newly created users will be synced back to LDAP. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserFederationState-useTruststoreSpi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L411">property <b>useTruststoreSpi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L411">property <b>useTruststoreSpi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useTruststoreSpi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3272,7 +3272,7 @@ When `true`, newly created users will be synced back to LDAP. Defaults to `false
 Can be one of `ALWAYS`, `ONLY_FOR_LDAPS`, or `NEVER`:
 
 <h4 class="pdoc-member-header" id="UserFederationState-userObjectClasses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L415">property <b>userObjectClasses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L415">property <b>userObjectClasses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userObjectClasses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3280,7 +3280,7 @@ Can be one of `ALWAYS`, `ONLY_FOR_LDAPS`, or `NEVER`:
 Array of all values of LDAP objectClass attribute for users in LDAP. Must contain at least one.
 
 <h4 class="pdoc-member-header" id="UserFederationState-usernameLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L419">property <b>usernameLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L419">property <b>usernameLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usernameLdapAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3288,7 +3288,7 @@ Array of all values of LDAP objectClass attribute for users in LDAP. Must contai
 Name of the LDAP attribute to use as the Keycloak username.
 
 <h4 class="pdoc-member-header" id="UserFederationState-usersDn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L423">property <b>usersDn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L423">property <b>usersDn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usersDn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3296,7 +3296,7 @@ Name of the LDAP attribute to use as the Keycloak username.
 Full DN of LDAP tree where your users are.
 
 <h4 class="pdoc-member-header" id="UserFederationState-uuidLdapAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L427">property <b>uuidLdapAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L427">property <b>uuidLdapAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uuidLdapAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3304,7 +3304,7 @@ Full DN of LDAP tree where your users are.
 Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.
 
 <h4 class="pdoc-member-header" id="UserFederationState-validatePasswordPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L431">property <b>validatePasswordPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L431">property <b>validatePasswordPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validatePasswordPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3312,7 +3312,7 @@ Name of the LDAP attribute to use as a unique object identifier for objects in L
 When `true`, Keycloak will validate passwords using the realm policy before updating it.
 
 <h4 class="pdoc-member-header" id="UserFederationState-vendor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/90cf5322bda063231fc908564343d879828df6f2/sdk/nodejs/ldap/userFederation.ts#L435">property <b>vendor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/1d551cf7ecc66c1ce7bf00d8fadc16b50a234068/sdk/nodejs/ldap/userFederation.ts#L435">property <b>vendor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vendor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
