@@ -42,7 +42,7 @@ A Pulumi package for creating and managing auth0 cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`auth0` Terraform Provider](https://github.com/alexkappa/terraform-provider-auth0).</dd>
 	<dt>Version</dt>
-	<dd>1.5.2</dd>
+	<dd>1.6.0</dd>
 </dl>
 
 

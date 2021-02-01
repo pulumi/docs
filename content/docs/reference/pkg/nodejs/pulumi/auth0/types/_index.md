@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/auth0 | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/auth0 package."
-git_sha: "1719620f59c02a0ddcba3cc97c837418776cbae6"
+git_sha: "88e23b78f55d924614b96c206b5c728e0a6e6254"
 block_external_search_index: true
 ---
 
