@@ -1,6 +1,6 @@
 ---
 title: "Write once, use anywhere with multi-language components"
-date: 2021-02-04
+date: 2021-02-09
 draft: false
 meta_desc: Multi-language Pulumi components can be used from all supported languages - Python, Go, .NET, and TypeScript.
 meta_image: meta.png
@@ -29,6 +29,10 @@ of a much larger community.
 Multi-language component support allows component authors to project their API into all Pulumi-supported languages
 idiomatically and without requiring knowledge of all of these languages. First-class authoring support for multi-language
 components is in the works.
+
+Check out our recent Modern Infrastructure Wednesday video to see this feature in action!
+
+{{< youtube "gxLyAr0lUg0?rel=0" >}}
 
 <!-- markdownlint-disable url -->
 [EKS package]: {{< relref "/docs/reference/pkg/eks" >}}
