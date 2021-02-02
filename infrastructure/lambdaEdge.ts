@@ -48,13 +48,8 @@ export class LambdaEdge extends pulumi.ComponentResource {
                 }],
                 Version: "2012-10-17",
             },
-        },
-        {
-            parent: this,
-            // The items in the policy's Service list are returned by AWS in an unreliable order,
-            // so we ignore any diffs to this property as a whole.
-            ignoreChanges: [ "assumeRolePolicy" ]
-        });
+        // tslint:disable-next-line:align
+        }, { parent: this });
 
         const rolePolicy = new aws.iam.RolePolicy("lambdaCloudWatchPolicy", {
             role: this.role,
