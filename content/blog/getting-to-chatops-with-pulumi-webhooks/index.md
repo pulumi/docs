@@ -142,8 +142,7 @@ That's it! As stacks are created, updated, and so on, the webhook
 handler will be notified and you can start building any custom actions
 you can think of.
 
-For our initial release, there are three kinds of webhook events. But
-we'll quickly be expanding coverage in the coming weeks.
+There are three kinds of webhook events.
 
 | **Event Type**                    | **Trigger**
 | --------------------------------- | ----------------------------------
