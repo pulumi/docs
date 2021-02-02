@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/gcp | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/gcp package."
-git_sha: "5c935b05d99cd9c17d3f0db276edab8124e8c4fa"
+git_sha: "4687b672ca57745f73d83956f1fd12f569327169"
 block_external_search_index: true
 ---
 

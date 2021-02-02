@@ -12,10 +12,15 @@ meta_desc: "Documentation for the gcp.compute.RegionInstanceGroupManager resourc
 
 The Google Compute Engine Regional Instance Group Manager API creates and manages pools
 of homogeneous Compute Engine virtual machine instances from a common instance
-template. For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups)
-and [API](https://cloud.google.com/compute/docs/reference/latest/regionInstanceGroupManagers)
+template.
 
-> **Note:** Use [gcp.compute.InstanceGroupManager](https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html) to create a single-zone instance group manager.
+To get more information about regionInstanceGroupManagers, see:
+
+* [API documentation](https://cloud.google.com/compute/docs/reference/latest/regionInstanceGroupManagers)
+* How-to Guides
+    * [Regional Instance Groups Guide](https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups)
+
+> **Note:** Use [gcp.compute.InstanceGroupManager](https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html) to create a zonal instance group manager.
 
 {{% examples %}}
 ## Example Usage
@@ -304,7 +309,7 @@ const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.RegionInstanceGroupManager">RegionInstanceGroupManager</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing_policies</span><span class="p">:</span> <span class="nx">Optional[RegionInstanceGroupManagerAutoHealingPoliciesArgs]</span> = None<span class="p">, </span><span class="nx">base_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distribution_policy_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionInstanceGroupManagerNamedPortArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stateful_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionInstanceGroupManagerStatefulDiskArgs]]</span> = None<span class="p">, </span><span class="nx">target_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[RegionInstanceGroupManagerUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionInstanceGroupManagerVersionArgs]]</span> = None<span class="p">, </span><span class="nx">wait_for_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.RegionInstanceGroupManager">RegionInstanceGroupManager</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing_policies</span><span class="p">:</span> <span class="nx">Optional[RegionInstanceGroupManagerAutoHealingPoliciesArgs]</span> = None<span class="p">, </span><span class="nx">base_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distribution_policy_target_shape</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distribution_policy_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionInstanceGroupManagerNamedPortArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stateful_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionInstanceGroupManagerStatefulDiskArgs]]</span> = None<span class="p">, </span><span class="nx">target_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[RegionInstanceGroupManagerUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionInstanceGroupManagerVersionArgs]]</span> = None<span class="p">, </span><span class="nx">wait_for_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -526,6 +531,16 @@ group manager.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="distributionpolicytargetshape_csharp">
+<a href="#distributionpolicytargetshape_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Policy<wbr>Target<wbr>Shape</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The shape to which the group converges either proactively or on resize events (depending on the value set in update_policy.0.instance_redistribution_type). For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/regional-mig-distribution-shape).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="distributionpolicyzones_csharp">
 <a href="#distributionpolicyzones_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Policy<wbr>Zones</a>
 </span>
@@ -685,6 +700,16 @@ group. You can specify only one value. Structure is documented below. For more i
     </dt>
     <dd>{{% md %}}An optional textual description of the instance
 group manager.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="distributionpolicytargetshape_go">
+<a href="#distributionpolicytargetshape_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Policy<wbr>Target<wbr>Shape</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The shape to which the group converges either proactively or on resize events (depending on the value set in update_policy.0.instance_redistribution_type). For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/regional-mig-distribution-shape).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -850,6 +875,16 @@ group manager.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="distributionpolicytargetshape_nodejs">
+<a href="#distributionpolicytargetshape_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Policy<wbr>Target<wbr>Shape</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The shape to which the group converges either proactively or on resize events (depending on the value set in update_policy.0.instance_redistribution_type). For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/regional-mig-distribution-shape).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="distributionpolicyzones_nodejs">
 <a href="#distributionpolicyzones_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Policy<wbr>Zones</a>
 </span>
@@ -1009,6 +1044,16 @@ group. You can specify only one value. Structure is documented below. For more i
     </dt>
     <dd>{{% md %}}An optional textual description of the instance
 group manager.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="distribution_policy_target_shape_python">
+<a href="#distribution_policy_target_shape_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>policy_<wbr>target_<wbr>shape</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The shape to which the group converges either proactively or on resize events (depending on the value set in update_policy.0.instance_redistribution_type). For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/regional-mig-distribution-shape).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1320,7 +1365,7 @@ Get an existing RegionInstanceGroupManager resource's state with the given name,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing_policies</span><span class="p">:</span> <span class="nx">Optional[RegionInstanceGroupManagerAutoHealingPoliciesArgs]</span> = None<span class="p">, </span><span class="nx">base_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distribution_policy_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionInstanceGroupManagerNamedPortArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stateful_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionInstanceGroupManagerStatefulDiskArgs]]</span> = None<span class="p">, </span><span class="nx">target_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[RegionInstanceGroupManagerUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionInstanceGroupManagerVersionArgs]]</span> = None<span class="p">, </span><span class="nx">wait_for_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> RegionInstanceGroupManager</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing_policies</span><span class="p">:</span> <span class="nx">Optional[RegionInstanceGroupManagerAutoHealingPoliciesArgs]</span> = None<span class="p">, </span><span class="nx">base_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distribution_policy_target_shape</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distribution_policy_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionInstanceGroupManagerNamedPortArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stateful_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionInstanceGroupManagerStatefulDiskArgs]]</span> = None<span class="p">, </span><span class="nx">target_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[RegionInstanceGroupManagerUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionInstanceGroupManagerVersionArgs]]</span> = None<span class="p">, </span><span class="nx">wait_for_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> RegionInstanceGroupManager</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1469,6 +1514,16 @@ name.
     </dt>
     <dd>{{% md %}}An optional textual description of the instance
 group manager.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_distributionpolicytargetshape_csharp">
+<a href="#state_distributionpolicytargetshape_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Policy<wbr>Target<wbr>Shape</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The shape to which the group converges either proactively or on resize events (depending on the value set in update_policy.0.instance_redistribution_type). For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/regional-mig-distribution-shape).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1664,6 +1719,16 @@ group manager.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_distributionpolicytargetshape_go">
+<a href="#state_distributionpolicytargetshape_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Policy<wbr>Target<wbr>Shape</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The shape to which the group converges either proactively or on resize events (depending on the value set in update_policy.0.instance_redistribution_type). For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/regional-mig-distribution-shape).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_distributionpolicyzones_go">
 <a href="#state_distributionpolicyzones_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Policy<wbr>Zones</a>
 </span>
@@ -1856,6 +1921,16 @@ group manager.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_distributionpolicytargetshape_nodejs">
+<a href="#state_distributionpolicytargetshape_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Policy<wbr>Target<wbr>Shape</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The shape to which the group converges either proactively or on resize events (depending on the value set in update_policy.0.instance_redistribution_type). For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/regional-mig-distribution-shape).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_distributionpolicyzones_nodejs">
 <a href="#state_distributionpolicyzones_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Policy<wbr>Zones</a>
 </span>
@@ -2045,6 +2120,16 @@ name.
     </dt>
     <dd>{{% md %}}An optional textual description of the instance
 group manager.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_distribution_policy_target_shape_python">
+<a href="#state_distribution_policy_target_shape_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>policy_<wbr>target_<wbr>shape</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The shape to which the group converges either proactively or on resize events (depending on the value set in update_policy.0.instance_redistribution_type). For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/regional-mig-distribution-shape).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

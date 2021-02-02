@@ -3,7 +3,7 @@ title: "Module cloudasset"
 title_tag: "Module cloudasset | Package @pulumi/gcp | Node.js SDK"
 linktitle: "cloudasset"
 meta_desc: "Explore members of the cloudasset module in the @pulumi/gcp package."
-git_sha: "5c935b05d99cd9c17d3f0db276edab8124e8c4fa"
+git_sha: "4687b672ca57745f73d83956f1fd12f569327169"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="FolderFeed" data-link-title="FolderFeed">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L31">
         Resource <strong>FolderFeed</strong>
     </a>
 </h3>
@@ -66,7 +66,7 @@ FolderFeed can be imported using any of these accepted formats
 ```
 
 <h4 class="pdoc-member-header" id="FolderFeed-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L114"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L114"> <b>constructor</b></a>
 </h4>
 
 
@@ -80,7 +80,7 @@ Create a FolderFeed resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FolderFeed-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -91,14 +91,14 @@ Get an existing FolderFeed resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FolderFeed-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FolderFeed-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -109,7 +109,7 @@ Returns true if the given object is an instance of FolderFeed.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FolderFeed-assetNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L65">property <b>assetNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L65">property <b>assetNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assetNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -120,7 +120,7 @@ exported to the feed. For example: //compute.googleapis.com/projects/my_project_
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
 
 <h4 class="pdoc-member-header" id="FolderFeed-assetTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L73">property <b>assetTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L73">property <b>assetTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assetTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -132,7 +132,7 @@ See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a li
 supported asset types.
 
 <h4 class="pdoc-member-header" id="FolderFeed-billingProject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L79">property <b>billingProject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L79">property <b>billingProject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>billingProject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -142,7 +142,7 @@ destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing.
 
 <h4 class="pdoc-member-header" id="FolderFeed-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L88">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L88">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FolderFeedCondition'>FolderFeedCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -155,7 +155,7 @@ condition are optional.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FolderFeed-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L93">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L93">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ Asset content type. If not specified, no content but the asset name and type wil
 Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
 
 <h4 class="pdoc-member-header" id="FolderFeed-feedId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L97">property <b>feedId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L97">property <b>feedId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>feedId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -172,7 +172,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
 This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
 
 <h4 class="pdoc-member-header" id="FolderFeed-feedOutputConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L102">property <b>feedOutputConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L102">property <b>feedOutputConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>feedOutputConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FolderFeedFeedOutputConfig'>FolderFeedFeedOutputConfig</a>&gt;;</code></pre>
@@ -181,7 +181,7 @@ Output configuration for asset feed destination.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FolderFeed-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L106">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L106">property <b>folder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>folder: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -189,7 +189,7 @@ Structure is documented below.
 The folder this feed should be created in.
 
 <h4 class="pdoc-member-header" id="FolderFeed-folderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L110">property <b>folderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L110">property <b>folderId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>folderId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -197,7 +197,7 @@ The folder this feed should be created in.
 The ID of the folder where this feed has been created. Both [FOLDER_NUMBER] and folders/[FOLDER_NUMBER] are accepted.
 
 <h4 class="pdoc-member-header" id="FolderFeed-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -206,7 +206,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FolderFeed-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L114">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L114">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -214,7 +214,7 @@ deployments and may be missing (undefined) during planning phases.
 The format will be folders/{folder_number}/feeds/{client-assigned_feed_identifier}.
 
 <h4 class="pdoc-member-header" id="FolderFeed-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -223,7 +223,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="OrganizationFeed" data-link-title="OrganizationFeed">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L31">
         Resource <strong>OrganizationFeed</strong>
     </a>
 </h3>
@@ -253,7 +253,7 @@ OrganizationFeed can be imported using any of these accepted formats
 ```
 
 <h4 class="pdoc-member-header" id="OrganizationFeed-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L110"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L110"> <b>constructor</b></a>
 </h4>
 
 
@@ -267,7 +267,7 @@ Create a OrganizationFeed resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OrganizationFeed-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -278,14 +278,14 @@ Get an existing OrganizationFeed resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OrganizationFeed-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OrganizationFeed-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -296,7 +296,7 @@ Returns true if the given object is an instance of OrganizationFeed.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OrganizationFeed-assetNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L65">property <b>assetNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L65">property <b>assetNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assetNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -307,7 +307,7 @@ exported to the feed. For example: //compute.googleapis.com/projects/my_project_
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
 
 <h4 class="pdoc-member-header" id="OrganizationFeed-assetTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L73">property <b>assetTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L73">property <b>assetTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assetTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -319,7 +319,7 @@ See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a li
 supported asset types.
 
 <h4 class="pdoc-member-header" id="OrganizationFeed-billingProject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L79">property <b>billingProject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L79">property <b>billingProject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>billingProject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -329,7 +329,7 @@ destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing.
 
 <h4 class="pdoc-member-header" id="OrganizationFeed-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L88">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L88">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#OrganizationFeedCondition'>OrganizationFeedCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -342,7 +342,7 @@ condition are optional.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="OrganizationFeed-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L93">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L93">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -351,7 +351,7 @@ Asset content type. If not specified, no content but the asset name and type wil
 Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
 
 <h4 class="pdoc-member-header" id="OrganizationFeed-feedId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L97">property <b>feedId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L97">property <b>feedId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>feedId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -359,7 +359,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
 This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
 
 <h4 class="pdoc-member-header" id="OrganizationFeed-feedOutputConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L102">property <b>feedOutputConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L102">property <b>feedOutputConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>feedOutputConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#OrganizationFeedFeedOutputConfig'>OrganizationFeedFeedOutputConfig</a>&gt;;</code></pre>
@@ -368,7 +368,7 @@ Output configuration for asset feed destination.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="OrganizationFeed-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -377,7 +377,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OrganizationFeed-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L106">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L106">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -385,7 +385,7 @@ deployments and may be missing (undefined) during planning phases.
 The format will be organizations/{organization_number}/feeds/{client-assigned_feed_identifier}.
 
 <h4 class="pdoc-member-header" id="OrganizationFeed-orgId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L110">property <b>orgId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L110">property <b>orgId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>orgId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -393,7 +393,7 @@ The format will be organizations/{organization_number}/feeds/{client-assigned_fe
 The organization this feed should be created in.
 
 <h4 class="pdoc-member-header" id="OrganizationFeed-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -402,7 +402,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ProjectFeed" data-link-title="ProjectFeed">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L35">
         Resource <strong>ProjectFeed</strong>
     </a>
 </h3>
@@ -436,7 +436,7 @@ ProjectFeed can be imported using any of these accepted formats
 ```
 
 <h4 class="pdoc-member-header" id="ProjectFeed-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L116"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L116"> <b>constructor</b></a>
 </h4>
 
 
@@ -450,7 +450,7 @@ Create a ProjectFeed resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ProjectFeed-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -461,14 +461,14 @@ Get an existing ProjectFeed resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ProjectFeed-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ProjectFeed-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -479,7 +479,7 @@ Returns true if the given object is an instance of ProjectFeed.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ProjectFeed-assetNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L69">property <b>assetNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L69">property <b>assetNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assetNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -490,7 +490,7 @@ exported to the feed. For example: //compute.googleapis.com/projects/my_project_
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
 
 <h4 class="pdoc-member-header" id="ProjectFeed-assetTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L77">property <b>assetTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L77">property <b>assetTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assetTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -502,7 +502,7 @@ See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a li
 supported asset types.
 
 <h4 class="pdoc-member-header" id="ProjectFeed-billingProject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L84">property <b>billingProject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L84">property <b>billingProject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>billingProject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -513,7 +513,7 @@ enablement check, quota, and billing. If not specified, the resource's
 project will be used.
 
 <h4 class="pdoc-member-header" id="ProjectFeed-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L93">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L93">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ProjectFeedCondition'>ProjectFeedCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -526,7 +526,7 @@ condition are optional.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ProjectFeed-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L98">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L98">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -535,7 +535,7 @@ Asset content type. If not specified, no content but the asset name and type wil
 Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
 
 <h4 class="pdoc-member-header" id="ProjectFeed-feedId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L102">property <b>feedId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L102">property <b>feedId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>feedId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -543,7 +543,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
 This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
 
 <h4 class="pdoc-member-header" id="ProjectFeed-feedOutputConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L107">property <b>feedOutputConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L107">property <b>feedOutputConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>feedOutputConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ProjectFeedFeedOutputConfig'>ProjectFeedFeedOutputConfig</a>&gt;;</code></pre>
@@ -552,7 +552,7 @@ Output configuration for asset feed destination.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ProjectFeed-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -561,7 +561,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ProjectFeed-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L111">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L111">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -569,7 +569,7 @@ deployments and may be missing (undefined) during planning phases.
 The format will be projects/{projectNumber}/feeds/{client-assigned_feed_identifier}.
 
 <h4 class="pdoc-member-header" id="ProjectFeed-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L116">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L116">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -578,7 +578,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ProjectFeed-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -590,7 +590,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="FolderFeedArgs" data-link-title="FolderFeedArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L239">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L239">
         interface <strong>FolderFeedArgs</strong>
     </a>
 </h3>
@@ -600,7 +600,7 @@ deployments.
 The set of arguments for constructing a FolderFeed resource.
 
 <h4 class="pdoc-member-header" id="FolderFeedArgs-assetNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L246">property <b>assetNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L246">property <b>assetNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assetNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -611,7 +611,7 @@ exported to the feed. For example: //compute.googleapis.com/projects/my_project_
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
 
 <h4 class="pdoc-member-header" id="FolderFeedArgs-assetTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L254">property <b>assetTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L254">property <b>assetTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assetTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -623,7 +623,7 @@ See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a li
 supported asset types.
 
 <h4 class="pdoc-member-header" id="FolderFeedArgs-billingProject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L260">property <b>billingProject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L260">property <b>billingProject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingProject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -633,7 +633,7 @@ destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing.
 
 <h4 class="pdoc-member-header" id="FolderFeedArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L269">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L269">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FolderFeedCondition'>FolderFeedCondition</a>&gt;;</code></pre>
@@ -646,7 +646,7 @@ condition are optional.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FolderFeedArgs-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L274">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L274">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -655,7 +655,7 @@ Asset content type. If not specified, no content but the asset name and type wil
 Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
 
 <h4 class="pdoc-member-header" id="FolderFeedArgs-feedId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L278">property <b>feedId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L278">property <b>feedId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>feedId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -663,7 +663,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
 This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
 
 <h4 class="pdoc-member-header" id="FolderFeedArgs-feedOutputConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L283">property <b>feedOutputConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L283">property <b>feedOutputConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>feedOutputConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FolderFeedFeedOutputConfig'>FolderFeedFeedOutputConfig</a>&gt;;</code></pre>
@@ -672,7 +672,7 @@ Output configuration for asset feed destination.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FolderFeedArgs-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L287">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L287">property <b>folder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folder: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -680,7 +680,7 @@ Structure is documented below.
 The folder this feed should be created in.
 
 <h3 class="pdoc-module-header" id="FolderFeedState" data-link-title="FolderFeedState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L177">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L177">
         interface <strong>FolderFeedState</strong>
     </a>
 </h3>
@@ -690,7 +690,7 @@ The folder this feed should be created in.
 Input properties used for looking up and filtering FolderFeed resources.
 
 <h4 class="pdoc-member-header" id="FolderFeedState-assetNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L184">property <b>assetNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L184">property <b>assetNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assetNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -701,7 +701,7 @@ exported to the feed. For example: //compute.googleapis.com/projects/my_project_
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
 
 <h4 class="pdoc-member-header" id="FolderFeedState-assetTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L192">property <b>assetTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L192">property <b>assetTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assetTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -713,7 +713,7 @@ See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a li
 supported asset types.
 
 <h4 class="pdoc-member-header" id="FolderFeedState-billingProject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L198">property <b>billingProject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L198">property <b>billingProject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingProject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -723,7 +723,7 @@ destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing.
 
 <h4 class="pdoc-member-header" id="FolderFeedState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L207">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L207">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FolderFeedCondition'>FolderFeedCondition</a>&gt;;</code></pre>
@@ -736,7 +736,7 @@ condition are optional.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FolderFeedState-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L212">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L212">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -745,7 +745,7 @@ Asset content type. If not specified, no content but the asset name and type wil
 Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
 
 <h4 class="pdoc-member-header" id="FolderFeedState-feedId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L216">property <b>feedId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L216">property <b>feedId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>feedId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -753,7 +753,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
 This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
 
 <h4 class="pdoc-member-header" id="FolderFeedState-feedOutputConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L221">property <b>feedOutputConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L221">property <b>feedOutputConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>feedOutputConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FolderFeedFeedOutputConfig'>FolderFeedFeedOutputConfig</a>&gt;;</code></pre>
@@ -762,7 +762,7 @@ Output configuration for asset feed destination.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FolderFeedState-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L225">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L225">property <b>folder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folder?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -770,7 +770,7 @@ Structure is documented below.
 The folder this feed should be created in.
 
 <h4 class="pdoc-member-header" id="FolderFeedState-folderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L229">property <b>folderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L229">property <b>folderId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folderId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -778,7 +778,7 @@ The folder this feed should be created in.
 The ID of the folder where this feed has been created. Both [FOLDER_NUMBER] and folders/[FOLDER_NUMBER] are accepted.
 
 <h4 class="pdoc-member-header" id="FolderFeedState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/folderFeed.ts#L233">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/folderFeed.ts#L233">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -786,7 +786,7 @@ The ID of the folder where this feed has been created. Both [FOLDER_NUMBER] and 
 The format will be folders/{folder_number}/feeds/{client-assigned_feed_identifier}.
 
 <h3 class="pdoc-module-header" id="OrganizationFeedArgs" data-link-title="OrganizationFeedArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L229">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L229">
         interface <strong>OrganizationFeedArgs</strong>
     </a>
 </h3>
@@ -796,7 +796,7 @@ The format will be folders/{folder_number}/feeds/{client-assigned_feed_identifie
 The set of arguments for constructing a OrganizationFeed resource.
 
 <h4 class="pdoc-member-header" id="OrganizationFeedArgs-assetNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L236">property <b>assetNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L236">property <b>assetNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assetNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -807,7 +807,7 @@ exported to the feed. For example: //compute.googleapis.com/projects/my_project_
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
 
 <h4 class="pdoc-member-header" id="OrganizationFeedArgs-assetTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L244">property <b>assetTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L244">property <b>assetTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assetTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -819,7 +819,7 @@ See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a li
 supported asset types.
 
 <h4 class="pdoc-member-header" id="OrganizationFeedArgs-billingProject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L250">property <b>billingProject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L250">property <b>billingProject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingProject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -829,7 +829,7 @@ destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing.
 
 <h4 class="pdoc-member-header" id="OrganizationFeedArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L259">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L259">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#OrganizationFeedCondition'>OrganizationFeedCondition</a>&gt;;</code></pre>
@@ -842,7 +842,7 @@ condition are optional.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="OrganizationFeedArgs-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L264">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L264">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -851,7 +851,7 @@ Asset content type. If not specified, no content but the asset name and type wil
 Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
 
 <h4 class="pdoc-member-header" id="OrganizationFeedArgs-feedId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L268">property <b>feedId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L268">property <b>feedId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>feedId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -859,7 +859,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
 This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
 
 <h4 class="pdoc-member-header" id="OrganizationFeedArgs-feedOutputConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L273">property <b>feedOutputConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L273">property <b>feedOutputConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>feedOutputConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#OrganizationFeedFeedOutputConfig'>OrganizationFeedFeedOutputConfig</a>&gt;;</code></pre>
@@ -868,7 +868,7 @@ Output configuration for asset feed destination.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="OrganizationFeedArgs-orgId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L277">property <b>orgId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L277">property <b>orgId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orgId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -876,7 +876,7 @@ Structure is documented below.
 The organization this feed should be created in.
 
 <h3 class="pdoc-module-header" id="OrganizationFeedState" data-link-title="OrganizationFeedState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L171">
         interface <strong>OrganizationFeedState</strong>
     </a>
 </h3>
@@ -886,7 +886,7 @@ The organization this feed should be created in.
 Input properties used for looking up and filtering OrganizationFeed resources.
 
 <h4 class="pdoc-member-header" id="OrganizationFeedState-assetNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L178">property <b>assetNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L178">property <b>assetNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assetNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -897,7 +897,7 @@ exported to the feed. For example: //compute.googleapis.com/projects/my_project_
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
 
 <h4 class="pdoc-member-header" id="OrganizationFeedState-assetTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L186">property <b>assetTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L186">property <b>assetTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assetTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -909,7 +909,7 @@ See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a li
 supported asset types.
 
 <h4 class="pdoc-member-header" id="OrganizationFeedState-billingProject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L192">property <b>billingProject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L192">property <b>billingProject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingProject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -919,7 +919,7 @@ destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing.
 
 <h4 class="pdoc-member-header" id="OrganizationFeedState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L201">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L201">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#OrganizationFeedCondition'>OrganizationFeedCondition</a>&gt;;</code></pre>
@@ -932,7 +932,7 @@ condition are optional.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="OrganizationFeedState-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L206">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L206">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -941,7 +941,7 @@ Asset content type. If not specified, no content but the asset name and type wil
 Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
 
 <h4 class="pdoc-member-header" id="OrganizationFeedState-feedId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L210">property <b>feedId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L210">property <b>feedId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>feedId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -949,7 +949,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
 This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
 
 <h4 class="pdoc-member-header" id="OrganizationFeedState-feedOutputConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L215">property <b>feedOutputConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L215">property <b>feedOutputConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>feedOutputConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#OrganizationFeedFeedOutputConfig'>OrganizationFeedFeedOutputConfig</a>&gt;;</code></pre>
@@ -958,7 +958,7 @@ Output configuration for asset feed destination.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="OrganizationFeedState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L219">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L219">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -966,7 +966,7 @@ Structure is documented below.
 The format will be organizations/{organization_number}/feeds/{client-assigned_feed_identifier}.
 
 <h4 class="pdoc-member-header" id="OrganizationFeedState-orgId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/organizationFeed.ts#L223">property <b>orgId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/organizationFeed.ts#L223">property <b>orgId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orgId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -974,7 +974,7 @@ The format will be organizations/{organization_number}/feeds/{client-assigned_fe
 The organization this feed should be created in.
 
 <h3 class="pdoc-module-header" id="ProjectFeedArgs" data-link-title="ProjectFeedArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L231">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L231">
         interface <strong>ProjectFeedArgs</strong>
     </a>
 </h3>
@@ -984,7 +984,7 @@ The organization this feed should be created in.
 The set of arguments for constructing a ProjectFeed resource.
 
 <h4 class="pdoc-member-header" id="ProjectFeedArgs-assetNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L238">property <b>assetNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L238">property <b>assetNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assetNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -995,7 +995,7 @@ exported to the feed. For example: //compute.googleapis.com/projects/my_project_
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
 
 <h4 class="pdoc-member-header" id="ProjectFeedArgs-assetTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L246">property <b>assetTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L246">property <b>assetTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assetTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1007,7 +1007,7 @@ See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a li
 supported asset types.
 
 <h4 class="pdoc-member-header" id="ProjectFeedArgs-billingProject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L253">property <b>billingProject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L253">property <b>billingProject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingProject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1018,7 +1018,7 @@ enablement check, quota, and billing. If not specified, the resource's
 project will be used.
 
 <h4 class="pdoc-member-header" id="ProjectFeedArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L262">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L262">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ProjectFeedCondition'>ProjectFeedCondition</a>&gt;;</code></pre>
@@ -1031,7 +1031,7 @@ condition are optional.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ProjectFeedArgs-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L267">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L267">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1040,7 +1040,7 @@ Asset content type. If not specified, no content but the asset name and type wil
 Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
 
 <h4 class="pdoc-member-header" id="ProjectFeedArgs-feedId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L271">property <b>feedId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L271">property <b>feedId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>feedId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1048,7 +1048,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
 This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
 
 <h4 class="pdoc-member-header" id="ProjectFeedArgs-feedOutputConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L276">property <b>feedOutputConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L276">property <b>feedOutputConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>feedOutputConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ProjectFeedFeedOutputConfig'>ProjectFeedFeedOutputConfig</a>&gt;;</code></pre>
@@ -1057,7 +1057,7 @@ Output configuration for asset feed destination.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ProjectFeedArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L281">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L281">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1066,7 +1066,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="ProjectFeedState" data-link-title="ProjectFeedState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L171">
         interface <strong>ProjectFeedState</strong>
     </a>
 </h3>
@@ -1076,7 +1076,7 @@ If it is not provided, the provider project is used.
 Input properties used for looking up and filtering ProjectFeed resources.
 
 <h4 class="pdoc-member-header" id="ProjectFeedState-assetNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L178">property <b>assetNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L178">property <b>assetNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assetNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1087,7 +1087,7 @@ exported to the feed. For example: //compute.googleapis.com/projects/my_project_
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
 
 <h4 class="pdoc-member-header" id="ProjectFeedState-assetTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L186">property <b>assetTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L186">property <b>assetTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assetTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1099,7 +1099,7 @@ See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a li
 supported asset types.
 
 <h4 class="pdoc-member-header" id="ProjectFeedState-billingProject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L193">property <b>billingProject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L193">property <b>billingProject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingProject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1110,7 +1110,7 @@ enablement check, quota, and billing. If not specified, the resource's
 project will be used.
 
 <h4 class="pdoc-member-header" id="ProjectFeedState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L202">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L202">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ProjectFeedCondition'>ProjectFeedCondition</a>&gt;;</code></pre>
@@ -1123,7 +1123,7 @@ condition are optional.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ProjectFeedState-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L207">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L207">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1132,7 +1132,7 @@ Asset content type. If not specified, no content but the asset name and type wil
 Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
 
 <h4 class="pdoc-member-header" id="ProjectFeedState-feedId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L211">property <b>feedId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L211">property <b>feedId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>feedId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1140,7 +1140,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
 This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
 
 <h4 class="pdoc-member-header" id="ProjectFeedState-feedOutputConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L216">property <b>feedOutputConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L216">property <b>feedOutputConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>feedOutputConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ProjectFeedFeedOutputConfig'>ProjectFeedFeedOutputConfig</a>&gt;;</code></pre>
@@ -1149,7 +1149,7 @@ Output configuration for asset feed destination.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ProjectFeedState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L220">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L220">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1157,7 +1157,7 @@ Structure is documented below.
 The format will be projects/{projectNumber}/feeds/{client-assigned_feed_identifier}.
 
 <h4 class="pdoc-member-header" id="ProjectFeedState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/cloudasset/projectFeed.ts#L225">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/cloudasset/projectFeed.ts#L225">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

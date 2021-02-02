@@ -3,7 +3,7 @@ title: "Module datacatalog"
 title_tag: "Module datacatalog | Package @pulumi/gcp | Node.js SDK"
 linktitle: "datacatalog"
 meta_desc: "Explore members of the datacatalog module in the @pulumi/gcp package."
-git_sha: "5c935b05d99cd9c17d3f0db276edab8124e8c4fa"
+git_sha: "4687b672ca57745f73d83956f1fd12f569327169"
 block_external_search_index: true
 ---
 
@@ -72,7 +72,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Entry" data-link-title="Entry">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L116">
         Resource <strong>Entry</strong>
     </a>
 </h3>
@@ -187,7 +187,7 @@ Entry can be imported using any of these accepted formats
 ```
 
 <h4 class="pdoc-member-header" id="Entry-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L220"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L220"> <b>constructor</b></a>
 </h4>
 
 
@@ -201,7 +201,7 @@ Create a Entry resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Entry-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L126">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L126">method <b>get</b></a>
 </h4>
 
 
@@ -212,14 +212,14 @@ Get an existing Entry resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Entry-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L116">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L116">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Entry-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L137">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L137">method <b>isInstance</b></a>
 </h4>
 
 
@@ -230,7 +230,7 @@ Returns true if the given object is an instance of Entry.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Entry-bigqueryDateShardedSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L148">property <b>bigqueryDateShardedSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L148">property <b>bigqueryDateShardedSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bigqueryDateShardedSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EntryBigqueryDateShardedSpec'>EntryBigqueryDateShardedSpec</a>[]&gt;;</code></pre>
@@ -239,7 +239,7 @@ Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD.
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
 
 <h4 class="pdoc-member-header" id="Entry-bigqueryTableSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L152">property <b>bigqueryTableSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L152">property <b>bigqueryTableSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bigqueryTableSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EntryBigqueryTableSpec'>EntryBigqueryTableSpec</a>[]&gt;;</code></pre>
@@ -247,7 +247,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
 
 <h4 class="pdoc-member-header" id="Entry-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L156">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L156">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -255,7 +255,7 @@ Specification that applies to a BigQuery table. This is only valid on entries of
 Entry description, which can consist of several sentences or paragraphs that describe entry contents.
 
 <h4 class="pdoc-member-header" id="Entry-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L161">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L161">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -264,7 +264,7 @@ Display information such as title and description. A short name to identify the 
 for example, "Analytics Data - Jan 2011".
 
 <h4 class="pdoc-member-header" id="Entry-entryGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L165">property <b>entryGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L165">property <b>entryGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entryGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -272,7 +272,7 @@ for example, "Analytics Data - Jan 2011".
 The name of the entry group this entry is in.
 
 <h4 class="pdoc-member-header" id="Entry-entryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L169">property <b>entryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L169">property <b>entryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -280,7 +280,7 @@ The name of the entry group this entry is in.
 The id of the entry to create.
 
 <h4 class="pdoc-member-header" id="Entry-gcsFilesetSpec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L174">property <b>gcsFilesetSpec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L174">property <b>gcsFilesetSpec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>gcsFilesetSpec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EntryGcsFilesetSpec'>EntryGcsFilesetSpec</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -289,7 +289,7 @@ Specification that applies to a Cloud Storage fileset. This is only valid on ent
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Entry-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L116">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L116">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -298,7 +298,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Entry-integratedSystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L178">property <b>integratedSystem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L178">property <b>integratedSystem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integratedSystem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -306,7 +306,7 @@ deployments and may be missing (undefined) during planning phases.
 This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
 
 <h4 class="pdoc-member-header" id="Entry-linkedResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L187">property <b>linkedResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L187">property <b>linkedResource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>linkedResource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -319,7 +319,7 @@ Output only when Entry is of type in the EntryType enum. For entries with userSp
 this field is optional and defaults to an empty string.
 
 <h4 class="pdoc-member-header" id="Entry-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L193">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L193">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -329,7 +329,7 @@ projects/{project_id}/locations/{location}/entryGroups/{entryGroupId}/entries/{e
 child resources may not actually be stored in the location in this name.
 
 <h4 class="pdoc-member-header" id="Entry-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L200">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L200">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -340,7 +340,7 @@ https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.
 for what fields this schema can contain.
 
 <h4 class="pdoc-member-header" id="Entry-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L206">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L206">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -350,7 +350,7 @@ Currently, only FILESET enum value is allowed. All other entries created through
 Possible values are `FILESET`.
 
 <h4 class="pdoc-member-header" id="Entry-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L116">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L116">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -359,7 +359,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Entry-userSpecifiedSystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L212">property <b>userSpecifiedSystem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L212">property <b>userSpecifiedSystem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userSpecifiedSystem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -369,7 +369,7 @@ userSpecifiedSystem strings must begin with a letter or underscore and can only 
 and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
 
 <h4 class="pdoc-member-header" id="Entry-userSpecifiedType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L220">property <b>userSpecifiedType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L220">property <b>userSpecifiedType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userSpecifiedType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -381,7 +381,7 @@ userSpecifiedType strings must begin with a letter or underscore and can only co
 numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
 
 <h3 class="pdoc-module-header" id="EntryGroup" data-link-title="EntryGroup">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L48">
         Resource <strong>EntryGroup</strong>
     </a>
 </h3>
@@ -429,7 +429,7 @@ EntryGroup can be imported using any of these accepted formats
 ```
 
 <h4 class="pdoc-member-header" id="EntryGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L102"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
@@ -443,7 +443,7 @@ Create a EntryGroup resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EntryGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -454,14 +454,14 @@ Get an existing EntryGroup resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EntryGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L48">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EntryGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -472,7 +472,7 @@ Returns true if the given object is an instance of EntryGroup.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EntryGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L79">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L79">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -480,7 +480,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Entry group description, which can consist of several sentences or paragraphs that describe entry group contents.
 
 <h4 class="pdoc-member-header" id="EntryGroup-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L83">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L83">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -488,7 +488,7 @@ Entry group description, which can consist of several sentences or paragraphs th
 A short name to identify the entry group, for example, "analytics data - jan 2011".
 
 <h4 class="pdoc-member-header" id="EntryGroup-entryGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L88">property <b>entryGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L88">property <b>entryGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entryGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -497,7 +497,7 @@ The id of the entry group to create. The id must begin with a letter or undersco
 contain only English letters, numbers and underscores, and be at most 64 characters.
 
 <h4 class="pdoc-member-header" id="EntryGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -506,7 +506,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EntryGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L93">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -515,7 +515,7 @@ The resource name of the entry group in URL format. Example:
 projects/{project}/locations/{location}/entryGroups/{entryGroupId}
 
 <h4 class="pdoc-member-header" id="EntryGroup-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L98">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L98">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -524,7 +524,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EntryGroup-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L102">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L102">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -532,7 +532,7 @@ If it is not provided, the provider project is used.
 EntryGroup location region.
 
 <h4 class="pdoc-member-header" id="EntryGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L48">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -541,7 +541,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EntryGroupIamBinding" data-link-title="EntryGroupIamBinding">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L87">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L87">
         Resource <strong>EntryGroupIamBinding</strong>
     </a>
 </h3>
@@ -627,7 +627,7 @@ For all import syntaxes, the "resource in question" can take any of the followin
 full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L136"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L136"> <b>constructor</b></a>
 </h4>
 
 
@@ -641,7 +641,7 @@ Create a EntryGroupIamBinding resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L97">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L97">method <b>get</b></a>
 </h4>
 
 
@@ -652,14 +652,14 @@ Get an existing EntryGroupIamBinding resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L87">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L87">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EntryGroupIamBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L108">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L108">method <b>isInstance</b></a>
 </h4>
 
 
@@ -670,12 +670,12 @@ Returns true if the given object is an instance of EntryGroupIamBinding.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamBinding-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L115">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L115">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EntryGroupIamBindingCondition'>EntryGroupIamBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamBinding-entryGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L119">property <b>entryGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L119">property <b>entryGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entryGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -683,7 +683,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="EntryGroupIamBinding-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L123">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L123">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -691,7 +691,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L87">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L87">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -700,12 +700,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamBinding-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L124">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L124">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamBinding-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L129">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L129">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -714,12 +714,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamBinding-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L130">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L130">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamBinding-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L136">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L136">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -729,7 +729,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L87">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L87">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -738,7 +738,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EntryGroupIamMember" data-link-title="EntryGroupIamMember">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L87">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L87">
         Resource <strong>EntryGroupIamMember</strong>
     </a>
 </h3>
@@ -824,7 +824,7 @@ For all import syntaxes, the "resource in question" can take any of the followin
 full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamMember-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L136"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L136"> <b>constructor</b></a>
 </h4>
 
 
@@ -838,7 +838,7 @@ Create a EntryGroupIamMember resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamMember-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L97">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L97">method <b>get</b></a>
 </h4>
 
 
@@ -849,14 +849,14 @@ Get an existing EntryGroupIamMember resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L87">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L87">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EntryGroupIamMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L108">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L108">method <b>isInstance</b></a>
 </h4>
 
 
@@ -867,12 +867,12 @@ Returns true if the given object is an instance of EntryGroupIamMember.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamMember-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L115">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L115">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EntryGroupIamMemberCondition'>EntryGroupIamMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamMember-entryGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L119">property <b>entryGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L119">property <b>entryGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entryGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -880,7 +880,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="EntryGroupIamMember-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L123">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L123">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -888,7 +888,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L87">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L87">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -897,12 +897,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamMember-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L124">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L124">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamMember-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L129">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L129">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -911,12 +911,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamMember-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L130">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L130">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamMember-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L136">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L136">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -926,7 +926,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L87">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L87">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -935,7 +935,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EntryGroupIamPolicy" data-link-title="EntryGroupIamPolicy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L86">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L86">
         Resource <strong>EntryGroupIamPolicy</strong>
     </a>
 </h3>
@@ -1021,7 +1021,7 @@ For all import syntaxes, the "resource in question" can take any of the followin
 full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L132"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L132"> <b>constructor</b></a>
 </h4>
 
 
@@ -1035,7 +1035,7 @@ Create a EntryGroupIamPolicy resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L96">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L96">method <b>get</b></a>
 </h4>
 
 
@@ -1046,14 +1046,14 @@ Get an existing EntryGroupIamPolicy resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L86">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L86">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L107">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1064,7 +1064,7 @@ Returns true if the given object is an instance of EntryGroupIamPolicy.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicy-entryGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L117">property <b>entryGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L117">property <b>entryGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entryGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1072,7 +1072,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicy-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L121">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L121">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1080,7 +1080,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L86">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1089,7 +1089,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicy-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L126">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L126">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1098,7 +1098,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicy-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L131">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L131">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1107,12 +1107,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicy-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L132">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L132">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L86">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L86">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1121,7 +1121,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PolicyTag" data-link-title="PolicyTag">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L16">
         Resource <strong>PolicyTag</strong>
     </a>
 </h3>
@@ -1137,7 +1137,7 @@ PolicyTag can be imported using any of these accepted formats
 ```
 
 <h4 class="pdoc-member-header" id="PolicyTag-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
@@ -1151,7 +1151,7 @@ Create a PolicyTag resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PolicyTag-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -1162,14 +1162,14 @@ Get an existing PolicyTag resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PolicyTag-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PolicyTag-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1180,7 +1180,7 @@ Returns true if the given object is an instance of PolicyTag.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PolicyTag-childPolicyTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L47">property <b>childPolicyTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L47">property <b>childPolicyTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>childPolicyTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1188,7 +1188,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Resource names of child policy tags of this policy tag.
 
 <h4 class="pdoc-member-header" id="PolicyTag-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L54">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L54">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1199,7 +1199,7 @@ encoded in UTF-8. If not set, defaults to an empty description.
 If not set, defaults to an empty description.
 
 <h4 class="pdoc-member-header" id="PolicyTag-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L60">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L60">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1209,7 +1209,7 @@ taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces;
 not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
 
 <h4 class="pdoc-member-header" id="PolicyTag-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1218,7 +1218,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PolicyTag-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L65">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1227,7 +1227,7 @@ Resource name of this policy tag, whose format is:
 "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}"
 
 <h4 class="pdoc-member-header" id="PolicyTag-parentPolicyTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L71">property <b>parentPolicyTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L71">property <b>parentPolicyTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parentPolicyTag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1237,7 +1237,7 @@ If empty, it means this policy tag is a top level policy tag.
 If not set, defaults to an empty string.
 
 <h4 class="pdoc-member-header" id="PolicyTag-taxonomy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L75">property <b>taxonomy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L75">property <b>taxonomy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taxonomy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1245,7 +1245,7 @@ If not set, defaults to an empty string.
 Taxonomy the policy tag is associated with
 
 <h4 class="pdoc-member-header" id="PolicyTag-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1254,7 +1254,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PolicyTagIamBinding" data-link-title="PolicyTagIamBinding">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L33">
         Resource <strong>PolicyTagIamBinding</strong>
     </a>
 </h3>
@@ -1286,7 +1286,7 @@ For all import syntaxes, the "resource in question" can take any of the followin
 full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -1300,7 +1300,7 @@ Create a PolicyTagIamBinding resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -1311,14 +1311,14 @@ Get an existing PolicyTagIamBinding resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PolicyTagIamBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1329,12 +1329,12 @@ Returns true if the given object is an instance of PolicyTagIamBinding.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamBinding-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L61">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L61">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyTagIamBindingCondition'>PolicyTagIamBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PolicyTagIamBinding-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L65">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L65">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1342,7 +1342,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1351,12 +1351,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamBinding-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L66">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L66">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PolicyTagIamBinding-policyTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L70">property <b>policyTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L70">property <b>policyTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyTag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1364,7 +1364,7 @@ deployments and may be missing (undefined) during planning phases.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="PolicyTagIamBinding-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L76">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L76">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1374,7 +1374,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1383,7 +1383,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PolicyTagIamMember" data-link-title="PolicyTagIamMember">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L33">
         Resource <strong>PolicyTagIamMember</strong>
     </a>
 </h3>
@@ -1415,7 +1415,7 @@ For all import syntaxes, the "resource in question" can take any of the followin
 full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamMember-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -1429,7 +1429,7 @@ Create a PolicyTagIamMember resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamMember-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -1440,14 +1440,14 @@ Get an existing PolicyTagIamMember resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PolicyTagIamMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1458,12 +1458,12 @@ Returns true if the given object is an instance of PolicyTagIamMember.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamMember-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L61">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L61">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyTagIamMemberCondition'>PolicyTagIamMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PolicyTagIamMember-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L65">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L65">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1471,7 +1471,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1480,12 +1480,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamMember-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L66">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L66">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PolicyTagIamMember-policyTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L70">property <b>policyTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L70">property <b>policyTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyTag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1493,7 +1493,7 @@ deployments and may be missing (undefined) during planning phases.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="PolicyTagIamMember-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L76">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L76">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1503,7 +1503,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1512,7 +1512,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PolicyTagIamPolicy" data-link-title="PolicyTagIamPolicy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L32">
         Resource <strong>PolicyTagIamPolicy</strong>
     </a>
 </h3>
@@ -1544,7 +1544,7 @@ For all import syntaxes, the "resource in question" can take any of the followin
 full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L72"> <b>constructor</b></a>
 </h4>
 
 
@@ -1558,7 +1558,7 @@ Create a PolicyTagIamPolicy resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -1569,14 +1569,14 @@ Get an existing PolicyTagIamPolicy resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PolicyTagIamPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1587,7 +1587,7 @@ Returns true if the given object is an instance of PolicyTagIamPolicy.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamPolicy-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L63">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L63">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1595,7 +1595,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1604,7 +1604,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamPolicy-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L68">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L68">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1613,7 +1613,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamPolicy-policyTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L72">property <b>policyTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L72">property <b>policyTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyTag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1621,7 +1621,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="PolicyTagIamPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1630,7 +1630,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Tag" data-link-title="Tag">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L290">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L290">
         Resource <strong>Tag</strong>
     </a>
 </h3>
@@ -1919,7 +1919,7 @@ Tag can be imported using any of these accepted formats
 ```
 
 <h4 class="pdoc-member-header" id="Tag-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L352"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L352"> <b>constructor</b></a>
 </h4>
 
 
@@ -1933,7 +1933,7 @@ Create a Tag resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Tag-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L300">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L300">method <b>get</b></a>
 </h4>
 
 
@@ -1944,14 +1944,14 @@ Get an existing Tag resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Tag-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L290">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L290">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Tag-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L311">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L311">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1962,7 +1962,7 @@ Returns true if the given object is an instance of Tag.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Tag-column">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L324">property <b>column</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L324">property <b>column</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>column: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1973,7 +1973,7 @@ For attaching a tag to a nested column, use `.` to separate the column names. Ex
 `outer_column.inner_column`
 
 <h4 class="pdoc-member-header" id="Tag-fields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L330">property <b>fields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L330">property <b>fields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TagField'>TagField</a>[]&gt;;</code></pre>
@@ -1983,7 +1983,7 @@ Valid field IDs are defined by the tag's template. A tag must have at least 1 fi
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Tag-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L290">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L290">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1992,7 +1992,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Tag-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L337">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L337">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2003,7 +2003,7 @@ projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_
 identifier. Note that this Tag may not actually be stored in the location in this name.
 
 <h4 class="pdoc-member-header" id="Tag-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L342">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L342">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2012,7 +2012,7 @@ The name of the parent this tag is attached to. This can be the name of an entry
 all entries in that group.
 
 <h4 class="pdoc-member-header" id="Tag-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L348">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L348">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2022,7 +2022,7 @@ projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
 
 <h4 class="pdoc-member-header" id="Tag-templateDisplayname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L352">property <b>templateDisplayname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L352">property <b>templateDisplayname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateDisplayname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2030,7 +2030,7 @@ This field cannot be modified after creation.
 The display name of the tag template.
 
 <h4 class="pdoc-member-header" id="Tag-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L290">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L290">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2039,7 +2039,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TagTemplate" data-link-title="TagTemplate">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L77">
         Resource <strong>TagTemplate</strong>
     </a>
 </h3>
@@ -2115,7 +2115,7 @@ TagTemplate can be imported using any of these accepted formats
 ```
 
 <h4 class="pdoc-member-header" id="TagTemplate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L135"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L135"> <b>constructor</b></a>
 </h4>
 
 
@@ -2129,7 +2129,7 @@ Create a TagTemplate resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TagTemplate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L87">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L87">method <b>get</b></a>
 </h4>
 
 
@@ -2140,14 +2140,14 @@ Get an existing TagTemplate resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TagTemplate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L77">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L77">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TagTemplate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L98">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L98">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2158,7 +2158,7 @@ Returns true if the given object is an instance of TagTemplate.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TagTemplate-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L108">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L108">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2166,7 +2166,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The display name for this template.
 
 <h4 class="pdoc-member-header" id="TagTemplate-fields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L113">property <b>fields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L113">property <b>fields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TagTemplateField'>TagTemplateField</a>[]&gt;;</code></pre>
@@ -2175,7 +2175,7 @@ Set of tag template field IDs and the settings for the field. This set is an exh
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TagTemplate-forceDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L117">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L117">property <b>forceDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceDelete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2183,7 +2183,7 @@ Structure is documented below.
 This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.
 
 <h4 class="pdoc-member-header" id="TagTemplate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L77">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2192,7 +2192,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TagTemplate-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L122">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2201,7 +2201,7 @@ deployments and may be missing (undefined) during planning phases.
 The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}
 
 <h4 class="pdoc-member-header" id="TagTemplate-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L127">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L127">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2210,7 +2210,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TagTemplate-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L131">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L131">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2218,7 +2218,7 @@ If it is not provided, the provider project is used.
 Template location region.
 
 <h4 class="pdoc-member-header" id="TagTemplate-tagTemplateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L135">property <b>tagTemplateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L135">property <b>tagTemplateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tagTemplateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2226,7 +2226,7 @@ Template location region.
 The id of the tag template to create.
 
 <h4 class="pdoc-member-header" id="TagTemplate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L77">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L77">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2235,7 +2235,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Taxonomy" data-link-title="Taxonomy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L16">
         Resource <strong>Taxonomy</strong>
     </a>
 </h3>
@@ -2251,7 +2251,7 @@ Taxonomy can be imported using any of these accepted formats
 ```
 
 <h4 class="pdoc-member-header" id="Taxonomy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
@@ -2265,7 +2265,7 @@ Create a Taxonomy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Taxonomy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -2276,14 +2276,14 @@ Get an existing Taxonomy resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Taxonomy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Taxonomy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2294,7 +2294,7 @@ Returns true if the given object is an instance of Taxonomy.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Taxonomy-activatedPolicyTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L49">property <b>activatedPolicyTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L49">property <b>activatedPolicyTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>activatedPolicyTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2304,7 +2304,7 @@ defaults to an empty list.
 Each value may be one of `POLICY_TYPE_UNSPECIFIED` and `FINE_GRAINED_ACCESS_CONTROL`.
 
 <h4 class="pdoc-member-header" id="Taxonomy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L55">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L55">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2314,7 +2314,7 @@ tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes
 long when encoded in UTF-8. If not set, defaults to an empty description.
 
 <h4 class="pdoc-member-header" id="Taxonomy-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L62">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L62">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2325,7 +2325,7 @@ and spaces; not start or end with spaces; and be at most 200 bytes
 long when encoded in UTF-8.
 
 <h4 class="pdoc-member-header" id="Taxonomy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2334,7 +2334,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Taxonomy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2342,7 +2342,7 @@ deployments and may be missing (undefined) during planning phases.
 Resource name of this taxonomy, whose format is: "projects/{project}/locations/{region}/taxonomies/{taxonomy}".
 
 <h4 class="pdoc-member-header" id="Taxonomy-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L71">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L71">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2351,7 +2351,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Taxonomy-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L75">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L75">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2359,7 +2359,7 @@ If it is not provided, the provider project is used.
 Taxonomy location region.
 
 <h4 class="pdoc-member-header" id="Taxonomy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2368,7 +2368,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TaxonomyIamBinding" data-link-title="TaxonomyIamBinding">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L33">
         Resource <strong>TaxonomyIamBinding</strong>
     </a>
 </h3>
@@ -2400,7 +2400,7 @@ For all import syntaxes, the "resource in question" can take any of the followin
 full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L82"> <b>constructor</b></a>
 </h4>
 
 
@@ -2414,7 +2414,7 @@ Create a TaxonomyIamBinding resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -2425,14 +2425,14 @@ Get an existing TaxonomyIamBinding resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TaxonomyIamBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2443,12 +2443,12 @@ Returns true if the given object is an instance of TaxonomyIamBinding.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamBinding-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L61">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L61">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TaxonomyIamBindingCondition'>TaxonomyIamBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamBinding-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L65">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L65">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2456,7 +2456,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2465,12 +2465,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamBinding-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L66">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L66">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamBinding-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L71">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L71">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2479,12 +2479,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamBinding-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L72">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L72">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamBinding-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L78">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L78">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2494,7 +2494,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamBinding-taxonomy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L82">property <b>taxonomy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L82">property <b>taxonomy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taxonomy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2502,7 +2502,7 @@ The role that should be applied. Only one
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="TaxonomyIamBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2511,7 +2511,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TaxonomyIamMember" data-link-title="TaxonomyIamMember">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L33">
         Resource <strong>TaxonomyIamMember</strong>
     </a>
 </h3>
@@ -2543,7 +2543,7 @@ For all import syntaxes, the "resource in question" can take any of the followin
 full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamMember-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L82"> <b>constructor</b></a>
 </h4>
 
 
@@ -2557,7 +2557,7 @@ Create a TaxonomyIamMember resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamMember-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -2568,14 +2568,14 @@ Get an existing TaxonomyIamMember resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TaxonomyIamMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2586,12 +2586,12 @@ Returns true if the given object is an instance of TaxonomyIamMember.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamMember-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L61">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L61">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TaxonomyIamMemberCondition'>TaxonomyIamMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamMember-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L65">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L65">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2599,7 +2599,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2608,12 +2608,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamMember-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L66">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L66">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamMember-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L71">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L71">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2622,12 +2622,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamMember-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L72">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L72">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamMember-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L78">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L78">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2637,7 +2637,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamMember-taxonomy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L82">property <b>taxonomy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L82">property <b>taxonomy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taxonomy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2645,7 +2645,7 @@ The role that should be applied. Only one
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="TaxonomyIamMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2654,7 +2654,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TaxonomyIamPolicy" data-link-title="TaxonomyIamPolicy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L32">
         Resource <strong>TaxonomyIamPolicy</strong>
     </a>
 </h3>
@@ -2686,7 +2686,7 @@ For all import syntaxes, the "resource in question" can take any of the followin
 full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -2700,7 +2700,7 @@ Create a TaxonomyIamPolicy resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -2711,14 +2711,14 @@ Get an existing TaxonomyIamPolicy resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2729,7 +2729,7 @@ Returns true if the given object is an instance of TaxonomyIamPolicy.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicy-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L63">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L63">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2737,7 +2737,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2746,7 +2746,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicy-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L68">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L68">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2755,7 +2755,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicy-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L73">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L73">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2764,12 +2764,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicy-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L74">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L74">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicy-taxonomy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L78">property <b>taxonomy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L78">property <b>taxonomy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taxonomy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2777,7 +2777,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2789,7 +2789,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="EntryArgs" data-link-title="EntryArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L368">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L368">
         interface <strong>EntryArgs</strong>
     </a>
 </h3>
@@ -2799,7 +2799,7 @@ deployments.
 The set of arguments for constructing a Entry resource.
 
 <h4 class="pdoc-member-header" id="EntryArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L372">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L372">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2807,7 +2807,7 @@ The set of arguments for constructing a Entry resource.
 Entry description, which can consist of several sentences or paragraphs that describe entry contents.
 
 <h4 class="pdoc-member-header" id="EntryArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L377">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L377">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2816,7 +2816,7 @@ Display information such as title and description. A short name to identify the 
 for example, "Analytics Data - Jan 2011".
 
 <h4 class="pdoc-member-header" id="EntryArgs-entryGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L381">property <b>entryGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L381">property <b>entryGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2824,7 +2824,7 @@ for example, "Analytics Data - Jan 2011".
 The name of the entry group this entry is in.
 
 <h4 class="pdoc-member-header" id="EntryArgs-entryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L385">property <b>entryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L385">property <b>entryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2832,7 +2832,7 @@ The name of the entry group this entry is in.
 The id of the entry to create.
 
 <h4 class="pdoc-member-header" id="EntryArgs-gcsFilesetSpec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L390">property <b>gcsFilesetSpec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L390">property <b>gcsFilesetSpec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gcsFilesetSpec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EntryGcsFilesetSpec'>EntryGcsFilesetSpec</a>&gt;;</code></pre>
@@ -2841,7 +2841,7 @@ Specification that applies to a Cloud Storage fileset. This is only valid on ent
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="EntryArgs-linkedResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L399">property <b>linkedResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L399">property <b>linkedResource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linkedResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2854,7 +2854,7 @@ Output only when Entry is of type in the EntryType enum. For entries with userSp
 this field is optional and defaults to an empty string.
 
 <h4 class="pdoc-member-header" id="EntryArgs-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L406">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L406">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2865,7 +2865,7 @@ https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.
 for what fields this schema can contain.
 
 <h4 class="pdoc-member-header" id="EntryArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L412">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L412">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2875,7 +2875,7 @@ Currently, only FILESET enum value is allowed. All other entries created through
 Possible values are `FILESET`.
 
 <h4 class="pdoc-member-header" id="EntryArgs-userSpecifiedSystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L418">property <b>userSpecifiedSystem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L418">property <b>userSpecifiedSystem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userSpecifiedSystem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2885,7 +2885,7 @@ userSpecifiedSystem strings must begin with a letter or underscore and can only 
 and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
 
 <h4 class="pdoc-member-header" id="EntryArgs-userSpecifiedType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L426">property <b>userSpecifiedType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L426">property <b>userSpecifiedType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userSpecifiedType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2897,7 +2897,7 @@ userSpecifiedType strings must begin with a letter or underscore and can only co
 numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
 
 <h3 class="pdoc-module-header" id="EntryGroupArgs" data-link-title="EntryGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L181">
         interface <strong>EntryGroupArgs</strong>
     </a>
 </h3>
@@ -2907,7 +2907,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 The set of arguments for constructing a EntryGroup resource.
 
 <h4 class="pdoc-member-header" id="EntryGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L185">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L185">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2915,7 +2915,7 @@ The set of arguments for constructing a EntryGroup resource.
 Entry group description, which can consist of several sentences or paragraphs that describe entry group contents.
 
 <h4 class="pdoc-member-header" id="EntryGroupArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L189">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L189">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2923,7 +2923,7 @@ Entry group description, which can consist of several sentences or paragraphs th
 A short name to identify the entry group, for example, "analytics data - jan 2011".
 
 <h4 class="pdoc-member-header" id="EntryGroupArgs-entryGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L194">property <b>entryGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L194">property <b>entryGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2932,7 +2932,7 @@ The id of the entry group to create. The id must begin with a letter or undersco
 contain only English letters, numbers and underscores, and be at most 64 characters.
 
 <h4 class="pdoc-member-header" id="EntryGroupArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L199">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L199">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2941,7 +2941,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EntryGroupArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L203">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L203">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2949,7 +2949,7 @@ If it is not provided, the provider project is used.
 EntryGroup location region.
 
 <h3 class="pdoc-module-header" id="EntryGroupIamBindingArgs" data-link-title="EntryGroupIamBindingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L218">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L218">
         interface <strong>EntryGroupIamBindingArgs</strong>
     </a>
 </h3>
@@ -2959,12 +2959,12 @@ EntryGroup location region.
 The set of arguments for constructing a EntryGroupIamBinding resource.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamBindingArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L219">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L219">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EntryGroupIamBindingCondition'>EntryGroupIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamBindingArgs-entryGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L223">property <b>entryGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L223">property <b>entryGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2972,12 +2972,12 @@ The set of arguments for constructing a EntryGroupIamBinding resource.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="EntryGroupIamBindingArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L224">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L224">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamBindingArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L229">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L229">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2986,12 +2986,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamBindingArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L230">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L230">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamBindingArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L236">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L236">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3001,7 +3001,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="EntryGroupIamBindingState" data-link-title="EntryGroupIamBindingState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L190">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L190">
         interface <strong>EntryGroupIamBindingState</strong>
     </a>
 </h3>
@@ -3011,12 +3011,12 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering EntryGroupIamBinding resources.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamBindingState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L191">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L191">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EntryGroupIamBindingCondition'>EntryGroupIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamBindingState-entryGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L195">property <b>entryGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L195">property <b>entryGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3024,7 +3024,7 @@ Input properties used for looking up and filtering EntryGroupIamBinding resource
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="EntryGroupIamBindingState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L199">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L199">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3032,12 +3032,12 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamBindingState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L200">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L200">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamBindingState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L205">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L205">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3046,12 +3046,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamBindingState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L206">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L206">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamBindingState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L212">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamBinding.ts#L212">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3061,7 +3061,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="EntryGroupIamMemberArgs" data-link-title="EntryGroupIamMemberArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L218">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L218">
         interface <strong>EntryGroupIamMemberArgs</strong>
     </a>
 </h3>
@@ -3071,12 +3071,12 @@ The role that should be applied. Only one
 The set of arguments for constructing a EntryGroupIamMember resource.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamMemberArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L219">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L219">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EntryGroupIamMemberCondition'>EntryGroupIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamMemberArgs-entryGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L223">property <b>entryGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L223">property <b>entryGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3084,12 +3084,12 @@ The set of arguments for constructing a EntryGroupIamMember resource.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="EntryGroupIamMemberArgs-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L224">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L224">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamMemberArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L229">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L229">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3098,12 +3098,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamMemberArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L230">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L230">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamMemberArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L236">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L236">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3113,7 +3113,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="EntryGroupIamMemberState" data-link-title="EntryGroupIamMemberState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L190">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L190">
         interface <strong>EntryGroupIamMemberState</strong>
     </a>
 </h3>
@@ -3123,12 +3123,12 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering EntryGroupIamMember resources.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamMemberState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L191">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L191">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EntryGroupIamMemberCondition'>EntryGroupIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamMemberState-entryGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L195">property <b>entryGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L195">property <b>entryGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3136,7 +3136,7 @@ Input properties used for looking up and filtering EntryGroupIamMember resources
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="EntryGroupIamMemberState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L199">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L199">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3144,12 +3144,12 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamMemberState-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L200">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L200">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamMemberState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L205">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L205">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3158,12 +3158,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamMemberState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L206">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L206">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EntryGroupIamMemberState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L212">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamMember.ts#L212">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3173,7 +3173,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="EntryGroupIamPolicyArgs" data-link-title="EntryGroupIamPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L204">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L204">
         interface <strong>EntryGroupIamPolicyArgs</strong>
     </a>
 </h3>
@@ -3183,7 +3183,7 @@ The role that should be applied. Only one
 The set of arguments for constructing a EntryGroupIamPolicy resource.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicyArgs-entryGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L208">property <b>entryGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L208">property <b>entryGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3191,7 +3191,7 @@ The set of arguments for constructing a EntryGroupIamPolicy resource.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L213">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L213">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3200,7 +3200,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicyArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L218">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L218">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3209,12 +3209,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicyArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L219">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L219">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="EntryGroupIamPolicyState" data-link-title="EntryGroupIamPolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L179">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L179">
         interface <strong>EntryGroupIamPolicyState</strong>
     </a>
 </h3>
@@ -3224,7 +3224,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 Input properties used for looking up and filtering EntryGroupIamPolicy resources.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicyState-entryGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L183">property <b>entryGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L183">property <b>entryGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3232,7 +3232,7 @@ Input properties used for looking up and filtering EntryGroupIamPolicy resources
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicyState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L187">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L187">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3240,7 +3240,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicyState-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L192">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L192">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3249,7 +3249,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicyState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L197">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L197">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3258,12 +3258,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EntryGroupIamPolicyState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L198">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroupIamPolicy.ts#L198">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="EntryGroupState" data-link-title="EntryGroupState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L148">
         interface <strong>EntryGroupState</strong>
     </a>
 </h3>
@@ -3273,7 +3273,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 Input properties used for looking up and filtering EntryGroup resources.
 
 <h4 class="pdoc-member-header" id="EntryGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L152">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L152">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3281,7 +3281,7 @@ Input properties used for looking up and filtering EntryGroup resources.
 Entry group description, which can consist of several sentences or paragraphs that describe entry group contents.
 
 <h4 class="pdoc-member-header" id="EntryGroupState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L156">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L156">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3289,7 +3289,7 @@ Entry group description, which can consist of several sentences or paragraphs th
 A short name to identify the entry group, for example, "analytics data - jan 2011".
 
 <h4 class="pdoc-member-header" id="EntryGroupState-entryGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L161">property <b>entryGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L161">property <b>entryGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3298,7 +3298,7 @@ The id of the entry group to create. The id must begin with a letter or undersco
 contain only English letters, numbers and underscores, and be at most 64 characters.
 
 <h4 class="pdoc-member-header" id="EntryGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L166">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L166">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3307,7 +3307,7 @@ The resource name of the entry group in URL format. Example:
 projects/{project}/locations/{location}/entryGroups/{entryGroupId}
 
 <h4 class="pdoc-member-header" id="EntryGroupState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L171">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L171">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3316,7 +3316,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EntryGroupState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entryGroup.ts#L175">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entryGroup.ts#L175">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3324,7 +3324,7 @@ If it is not provided, the provider project is used.
 EntryGroup location region.
 
 <h3 class="pdoc-module-header" id="EntryState" data-link-title="EntryState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L285">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L285">
         interface <strong>EntryState</strong>
     </a>
 </h3>
@@ -3334,7 +3334,7 @@ EntryGroup location region.
 Input properties used for looking up and filtering Entry resources.
 
 <h4 class="pdoc-member-header" id="EntryState-bigqueryDateShardedSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L290">property <b>bigqueryDateShardedSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L290">property <b>bigqueryDateShardedSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigqueryDateShardedSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EntryBigqueryDateShardedSpec'>EntryBigqueryDateShardedSpec</a>&gt;[]&gt;;</code></pre>
@@ -3343,7 +3343,7 @@ Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD.
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
 
 <h4 class="pdoc-member-header" id="EntryState-bigqueryTableSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L294">property <b>bigqueryTableSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L294">property <b>bigqueryTableSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigqueryTableSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EntryBigqueryTableSpec'>EntryBigqueryTableSpec</a>&gt;[]&gt;;</code></pre>
@@ -3351,7 +3351,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
 
 <h4 class="pdoc-member-header" id="EntryState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L298">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L298">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3359,7 +3359,7 @@ Specification that applies to a BigQuery table. This is only valid on entries of
 Entry description, which can consist of several sentences or paragraphs that describe entry contents.
 
 <h4 class="pdoc-member-header" id="EntryState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L303">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L303">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3368,7 +3368,7 @@ Display information such as title and description. A short name to identify the 
 for example, "Analytics Data - Jan 2011".
 
 <h4 class="pdoc-member-header" id="EntryState-entryGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L307">property <b>entryGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L307">property <b>entryGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3376,7 +3376,7 @@ for example, "Analytics Data - Jan 2011".
 The name of the entry group this entry is in.
 
 <h4 class="pdoc-member-header" id="EntryState-entryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L311">property <b>entryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L311">property <b>entryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3384,7 +3384,7 @@ The name of the entry group this entry is in.
 The id of the entry to create.
 
 <h4 class="pdoc-member-header" id="EntryState-gcsFilesetSpec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L316">property <b>gcsFilesetSpec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L316">property <b>gcsFilesetSpec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gcsFilesetSpec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EntryGcsFilesetSpec'>EntryGcsFilesetSpec</a>&gt;;</code></pre>
@@ -3393,7 +3393,7 @@ Specification that applies to a Cloud Storage fileset. This is only valid on ent
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="EntryState-integratedSystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L320">property <b>integratedSystem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L320">property <b>integratedSystem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integratedSystem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3401,7 +3401,7 @@ Structure is documented below.
 This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
 
 <h4 class="pdoc-member-header" id="EntryState-linkedResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L329">property <b>linkedResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L329">property <b>linkedResource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linkedResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3414,7 +3414,7 @@ Output only when Entry is of type in the EntryType enum. For entries with userSp
 this field is optional and defaults to an empty string.
 
 <h4 class="pdoc-member-header" id="EntryState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L335">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L335">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3424,7 +3424,7 @@ projects/{project_id}/locations/{location}/entryGroups/{entryGroupId}/entries/{e
 child resources may not actually be stored in the location in this name.
 
 <h4 class="pdoc-member-header" id="EntryState-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L342">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L342">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3435,7 +3435,7 @@ https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.
 for what fields this schema can contain.
 
 <h4 class="pdoc-member-header" id="EntryState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L348">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L348">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3445,7 +3445,7 @@ Currently, only FILESET enum value is allowed. All other entries created through
 Possible values are `FILESET`.
 
 <h4 class="pdoc-member-header" id="EntryState-userSpecifiedSystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L354">property <b>userSpecifiedSystem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L354">property <b>userSpecifiedSystem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userSpecifiedSystem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3455,7 +3455,7 @@ userSpecifiedSystem strings must begin with a letter or underscore and can only 
 and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
 
 <h4 class="pdoc-member-header" id="EntryState-userSpecifiedType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/entry.ts#L362">property <b>userSpecifiedType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/entry.ts#L362">property <b>userSpecifiedType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userSpecifiedType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3467,7 +3467,7 @@ userSpecifiedType strings must begin with a letter or underscore and can only co
 numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
 
 <h3 class="pdoc-module-header" id="PolicyTagArgs" data-link-title="PolicyTagArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L162">
         interface <strong>PolicyTagArgs</strong>
     </a>
 </h3>
@@ -3477,7 +3477,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 The set of arguments for constructing a PolicyTag resource.
 
 <h4 class="pdoc-member-header" id="PolicyTagArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L169">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L169">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3488,7 +3488,7 @@ encoded in UTF-8. If not set, defaults to an empty description.
 If not set, defaults to an empty description.
 
 <h4 class="pdoc-member-header" id="PolicyTagArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L175">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L175">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3498,7 +3498,7 @@ taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces;
 not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
 
 <h4 class="pdoc-member-header" id="PolicyTagArgs-parentPolicyTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L181">property <b>parentPolicyTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L181">property <b>parentPolicyTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentPolicyTag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3508,7 +3508,7 @@ If empty, it means this policy tag is a top level policy tag.
 If not set, defaults to an empty string.
 
 <h4 class="pdoc-member-header" id="PolicyTagArgs-taxonomy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L185">property <b>taxonomy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L185">property <b>taxonomy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taxonomy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3516,7 +3516,7 @@ If not set, defaults to an empty string.
 Taxonomy the policy tag is associated with
 
 <h3 class="pdoc-module-header" id="PolicyTagIamBindingArgs" data-link-title="PolicyTagIamBindingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L148">
         interface <strong>PolicyTagIamBindingArgs</strong>
     </a>
 </h3>
@@ -3526,17 +3526,17 @@ Taxonomy the policy tag is associated with
 The set of arguments for constructing a PolicyTagIamBinding resource.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamBindingArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L149">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L149">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyTagIamBindingCondition'>PolicyTagIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PolicyTagIamBindingArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L150">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L150">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PolicyTagIamBindingArgs-policyTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L154">property <b>policyTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L154">property <b>policyTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyTag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3544,7 +3544,7 @@ The set of arguments for constructing a PolicyTagIamBinding resource.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="PolicyTagIamBindingArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L160">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L160">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3554,7 +3554,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="PolicyTagIamBindingState" data-link-title="PolicyTagIamBindingState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L126">
         interface <strong>PolicyTagIamBindingState</strong>
     </a>
 </h3>
@@ -3564,12 +3564,12 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering PolicyTagIamBinding resources.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamBindingState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L127">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L127">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyTagIamBindingCondition'>PolicyTagIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PolicyTagIamBindingState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L131">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L131">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3577,12 +3577,12 @@ Input properties used for looking up and filtering PolicyTagIamBinding resources
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamBindingState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L132">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L132">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PolicyTagIamBindingState-policyTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L136">property <b>policyTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L136">property <b>policyTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyTag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3590,7 +3590,7 @@ Input properties used for looking up and filtering PolicyTagIamBinding resources
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="PolicyTagIamBindingState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L142">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamBinding.ts#L142">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3600,7 +3600,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="PolicyTagIamMemberArgs" data-link-title="PolicyTagIamMemberArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L148">
         interface <strong>PolicyTagIamMemberArgs</strong>
     </a>
 </h3>
@@ -3610,17 +3610,17 @@ The role that should be applied. Only one
 The set of arguments for constructing a PolicyTagIamMember resource.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamMemberArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L149">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L149">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyTagIamMemberCondition'>PolicyTagIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PolicyTagIamMemberArgs-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L150">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L150">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PolicyTagIamMemberArgs-policyTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L154">property <b>policyTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L154">property <b>policyTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyTag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3628,7 +3628,7 @@ The set of arguments for constructing a PolicyTagIamMember resource.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="PolicyTagIamMemberArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L160">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L160">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3638,7 +3638,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="PolicyTagIamMemberState" data-link-title="PolicyTagIamMemberState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L126">
         interface <strong>PolicyTagIamMemberState</strong>
     </a>
 </h3>
@@ -3648,12 +3648,12 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering PolicyTagIamMember resources.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamMemberState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L127">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L127">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyTagIamMemberCondition'>PolicyTagIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PolicyTagIamMemberState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L131">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L131">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3661,12 +3661,12 @@ Input properties used for looking up and filtering PolicyTagIamMember resources.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamMemberState-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L132">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L132">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PolicyTagIamMemberState-policyTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L136">property <b>policyTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L136">property <b>policyTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyTag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3674,7 +3674,7 @@ Input properties used for looking up and filtering PolicyTagIamMember resources.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="PolicyTagIamMemberState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamMember.ts#L142">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamMember.ts#L142">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3684,7 +3684,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="PolicyTagIamPolicyArgs" data-link-title="PolicyTagIamPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L134">
         interface <strong>PolicyTagIamPolicyArgs</strong>
     </a>
 </h3>
@@ -3694,7 +3694,7 @@ The role that should be applied. Only one
 The set of arguments for constructing a PolicyTagIamPolicy resource.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L139">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L139">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3703,7 +3703,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamPolicyArgs-policyTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L143">property <b>policyTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L143">property <b>policyTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyTag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3711,7 +3711,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 Used to find the parent resource to bind the IAM policy to
 
 <h3 class="pdoc-module-header" id="PolicyTagIamPolicyState" data-link-title="PolicyTagIamPolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L115">
         interface <strong>PolicyTagIamPolicyState</strong>
     </a>
 </h3>
@@ -3721,7 +3721,7 @@ Used to find the parent resource to bind the IAM policy to
 Input properties used for looking up and filtering PolicyTagIamPolicy resources.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamPolicyState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L119">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L119">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3729,7 +3729,7 @@ Input properties used for looking up and filtering PolicyTagIamPolicy resources.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamPolicyState-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L124">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L124">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3738,7 +3738,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="PolicyTagIamPolicyState-policyTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L128">property <b>policyTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTagIamPolicy.ts#L128">property <b>policyTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyTag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3746,7 +3746,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 Used to find the parent resource to bind the IAM policy to
 
 <h3 class="pdoc-module-header" id="PolicyTagState" data-link-title="PolicyTagState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L124">
         interface <strong>PolicyTagState</strong>
     </a>
 </h3>
@@ -3756,7 +3756,7 @@ Used to find the parent resource to bind the IAM policy to
 Input properties used for looking up and filtering PolicyTag resources.
 
 <h4 class="pdoc-member-header" id="PolicyTagState-childPolicyTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L128">property <b>childPolicyTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L128">property <b>childPolicyTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>childPolicyTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3764,7 +3764,7 @@ Input properties used for looking up and filtering PolicyTag resources.
 Resource names of child policy tags of this policy tag.
 
 <h4 class="pdoc-member-header" id="PolicyTagState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L135">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L135">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3775,7 +3775,7 @@ encoded in UTF-8. If not set, defaults to an empty description.
 If not set, defaults to an empty description.
 
 <h4 class="pdoc-member-header" id="PolicyTagState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L141">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L141">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3785,7 +3785,7 @@ taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces;
 not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
 
 <h4 class="pdoc-member-header" id="PolicyTagState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L146">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L146">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3794,7 +3794,7 @@ Resource name of this policy tag, whose format is:
 "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}"
 
 <h4 class="pdoc-member-header" id="PolicyTagState-parentPolicyTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L152">property <b>parentPolicyTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L152">property <b>parentPolicyTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentPolicyTag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3804,7 +3804,7 @@ If empty, it means this policy tag is a top level policy tag.
 If not set, defaults to an empty string.
 
 <h4 class="pdoc-member-header" id="PolicyTagState-taxonomy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/policyTag.ts#L156">property <b>taxonomy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/policyTag.ts#L156">property <b>taxonomy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taxonomy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3812,7 +3812,7 @@ If not set, defaults to an empty string.
 Taxonomy the policy tag is associated with
 
 <h3 class="pdoc-module-header" id="TagArgs" data-link-title="TagArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L442">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L442">
         interface <strong>TagArgs</strong>
     </a>
 </h3>
@@ -3822,7 +3822,7 @@ Taxonomy the policy tag is associated with
 The set of arguments for constructing a Tag resource.
 
 <h4 class="pdoc-member-header" id="TagArgs-column">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L449">property <b>column</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L449">property <b>column</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>column?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3833,7 +3833,7 @@ For attaching a tag to a nested column, use `.` to separate the column names. Ex
 `outer_column.inner_column`
 
 <h4 class="pdoc-member-header" id="TagArgs-fields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L455">property <b>fields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L455">property <b>fields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TagField'>TagField</a>&gt;[]&gt;;</code></pre>
@@ -3843,7 +3843,7 @@ Valid field IDs are defined by the tag's template. A tag must have at least 1 fi
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TagArgs-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L460">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L460">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3852,7 +3852,7 @@ The name of the parent this tag is attached to. This can be the name of an entry
 all entries in that group.
 
 <h4 class="pdoc-member-header" id="TagArgs-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L466">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L466">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3862,7 +3862,7 @@ projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
 
 <h3 class="pdoc-module-header" id="TagState" data-link-title="TagState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L401">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L401">
         interface <strong>TagState</strong>
     </a>
 </h3>
@@ -3872,7 +3872,7 @@ This field cannot be modified after creation.
 Input properties used for looking up and filtering Tag resources.
 
 <h4 class="pdoc-member-header" id="TagState-column">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L408">property <b>column</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L408">property <b>column</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>column?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3883,7 +3883,7 @@ For attaching a tag to a nested column, use `.` to separate the column names. Ex
 `outer_column.inner_column`
 
 <h4 class="pdoc-member-header" id="TagState-fields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L414">property <b>fields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L414">property <b>fields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TagField'>TagField</a>&gt;[]&gt;;</code></pre>
@@ -3893,7 +3893,7 @@ Valid field IDs are defined by the tag's template. A tag must have at least 1 fi
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TagState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L421">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L421">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3904,7 +3904,7 @@ projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_
 identifier. Note that this Tag may not actually be stored in the location in this name.
 
 <h4 class="pdoc-member-header" id="TagState-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L426">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L426">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3913,7 +3913,7 @@ The name of the parent this tag is attached to. This can be the name of an entry
 all entries in that group.
 
 <h4 class="pdoc-member-header" id="TagState-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L432">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L432">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3923,7 +3923,7 @@ projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
 
 <h4 class="pdoc-member-header" id="TagState-templateDisplayname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tag.ts#L436">property <b>templateDisplayname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tag.ts#L436">property <b>templateDisplayname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateDisplayname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3931,7 +3931,7 @@ This field cannot be modified after creation.
 The display name of the tag template.
 
 <h3 class="pdoc-module-header" id="TagTemplateArgs" data-link-title="TagTemplateArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L223">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L223">
         interface <strong>TagTemplateArgs</strong>
     </a>
 </h3>
@@ -3941,7 +3941,7 @@ The display name of the tag template.
 The set of arguments for constructing a TagTemplate resource.
 
 <h4 class="pdoc-member-header" id="TagTemplateArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L227">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L227">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3949,7 +3949,7 @@ The set of arguments for constructing a TagTemplate resource.
 The display name for this template.
 
 <h4 class="pdoc-member-header" id="TagTemplateArgs-fields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L232">property <b>fields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L232">property <b>fields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TagTemplateField'>TagTemplateField</a>&gt;[]&gt;;</code></pre>
@@ -3958,7 +3958,7 @@ Set of tag template field IDs and the settings for the field. This set is an exh
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TagTemplateArgs-forceDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L236">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L236">property <b>forceDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3966,7 +3966,7 @@ Structure is documented below.
 This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.
 
 <h4 class="pdoc-member-header" id="TagTemplateArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L241">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L241">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3975,7 +3975,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TagTemplateArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L245">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L245">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3983,7 +3983,7 @@ If it is not provided, the provider project is used.
 Template location region.
 
 <h4 class="pdoc-member-header" id="TagTemplateArgs-tagTemplateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L249">property <b>tagTemplateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L249">property <b>tagTemplateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagTemplateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3991,7 +3991,7 @@ Template location region.
 The id of the tag template to create.
 
 <h3 class="pdoc-module-header" id="TagTemplateState" data-link-title="TagTemplateState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L186">
         interface <strong>TagTemplateState</strong>
     </a>
 </h3>
@@ -4001,7 +4001,7 @@ The id of the tag template to create.
 Input properties used for looking up and filtering TagTemplate resources.
 
 <h4 class="pdoc-member-header" id="TagTemplateState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L190">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L190">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4009,7 +4009,7 @@ Input properties used for looking up and filtering TagTemplate resources.
 The display name for this template.
 
 <h4 class="pdoc-member-header" id="TagTemplateState-fields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L195">property <b>fields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L195">property <b>fields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TagTemplateField'>TagTemplateField</a>&gt;[]&gt;;</code></pre>
@@ -4018,7 +4018,7 @@ Set of tag template field IDs and the settings for the field. This set is an exh
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TagTemplateState-forceDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L199">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L199">property <b>forceDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4026,7 +4026,7 @@ Structure is documented below.
 This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.
 
 <h4 class="pdoc-member-header" id="TagTemplateState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L204">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L204">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4035,7 +4035,7 @@ This confirms the deletion of any possible tags using this template. Must be set
 The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}
 
 <h4 class="pdoc-member-header" id="TagTemplateState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L209">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L209">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4044,7 +4044,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TagTemplateState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L213">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L213">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4052,7 +4052,7 @@ If it is not provided, the provider project is used.
 Template location region.
 
 <h4 class="pdoc-member-header" id="TagTemplateState-tagTemplateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/tagTemplate.ts#L217">property <b>tagTemplateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/tagTemplate.ts#L217">property <b>tagTemplateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagTemplateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4060,7 +4060,7 @@ Template location region.
 The id of the tag template to create.
 
 <h3 class="pdoc-module-header" id="TaxonomyArgs" data-link-title="TaxonomyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L159">
         interface <strong>TaxonomyArgs</strong>
     </a>
 </h3>
@@ -4070,7 +4070,7 @@ The id of the tag template to create.
 The set of arguments for constructing a Taxonomy resource.
 
 <h4 class="pdoc-member-header" id="TaxonomyArgs-activatedPolicyTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L165">property <b>activatedPolicyTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L165">property <b>activatedPolicyTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activatedPolicyTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4080,7 +4080,7 @@ defaults to an empty list.
 Each value may be one of `POLICY_TYPE_UNSPECIFIED` and `FINE_GRAINED_ACCESS_CONTROL`.
 
 <h4 class="pdoc-member-header" id="TaxonomyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L171">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L171">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4090,7 +4090,7 @@ tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes
 long when encoded in UTF-8. If not set, defaults to an empty description.
 
 <h4 class="pdoc-member-header" id="TaxonomyArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L178">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L178">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4101,7 +4101,7 @@ and spaces; not start or end with spaces; and be at most 200 bytes
 long when encoded in UTF-8.
 
 <h4 class="pdoc-member-header" id="TaxonomyArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L183">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L183">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4110,7 +4110,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TaxonomyArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L187">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L187">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4118,7 +4118,7 @@ If it is not provided, the provider project is used.
 Taxonomy location region.
 
 <h3 class="pdoc-module-header" id="TaxonomyIamBindingArgs" data-link-title="TaxonomyIamBindingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L164">
         interface <strong>TaxonomyIamBindingArgs</strong>
     </a>
 </h3>
@@ -4128,17 +4128,17 @@ Taxonomy location region.
 The set of arguments for constructing a TaxonomyIamBinding resource.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamBindingArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L165">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L165">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TaxonomyIamBindingCondition'>TaxonomyIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamBindingArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L166">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L166">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamBindingArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L171">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L171">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4147,12 +4147,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamBindingArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L172">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L172">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamBindingArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L178">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L178">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4162,7 +4162,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamBindingArgs-taxonomy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L182">property <b>taxonomy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L182">property <b>taxonomy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taxonomy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4170,7 +4170,7 @@ The role that should be applied. Only one
 Used to find the parent resource to bind the IAM policy to
 
 <h3 class="pdoc-module-header" id="TaxonomyIamBindingState" data-link-title="TaxonomyIamBindingState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L136">
         interface <strong>TaxonomyIamBindingState</strong>
     </a>
 </h3>
@@ -4180,12 +4180,12 @@ Used to find the parent resource to bind the IAM policy to
 Input properties used for looking up and filtering TaxonomyIamBinding resources.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamBindingState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L137">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L137">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TaxonomyIamBindingCondition'>TaxonomyIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamBindingState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L141">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L141">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4193,12 +4193,12 @@ Input properties used for looking up and filtering TaxonomyIamBinding resources.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamBindingState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L142">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L142">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamBindingState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L147">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L147">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4207,12 +4207,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamBindingState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L148">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L148">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamBindingState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L154">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L154">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4222,7 +4222,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamBindingState-taxonomy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L158">property <b>taxonomy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamBinding.ts#L158">property <b>taxonomy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taxonomy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4230,7 +4230,7 @@ The role that should be applied. Only one
 Used to find the parent resource to bind the IAM policy to
 
 <h3 class="pdoc-module-header" id="TaxonomyIamMemberArgs" data-link-title="TaxonomyIamMemberArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L164">
         interface <strong>TaxonomyIamMemberArgs</strong>
     </a>
 </h3>
@@ -4240,17 +4240,17 @@ Used to find the parent resource to bind the IAM policy to
 The set of arguments for constructing a TaxonomyIamMember resource.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamMemberArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L165">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L165">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TaxonomyIamMemberCondition'>TaxonomyIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamMemberArgs-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L166">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L166">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamMemberArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L171">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L171">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4259,12 +4259,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamMemberArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L172">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L172">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamMemberArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L178">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L178">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4274,7 +4274,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamMemberArgs-taxonomy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L182">property <b>taxonomy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L182">property <b>taxonomy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taxonomy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4282,7 +4282,7 @@ The role that should be applied. Only one
 Used to find the parent resource to bind the IAM policy to
 
 <h3 class="pdoc-module-header" id="TaxonomyIamMemberState" data-link-title="TaxonomyIamMemberState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L136">
         interface <strong>TaxonomyIamMemberState</strong>
     </a>
 </h3>
@@ -4292,12 +4292,12 @@ Used to find the parent resource to bind the IAM policy to
 Input properties used for looking up and filtering TaxonomyIamMember resources.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamMemberState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L137">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L137">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TaxonomyIamMemberCondition'>TaxonomyIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamMemberState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L141">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L141">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4305,12 +4305,12 @@ Input properties used for looking up and filtering TaxonomyIamMember resources.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamMemberState-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L142">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L142">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamMemberState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L147">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L147">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4319,12 +4319,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamMemberState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L148">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L148">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamMemberState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L154">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L154">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4334,7 +4334,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamMemberState-taxonomy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L158">property <b>taxonomy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamMember.ts#L158">property <b>taxonomy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taxonomy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4342,7 +4342,7 @@ The role that should be applied. Only one
 Used to find the parent resource to bind the IAM policy to
 
 <h3 class="pdoc-module-header" id="TaxonomyIamPolicyArgs" data-link-title="TaxonomyIamPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L150">
         interface <strong>TaxonomyIamPolicyArgs</strong>
     </a>
 </h3>
@@ -4352,7 +4352,7 @@ Used to find the parent resource to bind the IAM policy to
 The set of arguments for constructing a TaxonomyIamPolicy resource.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L155">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L155">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4361,7 +4361,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicyArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L160">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L160">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4370,12 +4370,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicyArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L161">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L161">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicyArgs-taxonomy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L165">property <b>taxonomy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L165">property <b>taxonomy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taxonomy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4383,7 +4383,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 Used to find the parent resource to bind the IAM policy to
 
 <h3 class="pdoc-module-header" id="TaxonomyIamPolicyState" data-link-title="TaxonomyIamPolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L125">
         interface <strong>TaxonomyIamPolicyState</strong>
     </a>
 </h3>
@@ -4393,7 +4393,7 @@ Used to find the parent resource to bind the IAM policy to
 Input properties used for looking up and filtering TaxonomyIamPolicy resources.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicyState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L129">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L129">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4401,7 +4401,7 @@ Input properties used for looking up and filtering TaxonomyIamPolicy resources.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicyState-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L134">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L134">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4410,7 +4410,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicyState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L139">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L139">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4419,12 +4419,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicyState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L140">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L140">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaxonomyIamPolicyState-taxonomy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L144">property <b>taxonomy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomyIamPolicy.ts#L144">property <b>taxonomy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taxonomy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4432,7 +4432,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 Used to find the parent resource to bind the IAM policy to
 
 <h3 class="pdoc-module-header" id="TaxonomyState" data-link-title="TaxonomyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L121">
         interface <strong>TaxonomyState</strong>
     </a>
 </h3>
@@ -4442,7 +4442,7 @@ Used to find the parent resource to bind the IAM policy to
 Input properties used for looking up and filtering Taxonomy resources.
 
 <h4 class="pdoc-member-header" id="TaxonomyState-activatedPolicyTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L127">property <b>activatedPolicyTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L127">property <b>activatedPolicyTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activatedPolicyTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4452,7 +4452,7 @@ defaults to an empty list.
 Each value may be one of `POLICY_TYPE_UNSPECIFIED` and `FINE_GRAINED_ACCESS_CONTROL`.
 
 <h4 class="pdoc-member-header" id="TaxonomyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L133">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L133">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4462,7 +4462,7 @@ tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes
 long when encoded in UTF-8. If not set, defaults to an empty description.
 
 <h4 class="pdoc-member-header" id="TaxonomyState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L140">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L140">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4473,7 +4473,7 @@ and spaces; not start or end with spaces; and be at most 200 bytes
 long when encoded in UTF-8.
 
 <h4 class="pdoc-member-header" id="TaxonomyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L144">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4481,7 +4481,7 @@ long when encoded in UTF-8.
 Resource name of this taxonomy, whose format is: "projects/{project}/locations/{region}/taxonomies/{taxonomy}".
 
 <h4 class="pdoc-member-header" id="TaxonomyState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L149">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L149">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4490,7 +4490,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TaxonomyState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/datacatalog/taxonomy.ts#L153">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/datacatalog/taxonomy.ts#L153">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
