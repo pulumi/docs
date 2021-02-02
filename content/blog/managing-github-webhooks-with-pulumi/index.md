@@ -131,7 +131,7 @@ secret value, set it as a configuration value in my project:
 
     $ pulumi config set --secret hookSecret [READACTED]
 
-Once that's done, I can use this value to validate the signiture. We'll
+Once that's done, I can use this value to validate the signature. We'll
 use some functions from node's `crypto` library at runtime to handle
 this. If the signature we computed doesn't match what was provided with
 the request, we'll return error code 400. Our program now looks like
