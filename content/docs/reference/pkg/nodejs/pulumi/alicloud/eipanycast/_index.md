@@ -3,7 +3,7 @@ title: "Module eipanycast"
 title_tag: "Module eipanycast | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "eipanycast"
 meta_desc: "Explore members of the eipanycast module in the @pulumi/alicloud package."
-git_sha: "84d761bea49f23fb37c890ced8154c67c2c45089"
+git_sha: "3f289baed81955a41758c80d52626265fa8d2773"
 block_external_search_index: true
 ---
 
@@ -39,7 +39,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AnycastEipAddress" data-link-title="AnycastEipAddress">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L35">
         Resource <strong>AnycastEipAddress</strong>
     </a>
 </h3>
@@ -74,7 +74,7 @@ Eipanycast Anycast Eip Address can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="AnycastEipAddress-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L90"> <b>constructor</b></a>
 </h4>
 
 
@@ -88,7 +88,7 @@ Create a AnycastEipAddress resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddress-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -99,14 +99,14 @@ Get an existing AnycastEipAddress resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddress-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AnycastEipAddress-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -117,7 +117,7 @@ Returns true if the given object is an instance of AnycastEipAddress.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddress-anycastEipAddressName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L66">property <b>anycastEipAddressName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L66">property <b>anycastEipAddressName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>anycastEipAddressName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -125,7 +125,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Anycast EIP instance name.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddress-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L70">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L70">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -133,7 +133,7 @@ Anycast EIP instance name.
 The peak bandwidth of the Anycast EIP instance, in Mbps. It can not be changed when the internetChargeType is `PayByBandwidth` and the default value is 200.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddress-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L74">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L74">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -141,7 +141,7 @@ The peak bandwidth of the Anycast EIP instance, in Mbps. It can not be changed w
 Anycast EIP instance description.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddress-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -150,7 +150,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddress-internetChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L78">property <b>internetChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L78">property <b>internetChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>internetChargeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -158,7 +158,7 @@ deployments and may be missing (undefined) during planning phases.
 The billing method of Anycast EIP instance. `PayByBandwidth`: refers to the method of billing based on traffic. Valid value: `PayByBandwidth`.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddress-paymentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L82">property <b>paymentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L82">property <b>paymentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>paymentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -166,7 +166,7 @@ The billing method of Anycast EIP instance. `PayByBandwidth`: refers to the meth
 The payment model of Anycast EIP instance. `PayAsYouGo`: Refers to the post-paid mode. Valid value: `PayAsYouGo`. Default value is `PayAsYouGo`.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddress-serviceLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L86">property <b>serviceLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L86">property <b>serviceLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -174,7 +174,7 @@ The payment model of Anycast EIP instance. `PayAsYouGo`: Refers to the post-paid
 Anycast EIP instance access area. `international`: Refers to areas outside of Mainland China.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddress-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L90">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L90">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -182,7 +182,7 @@ Anycast EIP instance access area. `international`: Refers to areas outside of Ma
 The IP status.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddress-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -191,7 +191,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AnycastEipAddressAttachment" data-link-title="AnycastEipAddressAttachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L42">
         Resource <strong>AnycastEipAddressAttachment</strong>
     </a>
 </h3>
@@ -233,7 +233,7 @@ Eipanycast Anycast Eip Address Attachment can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L89"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L89"> <b>constructor</b></a>
 </h4>
 
 
@@ -247,7 +247,7 @@ Create a AnycastEipAddressAttachment resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -258,14 +258,14 @@ Get an existing AnycastEipAddressAttachment resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -276,7 +276,7 @@ Returns true if the given object is an instance of AnycastEipAddressAttachment. 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachment-anycastId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L73">property <b>anycastId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L73">property <b>anycastId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>anycastId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -284,7 +284,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of Anycast EIP.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachment-bindInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L77">property <b>bindInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L77">property <b>bindInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bindInstanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -292,7 +292,7 @@ The ID of Anycast EIP.
 The ID of bound instance.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachment-bindInstanceRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L81">property <b>bindInstanceRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L81">property <b>bindInstanceRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bindInstanceRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -300,7 +300,7 @@ The ID of bound instance.
 The region ID of bound instance.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachment-bindInstanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L85">property <b>bindInstanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L85">property <b>bindInstanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bindInstanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -308,7 +308,7 @@ The region ID of bound instance.
 The type of bound instance. Valid value: `SlbInstance`.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachment-bindTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L89">property <b>bindTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L89">property <b>bindTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bindTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -316,7 +316,7 @@ The type of bound instance. Valid value: `SlbInstance`.
 The time of bound instance.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -325,7 +325,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -336,7 +336,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAnycastEipAddresses" data-link-title="getAnycastEipAddresses">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L28">
         Function <strong>getAnycastEipAddresses</strong>
     </a>
 </h3>
@@ -367,7 +367,7 @@ export const firstEipanycastAnycastEipAddressId = example.then(example => exampl
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AnycastEipAddressArgs" data-link-title="AnycastEipAddressArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L172">
         interface <strong>AnycastEipAddressArgs</strong>
     </a>
 </h3>
@@ -377,7 +377,7 @@ export const firstEipanycastAnycastEipAddressId = example.then(example => exampl
 The set of arguments for constructing a AnycastEipAddress resource.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressArgs-anycastEipAddressName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L176">property <b>anycastEipAddressName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L176">property <b>anycastEipAddressName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>anycastEipAddressName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -385,7 +385,7 @@ The set of arguments for constructing a AnycastEipAddress resource.
 Anycast EIP instance name.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressArgs-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L180">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L180">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -393,7 +393,7 @@ Anycast EIP instance name.
 The peak bandwidth of the Anycast EIP instance, in Mbps. It can not be changed when the internetChargeType is `PayByBandwidth` and the default value is 200.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L184">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L184">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -401,7 +401,7 @@ The peak bandwidth of the Anycast EIP instance, in Mbps. It can not be changed w
 Anycast EIP instance description.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressArgs-internetChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L188">property <b>internetChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L188">property <b>internetChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetChargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -409,7 +409,7 @@ Anycast EIP instance description.
 The billing method of Anycast EIP instance. `PayByBandwidth`: refers to the method of billing based on traffic. Valid value: `PayByBandwidth`.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressArgs-paymentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L192">property <b>paymentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L192">property <b>paymentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paymentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -417,7 +417,7 @@ The billing method of Anycast EIP instance. `PayByBandwidth`: refers to the meth
 The payment model of Anycast EIP instance. `PayAsYouGo`: Refers to the post-paid mode. Valid value: `PayAsYouGo`. Default value is `PayAsYouGo`.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressArgs-serviceLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L196">property <b>serviceLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L196">property <b>serviceLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -425,7 +425,7 @@ The payment model of Anycast EIP instance. `PayAsYouGo`: Refers to the post-paid
 Anycast EIP instance access area. `international`: Refers to areas outside of Mainland China.
 
 <h3 class="pdoc-module-header" id="AnycastEipAddressAttachmentArgs" data-link-title="AnycastEipAddressAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L168">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L168">
         interface <strong>AnycastEipAddressAttachmentArgs</strong>
     </a>
 </h3>
@@ -435,7 +435,7 @@ Anycast EIP instance access area. `international`: Refers to areas outside of Ma
 The set of arguments for constructing a AnycastEipAddressAttachment resource.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachmentArgs-anycastId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L172">property <b>anycastId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L172">property <b>anycastId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>anycastId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -443,7 +443,7 @@ The set of arguments for constructing a AnycastEipAddressAttachment resource.
 The ID of Anycast EIP.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachmentArgs-bindInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L176">property <b>bindInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L176">property <b>bindInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindInstanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -451,7 +451,7 @@ The ID of Anycast EIP.
 The ID of bound instance.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachmentArgs-bindInstanceRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L180">property <b>bindInstanceRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L180">property <b>bindInstanceRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindInstanceRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -459,7 +459,7 @@ The ID of bound instance.
 The region ID of bound instance.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachmentArgs-bindInstanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L184">property <b>bindInstanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L184">property <b>bindInstanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindInstanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -467,7 +467,7 @@ The region ID of bound instance.
 The type of bound instance. Valid value: `SlbInstance`.
 
 <h3 class="pdoc-module-header" id="AnycastEipAddressAttachmentState" data-link-title="AnycastEipAddressAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L142">
         interface <strong>AnycastEipAddressAttachmentState</strong>
     </a>
 </h3>
@@ -477,7 +477,7 @@ The type of bound instance. Valid value: `SlbInstance`.
 Input properties used for looking up and filtering AnycastEipAddressAttachment resources.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachmentState-anycastId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L146">property <b>anycastId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L146">property <b>anycastId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>anycastId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -485,7 +485,7 @@ Input properties used for looking up and filtering AnycastEipAddressAttachment r
 The ID of Anycast EIP.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachmentState-bindInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L150">property <b>bindInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L150">property <b>bindInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindInstanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -493,7 +493,7 @@ The ID of Anycast EIP.
 The ID of bound instance.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachmentState-bindInstanceRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L154">property <b>bindInstanceRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L154">property <b>bindInstanceRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindInstanceRegionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -501,7 +501,7 @@ The ID of bound instance.
 The region ID of bound instance.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachmentState-bindInstanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L158">property <b>bindInstanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L158">property <b>bindInstanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindInstanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -509,7 +509,7 @@ The region ID of bound instance.
 The type of bound instance. Valid value: `SlbInstance`.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressAttachmentState-bindTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L162">property <b>bindTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddressAttachment.ts#L162">property <b>bindTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -517,7 +517,7 @@ The type of bound instance. Valid value: `SlbInstance`.
 The time of bound instance.
 
 <h3 class="pdoc-module-header" id="AnycastEipAddressState" data-link-title="AnycastEipAddressState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L138">
         interface <strong>AnycastEipAddressState</strong>
     </a>
 </h3>
@@ -527,7 +527,7 @@ The time of bound instance.
 Input properties used for looking up and filtering AnycastEipAddress resources.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressState-anycastEipAddressName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L142">property <b>anycastEipAddressName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L142">property <b>anycastEipAddressName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>anycastEipAddressName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -535,7 +535,7 @@ Input properties used for looking up and filtering AnycastEipAddress resources.
 Anycast EIP instance name.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressState-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L146">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L146">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -543,7 +543,7 @@ Anycast EIP instance name.
 The peak bandwidth of the Anycast EIP instance, in Mbps. It can not be changed when the internetChargeType is `PayByBandwidth` and the default value is 200.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L150">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L150">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -551,7 +551,7 @@ The peak bandwidth of the Anycast EIP instance, in Mbps. It can not be changed w
 Anycast EIP instance description.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressState-internetChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L154">property <b>internetChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L154">property <b>internetChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetChargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -559,7 +559,7 @@ Anycast EIP instance description.
 The billing method of Anycast EIP instance. `PayByBandwidth`: refers to the method of billing based on traffic. Valid value: `PayByBandwidth`.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressState-paymentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L158">property <b>paymentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L158">property <b>paymentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paymentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -567,7 +567,7 @@ The billing method of Anycast EIP instance. `PayByBandwidth`: refers to the meth
 The payment model of Anycast EIP instance. `PayAsYouGo`: Refers to the post-paid mode. Valid value: `PayAsYouGo`. Default value is `PayAsYouGo`.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressState-serviceLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L162">property <b>serviceLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L162">property <b>serviceLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -575,7 +575,7 @@ The payment model of Anycast EIP instance. `PayAsYouGo`: Refers to the post-paid
 Anycast EIP instance access area. `international`: Refers to areas outside of Mainland China.
 
 <h4 class="pdoc-member-header" id="AnycastEipAddressState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/anycastEipAddress.ts#L166">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/anycastEipAddress.ts#L166">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -583,7 +583,7 @@ Anycast EIP instance access area. `international`: Refers to areas outside of Ma
 The IP status.
 
 <h3 class="pdoc-module-header" id="GetAnycastEipAddressesArgs" data-link-title="GetAnycastEipAddressesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L55">
         interface <strong>GetAnycastEipAddressesArgs</strong>
     </a>
 </h3>
@@ -593,7 +593,7 @@ The IP status.
 A collection of arguments for invoking getAnycastEipAddresses.
 
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesArgs-anycastEipAddressName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L59">property <b>anycastEipAddressName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L59">property <b>anycastEipAddressName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>anycastEipAddressName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -601,7 +601,7 @@ A collection of arguments for invoking getAnycastEipAddresses.
 Anycast EIP instance name.
 
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesArgs-bindInstanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L63">property <b>bindInstanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L63">property <b>bindInstanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindInstanceIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -609,7 +609,7 @@ Anycast EIP instance name.
 The bind instance ids.
 
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesArgs-businessStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L67">property <b>businessStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L67">property <b>businessStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>businessStatus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -617,7 +617,7 @@ The bind instance ids.
 The business status of the Anycast EIP instance. -`Normal`: Normal state. -`FinancialLocked`: The status of arrears locked.
 
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L71">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L71">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -625,7 +625,7 @@ The business status of the Anycast EIP instance. -`Normal`: Normal state. -`Fina
 A list of Anycast Eip Address IDs.
 
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesArgs-internetChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L75">property <b>internetChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L75">property <b>internetChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetChargeType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -633,7 +633,7 @@ A list of Anycast Eip Address IDs.
 The billing method of Anycast EIP instance. `PayByBandwidth`: refers to the method of billing based on traffic.
 
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesArgs-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L79">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L79">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -641,7 +641,7 @@ The billing method of Anycast EIP instance. `PayByBandwidth`: refers to the meth
 Anycast EIP instance IP address.
 
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L83">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L83">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -649,12 +649,12 @@ Anycast EIP instance IP address.
 A regex string to filter results by Anycast Eip Address name.
 
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L84">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L84">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesArgs-paymentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L88">property <b>paymentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L88">property <b>paymentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paymentType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -662,7 +662,7 @@ A regex string to filter results by Anycast Eip Address name.
 The payment model of Anycast EIP instance. "PostPaid": Refers to the post-paid mode.
 
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesArgs-serviceLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L92">property <b>serviceLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L92">property <b>serviceLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceLocation?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -670,7 +670,7 @@ The payment model of Anycast EIP instance. "PostPaid": Refers to the post-paid m
 Anycast EIP instance access area. "international": Refers to areas outside of Mainland China.
 
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L96">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L96">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -678,7 +678,7 @@ Anycast EIP instance access area. "international": Refers to areas outside of Ma
 IP status。- `Associating`, `Unassociating`, `Allocated`, `Associated`, `Modifying`, `Releasing`, `Released`.
 
 <h3 class="pdoc-module-header" id="GetAnycastEipAddressesResult" data-link-title="GetAnycastEipAddressesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L102">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L102">
         interface <strong>GetAnycastEipAddressesResult</strong>
     </a>
 </h3>
@@ -688,27 +688,27 @@ IP status。- `Associating`, `Unassociating`, `Allocated`, `Associated`, `Modify
 A collection of values returned by getAnycastEipAddresses.
 
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesResult-addresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L103">property <b>addresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L103">property <b>addresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addresses: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAnycastEipAddressesAddress'>GetAnycastEipAddressesAddress</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesResult-anycastEipAddressName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L104">property <b>anycastEipAddressName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L104">property <b>anycastEipAddressName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>anycastEipAddressName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesResult-bindInstanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L105">property <b>bindInstanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L105">property <b>bindInstanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindInstanceIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesResult-businessStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L106">property <b>businessStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L106">property <b>businessStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>businessStatus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L110">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L110">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -716,47 +716,47 @@ A collection of values returned by getAnycastEipAddresses.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L111">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L111">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesResult-internetChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L112">property <b>internetChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L112">property <b>internetChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetChargeType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesResult-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L113">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L113">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L114">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L114">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L115">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L115">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L116">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L116">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesResult-paymentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L117">property <b>paymentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L117">property <b>paymentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paymentType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesResult-serviceLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L118">property <b>serviceLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L118">property <b>serviceLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceLocation?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAnycastEipAddressesResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L119">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/3f289baed81955a41758c80d52626265fa8d2773/sdk/nodejs/eipanycast/getAnycastEipAddresses.ts#L119">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
