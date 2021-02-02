@@ -15,12 +15,12 @@ tags:
 ---
 
 Pulumi's infrastructure as code tooling combines the programming languages and tools you already know with the full power of cloud
-infrastructure. But, until now, some of that Pulumi components for that cloud infrastructure, like our popular [EKS package], were
+infrastructure. But, until now, some Pulumi components for cloud infrastructure, like our popular [EKS package], were
 only available in a subset of the languages supported by Pulumi.
 
-Now, with multi-language components, anyone can author a Pulumi component once, in the language they prefer, and make it available
+Now, with multi-language components, anyone can author a Pulumi component in the language they prefer and make it available
 across all Pulumi languages. To celebrate, we've taken that [EKS package]–previously only available for TypeScript–
-and brought it to all four Pulumi languages: TypeScript, Python, .NET, and Go. Now, regardless of the language you choose, you can
+and made it available in all four Pulumi languages: TypeScript, Python, .NET, and Go. Regardless of the language you choose, you can
 [manage EKS clusters] with Pulumi, starting with the [v0.22.0 release of the EKS package]. Check out our Modern Infrastructure
 Wednesday video to see it in action:
 
