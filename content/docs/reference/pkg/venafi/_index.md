@@ -27,7 +27,7 @@ A Pulumi package for creating and managing venafi cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`venafi` Terraform Provider](https://github.com/Venafi/terraform-provider-venafi).</dd>
 	<dt>Version</dt>
-	<dd>0.1.1</dd>
+	<dd>0.2.0</dd>
 </dl>
 
 
