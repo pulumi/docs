@@ -3,7 +3,7 @@ title: "Module okta"
 title_tag: "Module okta | Package @pulumi/vault | Node.js SDK"
 linktitle: "okta"
 meta_desc: "Explore members of the okta module in the @pulumi/vault package."
-git_sha: "ebbace55ace6f59a082f504fcae2277b394db92f"
+git_sha: "d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AuthBackend" data-link-title="AuthBackend">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L36">
         Resource <strong>AuthBackend</strong>
     </a>
 </h3>
@@ -71,7 +71,7 @@ const example = new vault.okta.AuthBackend("example", {
 ```
 
 <h4 class="pdoc-member-header" id="AuthBackend-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L112"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L112"> <b>constructor</b></a>
 </h4>
 
 
@@ -85,7 +85,7 @@ Create a AuthBackend resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AuthBackend-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -96,14 +96,14 @@ Get an existing AuthBackend resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AuthBackend-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AuthBackend-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -114,7 +114,7 @@ Returns true if the given object is an instance of AuthBackend.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AuthBackend-accessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L67">property <b>accessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L67">property <b>accessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -122,7 +122,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The mount accessor related to the auth mount. It is useful for integration with [Identity Secrets Engine](https://www.vaultproject.io/docs/secrets/identity/index.html).
 
 <h4 class="pdoc-member-header" id="AuthBackend-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L71">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L71">property <b>baseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>baseUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -130,7 +130,7 @@ The mount accessor related to the auth mount. It is useful for integration with 
 The Okta url. Examples: oktapreview.com, okta.com
 
 <h4 class="pdoc-member-header" id="AuthBackend-bypassOktaMfa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L75">property <b>bypassOktaMfa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L75">property <b>bypassOktaMfa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bypassOktaMfa: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -138,7 +138,7 @@ The Okta url. Examples: oktapreview.com, okta.com
 When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account, such as whether the password is expired.
 
 <h4 class="pdoc-member-header" id="AuthBackend-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L79">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L79">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -146,7 +146,7 @@ When true, requests by Okta for a MFA check will be bypassed. This also disallow
 The description of the auth backend
 
 <h4 class="pdoc-member-header" id="AuthBackend-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L84">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L84">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#AuthBackendGroup'>AuthBackendGroup</a>[]&gt;;</code></pre>
@@ -155,7 +155,7 @@ Associate Okta groups with policies within Vault.
 See below for more details.
 
 <h4 class="pdoc-member-header" id="AuthBackend-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -164,7 +164,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AuthBackend-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L89">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L89">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -173,7 +173,7 @@ Maximum duration after which authentication will be expired
 [See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 
 <h4 class="pdoc-member-header" id="AuthBackend-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L93">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L93">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>organization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -181,7 +181,7 @@ Maximum duration after which authentication will be expired
 The Okta organization. This will be the first part of the url `https://XXX.okta.com`
 
 <h4 class="pdoc-member-header" id="AuthBackend-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L97">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L97">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -189,7 +189,7 @@ The Okta organization. This will be the first part of the url `https://XXX.okta.
 Path to mount the Okta auth backend
 
 <h4 class="pdoc-member-header" id="AuthBackend-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L102">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L102">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -198,7 +198,7 @@ The Okta API token. This is required to query Okta for user group membership.
 If this is not supplied only locally configured groups will be enabled.
 
 <h4 class="pdoc-member-header" id="AuthBackend-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L107">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L107">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -207,7 +207,7 @@ Duration after which authentication will be expired.
 [See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 
 <h4 class="pdoc-member-header" id="AuthBackend-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -216,7 +216,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="AuthBackend-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L112">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L112">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#AuthBackendUser'>AuthBackendUser</a>[]&gt;;</code></pre>
@@ -225,7 +225,7 @@ Associate Okta users with groups or policies within Vault.
 See below for more details.
 
 <h3 class="pdoc-module-header" id="AuthBackendGroup" data-link-title="AuthBackendGroup">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L39">
         Resource <strong>AuthBackendGroup</strong>
     </a>
 </h3>
@@ -264,7 +264,7 @@ Okta authentication backend groups can be imported using the format `backend/gro
 ```
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -278,7 +278,7 @@ Create a AuthBackendGroup resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -289,14 +289,14 @@ Get an existing AuthBackendGroup resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -307,7 +307,7 @@ Returns true if the given object is an instance of AuthBackendGroup.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L70">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L70">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -315,7 +315,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Name of the group within the Okta
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -324,7 +324,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L74">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L74">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -332,7 +332,7 @@ deployments and may be missing (undefined) during planning phases.
 The path where the Okta auth backend is mounted
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L78">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L78">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -340,7 +340,7 @@ The path where the Okta auth backend is mounted
 Vault policies to associate with this group
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -349,7 +349,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AuthBackendUser" data-link-title="AuthBackendUser">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L31">
         Resource <strong>AuthBackendUser</strong>
     </a>
 </h3>
@@ -380,7 +380,7 @@ const foo = new vault.okta.AuthBackendUser("foo", {
 ```
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L74"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L74"> <b>constructor</b></a>
 </h4>
 
 
@@ -394,7 +394,7 @@ Create a AuthBackendUser resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -405,14 +405,14 @@ Get an existing AuthBackendUser resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -423,7 +423,7 @@ Returns true if the given object is an instance of AuthBackendUser.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L62">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L62">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -431,7 +431,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 List of Okta groups to associate with this user
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -440,7 +440,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L66">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L66">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -448,7 +448,7 @@ deployments and may be missing (undefined) during planning phases.
 The path where the Okta auth backend is mounted
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L70">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L70">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -456,7 +456,7 @@ The path where the Okta auth backend is mounted
 List of Vault policies to associate with this user
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -465,7 +465,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L74">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L74">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -476,7 +476,7 @@ Name of the user within Okta
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AuthBackendArgs" data-link-title="AuthBackendArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L223">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L223">
         interface <strong>AuthBackendArgs</strong>
     </a>
 </h3>
@@ -486,7 +486,7 @@ Name of the user within Okta
 The set of arguments for constructing a AuthBackend resource.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L227">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L227">property <b>baseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -494,7 +494,7 @@ The set of arguments for constructing a AuthBackend resource.
 The Okta url. Examples: oktapreview.com, okta.com
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-bypassOktaMfa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L231">property <b>bypassOktaMfa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L231">property <b>bypassOktaMfa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bypassOktaMfa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -502,7 +502,7 @@ The Okta url. Examples: oktapreview.com, okta.com
 When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account, such as whether the password is expired.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L235">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L235">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -510,7 +510,7 @@ When true, requests by Okta for a MFA check will be bypassed. This also disallow
 The description of the auth backend
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L240">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L240">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#AuthBackendGroup'>AuthBackendGroup</a>&gt;[]&gt;;</code></pre>
@@ -519,7 +519,7 @@ Associate Okta groups with policies within Vault.
 See below for more details.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L245">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L245">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -528,7 +528,7 @@ Maximum duration after which authentication will be expired
 [See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L249">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L249">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -536,7 +536,7 @@ Maximum duration after which authentication will be expired
 The Okta organization. This will be the first part of the url `https://XXX.okta.com`
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L253">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L253">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -544,7 +544,7 @@ The Okta organization. This will be the first part of the url `https://XXX.okta.
 Path to mount the Okta auth backend
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L258">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L258">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -553,7 +553,7 @@ The Okta API token. This is required to query Okta for user group membership.
 If this is not supplied only locally configured groups will be enabled.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L263">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L263">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -562,7 +562,7 @@ Duration after which authentication will be expired.
 [See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L268">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L268">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#AuthBackendUser'>AuthBackendUser</a>&gt;[]&gt;;</code></pre>
@@ -571,7 +571,7 @@ Associate Okta users with groups or policies within Vault.
 See below for more details.
 
 <h3 class="pdoc-module-header" id="AuthBackendGroupArgs" data-link-title="AuthBackendGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L139">
         interface <strong>AuthBackendGroupArgs</strong>
     </a>
 </h3>
@@ -581,7 +581,7 @@ See below for more details.
 The set of arguments for constructing a AuthBackendGroup resource.
 
 <h4 class="pdoc-member-header" id="AuthBackendGroupArgs-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L143">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L143">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -589,7 +589,7 @@ The set of arguments for constructing a AuthBackendGroup resource.
 Name of the group within the Okta
 
 <h4 class="pdoc-member-header" id="AuthBackendGroupArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L147">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L147">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -597,7 +597,7 @@ Name of the group within the Okta
 The path where the Okta auth backend is mounted
 
 <h4 class="pdoc-member-header" id="AuthBackendGroupArgs-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L151">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L151">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -605,7 +605,7 @@ The path where the Okta auth backend is mounted
 Vault policies to associate with this group
 
 <h3 class="pdoc-module-header" id="AuthBackendGroupState" data-link-title="AuthBackendGroupState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L121">
         interface <strong>AuthBackendGroupState</strong>
     </a>
 </h3>
@@ -615,7 +615,7 @@ Vault policies to associate with this group
 Input properties used for looking up and filtering AuthBackendGroup resources.
 
 <h4 class="pdoc-member-header" id="AuthBackendGroupState-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L125">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L125">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -623,7 +623,7 @@ Input properties used for looking up and filtering AuthBackendGroup resources.
 Name of the group within the Okta
 
 <h4 class="pdoc-member-header" id="AuthBackendGroupState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L129">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L129">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -631,7 +631,7 @@ Name of the group within the Okta
 The path where the Okta auth backend is mounted
 
 <h4 class="pdoc-member-header" id="AuthBackendGroupState-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendGroup.ts#L133">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendGroup.ts#L133">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -639,7 +639,7 @@ The path where the Okta auth backend is mounted
 Vault policies to associate with this group
 
 <h3 class="pdoc-module-header" id="AuthBackendState" data-link-title="AuthBackendState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L168">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L168">
         interface <strong>AuthBackendState</strong>
     </a>
 </h3>
@@ -649,7 +649,7 @@ Vault policies to associate with this group
 Input properties used for looking up and filtering AuthBackend resources.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-accessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L172">property <b>accessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L172">property <b>accessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -657,7 +657,7 @@ Input properties used for looking up and filtering AuthBackend resources.
 The mount accessor related to the auth mount. It is useful for integration with [Identity Secrets Engine](https://www.vaultproject.io/docs/secrets/identity/index.html).
 
 <h4 class="pdoc-member-header" id="AuthBackendState-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L176">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L176">property <b>baseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -665,7 +665,7 @@ The mount accessor related to the auth mount. It is useful for integration with 
 The Okta url. Examples: oktapreview.com, okta.com
 
 <h4 class="pdoc-member-header" id="AuthBackendState-bypassOktaMfa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L180">property <b>bypassOktaMfa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L180">property <b>bypassOktaMfa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bypassOktaMfa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -673,7 +673,7 @@ The Okta url. Examples: oktapreview.com, okta.com
 When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account, such as whether the password is expired.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L184">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L184">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -681,7 +681,7 @@ When true, requests by Okta for a MFA check will be bypassed. This also disallow
 The description of the auth backend
 
 <h4 class="pdoc-member-header" id="AuthBackendState-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L189">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L189">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#AuthBackendGroup'>AuthBackendGroup</a>&gt;[]&gt;;</code></pre>
@@ -690,7 +690,7 @@ Associate Okta groups with policies within Vault.
 See below for more details.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L194">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L194">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -699,7 +699,7 @@ Maximum duration after which authentication will be expired
 [See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 
 <h4 class="pdoc-member-header" id="AuthBackendState-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L198">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L198">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -707,7 +707,7 @@ Maximum duration after which authentication will be expired
 The Okta organization. This will be the first part of the url `https://XXX.okta.com`
 
 <h4 class="pdoc-member-header" id="AuthBackendState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L202">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L202">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -715,7 +715,7 @@ The Okta organization. This will be the first part of the url `https://XXX.okta.
 Path to mount the Okta auth backend
 
 <h4 class="pdoc-member-header" id="AuthBackendState-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L207">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L207">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -724,7 +724,7 @@ The Okta API token. This is required to query Okta for user group membership.
 If this is not supplied only locally configured groups will be enabled.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L212">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L212">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -733,7 +733,7 @@ Duration after which authentication will be expired.
 [See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 
 <h4 class="pdoc-member-header" id="AuthBackendState-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackend.ts#L217">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackend.ts#L217">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#AuthBackendUser'>AuthBackendUser</a>&gt;[]&gt;;</code></pre>
@@ -742,7 +742,7 @@ Associate Okta users with groups or policies within Vault.
 See below for more details.
 
 <h3 class="pdoc-module-header" id="AuthBackendUserArgs" data-link-title="AuthBackendUserArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L141">
         interface <strong>AuthBackendUserArgs</strong>
     </a>
 </h3>
@@ -752,7 +752,7 @@ See below for more details.
 The set of arguments for constructing a AuthBackendUser resource.
 
 <h4 class="pdoc-member-header" id="AuthBackendUserArgs-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L145">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L145">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -760,7 +760,7 @@ The set of arguments for constructing a AuthBackendUser resource.
 List of Okta groups to associate with this user
 
 <h4 class="pdoc-member-header" id="AuthBackendUserArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L149">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L149">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -768,7 +768,7 @@ List of Okta groups to associate with this user
 The path where the Okta auth backend is mounted
 
 <h4 class="pdoc-member-header" id="AuthBackendUserArgs-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L153">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L153">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -776,7 +776,7 @@ The path where the Okta auth backend is mounted
 List of Vault policies to associate with this user
 
 <h4 class="pdoc-member-header" id="AuthBackendUserArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L157">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L157">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -784,7 +784,7 @@ List of Vault policies to associate with this user
 Name of the user within Okta
 
 <h3 class="pdoc-module-header" id="AuthBackendUserState" data-link-title="AuthBackendUserState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L119">
         interface <strong>AuthBackendUserState</strong>
     </a>
 </h3>
@@ -794,7 +794,7 @@ Name of the user within Okta
 Input properties used for looking up and filtering AuthBackendUser resources.
 
 <h4 class="pdoc-member-header" id="AuthBackendUserState-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L123">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L123">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -802,7 +802,7 @@ Input properties used for looking up and filtering AuthBackendUser resources.
 List of Okta groups to associate with this user
 
 <h4 class="pdoc-member-header" id="AuthBackendUserState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L127">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L127">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -810,7 +810,7 @@ List of Okta groups to associate with this user
 The path where the Okta auth backend is mounted
 
 <h4 class="pdoc-member-header" id="AuthBackendUserState-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L131">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L131">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -818,7 +818,7 @@ The path where the Okta auth backend is mounted
 List of Vault policies to associate with this user
 
 <h4 class="pdoc-member-header" id="AuthBackendUserState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/okta/authBackendUser.ts#L135">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/okta/authBackendUser.ts#L135">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

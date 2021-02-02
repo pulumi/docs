@@ -3,7 +3,7 @@ title: "Module ad"
 title_tag: "Module ad | Package @pulumi/vault | Node.js SDK"
 linktitle: "ad"
 meta_desc: "Explore members of the ad module in the @pulumi/vault package."
-git_sha: "ebbace55ace6f59a082f504fcae2277b394db92f"
+git_sha: "d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="SecretBackend" data-link-title="SecretBackend">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L16">
         Resource <strong>SecretBackend</strong>
     </a>
 </h3>
@@ -58,7 +58,7 @@ AD secret backend can be imported using the `backend`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="SecretBackend-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L205"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L205"> <b>constructor</b></a>
 </h4>
 
 
@@ -72,7 +72,7 @@ Create a SecretBackend resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackend-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -83,14 +83,14 @@ Get an existing SecretBackend resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackend-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackend-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -101,7 +101,7 @@ Returns true if the given object is an instance of SecretBackend.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackend-anonymousGroupSearch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L48">property <b>anonymousGroupSearch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L48">property <b>anonymousGroupSearch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>anonymousGroupSearch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -110,7 +110,7 @@ Use anonymous binds when performing LDAP group searches
 (if true the initial credentials will still be used for the initial connection test).
 
 <h4 class="pdoc-member-header" id="SecretBackend-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L53">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L53">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -119,7 +119,7 @@ The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `ad`.
 
 <h4 class="pdoc-member-header" id="SecretBackend-binddn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L57">property <b>binddn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L57">property <b>binddn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>binddn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -127,7 +127,7 @@ not begin or end with a `/`. Defaults to `ad`.
 Distinguished name of object to bind when performing user and group search.
 
 <h4 class="pdoc-member-header" id="SecretBackend-bindpass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L61">property <b>bindpass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L61">property <b>bindpass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bindpass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -135,7 +135,7 @@ Distinguished name of object to bind when performing user and group search.
 Password to use along with binddn when performing user search.
 
 <h4 class="pdoc-member-header" id="SecretBackend-caseSensitiveNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L66">property <b>caseSensitiveNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L66">property <b>caseSensitiveNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>caseSensitiveNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ If set, user and group names assigned to policies within the
 backend will be case sensitive. Otherwise, names will be normalized to lower case.
 
 <h4 class="pdoc-member-header" id="SecretBackend-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L71">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L71">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -153,7 +153,7 @@ CA certificate to use when verifying LDAP server certificate, must be
 x509 PEM encoded.
 
 <h4 class="pdoc-member-header" id="SecretBackend-clientTlsCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L75">property <b>clientTlsCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L75">property <b>clientTlsCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientTlsCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ x509 PEM encoded.
 Client certificate to provide to the LDAP server, must be x509 PEM encoded.
 
 <h4 class="pdoc-member-header" id="SecretBackend-clientTlsKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L79">property <b>clientTlsKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L79">property <b>clientTlsKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientTlsKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -169,7 +169,7 @@ Client certificate to provide to the LDAP server, must be x509 PEM encoded.
 Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
 
 <h4 class="pdoc-member-header" id="SecretBackend-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L83">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L83">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultLeaseTtlSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
 Default lease duration for secrets in seconds.
 
 <h4 class="pdoc-member-header" id="SecretBackend-denyNullBind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L88">property <b>denyNullBind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L88">property <b>denyNullBind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>denyNullBind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -186,7 +186,7 @@ Denies an unauthenticated LDAP bind request if the user's password is empty;
 defaults to true.
 
 <h4 class="pdoc-member-header" id="SecretBackend-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L92">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L92">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -194,7 +194,7 @@ defaults to true.
 Human-friendly description of the mount for the Active Directory backend.
 
 <h4 class="pdoc-member-header" id="SecretBackend-discoverdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L96">property <b>discoverdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L96">property <b>discoverdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>discoverdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -202,7 +202,7 @@ Human-friendly description of the mount for the Active Directory backend.
 Use anonymous bind to discover the bind Distinguished Name of a user.
 
 <h4 class="pdoc-member-header" id="SecretBackend-formatter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L103">property <b>formatter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L103">property <b>formatter</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -215,7 +215,7 @@ Text to insert the password into, ex. "customPrefix{{PASSWORD}}customSuffix". Th
 setting is deprecated and should instead use `passwordPolicy`.
 
 <h4 class="pdoc-member-header" id="SecretBackend-groupattr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L108">property <b>groupattr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L108">property <b>groupattr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupattr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -224,7 +224,7 @@ LDAP attribute to follow on objects returned by <groupfilter> in order to enumer
 user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
 
 <h4 class="pdoc-member-header" id="SecretBackend-groupdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L112">property <b>groupdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L112">property <b>groupdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -232,7 +232,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
 LDAP search base to use for group membership search (eg: ou=Groups,dc=example,dc=org).
 
 <h4 class="pdoc-member-header" id="SecretBackend-groupfilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L117">property <b>groupfilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L117">property <b>groupfilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupfilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -241,7 +241,7 @@ Go template for querying group membership of user (optional) The template can ac
 the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))`
 
 <h4 class="pdoc-member-header" id="SecretBackend-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -250,7 +250,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackend-insecureTls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L122">property <b>insecureTls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L122">property <b>insecureTls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>insecureTls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -259,7 +259,7 @@ Skip LDAP server SSL Certificate verification. This is not recommended for produ
 Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SecretBackend-lastRotationTolerance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L127">property <b>lastRotationTolerance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L127">property <b>lastRotationTolerance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastRotationTolerance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -268,7 +268,7 @@ The number of seconds after a Vault rotation where, if Active Directory
 shows a later rotation, it should be considered out-of-band
 
 <h4 class="pdoc-member-header" id="SecretBackend-length">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L134">property <b>length</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L134">property <b>length</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -281,7 +281,7 @@ The desired length of passwords that Vault generates. This
 setting is deprecated and should instead use `passwordPolicy`.
 
 <h4 class="pdoc-member-header" id="SecretBackend-local">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L139">property <b>local</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L139">property <b>local</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>local: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -290,7 +290,7 @@ Mark the secrets engine as local-only. Local engines are not replicated or remov
 replication.Tolerance duration to use when checking the last rotation time.
 
 <h4 class="pdoc-member-header" id="SecretBackend-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L143">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L143">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxLeaseTtlSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -298,7 +298,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 Maximum possible lease duration for secrets in seconds.
 
 <h4 class="pdoc-member-header" id="SecretBackend-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L147">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L147">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -306,7 +306,7 @@ Maximum possible lease duration for secrets in seconds.
 In seconds, the maximum password time-to-live.
 
 <h4 class="pdoc-member-header" id="SecretBackend-passwordPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L151">property <b>passwordPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L151">property <b>passwordPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -314,7 +314,7 @@ In seconds, the maximum password time-to-live.
 Name of the password policy to use to generate passwords.
 
 <h4 class="pdoc-member-header" id="SecretBackend-requestTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L156">property <b>requestTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L156">property <b>requestTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -323,7 +323,7 @@ Timeout, in seconds, for the connection when making requests against the server
 before returning back an error.
 
 <h4 class="pdoc-member-header" id="SecretBackend-starttls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L160">property <b>starttls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L160">property <b>starttls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>starttls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -331,7 +331,7 @@ before returning back an error.
 Issue a StartTLS command after establishing unencrypted connection.
 
 <h4 class="pdoc-member-header" id="SecretBackend-tlsMaxVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L165">property <b>tlsMaxVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L165">property <b>tlsMaxVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tlsMaxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -340,7 +340,7 @@ Maximum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
 
 <h4 class="pdoc-member-header" id="SecretBackend-tlsMinVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L170">property <b>tlsMinVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L170">property <b>tlsMinVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tlsMinVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -349,7 +349,7 @@ Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
 
 <h4 class="pdoc-member-header" id="SecretBackend-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L174">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L174">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -357,7 +357,7 @@ Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 In seconds, the default password time-to-live.
 
 <h4 class="pdoc-member-header" id="SecretBackend-upndomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L178">property <b>upndomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L178">property <b>upndomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>upndomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -365,7 +365,7 @@ In seconds, the default password time-to-live.
 Enables userPrincipalDomain login with [username]@UPNDomain.
 
 <h4 class="pdoc-member-header" id="SecretBackend-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L183">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L183">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -374,7 +374,7 @@ LDAP URL to connect to. Multiple URLs can be specified by concatenating
 them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
 
 <h4 class="pdoc-member-header" id="SecretBackend-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -383,7 +383,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SecretBackend-usePre111GroupCnBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L192">property <b>usePre111GroupCnBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L192">property <b>usePre111GroupCnBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usePre111GroupCnBehavior: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -396,7 +396,7 @@ compatibility. It is enabled by default if the config is upgraded but disabled b
 new configurations.
 
 <h4 class="pdoc-member-header" id="SecretBackend-useTokenGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L197">property <b>useTokenGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L197">property <b>useTokenGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>useTokenGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -405,7 +405,7 @@ If true, use the Active Directory tokenGroups constructed attribute of the
 user to find the group memberships. This will find all security groups including nested ones.
 
 <h4 class="pdoc-member-header" id="SecretBackend-userattr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L201">property <b>userattr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L201">property <b>userattr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userattr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -413,7 +413,7 @@ user to find the group memberships. This will find all security groups including
 Attribute used when searching users. Defaults to `cn`.
 
 <h4 class="pdoc-member-header" id="SecretBackend-userdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L205">property <b>userdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L205">property <b>userdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -421,14 +421,14 @@ Attribute used when searching users. Defaults to `cn`.
 LDAP domain to use for users (eg: ou=People,dc=example,dc=org)`.
 
 <h3 class="pdoc-module-header" id="SecretLibrary" data-link-title="SecretLibrary">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L7">
         Resource <strong>SecretLibrary</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>SecretLibrary</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="SecretLibrary-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L59"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L59"> <b>constructor</b></a>
 </h4>
 
 
@@ -442,7 +442,7 @@ Create a SecretLibrary resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretLibrary-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -453,14 +453,14 @@ Get an existing SecretLibrary resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretLibrary-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretLibrary-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -471,7 +471,7 @@ Returns true if the given object is an instance of SecretLibrary.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretLibrary-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L38">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L38">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -479,7 +479,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The mount path for the AD backend.
 
 <h4 class="pdoc-member-header" id="SecretLibrary-disableCheckInEnforcement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L42">property <b>disableCheckInEnforcement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L42">property <b>disableCheckInEnforcement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disableCheckInEnforcement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -487,7 +487,7 @@ The mount path for the AD backend.
 Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
 
 <h4 class="pdoc-member-header" id="SecretLibrary-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -496,7 +496,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretLibrary-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L46">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L46">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -504,7 +504,7 @@ deployments and may be missing (undefined) during planning phases.
 The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
 
 <h4 class="pdoc-member-header" id="SecretLibrary-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L50">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L50">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -512,7 +512,7 @@ The maximum amount of time, in seconds, a check-out last with renewal before Vau
 The name of the set of service accounts.
 
 <h4 class="pdoc-member-header" id="SecretLibrary-serviceAccountNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L55">property <b>serviceAccountNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L55">property <b>serviceAccountNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccountNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -521,7 +521,7 @@ The names of all the service accounts that can be checked out from this set. The
 in Active Directory.
 
 <h4 class="pdoc-member-header" id="SecretLibrary-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L59">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L59">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -529,7 +529,7 @@ in Active Directory.
 The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
 
 <h4 class="pdoc-member-header" id="SecretLibrary-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -538,14 +538,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretRole" data-link-title="SecretRole">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L7">
         Resource <strong>SecretRole</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>SecretRole</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="SecretRole-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L58"> <b>constructor</b></a>
 </h4>
 
 
@@ -559,7 +559,7 @@ Create a SecretRole resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretRole-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -570,14 +570,14 @@ Get an existing SecretRole resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretRole-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretRole-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -588,7 +588,7 @@ Returns true if the given object is an instance of SecretRole.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretRole-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L38">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L38">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -596,7 +596,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The mount path for the AD backend.
 
 <h4 class="pdoc-member-header" id="SecretRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -605,7 +605,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretRole-lastVaultRotation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L42">property <b>lastVaultRotation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L42">property <b>lastVaultRotation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastVaultRotation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -613,7 +613,7 @@ deployments and may be missing (undefined) during planning phases.
 Last time Vault rotated this service account's password.
 
 <h4 class="pdoc-member-header" id="SecretRole-passwordLastSet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L46">property <b>passwordLastSet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L46">property <b>passwordLastSet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordLastSet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -621,7 +621,7 @@ Last time Vault rotated this service account's password.
 Last time Vault set this service account's password.
 
 <h4 class="pdoc-member-header" id="SecretRole-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L50">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L50">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -629,7 +629,7 @@ Last time Vault set this service account's password.
 Name of the role.
 
 <h4 class="pdoc-member-header" id="SecretRole-serviceAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L54">property <b>serviceAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L54">property <b>serviceAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -637,7 +637,7 @@ Name of the role.
 The username/logon name for the service account with which this role will be associated.
 
 <h4 class="pdoc-member-header" id="SecretRole-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L58">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L58">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -645,7 +645,7 @@ The username/logon name for the service account with which this role will be ass
 In seconds, the default password time-to-live.
 
 <h4 class="pdoc-member-header" id="SecretRole-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -656,7 +656,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAccessCredentials" data-link-title="getAccessCredentials">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/getAccessCredentials.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/getAccessCredentials.ts#L8">
         Function <strong>getAccessCredentials</strong>
     </a>
 </h3>
@@ -667,7 +667,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetAccessCredentialsArgs" data-link-title="GetAccessCredentialsArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/getAccessCredentials.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/getAccessCredentials.ts#L25">
         interface <strong>GetAccessCredentialsArgs</strong>
     </a>
 </h3>
@@ -677,7 +677,7 @@ deployments.
 A collection of arguments for invoking getAccessCredentials.
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/getAccessCredentials.ts#L30">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/getAccessCredentials.ts#L30">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -686,7 +686,7 @@ The path to the AD secret backend to
 read credentials from, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/getAccessCredentials.ts#L35">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/getAccessCredentials.ts#L35">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -695,7 +695,7 @@ The name of the AD secret backend role to read
 credentials from, with no leading or trailing `/`s.
 
 <h3 class="pdoc-module-header" id="GetAccessCredentialsResult" data-link-title="GetAccessCredentialsResult">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/getAccessCredentials.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/getAccessCredentials.ts#L41">
         interface <strong>GetAccessCredentialsResult</strong>
     </a>
 </h3>
@@ -705,12 +705,12 @@ credentials from, with no leading or trailing `/`s.
 A collection of values returned by getAccessCredentials.
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/getAccessCredentials.ts#L42">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/getAccessCredentials.ts#L42">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-currentPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/getAccessCredentials.ts#L46">property <b>currentPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/getAccessCredentials.ts#L46">property <b>currentPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>currentPassword: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -718,7 +718,7 @@ A collection of values returned by getAccessCredentials.
 The current set password on the Active Directory service account.
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/getAccessCredentials.ts#L50">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/getAccessCredentials.ts#L50">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -726,7 +726,7 @@ The current set password on the Active Directory service account.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-lastPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/getAccessCredentials.ts#L54">property <b>lastPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/getAccessCredentials.ts#L54">property <b>lastPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastPassword: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -734,12 +734,12 @@ The provider-assigned unique ID for this managed resource.
 The current set password on the Active Directory service account, provided because AD is eventually consistent.
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/getAccessCredentials.ts#L55">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/getAccessCredentials.ts#L55">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/getAccessCredentials.ts#L59">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/getAccessCredentials.ts#L59">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -747,7 +747,7 @@ The current set password on the Active Directory service account, provided becau
 The Active Directory service account username.
 
 <h3 class="pdoc-module-header" id="SecretBackendArgs" data-link-title="SecretBackendArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L478">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L478">
         interface <strong>SecretBackendArgs</strong>
     </a>
 </h3>
@@ -757,7 +757,7 @@ The Active Directory service account username.
 The set of arguments for constructing a SecretBackend resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-anonymousGroupSearch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L483">property <b>anonymousGroupSearch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L483">property <b>anonymousGroupSearch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>anonymousGroupSearch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -766,7 +766,7 @@ Use anonymous binds when performing LDAP group searches
 (if true the initial credentials will still be used for the initial connection test).
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L488">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L488">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -775,7 +775,7 @@ The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `ad`.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-binddn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L492">property <b>binddn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L492">property <b>binddn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>binddn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -783,7 +783,7 @@ not begin or end with a `/`. Defaults to `ad`.
 Distinguished name of object to bind when performing user and group search.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-bindpass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L496">property <b>bindpass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L496">property <b>bindpass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindpass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -791,7 +791,7 @@ Distinguished name of object to bind when performing user and group search.
 Password to use along with binddn when performing user search.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-caseSensitiveNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L501">property <b>caseSensitiveNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L501">property <b>caseSensitiveNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>caseSensitiveNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -800,7 +800,7 @@ If set, user and group names assigned to policies within the
 backend will be case sensitive. Otherwise, names will be normalized to lower case.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L506">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L506">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -809,7 +809,7 @@ CA certificate to use when verifying LDAP server certificate, must be
 x509 PEM encoded.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-clientTlsCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L510">property <b>clientTlsCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L510">property <b>clientTlsCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientTlsCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -817,7 +817,7 @@ x509 PEM encoded.
 Client certificate to provide to the LDAP server, must be x509 PEM encoded.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-clientTlsKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L514">property <b>clientTlsKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L514">property <b>clientTlsKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientTlsKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -825,7 +825,7 @@ Client certificate to provide to the LDAP server, must be x509 PEM encoded.
 Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L518">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L518">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -833,7 +833,7 @@ Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
 Default lease duration for secrets in seconds.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-denyNullBind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L523">property <b>denyNullBind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L523">property <b>denyNullBind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>denyNullBind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -842,7 +842,7 @@ Denies an unauthenticated LDAP bind request if the user's password is empty;
 defaults to true.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L527">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L527">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -850,7 +850,7 @@ defaults to true.
 Human-friendly description of the mount for the Active Directory backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-discoverdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L531">property <b>discoverdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L531">property <b>discoverdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>discoverdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -858,7 +858,7 @@ Human-friendly description of the mount for the Active Directory backend.
 Use anonymous bind to discover the bind Distinguished Name of a user.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-formatter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L538">property <b>formatter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L538">property <b>formatter</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -871,7 +871,7 @@ Text to insert the password into, ex. "customPrefix{{PASSWORD}}customSuffix". Th
 setting is deprecated and should instead use `passwordPolicy`.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-groupattr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L543">property <b>groupattr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L543">property <b>groupattr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupattr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -880,7 +880,7 @@ LDAP attribute to follow on objects returned by <groupfilter> in order to enumer
 user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-groupdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L547">property <b>groupdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L547">property <b>groupdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -888,7 +888,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
 LDAP search base to use for group membership search (eg: ou=Groups,dc=example,dc=org).
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-groupfilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L552">property <b>groupfilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L552">property <b>groupfilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupfilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -897,7 +897,7 @@ Go template for querying group membership of user (optional) The template can ac
 the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))`
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-insecureTls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L557">property <b>insecureTls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L557">property <b>insecureTls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insecureTls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -906,7 +906,7 @@ Skip LDAP server SSL Certificate verification. This is not recommended for produ
 Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-lastRotationTolerance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L562">property <b>lastRotationTolerance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L562">property <b>lastRotationTolerance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastRotationTolerance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -915,7 +915,7 @@ The number of seconds after a Vault rotation where, if Active Directory
 shows a later rotation, it should be considered out-of-band
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-length">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L569">property <b>length</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L569">property <b>length</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -928,7 +928,7 @@ The desired length of passwords that Vault generates. This
 setting is deprecated and should instead use `passwordPolicy`.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-local">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L574">property <b>local</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L574">property <b>local</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>local?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -937,7 +937,7 @@ Mark the secrets engine as local-only. Local engines are not replicated or remov
 replication.Tolerance duration to use when checking the last rotation time.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L578">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L578">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -945,7 +945,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 Maximum possible lease duration for secrets in seconds.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L582">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L582">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -953,7 +953,7 @@ Maximum possible lease duration for secrets in seconds.
 In seconds, the maximum password time-to-live.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-passwordPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L586">property <b>passwordPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L586">property <b>passwordPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -961,7 +961,7 @@ In seconds, the maximum password time-to-live.
 Name of the password policy to use to generate passwords.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-requestTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L591">property <b>requestTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L591">property <b>requestTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -970,7 +970,7 @@ Timeout, in seconds, for the connection when making requests against the server
 before returning back an error.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-starttls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L595">property <b>starttls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L595">property <b>starttls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>starttls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -978,7 +978,7 @@ before returning back an error.
 Issue a StartTLS command after establishing unencrypted connection.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-tlsMaxVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L600">property <b>tlsMaxVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L600">property <b>tlsMaxVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsMaxVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -987,7 +987,7 @@ Maximum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-tlsMinVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L605">property <b>tlsMinVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L605">property <b>tlsMinVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsMinVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -996,7 +996,7 @@ Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L609">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L609">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1004,7 +1004,7 @@ Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 In seconds, the default password time-to-live.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-upndomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L613">property <b>upndomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L613">property <b>upndomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>upndomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1012,7 +1012,7 @@ In seconds, the default password time-to-live.
 Enables userPrincipalDomain login with [username]@UPNDomain.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L618">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L618">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1021,7 +1021,7 @@ LDAP URL to connect to. Multiple URLs can be specified by concatenating
 them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-usePre111GroupCnBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L627">property <b>usePre111GroupCnBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L627">property <b>usePre111GroupCnBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usePre111GroupCnBehavior?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1034,7 +1034,7 @@ compatibility. It is enabled by default if the config is upgraded but disabled b
 new configurations.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-useTokenGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L632">property <b>useTokenGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L632">property <b>useTokenGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useTokenGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1043,7 +1043,7 @@ If true, use the Active Directory tokenGroups constructed attribute of the
 user to find the group memberships. This will find all security groups including nested ones.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-userattr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L636">property <b>userattr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L636">property <b>userattr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userattr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1051,7 +1051,7 @@ user to find the group memberships. This will find all security groups including
 Attribute used when searching users. Defaults to `cn`.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-userdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L640">property <b>userdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L640">property <b>userdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1059,7 +1059,7 @@ Attribute used when searching users. Defaults to `cn`.
 LDAP domain to use for users (eg: ou=People,dc=example,dc=org)`.
 
 <h3 class="pdoc-module-header" id="SecretBackendState" data-link-title="SecretBackendState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L310">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L310">
         interface <strong>SecretBackendState</strong>
     </a>
 </h3>
@@ -1069,7 +1069,7 @@ LDAP domain to use for users (eg: ou=People,dc=example,dc=org)`.
 Input properties used for looking up and filtering SecretBackend resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-anonymousGroupSearch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L315">property <b>anonymousGroupSearch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L315">property <b>anonymousGroupSearch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>anonymousGroupSearch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1078,7 +1078,7 @@ Use anonymous binds when performing LDAP group searches
 (if true the initial credentials will still be used for the initial connection test).
 
 <h4 class="pdoc-member-header" id="SecretBackendState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L320">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L320">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1087,7 +1087,7 @@ The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `ad`.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-binddn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L324">property <b>binddn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L324">property <b>binddn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>binddn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1095,7 +1095,7 @@ not begin or end with a `/`. Defaults to `ad`.
 Distinguished name of object to bind when performing user and group search.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-bindpass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L328">property <b>bindpass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L328">property <b>bindpass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindpass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1103,7 +1103,7 @@ Distinguished name of object to bind when performing user and group search.
 Password to use along with binddn when performing user search.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-caseSensitiveNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L333">property <b>caseSensitiveNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L333">property <b>caseSensitiveNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>caseSensitiveNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1112,7 +1112,7 @@ If set, user and group names assigned to policies within the
 backend will be case sensitive. Otherwise, names will be normalized to lower case.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L338">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L338">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1121,7 +1121,7 @@ CA certificate to use when verifying LDAP server certificate, must be
 x509 PEM encoded.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-clientTlsCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L342">property <b>clientTlsCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L342">property <b>clientTlsCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientTlsCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1129,7 +1129,7 @@ x509 PEM encoded.
 Client certificate to provide to the LDAP server, must be x509 PEM encoded.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-clientTlsKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L346">property <b>clientTlsKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L346">property <b>clientTlsKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientTlsKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1137,7 +1137,7 @@ Client certificate to provide to the LDAP server, must be x509 PEM encoded.
 Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L350">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L350">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1145,7 +1145,7 @@ Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
 Default lease duration for secrets in seconds.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-denyNullBind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L355">property <b>denyNullBind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L355">property <b>denyNullBind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>denyNullBind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1154,7 +1154,7 @@ Denies an unauthenticated LDAP bind request if the user's password is empty;
 defaults to true.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L359">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L359">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1162,7 +1162,7 @@ defaults to true.
 Human-friendly description of the mount for the Active Directory backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-discoverdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L363">property <b>discoverdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L363">property <b>discoverdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>discoverdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1170,7 +1170,7 @@ Human-friendly description of the mount for the Active Directory backend.
 Use anonymous bind to discover the bind Distinguished Name of a user.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-formatter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L370">property <b>formatter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L370">property <b>formatter</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1183,7 +1183,7 @@ Text to insert the password into, ex. "customPrefix{{PASSWORD}}customSuffix". Th
 setting is deprecated and should instead use `passwordPolicy`.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-groupattr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L375">property <b>groupattr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L375">property <b>groupattr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupattr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1192,7 +1192,7 @@ LDAP attribute to follow on objects returned by <groupfilter> in order to enumer
 user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-groupdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L379">property <b>groupdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L379">property <b>groupdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1200,7 +1200,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
 LDAP search base to use for group membership search (eg: ou=Groups,dc=example,dc=org).
 
 <h4 class="pdoc-member-header" id="SecretBackendState-groupfilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L384">property <b>groupfilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L384">property <b>groupfilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupfilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1209,7 +1209,7 @@ Go template for querying group membership of user (optional) The template can ac
 the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))`
 
 <h4 class="pdoc-member-header" id="SecretBackendState-insecureTls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L389">property <b>insecureTls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L389">property <b>insecureTls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insecureTls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1218,7 +1218,7 @@ Skip LDAP server SSL Certificate verification. This is not recommended for produ
 Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-lastRotationTolerance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L394">property <b>lastRotationTolerance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L394">property <b>lastRotationTolerance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastRotationTolerance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1227,7 +1227,7 @@ The number of seconds after a Vault rotation where, if Active Directory
 shows a later rotation, it should be considered out-of-band
 
 <h4 class="pdoc-member-header" id="SecretBackendState-length">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L401">property <b>length</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L401">property <b>length</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1240,7 +1240,7 @@ The desired length of passwords that Vault generates. This
 setting is deprecated and should instead use `passwordPolicy`.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-local">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L406">property <b>local</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L406">property <b>local</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>local?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1249,7 +1249,7 @@ Mark the secrets engine as local-only. Local engines are not replicated or remov
 replication.Tolerance duration to use when checking the last rotation time.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L410">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L410">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1257,7 +1257,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 Maximum possible lease duration for secrets in seconds.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L414">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L414">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1265,7 +1265,7 @@ Maximum possible lease duration for secrets in seconds.
 In seconds, the maximum password time-to-live.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-passwordPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L418">property <b>passwordPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L418">property <b>passwordPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1273,7 +1273,7 @@ In seconds, the maximum password time-to-live.
 Name of the password policy to use to generate passwords.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-requestTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L423">property <b>requestTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L423">property <b>requestTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1282,7 +1282,7 @@ Timeout, in seconds, for the connection when making requests against the server
 before returning back an error.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-starttls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L427">property <b>starttls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L427">property <b>starttls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>starttls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1290,7 +1290,7 @@ before returning back an error.
 Issue a StartTLS command after establishing unencrypted connection.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-tlsMaxVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L432">property <b>tlsMaxVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L432">property <b>tlsMaxVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsMaxVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1299,7 +1299,7 @@ Maximum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-tlsMinVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L437">property <b>tlsMinVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L437">property <b>tlsMinVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsMinVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1308,7 +1308,7 @@ Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L441">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L441">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1316,7 +1316,7 @@ Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 In seconds, the default password time-to-live.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-upndomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L445">property <b>upndomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L445">property <b>upndomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>upndomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1324,7 +1324,7 @@ In seconds, the default password time-to-live.
 Enables userPrincipalDomain login with [username]@UPNDomain.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L450">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L450">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1333,7 +1333,7 @@ LDAP URL to connect to. Multiple URLs can be specified by concatenating
 them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-usePre111GroupCnBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L459">property <b>usePre111GroupCnBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L459">property <b>usePre111GroupCnBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usePre111GroupCnBehavior?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1346,7 +1346,7 @@ compatibility. It is enabled by default if the config is upgraded but disabled b
 new configurations.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-useTokenGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L464">property <b>useTokenGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L464">property <b>useTokenGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useTokenGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1355,7 +1355,7 @@ If true, use the Active Directory tokenGroups constructed attribute of the
 user to find the group memberships. This will find all security groups including nested ones.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-userattr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L468">property <b>userattr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L468">property <b>userattr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userattr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1363,7 +1363,7 @@ user to find the group memberships. This will find all security groups including
 Attribute used when searching users. Defaults to `cn`.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-userdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretBackend.ts#L472">property <b>userdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretBackend.ts#L472">property <b>userdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1371,7 +1371,7 @@ Attribute used when searching users. Defaults to `cn`.
 LDAP domain to use for users (eg: ou=People,dc=example,dc=org)`.
 
 <h3 class="pdoc-module-header" id="SecretLibraryArgs" data-link-title="SecretLibraryArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L139">
         interface <strong>SecretLibraryArgs</strong>
     </a>
 </h3>
@@ -1381,7 +1381,7 @@ LDAP domain to use for users (eg: ou=People,dc=example,dc=org)`.
 The set of arguments for constructing a SecretLibrary resource.
 
 <h4 class="pdoc-member-header" id="SecretLibraryArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L143">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L143">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1389,7 +1389,7 @@ The set of arguments for constructing a SecretLibrary resource.
 The mount path for the AD backend.
 
 <h4 class="pdoc-member-header" id="SecretLibraryArgs-disableCheckInEnforcement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L147">property <b>disableCheckInEnforcement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L147">property <b>disableCheckInEnforcement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableCheckInEnforcement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1397,7 +1397,7 @@ The mount path for the AD backend.
 Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
 
 <h4 class="pdoc-member-header" id="SecretLibraryArgs-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L151">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L151">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1405,7 +1405,7 @@ Disable enforcing that service accounts must be checked in by the entity or clie
 The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
 
 <h4 class="pdoc-member-header" id="SecretLibraryArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L155">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L155">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1413,7 +1413,7 @@ The maximum amount of time, in seconds, a check-out last with renewal before Vau
 The name of the set of service accounts.
 
 <h4 class="pdoc-member-header" id="SecretLibraryArgs-serviceAccountNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L160">property <b>serviceAccountNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L160">property <b>serviceAccountNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1422,7 +1422,7 @@ The names of all the service accounts that can be checked out from this set. The
 in Active Directory.
 
 <h4 class="pdoc-member-header" id="SecretLibraryArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L164">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L164">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1430,7 +1430,7 @@ in Active Directory.
 The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
 
 <h3 class="pdoc-module-header" id="SecretLibraryState" data-link-title="SecretLibraryState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L108">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L108">
         interface <strong>SecretLibraryState</strong>
     </a>
 </h3>
@@ -1440,7 +1440,7 @@ The amount of time, in seconds, a single check-out lasts before Vault automatica
 Input properties used for looking up and filtering SecretLibrary resources.
 
 <h4 class="pdoc-member-header" id="SecretLibraryState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L112">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L112">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1448,7 +1448,7 @@ Input properties used for looking up and filtering SecretLibrary resources.
 The mount path for the AD backend.
 
 <h4 class="pdoc-member-header" id="SecretLibraryState-disableCheckInEnforcement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L116">property <b>disableCheckInEnforcement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L116">property <b>disableCheckInEnforcement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableCheckInEnforcement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1456,7 +1456,7 @@ The mount path for the AD backend.
 Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
 
 <h4 class="pdoc-member-header" id="SecretLibraryState-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L120">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L120">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1464,7 +1464,7 @@ Disable enforcing that service accounts must be checked in by the entity or clie
 The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
 
 <h4 class="pdoc-member-header" id="SecretLibraryState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L124">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L124">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1472,7 +1472,7 @@ The maximum amount of time, in seconds, a check-out last with renewal before Vau
 The name of the set of service accounts.
 
 <h4 class="pdoc-member-header" id="SecretLibraryState-serviceAccountNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L129">property <b>serviceAccountNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L129">property <b>serviceAccountNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1481,7 +1481,7 @@ The names of all the service accounts that can be checked out from this set. The
 in Active Directory.
 
 <h4 class="pdoc-member-header" id="SecretLibraryState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretLibrary.ts#L133">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretLibrary.ts#L133">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1489,7 +1489,7 @@ in Active Directory.
 The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
 
 <h3 class="pdoc-module-header" id="SecretRoleArgs" data-link-title="SecretRoleArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L140">
         interface <strong>SecretRoleArgs</strong>
     </a>
 </h3>
@@ -1499,7 +1499,7 @@ The amount of time, in seconds, a single check-out lasts before Vault automatica
 The set of arguments for constructing a SecretRole resource.
 
 <h4 class="pdoc-member-header" id="SecretRoleArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L144">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L144">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1507,7 +1507,7 @@ The set of arguments for constructing a SecretRole resource.
 The mount path for the AD backend.
 
 <h4 class="pdoc-member-header" id="SecretRoleArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L148">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L148">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1515,7 +1515,7 @@ The mount path for the AD backend.
 Name of the role.
 
 <h4 class="pdoc-member-header" id="SecretRoleArgs-serviceAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L152">property <b>serviceAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L152">property <b>serviceAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1523,7 +1523,7 @@ Name of the role.
 The username/logon name for the service account with which this role will be associated.
 
 <h4 class="pdoc-member-header" id="SecretRoleArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L156">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L156">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1531,7 +1531,7 @@ The username/logon name for the service account with which this role will be ass
 In seconds, the default password time-to-live.
 
 <h3 class="pdoc-module-header" id="SecretRoleState" data-link-title="SecretRoleState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L110">
         interface <strong>SecretRoleState</strong>
     </a>
 </h3>
@@ -1541,7 +1541,7 @@ In seconds, the default password time-to-live.
 Input properties used for looking up and filtering SecretRole resources.
 
 <h4 class="pdoc-member-header" id="SecretRoleState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L114">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L114">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1549,7 +1549,7 @@ Input properties used for looking up and filtering SecretRole resources.
 The mount path for the AD backend.
 
 <h4 class="pdoc-member-header" id="SecretRoleState-lastVaultRotation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L118">property <b>lastVaultRotation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L118">property <b>lastVaultRotation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastVaultRotation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1557,7 +1557,7 @@ The mount path for the AD backend.
 Last time Vault rotated this service account's password.
 
 <h4 class="pdoc-member-header" id="SecretRoleState-passwordLastSet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L122">property <b>passwordLastSet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L122">property <b>passwordLastSet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordLastSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1565,7 +1565,7 @@ Last time Vault rotated this service account's password.
 Last time Vault set this service account's password.
 
 <h4 class="pdoc-member-header" id="SecretRoleState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L126">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L126">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1573,7 +1573,7 @@ Last time Vault set this service account's password.
 Name of the role.
 
 <h4 class="pdoc-member-header" id="SecretRoleState-serviceAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L130">property <b>serviceAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L130">property <b>serviceAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1581,7 +1581,7 @@ Name of the role.
 The username/logon name for the service account with which this role will be associated.
 
 <h4 class="pdoc-member-header" id="SecretRoleState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/ad/secretRole.ts#L134">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/ad/secretRole.ts#L134">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
