@@ -27,7 +27,7 @@ runtime: nodejs
 description: Basic example of an AWS web server accessible over HTTP.
 ```
 
-In addition, when using JavaScript, the working directory for the project should contain a `package.json` that points to a file such as `index.js`. In Python, there should either be a `__main__.py` file or a file `setup.py` that defines the entry point.
+In addition, when using JavaScript, the working directory for the project should contain a `package.json` that points to a file such as `index.js`. In Python, there should either be a `__main__.py` file or a `setup.py` file that defines the entry point.
 
 The following are other examples of `Pulumi.yaml` files that define project configurations for other use cases:
 
