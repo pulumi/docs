@@ -31,7 +31,7 @@ In addition, when using JavaScript, the working directory for the project should
 
 The following are other examples of `Pulumi.yaml` files that define project configurations for other use cases:
 
-A `Pulumi.yaml` file for a `nodejs` program that does not execute TypeScript natively using `ts-node`.
+A `Pulumi.yaml` file for a `nodejs` program that uses JavaScript rather than TypeScript.
 
 ```yaml
 name: minimal
