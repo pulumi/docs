@@ -1,9 +1,10 @@
 ---
 title: Project Configuration Reference
+linktitle: Project Configuration
 meta_desc: A list of configuration settings for the Pulumi project file.
 menu:
   reference:
-    name: Project Configuration Reference
+    name: Project Configuration
     weight: 3
 ---
 
