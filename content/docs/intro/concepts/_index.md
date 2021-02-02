@@ -19,7 +19,7 @@ This diagram illustrates the structure and major components of Pulumi.
 
 ![Pulumi programming model diagram.](/images/docs/pulumi-programming-model-diagram.svg)
 
-Pulumi *programs*, written in general-purpose [programming languages]({{< relref "/docs/intro/languages" >}}), define how your cloud infrastructure should be deployed. To declare new infrastructure in your program, you allocate *resource* objects whose properties correspond to the desired state of your infrastructure. These properties are also used between resources to handle any necessary dependencies and can be exported outside of the stack, if needed.
+Pulumi *programs*, written in general-purpose [programming languages]({{< relref "/docs/intro/languages" >}}), describe how your cloud infrastructure should be composed. To declare new infrastructure in your program, you allocate *resource* objects whose properties correspond to the desired state of your infrastructure. These properties are also used between resources to handle any necessary dependencies and can be exported outside of the stack, if needed.
 
 Programs reside in a *project*, which is a directory that contains source code for the program and metadata on how to run the program. After writing your program, you run the [Pulumi CLI]({{< relref "/docs/reference/cli" >}}) command `pulumi up` from within your project directory. This command creates an isolated and configurable instance of your program, known as a *stack*. Stacks are similar to different deployment environments that you use when testing and rolling out application updates. For instance, you can have distinct development, staging, and production stacks that you create and test against.
 
@@ -198,57 +198,57 @@ class MyStack : Stack
 The following topics provide more details on the core concepts of Pulumi and how to use it:
 
 <div class="md:flex flex-row mt-6 mb-6">
-    <div class="w-1/2 border-solid border-t-2 border-gray-200">
+    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/concepts/project" >}}"><i class="fas fa-folder-open pr-2"></i>Projects</a></h3>
         <p>Learn how Pulumi projects are organized and configured.</p>
     </div>
-    <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
+    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/concepts/stack" >}}"><i class="fas fa-cloud pr-2"></i>Stacks</a></h3>
         <p>Learn how to create and deploy stacks.</p>
     </div>
 </div>
 <div class="md:flex flex-row mt-6 mb-6">
-    <div class="w-1/2 border-solid border-t-2 border-gray-200">
+    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/concepts/state" >}}"><i class="fas fa-file-alt pr-2"></i>State and Backends</a></h3>
         <p>Learn how Pulumi stores state and manages concurrency.</p>
     </div>
-    <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
+    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/concepts/resources" >}}"><i class="fas fa-server pr-2"></i>Resources</a></h3>
         <p>Learn more about how to use and manage resources in your program.</p>
     </div>
 </div>
 <div class="md:flex flex-row mt-6 mb-6">
-    <div class="w-1/2 border-solid border-t-2 border-gray-200">
+    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/concepts/inputs-outputs" >}}"><i class="fas fa-hdd pr-2"></i>Inputs and Outputs</a></h3>
         <p>Learn how to use resource properties to handle dependencies between resources.</p>
     </div>
-    <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
+    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/concepts/config" >}}"><i class="fas fa-check-square pr-2"></i>Configuration</a></h3>
         <p>Learn how to configure stacks for different deployment scenarios.</p>
     </div>
 </div>
 <div class="md:flex flex-row mt-6 mb-6">
-    <div class="w-1/2 border-solid border-t-2 border-gray-200">
+    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/concepts/secrets" >}}"><i class="fas fa-key pr-2"></i>Secrets</a></h3>
         <p>Learn how to handle sensitive data and how to store secret encrypted settings in Pulumi.</p>
     </div>
-    <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
+    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/concepts/assets-archives" >}}"><i class="fas fa-stream pr-2"></i>Assets and Archives</a></h3>
         <p>Learn about to use local or remote files with your Pulumi program.</p>
     </div>
 </div>
 <div class="md:flex flex-row mt-6 mb-6">
-    <div class="w-1/2 border-solid border-t-2 border-gray-200">
+    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/concepts/function-serialization" >}}"><i class="fas fa-terminal pr-2"></i>Function Serialization</a></h3>
         <p>Learn how to serialize JavaScript functions into an artifact that can be used at runtime in the cloud.</p>
     </div>
-    <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
+    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/concepts/logging" >}}"><i class="fas fa-clipboard-list pr-2"></i>Logging</a></h3>
         <p>Learn about how to access log information for diagnostics and debugging.</p>
     </div>
 </div>
 <div>
-    <div class="w-full border-solid border-t-2 border-gray-200">
+    <div class="md:w-full border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/concepts/how-pulumi-works" >}}"><i class="fas fa-upload pr-2"></i>Pulumi Architecture</a></h3>
         <p>Learn about the internal Pulumi components used to performs deployments.</p>
     </div>

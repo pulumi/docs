@@ -9,10 +9,10 @@ menu:
 aliases: ["/docs/reference/stack/"]
 ---
 
-Every Pulumi program is deployed to a **stack**. A stack is an isolated, independently [configurable]({{< relref "/docs/intro/concepts/config" >}})
-instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as **development**, **staging** and **production**) or feature branches (such as **feature-x-dev**, **jane-feature-x-dev**).
+Every Pulumi program is deployed to a _stack_. A stack is an isolated, independently [configurable]({{< relref "/docs/intro/concepts/config" >}})
+instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as `development`, `staging`, and `production`) or feature branches (such as `feature-x-dev`).
 
-A project can have as many stacks as you need. By default, Pulumi creates a stack for you when you start a new project. The stack recognizes the current directory as the default name for your program.
+A project can have as many stacks as you need. By default, Pulumi creates a stack for you when you start a new project using the `pulumi new` command.
 
 ## Create a stack {#create-stack}
 
@@ -33,9 +33,15 @@ $ pulumi stack init broomllc/staging
 Fully qualified stack names also include the project name, in the form `orgName/projectName/stackName`, and this fully-qualified format is required in some contexts. In most contexts, the shorthands `orgName/stackName` or `stackName` are valid and use the default organization and the current project context.
 
 {{% notes "info" %}}
-Note that while stacks with applied configuration settings will often be accompanied by `Pulumi.<stack-name>.yaml` files, these files are not created by `pulumi stack init`. They are created and managed with [`pulumi config`]({{< relref "/docs/reference/cli/pulumi_config" >}}).
+While stacks with applied configuration settings will often be accompanied by `Pulumi.<stack-name>.yaml` files, these files are not created by `pulumi stack init`. They are created and managed with [`pulumi config`]({{< relref "/docs/reference/cli/pulumi_config" >}}). For information on how to populate your stack configuration files, see [Configuration]({{< relref "/docs/intro/concepts/config" >}}).
+{{% /notes %}}
 
-For information on how to populate your stack configuration files, see [Configuration]({{< relref "/docs/intro/concepts/config" >}}).
+## Deploy a project
+
+To deploy your project to the currently selected stack, run `pulumi up`. The operation uses the latest [configuration values]({{< relref "/docs/intro/concepts/config" >}}) for the active stack.
+
+{{% notes "info"%}}
+Your program code can distinguish between execution for `preview` and `update` operations by using [pulumi.runtime.isDryRun()]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/runtime#isDryRun" >}}).
 {{% /notes %}}
 
 ## Listing stacks
@@ -76,36 +82,6 @@ mycompany/staging                          4 hours ago              97
 dev                                       n/a                      n/a
 ```
 
-## Deploy a project
-
-To deploy your project to the currently selected stack, run `pulumi up`. The operation uses the latest [configuration values]({{< relref "/docs/intro/concepts/config" >}}) for the active stack.
-
-{{% notes "info"%}}
-Your stack can distinguish between execution for `preview` versus for `update` by using [pulumi.runtime.isDryRun()]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/runtime#isDryRun" >}}).
-{{% /notes %}}
-
-## Stack tags
-
-Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. A set of built-in tags are automatically assigned and updated each time a stack is updated (such as `pulumi:project`, `pulumi:runtime`, `pulumi:description`, `gitHub:owner`, `gitHub:repo`, `vcs:owner`, `vcs:repo`, and `vcs:kind`). To view a stack's tags, run [`pulumi stack tag ls`]({{< relref "/docs/reference/cli/pulumi_stack_tag_ls" >}}).
-
-{{% notes "info" %}}
-Stack tags are only supported when logged into the [Pulumi Service backend]({{< relref "/docs/intro/concepts/state" >}}).
-{{% /notes %}}
-
-Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`]({{< relref "/docs/reference/cli/pulumi_stack_tag_set" >}}) and can be used to customize the grouping of stacks in the [Pulumi Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in the Pulumi Console.
-
-As a best practice, custom tags should not be prefixed with `pulumi:`, `gitHub:`, or `vcs:` to avoid conflicting with built-in tags that are assigned and updated with fresh values each time a stack is updated.
-
-Tags can be deleted by running [`pulumi stack tag rm <name>`]({{< relref "/docs/reference/cli/pulumi_stack_tag_rm" >}}).
-
-## Delete a stack
-
-To delete a stack with no resources, run `pulumi stack rm`. Removing the stack will remove all stack history from pulumi.com and will delete the stack configuration file `Pulumi.<stack-name>.yaml`.
-
-If a stack still has resources associated with it, they must first be deleted via `pulumi destroy`. This command uses the latest configuration values, rather than the ones that were last used when the program was deployed.
-
-To force the deletion of a stack that still contains resources-potentially orphaning them-use `pulumi stack rm --force`.
-
 ## View stack resources
 
 To view details of the currently selected stack, run `pulumi stack` with no arguments. This displays the metadata, resources and output properties associated with the stack.
@@ -131,6 +107,20 @@ Current stack outputs (2):
 
 Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
 ```
+
+## Stack tags
+
+Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. A set of built-in tags are automatically assigned and updated each time a stack is updated (such as `pulumi:project`, `pulumi:runtime`, `pulumi:description`, `gitHub:owner`, `gitHub:repo`, `vcs:owner`, `vcs:repo`, and `vcs:kind`). To view a stack's tags, run [`pulumi stack tag ls`]({{< relref "/docs/reference/cli/pulumi_stack_tag_ls" >}}).
+
+{{% notes "info" %}}
+Stack tags are only supported with the [Pulumi Service backend]({{< relref "/docs/intro/concepts/state" >}}).
+{{% /notes %}}
+
+Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`]({{< relref "/docs/reference/cli/pulumi_stack_tag_set" >}}) and can be used to customize the grouping of stacks in the [Pulumi Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in the Pulumi Console.
+
+As a best practice, custom tags should not be prefixed with `pulumi:`, `gitHub:`, or `vcs:` to avoid conflicting with built-in tags that are assigned and updated with fresh values each time a stack is updated.
+
+Tags can be deleted by running [`pulumi stack tag rm <name>`]({{< relref "/docs/reference/cli/pulumi_stack_tag_rm" >}}).
 
 ## Stack Outputs {#outputs}
 
@@ -557,3 +547,13 @@ $ pulumi stack export --file stack.json
 
 $ pulumi stack import --file stack.json
 ```
+
+## Destroy a stack
+
+Before deleting a stack, if the stack still resources associated with it, they must first be deleted via `pulumi destroy`. This command uses the latest configuration values, rather than the ones that were last used when the program was deployed.
+
+## Delete a stack
+
+To delete a stack with no resources, run `pulumi stack rm`. Removing the stack will remove all stack history from pulumi.com and will delete the stack configuration file `Pulumi.<stack-name>.yaml`.
+
+To force the deletion of a stack that still contains resources---potentially orphaning them---use `pulumi stack rm --force`.

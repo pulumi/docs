@@ -13,11 +13,7 @@ A Pulumi project is any folder which contains a `Pulumi.yaml` file.  When in a s
 
 ## Project file {#pulumi-yaml}
 
-The `Pulumi.yaml` project file specifies metadata about your project.
-
-{{% notes "info" %}}
-The project file must begin with a capitalized `P`, although either `.yml` or `.yaml` extension will work.
-{{% /notes %}}
+The `Pulumi.yaml` project file specifies metadata about your project. The project file must begin with a capitalized `P`, although either `.yml` or `.yaml` extension will work.
 
 A typical `Pulumi.yaml` file looks like the following:
 
@@ -31,38 +27,38 @@ In addition, when using JavaScript, the working directory for the project should
 
 The following are other examples of `Pulumi.yaml` files that define project configurations for other use cases:
 
-A `Pulumi.yaml` file for a `nodejs` program that uses JavaScript rather than TypeScript.
+* A `Pulumi.yaml` file for a `nodejs` program that uses JavaScript rather than TypeScript.
 
-```yaml
-name: minimal
-description: A minimal Pulumi program.
-runtime:
-  name: nodejs
-  options:
-    typescript: false
-```
-
-A `Pulumi.yaml` file for a `go` program that will only use a pre-built executable by the name `mybinary`.
-
-```yaml
-name: ls
-runtime:
-    name: go
+    ```yaml
+    name: my-project
+    description: A minimal JavaScript Pulumi program.
+    runtime:
+    name: nodejs
     options:
-        binary: mybinary
-description: A minimal Go Pulumi program
-```
+        typescript: false
+    ```
 
-A `Pulumi.yaml` file for a `dotnet` program that will use a pre-built assembly `MyInfra.dll` under the `bin` directory.
+* A `Pulumi.yaml` file for a `go` program that will only use a pre-built executable by the name `mybinary`.
 
-```yaml
-name: ls
-runtime:
-    name: dotnet
-    options:
-        binary: bin/MyInfra.dll
-description: A precompiled .NET Pulumi program
-```
+    ```yaml
+    name: my-project
+    runtime:
+        name: go
+        options:
+            binary: mybinary
+    description: A minimal Go Pulumi program
+    ```
+
+* A `Pulumi.yaml` file for a `dotnet` program that will use a pre-built assembly `MyInfra.dll` under the `bin` directory.
+
+    ```yaml
+    name: my-project
+    runtime:
+        name: dotnet
+        options:
+            binary: bin/MyInfra.dll
+    description: A precompiled .NET Pulumi program
+    ```
 
 For more information on valid Pulumi project metadata, see [Pulumi Configuration Reference]({{< relref "/docs/reference/pulumi-yaml">}}).
 
@@ -120,7 +116,7 @@ var myTask = new Task("myTask", new TaskArgs
 
 ## Getting the Current Project Programmatically
 
-The {{< pulumi-getproject >}} function gives you the currently deploying project. This can be useful for naming or tagging resources.
+The {{< pulumi-getproject >}} function returns the name of the currently deploying project. This can be useful for naming or tagging resources.
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
