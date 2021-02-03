@@ -42,7 +42,7 @@ By default, the `enable` and `disable` commands use an organization's default Po
 
 Policies now have access to more information about the resources under review. With access to the options, parent, and dependencies of a resource, you can now write even more thorough policies.
 
-You may access a [resource's options]({{< relref "/docs/intro/concepts/programming-model#resourceoptions" >}}) via the `ResourceValidationArgs` parameter. In the below example, we enforce that all DynamoDB tables be `protected` to prevent data loss.
+You may access a [resource's options]({{< relref "/docs/intro/concepts/resources#options" >}}) via the `ResourceValidationArgs` parameter. In the below example, we enforce that all DynamoDB tables be `protected` to prevent data loss.
 
 ```typescript
 new PolicyPack("aws-policies", {

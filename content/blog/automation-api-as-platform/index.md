@@ -24,7 +24,7 @@ This example demonstrates how to create infrastructure with Automation API and t
 
 ### Infrastructure as a function
 
-We use an `inline` Pulumi program that doesn't require a separate package with `index.ts` and `Pulumi.yaml` files, although they can be authored in an `index.ts` file or imported from another package. The example deploys an AWS S3 website with the context and deployment automation defined in a function. Functions can be [components]({{< relref "/docs/intro/concepts/programming-model#components" >}}), in this case, a static S3 website. However, they can be more complex, such as a Kubernetes cluster with accompanying containers and AWS resources.
+We use an `inline` Pulumi program that doesn't require a separate package with `index.ts` and `Pulumi.yaml` files, although they can be authored in an `index.ts` file or imported from another package. The example deploys an AWS S3 website with the context and deployment automation defined in a function. Functions can be [components]({{< relref "/docs/intro/concepts/resources#components" >}}), in this case, a static S3 website. However, they can be more complex, such as a Kubernetes cluster with accompanying containers and AWS resources.
 
 ```typescript
 const projectName = "pulumi_over_http";

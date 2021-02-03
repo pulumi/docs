@@ -42,7 +42,7 @@ When you run a preview, update or destroy, pulumi decrypts this data. It is plai
 
 ## Are my secrets ever visible?
 
-As noted above, Pulumi provides primitives so you can enforce your secrets are stored in a secure manner in the CLI UI, State file and Pulumi Web Console. During an update, your secrets will be unencrypted in memory and visible to your Pulumi program. It is your responsibility to ensure that you do not persist them outside of Pulumi without securing them. To learn more, see [Secrets]({{< relref "/docs/intro/concepts/programming-model#secrets" >}}).
+As noted above, Pulumi provides primitives so you can enforce your secrets are stored in a secure manner in the CLI UI, State file and Pulumi Web Console. During an update, your secrets will be unencrypted in memory and visible to your Pulumi program. It is your responsibility to ensure that you do not persist them outside of Pulumi without securing them. To learn more, see [Secrets]({{< relref "/docs/intro/concepts/secrets#secrets" >}}).
 
 ## How do I create a stack inside an Organization instead of my User account?
 
