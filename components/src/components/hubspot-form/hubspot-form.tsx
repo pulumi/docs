@@ -56,22 +56,16 @@ export class HubspotForm {
 
         this.hubspotFormTargetId = `hubspotForm_${this.formId}`;
 
-        const hubspot = window["hbspt"];
-        if (hubspot) {
-            hubspot.forms.create({
-                portalId: "4429525",
-                formId: this.formId,
-                css: "",
-                cssClass: this.class,
-                goToWebinarWebinarKey: this.goToWebinarKey,
-                target: `#${this.hubspotFormTargetId}`,
-            });
+        // Check for an existing HubSpot global. If there isn't one already, load
+        // the HubSpot form script dynamically.
+        const hubspotGlobal = window["hbspt"];
+        if (hubspotGlobal) {
+            this.createForm(hubspotGlobal);
         } else {
-            this.isLoading = false;
-            this.didLoad = false;
+            this.loadHubSpotFormsScript();
         }
 
-        // Listen for the HubSpot form to be loaded.
+        // Register for window messages from HubSpot.
         this.messageHandler = this.onMessage.bind(this);
         window.addEventListener("message", this.messageHandler);
     }
@@ -163,6 +157,41 @@ export class HubspotForm {
             source: utmCookie.utmcsr || "(direct)",
             medium: utmCookie.utmcmd || "(none)",
         };
+    }
+
+    // Load the HubSpot forms library.
+    private loadHubSpotFormsScript() {
+        const script = document.createElement("script");
+        script.setAttribute("src", "//js.hsforms.net/forms/v2.js");
+
+        script.onload = () => {
+            const hubspotGlobal = window["hbspt"];
+            if (hubspotGlobal) {
+                this.createForm(hubspotGlobal);
+            } else {
+                this.isLoading = false;
+                this.didLoad = false;
+            }
+        };
+
+        script.onerror = () => {
+            this.isLoading = false;
+            this.didLoad = false;
+        };
+
+        // Append the script to the DOM.
+        document.body.appendChild(script);
+    }
+
+    private createForm(hubspot: any) {
+        hubspot.forms.create({
+            portalId: "4429525",
+            formId: this.formId,
+            css: "",
+            cssClass: this.class,
+            goToWebinarWebinarKey: this.goToWebinarKey,
+            target: `#${this.hubspotFormTargetId}`,
+        });
     }
 
     private renderIsLoadingForm() {
