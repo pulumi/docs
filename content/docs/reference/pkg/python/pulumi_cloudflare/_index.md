@@ -66,7 +66,8 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.</p></li
 <li><p><strong>enable_binding_cookie</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional “binding” cookie on requests. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Friendly name of the Access Application.</p></li>
 <li><p><strong>session_duration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – How often a user will be forced to
-re-authorise. Must be one of <code class="docutils literal notranslate"><span class="pre">0s</span></code>, <code class="docutils literal notranslate"><span class="pre">15m</span></code>, <code class="docutils literal notranslate"><span class="pre">30m</span></code>, <code class="docutils literal notranslate"><span class="pre">6h</span></code>, <code class="docutils literal notranslate"><span class="pre">12h</span></code>, <code class="docutils literal notranslate"><span class="pre">24h</span></code>, <code class="docutils literal notranslate"><span class="pre">168h</span></code>, <code class="docutils literal notranslate"><span class="pre">730h</span></code>.</p></li>
+re-authorise. Must be in the format <code class="docutils literal notranslate"><span class="pre">&quot;48h&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;2h45m&quot;</span></code>.
+Valid time units are <code class="docutils literal notranslate"><span class="pre">ns</span></code>, <code class="docutils literal notranslate"><span class="pre">us</span></code> (or <code class="docutils literal notranslate"><span class="pre">µs</span></code>), <code class="docutils literal notranslate"><span class="pre">ms</span></code>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code>, <code class="docutils literal notranslate"><span class="pre">h</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">24h</span></code>.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to which the access application should be added. Conflicts with <code class="docutils literal notranslate"><span class="pre">account_id</span></code>.</p></li>
 </ul>
 </dd>
@@ -97,7 +98,8 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.</p></li
 <li><p><strong>enable_binding_cookie</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional “binding” cookie on requests. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Friendly name of the Access Application.</p></li>
 <li><p><strong>session_duration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – How often a user will be forced to
-re-authorise. Must be one of <code class="docutils literal notranslate"><span class="pre">0s</span></code>, <code class="docutils literal notranslate"><span class="pre">15m</span></code>, <code class="docutils literal notranslate"><span class="pre">30m</span></code>, <code class="docutils literal notranslate"><span class="pre">6h</span></code>, <code class="docutils literal notranslate"><span class="pre">12h</span></code>, <code class="docutils literal notranslate"><span class="pre">24h</span></code>, <code class="docutils literal notranslate"><span class="pre">168h</span></code>, <code class="docutils literal notranslate"><span class="pre">730h</span></code>.</p></li>
+re-authorise. Must be in the format <code class="docutils literal notranslate"><span class="pre">&quot;48h&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;2h45m&quot;</span></code>.
+Valid time units are <code class="docutils literal notranslate"><span class="pre">ns</span></code>, <code class="docutils literal notranslate"><span class="pre">us</span></code> (or <code class="docutils literal notranslate"><span class="pre">µs</span></code>), <code class="docutils literal notranslate"><span class="pre">ms</span></code>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code>, <code class="docutils literal notranslate"><span class="pre">h</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">24h</span></code>.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to which the access application should be added. Conflicts with <code class="docutils literal notranslate"><span class="pre">account_id</span></code>.</p></li>
 </ul>
 </dd>
@@ -172,7 +174,8 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.</p>
 <dt id="pulumi_cloudflare.AccessApplication.session_duration">
 <em class="property">property </em><code class="sig-name descname">session_duration</code><a class="headerlink" href="#pulumi_cloudflare.AccessApplication.session_duration" title="Permalink to this definition"></a></dt>
 <dd><p>How often a user will be forced to
-re-authorise. Must be one of <code class="docutils literal notranslate"><span class="pre">0s</span></code>, <code class="docutils literal notranslate"><span class="pre">15m</span></code>, <code class="docutils literal notranslate"><span class="pre">30m</span></code>, <code class="docutils literal notranslate"><span class="pre">6h</span></code>, <code class="docutils literal notranslate"><span class="pre">12h</span></code>, <code class="docutils literal notranslate"><span class="pre">24h</span></code>, <code class="docutils literal notranslate"><span class="pre">168h</span></code>, <code class="docutils literal notranslate"><span class="pre">730h</span></code>.</p>
+re-authorise. Must be in the format <code class="docutils literal notranslate"><span class="pre">&quot;48h&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;2h45m&quot;</span></code>.
+Valid time units are <code class="docutils literal notranslate"><span class="pre">ns</span></code>, <code class="docutils literal notranslate"><span class="pre">us</span></code> (or <code class="docutils literal notranslate"><span class="pre">µs</span></code>), <code class="docutils literal notranslate"><span class="pre">ms</span></code>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code>, <code class="docutils literal notranslate"><span class="pre">h</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">24h</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1367,6 +1370,111 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_cloudflare.Argo.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Argo.translate_input_property" title="Permalink to this definition"></a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_cloudflare.ArgoTunnel">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">ArgoTunnel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ArgoTunnel" title="Permalink to this definition"></a></dt>
+<dd><p>Argo Tunnel exposes applications running on your local web server on any network with an internet connection without manually adding DNS records or configuring a firewall or router.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">ArgoTunnel</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-tunnel&quot;</span><span class="p">,</span>
+    <span class="n">secret</span><span class="o">=</span><span class="s2">&quot;AQIDBAUGBwgBAgMEBQYHCAECAwQFBgcIAQIDBAUGBwg=&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Argo Tunnels can be imported a composite ID of the account ID and tunnel UUID.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/argoTunnel:ArgoTunnel example d41d8cd98f00b204e9800998ecf8427e/fd2455cb-5fcc-4c13-8738-8d8d2605237f
+
+where - <span class="sb">``</span>d41d8cd98f00b204e9800998ecf8427e<span class="sb">``</span> is the account ID - <span class="sb">``</span>fd2455cb-5fcc-4c13-8738-8d8d2605237f<span class="sb">``</span> is the Argo Tunnel UUID
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Cloudflare account ID that you wish to manage the Argo Tunnel on.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-friendly name chosen when the tunnel is created. Cannot be empty.</p></li>
+<li><p><strong>secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – 32 or more bytes, encoded as a base64 string. The Create Argo Tunnel endpoint sets this as the tunnel’s password. Anyone wishing to run the tunnel needs this password.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_cloudflare.ArgoTunnel.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#pulumi_cloudflare.ArgoTunnel" title="pulumi_cloudflare.ArgoTunnel">ArgoTunnel</a><a class="headerlink" href="#pulumi_cloudflare.ArgoTunnel.get" title="Permalink to this definition"></a></dt>
+<dd><p>Get an existing ArgoTunnel resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Cloudflare account ID that you wish to manage the Argo Tunnel on.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-friendly name chosen when the tunnel is created. Cannot be empty.</p></li>
+<li><p><strong>secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – 32 or more bytes, encoded as a base64 string. The Create Argo Tunnel endpoint sets this as the tunnel’s password. Anyone wishing to run the tunnel needs this password.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ArgoTunnel.account_id">
+<em class="property">property </em><code class="sig-name descname">account_id</code><a class="headerlink" href="#pulumi_cloudflare.ArgoTunnel.account_id" title="Permalink to this definition"></a></dt>
+<dd><p>The Cloudflare account ID that you wish to manage the Argo Tunnel on.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ArgoTunnel.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_cloudflare.ArgoTunnel.name" title="Permalink to this definition"></a></dt>
+<dd><p>A user-friendly name chosen when the tunnel is created. Cannot be empty.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ArgoTunnel.secret">
+<em class="property">property </em><code class="sig-name descname">secret</code><a class="headerlink" href="#pulumi_cloudflare.ArgoTunnel.secret" title="Permalink to this definition"></a></dt>
+<dd><p>32 or more bytes, encoded as a base64 string. The Create Argo Tunnel endpoint sets this as the tunnel’s password. Anyone wishing to run the tunnel needs this password.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ArgoTunnel.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ArgoTunnel.translate_output_property" title="Permalink to this definition"></a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ArgoTunnel.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ArgoTunnel.translate_input_property" title="Permalink to this definition"></a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -4716,6 +4824,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
                 <span class="mi">429</span><span class="p">,</span>
             <span class="p">],</span>
             <span class="n">origin_traffic</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">headers</span><span class="o">=</span><span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Host&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;X-Example&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;ne&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;my-example&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">],</span>
         <span class="p">),</span>
     <span class="p">),</span>
     <span class="n">action</span><span class="o">=</span><span class="n">cloudflare</span><span class="o">.</span><span class="n">RateLimitActionArgs</span><span class="p">(</span>
@@ -5753,6 +5873,109 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_cloudflare.WafRule.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafRule.translate_input_property" title="Permalink to this definition"></a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_cloudflare.WorkerCronTrigger">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WorkerCronTrigger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedules</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>Sequence<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">, </span>Awaitable<span class="p">[</span>Sequence<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">script_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerCronTrigger" title="Permalink to this definition"></a></dt>
+<dd><p>Worker Cron Triggers allow users to map a cron expression to a Worker script
+using a <code class="docutils literal notranslate"><span class="pre">ScheduledEvent</span></code> listener that enables Workers to be executed on a
+schedule. Worker Cron Triggers are ideal for running periodic jobs for
+maintenance or calling third-party APIs to collect up-to-date data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">example_script</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">WorkerScript</span><span class="p">(</span><span class="s2">&quot;exampleScript&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-script&quot;</span><span class="p">,</span>
+    <span class="n">content</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;path/to/my.js&quot;</span><span class="p">))</span>
+<span class="n">example_trigger</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">WorkerCronTrigger</span><span class="p">(</span><span class="s2">&quot;exampleTrigger&quot;</span><span class="p">,</span>
+    <span class="n">script_name</span><span class="o">=</span><span class="n">example_script</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">schedules</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;*/5 * * * *&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;10 7 * * mon-fri&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<p>Worker Cron Triggers can be imported using the script name of the Worker they are targeting.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/workerCronTrigger:WorkerCronTrigger example my-script
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>schedules</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – List of cron expressions to execute the Worker Script</p></li>
+<li><p><strong>script_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Worker script to target for the schedules</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_cloudflare.WorkerCronTrigger.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedules</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>Sequence<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">, </span>Awaitable<span class="p">[</span>Sequence<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">script_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#pulumi_cloudflare.WorkerCronTrigger" title="pulumi_cloudflare.WorkerCronTrigger">WorkerCronTrigger</a><a class="headerlink" href="#pulumi_cloudflare.WorkerCronTrigger.get" title="Permalink to this definition"></a></dt>
+<dd><p>Get an existing WorkerCronTrigger resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>schedules</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – List of cron expressions to execute the Worker Script</p></li>
+<li><p><strong>script_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Worker script to target for the schedules</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.WorkerCronTrigger.schedules">
+<em class="property">property </em><code class="sig-name descname">schedules</code><a class="headerlink" href="#pulumi_cloudflare.WorkerCronTrigger.schedules" title="Permalink to this definition"></a></dt>
+<dd><p>List of cron expressions to execute the Worker Script</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.WorkerCronTrigger.script_name">
+<em class="property">property </em><code class="sig-name descname">script_name</code><a class="headerlink" href="#pulumi_cloudflare.WorkerCronTrigger.script_name" title="Permalink to this definition"></a></dt>
+<dd><p>Worker script to target for the schedules</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.WorkerCronTrigger.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerCronTrigger.translate_output_property" title="Permalink to this definition"></a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.WorkerCronTrigger.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerCronTrigger.translate_input_property" title="Permalink to this definition"></a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

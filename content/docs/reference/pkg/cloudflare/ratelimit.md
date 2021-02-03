@@ -62,6 +62,21 @@ class MyStack : Stack
                         429,
                     },
                     OriginTraffic = false,
+                    Headers = 
+                    {
+                        
+                        {
+                            { "name", "Host" },
+                            { "op", "eq" },
+                            { "value", "localhost" },
+                        },
+                        
+                        {
+                            { "name", "X-Example" },
+                            { "op", "ne" },
+                            { "value", "my-example" },
+                        },
+                    },
                 },
             },
             Action = new Cloudflare.Inputs.RateLimitActionArgs
@@ -131,6 +146,18 @@ example = cloudflare.RateLimit("example",
                 429,
             ],
             origin_traffic=False,
+            headers=[
+                {
+                    "name": "Host",
+                    "op": "eq",
+                    "value": "localhost",
+                },
+                {
+                    "name": "X-Example",
+                    "op": "ne",
+                    "value": "my-example",
+                },
+            ],
         ),
     ),
     action=cloudflare.RateLimitActionArgs(
@@ -189,6 +216,18 @@ const example = new cloudflare.RateLimit("example", {
                 429,
             ],
             originTraffic: false,
+            headers: [
+                {
+                    name: "Host",
+                    op: "eq",
+                    value: "localhost",
+                },
+                {
+                    name: "X-Example",
+                    op: "ne",
+                    value: "my-example",
+                },
+            ],
         },
     },
     action: {
@@ -2009,6 +2048,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}block is a list of maps with the following attributes:
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="origintraffic_csharp">
 <a href="#origintraffic_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Traffic</a>
 </span>
@@ -2033,6 +2082,16 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]map[string]string</span>
+    </dt>
+    <dd>{{% md %}}block is a list of maps with the following attributes:
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="origintraffic_go">
@@ -2061,6 +2120,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}[]</span>
+    </dt>
+    <dd>{{% md %}}block is a list of maps with the following attributes:
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="origintraffic_nodejs">
 <a href="#origintraffic_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Traffic</a>
 </span>
@@ -2085,6 +2154,16 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
+    </dt>
+    <dd>{{% md %}}block is a list of maps with the following attributes:
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="origin_traffic_python">

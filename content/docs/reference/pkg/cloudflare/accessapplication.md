@@ -441,7 +441,8 @@ below for reference structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
+re-authorise. Must be in the format `"48h"` or `"2h45m"`.
+Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24h`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -562,7 +563,8 @@ below for reference structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
+re-authorise. Must be in the format `"48h"` or `"2h45m"`.
+Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24h`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -683,7 +685,8 @@ below for reference structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
+re-authorise. Must be in the format `"48h"` or `"2h45m"`.
+Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24h`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -804,7 +807,8 @@ below for reference structure.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
+re-authorise. Must be in the format `"48h"` or `"2h45m"`.
+Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24h`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1165,7 +1169,8 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
+re-authorise. Must be in the format `"48h"` or `"2h45m"`.
+Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24h`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1296,7 +1301,8 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
+re-authorise. Must be in the format `"48h"` or `"2h45m"`.
+Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24h`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1427,7 +1433,8 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
+re-authorise. Must be in the format `"48h"` or `"2h45m"`.
+Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24h`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1558,7 +1565,8 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
+re-authorise. Must be in the format `"48h"` or `"2h45m"`.
+Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24h`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
