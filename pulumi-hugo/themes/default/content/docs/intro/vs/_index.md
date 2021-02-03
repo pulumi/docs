@@ -6,7 +6,7 @@ linktitle: Pulumi vs. Other
 menu:
   intro:
     identifier: vs
-    weight: 6
+    weight: 8
 
 aliases: ["/docs/reference/vs/"]
 ---

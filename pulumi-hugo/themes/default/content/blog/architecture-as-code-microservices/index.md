@@ -27,7 +27,7 @@ Pulumi is organized around [Projects]({{< relref "/docs/intro/concepts/project" 
 
 Monolithic stacks are a common way to structure a project. A single project defines the infrastructure and resources for an entire service. However, Pulumi also supports deploying microservices as individual stacks within a project. Because microservices represent a specific business capability, having stacks for each service allows teams to work independently of each other. Separate stacks can enforce security policies through Role-Based Access Control, and each service can be built and deployed independently of other components.
 
-Microservices deployed as stacks communicate with each other through the [StackReference]({{< relref "/docs/intro/concepts/organizing-stacks-projects#inter-stack-dependencies" >}}) resource, which makes stack exports such as networking, environmental variables, and even Kubernetes configuration available to stacks in the project. The `StackReference` constructor takes as input a string of the form `<organization>/<project>/<stack>`, and lets services access the outputs of that stack. The following section walks through a microservices example that deploys a database on AWS RDS, a REST application in AWS Fargate, and an AWS Application Load Balancer.
+Microservices deployed as stacks communicate with each other through the [StackReference]({{< relref "/docs/intro/concepts/stack#stackreferences" >}}) resource, which makes stack exports such as networking, environmental variables, and even Kubernetes configuration available to stacks in the project. The `StackReference` constructor takes as input a string of the form `<organization>/<project>/<stack>`, and lets services access the outputs of that stack. The following section walks through a microservices example that deploys a database on AWS RDS, a REST application in AWS Fargate, and an AWS Application Load Balancer.
 
 ## A Microservices Application Infrastructure
 
@@ -35,7 +35,7 @@ We'll use the [AWS Stack Reference example](https://github.com/pulumi/examples/t
 
 Let's examine how it creates reusable components for building out resources. First up is the [VPC class](https://github.com/pulumi/examples/blob/master/aws-stackreference-architecture/networking/src/vpc.ts) in the [networking stack](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture/networking).
 
-In the networking service, [`vpc.ts`](https://github.com/pulumi/examples/blob/master/aws-stackreference-architecture/networking/src/vpc.ts) creates a TypeScript class that extends Pulumi [ComponentResource]({{< relref "/docs/intro/concepts/programming-model#resources" >}}). A ComponentResource abstracts one or more children that do not require custom create, read, update, and delete operations for provisioning. We can add the related resources to the correct parent to build out the class.
+In the networking service, [`vpc.ts`](https://github.com/pulumi/examples/blob/master/aws-stackreference-architecture/networking/src/vpc.ts) creates a TypeScript class that extends Pulumi [ComponentResource]({{< relref "/docs/intro/concepts/resources" >}}). A ComponentResource abstracts one or more children that do not require custom create, read, update, and delete operations for provisioning. We can add the related resources to the correct parent to build out the class.
 
 ```ts
 export class Vpc extends ComponentResource {
