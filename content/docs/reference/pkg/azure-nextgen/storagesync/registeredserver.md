@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storagesync.RegisteredServer res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Registered Server resource.
-Latest API Version: 2020-09-01.
+Latest API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -30,10 +30,10 @@ class MyStack : Stack
         var registeredServer = new AzureNextGen.StorageSync.Latest.RegisteredServer("registeredServer", new AzureNextGen.StorageSync.Latest.RegisteredServerArgs
         {
             AgentVersion = "1.0.277.0",
-            FriendlyName = "afscv-2304-139",
+            LastHeartBeat = "\"2017-08-08T18:29:06.470652Z\"",
             ResourceGroupName = "SampleResourceGroup_1",
-            ServerCertificate = "MIIDFjCCAf6gAwIBAgIQQS+DS8uhc4VNzUkTw7wbRjANBgkqhkiG9w0BAQ0FADAzMTEwLwYDVQQDEyhhbmt1c2hiLXByb2QzLnJlZG1vbmQuY29ycC5taWNyb3NvZnQuY29tMB4XDTE3MDgwMzE3MDQyNFoXDTE4MDgwNDE3MDQyNFowMzExMC8GA1UEAxMoYW5rdXNoYi1wcm9kMy5yZWRtb25kLmNvcnAubWljcm9zb2Z0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALDRvV4gmsIy6jGDPiHsXmvgVP749NNP7DopdlbHaNhjFmYINHl0uWylyaZmgJrROt2mnxN/zEyJtGnqYHlzUr4xvGq/qV5pqgdB9tag/sw9i22gfe9PRZ0FmSOZnXMbLYgLiDFqLtut5gHcOuWMj03YnkfoBEKlFBxWbagvW2yxz/Sxi9OVSJOKCaXra0RpcIHrO/KFl6ho2eE1/7Ykmfa8hZvSdoPd5gHdLiQcMB/pxq+mWp1fI6c8vFZoDu7Atn+NXTzYPKUxKzaisF12TsaKpohUsJpbB3Wocb0F5frn614D2pg14ERB5otjAMWw1m65csQWPI6dP8KIYe0+QPkCAwEAAaMmMCQwIgYDVR0lAQH/BBgwFgYIKwYBBQUHAwIGCisGAQQBgjcKAwwwDQYJKoZIhvcNAQENBQADggEBAA4RhVIBkw34M1RwakJgHvtjsOFxF1tVQA941NtLokx1l2Z8+GFQkcG4xpZSt+UN6wLerdCbnNhtkCErWUDeaT0jxk4g71Ofex7iM04crT4iHJr8mi96/XnhnkTUs+GDk12VgdeeNEczMZz+8Mxw9dJ5NCnYgTwO0SzGlclRsDvjzkLo8rh2ZG6n/jKrEyNXXo+hOqhupij0QbRP2Tvexdfw201kgN1jdZify8XzJ8Oi0bTS0KpJf2pNPOlooK2bjMUei9ANtEdXwwfVZGWvVh6tJjdv6k14wWWJ1L7zhA1IIVb1J+sQUzJji5iX0DrezjTz1Fg+gAzITaA/WsuujlM=",
-            ServerId = "080d4133-bdb5-40a0-96a0-71a6057bfe9a",
+            ServerCertificate = "\"MIIDFjCCAf6gAwIBAgIQQS+DS8uhc4VNzUkTw7wbRjANBgkqhkiG9w0BAQ0FADAzMTEwLwYDVQQDEyhhbmt1c2hiLXByb2QzLnJlZG1vbmQuY29ycC5taWNyb3NvZnQuY29tMB4XDTE3MDgwMzE3MDQyNFoXDTE4MDgwNDE3MDQyNFowMzExMC8GA1UEAxMoYW5rdXNoYi1wcm9kMy5yZWRtb25kLmNvcnAubWljcm9zb2Z0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALDRvV4gmsIy6jGDPiHsXmvgVP749NNP7DopdlbHaNhjFmYINHl0uWylyaZmgJrROt2mnxN/zEyJtGnqYHlzUr4xvGq/qV5pqgdB9tag/sw9i22gfe9PRZ0FmSOZnXMbLYgLiDFqLtut5gHcOuWMj03YnkfoBEKlFBxWbagvW2yxz/Sxi9OVSJOKCaXra0RpcIHrO/KFl6ho2eE1/7Ykmfa8hZvSdoPd5gHdLiQcMB/pxq+mWp1fI6c8vFZoDu7Atn+NXTzYPKUxKzaisF12TsaKpohUsJpbB3Wocb0F5frn614D2pg14ERB5otjAMWw1m65csQWPI6dP8KIYe0+QPkCAwEAAaMmMCQwIgYDVR0lAQH/BBgwFgYIKwYBBQUHAwIGCisGAQQBgjcKAwwwDQYJKoZIhvcNAQENBQADggEBAA4RhVIBkw34M1RwakJgHvtjsOFxF1tVQA941NtLokx1l2Z8+GFQkcG4xpZSt+UN6wLerdCbnNhtkCErWUDeaT0jxk4g71Ofex7iM04crT4iHJr8mi96/XnhnkTUs+GDk12VgdeeNEczMZz+8Mxw9dJ5NCnYgTwO0SzGlclRsDvjzkLo8rh2ZG6n/jKrEyNXXo+hOqhupij0QbRP2Tvexdfw201kgN1jdZify8XzJ8Oi0bTS0KpJf2pNPOlooK2bjMUei9ANtEdXwwfVZGWvVh6tJjdv6k14wWWJ1L7zhA1IIVb1J+sQUzJji5iX0DrezjTz1Fg+gAzITaA/WsuujlM=\"",
+            ServerId = "\"080d4133-bdb5-40a0-96a0-71a6057bfe9a\"",
             ServerOSVersion = "10.0.14393.0",
             ServerRole = "Standalone",
             StorageSyncServiceName = "SampleStorageSyncService_1",
@@ -60,10 +60,10 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := storagesync.NewRegisteredServer(ctx, "registeredServer", &storagesync.RegisteredServerArgs{
 			AgentVersion:           pulumi.String("1.0.277.0"),
-			FriendlyName:           pulumi.String("afscv-2304-139"),
+			LastHeartBeat:          pulumi.String("\"2017-08-08T18:29:06.470652Z\""),
 			ResourceGroupName:      pulumi.String("SampleResourceGroup_1"),
-			ServerCertificate:      pulumi.String("MIIDFjCCAf6gAwIBAgIQQS+DS8uhc4VNzUkTw7wbRjANBgkqhkiG9w0BAQ0FADAzMTEwLwYDVQQDEyhhbmt1c2hiLXByb2QzLnJlZG1vbmQuY29ycC5taWNyb3NvZnQuY29tMB4XDTE3MDgwMzE3MDQyNFoXDTE4MDgwNDE3MDQyNFowMzExMC8GA1UEAxMoYW5rdXNoYi1wcm9kMy5yZWRtb25kLmNvcnAubWljcm9zb2Z0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALDRvV4gmsIy6jGDPiHsXmvgVP749NNP7DopdlbHaNhjFmYINHl0uWylyaZmgJrROt2mnxN/zEyJtGnqYHlzUr4xvGq/qV5pqgdB9tag/sw9i22gfe9PRZ0FmSOZnXMbLYgLiDFqLtut5gHcOuWMj03YnkfoBEKlFBxWbagvW2yxz/Sxi9OVSJOKCaXra0RpcIHrO/KFl6ho2eE1/7Ykmfa8hZvSdoPd5gHdLiQcMB/pxq+mWp1fI6c8vFZoDu7Atn+NXTzYPKUxKzaisF12TsaKpohUsJpbB3Wocb0F5frn614D2pg14ERB5otjAMWw1m65csQWPI6dP8KIYe0+QPkCAwEAAaMmMCQwIgYDVR0lAQH/BBgwFgYIKwYBBQUHAwIGCisGAQQBgjcKAwwwDQYJKoZIhvcNAQENBQADggEBAA4RhVIBkw34M1RwakJgHvtjsOFxF1tVQA941NtLokx1l2Z8+GFQkcG4xpZSt+UN6wLerdCbnNhtkCErWUDeaT0jxk4g71Ofex7iM04crT4iHJr8mi96/XnhnkTUs+GDk12VgdeeNEczMZz+8Mxw9dJ5NCnYgTwO0SzGlclRsDvjzkLo8rh2ZG6n/jKrEyNXXo+hOqhupij0QbRP2Tvexdfw201kgN1jdZify8XzJ8Oi0bTS0KpJf2pNPOlooK2bjMUei9ANtEdXwwfVZGWvVh6tJjdv6k14wWWJ1L7zhA1IIVb1J+sQUzJji5iX0DrezjTz1Fg+gAzITaA/WsuujlM="),
-			ServerId:               pulumi.String("080d4133-bdb5-40a0-96a0-71a6057bfe9a"),
+			ServerCertificate:      pulumi.String("\"MIIDFjCCAf6gAwIBAgIQQS+DS8uhc4VNzUkTw7wbRjANBgkqhkiG9w0BAQ0FADAzMTEwLwYDVQQDEyhhbmt1c2hiLXByb2QzLnJlZG1vbmQuY29ycC5taWNyb3NvZnQuY29tMB4XDTE3MDgwMzE3MDQyNFoXDTE4MDgwNDE3MDQyNFowMzExMC8GA1UEAxMoYW5rdXNoYi1wcm9kMy5yZWRtb25kLmNvcnAubWljcm9zb2Z0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALDRvV4gmsIy6jGDPiHsXmvgVP749NNP7DopdlbHaNhjFmYINHl0uWylyaZmgJrROt2mnxN/zEyJtGnqYHlzUr4xvGq/qV5pqgdB9tag/sw9i22gfe9PRZ0FmSOZnXMbLYgLiDFqLtut5gHcOuWMj03YnkfoBEKlFBxWbagvW2yxz/Sxi9OVSJOKCaXra0RpcIHrO/KFl6ho2eE1/7Ykmfa8hZvSdoPd5gHdLiQcMB/pxq+mWp1fI6c8vFZoDu7Atn+NXTzYPKUxKzaisF12TsaKpohUsJpbB3Wocb0F5frn614D2pg14ERB5otjAMWw1m65csQWPI6dP8KIYe0+QPkCAwEAAaMmMCQwIgYDVR0lAQH/BBgwFgYIKwYBBQUHAwIGCisGAQQBgjcKAwwwDQYJKoZIhvcNAQENBQADggEBAA4RhVIBkw34M1RwakJgHvtjsOFxF1tVQA941NtLokx1l2Z8+GFQkcG4xpZSt+UN6wLerdCbnNhtkCErWUDeaT0jxk4g71Ofex7iM04crT4iHJr8mi96/XnhnkTUs+GDk12VgdeeNEczMZz+8Mxw9dJ5NCnYgTwO0SzGlclRsDvjzkLo8rh2ZG6n/jKrEyNXXo+hOqhupij0QbRP2Tvexdfw201kgN1jdZify8XzJ8Oi0bTS0KpJf2pNPOlooK2bjMUei9ANtEdXwwfVZGWvVh6tJjdv6k14wWWJ1L7zhA1IIVb1J+sQUzJji5iX0DrezjTz1Fg+gAzITaA/WsuujlM=\""),
+			ServerId:               pulumi.String("\"080d4133-bdb5-40a0-96a0-71a6057bfe9a\""),
 			ServerOSVersion:        pulumi.String("10.0.14393.0"),
 			ServerRole:             pulumi.String("Standalone"),
 			StorageSyncServiceName: pulumi.String("SampleStorageSyncService_1"),
@@ -87,10 +87,10 @@ import pulumi_azure_nextgen as azure_nextgen
 
 registered_server = azure_nextgen.storagesync.latest.RegisteredServer("registeredServer",
     agent_version="1.0.277.0",
-    friendly_name="afscv-2304-139",
+    last_heart_beat="\"2017-08-08T18:29:06.470652Z\"",
     resource_group_name="SampleResourceGroup_1",
-    server_certificate="MIIDFjCCAf6gAwIBAgIQQS+DS8uhc4VNzUkTw7wbRjANBgkqhkiG9w0BAQ0FADAzMTEwLwYDVQQDEyhhbmt1c2hiLXByb2QzLnJlZG1vbmQuY29ycC5taWNyb3NvZnQuY29tMB4XDTE3MDgwMzE3MDQyNFoXDTE4MDgwNDE3MDQyNFowMzExMC8GA1UEAxMoYW5rdXNoYi1wcm9kMy5yZWRtb25kLmNvcnAubWljcm9zb2Z0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALDRvV4gmsIy6jGDPiHsXmvgVP749NNP7DopdlbHaNhjFmYINHl0uWylyaZmgJrROt2mnxN/zEyJtGnqYHlzUr4xvGq/qV5pqgdB9tag/sw9i22gfe9PRZ0FmSOZnXMbLYgLiDFqLtut5gHcOuWMj03YnkfoBEKlFBxWbagvW2yxz/Sxi9OVSJOKCaXra0RpcIHrO/KFl6ho2eE1/7Ykmfa8hZvSdoPd5gHdLiQcMB/pxq+mWp1fI6c8vFZoDu7Atn+NXTzYPKUxKzaisF12TsaKpohUsJpbB3Wocb0F5frn614D2pg14ERB5otjAMWw1m65csQWPI6dP8KIYe0+QPkCAwEAAaMmMCQwIgYDVR0lAQH/BBgwFgYIKwYBBQUHAwIGCisGAQQBgjcKAwwwDQYJKoZIhvcNAQENBQADggEBAA4RhVIBkw34M1RwakJgHvtjsOFxF1tVQA941NtLokx1l2Z8+GFQkcG4xpZSt+UN6wLerdCbnNhtkCErWUDeaT0jxk4g71Ofex7iM04crT4iHJr8mi96/XnhnkTUs+GDk12VgdeeNEczMZz+8Mxw9dJ5NCnYgTwO0SzGlclRsDvjzkLo8rh2ZG6n/jKrEyNXXo+hOqhupij0QbRP2Tvexdfw201kgN1jdZify8XzJ8Oi0bTS0KpJf2pNPOlooK2bjMUei9ANtEdXwwfVZGWvVh6tJjdv6k14wWWJ1L7zhA1IIVb1J+sQUzJji5iX0DrezjTz1Fg+gAzITaA/WsuujlM=",
-    server_id="080d4133-bdb5-40a0-96a0-71a6057bfe9a",
+    server_certificate="\"MIIDFjCCAf6gAwIBAgIQQS+DS8uhc4VNzUkTw7wbRjANBgkqhkiG9w0BAQ0FADAzMTEwLwYDVQQDEyhhbmt1c2hiLXByb2QzLnJlZG1vbmQuY29ycC5taWNyb3NvZnQuY29tMB4XDTE3MDgwMzE3MDQyNFoXDTE4MDgwNDE3MDQyNFowMzExMC8GA1UEAxMoYW5rdXNoYi1wcm9kMy5yZWRtb25kLmNvcnAubWljcm9zb2Z0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALDRvV4gmsIy6jGDPiHsXmvgVP749NNP7DopdlbHaNhjFmYINHl0uWylyaZmgJrROt2mnxN/zEyJtGnqYHlzUr4xvGq/qV5pqgdB9tag/sw9i22gfe9PRZ0FmSOZnXMbLYgLiDFqLtut5gHcOuWMj03YnkfoBEKlFBxWbagvW2yxz/Sxi9OVSJOKCaXra0RpcIHrO/KFl6ho2eE1/7Ykmfa8hZvSdoPd5gHdLiQcMB/pxq+mWp1fI6c8vFZoDu7Atn+NXTzYPKUxKzaisF12TsaKpohUsJpbB3Wocb0F5frn614D2pg14ERB5otjAMWw1m65csQWPI6dP8KIYe0+QPkCAwEAAaMmMCQwIgYDVR0lAQH/BBgwFgYIKwYBBQUHAwIGCisGAQQBgjcKAwwwDQYJKoZIhvcNAQENBQADggEBAA4RhVIBkw34M1RwakJgHvtjsOFxF1tVQA941NtLokx1l2Z8+GFQkcG4xpZSt+UN6wLerdCbnNhtkCErWUDeaT0jxk4g71Ofex7iM04crT4iHJr8mi96/XnhnkTUs+GDk12VgdeeNEczMZz+8Mxw9dJ5NCnYgTwO0SzGlclRsDvjzkLo8rh2ZG6n/jKrEyNXXo+hOqhupij0QbRP2Tvexdfw201kgN1jdZify8XzJ8Oi0bTS0KpJf2pNPOlooK2bjMUei9ANtEdXwwfVZGWvVh6tJjdv6k14wWWJ1L7zhA1IIVb1J+sQUzJji5iX0DrezjTz1Fg+gAzITaA/WsuujlM=\"",
+    server_id="\"080d4133-bdb5-40a0-96a0-71a6057bfe9a\"",
     server_os_version="10.0.14393.0",
     server_role="Standalone",
     storage_sync_service_name="SampleStorageSyncService_1")
@@ -107,10 +107,10 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const registeredServer = new azure_nextgen.storagesync.latest.RegisteredServer("registeredServer", {
     agentVersion: "1.0.277.0",
-    friendlyName: "afscv-2304-139",
+    lastHeartBeat: "\"2017-08-08T18:29:06.470652Z\"",
     resourceGroupName: "SampleResourceGroup_1",
-    serverCertificate: "MIIDFjCCAf6gAwIBAgIQQS+DS8uhc4VNzUkTw7wbRjANBgkqhkiG9w0BAQ0FADAzMTEwLwYDVQQDEyhhbmt1c2hiLXByb2QzLnJlZG1vbmQuY29ycC5taWNyb3NvZnQuY29tMB4XDTE3MDgwMzE3MDQyNFoXDTE4MDgwNDE3MDQyNFowMzExMC8GA1UEAxMoYW5rdXNoYi1wcm9kMy5yZWRtb25kLmNvcnAubWljcm9zb2Z0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALDRvV4gmsIy6jGDPiHsXmvgVP749NNP7DopdlbHaNhjFmYINHl0uWylyaZmgJrROt2mnxN/zEyJtGnqYHlzUr4xvGq/qV5pqgdB9tag/sw9i22gfe9PRZ0FmSOZnXMbLYgLiDFqLtut5gHcOuWMj03YnkfoBEKlFBxWbagvW2yxz/Sxi9OVSJOKCaXra0RpcIHrO/KFl6ho2eE1/7Ykmfa8hZvSdoPd5gHdLiQcMB/pxq+mWp1fI6c8vFZoDu7Atn+NXTzYPKUxKzaisF12TsaKpohUsJpbB3Wocb0F5frn614D2pg14ERB5otjAMWw1m65csQWPI6dP8KIYe0+QPkCAwEAAaMmMCQwIgYDVR0lAQH/BBgwFgYIKwYBBQUHAwIGCisGAQQBgjcKAwwwDQYJKoZIhvcNAQENBQADggEBAA4RhVIBkw34M1RwakJgHvtjsOFxF1tVQA941NtLokx1l2Z8+GFQkcG4xpZSt+UN6wLerdCbnNhtkCErWUDeaT0jxk4g71Ofex7iM04crT4iHJr8mi96/XnhnkTUs+GDk12VgdeeNEczMZz+8Mxw9dJ5NCnYgTwO0SzGlclRsDvjzkLo8rh2ZG6n/jKrEyNXXo+hOqhupij0QbRP2Tvexdfw201kgN1jdZify8XzJ8Oi0bTS0KpJf2pNPOlooK2bjMUei9ANtEdXwwfVZGWvVh6tJjdv6k14wWWJ1L7zhA1IIVb1J+sQUzJji5iX0DrezjTz1Fg+gAzITaA/WsuujlM=",
-    serverId: "080d4133-bdb5-40a0-96a0-71a6057bfe9a",
+    serverCertificate: "\"MIIDFjCCAf6gAwIBAgIQQS+DS8uhc4VNzUkTw7wbRjANBgkqhkiG9w0BAQ0FADAzMTEwLwYDVQQDEyhhbmt1c2hiLXByb2QzLnJlZG1vbmQuY29ycC5taWNyb3NvZnQuY29tMB4XDTE3MDgwMzE3MDQyNFoXDTE4MDgwNDE3MDQyNFowMzExMC8GA1UEAxMoYW5rdXNoYi1wcm9kMy5yZWRtb25kLmNvcnAubWljcm9zb2Z0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALDRvV4gmsIy6jGDPiHsXmvgVP749NNP7DopdlbHaNhjFmYINHl0uWylyaZmgJrROt2mnxN/zEyJtGnqYHlzUr4xvGq/qV5pqgdB9tag/sw9i22gfe9PRZ0FmSOZnXMbLYgLiDFqLtut5gHcOuWMj03YnkfoBEKlFBxWbagvW2yxz/Sxi9OVSJOKCaXra0RpcIHrO/KFl6ho2eE1/7Ykmfa8hZvSdoPd5gHdLiQcMB/pxq+mWp1fI6c8vFZoDu7Atn+NXTzYPKUxKzaisF12TsaKpohUsJpbB3Wocb0F5frn614D2pg14ERB5otjAMWw1m65csQWPI6dP8KIYe0+QPkCAwEAAaMmMCQwIgYDVR0lAQH/BBgwFgYIKwYBBQUHAwIGCisGAQQBgjcKAwwwDQYJKoZIhvcNAQENBQADggEBAA4RhVIBkw34M1RwakJgHvtjsOFxF1tVQA941NtLokx1l2Z8+GFQkcG4xpZSt+UN6wLerdCbnNhtkCErWUDeaT0jxk4g71Ofex7iM04crT4iHJr8mi96/XnhnkTUs+GDk12VgdeeNEczMZz+8Mxw9dJ5NCnYgTwO0SzGlclRsDvjzkLo8rh2ZG6n/jKrEyNXXo+hOqhupij0QbRP2Tvexdfw201kgN1jdZify8XzJ8Oi0bTS0KpJf2pNPOlooK2bjMUei9ANtEdXwwfVZGWvVh6tJjdv6k14wWWJ1L7zhA1IIVb1J+sQUzJji5iX0DrezjTz1Fg+gAzITaA/WsuujlM=\"",
+    serverId: "\"080d4133-bdb5-40a0-96a0-71a6057bfe9a\"",
     serverOSVersion: "10.0.14393.0",
     serverRole: "Standalone",
     storageSyncServiceName: "SampleStorageSyncService_1",
@@ -732,22 +732,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="agentversionexpirationdate_csharp">
-<a href="#agentversionexpirationdate_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version<wbr>Expiration<wbr>Date</a>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server Agent Version Expiration Date{{% /md %}}</dd>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="agentversionstatus_csharp">
-<a href="#agentversionstatus_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version<wbr>Status</a>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server Agent Version Status{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="discoveryendpointuri_csharp">
@@ -757,15 +766,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="lastoperationname_csharp">
@@ -813,15 +813,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Telemetry Endpoint Uri{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -849,15 +840,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="servername_csharp">
-<a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Server name{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="servicelocation_csharp">
 <a href="#servicelocation_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Location</a>
 </span>
@@ -874,48 +856,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span id="agentversionexpirationdate_go">
-<a href="#agentversionexpirationdate_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version<wbr>Expiration<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Registered Server Agent Version Expiration Date{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="agentversionstatus_go">
-<a href="#agentversionstatus_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Registered Server Agent Version Status{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="discoveryendpointuri_go">
-<a href="#discoveryendpointuri_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Endpoint<wbr>Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -925,6 +871,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="discoveryendpointuri_go">
+<a href="#discoveryendpointuri_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Endpoint<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="lastoperationname_go">
@@ -972,15 +945,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Telemetry Endpoint Uri{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -1008,15 +972,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="servername_go">
-<a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Server name{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="servicelocation_go">
 <a href="#servicelocation_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Location</a>
 </span>
@@ -1033,48 +988,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span id="agentversionexpirationdate_nodejs">
-<a href="#agentversionexpirationdate_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version<wbr>Expiration<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Registered Server Agent Version Expiration Date{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="agentversionstatus_nodejs">
-<a href="#agentversionstatus_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Registered Server Agent Version Status{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="discoveryendpointuri_nodejs">
-<a href="#discoveryendpointuri_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Endpoint<wbr>Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1084,6 +1003,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="discoveryendpointuri_nodejs">
+<a href="#discoveryendpointuri_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Endpoint<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="lastoperationname_nodejs">
@@ -1131,15 +1077,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Telemetry Endpoint Uri{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
@@ -1167,15 +1104,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="servername_nodejs">
-<a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Server name{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="servicelocation_nodejs">
 <a href="#servicelocation_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Location</a>
 </span>
@@ -1192,48 +1120,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span id="agent_version_expiration_date_python">
-<a href="#agent_version_expiration_date_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version_<wbr>expiration_<wbr>date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Registered Server Agent Version Expiration Date{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="agent_version_status_python">
-<a href="#agent_version_status_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version_<wbr>status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Registered Server Agent Version Status{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="discovery_endpoint_uri_python">
-<a href="#discovery_endpoint_uri_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>endpoint_<wbr>uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1243,6 +1135,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="discovery_endpoint_uri_python">
+<a href="#discovery_endpoint_uri_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>endpoint_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="last_operation_name_python">
@@ -1290,15 +1209,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Telemetry Endpoint Uri{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
@@ -1326,15 +1236,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="server_name_python">
-<a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Server name{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="service_location_python">
 <a href="#service_location_python" style="color: inherit; text-decoration: inherit;">service_<wbr>location</a>
 </span>
@@ -1351,15 +1252,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

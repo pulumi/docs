@@ -409,6 +409,15 @@ The following output properties are available:
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="allowsharedkeyaccess_csharp">
+<a href="#allowsharedkeyaccess_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Shared<wbr>Key<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="azurefilesidentitybasedauthentication_csharp">
 <a href="#azurefilesidentitybasedauthentication_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication</a>
 </span>
@@ -701,6 +710,15 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="allowsharedkeyaccess_go">
+<a href="#allowsharedkeyaccess_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Shared<wbr>Key<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="azurefilesidentitybasedauthentication_go">
@@ -997,6 +1015,15 @@ The following output properties are available:
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="allowsharedkeyaccess_nodejs">
+<a href="#allowsharedkeyaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Shared<wbr>Key<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="azurefilesidentitybasedauthentication_nodejs">
 <a href="#azurefilesidentitybasedauthentication_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication</a>
 </span>
@@ -1289,6 +1316,15 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="allow_shared_key_access_python">
+<a href="#allow_shared_key_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>shared_<wbr>key_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="azure_files_identity_based_authentication_python">

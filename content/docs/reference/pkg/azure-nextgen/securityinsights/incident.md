@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.Incident resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents an incident in Azure Security Insights.
+Latest API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var incident = new AzureNextGen.SecurityInsights.V20190101Preview.Incident("incident", new AzureNextGen.SecurityInsights.V20190101Preview.IncidentArgs
+        var incident = new AzureNextGen.SecurityInsights.Latest.Incident("incident", new AzureNextGen.SecurityInsights.Latest.IncidentArgs
         {
             Classification = "FalsePositive",
             ClassificationComment = "Not a malicious activity",
@@ -36,8 +37,7 @@ class MyStack : Stack
             FirstActivityTimeUtc = "2019-01-01T13:00:30Z",
             IncidentId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
             LastActivityTimeUtc = "2019-01-01T13:05:30Z",
-            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
-            Owner = new AzureNextGen.SecurityInsights.V20190101Preview.Inputs.IncidentOwnerInfoArgs
+            Owner = new AzureNextGen.SecurityInsights.Latest.Inputs.IncidentOwnerInfoArgs
             {
                 ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
             },
@@ -61,22 +61,21 @@ class MyStack : Stack
 package main
 
 import (
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/v20190101preview"
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := securityinsights.NewIncident(ctx, "incident", &securityinsights.IncidentArgs{
-			Classification:                      pulumi.String("FalsePositive"),
-			ClassificationComment:               pulumi.String("Not a malicious activity"),
-			ClassificationReason:                pulumi.String("IncorrectAlertLogic"),
-			Description:                         pulumi.String("This is a demo incident"),
-			Etag:                                pulumi.String("\"0300bf09-0000-0000-0000-5c37296e0000\""),
-			FirstActivityTimeUtc:                pulumi.String("2019-01-01T13:00:30Z"),
-			IncidentId:                          pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
-			LastActivityTimeUtc:                 pulumi.String("2019-01-01T13:05:30Z"),
-			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
+			Classification:        pulumi.String("FalsePositive"),
+			ClassificationComment: pulumi.String("Not a malicious activity"),
+			ClassificationReason:  pulumi.String("IncorrectAlertLogic"),
+			Description:           pulumi.String("This is a demo incident"),
+			Etag:                  pulumi.String("\"0300bf09-0000-0000-0000-5c37296e0000\""),
+			FirstActivityTimeUtc:  pulumi.String("2019-01-01T13:00:30Z"),
+			IncidentId:            pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
+			LastActivityTimeUtc:   pulumi.String("2019-01-01T13:05:30Z"),
 			Owner: &securityinsights.IncidentOwnerInfoArgs{
 				ObjectId: pulumi.String("2046feea-040d-4a46-9e2b-91c2941bfa70"),
 			},
@@ -103,7 +102,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-incident = azure_nextgen.securityinsights.v20190101preview.Incident("incident",
+incident = azure_nextgen.securityinsights.latest.Incident("incident",
     classification="FalsePositive",
     classification_comment="Not a malicious activity",
     classification_reason="IncorrectAlertLogic",
@@ -112,8 +111,7 @@ incident = azure_nextgen.securityinsights.v20190101preview.Incident("incident",
     first_activity_time_utc="2019-01-01T13:00:30Z",
     incident_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     last_activity_time_utc="2019-01-01T13:05:30Z",
-    operational_insights_resource_provider="Microsoft.OperationalInsights",
-    owner=azure_nextgen.securityinsights.v20190101preview.IncidentOwnerInfoArgs(
+    owner=azure_nextgen.securityinsights.latest.IncidentOwnerInfoArgs(
         object_id="2046feea-040d-4a46-9e2b-91c2941bfa70",
     ),
     resource_group_name="myRg",
@@ -132,7 +130,7 @@ incident = azure_nextgen.securityinsights.v20190101preview.Incident("incident",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const incident = new azure_nextgen.securityinsights.v20190101preview.Incident("incident", {
+const incident = new azure_nextgen.securityinsights.latest.Incident("incident", {
     classification: "FalsePositive",
     classificationComment: "Not a malicious activity",
     classificationReason: "IncorrectAlertLogic",
@@ -141,7 +139,6 @@ const incident = new azure_nextgen.securityinsights.v20190101preview.Incident("i
     firstActivityTimeUtc: "2019-01-01T13:00:30Z",
     incidentId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     lastActivityTimeUtc: "2019-01-01T13:05:30Z",
-    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
     owner: {
         objectId: "2046feea-040d-4a46-9e2b-91c2941bfa70",
     },
@@ -168,7 +165,7 @@ const incident = new azure_nextgen.securityinsights.v20190101preview.Incident("i
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Incident</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">classification</span><span class="p">:</span> <span class="nx">Optional[Union[str, IncidentClassification]]</span> = None<span class="p">, </span><span class="nx">classification_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">classification_reason</span><span class="p">:</span> <span class="nx">Optional[Union[str, IncidentClassificationReason]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_activity_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incident_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[IncidentLabelArgs]]</span> = None<span class="p">, </span><span class="nx">last_activity_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[IncidentOwnerInfoArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[Union[str, IncidentSeverity]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[Union[str, IncidentStatus]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Incident</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">classification</span><span class="p">:</span> <span class="nx">Optional[Union[str, IncidentClassification]]</span> = None<span class="p">, </span><span class="nx">classification_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">classification_reason</span><span class="p">:</span> <span class="nx">Optional[Union[str, IncidentClassificationReason]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_activity_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incident_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[IncidentLabelArgs]]</span> = None<span class="p">, </span><span class="nx">last_activity_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[IncidentOwnerInfoArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[Union[str, IncidentSeverity]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[Union[str, IncidentStatus]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -350,15 +347,6 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Incident ID{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="operationalinsightsresourceprovider_csharp">
-<a href="#operationalinsightsresourceprovider_csharp" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -498,15 +486,6 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Incident ID{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operationalinsightsresourceprovider_go">
-<a href="#operationalinsightsresourceprovider_go" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -650,15 +629,6 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Incident ID{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="operationalinsightsresourceprovider_nodejs">
-<a href="#operationalinsightsresourceprovider_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -798,15 +768,6 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Incident ID{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operational_insights_resource_provider_python">
-<a href="#operational_insights_resource_provider_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>insights_<wbr>resource_<wbr>provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -2220,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:securityinsights/v20190101preview:Incident 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
+$ pulumi import azure-nextgen:securityinsights/latest:Incident 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
 ```
 
 

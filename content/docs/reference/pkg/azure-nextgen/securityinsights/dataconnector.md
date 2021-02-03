@@ -11,106 +11,12 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.DataConnector r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Data connector.
+Latest API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Creates or updates a Dynamics365 data connector.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureNextGen = Pulumi.AzureNextGen;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dataConnector = new AzureNextGen.SecurityInsights.V20190101Preview.DataConnector("dataConnector", new AzureNextGen.SecurityInsights.V20190101Preview.DataConnectorArgs
-        {
-            DataConnectorId = "c2541efb-c9a6-47fe-9501-87d1017d1512",
-            Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
-            Kind = "Dynamics365",
-            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
-            ResourceGroupName = "myRg",
-            WorkspaceName = "myWorkspace",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/v20190101preview"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := securityinsights.NewDataConnector(ctx, "dataConnector", &securityinsights.DataConnectorArgs{
-			DataConnectorId:                     pulumi.String("c2541efb-c9a6-47fe-9501-87d1017d1512"),
-			Etag:                                pulumi.String("\"0300bf09-0000-0000-0000-5c37296e0000\""),
-			Kind:                                pulumi.String("Dynamics365"),
-			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
-			ResourceGroupName:                   pulumi.String("myRg"),
-			WorkspaceName:                       pulumi.String("myWorkspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azure_nextgen as azure_nextgen
-
-data_connector = azure_nextgen.securityinsights.v20190101preview.DataConnector("dataConnector",
-    data_connector_id="c2541efb-c9a6-47fe-9501-87d1017d1512",
-    etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
-    kind="Dynamics365",
-    operational_insights_resource_provider="Microsoft.OperationalInsights",
-    resource_group_name="myRg",
-    workspace_name="myWorkspace")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure-nextgen";
-
-const dataConnector = new azure_nextgen.securityinsights.v20190101preview.DataConnector("dataConnector", {
-    dataConnectorId: "c2541efb-c9a6-47fe-9501-87d1017d1512",
-    etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
-    kind: "Dynamics365",
-    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
-    resourceGroupName: "myRg",
-    workspaceName: "myWorkspace",
-});
-
-```
-
-{{% /example %}}
-
 ### Creates or updates an Office365 data connector.
 {{% example csharp %}}
 ```csharp
@@ -121,12 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataConnector = new AzureNextGen.SecurityInsights.V20190101Preview.DataConnector("dataConnector", new AzureNextGen.SecurityInsights.V20190101Preview.DataConnectorArgs
+        var dataConnector = new AzureNextGen.SecurityInsights.Latest.DataConnector("dataConnector", new AzureNextGen.SecurityInsights.Latest.DataConnectorArgs
         {
             DataConnectorId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
             Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
             Kind = "Office365",
-            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
             ResourceGroupName = "myRg",
             WorkspaceName = "myWorkspace",
         });
@@ -144,19 +49,18 @@ class MyStack : Stack
 package main
 
 import (
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/v20190101preview"
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := securityinsights.NewDataConnector(ctx, "dataConnector", &securityinsights.DataConnectorArgs{
-			DataConnectorId:                     pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
-			Etag:                                pulumi.String("\"0300bf09-0000-0000-0000-5c37296e0000\""),
-			Kind:                                pulumi.String("Office365"),
-			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
-			ResourceGroupName:                   pulumi.String("myRg"),
-			WorkspaceName:                       pulumi.String("myWorkspace"),
+			DataConnectorId:   pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
+			Etag:              pulumi.String("\"0300bf09-0000-0000-0000-5c37296e0000\""),
+			Kind:              pulumi.String("Office365"),
+			ResourceGroupName: pulumi.String("myRg"),
+			WorkspaceName:     pulumi.String("myWorkspace"),
 		})
 		if err != nil {
 			return err
@@ -175,11 +79,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_connector = azure_nextgen.securityinsights.v20190101preview.DataConnector("dataConnector",
+data_connector = azure_nextgen.securityinsights.latest.DataConnector("dataConnector",
     data_connector_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
     kind="Office365",
-    operational_insights_resource_provider="Microsoft.OperationalInsights",
     resource_group_name="myRg",
     workspace_name="myWorkspace")
 
@@ -193,11 +96,10 @@ data_connector = azure_nextgen.securityinsights.v20190101preview.DataConnector("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const dataConnector = new azure_nextgen.securityinsights.v20190101preview.DataConnector("dataConnector", {
+const dataConnector = new azure_nextgen.securityinsights.latest.DataConnector("dataConnector", {
     dataConnectorId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
     kind: "Office365",
-    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
     resourceGroupName: "myRg",
     workspaceName: "myWorkspace",
 });
@@ -218,7 +120,7 @@ const dataConnector = new azure_nextgen.securityinsights.v20190101preview.DataCo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DataConnector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_connector_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, DataConnectorKind]]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DataConnector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_connector_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, DataConnectorKind]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -406,16 +308,7 @@ The DataConnector resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dataconnectorkind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Data<wbr>Connector<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the data connector{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operationalinsightsresourceprovider_csharp">
-<a href="#operationalinsightsresourceprovider_csharp" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
+    <dd>{{% md %}}The data connector kind{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -466,16 +359,7 @@ The DataConnector resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dataconnectorkind">Data<wbr>Connector<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the data connector{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operationalinsightsresourceprovider_go">
-<a href="#operationalinsightsresourceprovider_go" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
+    <dd>{{% md %}}The data connector kind{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -526,16 +410,7 @@ The DataConnector resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dataconnectorkind">Data<wbr>Connector<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the data connector{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operationalinsightsresourceprovider_nodejs">
-<a href="#operationalinsightsresourceprovider_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
+    <dd>{{% md %}}The data connector kind{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -586,16 +461,7 @@ The DataConnector resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#dataconnectorkind">Data<wbr>Connector<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the data connector{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operational_insights_resource_provider_python">
-<a href="#operational_insights_resource_provider_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>insights_<wbr>resource_<wbr>provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
+    <dd>{{% md %}}The data connector kind{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -787,20 +653,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>MicrosoftCloudAppSecurity</dd>
     <dt>Threat<wbr>Intelligence</dt>
     <dd>ThreatIntelligence</dd>
-    <dt>Threat<wbr>Intelligence<wbr>Taxii</dt>
-    <dd>ThreatIntelligenceTaxii</dd>
     <dt>Office365</dt>
     <dd>Office365</dd>
-    <dt>Office<wbr>ATP</dt>
-    <dd>OfficeATP</dd>
     <dt>Amazon<wbr>Web<wbr>Services<wbr>Cloud<wbr>Trail</dt>
     <dd>AmazonWebServicesCloudTrail</dd>
     <dt>Azure<wbr>Advanced<wbr>Threat<wbr>Protection</dt>
     <dd>AzureAdvancedThreatProtection</dd>
     <dt>Microsoft<wbr>Defender<wbr>Advanced<wbr>Threat<wbr>Protection</dt>
     <dd>MicrosoftDefenderAdvancedThreatProtection</dd>
-    <dt>Dynamics365</dt>
-    <dd>Dynamics365</dd>
 </dl>
 {{% /choosable %}}
 
@@ -814,20 +674,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>MicrosoftCloudAppSecurity</dd>
     <dt>Data<wbr>Connector<wbr>Kind<wbr>Threat<wbr>Intelligence</dt>
     <dd>ThreatIntelligence</dd>
-    <dt>Data<wbr>Connector<wbr>Kind<wbr>Threat<wbr>Intelligence<wbr>Taxii</dt>
-    <dd>ThreatIntelligenceTaxii</dd>
     <dt>Data<wbr>Connector<wbr>Kind<wbr>Office365</dt>
     <dd>Office365</dd>
-    <dt>Data<wbr>Connector<wbr>Kind<wbr>Office<wbr>ATP</dt>
-    <dd>OfficeATP</dd>
     <dt>Data<wbr>Connector<wbr>Kind<wbr>Amazon<wbr>Web<wbr>Services<wbr>Cloud<wbr>Trail</dt>
     <dd>AmazonWebServicesCloudTrail</dd>
     <dt>Data<wbr>Connector<wbr>Kind<wbr>Azure<wbr>Advanced<wbr>Threat<wbr>Protection</dt>
     <dd>AzureAdvancedThreatProtection</dd>
     <dt>Data<wbr>Connector<wbr>Kind<wbr>Microsoft<wbr>Defender<wbr>Advanced<wbr>Threat<wbr>Protection</dt>
     <dd>MicrosoftDefenderAdvancedThreatProtection</dd>
-    <dt>Data<wbr>Connector<wbr>Kind<wbr>Dynamics365</dt>
-    <dd>Dynamics365</dd>
 </dl>
 {{% /choosable %}}
 
@@ -841,20 +695,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>MicrosoftCloudAppSecurity</dd>
     <dt>Threat<wbr>Intelligence</dt>
     <dd>ThreatIntelligence</dd>
-    <dt>Threat<wbr>Intelligence<wbr>Taxii</dt>
-    <dd>ThreatIntelligenceTaxii</dd>
     <dt>Office365</dt>
     <dd>Office365</dd>
-    <dt>Office<wbr>ATP</dt>
-    <dd>OfficeATP</dd>
     <dt>Amazon<wbr>Web<wbr>Services<wbr>Cloud<wbr>Trail</dt>
     <dd>AmazonWebServicesCloudTrail</dd>
     <dt>Azure<wbr>Advanced<wbr>Threat<wbr>Protection</dt>
     <dd>AzureAdvancedThreatProtection</dd>
     <dt>Microsoft<wbr>Defender<wbr>Advanced<wbr>Threat<wbr>Protection</dt>
     <dd>MicrosoftDefenderAdvancedThreatProtection</dd>
-    <dt>Dynamics365</dt>
-    <dd>Dynamics365</dd>
 </dl>
 {{% /choosable %}}
 
@@ -868,20 +716,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>MicrosoftCloudAppSecurity</dd>
     <dt>THREAT_INTELLIGENCE</dt>
     <dd>ThreatIntelligence</dd>
-    <dt>THREAT_INTELLIGENCE_TAXII</dt>
-    <dd>ThreatIntelligenceTaxii</dd>
     <dt>OFFICE365</dt>
     <dd>Office365</dd>
-    <dt>OFFICE_ATP</dt>
-    <dd>OfficeATP</dd>
     <dt>AMAZON_WEB_SERVICES_CLOUD_TRAIL</dt>
     <dd>AmazonWebServicesCloudTrail</dd>
     <dt>AZURE_ADVANCED_THREAT_PROTECTION</dt>
     <dd>AzureAdvancedThreatProtection</dd>
     <dt>MICROSOFT_DEFENDER_ADVANCED_THREAT_PROTECTION</dt>
     <dd>MicrosoftDefenderAdvancedThreatProtection</dd>
-    <dt>DYNAMICS365</dt>
-    <dd>Dynamics365</dd>
 </dl>
 {{% /choosable %}}
 ## Import
@@ -890,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:securityinsights/v20190101preview:DataConnector 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/dataConnectors/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
+$ pulumi import azure-nextgen:securityinsights/latest:DataConnector 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/dataConnectors/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
 ```
 
 

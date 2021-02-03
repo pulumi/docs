@@ -175,7 +175,7 @@ const organization = new azure_nextgen.confluent.latest.Organization("organizati
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offer_detail</span><span class="p">:</span> <span class="nx">Optional[OrganizationResourcePropertiesOfferDetailArgs]</span> = None<span class="p">, </span><span class="nx">organization_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProvisionState]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_detail</span><span class="p">:</span> <span class="nx">Optional[OrganizationResourcePropertiesUserDetailArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offer_detail</span><span class="p">:</span> <span class="nx">Optional[OrganizationResourcePropertiesOfferDetailArgs]</span> = None<span class="p">, </span><span class="nx">organization_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_detail</span><span class="p">:</span> <span class="nx">Optional[OrganizationResourcePropertiesUserDetailArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -384,15 +384,6 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#provisionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confluent.<wbr>Provision<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -451,15 +442,6 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#organizationresourcepropertiesofferdetail">Organization<wbr>Resource<wbr>Properties<wbr>Offer<wbr>Detail</a></span>
     </dt>
     <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#provisionstate">Provision<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -522,15 +504,6 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#provisionstate">Provision<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -589,15 +562,6 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#organizationresourcepropertiesofferdetail">Organization<wbr>Resource<wbr>Properties<wbr>Offer<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#provisionstate">Provision<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -667,6 +631,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="ssourl_csharp">
 <a href="#ssourl_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Url</a>
 </span>
@@ -725,6 +698,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="ssourl_go">
@@ -787,6 +769,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="ssourl_nodejs">
 <a href="#ssourl_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Url</a>
 </span>
@@ -845,6 +836,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sso_url_python">
@@ -1625,100 +1625,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last name{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="provisionstate">Provision<wbr>State</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Accepted</dt>
-    <dd>Accepted</dd>
-    <dt>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Updating</dt>
-    <dd>Updating</dd>
-    <dt>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Succeeded</dt>
-    <dd>Succeeded</dd>
-    <dt>Failed</dt>
-    <dd>Failed</dd>
-    <dt>Canceled</dt>
-    <dd>Canceled</dd>
-    <dt>Deleted</dt>
-    <dd>Deleted</dd>
-    <dt>Not<wbr>Specified</dt>
-    <dd>NotSpecified</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular">
-    <dt>Provision<wbr>State<wbr>Accepted</dt>
-    <dd>Accepted</dd>
-    <dt>Provision<wbr>State<wbr>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Provision<wbr>State<wbr>Updating</dt>
-    <dd>Updating</dd>
-    <dt>Provision<wbr>State<wbr>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Provision<wbr>State<wbr>Succeeded</dt>
-    <dd>Succeeded</dd>
-    <dt>Provision<wbr>State<wbr>Failed</dt>
-    <dd>Failed</dd>
-    <dt>Provision<wbr>State<wbr>Canceled</dt>
-    <dd>Canceled</dd>
-    <dt>Provision<wbr>State<wbr>Deleted</dt>
-    <dd>Deleted</dd>
-    <dt>Provision<wbr>State<wbr>Not<wbr>Specified</dt>
-    <dd>NotSpecified</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Accepted</dt>
-    <dd>Accepted</dd>
-    <dt>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Updating</dt>
-    <dd>Updating</dd>
-    <dt>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Succeeded</dt>
-    <dd>Succeeded</dd>
-    <dt>Failed</dt>
-    <dd>Failed</dd>
-    <dt>Canceled</dt>
-    <dd>Canceled</dd>
-    <dt>Deleted</dt>
-    <dd>Deleted</dd>
-    <dt>Not<wbr>Specified</dt>
-    <dd>NotSpecified</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular">
-    <dt>ACCEPTED</dt>
-    <dd>Accepted</dd>
-    <dt>CREATING</dt>
-    <dd>Creating</dd>
-    <dt>UPDATING</dt>
-    <dd>Updating</dd>
-    <dt>DELETING</dt>
-    <dd>Deleting</dd>
-    <dt>SUCCEEDED</dt>
-    <dd>Succeeded</dd>
-    <dt>FAILED</dt>
-    <dd>Failed</dd>
-    <dt>CANCELED</dt>
-    <dd>Canceled</dd>
-    <dt>DELETED</dt>
-    <dd>Deleted</dd>
-    <dt>NOT_SPECIFIED</dt>
-    <dd>NotSpecified</dd>
 </dl>
 {{% /choosable %}}
 

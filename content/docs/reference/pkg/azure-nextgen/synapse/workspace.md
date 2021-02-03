@@ -11,7 +11,6 @@ meta_desc: "Documentation for the azure-nextgen.synapse.Workspace resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A workspace
-Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,32 +26,32 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Synapse.Latest.Workspace("workspace", new AzureNextGen.Synapse.Latest.WorkspaceArgs
+        var workspace = new AzureNextGen.Synapse.V20190601Preview.Workspace("workspace", new AzureNextGen.Synapse.V20190601Preview.WorkspaceArgs
         {
-            DefaultDataLakeStorage = new AzureNextGen.Synapse.Latest.Inputs.DataLakeStorageAccountDetailsArgs
+            DefaultDataLakeStorage = new AzureNextGen.Synapse.V20190601Preview.Inputs.DataLakeStorageAccountDetailsArgs
             {
                 AccountUrl = "https://accountname.dfs.core.windows.net",
                 Filesystem = "default",
             },
-            Encryption = new AzureNextGen.Synapse.Latest.Inputs.EncryptionDetailsArgs
+            Encryption = new AzureNextGen.Synapse.V20190601Preview.Inputs.EncryptionDetailsArgs
             {
-                Cmk = new AzureNextGen.Synapse.Latest.Inputs.CustomerManagedKeyDetailsArgs
+                Cmk = new AzureNextGen.Synapse.V20190601Preview.Inputs.CustomerManagedKeyDetailsArgs
                 {
-                    Key = new AzureNextGen.Synapse.Latest.Inputs.WorkspaceKeyDetailsArgs
+                    Key = new AzureNextGen.Synapse.V20190601Preview.Inputs.WorkspaceKeyDetailsArgs
                     {
                         KeyVaultUrl = "https://vault.azure.net/keys/key1",
                         Name = "default",
                     },
                 },
             },
-            Identity = new AzureNextGen.Synapse.Latest.Inputs.ManagedIdentityArgs
+            Identity = new AzureNextGen.Synapse.V20190601Preview.Inputs.ManagedIdentityArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "East US",
             ManagedResourceGroupName = "workspaceManagedResourceGroupUnique",
             ManagedVirtualNetwork = "default",
-            ManagedVirtualNetworkSettings = new AzureNextGen.Synapse.Latest.Inputs.ManagedVirtualNetworkSettingsArgs
+            ManagedVirtualNetworkSettings = new AzureNextGen.Synapse.V20190601Preview.Inputs.ManagedVirtualNetworkSettingsArgs
             {
                 AllowedAadTenantIdsForLinking = 
                 {
@@ -61,7 +60,7 @@ class MyStack : Stack
                 LinkedAccessCheckOnTargetResource = false,
                 PreventDataExfiltration = false,
             },
-            PurviewConfiguration = new AzureNextGen.Synapse.Latest.Inputs.PurviewConfigurationArgs
+            PurviewConfiguration = new AzureNextGen.Synapse.V20190601Preview.Inputs.PurviewConfigurationArgs
             {
                 PurviewResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1",
             },
@@ -73,7 +72,7 @@ class MyStack : Stack
                 { "key", "value" },
             },
             WorkspaceName = "workspace1",
-            WorkspaceRepositoryConfiguration = new AzureNextGen.Synapse.Latest.Inputs.WorkspaceRepositoryConfigurationArgs
+            WorkspaceRepositoryConfiguration = new AzureNextGen.Synapse.V20190601Preview.Inputs.WorkspaceRepositoryConfigurationArgs
             {
                 AccountName = "mygithubaccount",
                 CollaborationBranch = "master",
@@ -98,7 +97,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/v20190601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -167,31 +166,31 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.synapse.latest.Workspace("workspace",
-    default_data_lake_storage=azure_nextgen.synapse.latest.DataLakeStorageAccountDetailsArgs(
+workspace = azure_nextgen.synapse.v20190601preview.Workspace("workspace",
+    default_data_lake_storage=azure_nextgen.synapse.v20190601preview.DataLakeStorageAccountDetailsArgs(
         account_url="https://accountname.dfs.core.windows.net",
         filesystem="default",
     ),
-    encryption=azure_nextgen.synapse.latest.EncryptionDetailsArgs(
-        cmk=azure_nextgen.synapse.latest.CustomerManagedKeyDetailsArgs(
-            key=azure_nextgen.synapse.latest.WorkspaceKeyDetailsArgs(
+    encryption=azure_nextgen.synapse.v20190601preview.EncryptionDetailsArgs(
+        cmk=azure_nextgen.synapse.v20190601preview.CustomerManagedKeyDetailsArgs(
+            key=azure_nextgen.synapse.v20190601preview.WorkspaceKeyDetailsArgs(
                 key_vault_url="https://vault.azure.net/keys/key1",
                 name="default",
             ),
         ),
     ),
-    identity=azure_nextgen.synapse.latest.ManagedIdentityArgs(
+    identity=azure_nextgen.synapse.v20190601preview.ManagedIdentityArgs(
         type="SystemAssigned",
     ),
     location="East US",
     managed_resource_group_name="workspaceManagedResourceGroupUnique",
     managed_virtual_network="default",
-    managed_virtual_network_settings=azure_nextgen.synapse.latest.ManagedVirtualNetworkSettingsArgs(
+    managed_virtual_network_settings=azure_nextgen.synapse.v20190601preview.ManagedVirtualNetworkSettingsArgs(
         allowed_aad_tenant_ids_for_linking=["740239CE-A25B-485B-86A0-262F29F6EBDB"],
         linked_access_check_on_target_resource=False,
         prevent_data_exfiltration=False,
     ),
-    purview_configuration=azure_nextgen.synapse.latest.PurviewConfigurationArgs(
+    purview_configuration=azure_nextgen.synapse.v20190601preview.PurviewConfigurationArgs(
         purview_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1",
     ),
     resource_group_name="resourceGroup1",
@@ -201,7 +200,7 @@ workspace = azure_nextgen.synapse.latest.Workspace("workspace",
         "key": "value",
     },
     workspace_name="workspace1",
-    workspace_repository_configuration=azure_nextgen.synapse.latest.WorkspaceRepositoryConfigurationArgs(
+    workspace_repository_configuration=azure_nextgen.synapse.v20190601preview.WorkspaceRepositoryConfigurationArgs(
         account_name="mygithubaccount",
         collaboration_branch="master",
         host_name="",
@@ -221,7 +220,7 @@ workspace = azure_nextgen.synapse.latest.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.synapse.latest.Workspace("workspace", {
+const workspace = new azure_nextgen.synapse.v20190601preview.Workspace("workspace", {
     defaultDataLakeStorage: {
         accountUrl: "https://accountname.dfs.core.windows.net",
         filesystem: "default",
@@ -4144,7 +4143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/latest:Workspace workspace1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/workspaces/workspace1 
+$ pulumi import azure-nextgen:synapse/v20190601preview:Workspace workspace1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/workspaces/workspace1 
 ```
 
 

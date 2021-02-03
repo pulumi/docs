@@ -31,6 +31,7 @@ class MyStack : Stack
         {
             AccountName = "sto4445",
             AllowBlobPublicAccess = false,
+            AllowSharedKeyAccess = true,
             Encryption = new AzureNextGen.Storage.Latest.Inputs.EncryptionArgs
             {
                 KeySource = "Microsoft.Storage",
@@ -93,6 +94,7 @@ func main() {
 		_, err := storage.NewStorageAccount(ctx, "storageAccount", &storage.StorageAccountArgs{
 			AccountName:           pulumi.String("sto4445"),
 			AllowBlobPublicAccess: pulumi.Bool(false),
+			AllowSharedKeyAccess:  pulumi.Bool(true),
 			Encryption: &storage.EncryptionArgs{
 				KeySource:                       pulumi.String("Microsoft.Storage"),
 				RequireInfrastructureEncryption: pulumi.Bool(false),
@@ -145,6 +147,7 @@ import pulumi_azure_nextgen as azure_nextgen
 storage_account = azure_nextgen.storage.latest.StorageAccount("storageAccount",
     account_name="sto4445",
     allow_blob_public_access=False,
+    allow_shared_key_access=True,
     encryption=azure_nextgen.storage.latest.EncryptionArgs(
         key_source="Microsoft.Storage",
         require_infrastructure_encryption=False,
@@ -190,6 +193,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageAccount", {
     accountName: "sto4445",
     allowBlobPublicAccess: false,
+    allowSharedKeyAccess: true,
     encryption: {
         keySource: "Microsoft.Storage",
         requireInfrastructureEncryption: false,
@@ -239,7 +243,7 @@ const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageA
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[AccessTier]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">azure_files_identity_based_authentication</span><span class="p">:</span> <span class="nx">Optional[AzureFilesIdentityBasedAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[CustomDomainArgs]</span> = None<span class="p">, </span><span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">, </span><span class="nx">large_file_shares_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, LargeFileSharesState]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[Union[str, MinimumTlsVersion]]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[NetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_preference</span><span class="p">:</span> <span class="nx">Optional[RoutingPreferenceArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[AccessTier]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_shared_key_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">azure_files_identity_based_authentication</span><span class="p">:</span> <span class="nx">Optional[AzureFilesIdentityBasedAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[CustomDomainArgs]</span> = None<span class="p">, </span><span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">, </span><span class="nx">large_file_shares_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, LargeFileSharesState]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[Union[str, MinimumTlsVersion]]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[NetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_preference</span><span class="p">:</span> <span class="nx">Optional[RoutingPreferenceArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -475,6 +479,15 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="allowsharedkeyaccess_csharp">
+<a href="#allowsharedkeyaccess_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Shared<wbr>Key<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="azurefilesidentitybasedauthentication_csharp">
 <a href="#azurefilesidentitybasedauthentication_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication</a>
 </span>
@@ -641,6 +654,15 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowsharedkeyaccess_go">
+<a href="#allowsharedkeyaccess_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Shared<wbr>Key<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="azurefilesidentitybasedauthentication_go">
@@ -811,6 +833,15 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="allowsharedkeyaccess_nodejs">
+<a href="#allowsharedkeyaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Shared<wbr>Key<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="azurefilesidentitybasedauthentication_nodejs">
 <a href="#azurefilesidentitybasedauthentication_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication</a>
 </span>
@@ -977,6 +1008,15 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allow_shared_key_access_python">
+<a href="#allow_shared_key_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>shared_<wbr>key_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="azure_files_identity_based_authentication_python">

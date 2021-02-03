@@ -319,15 +319,6 @@ The following output properties are available:
     <dd>{{% md %}}Resource status{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="storageaccounttype_csharp">
-<a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this sql pool.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -467,15 +458,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource status{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="storageaccounttype_go">
-<a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this sql pool.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_go">
@@ -619,15 +601,6 @@ The following output properties are available:
     <dd>{{% md %}}Resource status{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="storageaccounttype_nodejs">
-<a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this sql pool.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -767,15 +740,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource status{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="storage_account_type_python">
-<a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this sql pool.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_python">

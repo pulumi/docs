@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var extension = new AzureNextGen.VisualStudio.V20171101Preview.Extension("extension", new AzureNextGen.VisualStudio.V20171101Preview.ExtensionArgs
+        var extension = new AzureNextGen.VisualStudio.V20140401Preview.Extension("extension", new AzureNextGen.VisualStudio.V20140401Preview.ExtensionArgs
         {
             AccountResourceName = "ExampleAccount",
             ExtensionResourceName = "ms.example",
             Location = "Central US",
-            Plan = new AzureNextGen.VisualStudio.V20171101Preview.Inputs.ExtensionResourcePlanArgs
+            Plan = new AzureNextGen.VisualStudio.V20140401Preview.Inputs.ExtensionResourcePlanArgs
             {
                 Name = "ExamplePlan",
                 Product = "ExampleExtensionName",
@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	visualstudio "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/visualstudio/v20171101preview"
+	visualstudio "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/visualstudio/v20140401preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,11 +95,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-extension = azure_nextgen.visualstudio.v20171101preview.Extension("extension",
+extension = azure_nextgen.visualstudio.v20140401preview.Extension("extension",
     account_resource_name="ExampleAccount",
     extension_resource_name="ms.example",
     location="Central US",
-    plan=azure_nextgen.visualstudio.v20171101preview.ExtensionResourcePlanArgs(
+    plan=azure_nextgen.visualstudio.v20140401preview.ExtensionResourcePlanArgs(
         name="ExamplePlan",
         product="ExampleExtensionName",
         promotion_code="",
@@ -120,7 +120,7 @@ extension = azure_nextgen.visualstudio.v20171101preview.Extension("extension",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const extension = new azure_nextgen.visualstudio.v20171101preview.Extension("extension", {
+const extension = new azure_nextgen.visualstudio.v20140401preview.Extension("extension", {
     accountResourceName: "ExampleAccount",
     extensionResourceName: "ms.example",
     location: "Central US",
@@ -1162,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:visualstudio/v20171101preview:Extension ms.example /subscriptions/0de7f055-dbea-498d-8e9e-da287eedca90/resourceGroups/VS-Example-Group/providers/Microsoft.VisualStudio/account/ExampleAccount/extension/ms.example 
+$ pulumi import azure-nextgen:visualstudio/v20140401preview:Extension ms.example /subscriptions/0de7f055-dbea-498d-8e9e-da287eedca90/resourceGroups/VS-Example-Group/providers/Microsoft.VisualStudio/account/ExampleAccount/extension/ms.example 
 ```
 
 

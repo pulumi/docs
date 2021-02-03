@@ -166,15 +166,6 @@ The following output properties are available:
     <dd>{{% md %}}String Id used to locate any resource on Azure.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="identity_csharp">
-<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Outputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
@@ -220,6 +211,15 @@ The following output properties are available:
     <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Outputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -242,15 +242,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String Id used to locate any resource on Azure.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="identity_go">
-<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="kind_go">
@@ -298,6 +289,15 @@ The following output properties are available:
     <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -320,15 +320,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String Id used to locate any resource on Azure.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="identity_nodejs">
-<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="kind_nodejs">
@@ -376,6 +367,15 @@ The following output properties are available:
     <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -398,15 +398,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String Id used to locate any resource on Azure.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="identity_python">
-<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="kind_python">
@@ -454,6 +445,15 @@ The following output properties are available:
     <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -482,15 +482,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tenantid_csharp">
-<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the Azure Active Directory.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -513,15 +504,6 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tenantid_go">
-<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the Azure Active Directory.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -548,15 +530,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tenantid_nodejs">
-<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the Azure Active Directory.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -579,15 +552,6 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tenant_id_python">
-<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the Azure Active Directory.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">

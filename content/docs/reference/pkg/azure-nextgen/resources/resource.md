@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.resources.Resource resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Resource information.
-Latest API Version: 2020-08-01.
+Latest API Version: 2020-10-01.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
