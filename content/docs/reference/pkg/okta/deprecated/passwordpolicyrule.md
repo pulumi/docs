@@ -282,7 +282,7 @@ The PasswordPolicyRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -399,7 +399,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -516,7 +516,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -633,7 +633,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -940,7 +940,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1057,7 +1057,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1174,7 +1174,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1291,7 +1291,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

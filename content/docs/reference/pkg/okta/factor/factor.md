@@ -289,7 +289,7 @@ Allowed values are `"duo"`, `"fido_u2f"`, `"fido_webauthn"`, `"google_otp"`, `"o
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to activate the provider, by default it is set to `true`.
+    <dd>{{% md %}}Whether to activate the provider, by default, it is set to `true`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -316,7 +316,7 @@ Allowed values are `"duo"`, `"fido_u2f"`, `"fido_webauthn"`, `"google_otp"`, `"o
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to activate the provider, by default it is set to `true`.
+    <dd>{{% md %}}Whether to activate the provider, by default, it is set to `true`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -343,7 +343,7 @@ Allowed values are `"duo"`, `"fido_u2f"`, `"fido_webauthn"`, `"google_otp"`, `"o
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether or not to activate the provider, by default it is set to `true`.
+    <dd>{{% md %}}Whether to activate the provider, by default, it is set to `true`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -370,7 +370,7 @@ Allowed values are `"duo"`, `"fido_u2f"`, `"fido_webauthn"`, `"google_otp"`, `"o
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to activate the provider, by default it is set to `true`.
+    <dd>{{% md %}}Whether to activate the provider, by default, it is set to `true`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -576,7 +576,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to activate the provider, by default it is set to `true`.
+    <dd>{{% md %}}Whether to activate the provider, by default, it is set to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -603,7 +603,7 @@ Allowed values are `"duo"`, `"fido_u2f"`, `"fido_webauthn"`, `"google_otp"`, `"o
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to activate the provider, by default it is set to `true`.
+    <dd>{{% md %}}Whether to activate the provider, by default, it is set to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -630,7 +630,7 @@ Allowed values are `"duo"`, `"fido_u2f"`, `"fido_webauthn"`, `"google_otp"`, `"o
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether or not to activate the provider, by default it is set to `true`.
+    <dd>{{% md %}}Whether to activate the provider, by default, it is set to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -657,7 +657,7 @@ Allowed values are `"duo"`, `"fido_u2f"`, `"fido_webauthn"`, `"google_otp"`, `"o
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to activate the provider, by default it is set to `true`.
+    <dd>{{% md %}}Whether to activate the provider, by default, it is set to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

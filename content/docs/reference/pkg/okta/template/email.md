@@ -331,7 +331,7 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailtranslation">List&lt;Email<wbr>Translation<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Set of translations for particular template.
+    <dd>{{% md %}}Set of translations for a particular template.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -367,7 +367,7 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailtranslation">[]Email<wbr>Translation</a></span>
     </dt>
-    <dd>{{% md %}}Set of translations for particular template.
+    <dd>{{% md %}}Set of translations for a particular template.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -403,7 +403,7 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailtranslation">Email<wbr>Translation[]</a></span>
     </dt>
-    <dd>{{% md %}}Set of translations for particular template.
+    <dd>{{% md %}}Set of translations for a particular template.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -439,7 +439,7 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailtranslation">Sequence[Email<wbr>Translation<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Set of translations for particular template.
+    <dd>{{% md %}}Set of translations for a particular template.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -675,7 +675,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailtranslation">List&lt;Email<wbr>Translation<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Set of translations for particular template.
+    <dd>{{% md %}}Set of translations for a particular template.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -711,7 +711,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailtranslation">[]Email<wbr>Translation</a></span>
     </dt>
-    <dd>{{% md %}}Set of translations for particular template.
+    <dd>{{% md %}}Set of translations for a particular template.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -747,7 +747,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailtranslation">Email<wbr>Translation[]</a></span>
     </dt>
-    <dd>{{% md %}}Set of translations for particular template.
+    <dd>{{% md %}}Set of translations for a particular template.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -783,7 +783,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailtranslation">Sequence[Email<wbr>Translation<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Set of translations for particular template.
+    <dd>{{% md %}}Set of translations for a particular template.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -832,7 +832,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The language to map tthe template to.
+    <dd>{{% md %}}The language to map the template to.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -868,7 +868,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The language to map tthe template to.
+    <dd>{{% md %}}The language to map the template to.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -904,7 +904,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The language to map tthe template to.
+    <dd>{{% md %}}The language to map the template to.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -940,7 +940,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The language to map tthe template to.
+    <dd>{{% md %}}The language to map the template to.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">

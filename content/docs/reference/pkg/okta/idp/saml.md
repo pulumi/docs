@@ -30,7 +30,6 @@ class MyStack : Stack
     {
         var example = new Okta.Idp.Saml("example", new Okta.Idp.SamlArgs
         {
-            AcsBinding = "HTTP-POST",
             AcsType = "INSTANCE",
             Issuer = "https://idp.example.com",
             Kid = okta_idp_saml_key.Test.Id,
@@ -60,7 +59,6 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := idp.NewSaml(ctx, "example", &idp.SamlArgs{
-			AcsBinding:             pulumi.String("HTTP-POST"),
 			AcsType:                pulumi.String("INSTANCE"),
 			Issuer:                 pulumi.String("https://idp.example.com"),
 			Kid:                    pulumi.Any(okta_idp_saml_key.Test.Id),
@@ -87,7 +85,6 @@ import pulumi
 import pulumi_okta as okta
 
 example = okta.idp.Saml("example",
-    acs_binding="HTTP-POST",
     acs_type="INSTANCE",
     issuer="https://idp.example.com",
     kid=okta_idp_saml_key["test"]["id"],
@@ -108,7 +105,6 @@ import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
 const example = new okta.idp.Saml("example", {
-    acsBinding: "HTTP-POST",
     acsType: "INSTANCE",
     issuer: "https://idp.example.com",
     kid: okta_idp_saml_key_test.id,
@@ -308,16 +304,6 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span id="acsbinding_csharp">
-<a href="#acsbinding_csharp" style="color: inherit; text-decoration: inherit;">Acs<wbr>Binding</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The method of making an ACS request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="issuer_csharp">
 <a href="#issuer_csharp" style="color: inherit; text-decoration: inherit;">Issuer</a>
 </span>
@@ -366,6 +352,15 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
 {{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="acsbinding_csharp">
+<a href="#acsbinding_csharp" style="color: inherit; text-decoration: inherit;">Acs<wbr>Binding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="acstype_csharp">
@@ -504,7 +499,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
+    <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -574,7 +569,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The name formate. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
+    <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -594,7 +589,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
+    <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -622,16 +617,6 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="acsbinding_go">
-<a href="#acsbinding_go" style="color: inherit; text-decoration: inherit;">Acs<wbr>Binding</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The method of making an ACS request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="issuer_go">
@@ -682,6 +667,15 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
 {{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="acsbinding_go">
+<a href="#acsbinding_go" style="color: inherit; text-decoration: inherit;">Acs<wbr>Binding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="acstype_go">
@@ -820,7 +814,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
+    <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -890,7 +884,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The name formate. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
+    <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -910,7 +904,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
+    <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -938,16 +932,6 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="acsbinding_nodejs">
-<a href="#acsbinding_nodejs" style="color: inherit; text-decoration: inherit;">acs<wbr>Binding</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The method of making an ACS request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="issuer_nodejs">
@@ -998,6 +982,15 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
 {{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="acsbinding_nodejs">
+<a href="#acsbinding_nodejs" style="color: inherit; text-decoration: inherit;">acs<wbr>Binding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="acstype_nodejs">
@@ -1136,7 +1129,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
+    <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1206,7 +1199,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The name formate. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
+    <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1226,7 +1219,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
+    <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1254,16 +1247,6 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="acs_binding_python">
-<a href="#acs_binding_python" style="color: inherit; text-decoration: inherit;">acs_<wbr>binding</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The method of making an ACS request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="issuer_python">
@@ -1314,6 +1297,15 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
 {{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="acs_binding_python">
+<a href="#acs_binding_python" style="color: inherit; text-decoration: inherit;">acs_<wbr>binding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="acs_type_python">
@@ -1452,7 +1444,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
+    <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1522,7 +1514,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The name formate. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
+    <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1542,7 +1534,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
+    <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1860,16 +1852,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_acsbinding_csharp">
 <a href="#state_acsbinding_csharp" style="color: inherit; text-decoration: inherit;">Acs<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The method of making an ACS request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_acstype_csharp">
@@ -2038,7 +2029,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
+    <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2118,7 +2109,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The name formate. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
+    <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2138,7 +2129,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
+    <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2196,16 +2187,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_acsbinding_go">
 <a href="#state_acsbinding_go" style="color: inherit; text-decoration: inherit;">Acs<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The method of making an ACS request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_acstype_go">
@@ -2374,7 +2364,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
+    <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2454,7 +2444,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The name formate. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
+    <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2474,7 +2464,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
+    <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2532,16 +2522,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_acsbinding_nodejs">
 <a href="#state_acsbinding_nodejs" style="color: inherit; text-decoration: inherit;">acs<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The method of making an ACS request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_acstype_nodejs">
@@ -2710,7 +2699,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
+    <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2790,7 +2779,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The name formate. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
+    <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2810,7 +2799,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
+    <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2868,16 +2857,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_acs_binding_python">
 <a href="#state_acs_binding_python" style="color: inherit; text-decoration: inherit;">acs_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The method of making an ACS request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_acs_type_python">
@@ -3046,7 +3034,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
+    <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3126,7 +3114,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The name formate. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
+    <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3146,7 +3134,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
+    <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

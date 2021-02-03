@@ -211,7 +211,7 @@ The MfaPolicyRule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
+    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGED, or NEVER?
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -262,7 +262,7 @@ The MfaPolicyRule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -308,7 +308,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
+    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGED, or NEVER?
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -359,7 +359,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -405,7 +405,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
+    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGED, or NEVER?
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -456,7 +456,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -502,7 +502,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
+    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGED, or NEVER?
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -553,7 +553,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -779,7 +779,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
+    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGED, or NEVER?
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -840,7 +840,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -876,7 +876,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
+    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGED, or NEVER?
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -937,7 +937,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -973,7 +973,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
+    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGED, or NEVER?
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1034,7 +1034,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1070,7 +1070,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
+    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGED, or NEVER?
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1131,7 +1131,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

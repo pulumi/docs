@@ -130,7 +130,7 @@ const example = new okta.app.OAuth("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/app/#pulumi_okta.app.OAuth">OAuth</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_key_rotation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_basic_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consent_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issuer_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OAuthJwkArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">omit_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">post_logout_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">response_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tos_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[OAuthUserArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/app/#pulumi_okta.app.OAuth">OAuth</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_key_rotation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_basic_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consent_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">implicit_assignment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issuer_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OAuthJwkArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">login_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">omit_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">post_logout_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">response_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tos_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[OAuthUserArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -319,7 +319,7 @@ The OAuth resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of OAuth application.
+    <dd>{{% md %}}The type of OAuth application. Valid values: `"web"`, `"native"`, `"browser"`, `"service"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -379,7 +379,7 @@ The OAuth resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
+    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: `"REQUIRED"`, `"TRUSTED"`. Default value is `"TRUSTED"`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -400,7 +400,8 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). Defaults to minimum requirements per app type.
+    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). 
+Defaults to minimum requirements per app type. Valid values: `"authorization_code"`, `"implicit"`, `"password"`, `"refresh_token"`, `"client_credentials"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -434,6 +435,16 @@ no-op, use client_id for that behavior instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="implicitassignment_csharp">
+<a href="#implicitassignment_csharp" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enables Federation Broker Mode. When this mode is enabled, `users` and `groups` arguments are ignored.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="issuermode_csharp">
 <a href="#issuermode_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
 </span>
@@ -453,13 +464,33 @@ no-op, use client_id for that behavior instead.
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="loginmode_csharp">
+<a href="#loginmode_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any. Valid values: `"DISABLED"`, `"SPEC"`, `"OKTA"`. Default is `"DISABLED"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loginscopes_csharp">
+<a href="#loginscopes_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of scopes to use for the request. Valid values: `"openid"`, `"profile"`, `"email"`, `"address"`, `"phone"`. Required when `login_mode` is NOT `DISABLED`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="loginuri_csharp">
 <a href="#loginuri_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI that initiates login.
+    <dd>{{% md %}}URI that initiates login. Required when `login_mode` is NOT `DISABLED`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -479,7 +510,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
+    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. Your app will be recreated if this ever changes from true => false.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -539,7 +570,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
+    <dd>{{% md %}}The status of the application, by default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -595,7 +626,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of OAuth application.
+    <dd>{{% md %}}The type of OAuth application. Valid values: `"web"`, `"native"`, `"browser"`, `"service"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -655,7 +686,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
+    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: `"REQUIRED"`, `"TRUSTED"`. Default value is `"TRUSTED"`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -676,7 +707,8 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). Defaults to minimum requirements per app type.
+    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). 
+Defaults to minimum requirements per app type. Valid values: `"authorization_code"`, `"implicit"`, `"password"`, `"refresh_token"`, `"client_credentials"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -710,6 +742,16 @@ no-op, use client_id for that behavior instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="implicitassignment_go">
+<a href="#implicitassignment_go" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enables Federation Broker Mode. When this mode is enabled, `users` and `groups` arguments are ignored.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="issuermode_go">
 <a href="#issuermode_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
 </span>
@@ -729,13 +771,33 @@ no-op, use client_id for that behavior instead.
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="loginmode_go">
+<a href="#loginmode_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any. Valid values: `"DISABLED"`, `"SPEC"`, `"OKTA"`. Default is `"DISABLED"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loginscopes_go">
+<a href="#loginscopes_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of scopes to use for the request. Valid values: `"openid"`, `"profile"`, `"email"`, `"address"`, `"phone"`. Required when `login_mode` is NOT `DISABLED`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="loginuri_go">
 <a href="#loginuri_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI that initiates login.
+    <dd>{{% md %}}URI that initiates login. Required when `login_mode` is NOT `DISABLED`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -755,7 +817,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
+    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. Your app will be recreated if this ever changes from true => false.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -815,7 +877,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
+    <dd>{{% md %}}The status of the application, by default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -871,7 +933,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of OAuth application.
+    <dd>{{% md %}}The type of OAuth application. Valid values: `"web"`, `"native"`, `"browser"`, `"service"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -931,7 +993,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
+    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: `"REQUIRED"`, `"TRUSTED"`. Default value is `"TRUSTED"`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -952,7 +1014,8 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). Defaults to minimum requirements per app type.
+    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). 
+Defaults to minimum requirements per app type. Valid values: `"authorization_code"`, `"implicit"`, `"password"`, `"refresh_token"`, `"client_credentials"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -986,6 +1049,16 @@ no-op, use client_id for that behavior instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="implicitassignment_nodejs">
+<a href="#implicitassignment_nodejs" style="color: inherit; text-decoration: inherit;">implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enables Federation Broker Mode. When this mode is enabled, `users` and `groups` arguments are ignored.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="issuermode_nodejs">
 <a href="#issuermode_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Mode</a>
 </span>
@@ -1005,13 +1078,33 @@ no-op, use client_id for that behavior instead.
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="loginmode_nodejs">
+<a href="#loginmode_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any. Valid values: `"DISABLED"`, `"SPEC"`, `"OKTA"`. Default is `"DISABLED"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loginscopes_nodejs">
+<a href="#loginscopes_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of scopes to use for the request. Valid values: `"openid"`, `"profile"`, `"email"`, `"address"`, `"phone"`. Required when `login_mode` is NOT `DISABLED`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="loginuri_nodejs">
 <a href="#loginuri_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI that initiates login.
+    <dd>{{% md %}}URI that initiates login. Required when `login_mode` is NOT `DISABLED`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1031,7 +1124,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
+    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. Your app will be recreated if this ever changes from true => false.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1091,7 +1184,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
+    <dd>{{% md %}}The status of the application, by default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1147,7 +1240,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of OAuth application.
+    <dd>{{% md %}}The type of OAuth application. Valid values: `"web"`, `"native"`, `"browser"`, `"service"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1207,7 +1300,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
+    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: `"REQUIRED"`, `"TRUSTED"`. Default value is `"TRUSTED"`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1228,7 +1321,8 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). Defaults to minimum requirements per app type.
+    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). 
+Defaults to minimum requirements per app type. Valid values: `"authorization_code"`, `"implicit"`, `"password"`, `"refresh_token"`, `"client_credentials"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1262,6 +1356,16 @@ no-op, use client_id for that behavior instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="implicit_assignment_python">
+<a href="#implicit_assignment_python" style="color: inherit; text-decoration: inherit;">implicit_<wbr>assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enables Federation Broker Mode. When this mode is enabled, `users` and `groups` arguments are ignored.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="issuer_mode_python">
 <a href="#issuer_mode_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>mode</a>
 </span>
@@ -1281,13 +1385,33 @@ no-op, use client_id for that behavior instead.
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="login_mode_python">
+<a href="#login_mode_python" style="color: inherit; text-decoration: inherit;">login_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any. Valid values: `"DISABLED"`, `"SPEC"`, `"OKTA"`. Default is `"DISABLED"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="login_scopes_python">
+<a href="#login_scopes_python" style="color: inherit; text-decoration: inherit;">login_<wbr>scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of scopes to use for the request. Valid values: `"openid"`, `"profile"`, `"email"`, `"address"`, `"phone"`. Required when `login_mode` is NOT `DISABLED`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="login_uri_python">
 <a href="#login_uri_python" style="color: inherit; text-decoration: inherit;">login_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URI that initiates login.
+    <dd>{{% md %}}URI that initiates login. Required when `login_mode` is NOT `DISABLED`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1307,7 +1431,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
+    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. Your app will be recreated if this ever changes from true => false.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1367,7 +1491,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
+    <dd>{{% md %}}The status of the application, by default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1449,7 +1573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sign on mode of application.
+    <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1494,7 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sign on mode of application.
+    <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1539,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sign on mode of application.
+    <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1584,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sign on mode of application.
+    <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1602,7 +1726,7 @@ Get an existing OAuth resource's state with the given name, ID, and optional ext
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_key_rotation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_basic_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consent_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issuer_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OAuthJwkArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">omit_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">post_logout_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">response_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tos_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[OAuthUserArgs]]</span> = None<span class="p">) -&gt;</span> OAuth</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_key_rotation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_basic_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consent_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">implicit_assignment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issuer_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OAuthJwkArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">login_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">omit_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">post_logout_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">response_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tos_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[OAuthUserArgs]]</span> = None<span class="p">) -&gt;</span> OAuth</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1783,7 +1907,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
+    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: `"REQUIRED"`, `"TRUSTED"`. Default value is `"TRUSTED"`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1804,7 +1928,8 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). Defaults to minimum requirements per app type.
+    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). 
+Defaults to minimum requirements per app type. Valid values: `"authorization_code"`, `"implicit"`, `"password"`, `"refresh_token"`, `"client_credentials"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1838,6 +1963,16 @@ no-op, use client_id for that behavior instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_implicitassignment_csharp">
+<a href="#state_implicitassignment_csharp" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enables Federation Broker Mode. When this mode is enabled, `users` and `groups` arguments are ignored.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_issuermode_csharp">
 <a href="#state_issuermode_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
 </span>
@@ -1867,13 +2002,33 @@ no-op, use client_id for that behavior instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_loginmode_csharp">
+<a href="#state_loginmode_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any. Valid values: `"DISABLED"`, `"SPEC"`, `"OKTA"`. Default is `"DISABLED"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loginscopes_csharp">
+<a href="#state_loginscopes_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of scopes to use for the request. Valid values: `"openid"`, `"profile"`, `"email"`, `"address"`, `"phone"`. Required when `login_mode` is NOT `DISABLED`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_loginuri_csharp">
 <a href="#state_loginuri_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI that initiates login.
+    <dd>{{% md %}}URI that initiates login. Required when `login_mode` is NOT `DISABLED`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1903,7 +2058,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
+    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. Your app will be recreated if this ever changes from true => false.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1963,7 +2118,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sign on mode of application.
+    <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1973,7 +2128,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
+    <dd>{{% md %}}The status of the application, by default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2003,7 +2158,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of OAuth application.
+    <dd>{{% md %}}The type of OAuth application. Valid values: `"web"`, `"native"`, `"browser"`, `"service"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2089,7 +2244,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
+    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: `"REQUIRED"`, `"TRUSTED"`. Default value is `"TRUSTED"`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2110,7 +2265,8 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). Defaults to minimum requirements per app type.
+    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). 
+Defaults to minimum requirements per app type. Valid values: `"authorization_code"`, `"implicit"`, `"password"`, `"refresh_token"`, `"client_credentials"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2144,6 +2300,16 @@ no-op, use client_id for that behavior instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_implicitassignment_go">
+<a href="#state_implicitassignment_go" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enables Federation Broker Mode. When this mode is enabled, `users` and `groups` arguments are ignored.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_issuermode_go">
 <a href="#state_issuermode_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
 </span>
@@ -2173,13 +2339,33 @@ no-op, use client_id for that behavior instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_loginmode_go">
+<a href="#state_loginmode_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any. Valid values: `"DISABLED"`, `"SPEC"`, `"OKTA"`. Default is `"DISABLED"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loginscopes_go">
+<a href="#state_loginscopes_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of scopes to use for the request. Valid values: `"openid"`, `"profile"`, `"email"`, `"address"`, `"phone"`. Required when `login_mode` is NOT `DISABLED`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_loginuri_go">
 <a href="#state_loginuri_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI that initiates login.
+    <dd>{{% md %}}URI that initiates login. Required when `login_mode` is NOT `DISABLED`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2209,7 +2395,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
+    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. Your app will be recreated if this ever changes from true => false.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2269,7 +2455,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sign on mode of application.
+    <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2279,7 +2465,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
+    <dd>{{% md %}}The status of the application, by default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2309,7 +2495,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of OAuth application.
+    <dd>{{% md %}}The type of OAuth application. Valid values: `"web"`, `"native"`, `"browser"`, `"service"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2395,7 +2581,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
+    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: `"REQUIRED"`, `"TRUSTED"`. Default value is `"TRUSTED"`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2416,7 +2602,8 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). Defaults to minimum requirements per app type.
+    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). 
+Defaults to minimum requirements per app type. Valid values: `"authorization_code"`, `"implicit"`, `"password"`, `"refresh_token"`, `"client_credentials"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2450,6 +2637,16 @@ no-op, use client_id for that behavior instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_implicitassignment_nodejs">
+<a href="#state_implicitassignment_nodejs" style="color: inherit; text-decoration: inherit;">implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enables Federation Broker Mode. When this mode is enabled, `users` and `groups` arguments are ignored.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_issuermode_nodejs">
 <a href="#state_issuermode_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Mode</a>
 </span>
@@ -2479,13 +2676,33 @@ no-op, use client_id for that behavior instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_loginmode_nodejs">
+<a href="#state_loginmode_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any. Valid values: `"DISABLED"`, `"SPEC"`, `"OKTA"`. Default is `"DISABLED"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loginscopes_nodejs">
+<a href="#state_loginscopes_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of scopes to use for the request. Valid values: `"openid"`, `"profile"`, `"email"`, `"address"`, `"phone"`. Required when `login_mode` is NOT `DISABLED`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_loginuri_nodejs">
 <a href="#state_loginuri_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI that initiates login.
+    <dd>{{% md %}}URI that initiates login. Required when `login_mode` is NOT `DISABLED`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2515,7 +2732,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
+    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. Your app will be recreated if this ever changes from true => false.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2575,7 +2792,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sign on mode of application.
+    <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2585,7 +2802,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
+    <dd>{{% md %}}The status of the application, by default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2615,7 +2832,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of OAuth application.
+    <dd>{{% md %}}The type of OAuth application. Valid values: `"web"`, `"native"`, `"browser"`, `"service"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2701,7 +2918,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
+    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: `"REQUIRED"`, `"TRUSTED"`. Default value is `"TRUSTED"`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2722,7 +2939,8 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). Defaults to minimum requirements per app type.
+    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). 
+Defaults to minimum requirements per app type. Valid values: `"authorization_code"`, `"implicit"`, `"password"`, `"refresh_token"`, `"client_credentials"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2756,6 +2974,16 @@ no-op, use client_id for that behavior instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_implicit_assignment_python">
+<a href="#state_implicit_assignment_python" style="color: inherit; text-decoration: inherit;">implicit_<wbr>assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enables Federation Broker Mode. When this mode is enabled, `users` and `groups` arguments are ignored.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_issuer_mode_python">
 <a href="#state_issuer_mode_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>mode</a>
 </span>
@@ -2785,13 +3013,33 @@ no-op, use client_id for that behavior instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_login_mode_python">
+<a href="#state_login_mode_python" style="color: inherit; text-decoration: inherit;">login_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any. Valid values: `"DISABLED"`, `"SPEC"`, `"OKTA"`. Default is `"DISABLED"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_login_scopes_python">
+<a href="#state_login_scopes_python" style="color: inherit; text-decoration: inherit;">login_<wbr>scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of scopes to use for the request. Valid values: `"openid"`, `"profile"`, `"email"`, `"address"`, `"phone"`. Required when `login_mode` is NOT `DISABLED`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_login_uri_python">
 <a href="#state_login_uri_python" style="color: inherit; text-decoration: inherit;">login_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URI that initiates login.
+    <dd>{{% md %}}URI that initiates login. Required when `login_mode` is NOT `DISABLED`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2821,7 +3069,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
+    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. Your app will be recreated if this ever changes from true => false.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2881,7 +3129,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sign on mode of application.
+    <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2891,7 +3139,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
+    <dd>{{% md %}}The status of the application, by default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2921,7 +3169,7 @@ no-op, use client_id for that behavior instead.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of OAuth application.
+    <dd>{{% md %}}The type of OAuth application. Valid values: `"web"`, `"native"`, `"browser"`, `"service"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

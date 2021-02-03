@@ -3,7 +3,7 @@ title: "Module idp"
 title_tag: "Module idp | Package @pulumi/okta | Node.js SDK"
 linktitle: "idp"
 meta_desc: "Explore members of the idp module in the @pulumi/okta package."
-git_sha: "d8223ec34121f866677918fc6244e020f13ce023"
+git_sha: "bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c"
 block_external_search_index: true
 ---
 
@@ -26,6 +26,7 @@ block_external_search_index: true
 <h3>Functions</h3>
 <ul class="api">
     <li><a href="#getMetadataSaml"><span class="symbol function"></span>getMetadataSaml</a></li>
+    <li><a href="#getOidc"><span class="symbol function"></span>getOidc</a></li>
     <li><a href="#getSaml"><span class="symbol function"></span>getSaml</a></li>
 </ul>
 
@@ -33,6 +34,8 @@ block_external_search_index: true
 <ul class="api">
     <li><a href="#GetMetadataSamlArgs"><span class="symbol api"></span>GetMetadataSamlArgs</a></li>
     <li><a href="#GetMetadataSamlResult"><span class="symbol api"></span>GetMetadataSamlResult</a></li>
+    <li><a href="#GetOidcArgs"><span class="symbol api"></span>GetOidcArgs</a></li>
+    <li><a href="#GetOidcResult"><span class="symbol api"></span>GetOidcResult</a></li>
     <li><a href="#GetSamlArgs"><span class="symbol api"></span>GetSamlArgs</a></li>
     <li><a href="#GetSamlResult"><span class="symbol api"></span>GetSamlResult</a></li>
     <li><a href="#OidcArgs"><span class="symbol api"></span>OidcArgs</a></li>
@@ -48,7 +51,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Oidc" data-link-title="Oidc">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L43">
         Resource <strong>Oidc</strong>
     </a>
 </h3>
@@ -66,8 +69,6 @@ import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
 const example = new okta.idp.Oidc("example", {
-    acsBinding: "HTTP-POST",
-    acsType: "INSTANCE",
     authorizationBinding: "HTTP-REDIRECT",
     authorizationUrl: "https://idp.example.com/authorize",
     clientId: "efg456",
@@ -93,7 +94,7 @@ An OIDC IdP can be imported via the Okta ID.
 ```
 
 <h4 class="pdoc-member-header" id="Oidc-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L217"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L207"> <b>constructor</b></a>
 </h4>
 
 
@@ -107,7 +108,7 @@ Create a Oidc resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Oidc-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -118,14 +119,14 @@ Get an existing Oidc resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Oidc-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L45">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Oidc-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -136,7 +137,7 @@ Returns true if the given object is an instance of Oidc.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Oidc-accountLinkAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L76">property <b>accountLinkAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L74">property <b>accountLinkAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountLinkAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -144,31 +145,15 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the account linking action for an IdP user.
 
 <h4 class="pdoc-member-header" id="Oidc-accountLinkGroupIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L80">property <b>accountLinkGroupIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L78">property <b>accountLinkGroupIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountLinkGroupIncludes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Group memberships to determine link candidates.
 
-<h4 class="pdoc-member-header" id="Oidc-acsBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L84">property <b>acsBinding</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'>public </span>acsBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-The method of making an ACS request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-
-<h4 class="pdoc-member-header" id="Oidc-acsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L88">property <b>acsType</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'>public </span>acsType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
-
-The type of ACS. Default is `"INSTANCE"`.
-
 <h4 class="pdoc-member-header" id="Oidc-authorizationBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L92">property <b>authorizationBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L82">property <b>authorizationBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizationBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -176,7 +161,7 @@ The type of ACS. Default is `"INSTANCE"`.
 The method of making an authorization request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 
 <h4 class="pdoc-member-header" id="Oidc-authorizationUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L96">property <b>authorizationUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L86">property <b>authorizationUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizationUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -184,7 +169,7 @@ The method of making an authorization request. It can be set to `"HTTP-POST"` or
 IdP Authorization Server (AS) endpoint to request consent from the user and obtain an authorization code grant.
 
 <h4 class="pdoc-member-header" id="Oidc-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L100">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L90">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -192,7 +177,7 @@ IdP Authorization Server (AS) endpoint to request consent from the user and obta
 Unique identifier issued by AS for the Okta IdP instance.
 
 <h4 class="pdoc-member-header" id="Oidc-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L104">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L94">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -200,7 +185,7 @@ Unique identifier issued by AS for the Okta IdP instance.
 Client secret issued by AS for the Okta IdP instance.
 
 <h4 class="pdoc-member-header" id="Oidc-deprovisionedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L108">property <b>deprovisionedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L98">property <b>deprovisionedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deprovisionedAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -208,7 +193,7 @@ Client secret issued by AS for the Okta IdP instance.
 Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
 
 <h4 class="pdoc-member-header" id="Oidc-groupsAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L112">property <b>groupsAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L102">property <b>groupsAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -216,7 +201,7 @@ Action for a previously deprovisioned IdP user during authentication. Can be `"N
 Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
 
 <h4 class="pdoc-member-header" id="Oidc-groupsAssignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L116">property <b>groupsAssignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L106">property <b>groupsAssignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsAssignments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -224,7 +209,7 @@ Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC
 List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="Oidc-groupsAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L120">property <b>groupsAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L110">property <b>groupsAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -232,7 +217,7 @@ List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `group
 IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
 
 <h4 class="pdoc-member-header" id="Oidc-groupsFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L124">property <b>groupsFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L114">property <b>groupsFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -240,7 +225,7 @@ IdP user profile attribute name (case-insensitive) for an array value that conta
 Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="Oidc-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -249,7 +234,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Oidc-issuerMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L128">property <b>issuerMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L118">property <b>issuerMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>issuerMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -257,7 +242,7 @@ deployments and may be missing (undefined) during planning phases.
 Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
 
 <h4 class="pdoc-member-header" id="Oidc-issuerUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L132">property <b>issuerUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L122">property <b>issuerUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>issuerUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -265,7 +250,7 @@ Indicates whether Okta uses the original Okta org domain URL, or a custom domain
 URI that identifies the issuer.
 
 <h4 class="pdoc-member-header" id="Oidc-jwksBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L136">property <b>jwksBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L126">property <b>jwksBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>jwksBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -273,15 +258,15 @@ URI that identifies the issuer.
 The method of making a request for the OIDC JWKS. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 
 <h4 class="pdoc-member-header" id="Oidc-jwksUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L140">property <b>jwksUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L130">property <b>jwksUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>jwksUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Endpoint where the signer of the keys publishes its keys in a JWK Set.
+Endpoint where the keys signer publishes its keys in a JWK Set.
 
 <h4 class="pdoc-member-header" id="Oidc-maxClockSkew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L144">property <b>maxClockSkew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L134">property <b>maxClockSkew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxClockSkew: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -289,7 +274,7 @@ Endpoint where the signer of the keys publishes its keys in a JWK Set.
 Maximum allowable clock-skew when processing messages from the IdP.
 
 <h4 class="pdoc-member-header" id="Oidc-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L148">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L138">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -297,7 +282,7 @@ Maximum allowable clock-skew when processing messages from the IdP.
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="Oidc-profileMaster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L152">property <b>profileMaster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L142">property <b>profileMaster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>profileMaster: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -305,7 +290,7 @@ The Application's display name.
 Determines if the IdP should act as a source of truth for user profile attributes.
 
 <h4 class="pdoc-member-header" id="Oidc-protocolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L156">property <b>protocolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L146">property <b>protocolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocolType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -313,7 +298,7 @@ Determines if the IdP should act as a source of truth for user profile attribute
 The type of protocol to use. It can be `"OIDC"` or `"OAUTH2"`.
 
 <h4 class="pdoc-member-header" id="Oidc-provisioningAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L160">property <b>provisioningAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L150">property <b>provisioningAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>provisioningAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -321,7 +306,7 @@ The type of protocol to use. It can be `"OIDC"` or `"OAUTH2"`.
 Provisioning action for an IdP user during authentication.
 
 <h4 class="pdoc-member-header" id="Oidc-requestSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L164">property <b>requestSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L154">property <b>requestSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestSignatureAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -329,7 +314,7 @@ Provisioning action for an IdP user during authentication.
 algorithm to use to sign requests
 
 <h4 class="pdoc-member-header" id="Oidc-requestSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L168">property <b>requestSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L158">property <b>requestSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestSignatureScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -337,7 +322,7 @@ algorithm to use to sign requests
 algorithm to use to sign response
 
 <h4 class="pdoc-member-header" id="Oidc-responseSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L172">property <b>responseSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L162">property <b>responseSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>responseSignatureAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -345,7 +330,7 @@ algorithm to use to sign response
 algorithm to use to sign requests
 
 <h4 class="pdoc-member-header" id="Oidc-responseSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L176">property <b>responseSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L166">property <b>responseSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>responseSignatureScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -353,7 +338,7 @@ algorithm to use to sign requests
 algorithm to use to sign response
 
 <h4 class="pdoc-member-header" id="Oidc-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L180">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L170">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -361,7 +346,7 @@ algorithm to use to sign response
 The scopes of the IdP.
 
 <h4 class="pdoc-member-header" id="Oidc-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L184">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L174">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -369,7 +354,7 @@ The scopes of the IdP.
 Status of the IdP.
 
 <h4 class="pdoc-member-header" id="Oidc-subjectMatchAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L188">property <b>subjectMatchAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L178">property <b>subjectMatchAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subjectMatchAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -377,15 +362,15 @@ Status of the IdP.
 Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="Oidc-subjectMatchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L192">property <b>subjectMatchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L182">property <b>subjectMatchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subjectMatchType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
+Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="Oidc-suspendedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L196">property <b>suspendedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L186">property <b>suspendedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>suspendedAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -393,7 +378,7 @@ Determines the Okta user profile attribute match conditions for account linking 
 Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
 
 <h4 class="pdoc-member-header" id="Oidc-tokenBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L200">property <b>tokenBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L190">property <b>tokenBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -401,7 +386,7 @@ Action for a previously suspended IdP user during authentication. Can be set to 
 The method of making a token request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 
 <h4 class="pdoc-member-header" id="Oidc-tokenUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L204">property <b>tokenUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L194">property <b>tokenUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -409,7 +394,7 @@ The method of making a token request. It can be set to `"HTTP-POST"` or `"HTTP-R
 IdP Authorization Server (AS) endpoint to exchange the authorization code grant for an access token.
 
 <h4 class="pdoc-member-header" id="Oidc-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L208">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L198">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -417,7 +402,7 @@ IdP Authorization Server (AS) endpoint to exchange the authorization code grant 
 Type of OIDC IdP.
 
 <h4 class="pdoc-member-header" id="Oidc-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L45">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -426,12 +411,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Oidc-userInfoBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L209">property <b>userInfoBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L199">property <b>userInfoBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userInfoBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Oidc-userInfoUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L213">property <b>userInfoUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L203">property <b>userInfoUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userInfoUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -439,7 +424,7 @@ deployments.
 Protected resource endpoint that returns claims about the authenticated user.
 
 <h4 class="pdoc-member-header" id="Oidc-usernameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L217">property <b>usernameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L207">property <b>usernameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usernameTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -447,7 +432,7 @@ Protected resource endpoint that returns claims about the authenticated user.
 Okta EL Expression to generate or transform a unique username for the IdP user.
 
 <h3 class="pdoc-module-header" id="Saml" data-link-title="Saml">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L39">
         Resource <strong>Saml</strong>
     </a>
 </h3>
@@ -465,7 +450,6 @@ import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
 const example = new okta.idp.Saml("example", {
-    acsBinding: "HTTP-POST",
     acsType: "INSTANCE",
     issuer: "https://idp.example.com",
     kid: okta_idp_saml_key_test.id,
@@ -487,7 +471,7 @@ An SAML IdP can be imported via the Okta ID.
 ```
 
 <h4 class="pdoc-member-header" id="Saml-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L199"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L198"> <b>constructor</b></a>
 </h4>
 
 
@@ -501,7 +485,7 @@ Create a Saml resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Saml-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -512,14 +496,14 @@ Get an existing Saml resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Saml-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Saml-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -530,7 +514,7 @@ Returns true if the given object is an instance of Saml.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Saml-accountLinkAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L71">property <b>accountLinkAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L70">property <b>accountLinkAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountLinkAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -538,7 +522,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the account linking action for an IdP user.
 
 <h4 class="pdoc-member-header" id="Saml-accountLinkGroupIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L75">property <b>accountLinkGroupIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L74">property <b>accountLinkGroupIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountLinkGroupIncludes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -546,15 +530,16 @@ Specifies the account linking action for an IdP user.
 Group memberships to determine link candidates.
 
 <h4 class="pdoc-member-header" id="Saml-acsBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L79">property <b>acsBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L78">property <b>acsBinding</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>acsBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-The method of making an ACS request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;
+</div>
+<pre class="highlight"><code><span class='kd'>public </span>acsBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Saml-acsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L83">property <b>acsType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L82">property <b>acsType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>acsType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -562,7 +547,7 @@ The method of making an ACS request. It can be set to `"HTTP-POST"` or `"HTTP-RE
 The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
 
 <h4 class="pdoc-member-header" id="Saml-audience">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L87">property <b>audience</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L86">property <b>audience</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>audience: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -570,7 +555,7 @@ The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
 The audience restriction for the IdP.
 
 <h4 class="pdoc-member-header" id="Saml-deprovisionedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L91">property <b>deprovisionedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L90">property <b>deprovisionedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deprovisionedAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -578,7 +563,7 @@ The audience restriction for the IdP.
 Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
 
 <h4 class="pdoc-member-header" id="Saml-groupsAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L95">property <b>groupsAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L94">property <b>groupsAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -586,7 +571,7 @@ Action for a previously deprovisioned IdP user during authentication. Can be `"N
 Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
 
 <h4 class="pdoc-member-header" id="Saml-groupsAssignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L99">property <b>groupsAssignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L98">property <b>groupsAssignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsAssignments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -594,7 +579,7 @@ Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC
 List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="Saml-groupsAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L103">property <b>groupsAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L102">property <b>groupsAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -602,7 +587,7 @@ List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `group
 IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
 
 <h4 class="pdoc-member-header" id="Saml-groupsFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L107">property <b>groupsFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L106">property <b>groupsFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -610,7 +595,7 @@ IdP user profile attribute name (case-insensitive) for an array value that conta
 Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="Saml-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -619,7 +604,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Saml-issuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L111">property <b>issuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L110">property <b>issuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -627,7 +612,7 @@ deployments and may be missing (undefined) during planning phases.
 URI that identifies the issuer.
 
 <h4 class="pdoc-member-header" id="Saml-issuerMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L115">property <b>issuerMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L114">property <b>issuerMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>issuerMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -635,7 +620,7 @@ URI that identifies the issuer.
 Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
 
 <h4 class="pdoc-member-header" id="Saml-kid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L119">property <b>kid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L118">property <b>kid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -643,7 +628,7 @@ Indicates whether Okta uses the original Okta org domain URL, or a custom domain
 The ID of the signing key.
 
 <h4 class="pdoc-member-header" id="Saml-maxClockSkew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L123">property <b>maxClockSkew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L122">property <b>maxClockSkew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxClockSkew: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -651,7 +636,7 @@ The ID of the signing key.
 Maximum allowable clock-skew when processing messages from the IdP.
 
 <h4 class="pdoc-member-header" id="Saml-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L127">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L126">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -659,7 +644,7 @@ Maximum allowable clock-skew when processing messages from the IdP.
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="Saml-nameFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L131">property <b>nameFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L130">property <b>nameFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nameFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -667,7 +652,7 @@ The Application's display name.
 The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 
 <h4 class="pdoc-member-header" id="Saml-profileMaster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L135">property <b>profileMaster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L134">property <b>profileMaster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>profileMaster: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -675,7 +660,7 @@ The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:name
 Determines if the IdP should act as a source of truth for user profile attributes.
 
 <h4 class="pdoc-member-header" id="Saml-provisioningAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L139">property <b>provisioningAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L138">property <b>provisioningAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>provisioningAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -683,7 +668,7 @@ Determines if the IdP should act as a source of truth for user profile attribute
 Provisioning action for an IdP user during authentication.
 
 <h4 class="pdoc-member-header" id="Saml-requestSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L143">property <b>requestSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L142">property <b>requestSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestSignatureAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -691,15 +676,15 @@ Provisioning action for an IdP user during authentication.
 The XML digital signature algorithm used when signing an AuthnRequest message.
 
 <h4 class="pdoc-member-header" id="Saml-requestSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L147">property <b>requestSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L146">property <b>requestSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestSignatureScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
+Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 
 <h4 class="pdoc-member-header" id="Saml-responseSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L151">property <b>responseSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L150">property <b>responseSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>responseSignatureAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -707,7 +692,7 @@ Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. 
 The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
 
 <h4 class="pdoc-member-header" id="Saml-responseSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L155">property <b>responseSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L154">property <b>responseSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>responseSignatureScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -715,7 +700,7 @@ The minimum XML digital signature algorithm allowed when verifying a SAMLRespons
 Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
 
 <h4 class="pdoc-member-header" id="Saml-ssoBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L159">property <b>ssoBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L158">property <b>ssoBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ssoBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -723,7 +708,7 @@ Specifies whether to verify a SAMLResponse message or Assertion element XML digi
 The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 
 <h4 class="pdoc-member-header" id="Saml-ssoDestination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L163">property <b>ssoDestination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L162">property <b>ssoDestination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ssoDestination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -731,7 +716,7 @@ The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-RE
 URI reference indicating the address to which the AuthnRequest message is sent.
 
 <h4 class="pdoc-member-header" id="Saml-ssoUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L167">property <b>ssoUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L166">property <b>ssoUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ssoUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -739,7 +724,7 @@ URI reference indicating the address to which the AuthnRequest message is sent.
 URL of binding-specific endpoint to send an AuthnRequest message to IdP.
 
 <h4 class="pdoc-member-header" id="Saml-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L171">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L170">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -747,7 +732,7 @@ URL of binding-specific endpoint to send an AuthnRequest message to IdP.
 Status of the IdP.
 
 <h4 class="pdoc-member-header" id="Saml-subjectFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L175">property <b>subjectFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L174">property <b>subjectFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subjectFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -755,15 +740,15 @@ Status of the IdP.
 Optional regular expression pattern used to filter untrusted IdP usernames.
 
 <h4 class="pdoc-member-header" id="Saml-subjectFormats">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L179">property <b>subjectFormats</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L178">property <b>subjectFormats</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subjectFormats: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-The name formate. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
+The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 
 <h4 class="pdoc-member-header" id="Saml-subjectMatchAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L183">property <b>subjectMatchAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L182">property <b>subjectMatchAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subjectMatchAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -771,15 +756,15 @@ The name formate. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspeci
 Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="Saml-subjectMatchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L187">property <b>subjectMatchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L186">property <b>subjectMatchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subjectMatchType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
+Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="Saml-suspendedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L191">property <b>suspendedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L190">property <b>suspendedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>suspendedAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -787,7 +772,7 @@ Determines the Okta user profile attribute match conditions for account linking 
 Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
 
 <h4 class="pdoc-member-header" id="Saml-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L195">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L194">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -795,7 +780,7 @@ Action for a previously suspended IdP user during authentication. Can be set to 
 Type of the IdP.
 
 <h4 class="pdoc-member-header" id="Saml-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -804,7 +789,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Saml-usernameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L199">property <b>usernameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L198">property <b>usernameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usernameTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -812,7 +797,7 @@ deployments.
 Okta EL Expression to generate or transform a unique username for the IdP user.
 
 <h3 class="pdoc-module-header" id="SamlKey" data-link-title="SamlKey">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L31">
         Resource <strong>SamlKey</strong>
     </a>
 </h3>
@@ -843,7 +828,7 @@ A SAML IdP Signing Key can be imported via the key id.
 ```
 
 <h4 class="pdoc-member-header" id="SamlKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L86"> <b>constructor</b></a>
 </h4>
 
 
@@ -857,7 +842,7 @@ Create a SamlKey resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SamlKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -868,14 +853,14 @@ Get an existing SamlKey resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SamlKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SamlKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -886,7 +871,7 @@ Returns true if the given object is an instance of SamlKey.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SamlKey-created">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L62">property <b>created</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L62">property <b>created</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>created: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -894,7 +879,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Date created.
 
 <h4 class="pdoc-member-header" id="SamlKey-expiresAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L66">property <b>expiresAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L66">property <b>expiresAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expiresAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -902,7 +887,7 @@ Date created.
 Date the cert expires.
 
 <h4 class="pdoc-member-header" id="SamlKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -911,7 +896,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SamlKey-kid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L70">property <b>kid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L70">property <b>kid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -919,7 +904,7 @@ deployments and may be missing (undefined) during planning phases.
 Key ID.
 
 <h4 class="pdoc-member-header" id="SamlKey-kty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L74">property <b>kty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L74">property <b>kty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kty: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -927,7 +912,7 @@ Key ID.
 Identifies the cryptographic algorithm family used with the key.
 
 <h4 class="pdoc-member-header" id="SamlKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -936,7 +921,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SamlKey-use">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L78">property <b>use</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L78">property <b>use</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>use: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -944,7 +929,7 @@ deployments.
 Intended use of the public key.
 
 <h4 class="pdoc-member-header" id="SamlKey-x5cs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L82">property <b>x5cs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L82">property <b>x5cs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>x5cs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -952,7 +937,7 @@ Intended use of the public key.
 base64-encoded X.509 certificate chain with DER encoding.
 
 <h4 class="pdoc-member-header" id="SamlKey-x5tS256">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L86">property <b>x5tS256</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L86">property <b>x5tS256</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>x5tS256: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -960,16 +945,16 @@ base64-encoded X.509 certificate chain with DER encoding.
 base64url-encoded SHA-256 thumbprint of the DER encoding of an X.509 certificate.
 
 <h3 class="pdoc-module-header" id="Social" data-link-title="Social">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L41">
         Resource <strong>Social</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Social</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 
-Creates an Social Identity Provider.
+Creates a Social Identity Provider.
 
-This resource allows you to create and configure an Social Identity Provider.
+This resource allows you to create and configure a Social Identity Provider.
 
 #### Example Usage
 
@@ -1001,7 +986,7 @@ A Social IdP can be imported via the Okta ID.
 ```
 
 <h4 class="pdoc-member-header" id="Social-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L196"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L196"> <b>constructor</b></a>
 </h4>
 
 
@@ -1015,7 +1000,7 @@ Create a Social resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Social-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -1026,14 +1011,14 @@ Get an existing Social resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Social-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Social-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1044,7 +1029,7 @@ Returns true if the given object is an instance of Social.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Social-accountLinkAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L72">property <b>accountLinkAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L72">property <b>accountLinkAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountLinkAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1052,7 +1037,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the account linking action for an IdP user.
 
 <h4 class="pdoc-member-header" id="Social-accountLinkGroupIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L76">property <b>accountLinkGroupIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L76">property <b>accountLinkGroupIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountLinkGroupIncludes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1060,7 +1045,7 @@ Specifies the account linking action for an IdP user.
 Group memberships to determine link candidates.
 
 <h4 class="pdoc-member-header" id="Social-authorizationBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L80">property <b>authorizationBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L80">property <b>authorizationBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizationBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1068,7 +1053,7 @@ Group memberships to determine link candidates.
 The method of making an authorization request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 
 <h4 class="pdoc-member-header" id="Social-authorizationUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L84">property <b>authorizationUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L84">property <b>authorizationUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizationUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1076,7 +1061,7 @@ The method of making an authorization request. It can be set to `"HTTP-POST"` or
 IdP Authorization Server (AS) endpoint to request consent from the user and obtain an authorization code grant.
 
 <h4 class="pdoc-member-header" id="Social-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L88">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L88">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1084,7 +1069,7 @@ IdP Authorization Server (AS) endpoint to request consent from the user and obta
 Unique identifier issued by AS for the Okta IdP instance.
 
 <h4 class="pdoc-member-header" id="Social-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L92">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L92">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1092,7 +1077,7 @@ Unique identifier issued by AS for the Okta IdP instance.
 Client secret issued by AS for the Okta IdP instance.
 
 <h4 class="pdoc-member-header" id="Social-deprovisionedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L96">property <b>deprovisionedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L96">property <b>deprovisionedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deprovisionedAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1100,7 +1085,7 @@ Client secret issued by AS for the Okta IdP instance.
 Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
 
 <h4 class="pdoc-member-header" id="Social-groupsAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L100">property <b>groupsAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L100">property <b>groupsAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1108,7 +1093,7 @@ Action for a previously deprovisioned IdP user during authentication. Can be `"N
 Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
 
 <h4 class="pdoc-member-header" id="Social-groupsAssignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L104">property <b>groupsAssignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L104">property <b>groupsAssignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsAssignments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1116,7 +1101,7 @@ Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC
 List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="Social-groupsAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L108">property <b>groupsAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L108">property <b>groupsAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1124,7 +1109,7 @@ List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `group
 IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
 
 <h4 class="pdoc-member-header" id="Social-groupsFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L112">property <b>groupsFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L112">property <b>groupsFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1132,7 +1117,7 @@ IdP user profile attribute name (case-insensitive) for an array value that conta
 Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="Social-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1141,7 +1126,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Social-issuerMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L116">property <b>issuerMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L116">property <b>issuerMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>issuerMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1149,7 +1134,7 @@ deployments and may be missing (undefined) during planning phases.
 Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
 
 <h4 class="pdoc-member-header" id="Social-matchAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L120">property <b>matchAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L120">property <b>matchAttribute</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1158,7 +1143,7 @@ This property was incorrectly added to this resource, you should use &#34;subjec
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>matchAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Social-matchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L124">property <b>matchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L124">property <b>matchType</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1167,7 +1152,7 @@ This property was incorrectly added to this resource, you should use &#34;subjec
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>matchType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Social-maxClockSkew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L128">property <b>maxClockSkew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L128">property <b>maxClockSkew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxClockSkew: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1175,7 +1160,7 @@ This property was incorrectly added to this resource, you should use &#34;subjec
 Maximum allowable clock-skew when processing messages from the IdP.
 
 <h4 class="pdoc-member-header" id="Social-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L132">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L132">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1183,7 +1168,7 @@ Maximum allowable clock-skew when processing messages from the IdP.
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="Social-profileMaster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L136">property <b>profileMaster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L136">property <b>profileMaster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>profileMaster: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1191,7 +1176,7 @@ The Application's display name.
 Determines if the IdP should act as a source of truth for user profile attributes.
 
 <h4 class="pdoc-member-header" id="Social-protocolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L140">property <b>protocolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L140">property <b>protocolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocolType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1199,7 +1184,7 @@ Determines if the IdP should act as a source of truth for user profile attribute
 The type of protocol to use. It can be `"OIDC"` or `"OAUTH2"`.
 
 <h4 class="pdoc-member-header" id="Social-provisioningAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L144">property <b>provisioningAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L144">property <b>provisioningAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>provisioningAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1207,7 +1192,7 @@ The type of protocol to use. It can be `"OIDC"` or `"OAUTH2"`.
 Provisioning action for an IdP user during authentication.
 
 <h4 class="pdoc-member-header" id="Social-requestSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L148">property <b>requestSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L148">property <b>requestSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestSignatureAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1215,15 +1200,15 @@ Provisioning action for an IdP user during authentication.
 The XML digital signature algorithm used when signing an AuthnRequest message.
 
 <h4 class="pdoc-member-header" id="Social-requestSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L152">property <b>requestSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L152">property <b>requestSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestSignatureScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
+Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 
 <h4 class="pdoc-member-header" id="Social-responseSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L156">property <b>responseSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L156">property <b>responseSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>responseSignatureAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1231,7 +1216,7 @@ Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. 
 The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
 
 <h4 class="pdoc-member-header" id="Social-responseSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L160">property <b>responseSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L160">property <b>responseSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>responseSignatureScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1239,7 +1224,7 @@ The minimum XML digital signature algorithm allowed when verifying a SAMLRespons
 Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
 
 <h4 class="pdoc-member-header" id="Social-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L164">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L164">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1247,7 +1232,7 @@ Specifies whether to verify a SAMLResponse message or Assertion element XML digi
 The scopes of the IdP.
 
 <h4 class="pdoc-member-header" id="Social-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L168">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L168">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1255,7 +1240,7 @@ The scopes of the IdP.
 Status of the IdP.
 
 <h4 class="pdoc-member-header" id="Social-subjectMatchAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L172">property <b>subjectMatchAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L172">property <b>subjectMatchAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subjectMatchAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1263,15 +1248,15 @@ Status of the IdP.
 Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="Social-subjectMatchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L176">property <b>subjectMatchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L176">property <b>subjectMatchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subjectMatchType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
+Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="Social-suspendedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L180">property <b>suspendedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L180">property <b>suspendedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>suspendedAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1279,7 +1264,7 @@ Determines the Okta user profile attribute match conditions for account linking 
 Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
 
 <h4 class="pdoc-member-header" id="Social-tokenBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L184">property <b>tokenBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L184">property <b>tokenBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1287,7 +1272,7 @@ Action for a previously suspended IdP user during authentication. Can be set to 
 The method of making a token request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 
 <h4 class="pdoc-member-header" id="Social-tokenUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L188">property <b>tokenUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L188">property <b>tokenUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1295,7 +1280,7 @@ The method of making a token request. It can be set to `"HTTP-POST"` or `"HTTP-R
 IdP Authorization Server (AS) endpoint to exchange the authorization code grant for an access token.
 
 <h4 class="pdoc-member-header" id="Social-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L192">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L192">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1303,7 +1288,7 @@ IdP Authorization Server (AS) endpoint to exchange the authorization code grant 
 The type of Social IdP. It can be `"FACEBOOK"`, `"LINKEDIN"`, `"MICROSOFT"`, or `"GOOGLE"`.
 
 <h4 class="pdoc-member-header" id="Social-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1312,7 +1297,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Social-usernameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L196">property <b>usernameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L196">property <b>usernameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usernameTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1322,7 +1307,7 @@ Okta EL Expression to generate or transform a unique username for the IdP user.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getMetadataSaml" data-link-title="getMetadataSaml">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getMetadataSaml.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getMetadataSaml.ts#L22">
         Function <strong>getMetadataSaml</strong>
     </a>
 </h3>
@@ -1344,8 +1329,31 @@ const example = pulumi.output(okta.idp.getMetadataSaml({
 }, { async: true }));
 ```
 
+<h3 class="pdoc-module-header" id="getOidc" data-link-title="getOidc">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L22">
+        Function <strong>getOidc</strong>
+    </a>
+</h3>
+
+
+<pre class="highlight"><code><span class='kd'></span>getOidc(args?: <a href='#GetOidcArgs'>GetOidcArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetOidcResult'>GetOidcResult</a>&gt;</code></pre>
+
+
+Use this data source to retrieve a OIDC IdP from Okta.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = pulumi.output(okta.idp.getOidc({
+    name: "Example Provider",
+}, { async: true }));
+```
+
 <h3 class="pdoc-module-header" id="getSaml" data-link-title="getSaml">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L22">
         Function <strong>getSaml</strong>
     </a>
 </h3>
@@ -1363,14 +1371,14 @@ import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
 const example = pulumi.output(okta.idp.getSaml({
-    label: "Example App",
+    name: "Example App",
 }, { async: true }));
 ```
 
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetMetadataSamlArgs" data-link-title="GetMetadataSamlArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getMetadataSaml.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getMetadataSaml.ts#L39">
         interface <strong>GetMetadataSamlArgs</strong>
     </a>
 </h3>
@@ -1380,7 +1388,7 @@ const example = pulumi.output(okta.idp.getSaml({
 A collection of arguments for invoking getMetadataSaml.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlArgs-idpId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getMetadataSaml.ts#L43">property <b>idpId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getMetadataSaml.ts#L43">property <b>idpId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1388,7 +1396,7 @@ A collection of arguments for invoking getMetadataSaml.
 The id of the IdP to retrieve metadata for.
 
 <h3 class="pdoc-module-header" id="GetMetadataSamlResult" data-link-title="GetMetadataSamlResult">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getMetadataSaml.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getMetadataSaml.ts#L49">
         interface <strong>GetMetadataSamlResult</strong>
     </a>
 </h3>
@@ -1398,7 +1406,7 @@ The id of the IdP to retrieve metadata for.
 A collection of values returned by getMetadataSaml.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-assertionsSigned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getMetadataSaml.ts#L53">property <b>assertionsSigned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getMetadataSaml.ts#L53">property <b>assertionsSigned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assertionsSigned: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1406,7 +1414,7 @@ A collection of values returned by getMetadataSaml.
 whether assertions are signed.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-authnRequestSigned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getMetadataSaml.ts#L57">property <b>authnRequestSigned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getMetadataSaml.ts#L57">property <b>authnRequestSigned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authnRequestSigned: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1414,7 +1422,7 @@ whether assertions are signed.
 whether authn requests are signed.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-encryptionCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getMetadataSaml.ts#L61">property <b>encryptionCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getMetadataSaml.ts#L61">property <b>encryptionCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionCertificate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1422,7 +1430,7 @@ whether authn requests are signed.
 SAML request encryption certificate.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-entityId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getMetadataSaml.ts#L65">property <b>entityId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getMetadataSaml.ts#L65">property <b>entityId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entityId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1430,7 +1438,7 @@ SAML request encryption certificate.
 Entity URL for instance `https://www.okta.com/saml2/service-provider/sposcfdmlybtwkdcgtuf`.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-httpPostBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getMetadataSaml.ts#L69">property <b>httpPostBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getMetadataSaml.ts#L69">property <b>httpPostBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpPostBinding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1438,7 +1446,7 @@ Entity URL for instance `https://www.okta.com/saml2/service-provider/sposcfdmlyb
 urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-httpRedirectBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getMetadataSaml.ts#L73">property <b>httpRedirectBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getMetadataSaml.ts#L73">property <b>httpRedirectBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpRedirectBinding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1446,7 +1454,7 @@ urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
 urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getMetadataSaml.ts#L77">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getMetadataSaml.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1454,12 +1462,12 @@ urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metada
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-idpId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getMetadataSaml.ts#L78">property <b>idpId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getMetadataSaml.ts#L78">property <b>idpId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getMetadataSaml.ts#L82">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getMetadataSaml.ts#L82">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1467,15 +1475,195 @@ The provider-assigned unique ID for this managed resource.
 raw IdP metadata.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-signingCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getMetadataSaml.ts#L86">property <b>signingCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getMetadataSaml.ts#L86">property <b>signingCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signingCertificate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
 SAML request signing certificate.
 
+<h3 class="pdoc-module-header" id="GetOidcArgs" data-link-title="GetOidcArgs">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L40">
+        interface <strong>GetOidcArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetOidcArgs</span></code></pre>
+
+A collection of arguments for invoking getOidc.
+
+<h4 class="pdoc-member-header" id="GetOidcArgs-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L44">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The id of the idp to retrieve, conflicts with `name`.
+
+<h4 class="pdoc-member-header" id="GetOidcArgs-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L48">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The name of the idp to retrieve, conflicts with `id`.
+
+<h3 class="pdoc-module-header" id="GetOidcResult" data-link-title="GetOidcResult">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L54">
+        interface <strong>GetOidcResult</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetOidcResult</span></code></pre>
+
+A collection of values returned by getOidc.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-authorizationBinding">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L58">property <b>authorizationBinding</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>authorizationBinding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The method of making an authorization request.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-authorizationUrl">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L62">property <b>authorizationUrl</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>authorizationUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+IdP Authorization Server (AS) endpoint to request consent from the user and obtain an authorization code grant.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-clientId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L66">property <b>clientId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Unique identifier issued by AS for the Okta IdP instance.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-clientSecret">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L70">property <b>clientSecret</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clientSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Client secret issued by AS for the Okta IdP instance.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L74">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+id of idp.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-issuerMode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L78">property <b>issuerMode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>issuerMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-issuerUrl">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L82">property <b>issuerUrl</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>issuerUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+URI that identifies the issuer.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-jwksBinding">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L86">property <b>jwksBinding</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>jwksBinding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The method of making a request for the OIDC JWKS.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-jwksUrl">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L90">property <b>jwksUrl</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>jwksUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Endpoint where the keys signer publishes its keys in a JWK Set.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-maxClockSkew">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L94">property <b>maxClockSkew</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>maxClockSkew: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
+
+Maximum allowable clock-skew when processing messages from the IdP.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L98">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+name of the idp.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-protocolType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L102">property <b>protocolType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>protocolType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The type of protocol to use.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-scopes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L106">property <b>scopes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>scopes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
+
+The scopes of the IdP.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-tokenBinding">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L110">property <b>tokenBinding</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tokenBinding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The method of making a token request.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-tokenUrl">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L114">property <b>tokenUrl</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tokenUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+IdP Authorization Server (AS) endpoint to exchange the authorization code grant for an access token.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-type">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L118">property <b>type</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+type of idp.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-userInfoBinding">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L122">property <b>userInfoBinding</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>userInfoBinding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The method of making a user info request.
+
+<h4 class="pdoc-member-header" id="GetOidcResult-userInfoUrl">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getOidc.ts#L126">property <b>userInfoUrl</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>userInfoUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Protected resource endpoint that returns claims about the authenticated user.
+
 <h3 class="pdoc-module-header" id="GetSamlArgs" data-link-title="GetSamlArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L40">
         interface <strong>GetSamlArgs</strong>
     </a>
 </h3>
@@ -1485,7 +1673,7 @@ SAML request signing certificate.
 A collection of arguments for invoking getSaml.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1493,7 +1681,7 @@ A collection of arguments for invoking getSaml.
 The id of the idp to retrieve, conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L48">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1501,7 +1689,7 @@ The id of the idp to retrieve, conflicts with `name`.
 The name of the idp to retrieve, conflicts with `id`.
 
 <h3 class="pdoc-module-header" id="GetSamlResult" data-link-title="GetSamlResult">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L54">
         interface <strong>GetSamlResult</strong>
     </a>
 </h3>
@@ -1511,15 +1699,15 @@ The name of the idp to retrieve, conflicts with `id`.
 A collection of values returned by getSaml.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-acsBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L58">property <b>acsBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L58">property <b>acsBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acsBinding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
-HTTP binding used to receive a SAMLResponse message from the IdP.
+HTTP binding used to receive a SAMLResponse message from the IdP (always equals to `"HTTP-POST"`).
 
 <h4 class="pdoc-member-header" id="GetSamlResult-acsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L62">property <b>acsType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L62">property <b>acsType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1527,7 +1715,7 @@ HTTP binding used to receive a SAMLResponse message from the IdP.
 Determines whether to publish an instance-specific (trust) or organization (shared) ACS endpoint in the SAML metadata.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-audience">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L66">property <b>audience</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L66">property <b>audience</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>audience: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1535,7 +1723,7 @@ Determines whether to publish an instance-specific (trust) or organization (shar
 URI that identifies the target Okta IdP instance (SP)
 
 <h4 class="pdoc-member-header" id="GetSamlResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L70">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L70">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1543,7 +1731,7 @@ URI that identifies the target Okta IdP instance (SP)
 id of idp.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-issuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L74">property <b>issuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L74">property <b>issuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1551,7 +1739,7 @@ id of idp.
 URI that identifies the issuer (IdP).
 
 <h4 class="pdoc-member-header" id="GetSamlResult-issuerMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L78">property <b>issuerMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L78">property <b>issuerMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuerMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1559,7 +1747,7 @@ URI that identifies the issuer (IdP).
 indicates whether Okta uses the original Okta org domain URL, or a custom domain URL in the request to the IdP.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-kid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L82">property <b>kid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L82">property <b>kid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1567,7 +1755,7 @@ indicates whether Okta uses the original Okta org domain URL, or a custom domain
 Key ID reference to the IdP's X.509 signature certificate.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L86">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1575,15 +1763,15 @@ Key ID reference to the IdP's X.509 signature certificate.
 name of the idp.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-ssoBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L90">property <b>ssoBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L90">property <b>ssoBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssoBinding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
-single sign on binding.
+single sign-on binding.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-ssoDestination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L94">property <b>ssoDestination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L94">property <b>ssoDestination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssoDestination: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1591,15 +1779,15 @@ single sign on binding.
 SSO request binding, HTTP-POST or HTTP-REDIRECT.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-ssoUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L98">property <b>ssoUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L98">property <b>ssoUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssoUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
-single sign on url.
+single sign-on url.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-subjectFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L102">property <b>subjectFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L102">property <b>subjectFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectFilter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1607,7 +1795,7 @@ single sign on url.
 regular expression pattern used to filter untrusted IdP usernames.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-subjectFormats">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L106">property <b>subjectFormats</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L106">property <b>subjectFormats</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectFormats: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1615,7 +1803,7 @@ regular expression pattern used to filter untrusted IdP usernames.
 Expression to generate or transform a unique username for the IdP user.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/getSaml.ts#L110">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/getSaml.ts#L110">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1623,7 +1811,7 @@ Expression to generate or transform a unique username for the IdP user.
 type of idp.
 
 <h3 class="pdoc-module-header" id="OidcArgs" data-link-title="OidcArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L506">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L481">
         interface <strong>OidcArgs</strong>
     </a>
 </h3>
@@ -1633,7 +1821,7 @@ type of idp.
 The set of arguments for constructing a Oidc resource.
 
 <h4 class="pdoc-member-header" id="OidcArgs-accountLinkAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L510">property <b>accountLinkAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L485">property <b>accountLinkAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountLinkAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1641,31 +1829,15 @@ The set of arguments for constructing a Oidc resource.
 Specifies the account linking action for an IdP user.
 
 <h4 class="pdoc-member-header" id="OidcArgs-accountLinkGroupIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L514">property <b>accountLinkGroupIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L489">property <b>accountLinkGroupIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountLinkGroupIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
 Group memberships to determine link candidates.
 
-<h4 class="pdoc-member-header" id="OidcArgs-acsBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L518">property <b>acsBinding</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>acsBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-The method of making an ACS request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-
-<h4 class="pdoc-member-header" id="OidcArgs-acsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L522">property <b>acsType</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>acsType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-The type of ACS. Default is `"INSTANCE"`.
-
 <h4 class="pdoc-member-header" id="OidcArgs-authorizationBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L526">property <b>authorizationBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L493">property <b>authorizationBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1673,7 +1845,7 @@ The type of ACS. Default is `"INSTANCE"`.
 The method of making an authorization request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 
 <h4 class="pdoc-member-header" id="OidcArgs-authorizationUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L530">property <b>authorizationUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L497">property <b>authorizationUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1681,7 +1853,7 @@ The method of making an authorization request. It can be set to `"HTTP-POST"` or
 IdP Authorization Server (AS) endpoint to request consent from the user and obtain an authorization code grant.
 
 <h4 class="pdoc-member-header" id="OidcArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L534">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L501">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1689,7 +1861,7 @@ IdP Authorization Server (AS) endpoint to request consent from the user and obta
 Unique identifier issued by AS for the Okta IdP instance.
 
 <h4 class="pdoc-member-header" id="OidcArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L538">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L505">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1697,7 +1869,7 @@ Unique identifier issued by AS for the Okta IdP instance.
 Client secret issued by AS for the Okta IdP instance.
 
 <h4 class="pdoc-member-header" id="OidcArgs-deprovisionedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L542">property <b>deprovisionedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L509">property <b>deprovisionedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deprovisionedAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1705,7 +1877,7 @@ Client secret issued by AS for the Okta IdP instance.
 Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
 
 <h4 class="pdoc-member-header" id="OidcArgs-groupsAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L546">property <b>groupsAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L513">property <b>groupsAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1713,7 +1885,7 @@ Action for a previously deprovisioned IdP user during authentication. Can be `"N
 Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
 
 <h4 class="pdoc-member-header" id="OidcArgs-groupsAssignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L550">property <b>groupsAssignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L517">property <b>groupsAssignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAssignments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1721,7 +1893,7 @@ Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC
 List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="OidcArgs-groupsAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L554">property <b>groupsAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L521">property <b>groupsAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1729,7 +1901,7 @@ List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `group
 IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
 
 <h4 class="pdoc-member-header" id="OidcArgs-groupsFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L558">property <b>groupsFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L525">property <b>groupsFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1737,7 +1909,7 @@ IdP user profile attribute name (case-insensitive) for an array value that conta
 Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="OidcArgs-issuerMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L562">property <b>issuerMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L529">property <b>issuerMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuerMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1745,7 +1917,7 @@ Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYN
 Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
 
 <h4 class="pdoc-member-header" id="OidcArgs-issuerUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L566">property <b>issuerUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L533">property <b>issuerUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuerUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1753,7 +1925,7 @@ Indicates whether Okta uses the original Okta org domain URL, or a custom domain
 URI that identifies the issuer.
 
 <h4 class="pdoc-member-header" id="OidcArgs-jwksBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L570">property <b>jwksBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L537">property <b>jwksBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jwksBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1761,15 +1933,15 @@ URI that identifies the issuer.
 The method of making a request for the OIDC JWKS. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 
 <h4 class="pdoc-member-header" id="OidcArgs-jwksUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L574">property <b>jwksUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L541">property <b>jwksUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jwksUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Endpoint where the signer of the keys publishes its keys in a JWK Set.
+Endpoint where the keys signer publishes its keys in a JWK Set.
 
 <h4 class="pdoc-member-header" id="OidcArgs-maxClockSkew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L578">property <b>maxClockSkew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L545">property <b>maxClockSkew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxClockSkew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1777,7 +1949,7 @@ Endpoint where the signer of the keys publishes its keys in a JWK Set.
 Maximum allowable clock-skew when processing messages from the IdP.
 
 <h4 class="pdoc-member-header" id="OidcArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L582">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L549">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1785,7 +1957,7 @@ Maximum allowable clock-skew when processing messages from the IdP.
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="OidcArgs-profileMaster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L586">property <b>profileMaster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L553">property <b>profileMaster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileMaster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1793,7 +1965,7 @@ The Application's display name.
 Determines if the IdP should act as a source of truth for user profile attributes.
 
 <h4 class="pdoc-member-header" id="OidcArgs-protocolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L590">property <b>protocolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L557">property <b>protocolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocolType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1801,7 +1973,7 @@ Determines if the IdP should act as a source of truth for user profile attribute
 The type of protocol to use. It can be `"OIDC"` or `"OAUTH2"`.
 
 <h4 class="pdoc-member-header" id="OidcArgs-provisioningAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L594">property <b>provisioningAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L561">property <b>provisioningAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>provisioningAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1809,7 +1981,7 @@ The type of protocol to use. It can be `"OIDC"` or `"OAUTH2"`.
 Provisioning action for an IdP user during authentication.
 
 <h4 class="pdoc-member-header" id="OidcArgs-requestSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L598">property <b>requestSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L565">property <b>requestSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestSignatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1817,7 +1989,7 @@ Provisioning action for an IdP user during authentication.
 algorithm to use to sign requests
 
 <h4 class="pdoc-member-header" id="OidcArgs-requestSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L602">property <b>requestSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L569">property <b>requestSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestSignatureScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1825,7 +1997,7 @@ algorithm to use to sign requests
 algorithm to use to sign response
 
 <h4 class="pdoc-member-header" id="OidcArgs-responseSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L606">property <b>responseSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L573">property <b>responseSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseSignatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1833,7 +2005,7 @@ algorithm to use to sign response
 algorithm to use to sign requests
 
 <h4 class="pdoc-member-header" id="OidcArgs-responseSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L610">property <b>responseSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L577">property <b>responseSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseSignatureScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1841,7 +2013,7 @@ algorithm to use to sign requests
 algorithm to use to sign response
 
 <h4 class="pdoc-member-header" id="OidcArgs-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L614">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L581">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1849,7 +2021,7 @@ algorithm to use to sign response
 The scopes of the IdP.
 
 <h4 class="pdoc-member-header" id="OidcArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L618">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L585">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1857,7 +2029,7 @@ The scopes of the IdP.
 Status of the IdP.
 
 <h4 class="pdoc-member-header" id="OidcArgs-subjectMatchAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L622">property <b>subjectMatchAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L589">property <b>subjectMatchAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectMatchAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1865,15 +2037,15 @@ Status of the IdP.
 Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="OidcArgs-subjectMatchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L626">property <b>subjectMatchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L593">property <b>subjectMatchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectMatchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
+Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="OidcArgs-suspendedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L630">property <b>suspendedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L597">property <b>suspendedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>suspendedAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1881,7 +2053,7 @@ Determines the Okta user profile attribute match conditions for account linking 
 Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
 
 <h4 class="pdoc-member-header" id="OidcArgs-tokenBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L634">property <b>tokenBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L601">property <b>tokenBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1889,7 +2061,7 @@ Action for a previously suspended IdP user during authentication. Can be set to 
 The method of making a token request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 
 <h4 class="pdoc-member-header" id="OidcArgs-tokenUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L638">property <b>tokenUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L605">property <b>tokenUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1897,12 +2069,12 @@ The method of making a token request. It can be set to `"HTTP-POST"` or `"HTTP-R
 IdP Authorization Server (AS) endpoint to exchange the authorization code grant for an access token.
 
 <h4 class="pdoc-member-header" id="OidcArgs-userInfoBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L639">property <b>userInfoBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L606">property <b>userInfoBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userInfoBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OidcArgs-userInfoUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L643">property <b>userInfoUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L610">property <b>userInfoUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userInfoUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1910,7 +2082,7 @@ IdP Authorization Server (AS) endpoint to exchange the authorization code grant 
 Protected resource endpoint that returns claims about the authenticated user.
 
 <h4 class="pdoc-member-header" id="OidcArgs-usernameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L647">property <b>usernameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L614">property <b>usernameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usernameTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1918,7 +2090,7 @@ Protected resource endpoint that returns claims about the authenticated user.
 Okta EL Expression to generate or transform a unique username for the IdP user.
 
 <h3 class="pdoc-module-header" id="OidcState" data-link-title="OidcState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L355">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L338">
         interface <strong>OidcState</strong>
     </a>
 </h3>
@@ -1928,7 +2100,7 @@ Okta EL Expression to generate or transform a unique username for the IdP user.
 Input properties used for looking up and filtering Oidc resources.
 
 <h4 class="pdoc-member-header" id="OidcState-accountLinkAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L359">property <b>accountLinkAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L342">property <b>accountLinkAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountLinkAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1936,31 +2108,15 @@ Input properties used for looking up and filtering Oidc resources.
 Specifies the account linking action for an IdP user.
 
 <h4 class="pdoc-member-header" id="OidcState-accountLinkGroupIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L363">property <b>accountLinkGroupIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L346">property <b>accountLinkGroupIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountLinkGroupIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
 Group memberships to determine link candidates.
 
-<h4 class="pdoc-member-header" id="OidcState-acsBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L367">property <b>acsBinding</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>acsBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-The method of making an ACS request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-
-<h4 class="pdoc-member-header" id="OidcState-acsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L371">property <b>acsType</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>acsType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-The type of ACS. Default is `"INSTANCE"`.
-
 <h4 class="pdoc-member-header" id="OidcState-authorizationBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L375">property <b>authorizationBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L350">property <b>authorizationBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1968,7 +2124,7 @@ The type of ACS. Default is `"INSTANCE"`.
 The method of making an authorization request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 
 <h4 class="pdoc-member-header" id="OidcState-authorizationUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L379">property <b>authorizationUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L354">property <b>authorizationUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1976,7 +2132,7 @@ The method of making an authorization request. It can be set to `"HTTP-POST"` or
 IdP Authorization Server (AS) endpoint to request consent from the user and obtain an authorization code grant.
 
 <h4 class="pdoc-member-header" id="OidcState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L383">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L358">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1984,7 +2140,7 @@ IdP Authorization Server (AS) endpoint to request consent from the user and obta
 Unique identifier issued by AS for the Okta IdP instance.
 
 <h4 class="pdoc-member-header" id="OidcState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L387">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L362">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1992,7 +2148,7 @@ Unique identifier issued by AS for the Okta IdP instance.
 Client secret issued by AS for the Okta IdP instance.
 
 <h4 class="pdoc-member-header" id="OidcState-deprovisionedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L391">property <b>deprovisionedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L366">property <b>deprovisionedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deprovisionedAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2000,7 +2156,7 @@ Client secret issued by AS for the Okta IdP instance.
 Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
 
 <h4 class="pdoc-member-header" id="OidcState-groupsAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L395">property <b>groupsAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L370">property <b>groupsAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2008,7 +2164,7 @@ Action for a previously deprovisioned IdP user during authentication. Can be `"N
 Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
 
 <h4 class="pdoc-member-header" id="OidcState-groupsAssignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L399">property <b>groupsAssignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L374">property <b>groupsAssignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAssignments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2016,7 +2172,7 @@ Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC
 List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="OidcState-groupsAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L403">property <b>groupsAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L378">property <b>groupsAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2024,7 +2180,7 @@ List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `group
 IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
 
 <h4 class="pdoc-member-header" id="OidcState-groupsFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L407">property <b>groupsFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L382">property <b>groupsFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2032,7 +2188,7 @@ IdP user profile attribute name (case-insensitive) for an array value that conta
 Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="OidcState-issuerMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L411">property <b>issuerMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L386">property <b>issuerMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuerMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2040,7 +2196,7 @@ Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYN
 Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
 
 <h4 class="pdoc-member-header" id="OidcState-issuerUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L415">property <b>issuerUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L390">property <b>issuerUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuerUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2048,7 +2204,7 @@ Indicates whether Okta uses the original Okta org domain URL, or a custom domain
 URI that identifies the issuer.
 
 <h4 class="pdoc-member-header" id="OidcState-jwksBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L419">property <b>jwksBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L394">property <b>jwksBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jwksBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2056,15 +2212,15 @@ URI that identifies the issuer.
 The method of making a request for the OIDC JWKS. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 
 <h4 class="pdoc-member-header" id="OidcState-jwksUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L423">property <b>jwksUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L398">property <b>jwksUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jwksUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Endpoint where the signer of the keys publishes its keys in a JWK Set.
+Endpoint where the keys signer publishes its keys in a JWK Set.
 
 <h4 class="pdoc-member-header" id="OidcState-maxClockSkew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L427">property <b>maxClockSkew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L402">property <b>maxClockSkew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxClockSkew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2072,7 +2228,7 @@ Endpoint where the signer of the keys publishes its keys in a JWK Set.
 Maximum allowable clock-skew when processing messages from the IdP.
 
 <h4 class="pdoc-member-header" id="OidcState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L431">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L406">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2080,7 +2236,7 @@ Maximum allowable clock-skew when processing messages from the IdP.
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="OidcState-profileMaster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L435">property <b>profileMaster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L410">property <b>profileMaster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileMaster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2088,7 +2244,7 @@ The Application's display name.
 Determines if the IdP should act as a source of truth for user profile attributes.
 
 <h4 class="pdoc-member-header" id="OidcState-protocolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L439">property <b>protocolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L414">property <b>protocolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocolType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2096,7 +2252,7 @@ Determines if the IdP should act as a source of truth for user profile attribute
 The type of protocol to use. It can be `"OIDC"` or `"OAUTH2"`.
 
 <h4 class="pdoc-member-header" id="OidcState-provisioningAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L443">property <b>provisioningAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L418">property <b>provisioningAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>provisioningAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2104,7 +2260,7 @@ The type of protocol to use. It can be `"OIDC"` or `"OAUTH2"`.
 Provisioning action for an IdP user during authentication.
 
 <h4 class="pdoc-member-header" id="OidcState-requestSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L447">property <b>requestSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L422">property <b>requestSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestSignatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2112,7 +2268,7 @@ Provisioning action for an IdP user during authentication.
 algorithm to use to sign requests
 
 <h4 class="pdoc-member-header" id="OidcState-requestSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L451">property <b>requestSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L426">property <b>requestSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestSignatureScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2120,7 +2276,7 @@ algorithm to use to sign requests
 algorithm to use to sign response
 
 <h4 class="pdoc-member-header" id="OidcState-responseSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L455">property <b>responseSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L430">property <b>responseSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseSignatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2128,7 +2284,7 @@ algorithm to use to sign response
 algorithm to use to sign requests
 
 <h4 class="pdoc-member-header" id="OidcState-responseSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L459">property <b>responseSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L434">property <b>responseSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseSignatureScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2136,7 +2292,7 @@ algorithm to use to sign requests
 algorithm to use to sign response
 
 <h4 class="pdoc-member-header" id="OidcState-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L463">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L438">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2144,7 +2300,7 @@ algorithm to use to sign response
 The scopes of the IdP.
 
 <h4 class="pdoc-member-header" id="OidcState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L467">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L442">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2152,7 +2308,7 @@ The scopes of the IdP.
 Status of the IdP.
 
 <h4 class="pdoc-member-header" id="OidcState-subjectMatchAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L471">property <b>subjectMatchAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L446">property <b>subjectMatchAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectMatchAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2160,15 +2316,15 @@ Status of the IdP.
 Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="OidcState-subjectMatchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L475">property <b>subjectMatchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L450">property <b>subjectMatchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectMatchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
+Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="OidcState-suspendedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L479">property <b>suspendedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L454">property <b>suspendedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>suspendedAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2176,7 +2332,7 @@ Determines the Okta user profile attribute match conditions for account linking 
 Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
 
 <h4 class="pdoc-member-header" id="OidcState-tokenBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L483">property <b>tokenBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L458">property <b>tokenBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2184,7 +2340,7 @@ Action for a previously suspended IdP user during authentication. Can be set to 
 The method of making a token request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 
 <h4 class="pdoc-member-header" id="OidcState-tokenUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L487">property <b>tokenUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L462">property <b>tokenUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2192,7 +2348,7 @@ The method of making a token request. It can be set to `"HTTP-POST"` or `"HTTP-R
 IdP Authorization Server (AS) endpoint to exchange the authorization code grant for an access token.
 
 <h4 class="pdoc-member-header" id="OidcState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L491">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L466">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2200,12 +2356,12 @@ IdP Authorization Server (AS) endpoint to exchange the authorization code grant 
 Type of OIDC IdP.
 
 <h4 class="pdoc-member-header" id="OidcState-userInfoBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L492">property <b>userInfoBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L467">property <b>userInfoBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userInfoBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OidcState-userInfoUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L496">property <b>userInfoUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L471">property <b>userInfoUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userInfoUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2213,7 +2369,7 @@ Type of OIDC IdP.
 Protected resource endpoint that returns claims about the authenticated user.
 
 <h4 class="pdoc-member-header" id="OidcState-usernameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/oidc.ts#L500">property <b>usernameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/oidc.ts#L475">property <b>usernameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usernameTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2221,7 +2377,7 @@ Protected resource endpoint that returns claims about the authenticated user.
 Okta EL Expression to generate or transform a unique username for the IdP user.
 
 <h3 class="pdoc-module-header" id="SamlArgs" data-link-title="SamlArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L446">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L442">
         interface <strong>SamlArgs</strong>
     </a>
 </h3>
@@ -2231,7 +2387,7 @@ Okta EL Expression to generate or transform a unique username for the IdP user.
 The set of arguments for constructing a Saml resource.
 
 <h4 class="pdoc-member-header" id="SamlArgs-accountLinkAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L450">property <b>accountLinkAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L446">property <b>accountLinkAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountLinkAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2239,7 +2395,7 @@ The set of arguments for constructing a Saml resource.
 Specifies the account linking action for an IdP user.
 
 <h4 class="pdoc-member-header" id="SamlArgs-accountLinkGroupIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L454">property <b>accountLinkGroupIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L450">property <b>accountLinkGroupIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountLinkGroupIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2247,15 +2403,16 @@ Specifies the account linking action for an IdP user.
 Group memberships to determine link candidates.
 
 <h4 class="pdoc-member-header" id="SamlArgs-acsBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L458">property <b>acsBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L454">property <b>acsBinding</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>acsBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-The method of making an ACS request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;
+</div>
+<pre class="highlight"><code><span class='kd'></span>acsBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SamlArgs-acsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L462">property <b>acsType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L458">property <b>acsType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acsType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2263,7 +2420,7 @@ The method of making an ACS request. It can be set to `"HTTP-POST"` or `"HTTP-RE
 The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
 
 <h4 class="pdoc-member-header" id="SamlArgs-deprovisionedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L466">property <b>deprovisionedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L462">property <b>deprovisionedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deprovisionedAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2271,7 +2428,7 @@ The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
 Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
 
 <h4 class="pdoc-member-header" id="SamlArgs-groupsAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L470">property <b>groupsAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L466">property <b>groupsAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2279,7 +2436,7 @@ Action for a previously deprovisioned IdP user during authentication. Can be `"N
 Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
 
 <h4 class="pdoc-member-header" id="SamlArgs-groupsAssignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L474">property <b>groupsAssignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L470">property <b>groupsAssignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAssignments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2287,7 +2444,7 @@ Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC
 List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="SamlArgs-groupsAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L478">property <b>groupsAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L474">property <b>groupsAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2295,7 +2452,7 @@ List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `group
 IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
 
 <h4 class="pdoc-member-header" id="SamlArgs-groupsFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L482">property <b>groupsFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L478">property <b>groupsFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2303,7 +2460,7 @@ IdP user profile attribute name (case-insensitive) for an array value that conta
 Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="SamlArgs-issuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L486">property <b>issuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L482">property <b>issuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2311,7 +2468,7 @@ Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYN
 URI that identifies the issuer.
 
 <h4 class="pdoc-member-header" id="SamlArgs-issuerMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L490">property <b>issuerMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L486">property <b>issuerMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuerMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2319,7 +2476,7 @@ URI that identifies the issuer.
 Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
 
 <h4 class="pdoc-member-header" id="SamlArgs-kid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L494">property <b>kid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L490">property <b>kid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2327,7 +2484,7 @@ Indicates whether Okta uses the original Okta org domain URL, or a custom domain
 The ID of the signing key.
 
 <h4 class="pdoc-member-header" id="SamlArgs-maxClockSkew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L498">property <b>maxClockSkew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L494">property <b>maxClockSkew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxClockSkew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2335,7 +2492,7 @@ The ID of the signing key.
 Maximum allowable clock-skew when processing messages from the IdP.
 
 <h4 class="pdoc-member-header" id="SamlArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L502">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L498">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2343,7 +2500,7 @@ Maximum allowable clock-skew when processing messages from the IdP.
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="SamlArgs-nameFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L506">property <b>nameFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L502">property <b>nameFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2351,7 +2508,7 @@ The Application's display name.
 The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 
 <h4 class="pdoc-member-header" id="SamlArgs-profileMaster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L510">property <b>profileMaster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L506">property <b>profileMaster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileMaster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2359,7 +2516,7 @@ The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:name
 Determines if the IdP should act as a source of truth for user profile attributes.
 
 <h4 class="pdoc-member-header" id="SamlArgs-provisioningAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L514">property <b>provisioningAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L510">property <b>provisioningAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>provisioningAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2367,7 +2524,7 @@ Determines if the IdP should act as a source of truth for user profile attribute
 Provisioning action for an IdP user during authentication.
 
 <h4 class="pdoc-member-header" id="SamlArgs-requestSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L518">property <b>requestSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L514">property <b>requestSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestSignatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2375,15 +2532,15 @@ Provisioning action for an IdP user during authentication.
 The XML digital signature algorithm used when signing an AuthnRequest message.
 
 <h4 class="pdoc-member-header" id="SamlArgs-requestSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L522">property <b>requestSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L518">property <b>requestSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestSignatureScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
+Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 
 <h4 class="pdoc-member-header" id="SamlArgs-responseSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L526">property <b>responseSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L522">property <b>responseSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseSignatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2391,7 +2548,7 @@ Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. 
 The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
 
 <h4 class="pdoc-member-header" id="SamlArgs-responseSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L530">property <b>responseSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L526">property <b>responseSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseSignatureScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2399,7 +2556,7 @@ The minimum XML digital signature algorithm allowed when verifying a SAMLRespons
 Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
 
 <h4 class="pdoc-member-header" id="SamlArgs-ssoBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L534">property <b>ssoBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L530">property <b>ssoBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssoBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2407,7 +2564,7 @@ Specifies whether to verify a SAMLResponse message or Assertion element XML digi
 The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 
 <h4 class="pdoc-member-header" id="SamlArgs-ssoDestination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L538">property <b>ssoDestination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L534">property <b>ssoDestination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssoDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2415,7 +2572,7 @@ The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-RE
 URI reference indicating the address to which the AuthnRequest message is sent.
 
 <h4 class="pdoc-member-header" id="SamlArgs-ssoUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L542">property <b>ssoUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L538">property <b>ssoUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssoUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2423,7 +2580,7 @@ URI reference indicating the address to which the AuthnRequest message is sent.
 URL of binding-specific endpoint to send an AuthnRequest message to IdP.
 
 <h4 class="pdoc-member-header" id="SamlArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L546">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L542">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2431,7 +2588,7 @@ URL of binding-specific endpoint to send an AuthnRequest message to IdP.
 Status of the IdP.
 
 <h4 class="pdoc-member-header" id="SamlArgs-subjectFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L550">property <b>subjectFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L546">property <b>subjectFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2439,15 +2596,15 @@ Status of the IdP.
 Optional regular expression pattern used to filter untrusted IdP usernames.
 
 <h4 class="pdoc-member-header" id="SamlArgs-subjectFormats">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L554">property <b>subjectFormats</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L550">property <b>subjectFormats</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectFormats?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
-The name formate. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
+The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 
 <h4 class="pdoc-member-header" id="SamlArgs-subjectMatchAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L558">property <b>subjectMatchAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L554">property <b>subjectMatchAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectMatchAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2455,15 +2612,15 @@ The name formate. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspeci
 Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="SamlArgs-subjectMatchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L562">property <b>subjectMatchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L558">property <b>subjectMatchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectMatchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
+Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="SamlArgs-suspendedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L566">property <b>suspendedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L562">property <b>suspendedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>suspendedAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2471,7 +2628,7 @@ Determines the Okta user profile attribute match conditions for account linking 
 Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
 
 <h4 class="pdoc-member-header" id="SamlArgs-usernameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L570">property <b>usernameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L566">property <b>usernameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usernameTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2479,7 +2636,7 @@ Action for a previously suspended IdP user during authentication. Can be set to 
 Okta EL Expression to generate or transform a unique username for the IdP user.
 
 <h3 class="pdoc-module-header" id="SamlKeyArgs" data-link-title="SamlKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L168">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L168">
         interface <strong>SamlKeyArgs</strong>
     </a>
 </h3>
@@ -2489,7 +2646,7 @@ Okta EL Expression to generate or transform a unique username for the IdP user.
 The set of arguments for constructing a SamlKey resource.
 
 <h4 class="pdoc-member-header" id="SamlKeyArgs-x5cs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L172">property <b>x5cs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L172">property <b>x5cs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>x5cs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2497,7 +2654,7 @@ The set of arguments for constructing a SamlKey resource.
 base64-encoded X.509 certificate chain with DER encoding.
 
 <h3 class="pdoc-module-header" id="SamlKeyState" data-link-title="SamlKeyState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L134">
         interface <strong>SamlKeyState</strong>
     </a>
 </h3>
@@ -2507,7 +2664,7 @@ base64-encoded X.509 certificate chain with DER encoding.
 Input properties used for looking up and filtering SamlKey resources.
 
 <h4 class="pdoc-member-header" id="SamlKeyState-created">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L138">property <b>created</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L138">property <b>created</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>created?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2515,7 +2672,7 @@ Input properties used for looking up and filtering SamlKey resources.
 Date created.
 
 <h4 class="pdoc-member-header" id="SamlKeyState-expiresAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L142">property <b>expiresAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L142">property <b>expiresAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiresAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2523,7 +2680,7 @@ Date created.
 Date the cert expires.
 
 <h4 class="pdoc-member-header" id="SamlKeyState-kid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L146">property <b>kid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L146">property <b>kid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2531,7 +2688,7 @@ Date the cert expires.
 Key ID.
 
 <h4 class="pdoc-member-header" id="SamlKeyState-kty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L150">property <b>kty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L150">property <b>kty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2539,7 +2696,7 @@ Key ID.
 Identifies the cryptographic algorithm family used with the key.
 
 <h4 class="pdoc-member-header" id="SamlKeyState-use">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L154">property <b>use</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L154">property <b>use</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>use?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2547,7 +2704,7 @@ Identifies the cryptographic algorithm family used with the key.
 Intended use of the public key.
 
 <h4 class="pdoc-member-header" id="SamlKeyState-x5cs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L158">property <b>x5cs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L158">property <b>x5cs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>x5cs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2555,7 +2712,7 @@ Intended use of the public key.
 base64-encoded X.509 certificate chain with DER encoding.
 
 <h4 class="pdoc-member-header" id="SamlKeyState-x5tS256">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/samlKey.ts#L162">property <b>x5tS256</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/samlKey.ts#L162">property <b>x5tS256</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>x5tS256?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2563,7 +2720,7 @@ base64-encoded X.509 certificate chain with DER encoding.
 base64url-encoded SHA-256 thumbprint of the DER encoding of an X.509 certificate.
 
 <h3 class="pdoc-module-header" id="SamlState" data-link-title="SamlState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L308">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L304">
         interface <strong>SamlState</strong>
     </a>
 </h3>
@@ -2573,7 +2730,7 @@ base64url-encoded SHA-256 thumbprint of the DER encoding of an X.509 certificate
 Input properties used for looking up and filtering Saml resources.
 
 <h4 class="pdoc-member-header" id="SamlState-accountLinkAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L312">property <b>accountLinkAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L308">property <b>accountLinkAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountLinkAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2581,7 +2738,7 @@ Input properties used for looking up and filtering Saml resources.
 Specifies the account linking action for an IdP user.
 
 <h4 class="pdoc-member-header" id="SamlState-accountLinkGroupIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L316">property <b>accountLinkGroupIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L312">property <b>accountLinkGroupIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountLinkGroupIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2589,15 +2746,16 @@ Specifies the account linking action for an IdP user.
 Group memberships to determine link candidates.
 
 <h4 class="pdoc-member-header" id="SamlState-acsBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L320">property <b>acsBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L316">property <b>acsBinding</b></a>
 </h4>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;
+</div>
 <pre class="highlight"><code><span class='kd'></span>acsBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-The method of making an ACS request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-
 <h4 class="pdoc-member-header" id="SamlState-acsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L324">property <b>acsType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L320">property <b>acsType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acsType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2605,7 +2763,7 @@ The method of making an ACS request. It can be set to `"HTTP-POST"` or `"HTTP-RE
 The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
 
 <h4 class="pdoc-member-header" id="SamlState-audience">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L328">property <b>audience</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L324">property <b>audience</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>audience?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2613,7 +2771,7 @@ The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
 The audience restriction for the IdP.
 
 <h4 class="pdoc-member-header" id="SamlState-deprovisionedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L332">property <b>deprovisionedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L328">property <b>deprovisionedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deprovisionedAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2621,7 +2779,7 @@ The audience restriction for the IdP.
 Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
 
 <h4 class="pdoc-member-header" id="SamlState-groupsAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L336">property <b>groupsAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L332">property <b>groupsAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2629,7 +2787,7 @@ Action for a previously deprovisioned IdP user during authentication. Can be `"N
 Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
 
 <h4 class="pdoc-member-header" id="SamlState-groupsAssignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L340">property <b>groupsAssignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L336">property <b>groupsAssignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAssignments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2637,7 +2795,7 @@ Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC
 List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="SamlState-groupsAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L344">property <b>groupsAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L340">property <b>groupsAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2645,7 +2803,7 @@ List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `group
 IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
 
 <h4 class="pdoc-member-header" id="SamlState-groupsFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L348">property <b>groupsFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L344">property <b>groupsFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2653,7 +2811,7 @@ IdP user profile attribute name (case-insensitive) for an array value that conta
 Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="SamlState-issuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L352">property <b>issuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L348">property <b>issuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2661,7 +2819,7 @@ Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYN
 URI that identifies the issuer.
 
 <h4 class="pdoc-member-header" id="SamlState-issuerMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L356">property <b>issuerMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L352">property <b>issuerMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuerMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2669,7 +2827,7 @@ URI that identifies the issuer.
 Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
 
 <h4 class="pdoc-member-header" id="SamlState-kid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L360">property <b>kid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L356">property <b>kid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2677,7 +2835,7 @@ Indicates whether Okta uses the original Okta org domain URL, or a custom domain
 The ID of the signing key.
 
 <h4 class="pdoc-member-header" id="SamlState-maxClockSkew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L364">property <b>maxClockSkew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L360">property <b>maxClockSkew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxClockSkew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2685,7 +2843,7 @@ The ID of the signing key.
 Maximum allowable clock-skew when processing messages from the IdP.
 
 <h4 class="pdoc-member-header" id="SamlState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L368">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L364">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2693,7 +2851,7 @@ Maximum allowable clock-skew when processing messages from the IdP.
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="SamlState-nameFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L372">property <b>nameFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L368">property <b>nameFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2701,7 +2859,7 @@ The Application's display name.
 The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 
 <h4 class="pdoc-member-header" id="SamlState-profileMaster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L376">property <b>profileMaster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L372">property <b>profileMaster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileMaster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2709,7 +2867,7 @@ The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:name
 Determines if the IdP should act as a source of truth for user profile attributes.
 
 <h4 class="pdoc-member-header" id="SamlState-provisioningAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L380">property <b>provisioningAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L376">property <b>provisioningAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>provisioningAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2717,7 +2875,7 @@ Determines if the IdP should act as a source of truth for user profile attribute
 Provisioning action for an IdP user during authentication.
 
 <h4 class="pdoc-member-header" id="SamlState-requestSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L384">property <b>requestSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L380">property <b>requestSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestSignatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2725,15 +2883,15 @@ Provisioning action for an IdP user during authentication.
 The XML digital signature algorithm used when signing an AuthnRequest message.
 
 <h4 class="pdoc-member-header" id="SamlState-requestSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L388">property <b>requestSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L384">property <b>requestSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestSignatureScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
+Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 
 <h4 class="pdoc-member-header" id="SamlState-responseSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L392">property <b>responseSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L388">property <b>responseSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseSignatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2741,7 +2899,7 @@ Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. 
 The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
 
 <h4 class="pdoc-member-header" id="SamlState-responseSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L396">property <b>responseSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L392">property <b>responseSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseSignatureScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2749,7 +2907,7 @@ The minimum XML digital signature algorithm allowed when verifying a SAMLRespons
 Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
 
 <h4 class="pdoc-member-header" id="SamlState-ssoBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L400">property <b>ssoBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L396">property <b>ssoBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssoBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2757,7 +2915,7 @@ Specifies whether to verify a SAMLResponse message or Assertion element XML digi
 The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 
 <h4 class="pdoc-member-header" id="SamlState-ssoDestination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L404">property <b>ssoDestination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L400">property <b>ssoDestination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssoDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2765,7 +2923,7 @@ The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-RE
 URI reference indicating the address to which the AuthnRequest message is sent.
 
 <h4 class="pdoc-member-header" id="SamlState-ssoUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L408">property <b>ssoUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L404">property <b>ssoUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssoUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2773,7 +2931,7 @@ URI reference indicating the address to which the AuthnRequest message is sent.
 URL of binding-specific endpoint to send an AuthnRequest message to IdP.
 
 <h4 class="pdoc-member-header" id="SamlState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L412">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L408">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2781,7 +2939,7 @@ URL of binding-specific endpoint to send an AuthnRequest message to IdP.
 Status of the IdP.
 
 <h4 class="pdoc-member-header" id="SamlState-subjectFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L416">property <b>subjectFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L412">property <b>subjectFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2789,15 +2947,15 @@ Status of the IdP.
 Optional regular expression pattern used to filter untrusted IdP usernames.
 
 <h4 class="pdoc-member-header" id="SamlState-subjectFormats">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L420">property <b>subjectFormats</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L416">property <b>subjectFormats</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectFormats?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
-The name formate. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
+The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
 
 <h4 class="pdoc-member-header" id="SamlState-subjectMatchAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L424">property <b>subjectMatchAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L420">property <b>subjectMatchAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectMatchAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2805,15 +2963,15 @@ The name formate. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspeci
 Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="SamlState-subjectMatchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L428">property <b>subjectMatchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L424">property <b>subjectMatchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectMatchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
+Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="SamlState-suspendedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L432">property <b>suspendedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L428">property <b>suspendedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>suspendedAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2821,7 +2979,7 @@ Determines the Okta user profile attribute match conditions for account linking 
 Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
 
 <h4 class="pdoc-member-header" id="SamlState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L436">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L432">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2829,7 +2987,7 @@ Action for a previously suspended IdP user during authentication. Can be set to 
 Type of the IdP.
 
 <h4 class="pdoc-member-header" id="SamlState-usernameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/saml.ts#L440">property <b>usernameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/saml.ts#L436">property <b>usernameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usernameTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2837,7 +2995,7 @@ Type of the IdP.
 Okta EL Expression to generate or transform a unique username for the IdP user.
 
 <h3 class="pdoc-module-header" id="SocialArgs" data-link-title="SocialArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L431">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L431">
         interface <strong>SocialArgs</strong>
     </a>
 </h3>
@@ -2847,7 +3005,7 @@ Okta EL Expression to generate or transform a unique username for the IdP user.
 The set of arguments for constructing a Social resource.
 
 <h4 class="pdoc-member-header" id="SocialArgs-accountLinkAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L435">property <b>accountLinkAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L435">property <b>accountLinkAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountLinkAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2855,7 +3013,7 @@ The set of arguments for constructing a Social resource.
 Specifies the account linking action for an IdP user.
 
 <h4 class="pdoc-member-header" id="SocialArgs-accountLinkGroupIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L439">property <b>accountLinkGroupIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L439">property <b>accountLinkGroupIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountLinkGroupIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2863,7 +3021,7 @@ Specifies the account linking action for an IdP user.
 Group memberships to determine link candidates.
 
 <h4 class="pdoc-member-header" id="SocialArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L443">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L443">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2871,7 +3029,7 @@ Group memberships to determine link candidates.
 Unique identifier issued by AS for the Okta IdP instance.
 
 <h4 class="pdoc-member-header" id="SocialArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L447">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L447">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2879,7 +3037,7 @@ Unique identifier issued by AS for the Okta IdP instance.
 Client secret issued by AS for the Okta IdP instance.
 
 <h4 class="pdoc-member-header" id="SocialArgs-deprovisionedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L451">property <b>deprovisionedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L451">property <b>deprovisionedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deprovisionedAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2887,7 +3045,7 @@ Client secret issued by AS for the Okta IdP instance.
 Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
 
 <h4 class="pdoc-member-header" id="SocialArgs-groupsAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L455">property <b>groupsAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L455">property <b>groupsAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2895,7 +3053,7 @@ Action for a previously deprovisioned IdP user during authentication. Can be `"N
 Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
 
 <h4 class="pdoc-member-header" id="SocialArgs-groupsAssignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L459">property <b>groupsAssignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L459">property <b>groupsAssignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAssignments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2903,7 +3061,7 @@ Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC
 List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="SocialArgs-groupsAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L463">property <b>groupsAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L463">property <b>groupsAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2911,7 +3069,7 @@ List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `group
 IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
 
 <h4 class="pdoc-member-header" id="SocialArgs-groupsFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L467">property <b>groupsFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L467">property <b>groupsFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2919,7 +3077,7 @@ IdP user profile attribute name (case-insensitive) for an array value that conta
 Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="SocialArgs-issuerMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L471">property <b>issuerMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L471">property <b>issuerMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuerMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2927,7 +3085,7 @@ Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYN
 Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
 
 <h4 class="pdoc-member-header" id="SocialArgs-matchAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L475">property <b>matchAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L475">property <b>matchAttribute</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2936,7 +3094,7 @@ This property was incorrectly added to this resource, you should use &#34;subjec
 </div>
 <pre class="highlight"><code><span class='kd'></span>matchAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SocialArgs-matchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L479">property <b>matchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L479">property <b>matchType</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2945,7 +3103,7 @@ This property was incorrectly added to this resource, you should use &#34;subjec
 </div>
 <pre class="highlight"><code><span class='kd'></span>matchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SocialArgs-maxClockSkew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L483">property <b>maxClockSkew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L483">property <b>maxClockSkew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxClockSkew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2953,7 +3111,7 @@ This property was incorrectly added to this resource, you should use &#34;subjec
 Maximum allowable clock-skew when processing messages from the IdP.
 
 <h4 class="pdoc-member-header" id="SocialArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L487">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L487">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2961,7 +3119,7 @@ Maximum allowable clock-skew when processing messages from the IdP.
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="SocialArgs-profileMaster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L491">property <b>profileMaster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L491">property <b>profileMaster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileMaster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2969,7 +3127,7 @@ The Application's display name.
 Determines if the IdP should act as a source of truth for user profile attributes.
 
 <h4 class="pdoc-member-header" id="SocialArgs-protocolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L495">property <b>protocolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L495">property <b>protocolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocolType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2977,7 +3135,7 @@ Determines if the IdP should act as a source of truth for user profile attribute
 The type of protocol to use. It can be `"OIDC"` or `"OAUTH2"`.
 
 <h4 class="pdoc-member-header" id="SocialArgs-provisioningAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L499">property <b>provisioningAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L499">property <b>provisioningAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>provisioningAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2985,7 +3143,7 @@ The type of protocol to use. It can be `"OIDC"` or `"OAUTH2"`.
 Provisioning action for an IdP user during authentication.
 
 <h4 class="pdoc-member-header" id="SocialArgs-requestSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L503">property <b>requestSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L503">property <b>requestSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestSignatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2993,15 +3151,15 @@ Provisioning action for an IdP user during authentication.
 The XML digital signature algorithm used when signing an AuthnRequest message.
 
 <h4 class="pdoc-member-header" id="SocialArgs-requestSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L507">property <b>requestSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L507">property <b>requestSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestSignatureScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
+Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 
 <h4 class="pdoc-member-header" id="SocialArgs-responseSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L511">property <b>responseSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L511">property <b>responseSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseSignatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3009,7 +3167,7 @@ Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. 
 The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
 
 <h4 class="pdoc-member-header" id="SocialArgs-responseSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L515">property <b>responseSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L515">property <b>responseSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseSignatureScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3017,7 +3175,7 @@ The minimum XML digital signature algorithm allowed when verifying a SAMLRespons
 Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
 
 <h4 class="pdoc-member-header" id="SocialArgs-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L519">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L519">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3025,7 +3183,7 @@ Specifies whether to verify a SAMLResponse message or Assertion element XML digi
 The scopes of the IdP.
 
 <h4 class="pdoc-member-header" id="SocialArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L523">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L523">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3033,7 +3191,7 @@ The scopes of the IdP.
 Status of the IdP.
 
 <h4 class="pdoc-member-header" id="SocialArgs-subjectMatchAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L527">property <b>subjectMatchAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L527">property <b>subjectMatchAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectMatchAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3041,15 +3199,15 @@ Status of the IdP.
 Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="SocialArgs-subjectMatchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L531">property <b>subjectMatchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L531">property <b>subjectMatchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectMatchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
+Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="SocialArgs-suspendedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L535">property <b>suspendedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L535">property <b>suspendedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>suspendedAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3057,7 +3215,7 @@ Determines the Okta user profile attribute match conditions for account linking 
 Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
 
 <h4 class="pdoc-member-header" id="SocialArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L539">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L539">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3065,7 +3223,7 @@ Action for a previously suspended IdP user during authentication. Can be set to 
 The type of Social IdP. It can be `"FACEBOOK"`, `"LINKEDIN"`, `"MICROSOFT"`, or `"GOOGLE"`.
 
 <h4 class="pdoc-member-header" id="SocialArgs-usernameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L543">property <b>usernameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L543">property <b>usernameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usernameTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3073,7 +3231,7 @@ The type of Social IdP. It can be `"FACEBOOK"`, `"LINKEDIN"`, `"MICROSOFT"`, or 
 Okta EL Expression to generate or transform a unique username for the IdP user.
 
 <h3 class="pdoc-module-header" id="SocialState" data-link-title="SocialState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L297">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L297">
         interface <strong>SocialState</strong>
     </a>
 </h3>
@@ -3083,7 +3241,7 @@ Okta EL Expression to generate or transform a unique username for the IdP user.
 Input properties used for looking up and filtering Social resources.
 
 <h4 class="pdoc-member-header" id="SocialState-accountLinkAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L301">property <b>accountLinkAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L301">property <b>accountLinkAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountLinkAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3091,7 +3249,7 @@ Input properties used for looking up and filtering Social resources.
 Specifies the account linking action for an IdP user.
 
 <h4 class="pdoc-member-header" id="SocialState-accountLinkGroupIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L305">property <b>accountLinkGroupIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L305">property <b>accountLinkGroupIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountLinkGroupIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3099,7 +3257,7 @@ Specifies the account linking action for an IdP user.
 Group memberships to determine link candidates.
 
 <h4 class="pdoc-member-header" id="SocialState-authorizationBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L309">property <b>authorizationBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L309">property <b>authorizationBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3107,7 +3265,7 @@ Group memberships to determine link candidates.
 The method of making an authorization request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 
 <h4 class="pdoc-member-header" id="SocialState-authorizationUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L313">property <b>authorizationUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L313">property <b>authorizationUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3115,7 +3273,7 @@ The method of making an authorization request. It can be set to `"HTTP-POST"` or
 IdP Authorization Server (AS) endpoint to request consent from the user and obtain an authorization code grant.
 
 <h4 class="pdoc-member-header" id="SocialState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L317">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L317">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3123,7 +3281,7 @@ IdP Authorization Server (AS) endpoint to request consent from the user and obta
 Unique identifier issued by AS for the Okta IdP instance.
 
 <h4 class="pdoc-member-header" id="SocialState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L321">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L321">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3131,7 +3289,7 @@ Unique identifier issued by AS for the Okta IdP instance.
 Client secret issued by AS for the Okta IdP instance.
 
 <h4 class="pdoc-member-header" id="SocialState-deprovisionedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L325">property <b>deprovisionedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L325">property <b>deprovisionedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deprovisionedAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3139,7 +3297,7 @@ Client secret issued by AS for the Okta IdP instance.
 Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
 
 <h4 class="pdoc-member-header" id="SocialState-groupsAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L329">property <b>groupsAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L329">property <b>groupsAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3147,7 +3305,7 @@ Action for a previously deprovisioned IdP user during authentication. Can be `"N
 Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
 
 <h4 class="pdoc-member-header" id="SocialState-groupsAssignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L333">property <b>groupsAssignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L333">property <b>groupsAssignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAssignments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3155,7 +3313,7 @@ Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC
 List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="SocialState-groupsAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L337">property <b>groupsAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L337">property <b>groupsAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3163,7 +3321,7 @@ List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `group
 IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
 
 <h4 class="pdoc-member-header" id="SocialState-groupsFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L341">property <b>groupsFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L341">property <b>groupsFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3171,7 +3329,7 @@ IdP user profile attribute name (case-insensitive) for an array value that conta
 Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groupsAction`.
 
 <h4 class="pdoc-member-header" id="SocialState-issuerMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L345">property <b>issuerMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L345">property <b>issuerMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuerMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3179,7 +3337,7 @@ Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYN
 Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
 
 <h4 class="pdoc-member-header" id="SocialState-matchAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L349">property <b>matchAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L349">property <b>matchAttribute</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3188,7 +3346,7 @@ This property was incorrectly added to this resource, you should use &#34;subjec
 </div>
 <pre class="highlight"><code><span class='kd'></span>matchAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SocialState-matchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L353">property <b>matchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L353">property <b>matchType</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3197,7 +3355,7 @@ This property was incorrectly added to this resource, you should use &#34;subjec
 </div>
 <pre class="highlight"><code><span class='kd'></span>matchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SocialState-maxClockSkew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L357">property <b>maxClockSkew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L357">property <b>maxClockSkew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxClockSkew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3205,7 +3363,7 @@ This property was incorrectly added to this resource, you should use &#34;subjec
 Maximum allowable clock-skew when processing messages from the IdP.
 
 <h4 class="pdoc-member-header" id="SocialState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L361">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L361">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3213,7 +3371,7 @@ Maximum allowable clock-skew when processing messages from the IdP.
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="SocialState-profileMaster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L365">property <b>profileMaster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L365">property <b>profileMaster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileMaster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3221,7 +3379,7 @@ The Application's display name.
 Determines if the IdP should act as a source of truth for user profile attributes.
 
 <h4 class="pdoc-member-header" id="SocialState-protocolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L369">property <b>protocolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L369">property <b>protocolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocolType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3229,7 +3387,7 @@ Determines if the IdP should act as a source of truth for user profile attribute
 The type of protocol to use. It can be `"OIDC"` or `"OAUTH2"`.
 
 <h4 class="pdoc-member-header" id="SocialState-provisioningAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L373">property <b>provisioningAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L373">property <b>provisioningAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>provisioningAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3237,7 +3395,7 @@ The type of protocol to use. It can be `"OIDC"` or `"OAUTH2"`.
 Provisioning action for an IdP user during authentication.
 
 <h4 class="pdoc-member-header" id="SocialState-requestSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L377">property <b>requestSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L377">property <b>requestSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestSignatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3245,15 +3403,15 @@ Provisioning action for an IdP user during authentication.
 The XML digital signature algorithm used when signing an AuthnRequest message.
 
 <h4 class="pdoc-member-header" id="SocialState-requestSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L381">property <b>requestSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L381">property <b>requestSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestSignatureScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
+Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
 
 <h4 class="pdoc-member-header" id="SocialState-responseSignatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L385">property <b>responseSignatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L385">property <b>responseSignatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseSignatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3261,7 +3419,7 @@ Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. 
 The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
 
 <h4 class="pdoc-member-header" id="SocialState-responseSignatureScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L389">property <b>responseSignatureScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L389">property <b>responseSignatureScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseSignatureScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3269,7 +3427,7 @@ The minimum XML digital signature algorithm allowed when verifying a SAMLRespons
 Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
 
 <h4 class="pdoc-member-header" id="SocialState-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L393">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L393">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3277,7 +3435,7 @@ Specifies whether to verify a SAMLResponse message or Assertion element XML digi
 The scopes of the IdP.
 
 <h4 class="pdoc-member-header" id="SocialState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L397">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L397">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3285,7 +3443,7 @@ The scopes of the IdP.
 Status of the IdP.
 
 <h4 class="pdoc-member-header" id="SocialState-subjectMatchAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L401">property <b>subjectMatchAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L401">property <b>subjectMatchAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectMatchAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3293,15 +3451,15 @@ Status of the IdP.
 Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="SocialState-subjectMatchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L405">property <b>subjectMatchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L405">property <b>subjectMatchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectMatchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
+Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
 
 <h4 class="pdoc-member-header" id="SocialState-suspendedAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L409">property <b>suspendedAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L409">property <b>suspendedAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>suspendedAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3309,7 +3467,7 @@ Determines the Okta user profile attribute match conditions for account linking 
 Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
 
 <h4 class="pdoc-member-header" id="SocialState-tokenBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L413">property <b>tokenBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L413">property <b>tokenBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3317,7 +3475,7 @@ Action for a previously suspended IdP user during authentication. Can be set to 
 The method of making a token request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
 
 <h4 class="pdoc-member-header" id="SocialState-tokenUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L417">property <b>tokenUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L417">property <b>tokenUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3325,7 +3483,7 @@ The method of making a token request. It can be set to `"HTTP-POST"` or `"HTTP-R
 IdP Authorization Server (AS) endpoint to exchange the authorization code grant for an access token.
 
 <h4 class="pdoc-member-header" id="SocialState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L421">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L421">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3333,7 +3491,7 @@ IdP Authorization Server (AS) endpoint to exchange the authorization code grant 
 The type of Social IdP. It can be `"FACEBOOK"`, `"LINKEDIN"`, `"MICROSOFT"`, or `"GOOGLE"`.
 
 <h4 class="pdoc-member-header" id="SocialState-usernameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/idp/social.ts#L425">property <b>usernameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/idp/social.ts#L425">property <b>usernameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usernameTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

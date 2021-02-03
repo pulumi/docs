@@ -309,7 +309,7 @@ The ServerPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist for all clients. Otherwise it is a list of client ids.
+    <dd>{{% md %}}The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist all clients, otherwise it is a list of client ids.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -351,8 +351,8 @@ The ServerPolicy resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -360,7 +360,7 @@ The ServerPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Policy type can only be of value &#39;OAUTH_AUTHORIZATION_POLICY&#39;, so this will be removed in the future, or set as &#39;Computed&#39; value{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -385,7 +385,7 @@ The ServerPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist for all clients. Otherwise it is a list of client ids.
+    <dd>{{% md %}}The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist all clients, otherwise it is a list of client ids.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -427,8 +427,8 @@ The ServerPolicy resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -436,7 +436,7 @@ The ServerPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Policy type can only be of value &#39;OAUTH_AUTHORIZATION_POLICY&#39;, so this will be removed in the future, or set as &#39;Computed&#39; value{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -461,7 +461,7 @@ The ServerPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist for all clients. Otherwise it is a list of client ids.
+    <dd>{{% md %}}The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist all clients, otherwise it is a list of client ids.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -503,8 +503,8 @@ The ServerPolicy resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -512,7 +512,7 @@ The ServerPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Policy type can only be of value &#39;OAUTH_AUTHORIZATION_POLICY&#39;, so this will be removed in the future, or set as &#39;Computed&#39; value{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -537,7 +537,7 @@ The ServerPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist for all clients. Otherwise it is a list of client ids.
+    <dd>{{% md %}}The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist all clients, otherwise it is a list of client ids.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -579,8 +579,8 @@ The ServerPolicy resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -588,7 +588,7 @@ The ServerPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Policy type can only be of value &#39;OAUTH_AUTHORIZATION_POLICY&#39;, so this will be removed in the future, or set as &#39;Computed&#39; value{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -803,7 +803,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist for all clients. Otherwise it is a list of client ids.
+    <dd>{{% md %}}The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist all clients, otherwise it is a list of client ids.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -845,8 +845,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -854,7 +854,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Policy type can only be of value &#39;OAUTH_AUTHORIZATION_POLICY&#39;, so this will be removed in the future, or set as &#39;Computed&#39; value{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -879,7 +879,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist for all clients. Otherwise it is a list of client ids.
+    <dd>{{% md %}}The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist all clients, otherwise it is a list of client ids.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -921,8 +921,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -930,7 +930,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Policy type can only be of value &#39;OAUTH_AUTHORIZATION_POLICY&#39;, so this will be removed in the future, or set as &#39;Computed&#39; value{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -955,7 +955,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist for all clients. Otherwise it is a list of client ids.
+    <dd>{{% md %}}The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist all clients, otherwise it is a list of client ids.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -997,8 +997,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -1006,7 +1006,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Policy type can only be of value &#39;OAUTH_AUTHORIZATION_POLICY&#39;, so this will be removed in the future, or set as &#39;Computed&#39; value{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -1031,7 +1031,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist for all clients. Otherwise it is a list of client ids.
+    <dd>{{% md %}}The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist all clients, otherwise it is a list of client ids.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1073,8 +1073,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -1082,7 +1082,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Policy type can only be of value &#39;OAUTH_AUTHORIZATION_POLICY&#39;, so this will be removed in the future, or set as &#39;Computed&#39; value{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 

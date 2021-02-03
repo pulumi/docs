@@ -12,6 +12,8 @@ Explore the resources and functions of the group module in the Okta package.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="membership" title="Membership"><span class="symbol resource"></span>Membership</a></li>
+    <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
     <li><a href="roles" title="Roles"><span class="symbol resource"></span>Roles</a></li>
     <li><a href="rule" title="Rule"><span class="symbol resource"></span>Rule</a></li>
 </ul>
@@ -31,7 +33,7 @@ Explore the resources and functions of the group module in the Okta package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 	<dt>Version</dt>
-	<dd>2.7.1</dd>
+	<dd>2.9.0</dd>
 </dl>
 
 

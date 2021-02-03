@@ -3,7 +3,7 @@ title: "Module auth"
 title_tag: "Module auth | Package @pulumi/okta | Node.js SDK"
 linktitle: "auth"
 meta_desc: "Explore members of the auth module in the @pulumi/okta package."
-git_sha: "d8223ec34121f866677918fc6244e020f13ce023"
+git_sha: "bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c"
 block_external_search_index: true
 ---
 
@@ -28,11 +28,14 @@ block_external_search_index: true
 <h3>Functions</h3>
 <ul class="api">
     <li><a href="#getServer"><span class="symbol function"></span>getServer</a></li>
+    <li><a href="#getServerPolicy"><span class="symbol function"></span>getServerPolicy</a></li>
 </ul>
 
 <h3>Others</h3>
 <ul class="api">
     <li><a href="#GetServerArgs"><span class="symbol api"></span>GetServerArgs</a></li>
+    <li><a href="#GetServerPolicyArgs"><span class="symbol api"></span>GetServerPolicyArgs</a></li>
+    <li><a href="#GetServerPolicyResult"><span class="symbol api"></span>GetServerPolicyResult</a></li>
     <li><a href="#GetServerResult"><span class="symbol api"></span>GetServerResult</a></li>
     <li><a href="#ServerArgs"><span class="symbol api"></span>ServerArgs</a></li>
     <li><a href="#ServerClaimArgs"><span class="symbol api"></span>ServerClaimArgs</a></li>
@@ -51,7 +54,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Server" data-link-title="Server">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L34">
         Resource <strong>Server</strong>
     </a>
 </h3>
@@ -85,7 +88,7 @@ Authorization Server can be imported via the Okta ID.
 ```
 
 <h4 class="pdoc-member-header" id="Server-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L101"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L101"> <b>constructor</b></a>
 </h4>
 
 
@@ -99,7 +102,7 @@ Create a Server resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Server-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -110,14 +113,14 @@ Get an existing Server resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Server-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Server-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -128,7 +131,7 @@ Returns true if the given object is an instance of Server.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Server-audiences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L65">property <b>audiences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L65">property <b>audiences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>audiences: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -136,7 +139,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The recipients that the tokens are intended for. This becomes the `aud` claim in an access token.
 
 <h4 class="pdoc-member-header" id="Server-credentialsLastRotated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L69">property <b>credentialsLastRotated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L69">property <b>credentialsLastRotated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>credentialsLastRotated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -144,7 +147,7 @@ The recipients that the tokens are intended for. This becomes the `aud` claim in
 The timestamp when the authorization server started to use the `kid` for signing tokens.
 
 <h4 class="pdoc-member-header" id="Server-credentialsNextRotation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L73">property <b>credentialsNextRotation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L73">property <b>credentialsNextRotation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>credentialsNextRotation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -152,7 +155,7 @@ The timestamp when the authorization server started to use the `kid` for signing
 The timestamp when the authorization server changes the key for signing tokens. Only returned when `credentialsRotationMode` is `"AUTO"`.
 
 <h4 class="pdoc-member-header" id="Server-credentialsRotationMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L77">property <b>credentialsRotationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L77">property <b>credentialsRotationMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>credentialsRotationMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -160,7 +163,7 @@ The timestamp when the authorization server changes the key for signing tokens. 
 The key rotation mode for the authorization server. Can be `"AUTO"` or `"MANUAL"`.
 
 <h4 class="pdoc-member-header" id="Server-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L81">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L81">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -168,7 +171,7 @@ The key rotation mode for the authorization server. Can be `"AUTO"` or `"MANUAL"
 The description of the authorization server.
 
 <h4 class="pdoc-member-header" id="Server-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -177,7 +180,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Server-issuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L85">property <b>issuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L85">property <b>issuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -185,7 +188,7 @@ deployments and may be missing (undefined) during planning phases.
 The complete URL for a Custom Authorization Server. This becomes the `iss` claim in an access token.
 
 <h4 class="pdoc-member-header" id="Server-issuerMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L89">property <b>issuerMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L89">property <b>issuerMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>issuerMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -193,7 +196,7 @@ The complete URL for a Custom Authorization Server. This becomes the `iss` claim
 Allows you to use a custom issuer URL. It can be set to `"CUSTOM_URL"` or `"ORG_URL"`
 
 <h4 class="pdoc-member-header" id="Server-kid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L93">property <b>kid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L93">property <b>kid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -201,7 +204,7 @@ Allows you to use a custom issuer URL. It can be set to `"CUSTOM_URL"` or `"ORG_
 The ID of the JSON Web Key used for signing tokens issued by the authorization server.
 
 <h4 class="pdoc-member-header" id="Server-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L97">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L97">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -209,7 +212,7 @@ The ID of the JSON Web Key used for signing tokens issued by the authorization s
 The name of the authorization server.
 
 <h4 class="pdoc-member-header" id="Server-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L101">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L101">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -217,7 +220,7 @@ The name of the authorization server.
 The status of the auth server. It defaults to `"ACTIVE"`
 
 <h4 class="pdoc-member-header" id="Server-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -226,7 +229,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServerClaim" data-link-title="ServerClaim">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L34">
         Resource <strong>ServerClaim</strong>
     </a>
 </h3>
@@ -260,7 +263,7 @@ Authorization Server Claim can be imported via the Auth Server ID and Claim ID.
 ```
 
 <h4 class="pdoc-member-header" id="ServerClaim-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L97"> <b>constructor</b></a>
 </h4>
 
 
@@ -274,7 +277,7 @@ Create a ServerClaim resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServerClaim-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -285,14 +288,14 @@ Get an existing ServerClaim resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServerClaim-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServerClaim-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -303,15 +306,15 @@ Returns true if the given object is an instance of ServerClaim.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServerClaim-alwaysIncludeInToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L65">property <b>alwaysIncludeInToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L65">property <b>alwaysIncludeInToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alwaysIncludeInToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Specifies whether to include claims in token, by default is is set to `true`.
+Specifies whether to include claims in token, by default it is set to `true`.
 
 <h4 class="pdoc-member-header" id="ServerClaim-authServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L69">property <b>authServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L69">property <b>authServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -319,7 +322,7 @@ Specifies whether to include claims in token, by default is is set to `true`.
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="ServerClaim-claimType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L73">property <b>claimType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L73">property <b>claimType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>claimType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -327,7 +330,7 @@ The Application's display name.
 Specifies whether the claim is for an access token `"RESOURCE"` or ID token `"IDENTITY"`.
 
 <h4 class="pdoc-member-header" id="ServerClaim-groupFilterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L77">property <b>groupFilterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L77">property <b>groupFilterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupFilterType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -335,7 +338,7 @@ Specifies whether the claim is for an access token `"RESOURCE"` or ID token `"ID
 Specifies the type of group filter if `valueType` is `"GROUPS"`. Can be set to one of the following `"STARTS_WITH"`, `"EQUALS"`, `"CONTAINS"`, `"REGEX"`.
 
 <h4 class="pdoc-member-header" id="ServerClaim-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -344,7 +347,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServerClaim-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -352,7 +355,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the claim.
 
 <h4 class="pdoc-member-header" id="ServerClaim-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L85">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L85">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -360,7 +363,7 @@ The name of the claim.
 The list of scopes the auth server claim is tied to.
 
 <h4 class="pdoc-member-header" id="ServerClaim-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L89">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L89">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -368,7 +371,7 @@ The list of scopes the auth server claim is tied to.
 The status of the application. It defaults to `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="ServerClaim-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -377,7 +380,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ServerClaim-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L93">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L93">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -385,7 +388,7 @@ deployments.
 The value of the claim.
 
 <h4 class="pdoc-member-header" id="ServerClaim-valueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L97">property <b>valueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L97">property <b>valueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>valueType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -393,7 +396,7 @@ The value of the claim.
 The type of value of the claim. It can be set to `"EXPRESSION"` or `"GROUPS"`. It defaults to `"EXPRESSION"`.
 
 <h3 class="pdoc-module-header" id="ServerPolicy" data-link-title="ServerPolicy">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L35">
         Resource <strong>ServerPolicy</strong>
     </a>
 </h3>
@@ -428,7 +431,7 @@ Authorization Server Policy can be imported via the Auth Server ID and Policy ID
 ```
 
 <h4 class="pdoc-member-header" id="ServerPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -442,7 +445,7 @@ Create a ServerPolicy resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServerPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -453,14 +456,14 @@ Get an existing ServerPolicy resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServerPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServerPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -471,7 +474,7 @@ Returns true if the given object is an instance of ServerPolicy.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServerPolicy-authServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L66">property <b>authServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L66">property <b>authServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -479,15 +482,15 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the Auth Server.
 
 <h4 class="pdoc-member-header" id="ServerPolicy-clientWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L70">property <b>clientWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L70">property <b>clientWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientWhitelists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 
-The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist for all clients. Otherwise it is a list of client ids.
+The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist all clients, otherwise it is a list of client ids.
 
 <h4 class="pdoc-member-header" id="ServerPolicy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L74">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L74">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -495,7 +498,7 @@ The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value th
 The description of the Auth Server Policy.
 
 <h4 class="pdoc-member-header" id="ServerPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -504,7 +507,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServerPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L78">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -512,7 +515,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Auth Server Policy.
 
 <h4 class="pdoc-member-header" id="ServerPolicy-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L82">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L82">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -520,7 +523,7 @@ The name of the Auth Server Policy.
 The priority of the Auth Server Policy.
 
 <h4 class="pdoc-member-header" id="ServerPolicy-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L86">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L86">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -528,15 +531,19 @@ The priority of the Auth Server Policy.
 The status of the Auth Server Policy.
 
 <h4 class="pdoc-member-header" id="ServerPolicy-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L90">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L92">property <b>type</b></a>
 </h4>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Policy type can only be of value &#39;OAUTH_AUTHORIZATION_POLICY&#39;, so this will be removed in the future, or set as &#39;Computed&#39; value
+</div>
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The type of the Auth Server Policy.
 
 <h4 class="pdoc-member-header" id="ServerPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -545,7 +552,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServerPolicyClaim" data-link-title="ServerPolicyClaim">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L38">
         Resource <strong>ServerPolicyClaim</strong>
     </a>
 </h3>
@@ -585,7 +592,7 @@ Authorization Server Policy Rule can be imported via the Auth Server ID, Policy 
 ```
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L130"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L131"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -600,7 +607,7 @@ okta.auth.ServerPolicyClaim has been deprecated in favor of okta.auth.ServerPoli
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ServerPolicyClaim(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServerPolicyClaimArgs'>ServerPolicyClaimArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -611,14 +618,14 @@ Get an existing ServerPolicyClaim resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -629,15 +636,15 @@ Returns true if the given object is an instance of ServerPolicyClaim.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-accessTokenLifetimeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L70">property <b>accessTokenLifetimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L70">property <b>accessTokenLifetimeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessTokenLifetimeMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Lifetime of access token. Can be set to a value between 5 and 1440.
+Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-authServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L74">property <b>authServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L74">property <b>authServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -645,7 +652,7 @@ Lifetime of access token. Can be set to a value between 5 and 1440.
 Auth Server ID.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-grantTypeWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L78">property <b>grantTypeWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L78">property <b>grantTypeWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>grantTypeWhitelists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -653,7 +660,7 @@ Auth Server ID.
 Accepted grant type values, `"authorizationCode"`, `"implicit"`, `"password"` or `"clientCredentials"`. For `"implicit"` value either `userWhitelist` or `groupWhitelist` should be set.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-groupBlacklists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L82">property <b>groupBlacklists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L82">property <b>groupBlacklists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupBlacklists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -661,7 +668,7 @@ Accepted grant type values, `"authorizationCode"`, `"implicit"`, `"password"` or
 Specifies a set of Groups whose Users are to be excluded.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-groupWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L86">property <b>groupWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L86">property <b>groupWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupWhitelists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -669,7 +676,7 @@ Specifies a set of Groups whose Users are to be excluded.
 Specifies a set of Groups whose Users are to be included. Can be set to Group ID or to the following: "EVERYONE".
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -678,7 +685,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-inlineHookId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L90">property <b>inlineHookId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L90">property <b>inlineHookId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inlineHookId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -686,7 +693,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the inline token to trigger.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L94">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L94">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -694,7 +701,7 @@ The ID of the inline token to trigger.
 Auth Server Policy Rule name.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L98">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L98">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -702,7 +709,7 @@ Auth Server Policy Rule name.
 Auth Server Policy ID.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L102">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L102">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -710,7 +717,7 @@ Auth Server Policy ID.
 Priority of the auth server policy rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-refreshTokenLifetimeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L106">property <b>refreshTokenLifetimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L106">property <b>refreshTokenLifetimeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>refreshTokenLifetimeMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -718,15 +725,16 @@ Priority of the auth server policy rule.
 Lifetime of refresh token.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-refreshTokenWindowMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L110">property <b>refreshTokenWindowMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L111">property <b>refreshTokenWindowMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>refreshTokenWindowMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Window in which a refresh token can be used. It can be a value between 10 and 2628000 (5 years).
+Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
+`"refreshTokenWindowMinutes"` must be between `"accessTokenLifetimeMinutes"` and `"refreshTokenLifetimeMinutes"`.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-scopeWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L114">property <b>scopeWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L115">property <b>scopeWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scopeWhitelists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -734,7 +742,7 @@ Window in which a refresh token can be used. It can be a value between 10 and 26
 Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L118">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L119">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -742,7 +750,7 @@ Scopes allowed for this policy rule. They can be whitelisted by name or all can 
 The status of the Auth Server Policy Rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L122">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L123">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -750,7 +758,7 @@ The status of the Auth Server Policy Rule.
 The type of the Auth Server Policy Rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -759,7 +767,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-userBlacklists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L126">property <b>userBlacklists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L127">property <b>userBlacklists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userBlacklists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -767,7 +775,7 @@ deployments.
 Specifies a set of Users to be excluded.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaim-userWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L130">property <b>userWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L131">property <b>userWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userWhitelists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -775,7 +783,7 @@ Specifies a set of Users to be excluded.
 Specifies a set of Users to be included.
 
 <h3 class="pdoc-module-header" id="ServerPolicyRule" data-link-title="ServerPolicyRule">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L36">
         Resource <strong>ServerPolicyRule</strong>
     </a>
 </h3>
@@ -811,7 +819,7 @@ Authorization Server Policy Rule can be imported via the Auth Server ID, Policy 
 ```
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L127"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L128"> <b>constructor</b></a>
 </h4>
 
 
@@ -825,7 +833,7 @@ Create a ServerPolicyRule resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -836,14 +844,14 @@ Get an existing ServerPolicyRule resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -854,15 +862,15 @@ Returns true if the given object is an instance of ServerPolicyRule.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-accessTokenLifetimeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L67">property <b>accessTokenLifetimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L67">property <b>accessTokenLifetimeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessTokenLifetimeMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Lifetime of access token. Can be set to a value between 5 and 1440.
+Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-authServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L71">property <b>authServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L71">property <b>authServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -870,7 +878,7 @@ Lifetime of access token. Can be set to a value between 5 and 1440.
 Auth Server ID.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-grantTypeWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L75">property <b>grantTypeWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L75">property <b>grantTypeWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>grantTypeWhitelists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -878,7 +886,7 @@ Auth Server ID.
 Accepted grant type values, `"authorizationCode"`, `"implicit"`, `"password"` or `"clientCredentials"`. For `"implicit"` value either `userWhitelist` or `groupWhitelist` should be set.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-groupBlacklists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L79">property <b>groupBlacklists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L79">property <b>groupBlacklists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupBlacklists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -886,7 +894,7 @@ Accepted grant type values, `"authorizationCode"`, `"implicit"`, `"password"` or
 Specifies a set of Groups whose Users are to be excluded.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-groupWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L83">property <b>groupWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L83">property <b>groupWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupWhitelists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -894,7 +902,7 @@ Specifies a set of Groups whose Users are to be excluded.
 Specifies a set of Groups whose Users are to be included. Can be set to Group ID or to the following: "EVERYONE".
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -903,7 +911,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-inlineHookId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L87">property <b>inlineHookId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L87">property <b>inlineHookId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inlineHookId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -911,7 +919,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the inline token to trigger.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L91">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L91">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -919,7 +927,7 @@ The ID of the inline token to trigger.
 Auth Server Policy Rule name.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L95">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L95">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -927,7 +935,7 @@ Auth Server Policy Rule name.
 Auth Server Policy ID.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L99">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L99">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -935,7 +943,7 @@ Auth Server Policy ID.
 Priority of the auth server policy rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-refreshTokenLifetimeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L103">property <b>refreshTokenLifetimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L103">property <b>refreshTokenLifetimeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>refreshTokenLifetimeMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -943,15 +951,16 @@ Priority of the auth server policy rule.
 Lifetime of refresh token.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-refreshTokenWindowMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L107">property <b>refreshTokenWindowMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L108">property <b>refreshTokenWindowMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>refreshTokenWindowMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Window in which a refresh token can be used. It can be a value between 10 and 2628000 (5 years).
+Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
+`"refreshTokenWindowMinutes"` must be between `"accessTokenLifetimeMinutes"` and `"refreshTokenLifetimeMinutes"`.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-scopeWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L111">property <b>scopeWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L112">property <b>scopeWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scopeWhitelists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -959,7 +968,7 @@ Window in which a refresh token can be used. It can be a value between 10 and 26
 Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L115">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L116">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -967,7 +976,7 @@ Scopes allowed for this policy rule. They can be whitelisted by name or all can 
 The status of the Auth Server Policy Rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L119">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L120">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -975,7 +984,7 @@ The status of the Auth Server Policy Rule.
 The type of the Auth Server Policy Rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -984,7 +993,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-userBlacklists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L123">property <b>userBlacklists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L124">property <b>userBlacklists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userBlacklists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -992,7 +1001,7 @@ deployments.
 Specifies a set of Users to be excluded.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRule-userWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L127">property <b>userWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L128">property <b>userWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userWhitelists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1000,7 +1009,7 @@ Specifies a set of Users to be excluded.
 Specifies a set of Users to be included.
 
 <h3 class="pdoc-module-header" id="ServerScope" data-link-title="ServerScope">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L33">
         Resource <strong>ServerScope</strong>
     </a>
 </h3>
@@ -1033,7 +1042,7 @@ Okta Auth Server Scope can be imported via the Auth Server ID and Scope ID.
 ```
 
 <h4 class="pdoc-member-header" id="ServerScope-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -1047,7 +1056,7 @@ Create a ServerScope resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServerScope-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -1058,14 +1067,14 @@ Get an existing ServerScope resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServerScope-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServerScope-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1076,7 +1085,7 @@ Returns true if the given object is an instance of ServerScope.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServerScope-authServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L64">property <b>authServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L64">property <b>authServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1084,7 +1093,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Auth Server ID.
 
 <h4 class="pdoc-member-header" id="ServerScope-consent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L68">property <b>consent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L68">property <b>consent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>consent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1092,7 +1101,7 @@ Auth Server ID.
 Indicates whether a consent dialog is needed for the scope. It can be set to `"REQUIRED"` or `"IMPLICIT"`.
 
 <h4 class="pdoc-member-header" id="ServerScope-default">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L72">property <b>default</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L72">property <b>default</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>default: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1100,7 +1109,7 @@ Indicates whether a consent dialog is needed for the scope. It can be set to `"R
 A default scope will be returned in an access token when the client omits the scope parameter in a token request, provided this scope is allowed as part of the access policy rule.
 
 <h4 class="pdoc-member-header" id="ServerScope-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L76">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L76">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1108,7 +1117,7 @@ A default scope will be returned in an access token when the client omits the sc
 Description of the Auth Server Scope.
 
 <h4 class="pdoc-member-header" id="ServerScope-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1117,7 +1126,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServerScope-metadataPublish">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L80">property <b>metadataPublish</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L80">property <b>metadataPublish</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadataPublish: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1125,7 +1134,7 @@ deployments and may be missing (undefined) during planning phases.
 Whether to publish metadata or not. It can be set to `"ALL_CLIENTS"` or `"NO_CLIENTS"`.
 
 <h4 class="pdoc-member-header" id="ServerScope-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L84">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L84">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1133,7 +1142,7 @@ Whether to publish metadata or not. It can be set to `"ALL_CLIENTS"` or `"NO_CLI
 Auth Server scope name.
 
 <h4 class="pdoc-member-header" id="ServerScope-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1144,7 +1153,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getServer" data-link-title="getServer">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/getServer.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServer.ts#L22">
         Function <strong>getServer</strong>
     </a>
 </h3>
@@ -1166,10 +1175,34 @@ const example = pulumi.output(okta.auth.getServer({
 }, { async: true }));
 ```
 
+<h3 class="pdoc-module-header" id="getServerPolicy" data-link-title="getServerPolicy">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServerPolicy.ts#L23">
+        Function <strong>getServerPolicy</strong>
+    </a>
+</h3>
+
+
+<pre class="highlight"><code><span class='kd'></span>getServerPolicy(args: <a href='#GetServerPolicyArgs'>GetServerPolicyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetServerPolicyResult'>GetServerPolicyResult</a>&gt;</code></pre>
+
+
+Use this data source to retrieve a authorization server policy from Okta.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = pulumi.output(okta.auth.getServerPolicy({
+    authServerId: "<auth server id>",
+    name: "staff",
+}, { async: true }));
+```
+
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetServerArgs" data-link-title="GetServerArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/getServer.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServer.ts#L38">
         interface <strong>GetServerArgs</strong>
     </a>
 </h3>
@@ -1179,15 +1212,85 @@ const example = pulumi.output(okta.auth.getServer({
 A collection of arguments for invoking getServer.
 
 <h4 class="pdoc-member-header" id="GetServerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/getServer.ts#L42">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServer.ts#L42">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
 The name of the auth server to retrieve.
 
+<h3 class="pdoc-module-header" id="GetServerPolicyArgs" data-link-title="GetServerPolicyArgs">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServerPolicy.ts#L40">
+        interface <strong>GetServerPolicyArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServerPolicyArgs</span></code></pre>
+
+A collection of arguments for invoking getServerPolicy.
+
+<h4 class="pdoc-member-header" id="GetServerPolicyArgs-authServerId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServerPolicy.ts#L44">property <b>authServerId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>authServerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The ID of the Auth Server.
+
+<h4 class="pdoc-member-header" id="GetServerPolicyArgs-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServerPolicy.ts#L48">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Name of policy to retrieve.
+
+<h3 class="pdoc-module-header" id="GetServerPolicyResult" data-link-title="GetServerPolicyResult">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServerPolicy.ts#L54">
+        interface <strong>GetServerPolicyResult</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServerPolicyResult</span></code></pre>
+
+A collection of values returned by getServerPolicy.
+
+<h4 class="pdoc-member-header" id="GetServerPolicyResult-assignedClients">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServerPolicy.ts#L58">property <b>assignedClients</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>assignedClients: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
+
+list of clients this policy is assigned to. `["ALL_CLIENTS"]` is a special value when policy is assigned to all clients.
+
+<h4 class="pdoc-member-header" id="GetServerPolicyResult-authServerId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServerPolicy.ts#L59">property <b>authServerId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>authServerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetServerPolicyResult-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServerPolicy.ts#L63">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+description of authorization server policy.
+
+<h4 class="pdoc-member-header" id="GetServerPolicyResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServerPolicy.ts#L67">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The provider-assigned unique ID for this managed resource.
+
+<h4 class="pdoc-member-header" id="GetServerPolicyResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServerPolicy.ts#L68">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServerResult" data-link-title="GetServerResult">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/getServer.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServer.ts#L48">
         interface <strong>GetServerResult</strong>
     </a>
 </h3>
@@ -1197,15 +1300,15 @@ The name of the auth server to retrieve.
 A collection of values returned by getServer.
 
 <h4 class="pdoc-member-header" id="GetServerResult-audiences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/getServer.ts#L52">property <b>audiences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServer.ts#L52">property <b>audiences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>audiences: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 
-array of audiences,
+array of audiences.
 
 <h4 class="pdoc-member-header" id="GetServerResult-credentialsLastRotated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/getServer.ts#L56">property <b>credentialsLastRotated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServer.ts#L56">property <b>credentialsLastRotated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentialsLastRotated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1213,7 +1316,7 @@ array of audiences,
 last time credentials were rotated.
 
 <h4 class="pdoc-member-header" id="GetServerResult-credentialsNextRotation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/getServer.ts#L60">property <b>credentialsNextRotation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServer.ts#L60">property <b>credentialsNextRotation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentialsNextRotation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1221,7 +1324,7 @@ last time credentials were rotated.
 next time credentials will be rotated
 
 <h4 class="pdoc-member-header" id="GetServerResult-credentialsRotationMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/getServer.ts#L64">property <b>credentialsRotationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServer.ts#L64">property <b>credentialsRotationMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentialsRotationMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1229,7 +1332,7 @@ next time credentials will be rotated
 mode of credential rotation, auto or manual.
 
 <h4 class="pdoc-member-header" id="GetServerResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/getServer.ts#L68">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServer.ts#L68">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1237,15 +1340,31 @@ mode of credential rotation, auto or manual.
 description of Authorization server.
 
 <h4 class="pdoc-member-header" id="GetServerResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/getServer.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServer.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
 The provider-assigned unique ID for this managed resource.
 
+<h4 class="pdoc-member-header" id="GetServerResult-issuer">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServer.ts#L76">property <b>issuer</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>issuer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The complete URL of the authorization server. This becomes the `iss` claim in an access token.
+
+<h4 class="pdoc-member-header" id="GetServerResult-issuerMode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServer.ts#L80">property <b>issuerMode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>issuerMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Can be set to `"CUSTOM_URL"` or `"ORG_URL"`
+
 <h4 class="pdoc-member-header" id="GetServerResult-kid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/getServer.ts#L76">property <b>kid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServer.ts#L84">property <b>kid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1253,7 +1372,7 @@ The provider-assigned unique ID for this managed resource.
 auth server key id.
 
 <h4 class="pdoc-member-header" id="GetServerResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/getServer.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServer.ts#L88">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1261,7 +1380,7 @@ auth server key id.
 The name of the auth server.
 
 <h4 class="pdoc-member-header" id="GetServerResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/getServer.ts#L84">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/getServer.ts#L92">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1269,7 +1388,7 @@ The name of the auth server.
 the activation status of the authorization server.
 
 <h3 class="pdoc-module-header" id="ServerArgs" data-link-title="ServerArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L201">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L201">
         interface <strong>ServerArgs</strong>
     </a>
 </h3>
@@ -1279,7 +1398,7 @@ the activation status of the authorization server.
 The set of arguments for constructing a Server resource.
 
 <h4 class="pdoc-member-header" id="ServerArgs-audiences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L205">property <b>audiences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L205">property <b>audiences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>audiences: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1287,7 +1406,7 @@ The set of arguments for constructing a Server resource.
 The recipients that the tokens are intended for. This becomes the `aud` claim in an access token.
 
 <h4 class="pdoc-member-header" id="ServerArgs-credentialsRotationMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L209">property <b>credentialsRotationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L209">property <b>credentialsRotationMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentialsRotationMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1295,7 +1414,7 @@ The recipients that the tokens are intended for. This becomes the `aud` claim in
 The key rotation mode for the authorization server. Can be `"AUTO"` or `"MANUAL"`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L213">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L213">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1303,7 +1422,7 @@ The key rotation mode for the authorization server. Can be `"AUTO"` or `"MANUAL"
 The description of the authorization server.
 
 <h4 class="pdoc-member-header" id="ServerArgs-issuerMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L217">property <b>issuerMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L217">property <b>issuerMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuerMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1311,7 +1430,7 @@ The description of the authorization server.
 Allows you to use a custom issuer URL. It can be set to `"CUSTOM_URL"` or `"ORG_URL"`
 
 <h4 class="pdoc-member-header" id="ServerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L221">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L221">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1319,7 +1438,7 @@ Allows you to use a custom issuer URL. It can be set to `"CUSTOM_URL"` or `"ORG_
 The name of the authorization server.
 
 <h4 class="pdoc-member-header" id="ServerArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L225">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L225">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1327,7 +1446,7 @@ The name of the authorization server.
 The status of the auth server. It defaults to `"ACTIVE"`
 
 <h3 class="pdoc-module-header" id="ServerClaimArgs" data-link-title="ServerClaimArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L197">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L197">
         interface <strong>ServerClaimArgs</strong>
     </a>
 </h3>
@@ -1337,15 +1456,15 @@ The status of the auth server. It defaults to `"ACTIVE"`
 The set of arguments for constructing a ServerClaim resource.
 
 <h4 class="pdoc-member-header" id="ServerClaimArgs-alwaysIncludeInToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L201">property <b>alwaysIncludeInToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L201">property <b>alwaysIncludeInToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alwaysIncludeInToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Specifies whether to include claims in token, by default is is set to `true`.
+Specifies whether to include claims in token, by default it is set to `true`.
 
 <h4 class="pdoc-member-header" id="ServerClaimArgs-authServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L205">property <b>authServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L205">property <b>authServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1353,7 +1472,7 @@ Specifies whether to include claims in token, by default is is set to `true`.
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="ServerClaimArgs-claimType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L209">property <b>claimType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L209">property <b>claimType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1361,7 +1480,7 @@ The Application's display name.
 Specifies whether the claim is for an access token `"RESOURCE"` or ID token `"IDENTITY"`.
 
 <h4 class="pdoc-member-header" id="ServerClaimArgs-groupFilterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L213">property <b>groupFilterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L213">property <b>groupFilterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupFilterType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1369,7 +1488,7 @@ Specifies whether the claim is for an access token `"RESOURCE"` or ID token `"ID
 Specifies the type of group filter if `valueType` is `"GROUPS"`. Can be set to one of the following `"STARTS_WITH"`, `"EQUALS"`, `"CONTAINS"`, `"REGEX"`.
 
 <h4 class="pdoc-member-header" id="ServerClaimArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L217">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L217">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1377,7 +1496,7 @@ Specifies the type of group filter if `valueType` is `"GROUPS"`. Can be set to o
 The name of the claim.
 
 <h4 class="pdoc-member-header" id="ServerClaimArgs-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L221">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L221">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1385,7 +1504,7 @@ The name of the claim.
 The list of scopes the auth server claim is tied to.
 
 <h4 class="pdoc-member-header" id="ServerClaimArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L225">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L225">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1393,7 +1512,7 @@ The list of scopes the auth server claim is tied to.
 The status of the application. It defaults to `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="ServerClaimArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L229">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L229">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1401,7 +1520,7 @@ The status of the application. It defaults to `"ACTIVE"`.
 The value of the claim.
 
 <h4 class="pdoc-member-header" id="ServerClaimArgs-valueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L233">property <b>valueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L233">property <b>valueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1409,7 +1528,7 @@ The value of the claim.
 The type of value of the claim. It can be set to `"EXPRESSION"` or `"GROUPS"`. It defaults to `"EXPRESSION"`.
 
 <h3 class="pdoc-module-header" id="ServerClaimState" data-link-title="ServerClaimState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L155">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L155">
         interface <strong>ServerClaimState</strong>
     </a>
 </h3>
@@ -1419,15 +1538,15 @@ The type of value of the claim. It can be set to `"EXPRESSION"` or `"GROUPS"`. I
 Input properties used for looking up and filtering ServerClaim resources.
 
 <h4 class="pdoc-member-header" id="ServerClaimState-alwaysIncludeInToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L159">property <b>alwaysIncludeInToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L159">property <b>alwaysIncludeInToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alwaysIncludeInToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Specifies whether to include claims in token, by default is is set to `true`.
+Specifies whether to include claims in token, by default it is set to `true`.
 
 <h4 class="pdoc-member-header" id="ServerClaimState-authServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L163">property <b>authServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L163">property <b>authServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1435,7 +1554,7 @@ Specifies whether to include claims in token, by default is is set to `true`.
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="ServerClaimState-claimType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L167">property <b>claimType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L167">property <b>claimType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1443,7 +1562,7 @@ The Application's display name.
 Specifies whether the claim is for an access token `"RESOURCE"` or ID token `"IDENTITY"`.
 
 <h4 class="pdoc-member-header" id="ServerClaimState-groupFilterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L171">property <b>groupFilterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L171">property <b>groupFilterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupFilterType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1451,7 +1570,7 @@ Specifies whether the claim is for an access token `"RESOURCE"` or ID token `"ID
 Specifies the type of group filter if `valueType` is `"GROUPS"`. Can be set to one of the following `"STARTS_WITH"`, `"EQUALS"`, `"CONTAINS"`, `"REGEX"`.
 
 <h4 class="pdoc-member-header" id="ServerClaimState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L175">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L175">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1459,7 +1578,7 @@ Specifies the type of group filter if `valueType` is `"GROUPS"`. Can be set to o
 The name of the claim.
 
 <h4 class="pdoc-member-header" id="ServerClaimState-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L179">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L179">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1467,7 +1586,7 @@ The name of the claim.
 The list of scopes the auth server claim is tied to.
 
 <h4 class="pdoc-member-header" id="ServerClaimState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L183">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L183">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1475,7 +1594,7 @@ The list of scopes the auth server claim is tied to.
 The status of the application. It defaults to `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="ServerClaimState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L187">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L187">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1483,7 +1602,7 @@ The status of the application. It defaults to `"ACTIVE"`.
 The value of the claim.
 
 <h4 class="pdoc-member-header" id="ServerClaimState-valueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverClaim.ts#L191">property <b>valueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverClaim.ts#L191">property <b>valueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1491,7 +1610,7 @@ The value of the claim.
 The type of value of the claim. It can be set to `"EXPRESSION"` or `"GROUPS"`. It defaults to `"EXPRESSION"`.
 
 <h3 class="pdoc-module-header" id="ServerPolicyArgs" data-link-title="ServerPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L185">
         interface <strong>ServerPolicyArgs</strong>
     </a>
 </h3>
@@ -1501,7 +1620,7 @@ The type of value of the claim. It can be set to `"EXPRESSION"` or `"GROUPS"`. I
 The set of arguments for constructing a ServerPolicy resource.
 
 <h4 class="pdoc-member-header" id="ServerPolicyArgs-authServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L185">property <b>authServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L189">property <b>authServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1509,15 +1628,15 @@ The set of arguments for constructing a ServerPolicy resource.
 The ID of the Auth Server.
 
 <h4 class="pdoc-member-header" id="ServerPolicyArgs-clientWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L189">property <b>clientWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L193">property <b>clientWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientWhitelists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
-The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist for all clients. Otherwise it is a list of client ids.
+The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist all clients, otherwise it is a list of client ids.
 
 <h4 class="pdoc-member-header" id="ServerPolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L193">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L197">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1525,7 +1644,7 @@ The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value th
 The description of the Auth Server Policy.
 
 <h4 class="pdoc-member-header" id="ServerPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L197">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L201">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1533,7 +1652,7 @@ The description of the Auth Server Policy.
 The name of the Auth Server Policy.
 
 <h4 class="pdoc-member-header" id="ServerPolicyArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L201">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L205">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1541,7 +1660,7 @@ The name of the Auth Server Policy.
 The priority of the Auth Server Policy.
 
 <h4 class="pdoc-member-header" id="ServerPolicyArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L205">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L209">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1549,15 +1668,19 @@ The priority of the Auth Server Policy.
 The status of the Auth Server Policy.
 
 <h4 class="pdoc-member-header" id="ServerPolicyArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L209">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L215">property <b>type</b></a>
 </h4>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Policy type can only be of value &#39;OAUTH_AUTHORIZATION_POLICY&#39;, so this will be removed in the future, or set as &#39;Computed&#39; value
+</div>
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The type of the Auth Server Policy.
 
 <h3 class="pdoc-module-header" id="ServerPolicyClaimArgs" data-link-title="ServerPolicyClaimArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L278">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L280">
         interface <strong>ServerPolicyClaimArgs</strong>
     </a>
 </h3>
@@ -1567,15 +1690,15 @@ The type of the Auth Server Policy.
 The set of arguments for constructing a ServerPolicyClaim resource.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimArgs-accessTokenLifetimeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L282">property <b>accessTokenLifetimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L284">property <b>accessTokenLifetimeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessTokenLifetimeMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Lifetime of access token. Can be set to a value between 5 and 1440.
+Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimArgs-authServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L286">property <b>authServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L288">property <b>authServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1583,7 +1706,7 @@ Lifetime of access token. Can be set to a value between 5 and 1440.
 Auth Server ID.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimArgs-grantTypeWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L290">property <b>grantTypeWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L292">property <b>grantTypeWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grantTypeWhitelists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1591,7 +1714,7 @@ Auth Server ID.
 Accepted grant type values, `"authorizationCode"`, `"implicit"`, `"password"` or `"clientCredentials"`. For `"implicit"` value either `userWhitelist` or `groupWhitelist` should be set.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimArgs-groupBlacklists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L294">property <b>groupBlacklists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L296">property <b>groupBlacklists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupBlacklists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1599,7 +1722,7 @@ Accepted grant type values, `"authorizationCode"`, `"implicit"`, `"password"` or
 Specifies a set of Groups whose Users are to be excluded.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimArgs-groupWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L298">property <b>groupWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L300">property <b>groupWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1607,7 +1730,7 @@ Specifies a set of Groups whose Users are to be excluded.
 Specifies a set of Groups whose Users are to be included. Can be set to Group ID or to the following: "EVERYONE".
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimArgs-inlineHookId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L302">property <b>inlineHookId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L304">property <b>inlineHookId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inlineHookId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1615,7 +1738,7 @@ Specifies a set of Groups whose Users are to be included. Can be set to Group ID
 The ID of the inline token to trigger.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L306">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L308">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1623,7 +1746,7 @@ The ID of the inline token to trigger.
 Auth Server Policy Rule name.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimArgs-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L310">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L312">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1631,7 +1754,7 @@ Auth Server Policy Rule name.
 Auth Server Policy ID.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L314">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L316">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1639,7 +1762,7 @@ Auth Server Policy ID.
 Priority of the auth server policy rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimArgs-refreshTokenLifetimeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L318">property <b>refreshTokenLifetimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L320">property <b>refreshTokenLifetimeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>refreshTokenLifetimeMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1647,15 +1770,16 @@ Priority of the auth server policy rule.
 Lifetime of refresh token.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimArgs-refreshTokenWindowMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L322">property <b>refreshTokenWindowMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L325">property <b>refreshTokenWindowMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>refreshTokenWindowMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Window in which a refresh token can be used. It can be a value between 10 and 2628000 (5 years).
+Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
+`"refreshTokenWindowMinutes"` must be between `"accessTokenLifetimeMinutes"` and `"refreshTokenLifetimeMinutes"`.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimArgs-scopeWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L326">property <b>scopeWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L329">property <b>scopeWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopeWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1663,7 +1787,7 @@ Window in which a refresh token can be used. It can be a value between 10 and 26
 Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L330">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L333">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1671,7 +1795,7 @@ Scopes allowed for this policy rule. They can be whitelisted by name or all can 
 The status of the Auth Server Policy Rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L334">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L337">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1679,7 +1803,7 @@ The status of the Auth Server Policy Rule.
 The type of the Auth Server Policy Rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimArgs-userBlacklists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L338">property <b>userBlacklists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L341">property <b>userBlacklists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userBlacklists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1687,7 +1811,7 @@ The type of the Auth Server Policy Rule.
 Specifies a set of Users to be excluded.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimArgs-userWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L342">property <b>userWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L345">property <b>userWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1695,7 +1819,7 @@ Specifies a set of Users to be excluded.
 Specifies a set of Users to be included.
 
 <h3 class="pdoc-module-header" id="ServerPolicyClaimState" data-link-title="ServerPolicyClaimState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L208">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L209">
         interface <strong>ServerPolicyClaimState</strong>
     </a>
 </h3>
@@ -1705,15 +1829,15 @@ Specifies a set of Users to be included.
 Input properties used for looking up and filtering ServerPolicyClaim resources.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimState-accessTokenLifetimeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L212">property <b>accessTokenLifetimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L213">property <b>accessTokenLifetimeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessTokenLifetimeMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Lifetime of access token. Can be set to a value between 5 and 1440.
+Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimState-authServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L216">property <b>authServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L217">property <b>authServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1721,7 +1845,7 @@ Lifetime of access token. Can be set to a value between 5 and 1440.
 Auth Server ID.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimState-grantTypeWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L220">property <b>grantTypeWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L221">property <b>grantTypeWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grantTypeWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1729,7 +1853,7 @@ Auth Server ID.
 Accepted grant type values, `"authorizationCode"`, `"implicit"`, `"password"` or `"clientCredentials"`. For `"implicit"` value either `userWhitelist` or `groupWhitelist` should be set.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimState-groupBlacklists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L224">property <b>groupBlacklists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L225">property <b>groupBlacklists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupBlacklists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1737,7 +1861,7 @@ Accepted grant type values, `"authorizationCode"`, `"implicit"`, `"password"` or
 Specifies a set of Groups whose Users are to be excluded.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimState-groupWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L228">property <b>groupWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L229">property <b>groupWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1745,7 +1869,7 @@ Specifies a set of Groups whose Users are to be excluded.
 Specifies a set of Groups whose Users are to be included. Can be set to Group ID or to the following: "EVERYONE".
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimState-inlineHookId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L232">property <b>inlineHookId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L233">property <b>inlineHookId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inlineHookId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1753,7 +1877,7 @@ Specifies a set of Groups whose Users are to be included. Can be set to Group ID
 The ID of the inline token to trigger.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L236">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L237">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1761,7 +1885,7 @@ The ID of the inline token to trigger.
 Auth Server Policy Rule name.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimState-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L240">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L241">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1769,7 +1893,7 @@ Auth Server Policy Rule name.
 Auth Server Policy ID.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L244">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L245">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1777,7 +1901,7 @@ Auth Server Policy ID.
 Priority of the auth server policy rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimState-refreshTokenLifetimeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L248">property <b>refreshTokenLifetimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L249">property <b>refreshTokenLifetimeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>refreshTokenLifetimeMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1785,15 +1909,16 @@ Priority of the auth server policy rule.
 Lifetime of refresh token.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimState-refreshTokenWindowMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L252">property <b>refreshTokenWindowMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L254">property <b>refreshTokenWindowMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>refreshTokenWindowMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Window in which a refresh token can be used. It can be a value between 10 and 2628000 (5 years).
+Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
+`"refreshTokenWindowMinutes"` must be between `"accessTokenLifetimeMinutes"` and `"refreshTokenLifetimeMinutes"`.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimState-scopeWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L256">property <b>scopeWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L258">property <b>scopeWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopeWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1801,7 +1926,7 @@ Window in which a refresh token can be used. It can be a value between 10 and 26
 Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L260">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L262">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1809,7 +1934,7 @@ Scopes allowed for this policy rule. They can be whitelisted by name or all can 
 The status of the Auth Server Policy Rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L264">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L266">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1817,7 +1942,7 @@ The status of the Auth Server Policy Rule.
 The type of the Auth Server Policy Rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimState-userBlacklists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L268">property <b>userBlacklists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L270">property <b>userBlacklists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userBlacklists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1825,7 +1950,7 @@ The type of the Auth Server Policy Rule.
 Specifies a set of Users to be excluded.
 
 <h4 class="pdoc-member-header" id="ServerPolicyClaimState-userWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyClaim.ts#L272">property <b>userWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyClaim.ts#L274">property <b>userWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1833,7 +1958,7 @@ Specifies a set of Users to be excluded.
 Specifies a set of Users to be included.
 
 <h3 class="pdoc-module-header" id="ServerPolicyRuleArgs" data-link-title="ServerPolicyRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L274">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L276">
         interface <strong>ServerPolicyRuleArgs</strong>
     </a>
 </h3>
@@ -1843,15 +1968,15 @@ Specifies a set of Users to be included.
 The set of arguments for constructing a ServerPolicyRule resource.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleArgs-accessTokenLifetimeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L278">property <b>accessTokenLifetimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L280">property <b>accessTokenLifetimeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessTokenLifetimeMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Lifetime of access token. Can be set to a value between 5 and 1440.
+Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleArgs-authServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L282">property <b>authServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L284">property <b>authServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1859,7 +1984,7 @@ Lifetime of access token. Can be set to a value between 5 and 1440.
 Auth Server ID.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleArgs-grantTypeWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L286">property <b>grantTypeWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L288">property <b>grantTypeWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grantTypeWhitelists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1867,7 +1992,7 @@ Auth Server ID.
 Accepted grant type values, `"authorizationCode"`, `"implicit"`, `"password"` or `"clientCredentials"`. For `"implicit"` value either `userWhitelist` or `groupWhitelist` should be set.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleArgs-groupBlacklists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L290">property <b>groupBlacklists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L292">property <b>groupBlacklists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupBlacklists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1875,7 +2000,7 @@ Accepted grant type values, `"authorizationCode"`, `"implicit"`, `"password"` or
 Specifies a set of Groups whose Users are to be excluded.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleArgs-groupWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L294">property <b>groupWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L296">property <b>groupWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1883,7 +2008,7 @@ Specifies a set of Groups whose Users are to be excluded.
 Specifies a set of Groups whose Users are to be included. Can be set to Group ID or to the following: "EVERYONE".
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleArgs-inlineHookId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L298">property <b>inlineHookId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L300">property <b>inlineHookId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inlineHookId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1891,7 +2016,7 @@ Specifies a set of Groups whose Users are to be included. Can be set to Group ID
 The ID of the inline token to trigger.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L302">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L304">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1899,7 +2024,7 @@ The ID of the inline token to trigger.
 Auth Server Policy Rule name.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleArgs-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L306">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L308">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1907,7 +2032,7 @@ Auth Server Policy Rule name.
 Auth Server Policy ID.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L310">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L312">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1915,7 +2040,7 @@ Auth Server Policy ID.
 Priority of the auth server policy rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleArgs-refreshTokenLifetimeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L314">property <b>refreshTokenLifetimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L316">property <b>refreshTokenLifetimeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>refreshTokenLifetimeMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1923,15 +2048,16 @@ Priority of the auth server policy rule.
 Lifetime of refresh token.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleArgs-refreshTokenWindowMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L318">property <b>refreshTokenWindowMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L321">property <b>refreshTokenWindowMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>refreshTokenWindowMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Window in which a refresh token can be used. It can be a value between 10 and 2628000 (5 years).
+Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
+`"refreshTokenWindowMinutes"` must be between `"accessTokenLifetimeMinutes"` and `"refreshTokenLifetimeMinutes"`.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleArgs-scopeWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L322">property <b>scopeWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L325">property <b>scopeWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopeWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1939,7 +2065,7 @@ Window in which a refresh token can be used. It can be a value between 10 and 26
 Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L326">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L329">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1947,7 +2073,7 @@ Scopes allowed for this policy rule. They can be whitelisted by name or all can 
 The status of the Auth Server Policy Rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L330">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L333">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1955,7 +2081,7 @@ The status of the Auth Server Policy Rule.
 The type of the Auth Server Policy Rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleArgs-userBlacklists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L334">property <b>userBlacklists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L337">property <b>userBlacklists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userBlacklists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1963,7 +2089,7 @@ The type of the Auth Server Policy Rule.
 Specifies a set of Users to be excluded.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleArgs-userWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L338">property <b>userWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L341">property <b>userWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1971,7 +2097,7 @@ Specifies a set of Users to be excluded.
 Specifies a set of Users to be included.
 
 <h3 class="pdoc-module-header" id="ServerPolicyRuleState" data-link-title="ServerPolicyRuleState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L204">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L205">
         interface <strong>ServerPolicyRuleState</strong>
     </a>
 </h3>
@@ -1981,15 +2107,15 @@ Specifies a set of Users to be included.
 Input properties used for looking up and filtering ServerPolicyRule resources.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleState-accessTokenLifetimeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L208">property <b>accessTokenLifetimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L209">property <b>accessTokenLifetimeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessTokenLifetimeMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Lifetime of access token. Can be set to a value between 5 and 1440.
+Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleState-authServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L212">property <b>authServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L213">property <b>authServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1997,7 +2123,7 @@ Lifetime of access token. Can be set to a value between 5 and 1440.
 Auth Server ID.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleState-grantTypeWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L216">property <b>grantTypeWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L217">property <b>grantTypeWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grantTypeWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2005,7 +2131,7 @@ Auth Server ID.
 Accepted grant type values, `"authorizationCode"`, `"implicit"`, `"password"` or `"clientCredentials"`. For `"implicit"` value either `userWhitelist` or `groupWhitelist` should be set.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleState-groupBlacklists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L220">property <b>groupBlacklists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L221">property <b>groupBlacklists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupBlacklists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2013,7 +2139,7 @@ Accepted grant type values, `"authorizationCode"`, `"implicit"`, `"password"` or
 Specifies a set of Groups whose Users are to be excluded.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleState-groupWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L224">property <b>groupWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L225">property <b>groupWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2021,7 +2147,7 @@ Specifies a set of Groups whose Users are to be excluded.
 Specifies a set of Groups whose Users are to be included. Can be set to Group ID or to the following: "EVERYONE".
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleState-inlineHookId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L228">property <b>inlineHookId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L229">property <b>inlineHookId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inlineHookId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2029,7 +2155,7 @@ Specifies a set of Groups whose Users are to be included. Can be set to Group ID
 The ID of the inline token to trigger.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L232">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L233">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2037,7 +2163,7 @@ The ID of the inline token to trigger.
 Auth Server Policy Rule name.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleState-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L236">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L237">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2045,7 +2171,7 @@ Auth Server Policy Rule name.
 Auth Server Policy ID.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L240">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L241">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2053,7 +2179,7 @@ Auth Server Policy ID.
 Priority of the auth server policy rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleState-refreshTokenLifetimeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L244">property <b>refreshTokenLifetimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L245">property <b>refreshTokenLifetimeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>refreshTokenLifetimeMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2061,15 +2187,16 @@ Priority of the auth server policy rule.
 Lifetime of refresh token.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleState-refreshTokenWindowMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L248">property <b>refreshTokenWindowMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L250">property <b>refreshTokenWindowMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>refreshTokenWindowMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Window in which a refresh token can be used. It can be a value between 10 and 2628000 (5 years).
+Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
+`"refreshTokenWindowMinutes"` must be between `"accessTokenLifetimeMinutes"` and `"refreshTokenLifetimeMinutes"`.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleState-scopeWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L252">property <b>scopeWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L254">property <b>scopeWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopeWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2077,7 +2204,7 @@ Window in which a refresh token can be used. It can be a value between 10 and 26
 Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L256">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L258">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2085,7 +2212,7 @@ Scopes allowed for this policy rule. They can be whitelisted by name or all can 
 The status of the Auth Server Policy Rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L260">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L262">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2093,7 +2220,7 @@ The status of the Auth Server Policy Rule.
 The type of the Auth Server Policy Rule.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleState-userBlacklists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L264">property <b>userBlacklists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L266">property <b>userBlacklists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userBlacklists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2101,7 +2228,7 @@ The type of the Auth Server Policy Rule.
 Specifies a set of Users to be excluded.
 
 <h4 class="pdoc-member-header" id="ServerPolicyRuleState-userWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicyRule.ts#L268">property <b>userWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicyRule.ts#L270">property <b>userWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2109,7 +2236,7 @@ Specifies a set of Users to be excluded.
 Specifies a set of Users to be included.
 
 <h3 class="pdoc-module-header" id="ServerPolicyState" data-link-title="ServerPolicyState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L149">
         interface <strong>ServerPolicyState</strong>
     </a>
 </h3>
@@ -2119,7 +2246,7 @@ Specifies a set of Users to be included.
 Input properties used for looking up and filtering ServerPolicy resources.
 
 <h4 class="pdoc-member-header" id="ServerPolicyState-authServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L151">property <b>authServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L153">property <b>authServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2127,15 +2254,15 @@ Input properties used for looking up and filtering ServerPolicy resources.
 The ID of the Auth Server.
 
 <h4 class="pdoc-member-header" id="ServerPolicyState-clientWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L155">property <b>clientWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L157">property <b>clientWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
-The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist for all clients. Otherwise it is a list of client ids.
+The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value that can be used to whitelist all clients, otherwise it is a list of client ids.
 
 <h4 class="pdoc-member-header" id="ServerPolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L159">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L161">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2143,7 +2270,7 @@ The clients to whitelist the policy for. `["ALL_CLIENTS"]` is a special value th
 The description of the Auth Server Policy.
 
 <h4 class="pdoc-member-header" id="ServerPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L163">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L165">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2151,7 +2278,7 @@ The description of the Auth Server Policy.
 The name of the Auth Server Policy.
 
 <h4 class="pdoc-member-header" id="ServerPolicyState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L167">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L169">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2159,7 +2286,7 @@ The name of the Auth Server Policy.
 The priority of the Auth Server Policy.
 
 <h4 class="pdoc-member-header" id="ServerPolicyState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L171">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L173">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2167,15 +2294,19 @@ The priority of the Auth Server Policy.
 The status of the Auth Server Policy.
 
 <h4 class="pdoc-member-header" id="ServerPolicyState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverPolicy.ts#L175">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverPolicy.ts#L179">property <b>type</b></a>
 </h4>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Policy type can only be of value &#39;OAUTH_AUTHORIZATION_POLICY&#39;, so this will be removed in the future, or set as &#39;Computed&#39; value
+</div>
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The type of the Auth Server Policy.
 
 <h3 class="pdoc-module-header" id="ServerScopeArgs" data-link-title="ServerScopeArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L160">
         interface <strong>ServerScopeArgs</strong>
     </a>
 </h3>
@@ -2185,7 +2316,7 @@ The type of the Auth Server Policy.
 The set of arguments for constructing a ServerScope resource.
 
 <h4 class="pdoc-member-header" id="ServerScopeArgs-authServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L164">property <b>authServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L164">property <b>authServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2193,7 +2324,7 @@ The set of arguments for constructing a ServerScope resource.
 Auth Server ID.
 
 <h4 class="pdoc-member-header" id="ServerScopeArgs-consent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L168">property <b>consent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L168">property <b>consent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2201,7 +2332,7 @@ Auth Server ID.
 Indicates whether a consent dialog is needed for the scope. It can be set to `"REQUIRED"` or `"IMPLICIT"`.
 
 <h4 class="pdoc-member-header" id="ServerScopeArgs-default">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L172">property <b>default</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L172">property <b>default</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>default?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2209,7 +2340,7 @@ Indicates whether a consent dialog is needed for the scope. It can be set to `"R
 A default scope will be returned in an access token when the client omits the scope parameter in a token request, provided this scope is allowed as part of the access policy rule.
 
 <h4 class="pdoc-member-header" id="ServerScopeArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L176">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L176">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2217,7 +2348,7 @@ A default scope will be returned in an access token when the client omits the sc
 Description of the Auth Server Scope.
 
 <h4 class="pdoc-member-header" id="ServerScopeArgs-metadataPublish">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L180">property <b>metadataPublish</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L180">property <b>metadataPublish</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadataPublish?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2225,7 +2356,7 @@ Description of the Auth Server Scope.
 Whether to publish metadata or not. It can be set to `"ALL_CLIENTS"` or `"NO_CLIENTS"`.
 
 <h4 class="pdoc-member-header" id="ServerScopeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L184">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L184">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2233,7 +2364,7 @@ Whether to publish metadata or not. It can be set to `"ALL_CLIENTS"` or `"NO_CLI
 Auth Server scope name.
 
 <h3 class="pdoc-module-header" id="ServerScopeState" data-link-title="ServerScopeState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L130">
         interface <strong>ServerScopeState</strong>
     </a>
 </h3>
@@ -2243,7 +2374,7 @@ Auth Server scope name.
 Input properties used for looking up and filtering ServerScope resources.
 
 <h4 class="pdoc-member-header" id="ServerScopeState-authServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L134">property <b>authServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L134">property <b>authServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2251,7 +2382,7 @@ Input properties used for looking up and filtering ServerScope resources.
 Auth Server ID.
 
 <h4 class="pdoc-member-header" id="ServerScopeState-consent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L138">property <b>consent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L138">property <b>consent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2259,7 +2390,7 @@ Auth Server ID.
 Indicates whether a consent dialog is needed for the scope. It can be set to `"REQUIRED"` or `"IMPLICIT"`.
 
 <h4 class="pdoc-member-header" id="ServerScopeState-default">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L142">property <b>default</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L142">property <b>default</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>default?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2267,7 +2398,7 @@ Indicates whether a consent dialog is needed for the scope. It can be set to `"R
 A default scope will be returned in an access token when the client omits the scope parameter in a token request, provided this scope is allowed as part of the access policy rule.
 
 <h4 class="pdoc-member-header" id="ServerScopeState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L146">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L146">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2275,7 +2406,7 @@ A default scope will be returned in an access token when the client omits the sc
 Description of the Auth Server Scope.
 
 <h4 class="pdoc-member-header" id="ServerScopeState-metadataPublish">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L150">property <b>metadataPublish</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L150">property <b>metadataPublish</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadataPublish?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2283,7 +2414,7 @@ Description of the Auth Server Scope.
 Whether to publish metadata or not. It can be set to `"ALL_CLIENTS"` or `"NO_CLIENTS"`.
 
 <h4 class="pdoc-member-header" id="ServerScopeState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/serverScope.ts#L154">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/serverScope.ts#L154">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2291,7 +2422,7 @@ Whether to publish metadata or not. It can be set to `"ALL_CLIENTS"` or `"NO_CLI
 Auth Server scope name.
 
 <h3 class="pdoc-module-header" id="ServerState" data-link-title="ServerState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L155">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L155">
         interface <strong>ServerState</strong>
     </a>
 </h3>
@@ -2301,7 +2432,7 @@ Auth Server scope name.
 Input properties used for looking up and filtering Server resources.
 
 <h4 class="pdoc-member-header" id="ServerState-audiences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L159">property <b>audiences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L159">property <b>audiences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>audiences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2309,7 +2440,7 @@ Input properties used for looking up and filtering Server resources.
 The recipients that the tokens are intended for. This becomes the `aud` claim in an access token.
 
 <h4 class="pdoc-member-header" id="ServerState-credentialsLastRotated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L163">property <b>credentialsLastRotated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L163">property <b>credentialsLastRotated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentialsLastRotated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2317,7 +2448,7 @@ The recipients that the tokens are intended for. This becomes the `aud` claim in
 The timestamp when the authorization server started to use the `kid` for signing tokens.
 
 <h4 class="pdoc-member-header" id="ServerState-credentialsNextRotation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L167">property <b>credentialsNextRotation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L167">property <b>credentialsNextRotation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentialsNextRotation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2325,7 +2456,7 @@ The timestamp when the authorization server started to use the `kid` for signing
 The timestamp when the authorization server changes the key for signing tokens. Only returned when `credentialsRotationMode` is `"AUTO"`.
 
 <h4 class="pdoc-member-header" id="ServerState-credentialsRotationMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L171">property <b>credentialsRotationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L171">property <b>credentialsRotationMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentialsRotationMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2333,7 +2464,7 @@ The timestamp when the authorization server changes the key for signing tokens. 
 The key rotation mode for the authorization server. Can be `"AUTO"` or `"MANUAL"`.
 
 <h4 class="pdoc-member-header" id="ServerState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L175">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L175">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2341,7 +2472,7 @@ The key rotation mode for the authorization server. Can be `"AUTO"` or `"MANUAL"
 The description of the authorization server.
 
 <h4 class="pdoc-member-header" id="ServerState-issuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L179">property <b>issuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L179">property <b>issuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2349,7 +2480,7 @@ The description of the authorization server.
 The complete URL for a Custom Authorization Server. This becomes the `iss` claim in an access token.
 
 <h4 class="pdoc-member-header" id="ServerState-issuerMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L183">property <b>issuerMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L183">property <b>issuerMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuerMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2357,7 +2488,7 @@ The complete URL for a Custom Authorization Server. This becomes the `iss` claim
 Allows you to use a custom issuer URL. It can be set to `"CUSTOM_URL"` or `"ORG_URL"`
 
 <h4 class="pdoc-member-header" id="ServerState-kid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L187">property <b>kid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L187">property <b>kid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2365,7 +2496,7 @@ Allows you to use a custom issuer URL. It can be set to `"CUSTOM_URL"` or `"ORG_
 The ID of the JSON Web Key used for signing tokens issued by the authorization server.
 
 <h4 class="pdoc-member-header" id="ServerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L191">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L191">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2373,7 +2504,7 @@ The ID of the JSON Web Key used for signing tokens issued by the authorization s
 The name of the authorization server.
 
 <h4 class="pdoc-member-header" id="ServerState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/auth/server.ts#L195">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/auth/server.ts#L195">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

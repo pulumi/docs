@@ -3,7 +3,7 @@ title: "Module user"
 title_tag: "Module user | Package @pulumi/okta | Node.js SDK"
 linktitle: "user"
 meta_desc: "Explore members of the user module in the @pulumi/okta package."
-git_sha: "d8223ec34121f866677918fc6244e020f13ce023"
+git_sha: "bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c"
 block_external_search_index: true
 ---
 
@@ -53,7 +53,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="BaseSchema" data-link-title="BaseSchema">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L41">
         Resource <strong>BaseSchema</strong>
     </a>
 </h3>
@@ -94,7 +94,7 @@ User schema property of default user type can be imported via the property index
 ```
 
 <h4 class="pdoc-member-header" id="BaseSchema-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L100"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L100"> <b>constructor</b></a>
 </h4>
 
 
@@ -108,7 +108,7 @@ Create a BaseSchema resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BaseSchema-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -119,14 +119,14 @@ Get an existing BaseSchema resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BaseSchema-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BaseSchema-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -137,7 +137,7 @@ Returns true if the given object is an instance of BaseSchema.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BaseSchema-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -146,7 +146,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BaseSchema-index">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L72">property <b>index</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L72">property <b>index</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>index: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ deployments and may be missing (undefined) during planning phases.
 The property name.
 
 <h4 class="pdoc-member-header" id="BaseSchema-master">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L76">property <b>master</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L76">property <b>master</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>master: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ The property name.
 Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
 
 <h4 class="pdoc-member-header" id="BaseSchema-pattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L80">property <b>pattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L80">property <b>pattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ Master priority for the user schema property. It can be set to `"PROFILE_MASTER"
 The validation pattern to use for the subschema, only available for `login` property. Must be in form of `.+`, or `[<pattern>]+`.
 
 <h4 class="pdoc-member-header" id="BaseSchema-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L84">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L84">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -178,7 +178,7 @@ The validation pattern to use for the subschema, only available for `login` prop
 Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
 
 <h4 class="pdoc-member-header" id="BaseSchema-required">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L88">property <b>required</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L88">property <b>required</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>required: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -186,7 +186,7 @@ Access control permissions for the property. It can be set to `"READ_WRITE"`, `"
 Whether the property is required for this application's users.
 
 <h4 class="pdoc-member-header" id="BaseSchema-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L92">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L92">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -194,7 +194,7 @@ Whether the property is required for this application's users.
 The property display name.
 
 <h4 class="pdoc-member-header" id="BaseSchema-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L96">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L96">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -202,7 +202,7 @@ The property display name.
 The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 
 <h4 class="pdoc-member-header" id="BaseSchema-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -211,7 +211,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="BaseSchema-userType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L100">property <b>userType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L100">property <b>userType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -219,7 +219,7 @@ deployments.
 User type ID
 
 <h3 class="pdoc-module-header" id="Schema" data-link-title="Schema">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L44">
         Resource <strong>Schema</strong>
     </a>
 </h3>
@@ -262,7 +262,7 @@ User schema property of default user type can be imported via the property index
 ```
 
 <h4 class="pdoc-member-header" id="Schema-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L151"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L151"> <b>constructor</b></a>
 </h4>
 
 
@@ -276,7 +276,7 @@ Create a Schema resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Schema-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -287,14 +287,14 @@ Get an existing Schema resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Schema-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Schema-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -305,7 +305,7 @@ Returns true if the given object is an instance of Schema.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Schema-arrayEnums">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L75">property <b>arrayEnums</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L75">property <b>arrayEnums</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arrayEnums: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -313,7 +313,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Array of values that an array property's items can be set to.
 
 <h4 class="pdoc-member-header" id="Schema-arrayOneOfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L79">property <b>arrayOneOfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L79">property <b>arrayOneOfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arrayOneOfs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#SchemaArrayOneOf'>SchemaArrayOneOf</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -321,7 +321,7 @@ Array of values that an array property's items can be set to.
 Display name and value an enum array can be set to.
 
 <h4 class="pdoc-member-header" id="Schema-arrayType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L83">property <b>arrayType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L83">property <b>arrayType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arrayType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -329,7 +329,7 @@ Display name and value an enum array can be set to.
 The type of the array elements if `type` is set to `"array"`.
 
 <h4 class="pdoc-member-header" id="Schema-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L87">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L87">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -337,7 +337,7 @@ The type of the array elements if `type` is set to `"array"`.
 The description of the user schema property.
 
 <h4 class="pdoc-member-header" id="Schema-enums">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L91">property <b>enums</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L91">property <b>enums</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enums: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -345,7 +345,7 @@ The description of the user schema property.
 Array of values a primitive property can be set to. See `arrayEnum` for arrays.
 
 <h4 class="pdoc-member-header" id="Schema-externalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L95">property <b>externalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L95">property <b>externalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -353,7 +353,7 @@ Array of values a primitive property can be set to. See `arrayEnum` for arrays.
 External name of the user schema property.
 
 <h4 class="pdoc-member-header" id="Schema-externalNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L99">property <b>externalNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L99">property <b>externalNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalNamespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -361,7 +361,7 @@ External name of the user schema property.
 External name of the user schema property.
 
 <h4 class="pdoc-member-header" id="Schema-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -370,7 +370,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Schema-index">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L103">property <b>index</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L103">property <b>index</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>index: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -378,7 +378,7 @@ deployments and may be missing (undefined) during planning phases.
 The property name.
 
 <h4 class="pdoc-member-header" id="Schema-master">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L107">property <b>master</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L107">property <b>master</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>master: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -386,7 +386,7 @@ The property name.
 Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
 
 <h4 class="pdoc-member-header" id="Schema-maxLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L111">property <b>maxLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L111">property <b>maxLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -394,7 +394,7 @@ Master priority for the user schema property. It can be set to `"PROFILE_MASTER"
 The maximum length of the user property value. Only applies to type `"string"`.
 
 <h4 class="pdoc-member-header" id="Schema-minLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L115">property <b>minLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L115">property <b>minLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -402,7 +402,7 @@ The maximum length of the user property value. Only applies to type `"string"`.
 The minimum length of the user property value. Only applies to type `"string"`.
 
 <h4 class="pdoc-member-header" id="Schema-oneOfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L119">property <b>oneOfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L119">property <b>oneOfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>oneOfs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#SchemaOneOf'>SchemaOneOf</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -410,7 +410,7 @@ The minimum length of the user property value. Only applies to type `"string"`.
 Array of maps containing a mapping for display name to enum value.
 
 <h4 class="pdoc-member-header" id="Schema-pattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L123">property <b>pattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L123">property <b>pattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -418,7 +418,7 @@ Array of maps containing a mapping for display name to enum value.
 The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
 
 <h4 class="pdoc-member-header" id="Schema-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L127">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L127">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -426,7 +426,7 @@ The validation pattern to use for the subschema. Must be in form of '.+', or '[<
 Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
 
 <h4 class="pdoc-member-header" id="Schema-required">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L131">property <b>required</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L131">property <b>required</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>required: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -434,7 +434,7 @@ Access control permissions for the property. It can be set to `"READ_WRITE"`, `"
 Whether the property is required for this application's users.
 
 <h4 class="pdoc-member-header" id="Schema-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L135">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L135">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -442,7 +442,7 @@ Whether the property is required for this application's users.
 determines whether an app user attribute can be set at the Individual or Group Level.
 
 <h4 class="pdoc-member-header" id="Schema-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L139">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L139">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -450,7 +450,7 @@ determines whether an app user attribute can be set at the Individual or Group L
 display name for the enum value.
 
 <h4 class="pdoc-member-header" id="Schema-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L143">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L143">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -458,7 +458,7 @@ display name for the enum value.
 The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 
 <h4 class="pdoc-member-header" id="Schema-unique">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L147">property <b>unique</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L147">property <b>unique</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>unique: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -466,7 +466,7 @@ The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, 
 Whether the property should be unique. It can be set to `"UNIQUE_VALIDATED"` or `"NOT_UNIQUE"`.
 
 <h4 class="pdoc-member-header" id="Schema-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -475,7 +475,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Schema-userType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L151">property <b>userType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L151">property <b>userType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -483,7 +483,7 @@ deployments.
 User type ID
 
 <h3 class="pdoc-module-header" id="User" data-link-title="User">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L61">
         Resource <strong>User</strong>
     </a>
 </h3>
@@ -501,12 +501,37 @@ import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
 const example = new okta.user.User("example", {
-    description: "My custom property name",
-    index: "customPropertyName",
-    master: "OKTA",
-    scope: "SELF",
-    title: "customPropertyName",
-    type: "string",
+    city: "New York",
+    costCenter: "10",
+    countryCode: "US",
+    department: "IT",
+    displayName: "Dr. John Smith",
+    division: "Acquisitions",
+    email: "john.smith@example.com",
+    employeeNumber: "111111",
+    firstName: "John",
+    honorificPrefix: "Dr.",
+    honorificSuffix: "Jr.",
+    lastName: "Smith",
+    locale: "en_US",
+    login: "john.smith@example.com",
+    manager: "Jimbo",
+    managerId: "222222",
+    middleName: "John",
+    mobilePhone: "1112223333",
+    nickName: "Johnny",
+    organization: "Testing Inc.",
+    postalAddress: "1234 Testing St.",
+    preferredLanguage: "en-us",
+    primaryPhone: "4445556666",
+    profileUrl: "http://www.example.com/profile",
+    secondEmail: "john.smith.fun@example.com",
+    state: "NY",
+    streetAddress: "5678 Testing Ave.",
+    timezone: "America/New_York",
+    title: "Director",
+    userType: "Employee",
+    zipCode: "11111",
 });
 ```
 
@@ -519,7 +544,7 @@ An Okta User can be imported via the ID.
 ```
 
 <h4 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L219"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L244"> <b>constructor</b></a>
 </h4>
 
 
@@ -533,7 +558,7 @@ Create a User resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L71">method <b>get</b></a>
 </h4>
 
 
@@ -544,14 +569,14 @@ Get an existing User resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L61">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L82">method <b>isInstance</b></a>
 </h4>
 
 
@@ -562,7 +587,7 @@ Returns true if the given object is an instance of User.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="User-adminRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L67">property <b>adminRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L92">property <b>adminRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>adminRoles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -570,7 +595,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Administrator roles assigned to User.
 
 <h4 class="pdoc-member-header" id="User-city">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L71">property <b>city</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L96">property <b>city</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>city: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -578,7 +603,7 @@ Administrator roles assigned to User.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-costCenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L75">property <b>costCenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L100">property <b>costCenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>costCenter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -586,7 +611,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-countryCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L79">property <b>countryCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L104">property <b>countryCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>countryCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -594,7 +619,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-customProfileAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L83">property <b>customProfileAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L108">property <b>customProfileAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customProfileAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -602,7 +627,7 @@ User profile property.
 raw JSON containing all custom profile attributes.
 
 <h4 class="pdoc-member-header" id="User-department">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L87">property <b>department</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L112">property <b>department</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>department: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -610,7 +635,7 @@ raw JSON containing all custom profile attributes.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L91">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L116">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -618,7 +643,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-division">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L95">property <b>division</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L120">property <b>division</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>division: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -626,7 +651,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L99">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L124">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -634,7 +659,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-employeeNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L103">property <b>employeeNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L128">property <b>employeeNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>employeeNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -642,7 +667,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-firstName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L107">property <b>firstName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L132">property <b>firstName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>firstName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -650,7 +675,7 @@ User profile property.
 User's First Name, required by default.
 
 <h4 class="pdoc-member-header" id="User-groupMemberships">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L111">property <b>groupMemberships</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L136">property <b>groupMemberships</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupMemberships: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -658,7 +683,7 @@ User's First Name, required by default.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-honorificPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L115">property <b>honorificPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L140">property <b>honorificPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>honorificPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -666,7 +691,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-honorificSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L119">property <b>honorificSuffix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L144">property <b>honorificSuffix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>honorificSuffix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -674,7 +699,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -683,7 +708,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="User-lastName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L123">property <b>lastName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L148">property <b>lastName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -691,7 +716,7 @@ deployments and may be missing (undefined) during planning phases.
 User's Last Name, required by default.
 
 <h4 class="pdoc-member-header" id="User-locale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L127">property <b>locale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L152">property <b>locale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>locale: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -699,7 +724,7 @@ User's Last Name, required by default.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-login">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L131">property <b>login</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L156">property <b>login</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>login: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -707,7 +732,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-manager">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L135">property <b>manager</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L160">property <b>manager</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>manager: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -715,7 +740,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-managerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L139">property <b>managerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L164">property <b>managerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>managerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -723,7 +748,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-middleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L143">property <b>middleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L168">property <b>middleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>middleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -731,7 +756,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-mobilePhone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L147">property <b>mobilePhone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L172">property <b>mobilePhone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mobilePhone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -739,7 +764,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-nickName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L151">property <b>nickName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L176">property <b>nickName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nickName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -747,7 +772,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L155">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L180">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>organization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -755,7 +780,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L159">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L184">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -763,7 +788,7 @@ User profile property.
 User password.
 
 <h4 class="pdoc-member-header" id="User-postalAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L163">property <b>postalAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L188">property <b>postalAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>postalAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -771,7 +796,7 @@ User password.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-preferredLanguage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L167">property <b>preferredLanguage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L192">property <b>preferredLanguage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preferredLanguage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -779,7 +804,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-primaryPhone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L171">property <b>primaryPhone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L196">property <b>primaryPhone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryPhone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -787,7 +812,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-profileUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L175">property <b>profileUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L200">property <b>profileUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>profileUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -795,7 +820,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-rawStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L179">property <b>rawStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L204">property <b>rawStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rawStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -803,7 +828,7 @@ User profile property.
 The raw status of the User in Okta - (status is mapped)
 
 <h4 class="pdoc-member-header" id="User-recoveryAnswer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L183">property <b>recoveryAnswer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L208">property <b>recoveryAnswer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryAnswer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -811,7 +836,7 @@ The raw status of the User in Okta - (status is mapped)
 User password recovery answer.
 
 <h4 class="pdoc-member-header" id="User-recoveryQuestion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L187">property <b>recoveryQuestion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L212">property <b>recoveryQuestion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryQuestion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -819,7 +844,7 @@ User password recovery answer.
 User password recovery question.
 
 <h4 class="pdoc-member-header" id="User-secondEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L191">property <b>secondEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L216">property <b>secondEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secondEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -827,7 +852,7 @@ User password recovery question.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L195">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L220">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -835,7 +860,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L199">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L224">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -843,7 +868,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-streetAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L203">property <b>streetAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L228">property <b>streetAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streetAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -851,7 +876,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L207">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L232">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -859,7 +884,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L211">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L236">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -867,7 +892,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L61">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -876,7 +901,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="User-userType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L215">property <b>userType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L240">property <b>userType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -884,7 +909,7 @@ deployments.
 User profile property.
 
 <h4 class="pdoc-member-header" id="User-zipCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L219">property <b>zipCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L244">property <b>zipCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zipCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -892,7 +917,7 @@ User profile property.
 User profile property.
 
 <h3 class="pdoc-module-header" id="UserType" data-link-title="UserType">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L32">
         Resource <strong>UserType</strong>
     </a>
 </h3>
@@ -924,7 +949,7 @@ A User Type can be imported via the Okta ID.
 ```
 
 <h4 class="pdoc-member-header" id="UserType-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L71"> <b>constructor</b></a>
 </h4>
 
 
@@ -938,7 +963,7 @@ Create a UserType resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="UserType-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -949,14 +974,14 @@ Get an existing UserType resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UserType-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UserType-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -967,7 +992,7 @@ Returns true if the given object is an instance of UserType.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UserType-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L63">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L63">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -975,7 +1000,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Description of the User Type.
 
 <h4 class="pdoc-member-header" id="UserType-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L67">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L67">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -983,7 +1008,7 @@ Description of the User Type.
 Display Name of the User Type.
 
 <h4 class="pdoc-member-header" id="UserType-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -992,7 +1017,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UserType-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1000,7 +1025,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the User Type.
 
 <h4 class="pdoc-member-header" id="UserType-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1011,7 +1036,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getUser" data-link-title="getUser">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L32">
         Function <strong>getUser</strong>
     </a>
 </h3>
@@ -1044,7 +1069,7 @@ const example = pulumi.output(okta.user.getUser({
 ```
 
 <h3 class="pdoc-module-header" id="getUserProfileMappingSource" data-link-title="getUserProfileMappingSource">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUserProfileMappingSource.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUserProfileMappingSource.ts#L20">
         Function <strong>getUserProfileMappingSource</strong>
     </a>
 </h3>
@@ -1065,7 +1090,7 @@ const example = pulumi.output(okta.user.getUserProfileMappingSource({ async: tru
 ```
 
 <h3 class="pdoc-module-header" id="getUsers" data-link-title="getUsers">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUsers.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUsers.ts#L26">
         Function <strong>getUsers</strong>
     </a>
 </h3>
@@ -1092,7 +1117,7 @@ const example = pulumi.output(okta.user.getUsers({
 ```
 
 <h3 class="pdoc-module-header" id="getUserType" data-link-title="getUserType">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUserType.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUserType.ts#L22">
         Function <strong>getUserType</strong>
     </a>
 </h3>
@@ -1117,7 +1142,7 @@ const example = pulumi.output(okta.user.getUserType({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="BaseSchemaArgs" data-link-title="BaseSchemaArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L194">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L194">
         interface <strong>BaseSchemaArgs</strong>
     </a>
 </h3>
@@ -1127,7 +1152,7 @@ const example = pulumi.output(okta.user.getUserType({
 The set of arguments for constructing a BaseSchema resource.
 
 <h4 class="pdoc-member-header" id="BaseSchemaArgs-index">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L198">property <b>index</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L198">property <b>index</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>index: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1135,7 +1160,7 @@ The set of arguments for constructing a BaseSchema resource.
 The property name.
 
 <h4 class="pdoc-member-header" id="BaseSchemaArgs-master">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L202">property <b>master</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L202">property <b>master</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>master?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1143,7 +1168,7 @@ The property name.
 Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
 
 <h4 class="pdoc-member-header" id="BaseSchemaArgs-pattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L206">property <b>pattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L206">property <b>pattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1151,7 +1176,7 @@ Master priority for the user schema property. It can be set to `"PROFILE_MASTER"
 The validation pattern to use for the subschema, only available for `login` property. Must be in form of `.+`, or `[<pattern>]+`.
 
 <h4 class="pdoc-member-header" id="BaseSchemaArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L210">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L210">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1159,7 +1184,7 @@ The validation pattern to use for the subschema, only available for `login` prop
 Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
 
 <h4 class="pdoc-member-header" id="BaseSchemaArgs-required">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L214">property <b>required</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L214">property <b>required</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>required?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1167,7 +1192,7 @@ Access control permissions for the property. It can be set to `"READ_WRITE"`, `"
 Whether the property is required for this application's users.
 
 <h4 class="pdoc-member-header" id="BaseSchemaArgs-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L218">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L218">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1175,7 +1200,7 @@ Whether the property is required for this application's users.
 The property display name.
 
 <h4 class="pdoc-member-header" id="BaseSchemaArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L222">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L222">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1183,7 +1208,7 @@ The property display name.
 The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 
 <h4 class="pdoc-member-header" id="BaseSchemaArgs-userType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L226">property <b>userType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L226">property <b>userType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1191,7 +1216,7 @@ The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, 
 User type ID
 
 <h3 class="pdoc-module-header" id="BaseSchemaState" data-link-title="BaseSchemaState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L156">
         interface <strong>BaseSchemaState</strong>
     </a>
 </h3>
@@ -1201,7 +1226,7 @@ User type ID
 Input properties used for looking up and filtering BaseSchema resources.
 
 <h4 class="pdoc-member-header" id="BaseSchemaState-index">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L160">property <b>index</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L160">property <b>index</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>index?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1209,7 +1234,7 @@ Input properties used for looking up and filtering BaseSchema resources.
 The property name.
 
 <h4 class="pdoc-member-header" id="BaseSchemaState-master">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L164">property <b>master</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L164">property <b>master</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>master?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1217,7 +1242,7 @@ The property name.
 Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
 
 <h4 class="pdoc-member-header" id="BaseSchemaState-pattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L168">property <b>pattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L168">property <b>pattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1225,7 +1250,7 @@ Master priority for the user schema property. It can be set to `"PROFILE_MASTER"
 The validation pattern to use for the subschema, only available for `login` property. Must be in form of `.+`, or `[<pattern>]+`.
 
 <h4 class="pdoc-member-header" id="BaseSchemaState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L172">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L172">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1233,7 +1258,7 @@ The validation pattern to use for the subschema, only available for `login` prop
 Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
 
 <h4 class="pdoc-member-header" id="BaseSchemaState-required">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L176">property <b>required</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L176">property <b>required</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>required?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1241,7 +1266,7 @@ Access control permissions for the property. It can be set to `"READ_WRITE"`, `"
 Whether the property is required for this application's users.
 
 <h4 class="pdoc-member-header" id="BaseSchemaState-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L180">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L180">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1249,7 +1274,7 @@ Whether the property is required for this application's users.
 The property display name.
 
 <h4 class="pdoc-member-header" id="BaseSchemaState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L184">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L184">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1257,7 +1282,7 @@ The property display name.
 The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 
 <h4 class="pdoc-member-header" id="BaseSchemaState-userType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/baseSchema.ts#L188">property <b>userType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/baseSchema.ts#L188">property <b>userType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1265,7 +1290,7 @@ The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, 
 User type ID
 
 <h3 class="pdoc-module-header" id="GetUserArgs" data-link-title="GetUserArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L50">
         interface <strong>GetUserArgs</strong>
     </a>
 </h3>
@@ -1275,7 +1300,7 @@ User type ID
 A collection of arguments for invoking getUser.
 
 <h4 class="pdoc-member-header" id="GetUserArgs-searches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L54">property <b>searches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L54">property <b>searches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>searches?: <a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#GetUserSearch'>GetUserSearch</a>[];</code></pre>
@@ -1283,7 +1308,7 @@ A collection of arguments for invoking getUser.
 Map of search criteria. It supports the following properties.
 
 <h4 class="pdoc-member-header" id="GetUserArgs-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L58">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L58">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1291,7 +1316,7 @@ Map of search criteria. It supports the following properties.
 String representing a specific user's id value
 
 <h3 class="pdoc-module-header" id="GetUserProfileMappingSourceResult" data-link-title="GetUserProfileMappingSourceResult">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUserProfileMappingSource.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUserProfileMappingSource.ts#L35">
         interface <strong>GetUserProfileMappingSourceResult</strong>
     </a>
 </h3>
@@ -1301,7 +1326,7 @@ String representing a specific user's id value
 A collection of values returned by getUserProfileMappingSource.
 
 <h4 class="pdoc-member-header" id="GetUserProfileMappingSourceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUserProfileMappingSource.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUserProfileMappingSource.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1309,7 +1334,7 @@ A collection of values returned by getUserProfileMappingSource.
 id of the source.
 
 <h4 class="pdoc-member-header" id="GetUserProfileMappingSourceResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUserProfileMappingSource.ts#L43">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUserProfileMappingSource.ts#L43">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1317,7 +1342,7 @@ id of the source.
 name of source.
 
 <h4 class="pdoc-member-header" id="GetUserProfileMappingSourceResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUserProfileMappingSource.ts#L47">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUserProfileMappingSource.ts#L47">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1325,7 +1350,7 @@ name of source.
 type of source.
 
 <h3 class="pdoc-module-header" id="GetUserResult" data-link-title="GetUserResult">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L64">
         interface <strong>GetUserResult</strong>
     </a>
 </h3>
@@ -1335,7 +1360,7 @@ type of source.
 A collection of values returned by getUser.
 
 <h4 class="pdoc-member-header" id="GetUserResult-adminRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L68">property <b>adminRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L68">property <b>adminRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminRoles: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1343,7 +1368,7 @@ A collection of values returned by getUser.
 Administrator roles assigned to user.
 
 <h4 class="pdoc-member-header" id="GetUserResult-city">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L72">property <b>city</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L72">property <b>city</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>city: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1351,7 +1376,7 @@ Administrator roles assigned to user.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-costCenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L76">property <b>costCenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L76">property <b>costCenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>costCenter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1359,7 +1384,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-countryCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L80">property <b>countryCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L80">property <b>countryCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>countryCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1367,7 +1392,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-customProfileAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L84">property <b>customProfileAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L84">property <b>customProfileAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customProfileAttributes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1375,7 +1400,7 @@ user profile property.
 raw JSON containing all custom profile attributes.
 
 <h4 class="pdoc-member-header" id="GetUserResult-department">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L88">property <b>department</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L88">property <b>department</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>department: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1383,7 +1408,7 @@ raw JSON containing all custom profile attributes.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L92">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L92">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1391,7 +1416,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-division">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L96">property <b>division</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L96">property <b>division</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>division: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1399,7 +1424,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L100">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L100">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1407,7 +1432,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-employeeNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L104">property <b>employeeNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L104">property <b>employeeNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>employeeNumber: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1415,7 +1440,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-firstName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L108">property <b>firstName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L108">property <b>firstName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1423,7 +1448,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-groupMemberships">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L112">property <b>groupMemberships</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L112">property <b>groupMemberships</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupMemberships: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1431,7 +1456,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-honorificPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L116">property <b>honorificPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L116">property <b>honorificPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>honorificPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1439,7 +1464,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-honorificSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L120">property <b>honorificSuffix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L120">property <b>honorificSuffix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>honorificSuffix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1447,7 +1472,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L124">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L124">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1455,7 +1480,7 @@ user profile property.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetUserResult-lastName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L128">property <b>lastName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L128">property <b>lastName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1463,7 +1488,7 @@ The provider-assigned unique ID for this managed resource.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-locale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L132">property <b>locale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L132">property <b>locale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locale: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1471,7 +1496,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-login">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L136">property <b>login</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L136">property <b>login</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>login: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1479,7 +1504,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-manager">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L140">property <b>manager</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L140">property <b>manager</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manager: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1487,7 +1512,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-managerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L144">property <b>managerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L144">property <b>managerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1495,7 +1520,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-middleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L148">property <b>middleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L148">property <b>middleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>middleName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1503,7 +1528,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-mobilePhone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L152">property <b>mobilePhone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L152">property <b>mobilePhone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mobilePhone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1511,7 +1536,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-nickName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L156">property <b>nickName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L156">property <b>nickName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nickName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1519,7 +1544,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L160">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L160">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organization: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1527,7 +1552,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-postalAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L164">property <b>postalAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L164">property <b>postalAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postalAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1535,7 +1560,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-preferredLanguage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L168">property <b>preferredLanguage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L168">property <b>preferredLanguage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredLanguage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1543,7 +1568,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-primaryPhone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L172">property <b>primaryPhone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L172">property <b>primaryPhone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryPhone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1551,7 +1576,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-profileUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L176">property <b>profileUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L176">property <b>profileUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1559,12 +1584,12 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-searches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L177">property <b>searches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L177">property <b>searches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>searches?: <a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#GetUserSearch'>GetUserSearch</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetUserResult-secondEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L181">property <b>secondEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L181">property <b>secondEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondEmail: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1572,7 +1597,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L185">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L185">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1580,7 +1605,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L189">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L189">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1588,7 +1613,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-streetAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L193">property <b>streetAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L193">property <b>streetAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streetAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1596,7 +1621,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L197">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L197">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1604,7 +1629,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L201">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L201">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1612,12 +1637,12 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L202">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L202">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetUserResult-userType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L206">property <b>userType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L206">property <b>userType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1625,7 +1650,7 @@ user profile property.
 user profile property.
 
 <h4 class="pdoc-member-header" id="GetUserResult-zipCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUser.ts#L210">property <b>zipCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUser.ts#L210">property <b>zipCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zipCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1633,7 +1658,7 @@ user profile property.
 user profile property.
 
 <h3 class="pdoc-module-header" id="GetUsersArgs" data-link-title="GetUsersArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUsers.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUsers.ts#L43">
         interface <strong>GetUsersArgs</strong>
     </a>
 </h3>
@@ -1643,15 +1668,15 @@ user profile property.
 A collection of arguments for invoking getUsers.
 
 <h4 class="pdoc-member-header" id="GetUsersArgs-searches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUsers.ts#L47">property <b>searches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUsers.ts#L47">property <b>searches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>searches: <a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#GetUsersSearch'>GetUsersSearch</a>[];</code></pre>
 
-Map of search criteria to use to find users. It supports the following properties.
+Map of search criteria to find users. It supports the following properties.
 
 <h4 class="pdoc-member-header" id="GetUsersArgs-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUsers.ts#L51">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUsers.ts#L51">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#GetUsersUser'>GetUsersUser</a>[];</code></pre>
@@ -1659,7 +1684,7 @@ Map of search criteria to use to find users. It supports the following propertie
 collection of users retrieved from Okta with the following properties.
 
 <h3 class="pdoc-module-header" id="GetUsersResult" data-link-title="GetUsersResult">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUsers.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUsers.ts#L57">
         interface <strong>GetUsersResult</strong>
     </a>
 </h3>
@@ -1669,7 +1694,7 @@ collection of users retrieved from Okta with the following properties.
 A collection of values returned by getUsers.
 
 <h4 class="pdoc-member-header" id="GetUsersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUsers.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUsers.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1677,12 +1702,12 @@ A collection of values returned by getUsers.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetUsersResult-searches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUsers.ts#L62">property <b>searches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUsers.ts#L62">property <b>searches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>searches: <a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#GetUsersSearch'>GetUsersSearch</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetUsersResult-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUsers.ts#L66">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUsers.ts#L66">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#GetUsersUser'>GetUsersUser</a>[];</code></pre>
@@ -1690,7 +1715,7 @@ The provider-assigned unique ID for this managed resource.
 collection of users retrieved from Okta with the following properties.
 
 <h3 class="pdoc-module-header" id="GetUserTypeArgs" data-link-title="GetUserTypeArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUserType.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUserType.ts#L40">
         interface <strong>GetUserTypeArgs</strong>
     </a>
 </h3>
@@ -1700,7 +1725,7 @@ collection of users retrieved from Okta with the following properties.
 A collection of arguments for invoking getUserType.
 
 <h4 class="pdoc-member-header" id="GetUserTypeArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUserType.ts#L44">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUserType.ts#L44">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1708,7 +1733,7 @@ A collection of arguments for invoking getUserType.
 description of user type.
 
 <h4 class="pdoc-member-header" id="GetUserTypeArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUserType.ts#L48">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUserType.ts#L48">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1716,7 +1741,7 @@ description of user type.
 display name of user type.
 
 <h4 class="pdoc-member-header" id="GetUserTypeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUserType.ts#L52">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUserType.ts#L52">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1724,7 +1749,7 @@ display name of user type.
 name of user type to retrieve.
 
 <h3 class="pdoc-module-header" id="GetUserTypeResult" data-link-title="GetUserTypeResult">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUserType.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUserType.ts#L58">
         interface <strong>GetUserTypeResult</strong>
     </a>
 </h3>
@@ -1734,7 +1759,7 @@ name of user type to retrieve.
 A collection of values returned by getUserType.
 
 <h4 class="pdoc-member-header" id="GetUserTypeResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUserType.ts#L62">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUserType.ts#L62">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1742,7 +1767,7 @@ A collection of values returned by getUserType.
 description of user type.
 
 <h4 class="pdoc-member-header" id="GetUserTypeResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUserType.ts#L66">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUserType.ts#L66">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1750,7 +1775,7 @@ description of user type.
 display name of user type.
 
 <h4 class="pdoc-member-header" id="GetUserTypeResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUserType.ts#L70">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUserType.ts#L70">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1758,7 +1783,7 @@ display name of user type.
 id of user type.
 
 <h4 class="pdoc-member-header" id="GetUserTypeResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/getUserType.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/getUserType.ts#L74">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1766,7 +1791,7 @@ id of user type.
 name of user type.
 
 <h3 class="pdoc-module-header" id="SchemaArgs" data-link-title="SchemaArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L317">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L317">
         interface <strong>SchemaArgs</strong>
     </a>
 </h3>
@@ -1776,7 +1801,7 @@ name of user type.
 The set of arguments for constructing a Schema resource.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-arrayEnums">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L321">property <b>arrayEnums</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L321">property <b>arrayEnums</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arrayEnums?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1784,7 +1809,7 @@ The set of arguments for constructing a Schema resource.
 Array of values that an array property's items can be set to.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-arrayOneOfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L325">property <b>arrayOneOfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L325">property <b>arrayOneOfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arrayOneOfs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#SchemaArrayOneOf'>SchemaArrayOneOf</a>&gt;[]&gt;;</code></pre>
@@ -1792,7 +1817,7 @@ Array of values that an array property's items can be set to.
 Display name and value an enum array can be set to.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-arrayType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L329">property <b>arrayType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L329">property <b>arrayType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arrayType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1800,7 +1825,7 @@ Display name and value an enum array can be set to.
 The type of the array elements if `type` is set to `"array"`.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L333">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L333">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1808,7 +1833,7 @@ The type of the array elements if `type` is set to `"array"`.
 The description of the user schema property.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-enums">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L337">property <b>enums</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L337">property <b>enums</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enums?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1816,7 +1841,7 @@ The description of the user schema property.
 Array of values a primitive property can be set to. See `arrayEnum` for arrays.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-externalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L341">property <b>externalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L341">property <b>externalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1824,7 +1849,7 @@ Array of values a primitive property can be set to. See `arrayEnum` for arrays.
 External name of the user schema property.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-externalNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L345">property <b>externalNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L345">property <b>externalNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalNamespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1832,7 +1857,7 @@ External name of the user schema property.
 External name of the user schema property.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-index">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L349">property <b>index</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L349">property <b>index</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>index: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1840,7 +1865,7 @@ External name of the user schema property.
 The property name.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-master">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L353">property <b>master</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L353">property <b>master</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>master?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1848,7 +1873,7 @@ The property name.
 Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-maxLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L357">property <b>maxLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L357">property <b>maxLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1856,7 +1881,7 @@ Master priority for the user schema property. It can be set to `"PROFILE_MASTER"
 The maximum length of the user property value. Only applies to type `"string"`.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-minLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L361">property <b>minLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L361">property <b>minLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1864,7 +1889,7 @@ The maximum length of the user property value. Only applies to type `"string"`.
 The minimum length of the user property value. Only applies to type `"string"`.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-oneOfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L365">property <b>oneOfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L365">property <b>oneOfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oneOfs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#SchemaOneOf'>SchemaOneOf</a>&gt;[]&gt;;</code></pre>
@@ -1872,7 +1897,7 @@ The minimum length of the user property value. Only applies to type `"string"`.
 Array of maps containing a mapping for display name to enum value.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-pattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L369">property <b>pattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L369">property <b>pattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1880,7 +1905,7 @@ Array of maps containing a mapping for display name to enum value.
 The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
 
 <h4 class="pdoc-member-header" id="SchemaArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L373">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L373">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1888,7 +1913,7 @@ The validation pattern to use for the subschema. Must be in form of '.+', or '[<
 Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-required">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L377">property <b>required</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L377">property <b>required</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>required?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1896,7 +1921,7 @@ Access control permissions for the property. It can be set to `"READ_WRITE"`, `"
 Whether the property is required for this application's users.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L381">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L381">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1904,7 +1929,7 @@ Whether the property is required for this application's users.
 determines whether an app user attribute can be set at the Individual or Group Level.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L385">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L385">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1912,7 +1937,7 @@ determines whether an app user attribute can be set at the Individual or Group L
 display name for the enum value.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L389">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L389">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1920,7 +1945,7 @@ display name for the enum value.
 The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-unique">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L393">property <b>unique</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L393">property <b>unique</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unique?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1928,7 +1953,7 @@ The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, 
 Whether the property should be unique. It can be set to `"UNIQUE_VALIDATED"` or `"NOT_UNIQUE"`.
 
 <h4 class="pdoc-member-header" id="SchemaArgs-userType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L397">property <b>userType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L397">property <b>userType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1936,7 +1961,7 @@ Whether the property should be unique. It can be set to `"UNIQUE_VALIDATED"` or 
 User type ID
 
 <h3 class="pdoc-module-header" id="SchemaState" data-link-title="SchemaState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L231">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L231">
         interface <strong>SchemaState</strong>
     </a>
 </h3>
@@ -1946,7 +1971,7 @@ User type ID
 Input properties used for looking up and filtering Schema resources.
 
 <h4 class="pdoc-member-header" id="SchemaState-arrayEnums">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L235">property <b>arrayEnums</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L235">property <b>arrayEnums</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arrayEnums?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1954,7 +1979,7 @@ Input properties used for looking up and filtering Schema resources.
 Array of values that an array property's items can be set to.
 
 <h4 class="pdoc-member-header" id="SchemaState-arrayOneOfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L239">property <b>arrayOneOfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L239">property <b>arrayOneOfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arrayOneOfs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#SchemaArrayOneOf'>SchemaArrayOneOf</a>&gt;[]&gt;;</code></pre>
@@ -1962,7 +1987,7 @@ Array of values that an array property's items can be set to.
 Display name and value an enum array can be set to.
 
 <h4 class="pdoc-member-header" id="SchemaState-arrayType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L243">property <b>arrayType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L243">property <b>arrayType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arrayType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1970,7 +1995,7 @@ Display name and value an enum array can be set to.
 The type of the array elements if `type` is set to `"array"`.
 
 <h4 class="pdoc-member-header" id="SchemaState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L247">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L247">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1978,7 +2003,7 @@ The type of the array elements if `type` is set to `"array"`.
 The description of the user schema property.
 
 <h4 class="pdoc-member-header" id="SchemaState-enums">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L251">property <b>enums</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L251">property <b>enums</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enums?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1986,7 +2011,7 @@ The description of the user schema property.
 Array of values a primitive property can be set to. See `arrayEnum` for arrays.
 
 <h4 class="pdoc-member-header" id="SchemaState-externalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L255">property <b>externalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L255">property <b>externalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1994,7 +2019,7 @@ Array of values a primitive property can be set to. See `arrayEnum` for arrays.
 External name of the user schema property.
 
 <h4 class="pdoc-member-header" id="SchemaState-externalNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L259">property <b>externalNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L259">property <b>externalNamespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalNamespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2002,7 +2027,7 @@ External name of the user schema property.
 External name of the user schema property.
 
 <h4 class="pdoc-member-header" id="SchemaState-index">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L263">property <b>index</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L263">property <b>index</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>index?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2010,7 +2035,7 @@ External name of the user schema property.
 The property name.
 
 <h4 class="pdoc-member-header" id="SchemaState-master">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L267">property <b>master</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L267">property <b>master</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>master?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2018,7 +2043,7 @@ The property name.
 Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
 
 <h4 class="pdoc-member-header" id="SchemaState-maxLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L271">property <b>maxLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L271">property <b>maxLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2026,7 +2051,7 @@ Master priority for the user schema property. It can be set to `"PROFILE_MASTER"
 The maximum length of the user property value. Only applies to type `"string"`.
 
 <h4 class="pdoc-member-header" id="SchemaState-minLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L275">property <b>minLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L275">property <b>minLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2034,7 +2059,7 @@ The maximum length of the user property value. Only applies to type `"string"`.
 The minimum length of the user property value. Only applies to type `"string"`.
 
 <h4 class="pdoc-member-header" id="SchemaState-oneOfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L279">property <b>oneOfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L279">property <b>oneOfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oneOfs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#SchemaOneOf'>SchemaOneOf</a>&gt;[]&gt;;</code></pre>
@@ -2042,7 +2067,7 @@ The minimum length of the user property value. Only applies to type `"string"`.
 Array of maps containing a mapping for display name to enum value.
 
 <h4 class="pdoc-member-header" id="SchemaState-pattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L283">property <b>pattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L283">property <b>pattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2050,7 +2075,7 @@ Array of maps containing a mapping for display name to enum value.
 The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
 
 <h4 class="pdoc-member-header" id="SchemaState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L287">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L287">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2058,7 +2083,7 @@ The validation pattern to use for the subschema. Must be in form of '.+', or '[<
 Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
 
 <h4 class="pdoc-member-header" id="SchemaState-required">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L291">property <b>required</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L291">property <b>required</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>required?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2066,7 +2091,7 @@ Access control permissions for the property. It can be set to `"READ_WRITE"`, `"
 Whether the property is required for this application's users.
 
 <h4 class="pdoc-member-header" id="SchemaState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L295">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L295">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2074,7 +2099,7 @@ Whether the property is required for this application's users.
 determines whether an app user attribute can be set at the Individual or Group Level.
 
 <h4 class="pdoc-member-header" id="SchemaState-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L299">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L299">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2082,7 +2107,7 @@ determines whether an app user attribute can be set at the Individual or Group L
 display name for the enum value.
 
 <h4 class="pdoc-member-header" id="SchemaState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L303">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L303">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2090,7 +2115,7 @@ display name for the enum value.
 The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 
 <h4 class="pdoc-member-header" id="SchemaState-unique">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L307">property <b>unique</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L307">property <b>unique</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unique?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2098,7 +2123,7 @@ The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, 
 Whether the property should be unique. It can be set to `"UNIQUE_VALIDATED"` or `"NOT_UNIQUE"`.
 
 <h4 class="pdoc-member-header" id="SchemaState-userType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/schema.ts#L311">property <b>userType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/schema.ts#L311">property <b>userType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2106,7 +2131,7 @@ Whether the property should be unique. It can be set to `"UNIQUE_VALIDATED"` or 
 User type ID
 
 <h3 class="pdoc-module-header" id="UserArgs" data-link-title="UserArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L502">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L527">
         interface <strong>UserArgs</strong>
     </a>
 </h3>
@@ -2116,7 +2141,7 @@ User type ID
 The set of arguments for constructing a User resource.
 
 <h4 class="pdoc-member-header" id="UserArgs-adminRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L506">property <b>adminRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L531">property <b>adminRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2124,7 +2149,7 @@ The set of arguments for constructing a User resource.
 Administrator roles assigned to User.
 
 <h4 class="pdoc-member-header" id="UserArgs-city">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L510">property <b>city</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L535">property <b>city</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>city?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2132,7 +2157,7 @@ Administrator roles assigned to User.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-costCenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L514">property <b>costCenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L539">property <b>costCenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>costCenter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2140,7 +2165,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-countryCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L518">property <b>countryCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L543">property <b>countryCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>countryCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2148,7 +2173,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-customProfileAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L522">property <b>customProfileAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L547">property <b>customProfileAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customProfileAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2156,7 +2181,7 @@ User profile property.
 raw JSON containing all custom profile attributes.
 
 <h4 class="pdoc-member-header" id="UserArgs-department">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L526">property <b>department</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L551">property <b>department</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>department?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2164,7 +2189,7 @@ raw JSON containing all custom profile attributes.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L530">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L555">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2172,7 +2197,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-division">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L534">property <b>division</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L559">property <b>division</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>division?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2180,7 +2205,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L538">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L563">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2188,7 +2213,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-employeeNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L542">property <b>employeeNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L567">property <b>employeeNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>employeeNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2196,7 +2221,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-firstName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L546">property <b>firstName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L571">property <b>firstName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2204,7 +2229,7 @@ User profile property.
 User's First Name, required by default.
 
 <h4 class="pdoc-member-header" id="UserArgs-groupMemberships">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L550">property <b>groupMemberships</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L575">property <b>groupMemberships</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupMemberships?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2212,7 +2237,7 @@ User's First Name, required by default.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-honorificPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L554">property <b>honorificPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L579">property <b>honorificPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>honorificPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2220,7 +2245,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-honorificSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L558">property <b>honorificSuffix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L583">property <b>honorificSuffix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>honorificSuffix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2228,7 +2253,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-lastName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L562">property <b>lastName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L587">property <b>lastName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2236,7 +2261,7 @@ User profile property.
 User's Last Name, required by default.
 
 <h4 class="pdoc-member-header" id="UserArgs-locale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L566">property <b>locale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L591">property <b>locale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2244,7 +2269,7 @@ User's Last Name, required by default.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-login">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L570">property <b>login</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L595">property <b>login</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>login: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2252,7 +2277,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-manager">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L574">property <b>manager</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L599">property <b>manager</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manager?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2260,7 +2285,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-managerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L578">property <b>managerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L603">property <b>managerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2268,7 +2293,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-middleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L582">property <b>middleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L607">property <b>middleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>middleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2276,7 +2301,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-mobilePhone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L586">property <b>mobilePhone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L611">property <b>mobilePhone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mobilePhone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2284,7 +2309,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-nickName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L590">property <b>nickName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L615">property <b>nickName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nickName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2292,7 +2317,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L594">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L619">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2300,7 +2325,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L598">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L623">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2308,7 +2333,7 @@ User profile property.
 User password.
 
 <h4 class="pdoc-member-header" id="UserArgs-postalAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L602">property <b>postalAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L627">property <b>postalAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postalAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2316,7 +2341,7 @@ User password.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-preferredLanguage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L606">property <b>preferredLanguage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L631">property <b>preferredLanguage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredLanguage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2324,7 +2349,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-primaryPhone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L610">property <b>primaryPhone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L635">property <b>primaryPhone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryPhone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2332,7 +2357,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-profileUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L614">property <b>profileUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L639">property <b>profileUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2340,7 +2365,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-recoveryAnswer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L618">property <b>recoveryAnswer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L643">property <b>recoveryAnswer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryAnswer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2348,7 +2373,7 @@ User profile property.
 User password recovery answer.
 
 <h4 class="pdoc-member-header" id="UserArgs-recoveryQuestion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L622">property <b>recoveryQuestion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L647">property <b>recoveryQuestion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryQuestion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2356,7 +2381,7 @@ User password recovery answer.
 User password recovery question.
 
 <h4 class="pdoc-member-header" id="UserArgs-secondEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L626">property <b>secondEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L651">property <b>secondEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2364,7 +2389,7 @@ User password recovery question.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L630">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L655">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2372,7 +2397,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L634">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L659">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2380,7 +2405,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-streetAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L638">property <b>streetAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L663">property <b>streetAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streetAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2388,7 +2413,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L642">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L667">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2396,7 +2421,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L646">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L671">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2404,7 +2429,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-userType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L650">property <b>userType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L675">property <b>userType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2412,7 +2437,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserArgs-zipCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L654">property <b>zipCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L679">property <b>zipCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zipCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2420,7 +2445,7 @@ User profile property.
 User profile property.
 
 <h3 class="pdoc-module-header" id="UserState" data-link-title="UserState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L340">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L365">
         interface <strong>UserState</strong>
     </a>
 </h3>
@@ -2430,7 +2455,7 @@ User profile property.
 Input properties used for looking up and filtering User resources.
 
 <h4 class="pdoc-member-header" id="UserState-adminRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L344">property <b>adminRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L369">property <b>adminRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2438,7 +2463,7 @@ Input properties used for looking up and filtering User resources.
 Administrator roles assigned to User.
 
 <h4 class="pdoc-member-header" id="UserState-city">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L348">property <b>city</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L373">property <b>city</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>city?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2446,7 +2471,7 @@ Administrator roles assigned to User.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-costCenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L352">property <b>costCenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L377">property <b>costCenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>costCenter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2454,7 +2479,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-countryCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L356">property <b>countryCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L381">property <b>countryCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>countryCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2462,7 +2487,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-customProfileAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L360">property <b>customProfileAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L385">property <b>customProfileAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customProfileAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2470,7 +2495,7 @@ User profile property.
 raw JSON containing all custom profile attributes.
 
 <h4 class="pdoc-member-header" id="UserState-department">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L364">property <b>department</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L389">property <b>department</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>department?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2478,7 +2503,7 @@ raw JSON containing all custom profile attributes.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L368">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L393">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2486,7 +2511,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-division">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L372">property <b>division</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L397">property <b>division</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>division?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2494,7 +2519,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L376">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L401">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2502,7 +2527,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-employeeNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L380">property <b>employeeNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L405">property <b>employeeNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>employeeNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2510,7 +2535,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-firstName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L384">property <b>firstName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L409">property <b>firstName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2518,7 +2543,7 @@ User profile property.
 User's First Name, required by default.
 
 <h4 class="pdoc-member-header" id="UserState-groupMemberships">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L388">property <b>groupMemberships</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L413">property <b>groupMemberships</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupMemberships?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2526,7 +2551,7 @@ User's First Name, required by default.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-honorificPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L392">property <b>honorificPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L417">property <b>honorificPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>honorificPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2534,7 +2559,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-honorificSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L396">property <b>honorificSuffix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L421">property <b>honorificSuffix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>honorificSuffix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2542,7 +2567,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-lastName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L400">property <b>lastName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L425">property <b>lastName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2550,7 +2575,7 @@ User profile property.
 User's Last Name, required by default.
 
 <h4 class="pdoc-member-header" id="UserState-locale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L404">property <b>locale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L429">property <b>locale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2558,7 +2583,7 @@ User's Last Name, required by default.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-login">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L408">property <b>login</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L433">property <b>login</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>login?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2566,7 +2591,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-manager">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L412">property <b>manager</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L437">property <b>manager</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manager?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2574,7 +2599,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-managerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L416">property <b>managerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L441">property <b>managerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2582,7 +2607,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-middleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L420">property <b>middleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L445">property <b>middleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>middleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2590,7 +2615,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-mobilePhone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L424">property <b>mobilePhone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L449">property <b>mobilePhone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mobilePhone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2598,7 +2623,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-nickName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L428">property <b>nickName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L453">property <b>nickName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nickName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2606,7 +2631,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L432">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L457">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2614,7 +2639,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L436">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L461">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2622,7 +2647,7 @@ User profile property.
 User password.
 
 <h4 class="pdoc-member-header" id="UserState-postalAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L440">property <b>postalAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L465">property <b>postalAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postalAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2630,7 +2655,7 @@ User password.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-preferredLanguage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L444">property <b>preferredLanguage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L469">property <b>preferredLanguage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredLanguage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2638,7 +2663,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-primaryPhone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L448">property <b>primaryPhone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L473">property <b>primaryPhone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryPhone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2646,7 +2671,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-profileUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L452">property <b>profileUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L477">property <b>profileUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2654,7 +2679,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-rawStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L456">property <b>rawStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L481">property <b>rawStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rawStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2662,7 +2687,7 @@ User profile property.
 The raw status of the User in Okta - (status is mapped)
 
 <h4 class="pdoc-member-header" id="UserState-recoveryAnswer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L460">property <b>recoveryAnswer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L485">property <b>recoveryAnswer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryAnswer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2670,7 +2695,7 @@ The raw status of the User in Okta - (status is mapped)
 User password recovery answer.
 
 <h4 class="pdoc-member-header" id="UserState-recoveryQuestion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L464">property <b>recoveryQuestion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L489">property <b>recoveryQuestion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryQuestion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2678,7 +2703,7 @@ User password recovery answer.
 User password recovery question.
 
 <h4 class="pdoc-member-header" id="UserState-secondEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L468">property <b>secondEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L493">property <b>secondEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2686,7 +2711,7 @@ User password recovery question.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L472">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L497">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2694,7 +2719,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L476">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L501">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2702,7 +2727,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-streetAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L480">property <b>streetAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L505">property <b>streetAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streetAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2710,7 +2735,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L484">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L509">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2718,7 +2743,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L488">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L513">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2726,7 +2751,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-userType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L492">property <b>userType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L517">property <b>userType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2734,7 +2759,7 @@ User profile property.
 User profile property.
 
 <h4 class="pdoc-member-header" id="UserState-zipCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/user.ts#L496">property <b>zipCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/user.ts#L521">property <b>zipCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zipCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2742,7 +2767,7 @@ User profile property.
 User profile property.
 
 <h3 class="pdoc-module-header" id="UserTypeArgs" data-link-title="UserTypeArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L132">
         interface <strong>UserTypeArgs</strong>
     </a>
 </h3>
@@ -2752,7 +2777,7 @@ User profile property.
 The set of arguments for constructing a UserType resource.
 
 <h4 class="pdoc-member-header" id="UserTypeArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L136">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L136">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2760,7 +2785,7 @@ The set of arguments for constructing a UserType resource.
 Description of the User Type.
 
 <h4 class="pdoc-member-header" id="UserTypeArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L140">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L140">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2768,7 +2793,7 @@ Description of the User Type.
 Display Name of the User Type.
 
 <h4 class="pdoc-member-header" id="UserTypeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L144">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2776,7 +2801,7 @@ Display Name of the User Type.
 Name of the User Type.
 
 <h3 class="pdoc-module-header" id="UserTypeState" data-link-title="UserTypeState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L114">
         interface <strong>UserTypeState</strong>
     </a>
 </h3>
@@ -2786,7 +2811,7 @@ Name of the User Type.
 Input properties used for looking up and filtering UserType resources.
 
 <h4 class="pdoc-member-header" id="UserTypeState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L118">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L118">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2794,7 +2819,7 @@ Input properties used for looking up and filtering UserType resources.
 Description of the User Type.
 
 <h4 class="pdoc-member-header" id="UserTypeState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L122">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L122">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2802,7 +2827,7 @@ Description of the User Type.
 Display Name of the User Type.
 
 <h4 class="pdoc-member-header" id="UserTypeState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/user/userType.ts#L126">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/bfa2d8bd1bb0e8ef50ca817a88c0430aa50fdd4c/sdk/nodejs/user/userType.ts#L126">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

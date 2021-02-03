@@ -300,7 +300,7 @@ The ServerClaim resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
+    <dd>{{% md %}}Specifies whether to include claims in token, by default it is set to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -396,7 +396,7 @@ The ServerClaim resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
+    <dd>{{% md %}}Specifies whether to include claims in token, by default it is set to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -492,7 +492,7 @@ The ServerClaim resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
+    <dd>{{% md %}}Specifies whether to include claims in token, by default it is set to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -588,7 +588,7 @@ The ServerClaim resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
+    <dd>{{% md %}}Specifies whether to include claims in token, by default it is set to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -844,7 +844,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
+    <dd>{{% md %}}Specifies whether to include claims in token, by default it is set to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -940,7 +940,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
+    <dd>{{% md %}}Specifies whether to include claims in token, by default it is set to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1036,7 +1036,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
+    <dd>{{% md %}}Specifies whether to include claims in token, by default it is set to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1132,7 +1132,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
+    <dd>{{% md %}}Specifies whether to include claims in token, by default it is set to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

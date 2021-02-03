@@ -307,7 +307,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
+    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default, it is 'true'.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -353,7 +353,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
+    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default, it is 'true'.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -399,7 +399,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
+    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default, it is 'true'.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -445,7 +445,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
+    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default, it is 'true'.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -661,7 +661,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
+    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default, it is 'true'.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -707,7 +707,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
+    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default, it is 'true'.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -753,7 +753,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
+    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default, it is 'true'.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -799,7 +799,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
+    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default, it is 'true'.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

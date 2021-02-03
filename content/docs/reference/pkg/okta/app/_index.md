@@ -30,6 +30,7 @@ Explore the resources and functions of the app module in the Okta package.
 <ul class="api">
     <li><a href="getapp" title="GetApp"><span class="symbol function"></span>GetApp</a></li>
     <li><a href="getmetadatasaml" title="GetMetadataSaml"><span class="symbol function"></span>GetMetadataSaml</a></li>
+    <li><a href="getoauth" title="GetOauth"><span class="symbol function"></span>GetOauth</a></li>
     <li><a href="getsaml" title="GetSaml"><span class="symbol function"></span>GetSaml</a></li>
 </ul>
 
@@ -42,7 +43,7 @@ Explore the resources and functions of the app module in the Okta package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 	<dt>Version</dt>
-	<dd>2.7.1</dd>
+	<dd>2.9.0</dd>
 </dl>
 
 

@@ -20,6 +20,7 @@ Explore the resources and functions of the idp module in the Okta package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getmetadatasaml" title="GetMetadataSaml"><span class="symbol function"></span>GetMetadataSaml</a></li>
+    <li><a href="getoidc" title="GetOidc"><span class="symbol function"></span>GetOidc</a></li>
     <li><a href="getsaml" title="GetSaml"><span class="symbol function"></span>GetSaml</a></li>
 </ul>
 
@@ -32,7 +33,7 @@ Explore the resources and functions of the idp module in the Okta package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 	<dt>Version</dt>
-	<dd>2.7.1</dd>
+	<dd>2.9.0</dd>
 </dl>
 
 

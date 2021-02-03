@@ -29,7 +29,7 @@ class MyStack : Stack
     {
         var example = Output.Create(Okta.Idp.GetSaml.InvokeAsync(new Okta.Idp.GetSamlArgs
         {
-            Label = "Example App",
+            Name = "Example App",
         }));
     }
 
@@ -49,8 +49,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "Example App"
 		_, err := idp.LookupSaml(ctx, &idp.LookupSamlArgs{
-			Label: "Example App",
+			Name: &opt0,
 		}, nil)
 		if err != nil {
 			return err
@@ -67,7 +68,7 @@ func main() {
 import pulumi
 import pulumi_okta as okta
 
-example = okta.idp.get_saml(label="Example App")
+example = okta.idp.get_saml(name="Example App")
 ```
 
 {{% /example %}}
@@ -79,7 +80,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
 const example = pulumi.output(okta.idp.getSaml({
-    label: "Example App",
+    name: "Example App",
 }, { async: true }));
 ```
 
@@ -246,7 +247,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP.
+    <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP (always equals to `"HTTP-POST"`).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -306,7 +307,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}single sign on binding.
+    <dd>{{% md %}}single sign-on binding.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -326,7 +327,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}single sign on url.
+    <dd>{{% md %}}single sign-on url.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -392,7 +393,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP.
+    <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP (always equals to `"HTTP-POST"`).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -452,7 +453,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}single sign on binding.
+    <dd>{{% md %}}single sign-on binding.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -472,7 +473,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}single sign on url.
+    <dd>{{% md %}}single sign-on url.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -538,7 +539,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP.
+    <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP (always equals to `"HTTP-POST"`).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -598,7 +599,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}single sign on binding.
+    <dd>{{% md %}}single sign-on binding.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -618,7 +619,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}single sign on url.
+    <dd>{{% md %}}single sign-on url.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -684,7 +685,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP.
+    <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP (always equals to `"HTTP-POST"`).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -744,7 +745,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}single sign on binding.
+    <dd>{{% md %}}single sign-on binding.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -764,7 +765,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}single sign on url.
+    <dd>{{% md %}}single sign-on url.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">

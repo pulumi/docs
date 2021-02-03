@@ -135,7 +135,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of policy to retrieve.
+    <dd>{{% md %}}Name of policy to retrieve.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -145,7 +145,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type of policy to retrieve.
+    <dd>{{% md %}}Type of policy to retrieve. Valid values: `OKTA_SIGN_ON`, `PASSWORD`, `MFA_ENROLL`, `IDP_DISCOVERY`
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -161,7 +161,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of policy to retrieve.
+    <dd>{{% md %}}Name of policy to retrieve.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -171,7 +171,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type of policy to retrieve.
+    <dd>{{% md %}}Type of policy to retrieve. Valid values: `OKTA_SIGN_ON`, `PASSWORD`, `MFA_ENROLL`, `IDP_DISCOVERY`
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -187,7 +187,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of policy to retrieve.
+    <dd>{{% md %}}Name of policy to retrieve.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -197,7 +197,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type of policy to retrieve.
+    <dd>{{% md %}}Type of policy to retrieve. Valid values: `OKTA_SIGN_ON`, `PASSWORD`, `MFA_ENROLL`, `IDP_DISCOVERY`
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -213,7 +213,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}name of policy to retrieve.
+    <dd>{{% md %}}Name of policy to retrieve.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -223,7 +223,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}type of policy to retrieve.
+    <dd>{{% md %}}Type of policy to retrieve. Valid values: `OKTA_SIGN_ON`, `PASSWORD`, `MFA_ENROLL`, `IDP_DISCOVERY`
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

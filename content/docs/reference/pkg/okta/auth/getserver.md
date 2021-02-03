@@ -206,7 +206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}array of audiences,
+    <dd>{{% md %}}array of audiences.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -260,6 +260,26 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="issuer_csharp">
+<a href="#issuer_csharp" style="color: inherit; text-decoration: inherit;">Issuer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The complete URL of the authorization server. This becomes the `iss` claim in an access token.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="issuermode_csharp">
+<a href="#issuermode_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Can be set to `"CUSTOM_URL"` or `"ORG_URL"`
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="kid_csharp">
 <a href="#kid_csharp" style="color: inherit; text-decoration: inherit;">Kid</a>
 </span>
@@ -302,7 +322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}array of audiences,
+    <dd>{{% md %}}array of audiences.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -356,6 +376,26 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="issuer_go">
+<a href="#issuer_go" style="color: inherit; text-decoration: inherit;">Issuer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The complete URL of the authorization server. This becomes the `iss` claim in an access token.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="issuermode_go">
+<a href="#issuermode_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Can be set to `"CUSTOM_URL"` or `"ORG_URL"`
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="kid_go">
 <a href="#kid_go" style="color: inherit; text-decoration: inherit;">Kid</a>
 </span>
@@ -398,7 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}array of audiences,
+    <dd>{{% md %}}array of audiences.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -452,6 +492,26 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="issuer_nodejs">
+<a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The complete URL of the authorization server. This becomes the `iss` claim in an access token.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="issuermode_nodejs">
+<a href="#issuermode_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Can be set to `"CUSTOM_URL"` or `"ORG_URL"`
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="kid_nodejs">
 <a href="#kid_nodejs" style="color: inherit; text-decoration: inherit;">kid</a>
 </span>
@@ -494,7 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}array of audiences,
+    <dd>{{% md %}}array of audiences.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -545,6 +605,26 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="issuer_python">
+<a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The complete URL of the authorization server. This becomes the `iss` claim in an access token.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="issuer_mode_python">
+<a href="#issuer_mode_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Can be set to `"CUSTOM_URL"` or `"ORG_URL"`
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
