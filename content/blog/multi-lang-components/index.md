@@ -28,7 +28,7 @@ Wednesday video to see it in action:
 
 <!--more-->
 
-EKS in all languages is just the start of the multi-language components story. Multi-language components enable all organizations to choose 
+EKS in all languages is just the start of the multi-language components story. Multi-language components enable all organizations to choose
 the right programming language, or languages, for each team and each product. Your infrastructure or platform teams will be able to
 write components in Go and share them with a webapp team using TypeScript, or write in .NET and share with a machine learning team
 using Python, or any other combination that suits your business. Similarly, any member of the worldwide Pulumi community can author
