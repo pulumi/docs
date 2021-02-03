@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/postgresql | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/postgresql package."
-git_sha: "56acfa815307606471ca368cae79045366e5602d"
+git_sha: "2dd5b0a17094a1d3cf2a7be78655c9622ee22505"
 block_external_search_index: true
 ---
 
