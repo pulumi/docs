@@ -521,7 +521,7 @@ const instance = new gcp.notebooks.Instance("instance", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/notebooks/#pulumi_gcp.notebooks.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_config</span><span class="p">:</span> <span class="nx">Optional[InstanceAcceleratorConfigArgs]</span> = None<span class="p">, </span><span class="nx">boot_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">boot_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_image</span><span class="p">:</span> <span class="nx">Optional[InstanceContainerImageArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_gpu_driver_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">data_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">install_gpu_driver</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_owners</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_proxy_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">no_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">no_remove_data_disk</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">post_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[InstanceVmImageArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/notebooks/#pulumi_gcp.notebooks.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_config</span><span class="p">:</span> <span class="nx">Optional[InstanceAcceleratorConfigArgs]</span> = None<span class="p">, </span><span class="nx">boot_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">boot_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_image</span><span class="p">:</span> <span class="nx">Optional[InstanceContainerImageArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_gpu_driver_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">data_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">install_gpu_driver</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_owners</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_proxy_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">no_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">no_remove_data_disk</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">post_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceShieldedInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[InstanceVmImageArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -903,7 +903,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}the notebook instance will not register with the proxy..
+    <dd>{{% md %}}The notebook instance will not register with the proxy..
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -913,7 +913,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}no public IP will be assigned to this instance.
+    <dd>{{% md %}}No public IP will be assigned to this instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -964,6 +964,31 @@ the Compute Engine default service account is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="serviceaccountscopes_csharp">
+<a href="#serviceaccountscopes_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Optional. The URIs of service account scopes to be included in Compute Engine instances.
+If not specified, the following scopes are defined:
+- https://www.googleapis.com/auth/cloud-platform
+- https://www.googleapis.com/auth/userinfo.email
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="shieldedinstanceconfig_csharp">
+<a href="#shieldedinstanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
+Not all combinations are valid
+Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
@@ -972,6 +997,16 @@ the Compute Engine default service account is used.
     </dt>
     <dd>{{% md %}}The name of the subnet that this instance is in.
 Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The Compute Engine tags to add to runtime.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1211,7 +1246,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}the notebook instance will not register with the proxy..
+    <dd>{{% md %}}The notebook instance will not register with the proxy..
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1221,7 +1256,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}no public IP will be assigned to this instance.
+    <dd>{{% md %}}No public IP will be assigned to this instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1272,6 +1307,31 @@ the Compute Engine default service account is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="serviceaccountscopes_go">
+<a href="#serviceaccountscopes_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The URIs of service account scopes to be included in Compute Engine instances.
+If not specified, the following scopes are defined:
+- https://www.googleapis.com/auth/cloud-platform
+- https://www.googleapis.com/auth/userinfo.email
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="shieldedinstanceconfig_go">
+<a href="#shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
+Not all combinations are valid
+Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
@@ -1280,6 +1340,16 @@ the Compute Engine default service account is used.
     </dt>
     <dd>{{% md %}}The name of the subnet that this instance is in.
 Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The Compute Engine tags to add to runtime.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1519,7 +1589,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}the notebook instance will not register with the proxy..
+    <dd>{{% md %}}The notebook instance will not register with the proxy..
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1529,7 +1599,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}no public IP will be assigned to this instance.
+    <dd>{{% md %}}No public IP will be assigned to this instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1580,6 +1650,31 @@ the Compute Engine default service account is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="serviceaccountscopes_nodejs">
+<a href="#serviceaccountscopes_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Optional. The URIs of service account scopes to be included in Compute Engine instances.
+If not specified, the following scopes are defined:
+- https://www.googleapis.com/auth/cloud-platform
+- https://www.googleapis.com/auth/userinfo.email
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="shieldedinstanceconfig_nodejs">
+<a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
+Not all combinations are valid
+Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
@@ -1588,6 +1683,16 @@ the Compute Engine default service account is used.
     </dt>
     <dd>{{% md %}}The name of the subnet that this instance is in.
 Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The Compute Engine tags to add to runtime.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1827,7 +1932,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}the notebook instance will not register with the proxy..
+    <dd>{{% md %}}The notebook instance will not register with the proxy..
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1837,7 +1942,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}no public IP will be assigned to this instance.
+    <dd>{{% md %}}No public IP will be assigned to this instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1888,6 +1993,31 @@ the Compute Engine default service account is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="service_account_scopes_python">
+<a href="#service_account_scopes_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Optional. The URIs of service account scopes to be included in Compute Engine instances.
+If not specified, the following scopes are defined:
+- https://www.googleapis.com/auth/cloud-platform
+- https://www.googleapis.com/auth/userinfo.email
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="shielded_instance_config_python">
+<a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
+Not all combinations are valid
+Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
@@ -1896,6 +2026,16 @@ the Compute Engine default service account is used.
     </dt>
     <dd>{{% md %}}The name of the subnet that this instance is in.
 Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The Compute Engine tags to add to runtime.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2081,7 +2221,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_config</span><span class="p">:</span> <span class="nx">Optional[InstanceAcceleratorConfigArgs]</span> = None<span class="p">, </span><span class="nx">boot_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">boot_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_image</span><span class="p">:</span> <span class="nx">Optional[InstanceContainerImageArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_gpu_driver_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">data_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">install_gpu_driver</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_owners</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_proxy_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">no_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">no_remove_data_disk</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">post_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[InstanceVmImageArgs]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_config</span><span class="p">:</span> <span class="nx">Optional[InstanceAcceleratorConfigArgs]</span> = None<span class="p">, </span><span class="nx">boot_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">boot_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_image</span><span class="p">:</span> <span class="nx">Optional[InstanceContainerImageArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_gpu_driver_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">data_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">install_gpu_driver</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_owners</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_proxy_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">no_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">no_remove_data_disk</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">post_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceShieldedInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[InstanceVmImageArgs]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2405,7 +2545,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}the notebook instance will not register with the proxy..
+    <dd>{{% md %}}The notebook instance will not register with the proxy..
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2415,7 +2555,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}no public IP will be assigned to this instance.
+    <dd>{{% md %}}No public IP will be assigned to this instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2476,6 +2616,31 @@ the Compute Engine default service account is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_serviceaccountscopes_csharp">
+<a href="#state_serviceaccountscopes_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Optional. The URIs of service account scopes to be included in Compute Engine instances.
+If not specified, the following scopes are defined:
+- https://www.googleapis.com/auth/cloud-platform
+- https://www.googleapis.com/auth/userinfo.email
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_shieldedinstanceconfig_csharp">
+<a href="#state_shieldedinstanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
+Not all combinations are valid
+Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
@@ -2494,6 +2659,16 @@ the Compute Engine default service account is used.
     </dt>
     <dd>{{% md %}}The name of the subnet that this instance is in.
 Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The Compute Engine tags to add to runtime.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2733,7 +2908,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}the notebook instance will not register with the proxy..
+    <dd>{{% md %}}The notebook instance will not register with the proxy..
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2743,7 +2918,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}no public IP will be assigned to this instance.
+    <dd>{{% md %}}No public IP will be assigned to this instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2804,6 +2979,31 @@ the Compute Engine default service account is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_serviceaccountscopes_go">
+<a href="#state_serviceaccountscopes_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The URIs of service account scopes to be included in Compute Engine instances.
+If not specified, the following scopes are defined:
+- https://www.googleapis.com/auth/cloud-platform
+- https://www.googleapis.com/auth/userinfo.email
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_shieldedinstanceconfig_go">
+<a href="#state_shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
+Not all combinations are valid
+Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
@@ -2822,6 +3022,16 @@ the Compute Engine default service account is used.
     </dt>
     <dd>{{% md %}}The name of the subnet that this instance is in.
 Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The Compute Engine tags to add to runtime.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3061,7 +3271,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}the notebook instance will not register with the proxy..
+    <dd>{{% md %}}The notebook instance will not register with the proxy..
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3071,7 +3281,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}no public IP will be assigned to this instance.
+    <dd>{{% md %}}No public IP will be assigned to this instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3132,6 +3342,31 @@ the Compute Engine default service account is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_serviceaccountscopes_nodejs">
+<a href="#state_serviceaccountscopes_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Optional. The URIs of service account scopes to be included in Compute Engine instances.
+If not specified, the following scopes are defined:
+- https://www.googleapis.com/auth/cloud-platform
+- https://www.googleapis.com/auth/userinfo.email
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_shieldedinstanceconfig_nodejs">
+<a href="#state_shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
+Not all combinations are valid
+Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
@@ -3150,6 +3385,16 @@ the Compute Engine default service account is used.
     </dt>
     <dd>{{% md %}}The name of the subnet that this instance is in.
 Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The Compute Engine tags to add to runtime.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3389,7 +3634,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}the notebook instance will not register with the proxy..
+    <dd>{{% md %}}The notebook instance will not register with the proxy..
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3399,7 +3644,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}no public IP will be assigned to this instance.
+    <dd>{{% md %}}No public IP will be assigned to this instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3460,6 +3705,31 @@ the Compute Engine default service account is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_service_account_scopes_python">
+<a href="#state_service_account_scopes_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Optional. The URIs of service account scopes to be included in Compute Engine instances.
+If not specified, the following scopes are defined:
+- https://www.googleapis.com/auth/cloud-platform
+- https://www.googleapis.com/auth/userinfo.email
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_shielded_instance_config_python">
+<a href="#state_shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
+Not all combinations are valid
+Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
@@ -3478,6 +3748,16 @@ the Compute Engine default service account is used.
     </dt>
     <dd>{{% md %}}The name of the subnet that this instance is in.
 Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The Compute Engine tags to add to runtime.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3548,7 +3828,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.
-Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `TPU_V2`, and `TPU_V3`.
+Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `NVIDIA_TESLA_A100`, `TPU_V2`, and `TPU_V3`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3575,7 +3855,7 @@ Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.
-Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `TPU_V2`, and `TPU_V3`.
+Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `NVIDIA_TESLA_A100`, `TPU_V2`, and `TPU_V3`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3602,7 +3882,7 @@ Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.
-Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `TPU_V2`, and `TPU_V3`.
+Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `NVIDIA_TESLA_A100`, `TPU_V2`, and `TPU_V3`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3629,7 +3909,7 @@ Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.
-Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `TPU_V2`, and `TPU_V3`.
+Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `NVIDIA_TESLA_A100`, `TPU_V2`, and `TPU_V3`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3752,6 +4032,192 @@ For example: gcr.io/{project_id}/{imageName}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceShieldedInstanceConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceShieldedInstanceConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/notebooks?tab=doc#InstanceShieldedInstanceConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/notebooks?tab=doc#InstanceShieldedInstanceConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Notebooks.Inputs.InstanceShieldedInstanceConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Notebooks.Outputs.InstanceShieldedInstanceConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableintegritymonitoring_csharp">
+<a href="#enableintegritymonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Integrity<wbr>Monitoring</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the
+boot integrity of the instance. The attestation is performed against the integrity policy baseline.
+This baseline is initially derived from the implicitly trusted boot image when the instance is created.
+Enabled by default.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablesecureboot_csharp">
+<a href="#enablesecureboot_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Secure<wbr>Boot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs
+authentic software by verifying the digital signature of all boot components, and halting the boot process
+if signature verification fails.
+Disabled by default.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablevtpm_csharp">
+<a href="#enablevtpm_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Vtpm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Defines whether the instance has the vTPM enabled.
+Enabled by default.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableintegritymonitoring_go">
+<a href="#enableintegritymonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Integrity<wbr>Monitoring</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the
+boot integrity of the instance. The attestation is performed against the integrity policy baseline.
+This baseline is initially derived from the implicitly trusted boot image when the instance is created.
+Enabled by default.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablesecureboot_go">
+<a href="#enablesecureboot_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Secure<wbr>Boot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs
+authentic software by verifying the digital signature of all boot components, and halting the boot process
+if signature verification fails.
+Disabled by default.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablevtpm_go">
+<a href="#enablevtpm_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Vtpm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Defines whether the instance has the vTPM enabled.
+Enabled by default.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableintegritymonitoring_nodejs">
+<a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the
+boot integrity of the instance. The attestation is performed against the integrity policy baseline.
+This baseline is initially derived from the implicitly trusted boot image when the instance is created.
+Enabled by default.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablesecureboot_nodejs">
+<a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs
+authentic software by verifying the digital signature of all boot components, and halting the boot process
+if signature verification fails.
+Disabled by default.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablevtpm_nodejs">
+<a href="#enablevtpm_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Defines whether the instance has the vTPM enabled.
+Enabled by default.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_integrity_monitoring_python">
+<a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the
+boot integrity of the instance. The attestation is performed against the integrity policy baseline.
+This baseline is initially derived from the implicitly trusted boot image when the instance is created.
+Enabled by default.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_secure_boot_python">
+<a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs
+authentic software by verifying the digital signature of all boot components, and halting the boot process
+if signature verification fails.
+Disabled by default.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_vtpm_python">
+<a href="#enable_vtpm_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>vtpm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Defines whether the instance has the vTPM enabled.
+Enabled by default.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

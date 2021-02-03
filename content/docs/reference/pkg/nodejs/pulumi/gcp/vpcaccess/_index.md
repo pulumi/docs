@@ -3,7 +3,7 @@ title: "Module vpcaccess"
 title_tag: "Module vpcaccess | Package @pulumi/gcp | Node.js SDK"
 linktitle: "vpcaccess"
 meta_desc: "Explore members of the vpcaccess module in the @pulumi/gcp package."
-git_sha: "5c935b05d99cd9c17d3f0db276edab8124e8c4fa"
+git_sha: "4687b672ca57745f73d83956f1fd12f569327169"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Connector" data-link-title="Connector">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L49">
         Resource <strong>Connector</strong>
     </a>
 </h3>
@@ -79,7 +79,7 @@ Connector can be imported using any of these accepted formats
 ```
 
 <h4 class="pdoc-member-header" id="Connector-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L113"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L113"> <b>constructor</b></a>
 </h4>
 
 
@@ -93,7 +93,7 @@ Create a Connector resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Connector-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -104,14 +104,14 @@ Get an existing Connector resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Connector-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Connector-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -122,7 +122,7 @@ Returns true if the given object is an instance of Connector.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Connector-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -131,7 +131,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Connector-ipCidrRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L80">property <b>ipCidrRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L80">property <b>ipCidrRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipCidrRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -139,7 +139,7 @@ deployments and may be missing (undefined) during planning phases.
 The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
 
 <h4 class="pdoc-member-header" id="Connector-maxThroughput">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L84">property <b>maxThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L84">property <b>maxThroughput</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxThroughput: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -147,7 +147,7 @@ The range of internal addresses that follows RFC 4632 notation. Example: `10.132
 Maximum throughput of the connector in Mbps, must be greater than `minThroughput`. Default is 1000.
 
 <h4 class="pdoc-member-header" id="Connector-minThroughput">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L88">property <b>minThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L88">property <b>minThroughput</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minThroughput: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -155,7 +155,7 @@ Maximum throughput of the connector in Mbps, must be greater than `minThroughput
 Minimum throughput of the connector in Mbps. Default and min is 200.
 
 <h4 class="pdoc-member-header" id="Connector-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L92">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -163,7 +163,7 @@ Minimum throughput of the connector in Mbps. Default and min is 200.
 The name of the resource (Max 25 characters).
 
 <h4 class="pdoc-member-header" id="Connector-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L96">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L96">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -171,7 +171,7 @@ The name of the resource (Max 25 characters).
 Name of a VPC network.
 
 <h4 class="pdoc-member-header" id="Connector-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L101">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L101">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Connector-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L105">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L105">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ If it is not provided, the provider project is used.
 Region where the VPC Access connector resides. If it is not provided, the provider region is used.
 
 <h4 class="pdoc-member-header" id="Connector-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L109">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L109">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -196,7 +196,7 @@ Region where the VPC Access connector resides. If it is not provided, the provid
 The fully qualified name of this VPC connector
 
 <h4 class="pdoc-member-header" id="Connector-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L113">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L113">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -204,7 +204,7 @@ The fully qualified name of this VPC connector
 State of the VPC access connector.
 
 <h4 class="pdoc-member-header" id="Connector-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -216,7 +216,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ConnectorArgs" data-link-title="ConnectorArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L211">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L211">
         interface <strong>ConnectorArgs</strong>
     </a>
 </h3>
@@ -226,7 +226,7 @@ deployments.
 The set of arguments for constructing a Connector resource.
 
 <h4 class="pdoc-member-header" id="ConnectorArgs-ipCidrRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L215">property <b>ipCidrRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L215">property <b>ipCidrRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipCidrRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -234,7 +234,7 @@ The set of arguments for constructing a Connector resource.
 The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
 
 <h4 class="pdoc-member-header" id="ConnectorArgs-maxThroughput">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L219">property <b>maxThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L219">property <b>maxThroughput</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxThroughput?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -242,7 +242,7 @@ The range of internal addresses that follows RFC 4632 notation. Example: `10.132
 Maximum throughput of the connector in Mbps, must be greater than `minThroughput`. Default is 1000.
 
 <h4 class="pdoc-member-header" id="ConnectorArgs-minThroughput">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L223">property <b>minThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L223">property <b>minThroughput</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minThroughput?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -250,7 +250,7 @@ Maximum throughput of the connector in Mbps, must be greater than `minThroughput
 Minimum throughput of the connector in Mbps. Default and min is 200.
 
 <h4 class="pdoc-member-header" id="ConnectorArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L227">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L227">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -258,7 +258,7 @@ Minimum throughput of the connector in Mbps. Default and min is 200.
 The name of the resource (Max 25 characters).
 
 <h4 class="pdoc-member-header" id="ConnectorArgs-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L231">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L231">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -266,7 +266,7 @@ The name of the resource (Max 25 characters).
 Name of a VPC network.
 
 <h4 class="pdoc-member-header" id="ConnectorArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L236">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L236">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -275,7 +275,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ConnectorArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L240">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L240">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -283,7 +283,7 @@ If it is not provided, the provider project is used.
 Region where the VPC Access connector resides. If it is not provided, the provider region is used.
 
 <h3 class="pdoc-module-header" id="ConnectorState" data-link-title="ConnectorState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L168">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L168">
         interface <strong>ConnectorState</strong>
     </a>
 </h3>
@@ -293,7 +293,7 @@ Region where the VPC Access connector resides. If it is not provided, the provid
 Input properties used for looking up and filtering Connector resources.
 
 <h4 class="pdoc-member-header" id="ConnectorState-ipCidrRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L172">property <b>ipCidrRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L172">property <b>ipCidrRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipCidrRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -301,7 +301,7 @@ Input properties used for looking up and filtering Connector resources.
 The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
 
 <h4 class="pdoc-member-header" id="ConnectorState-maxThroughput">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L176">property <b>maxThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L176">property <b>maxThroughput</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxThroughput?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -309,7 +309,7 @@ The range of internal addresses that follows RFC 4632 notation. Example: `10.132
 Maximum throughput of the connector in Mbps, must be greater than `minThroughput`. Default is 1000.
 
 <h4 class="pdoc-member-header" id="ConnectorState-minThroughput">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L180">property <b>minThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L180">property <b>minThroughput</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minThroughput?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -317,7 +317,7 @@ Maximum throughput of the connector in Mbps, must be greater than `minThroughput
 Minimum throughput of the connector in Mbps. Default and min is 200.
 
 <h4 class="pdoc-member-header" id="ConnectorState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L184">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L184">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -325,7 +325,7 @@ Minimum throughput of the connector in Mbps. Default and min is 200.
 The name of the resource (Max 25 characters).
 
 <h4 class="pdoc-member-header" id="ConnectorState-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L188">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L188">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -333,7 +333,7 @@ The name of the resource (Max 25 characters).
 Name of a VPC network.
 
 <h4 class="pdoc-member-header" id="ConnectorState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L193">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L193">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -342,7 +342,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ConnectorState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L197">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L197">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -350,7 +350,7 @@ If it is not provided, the provider project is used.
 Region where the VPC Access connector resides. If it is not provided, the provider region is used.
 
 <h4 class="pdoc-member-header" id="ConnectorState-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L201">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L201">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -358,7 +358,7 @@ Region where the VPC Access connector resides. If it is not provided, the provid
 The fully qualified name of this VPC connector
 
 <h4 class="pdoc-member-header" id="ConnectorState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/vpcaccess/connector.ts#L205">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/vpcaccess/connector.ts#L205">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

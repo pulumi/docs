@@ -2949,6 +2949,7 @@ Pubsub message must contain either non-empty data, or at least one attribute.
     </dt>
     <dd>{{% md %}}The message payload for PubsubMessage.
 Pubsub message must contain either non-empty data, or at least one attribute.
+A base64-encoded string.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2990,6 +2991,7 @@ Pubsub message must contain either non-empty data, or at least one attribute.
     </dt>
     <dd>{{% md %}}The message payload for PubsubMessage.
 Pubsub message must contain either non-empty data, or at least one attribute.
+A base64-encoded string.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3031,6 +3033,7 @@ Pubsub message must contain either non-empty data, or at least one attribute.
     </dt>
     <dd>{{% md %}}The message payload for PubsubMessage.
 Pubsub message must contain either non-empty data, or at least one attribute.
+A base64-encoded string.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3072,6 +3075,7 @@ Pubsub message must contain either non-empty data, or at least one attribute.
     </dt>
     <dd>{{% md %}}The message payload for PubsubMessage.
 Pubsub message must contain either non-empty data, or at least one attribute.
+A base64-encoded string.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

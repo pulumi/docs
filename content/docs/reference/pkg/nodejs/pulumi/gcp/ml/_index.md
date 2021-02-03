@@ -3,7 +3,7 @@ title: "Module ml"
 title_tag: "Module ml | Package @pulumi/gcp | Node.js SDK"
 linktitle: "ml"
 meta_desc: "Explore members of the ml module in the @pulumi/gcp package."
-git_sha: "5c935b05d99cd9c17d3f0db276edab8124e8c4fa"
+git_sha: "4687b672ca57745f73d83956f1fd12f569327169"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="EngineModel" data-link-title="EngineModel">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L59">
         Resource <strong>EngineModel</strong>
     </a>
 </h3>
@@ -88,7 +88,7 @@ Model can be imported using any of these accepted formats
 ```
 
 <h4 class="pdoc-member-header" id="EngineModel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L122"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L122"> <b>constructor</b></a>
 </h4>
 
 
@@ -102,7 +102,7 @@ Create a EngineModel resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EngineModel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L69">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L69">method <b>get</b></a>
 </h4>
 
 
@@ -113,14 +113,14 @@ Get an existing EngineModel resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EngineModel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L59">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L59">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EngineModel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L80">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L80">method <b>isInstance</b></a>
 </h4>
 
 
@@ -131,7 +131,7 @@ Returns true if the given object is an instance of EngineModel.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EngineModel-defaultVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L92">property <b>defaultVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L92">property <b>defaultVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EngineModelDefaultVersion'>EngineModelDefaultVersion</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -141,7 +141,7 @@ prediction requests that do not specify a version.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="EngineModel-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L96">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L96">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -149,7 +149,7 @@ Structure is documented below.
 The description specified for the model when it was created.
 
 <h4 class="pdoc-member-header" id="EngineModel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L59">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L59">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -158,7 +158,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EngineModel-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L100">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L100">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -166,7 +166,7 @@ deployments and may be missing (undefined) during planning phases.
 One or more labels that you can add, to organize your models.
 
 <h4 class="pdoc-member-header" id="EngineModel-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L104">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L104">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -174,7 +174,7 @@ One or more labels that you can add, to organize your models.
 The name specified for the version when it was created.
 
 <h4 class="pdoc-member-header" id="EngineModel-onlinePredictionConsoleLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L108">property <b>onlinePredictionConsoleLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L108">property <b>onlinePredictionConsoleLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>onlinePredictionConsoleLogging: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -182,7 +182,7 @@ The name specified for the version when it was created.
 If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
 
 <h4 class="pdoc-member-header" id="EngineModel-onlinePredictionLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L112">property <b>onlinePredictionLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L112">property <b>onlinePredictionLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>onlinePredictionLogging: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -190,7 +190,7 @@ If true, online prediction nodes send stderr and stdout streams to Stackdriver L
 If true, online prediction access logs are sent to StackDriver Logging.
 
 <h4 class="pdoc-member-header" id="EngineModel-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L117">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L117">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -199,7 +199,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EngineModel-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L122">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L122">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>regions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -208,7 +208,7 @@ The list of regions where the model is going to be deployed.
 Currently only one region per model is supported
 
 <h4 class="pdoc-member-header" id="EngineModel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L59">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L59">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -220,7 +220,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="EngineModelArgs" data-link-title="EngineModelArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L211">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L211">
         interface <strong>EngineModelArgs</strong>
     </a>
 </h3>
@@ -230,7 +230,7 @@ deployments.
 The set of arguments for constructing a EngineModel resource.
 
 <h4 class="pdoc-member-header" id="EngineModelArgs-defaultVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L217">property <b>defaultVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L217">property <b>defaultVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EngineModelDefaultVersion'>EngineModelDefaultVersion</a>&gt;;</code></pre>
@@ -240,7 +240,7 @@ prediction requests that do not specify a version.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="EngineModelArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L221">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L221">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -248,7 +248,7 @@ Structure is documented below.
 The description specified for the model when it was created.
 
 <h4 class="pdoc-member-header" id="EngineModelArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L225">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L225">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -256,7 +256,7 @@ The description specified for the model when it was created.
 One or more labels that you can add, to organize your models.
 
 <h4 class="pdoc-member-header" id="EngineModelArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L229">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L229">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -264,7 +264,7 @@ One or more labels that you can add, to organize your models.
 The name specified for the version when it was created.
 
 <h4 class="pdoc-member-header" id="EngineModelArgs-onlinePredictionConsoleLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L233">property <b>onlinePredictionConsoleLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L233">property <b>onlinePredictionConsoleLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>onlinePredictionConsoleLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -272,7 +272,7 @@ The name specified for the version when it was created.
 If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
 
 <h4 class="pdoc-member-header" id="EngineModelArgs-onlinePredictionLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L237">property <b>onlinePredictionLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L237">property <b>onlinePredictionLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>onlinePredictionLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -280,7 +280,7 @@ If true, online prediction nodes send stderr and stdout streams to Stackdriver L
 If true, online prediction access logs are sent to StackDriver Logging.
 
 <h4 class="pdoc-member-header" id="EngineModelArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L242">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L242">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -289,7 +289,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EngineModelArgs-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L247">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L247">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -298,7 +298,7 @@ The list of regions where the model is going to be deployed.
 Currently only one region per model is supported
 
 <h3 class="pdoc-module-header" id="EngineModelState" data-link-title="EngineModelState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L169">
         interface <strong>EngineModelState</strong>
     </a>
 </h3>
@@ -308,7 +308,7 @@ Currently only one region per model is supported
 Input properties used for looking up and filtering EngineModel resources.
 
 <h4 class="pdoc-member-header" id="EngineModelState-defaultVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L175">property <b>defaultVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L175">property <b>defaultVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EngineModelDefaultVersion'>EngineModelDefaultVersion</a>&gt;;</code></pre>
@@ -318,7 +318,7 @@ prediction requests that do not specify a version.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="EngineModelState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L179">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L179">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -326,7 +326,7 @@ Structure is documented below.
 The description specified for the model when it was created.
 
 <h4 class="pdoc-member-header" id="EngineModelState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L183">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L183">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -334,7 +334,7 @@ The description specified for the model when it was created.
 One or more labels that you can add, to organize your models.
 
 <h4 class="pdoc-member-header" id="EngineModelState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L187">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L187">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -342,7 +342,7 @@ One or more labels that you can add, to organize your models.
 The name specified for the version when it was created.
 
 <h4 class="pdoc-member-header" id="EngineModelState-onlinePredictionConsoleLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L191">property <b>onlinePredictionConsoleLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L191">property <b>onlinePredictionConsoleLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>onlinePredictionConsoleLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -350,7 +350,7 @@ The name specified for the version when it was created.
 If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
 
 <h4 class="pdoc-member-header" id="EngineModelState-onlinePredictionLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L195">property <b>onlinePredictionLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L195">property <b>onlinePredictionLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>onlinePredictionLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -358,7 +358,7 @@ If true, online prediction nodes send stderr and stdout streams to Stackdriver L
 If true, online prediction access logs are sent to StackDriver Logging.
 
 <h4 class="pdoc-member-header" id="EngineModelState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L200">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L200">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -367,7 +367,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EngineModelState-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/5c935b05d99cd9c17d3f0db276edab8124e8c4fa/sdk/nodejs/ml/engineModel.ts#L205">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/ml/engineModel.ts#L205">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
