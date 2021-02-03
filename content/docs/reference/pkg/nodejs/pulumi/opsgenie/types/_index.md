@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/opsgenie | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/opsgenie package."
-git_sha: "c7eafed14efa09a4966c5249dd7919fe5de296d3"
+git_sha: "968c577af7afa7ee9e4257b1899d665c9f4a7177"
 block_external_search_index: true
 ---
 

@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/opsgenie | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/opsgenie package."
-git_sha: "c7eafed14efa09a4966c5249dd7919fe5de296d3"
+git_sha: "968c577af7afa7ee9e4257b1899d665c9f4a7177"
 block_external_search_index: true
 ---
 
@@ -28,14 +28,14 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiKey" data-link-title="apiKey">
-    <a href="https://github.com/pulumi/pulumi-opsgenie/blob/c7eafed14efa09a4966c5249dd7919fe5de296d3/sdk/nodejs/config/vars.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-opsgenie/blob/968c577af7afa7ee9e4257b1899d665c9f4a7177/sdk/nodejs/config/vars.ts#L9">
         let <strong>apiKey</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> apiKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiKey&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="apiUrl" data-link-title="apiUrl">
-    <a href="https://github.com/pulumi/pulumi-opsgenie/blob/c7eafed14efa09a4966c5249dd7919fe5de296d3/sdk/nodejs/config/vars.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-opsgenie/blob/968c577af7afa7ee9e4257b1899d665c9f4a7177/sdk/nodejs/config/vars.ts#L10">
         let <strong>apiUrl</strong>
     </a>
 </h3>
