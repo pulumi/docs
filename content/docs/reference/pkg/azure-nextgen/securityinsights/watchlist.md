@@ -153,7 +153,7 @@ value1,value2`,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Watchlist</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by</span><span class="p">:</span> <span class="nx">Optional[UserInfoArgs]</span> = None<span class="p">, </span><span class="nx">default_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_deleted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">number_of_lines_to_skip</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">raw_content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Union[str, Source]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_by</span><span class="p">:</span> <span class="nx">Optional[UserInfoArgs]</span> = None<span class="p">, </span><span class="nx">watchlist_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchlist_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchlist_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Watchlist</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by</span><span class="p">:</span> <span class="nx">Optional[UserInfoArgs]</span> = None<span class="p">, </span><span class="nx">default_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_deleted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">number_of_lines_to_skip</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">raw_content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Union[str, Source]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_by</span><span class="p">:</span> <span class="nx">Optional[UserInfoArgs]</span> = None<span class="p">, </span><span class="nx">upload_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchlist_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchlist_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchlist_items_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">watchlist_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -506,6 +506,15 @@ The Watchlist resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Describes a user that updated the watchlist{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="uploadstatus_csharp">
+<a href="#uploadstatus_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="watchlistid_csharp">
 <a href="#watchlistid_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Id</a>
 </span>
@@ -513,6 +522,15 @@ The Watchlist resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id (a Guid) of the watchlist{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="watchlistitemscount_csharp">
+<a href="#watchlistitemscount_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Items<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of Watchlist Items in the Watchlist{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="watchlisttype_csharp">
@@ -710,6 +728,15 @@ The Watchlist resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Describes a user that updated the watchlist{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="uploadstatus_go">
+<a href="#uploadstatus_go" style="color: inherit; text-decoration: inherit;">Upload<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="watchlistid_go">
 <a href="#watchlistid_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Id</a>
 </span>
@@ -717,6 +744,15 @@ The Watchlist resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id (a Guid) of the watchlist{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="watchlistitemscount_go">
+<a href="#watchlistitemscount_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Items<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of Watchlist Items in the Watchlist{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="watchlisttype_go">
@@ -914,6 +950,15 @@ The Watchlist resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Describes a user that updated the watchlist{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="uploadstatus_nodejs">
+<a href="#uploadstatus_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="watchlistid_nodejs">
 <a href="#watchlistid_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Id</a>
 </span>
@@ -921,6 +966,15 @@ The Watchlist resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id (a Guid) of the watchlist{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="watchlistitemscount_nodejs">
+<a href="#watchlistitemscount_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Items<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of Watchlist Items in the Watchlist{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="watchlisttype_nodejs">
@@ -1118,6 +1172,15 @@ The Watchlist resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Describes a user that updated the watchlist{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="upload_status_python">
+<a href="#upload_status_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="watchlist_id_python">
 <a href="#watchlist_id_python" style="color: inherit; text-decoration: inherit;">watchlist_<wbr>id</a>
 </span>
@@ -1125,6 +1188,15 @@ The Watchlist resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id (a Guid) of the watchlist{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="watchlist_items_count_python">
+<a href="#watchlist_items_count_python" style="color: inherit; text-decoration: inherit;">watchlist_<wbr>items_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of Watchlist Items in the Watchlist{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="watchlist_type_python">

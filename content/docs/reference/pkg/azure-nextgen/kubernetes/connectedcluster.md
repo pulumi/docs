@@ -1781,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:kubernetes/v20200101preview:ConnectedCluster connectedCluster1 72f988bf-86f1-41af-91ab-2d7cd011db47 
+$ pulumi import azure-nextgen:kubernetes/v20200101preview:ConnectedCluster connectedCluster1 /subscriptions/1bfbb5d0-917e-4346-9026-1d3b344417f5/resourceGroups/akkeshar/providers/Microsoft.Kubernetes/connectedClusters/connectedCluster1 
 ```
 
 

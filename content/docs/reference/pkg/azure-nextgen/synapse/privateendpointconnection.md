@@ -11,7 +11,6 @@ meta_desc: "Documentation for the azure-nextgen.synapse.PrivateEndpointConnectio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A private endpoint connection
-Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Synapse.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Synapse.Latest.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.Synapse.V20190601Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Synapse.V20190601Preview.PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "ExamplePrivateEndpointConnection",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Synapse.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.Synapse.V20190601Preview.Inputs.PrivateLinkServiceConnectionStateArgs
             {
                 Description = "Approved by abc@example.com",
                 Status = "Approved",
@@ -52,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/v20190601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,9 +83,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.synapse.latest.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.synapse.v20190601preview.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="ExamplePrivateEndpointConnection",
-    private_link_service_connection_state=azure_nextgen.synapse.latest.PrivateLinkServiceConnectionStateArgs(
+    private_link_service_connection_state=azure_nextgen.synapse.v20190601preview.PrivateLinkServiceConnectionStateArgs(
         description="Approved by abc@example.com",
         status="Approved",
     ),
@@ -103,7 +102,7 @@ private_endpoint_connection = azure_nextgen.synapse.latest.PrivateEndpointConnec
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateEndpointConnection = new azure_nextgen.synapse.latest.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.synapse.v20190601preview.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "ExamplePrivateEndpointConnection",
     privateLinkServiceConnectionState: {
         description: "Approved by abc@example.com",
@@ -985,7 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/latest:PrivateEndpointConnection sql /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/privateEndpointConnections/ExamplePrivateEndpointConnection 
+$ pulumi import azure-nextgen:synapse/v20190601preview:PrivateEndpointConnection sql /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/privateEndpointConnections/ExamplePrivateEndpointConnection 
 ```
 
 

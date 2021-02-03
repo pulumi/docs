@@ -419,6 +419,787 @@ const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("mana
 
 {{% /example %}}
 
+### StorageAccountSetManagementPolicyForBlockAndAppendBlobs
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managementPolicy = new AzureNextGen.Storage.Latest.ManagementPolicy("managementPolicy", new AzureNextGen.Storage.Latest.ManagementPolicyArgs
+        {
+            AccountName = "sto9699",
+            ManagementPolicyName = "default",
+            Policy = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicySchemaArgs
+            {
+                Rules = 
+                {
+                    new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyRuleArgs
+                    {
+                        Definition = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyDefinitionArgs
+                        {
+                            Actions = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyActionArgs
+                            {
+                                BaseBlob = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyBaseBlobArgs
+                                {
+                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    {
+                                        DaysAfterModificationGreaterThan = 90,
+                                    },
+                                },
+                                Snapshot = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicySnapShotArgs
+                                {
+                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    {
+                                        DaysAfterCreationGreaterThan = 90,
+                                    },
+                                },
+                                Version = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyVersionArgs
+                                {
+                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    {
+                                        DaysAfterCreationGreaterThan = 90,
+                                    },
+                                },
+                            },
+                            Filters = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyFilterArgs
+                            {
+                                BlobTypes = 
+                                {
+                                    "blockBlob",
+                                    "appendBlob",
+                                },
+                                PrefixMatch = 
+                                {
+                                    "olcmtestcontainer1",
+                                },
+                            },
+                        },
+                        Enabled = true,
+                        Name = "olcmtest1",
+                        Type = "Lifecycle",
+                    },
+                },
+            },
+            ResourceGroupName = "res7687",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storage.NewManagementPolicy(ctx, "managementPolicy", &storage.ManagementPolicyArgs{
+			AccountName:          pulumi.String("sto9699"),
+			ManagementPolicyName: pulumi.String("default"),
+			Policy: &storage.ManagementPolicySchemaArgs{
+				Rules: storage.ManagementPolicyRuleArray{
+					&storage.ManagementPolicyRuleArgs{
+						Definition: &storage.ManagementPolicyDefinitionArgs{
+							Actions: &storage.ManagementPolicyActionArgs{
+								BaseBlob: &storage.ManagementPolicyBaseBlobArgs{
+									Delete: &storage.DateAfterModificationArgs{
+										DaysAfterModificationGreaterThan: pulumi.Float64(90),
+									},
+								},
+								Snapshot: &storage.ManagementPolicySnapShotArgs{
+									Delete: &storage.DateAfterCreationArgs{
+										DaysAfterCreationGreaterThan: pulumi.Float64(90),
+									},
+								},
+								Version: &storage.ManagementPolicyVersionArgs{
+									Delete: &storage.DateAfterCreationArgs{
+										DaysAfterCreationGreaterThan: pulumi.Float64(90),
+									},
+								},
+							},
+							Filters: &storage.ManagementPolicyFilterArgs{
+								BlobTypes: pulumi.StringArray{
+									pulumi.String("blockBlob"),
+									pulumi.String("appendBlob"),
+								},
+								PrefixMatch: pulumi.StringArray{
+									pulumi.String("olcmtestcontainer1"),
+								},
+							},
+						},
+						Enabled: pulumi.Bool(true),
+						Name:    pulumi.String("olcmtest1"),
+						Type:    pulumi.String("Lifecycle"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("res7687"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+management_policy = azure_nextgen.storage.latest.ManagementPolicy("managementPolicy",
+    account_name="sto9699",
+    management_policy_name="default",
+    policy=azure_nextgen.storage.latest.ManagementPolicySchemaArgs(
+        rules=[azure_nextgen.storage.latest.ManagementPolicyRuleArgs(
+            definition=azure_nextgen.storage.latest.ManagementPolicyDefinitionArgs(
+                actions=azure_nextgen.storage.latest.ManagementPolicyActionArgs(
+                    base_blob=azure_nextgen.storage.latest.ManagementPolicyBaseBlobArgs(
+                        delete=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                            days_after_modification_greater_than=90,
+                        ),
+                    ),
+                    snapshot=azure_nextgen.storage.latest.ManagementPolicySnapShotArgs(
+                        delete=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                            days_after_creation_greater_than=90,
+                        ),
+                    ),
+                    version=azure_nextgen.storage.latest.ManagementPolicyVersionArgs(
+                        delete=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                            days_after_creation_greater_than=90,
+                        ),
+                    ),
+                ),
+                filters=azure_nextgen.storage.latest.ManagementPolicyFilterArgs(
+                    blob_types=[
+                        "blockBlob",
+                        "appendBlob",
+                    ],
+                    prefix_match=["olcmtestcontainer1"],
+                ),
+            ),
+            enabled=True,
+            name="olcmtest1",
+            type="Lifecycle",
+        )],
+    ),
+    resource_group_name="res7687")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("managementPolicy", {
+    accountName: "sto9699",
+    managementPolicyName: "default",
+    policy: {
+        rules: [{
+            definition: {
+                actions: {
+                    baseBlob: {
+                        "delete": {
+                            daysAfterModificationGreaterThan: 90,
+                        },
+                    },
+                    snapshot: {
+                        "delete": {
+                            daysAfterCreationGreaterThan: 90,
+                        },
+                    },
+                    version: {
+                        "delete": {
+                            daysAfterCreationGreaterThan: 90,
+                        },
+                    },
+                },
+                filters: {
+                    blobTypes: [
+                        "blockBlob",
+                        "appendBlob",
+                    ],
+                    prefixMatch: ["olcmtestcontainer1"],
+                },
+            },
+            enabled: true,
+            name: "olcmtest1",
+            type: "Lifecycle",
+        }],
+    },
+    resourceGroupName: "res7687",
+});
+
+```
+
+{{% /example %}}
+
+### StorageAccountSetManagementPolicyWithSnapshotAndVersion
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managementPolicy = new AzureNextGen.Storage.Latest.ManagementPolicy("managementPolicy", new AzureNextGen.Storage.Latest.ManagementPolicyArgs
+        {
+            AccountName = "sto9699",
+            ManagementPolicyName = "default",
+            Policy = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicySchemaArgs
+            {
+                Rules = 
+                {
+                    new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyRuleArgs
+                    {
+                        Definition = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyDefinitionArgs
+                        {
+                            Actions = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyActionArgs
+                            {
+                                BaseBlob = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyBaseBlobArgs
+                                {
+                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    {
+                                        DaysAfterModificationGreaterThan = 1000,
+                                    },
+                                    TierToArchive = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    {
+                                        DaysAfterModificationGreaterThan = 90,
+                                    },
+                                    TierToCool = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    {
+                                        DaysAfterModificationGreaterThan = 30,
+                                    },
+                                },
+                                Snapshot = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicySnapShotArgs
+                                {
+                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    {
+                                        DaysAfterCreationGreaterThan = 1000,
+                                    },
+                                    TierToArchive = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    {
+                                        DaysAfterCreationGreaterThan = 90,
+                                    },
+                                    TierToCool = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    {
+                                        DaysAfterCreationGreaterThan = 30,
+                                    },
+                                },
+                                Version = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyVersionArgs
+                                {
+                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    {
+                                        DaysAfterCreationGreaterThan = 1000,
+                                    },
+                                    TierToArchive = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    {
+                                        DaysAfterCreationGreaterThan = 90,
+                                    },
+                                    TierToCool = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    {
+                                        DaysAfterCreationGreaterThan = 30,
+                                    },
+                                },
+                            },
+                            Filters = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyFilterArgs
+                            {
+                                BlobTypes = 
+                                {
+                                    "blockBlob",
+                                },
+                                PrefixMatch = 
+                                {
+                                    "olcmtestcontainer1",
+                                },
+                            },
+                        },
+                        Enabled = true,
+                        Name = "olcmtest1",
+                        Type = "Lifecycle",
+                    },
+                },
+            },
+            ResourceGroupName = "res7687",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storage.NewManagementPolicy(ctx, "managementPolicy", &storage.ManagementPolicyArgs{
+			AccountName:          pulumi.String("sto9699"),
+			ManagementPolicyName: pulumi.String("default"),
+			Policy: &storage.ManagementPolicySchemaArgs{
+				Rules: storage.ManagementPolicyRuleArray{
+					&storage.ManagementPolicyRuleArgs{
+						Definition: &storage.ManagementPolicyDefinitionArgs{
+							Actions: &storage.ManagementPolicyActionArgs{
+								BaseBlob: &storage.ManagementPolicyBaseBlobArgs{
+									Delete: &storage.DateAfterModificationArgs{
+										DaysAfterModificationGreaterThan: pulumi.Float64(1000),
+									},
+									TierToArchive: &storage.DateAfterModificationArgs{
+										DaysAfterModificationGreaterThan: pulumi.Float64(90),
+									},
+									TierToCool: &storage.DateAfterModificationArgs{
+										DaysAfterModificationGreaterThan: pulumi.Float64(30),
+									},
+								},
+								Snapshot: &storage.ManagementPolicySnapShotArgs{
+									Delete: &storage.DateAfterCreationArgs{
+										DaysAfterCreationGreaterThan: pulumi.Float64(1000),
+									},
+									TierToArchive: &storage.DateAfterCreationArgs{
+										DaysAfterCreationGreaterThan: pulumi.Float64(90),
+									},
+									TierToCool: &storage.DateAfterCreationArgs{
+										DaysAfterCreationGreaterThan: pulumi.Float64(30),
+									},
+								},
+								Version: &storage.ManagementPolicyVersionArgs{
+									Delete: &storage.DateAfterCreationArgs{
+										DaysAfterCreationGreaterThan: pulumi.Float64(1000),
+									},
+									TierToArchive: &storage.DateAfterCreationArgs{
+										DaysAfterCreationGreaterThan: pulumi.Float64(90),
+									},
+									TierToCool: &storage.DateAfterCreationArgs{
+										DaysAfterCreationGreaterThan: pulumi.Float64(30),
+									},
+								},
+							},
+							Filters: &storage.ManagementPolicyFilterArgs{
+								BlobTypes: pulumi.StringArray{
+									pulumi.String("blockBlob"),
+								},
+								PrefixMatch: pulumi.StringArray{
+									pulumi.String("olcmtestcontainer1"),
+								},
+							},
+						},
+						Enabled: pulumi.Bool(true),
+						Name:    pulumi.String("olcmtest1"),
+						Type:    pulumi.String("Lifecycle"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("res7687"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+management_policy = azure_nextgen.storage.latest.ManagementPolicy("managementPolicy",
+    account_name="sto9699",
+    management_policy_name="default",
+    policy=azure_nextgen.storage.latest.ManagementPolicySchemaArgs(
+        rules=[azure_nextgen.storage.latest.ManagementPolicyRuleArgs(
+            definition=azure_nextgen.storage.latest.ManagementPolicyDefinitionArgs(
+                actions=azure_nextgen.storage.latest.ManagementPolicyActionArgs(
+                    base_blob=azure_nextgen.storage.latest.ManagementPolicyBaseBlobArgs(
+                        delete=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                            days_after_modification_greater_than=1000,
+                        ),
+                        tier_to_archive=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                            days_after_modification_greater_than=90,
+                        ),
+                        tier_to_cool=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                            days_after_modification_greater_than=30,
+                        ),
+                    ),
+                    snapshot=azure_nextgen.storage.latest.ManagementPolicySnapShotArgs(
+                        delete=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                            days_after_creation_greater_than=1000,
+                        ),
+                        tier_to_archive=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                            days_after_creation_greater_than=90,
+                        ),
+                        tier_to_cool=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                            days_after_creation_greater_than=30,
+                        ),
+                    ),
+                    version=azure_nextgen.storage.latest.ManagementPolicyVersionArgs(
+                        delete=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                            days_after_creation_greater_than=1000,
+                        ),
+                        tier_to_archive=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                            days_after_creation_greater_than=90,
+                        ),
+                        tier_to_cool=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                            days_after_creation_greater_than=30,
+                        ),
+                    ),
+                ),
+                filters=azure_nextgen.storage.latest.ManagementPolicyFilterArgs(
+                    blob_types=["blockBlob"],
+                    prefix_match=["olcmtestcontainer1"],
+                ),
+            ),
+            enabled=True,
+            name="olcmtest1",
+            type="Lifecycle",
+        )],
+    ),
+    resource_group_name="res7687")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("managementPolicy", {
+    accountName: "sto9699",
+    managementPolicyName: "default",
+    policy: {
+        rules: [{
+            definition: {
+                actions: {
+                    baseBlob: {
+                        "delete": {
+                            daysAfterModificationGreaterThan: 1000,
+                        },
+                        tierToArchive: {
+                            daysAfterModificationGreaterThan: 90,
+                        },
+                        tierToCool: {
+                            daysAfterModificationGreaterThan: 30,
+                        },
+                    },
+                    snapshot: {
+                        "delete": {
+                            daysAfterCreationGreaterThan: 1000,
+                        },
+                        tierToArchive: {
+                            daysAfterCreationGreaterThan: 90,
+                        },
+                        tierToCool: {
+                            daysAfterCreationGreaterThan: 30,
+                        },
+                    },
+                    version: {
+                        "delete": {
+                            daysAfterCreationGreaterThan: 1000,
+                        },
+                        tierToArchive: {
+                            daysAfterCreationGreaterThan: 90,
+                        },
+                        tierToCool: {
+                            daysAfterCreationGreaterThan: 30,
+                        },
+                    },
+                },
+                filters: {
+                    blobTypes: ["blockBlob"],
+                    prefixMatch: ["olcmtestcontainer1"],
+                },
+            },
+            enabled: true,
+            name: "olcmtest1",
+            type: "Lifecycle",
+        }],
+    },
+    resourceGroupName: "res7687",
+});
+
+```
+
+{{% /example %}}
+
+### StorageAccountSetManagementPolicy_LastAccessTimeBasedBlobActions
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managementPolicy = new AzureNextGen.Storage.Latest.ManagementPolicy("managementPolicy", new AzureNextGen.Storage.Latest.ManagementPolicyArgs
+        {
+            AccountName = "sto9699",
+            ManagementPolicyName = "default",
+            Policy = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicySchemaArgs
+            {
+                Rules = 
+                {
+                    new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyRuleArgs
+                    {
+                        Definition = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyDefinitionArgs
+                        {
+                            Actions = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyActionArgs
+                            {
+                                BaseBlob = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyBaseBlobArgs
+                                {
+                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    {
+                                        DaysAfterLastAccessTimeGreaterThan = 1000,
+                                    },
+                                    EnableAutoTierToHotFromCool = true,
+                                    TierToArchive = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    {
+                                        DaysAfterLastAccessTimeGreaterThan = 90,
+                                    },
+                                    TierToCool = new AzureNextGen.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    {
+                                        DaysAfterLastAccessTimeGreaterThan = 30,
+                                    },
+                                },
+                                Snapshot = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicySnapShotArgs
+                                {
+                                    Delete = new AzureNextGen.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    {
+                                        DaysAfterCreationGreaterThan = 30,
+                                    },
+                                },
+                            },
+                            Filters = new AzureNextGen.Storage.Latest.Inputs.ManagementPolicyFilterArgs
+                            {
+                                BlobTypes = 
+                                {
+                                    "blockBlob",
+                                },
+                                PrefixMatch = 
+                                {
+                                    "olcmtestcontainer",
+                                },
+                            },
+                        },
+                        Enabled = true,
+                        Name = "olcmtest",
+                        Type = "Lifecycle",
+                    },
+                },
+            },
+            ResourceGroupName = "res7687",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storage.NewManagementPolicy(ctx, "managementPolicy", &storage.ManagementPolicyArgs{
+			AccountName:          pulumi.String("sto9699"),
+			ManagementPolicyName: pulumi.String("default"),
+			Policy: &storage.ManagementPolicySchemaArgs{
+				Rules: storage.ManagementPolicyRuleArray{
+					&storage.ManagementPolicyRuleArgs{
+						Definition: &storage.ManagementPolicyDefinitionArgs{
+							Actions: &storage.ManagementPolicyActionArgs{
+								BaseBlob: &storage.ManagementPolicyBaseBlobArgs{
+									Delete: &storage.DateAfterModificationArgs{
+										DaysAfterLastAccessTimeGreaterThan: pulumi.Float64(1000),
+									},
+									EnableAutoTierToHotFromCool: pulumi.Bool(true),
+									TierToArchive: &storage.DateAfterModificationArgs{
+										DaysAfterLastAccessTimeGreaterThan: pulumi.Float64(90),
+									},
+									TierToCool: &storage.DateAfterModificationArgs{
+										DaysAfterLastAccessTimeGreaterThan: pulumi.Float64(30),
+									},
+								},
+								Snapshot: &storage.ManagementPolicySnapShotArgs{
+									Delete: &storage.DateAfterCreationArgs{
+										DaysAfterCreationGreaterThan: pulumi.Float64(30),
+									},
+								},
+							},
+							Filters: &storage.ManagementPolicyFilterArgs{
+								BlobTypes: pulumi.StringArray{
+									pulumi.String("blockBlob"),
+								},
+								PrefixMatch: pulumi.StringArray{
+									pulumi.String("olcmtestcontainer"),
+								},
+							},
+						},
+						Enabled: pulumi.Bool(true),
+						Name:    pulumi.String("olcmtest"),
+						Type:    pulumi.String("Lifecycle"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("res7687"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+management_policy = azure_nextgen.storage.latest.ManagementPolicy("managementPolicy",
+    account_name="sto9699",
+    management_policy_name="default",
+    policy=azure_nextgen.storage.latest.ManagementPolicySchemaArgs(
+        rules=[azure_nextgen.storage.latest.ManagementPolicyRuleArgs(
+            definition=azure_nextgen.storage.latest.ManagementPolicyDefinitionArgs(
+                actions=azure_nextgen.storage.latest.ManagementPolicyActionArgs(
+                    base_blob=azure_nextgen.storage.latest.ManagementPolicyBaseBlobArgs(
+                        delete=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                            days_after_last_access_time_greater_than=1000,
+                        ),
+                        enable_auto_tier_to_hot_from_cool=True,
+                        tier_to_archive=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                            days_after_last_access_time_greater_than=90,
+                        ),
+                        tier_to_cool=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                            days_after_last_access_time_greater_than=30,
+                        ),
+                    ),
+                    snapshot=azure_nextgen.storage.latest.ManagementPolicySnapShotArgs(
+                        delete=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                            days_after_creation_greater_than=30,
+                        ),
+                    ),
+                ),
+                filters=azure_nextgen.storage.latest.ManagementPolicyFilterArgs(
+                    blob_types=["blockBlob"],
+                    prefix_match=["olcmtestcontainer"],
+                ),
+            ),
+            enabled=True,
+            name="olcmtest",
+            type="Lifecycle",
+        )],
+    ),
+    resource_group_name="res7687")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("managementPolicy", {
+    accountName: "sto9699",
+    managementPolicyName: "default",
+    policy: {
+        rules: [{
+            definition: {
+                actions: {
+                    baseBlob: {
+                        "delete": {
+                            daysAfterLastAccessTimeGreaterThan: 1000,
+                        },
+                        enableAutoTierToHotFromCool: true,
+                        tierToArchive: {
+                            daysAfterLastAccessTimeGreaterThan: 90,
+                        },
+                        tierToCool: {
+                            daysAfterLastAccessTimeGreaterThan: 30,
+                        },
+                    },
+                    snapshot: {
+                        "delete": {
+                            daysAfterCreationGreaterThan: 30,
+                        },
+                    },
+                },
+                filters: {
+                    blobTypes: ["blockBlob"],
+                    prefixMatch: ["olcmtestcontainer"],
+                },
+            },
+            enabled: true,
+            name: "olcmtest",
+            type: "Lifecycle",
+        }],
+    },
+    resourceGroupName: "res7687",
+});
+
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -1081,8 +1862,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysafterlastaccesstimegreaterthan_csharp">
+<a href="#daysafterlastaccesstimegreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>After<wbr>Last<wbr>Access<wbr>Time<wbr>Greater<wbr>Than</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="daysaftermodificationgreaterthan_csharp">
 <a href="#daysaftermodificationgreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>After<wbr>Modification<wbr>Greater<wbr>Than</a>
 </span>
@@ -1096,8 +1886,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysafterlastaccesstimegreaterthan_go">
+<a href="#daysafterlastaccesstimegreaterthan_go" style="color: inherit; text-decoration: inherit;">Days<wbr>After<wbr>Last<wbr>Access<wbr>Time<wbr>Greater<wbr>Than</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="daysaftermodificationgreaterthan_go">
 <a href="#daysaftermodificationgreaterthan_go" style="color: inherit; text-decoration: inherit;">Days<wbr>After<wbr>Modification<wbr>Greater<wbr>Than</a>
 </span>
@@ -1111,8 +1910,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysafterlastaccesstimegreaterthan_nodejs">
+<a href="#daysafterlastaccesstimegreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>After<wbr>Last<wbr>Access<wbr>Time<wbr>Greater<wbr>Than</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="daysaftermodificationgreaterthan_nodejs">
 <a href="#daysaftermodificationgreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>After<wbr>Modification<wbr>Greater<wbr>Than</a>
 </span>
@@ -1126,8 +1934,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="days_after_last_access_time_greater_than_python">
+<a href="#days_after_last_access_time_greater_than_python" style="color: inherit; text-decoration: inherit;">days_<wbr>after_<wbr>last_<wbr>access_<wbr>time_<wbr>greater_<wbr>than</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="days_after_modification_greater_than_python">
 <a href="#days_after_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">days_<wbr>after_<wbr>modification_<wbr>greater_<wbr>than</a>
 </span>
@@ -1143,8 +1960,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysafterlastaccesstimegreaterthan_csharp">
+<a href="#daysafterlastaccesstimegreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>After<wbr>Last<wbr>Access<wbr>Time<wbr>Greater<wbr>Than</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="daysaftermodificationgreaterthan_csharp">
 <a href="#daysaftermodificationgreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>After<wbr>Modification<wbr>Greater<wbr>Than</a>
 </span>
@@ -1158,8 +1984,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysafterlastaccesstimegreaterthan_go">
+<a href="#daysafterlastaccesstimegreaterthan_go" style="color: inherit; text-decoration: inherit;">Days<wbr>After<wbr>Last<wbr>Access<wbr>Time<wbr>Greater<wbr>Than</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="daysaftermodificationgreaterthan_go">
 <a href="#daysaftermodificationgreaterthan_go" style="color: inherit; text-decoration: inherit;">Days<wbr>After<wbr>Modification<wbr>Greater<wbr>Than</a>
 </span>
@@ -1173,8 +2008,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysafterlastaccesstimegreaterthan_nodejs">
+<a href="#daysafterlastaccesstimegreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>After<wbr>Last<wbr>Access<wbr>Time<wbr>Greater<wbr>Than</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="daysaftermodificationgreaterthan_nodejs">
 <a href="#daysaftermodificationgreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>After<wbr>Modification<wbr>Greater<wbr>Than</a>
 </span>
@@ -1188,8 +2032,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="days_after_last_access_time_greater_than_python">
+<a href="#days_after_last_access_time_greater_than_python" style="color: inherit; text-decoration: inherit;">days_<wbr>after_<wbr>last_<wbr>access_<wbr>time_<wbr>greater_<wbr>than</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="days_after_modification_greater_than_python">
 <a href="#days_after_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">days_<wbr>after_<wbr>modification_<wbr>greater_<wbr>than</a>
 </span>
@@ -1223,6 +2076,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#managementpolicysnapshot">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyversion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Version<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The management policy action for version{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1247,6 +2109,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#managementpolicysnapshot">Management<wbr>Policy<wbr>Snap<wbr>Shot</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyversion">Management<wbr>Policy<wbr>Version</a></span>
+    </dt>
+    <dd>{{% md %}}The management policy action for version{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1271,6 +2142,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#managementpolicysnapshot">Management<wbr>Policy<wbr>Snap<wbr>Shot</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyversion">Management<wbr>Policy<wbr>Version</a></span>
+    </dt>
+    <dd>{{% md %}}The management policy action for version{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1295,6 +2175,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#managementpolicysnapshot">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyversion">Management<wbr>Policy<wbr>Version<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The management policy action for version{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1321,6 +2210,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#managementpolicysnapshotresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyversionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Version<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The management policy action for version{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1345,6 +2243,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#managementpolicysnapshotresponse">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyversionresponse">Management<wbr>Policy<wbr>Version<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The management policy action for version{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1369,6 +2276,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#managementpolicysnapshotresponse">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyversionresponse">Management<wbr>Policy<wbr>Version<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The management policy action for version{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1393,6 +2309,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#managementpolicysnapshotresponse">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyversionresponse">Management<wbr>Policy<wbr>Version<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The management policy action for version{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1410,6 +2335,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#dateaftermodification">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableautotiertohotfromcool_csharp">
+<a href="#enableautotiertohotfromcool_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Tier<wbr>To<wbr>Hot<wbr>From<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tiertoarchive_csharp">
@@ -1445,6 +2379,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableautotiertohotfromcool_go">
+<a href="#enableautotiertohotfromcool_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Tier<wbr>To<wbr>Hot<wbr>From<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tiertoarchive_go">
 <a href="#tiertoarchive_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
 </span>
@@ -1478,6 +2421,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableautotiertohotfromcool_nodejs">
+<a href="#enableautotiertohotfromcool_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Auto<wbr>Tier<wbr>To<wbr>Hot<wbr>From<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tiertoarchive_nodejs">
 <a href="#tiertoarchive_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive</a>
 </span>
@@ -1509,6 +2461,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_auto_tier_to_hot_from_cool_python">
+<a href="#enable_auto_tier_to_hot_from_cool_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>auto_<wbr>tier_<wbr>to_<wbr>hot_<wbr>from_<wbr>cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tier_to_archive_python">
@@ -1546,6 +2507,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableautotiertohotfromcool_csharp">
+<a href="#enableautotiertohotfromcool_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Tier<wbr>To<wbr>Hot<wbr>From<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tiertoarchive_csharp">
 <a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
 </span>
@@ -1577,6 +2547,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableautotiertohotfromcool_go">
+<a href="#enableautotiertohotfromcool_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Tier<wbr>To<wbr>Hot<wbr>From<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tiertoarchive_go">
@@ -1612,6 +2591,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableautotiertohotfromcool_nodejs">
+<a href="#enableautotiertohotfromcool_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Auto<wbr>Tier<wbr>To<wbr>Hot<wbr>From<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tiertoarchive_nodejs">
 <a href="#tiertoarchive_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive</a>
 </span>
@@ -1643,6 +2631,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_auto_tier_to_hot_from_cool_python">
+<a href="#enable_auto_tier_to_hot_from_cool_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>auto_<wbr>tier_<wbr>to_<wbr>hot_<wbr>from_<wbr>cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tier_to_archive_python">
@@ -1873,7 +2870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="blobindexmatch_csharp">
@@ -1906,7 +2903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="blobindexmatch_go">
@@ -1939,7 +2936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="blobindexmatch_nodejs">
@@ -1972,7 +2969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="blob_index_match_python">
@@ -2007,7 +3004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="blobindexmatch_csharp">
@@ -2040,7 +3037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="blobindexmatch_go">
@@ -2073,7 +3070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="blobindexmatch_nodejs">
@@ -2106,7 +3103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="blob_index_match_python">
@@ -2606,6 +3603,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertoarchive_csharp">
+<a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertocool_csharp">
+<a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2621,6 +3636,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertoarchive_go">
+<a href="#tiertoarchive_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertocool_go">
+<a href="#tiertocool_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2636,6 +3669,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertoarchive_nodejs">
+<a href="#tiertoarchive_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertocool_nodejs">
+<a href="#tiertocool_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2651,6 +3702,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_to_archive_python">
+<a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_to_cool_python">
+<a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2668,6 +3737,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertoarchive_csharp">
+<a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertocool_csharp">
+<a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2683,6 +3770,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertoarchive_go">
+<a href="#tiertoarchive_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertocool_go">
+<a href="#tiertocool_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2698,6 +3803,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertoarchive_nodejs">
+<a href="#tiertoarchive_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertocool_nodejs">
+<a href="#tiertocool_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2713,6 +3836,292 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_to_archive_python">
+<a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_to_cool_python">
+<a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="managementpolicyversion">Management<wbr>Policy<wbr>Version</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delete_csharp">
+<a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to delete the blob version{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertoarchive_csharp">
+<a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertocool_csharp">
+<a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob version to cool storage. Support blob version currently at Hot tier{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delete_go">
+<a href="#delete_go" style="color: inherit; text-decoration: inherit;">Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
+    </dt>
+    <dd>{{% md %}}The function to delete the blob version{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertoarchive_go">
+<a href="#tiertoarchive_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertocool_go">
+<a href="#tiertocool_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob version to cool storage. Support blob version currently at Hot tier{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delete_nodejs">
+<a href="#delete_nodejs" style="color: inherit; text-decoration: inherit;">delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
+    </dt>
+    <dd>{{% md %}}The function to delete the blob version{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertoarchive_nodejs">
+<a href="#tiertoarchive_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertocool_nodejs">
+<a href="#tiertocool_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob version to cool storage. Support blob version currently at Hot tier{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delete_python">
+<a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to delete the blob version{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_to_archive_python">
+<a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_to_cool_python">
+<a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob version to cool storage. Support blob version currently at Hot tier{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="managementpolicyversionresponse">Management<wbr>Policy<wbr>Version<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delete_csharp">
+<a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to delete the blob version{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertoarchive_csharp">
+<a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertocool_csharp">
+<a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob version to cool storage. Support blob version currently at Hot tier{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delete_go">
+<a href="#delete_go" style="color: inherit; text-decoration: inherit;">Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The function to delete the blob version{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertoarchive_go">
+<a href="#tiertoarchive_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertocool_go">
+<a href="#tiertocool_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob version to cool storage. Support blob version currently at Hot tier{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delete_nodejs">
+<a href="#delete_nodejs" style="color: inherit; text-decoration: inherit;">delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The function to delete the blob version{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertoarchive_nodejs">
+<a href="#tiertoarchive_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tiertocool_nodejs">
+<a href="#tiertocool_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob version to cool storage. Support blob version currently at Hot tier{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delete_python">
+<a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to delete the blob version{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_to_archive_python">
+<a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_to_cool_python">
+<a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The function to tier blob version to cool storage. Support blob version currently at Hot tier{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

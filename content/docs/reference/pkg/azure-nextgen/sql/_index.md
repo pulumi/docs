@@ -12,6 +12,8 @@ Explore the resources and functions of the sql module in the Azure NextGen packa
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
+    <li><a href="databasesecurityalertpolicy" title="DatabaseSecurityAlertPolicy"><span class="symbol resource"></span>DatabaseSecurityAlertPolicy</a></li>
+    <li><a href="databasethreatdetectionpolicy" title="DatabaseThreatDetectionPolicy"><span class="symbol resource"></span>DatabaseThreatDetectionPolicy</a></li>
     <li><a href="databasevulnerabilityassessment" title="DatabaseVulnerabilityAssessment"><span class="symbol resource"></span>DatabaseVulnerabilityAssessment</a></li>
     <li><a href="databasevulnerabilityassessmentrulebaseline" title="DatabaseVulnerabilityAssessmentRuleBaseline"><span class="symbol resource"></span>DatabaseVulnerabilityAssessmentRuleBaseline</a></li>
     <li><a href="disasterrecoveryconfiguration" title="DisasterRecoveryConfiguration"><span class="symbol resource"></span>DisasterRecoveryConfiguration</a></li>
@@ -58,6 +60,8 @@ Explore the resources and functions of the sql module in the Azure NextGen packa
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
+    <li><a href="getdatabasesecurityalertpolicy" title="GetDatabaseSecurityAlertPolicy"><span class="symbol function"></span>GetDatabaseSecurityAlertPolicy</a></li>
+    <li><a href="getdatabasethreatdetectionpolicy" title="GetDatabaseThreatDetectionPolicy"><span class="symbol function"></span>GetDatabaseThreatDetectionPolicy</a></li>
     <li><a href="getdatabasevulnerabilityassessment" title="GetDatabaseVulnerabilityAssessment"><span class="symbol function"></span>GetDatabaseVulnerabilityAssessment</a></li>
     <li><a href="getdatabasevulnerabilityassessmentrulebaseline" title="GetDatabaseVulnerabilityAssessmentRuleBaseline"><span class="symbol function"></span>GetDatabaseVulnerabilityAssessmentRuleBaseline</a></li>
     <li><a href="getdisasterrecoveryconfiguration" title="GetDisasterRecoveryConfiguration"><span class="symbol function"></span>GetDisasterRecoveryConfiguration</a></li>
@@ -108,7 +112,7 @@ Explore the resources and functions of the sql module in the Azure NextGen packa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
 

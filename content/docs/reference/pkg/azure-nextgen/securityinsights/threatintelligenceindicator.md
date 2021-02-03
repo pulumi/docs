@@ -197,7 +197,7 @@ const threatIntelligenceIndicator = new azure_nextgen.securityinsights.v20190101
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">confidence</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">granular_markings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceGranularMarkingModelArgs]]</span> = None<span class="p">, </span><span class="nx">indicator_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">kill_chain_phases</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceKillChainPhaseArgs]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, ThreatIntelligenceResourceKind]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">last_updated_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pattern_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revoked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threat_intelligence_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">threat_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">confidence</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">external_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">granular_markings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceGranularMarkingModelArgs]]</span> = None<span class="p">, </span><span class="nx">indicator_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">kill_chain_phases</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceKillChainPhaseArgs]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, ThreatIntelligenceResourceKind]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_updated_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parsed_pattern</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceParsedPatternArgs]]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pattern_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revoked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threat_intelligence_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">threat_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -469,6 +469,15 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extensions_csharp">
+<a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Extensions map{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="externalid_csharp">
 <a href="#externalid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
 </span>
@@ -523,6 +532,15 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
     <dd>{{% md %}}Labels  of threat intelligence entity{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="language_csharp">
+<a href="#language_csharp" style="color: inherit; text-decoration: inherit;">Language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Language of threat intelligence entity{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="lastupdatedtimeutc_csharp">
 <a href="#lastupdatedtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time<wbr>Utc</a>
 </span>
@@ -539,6 +557,15 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Modified by{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parsedpattern_csharp">
+<a href="#parsedpattern_csharp" style="color: inherit; text-decoration: inherit;">Parsed<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpattern">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Parsed patterns{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="pattern_csharp">
@@ -718,6 +745,15 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extensions_go">
+<a href="#extensions_go" style="color: inherit; text-decoration: inherit;">Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Extensions map{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="externalid_go">
 <a href="#externalid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
 </span>
@@ -772,6 +808,15 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
     <dd>{{% md %}}Labels  of threat intelligence entity{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="language_go">
+<a href="#language_go" style="color: inherit; text-decoration: inherit;">Language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Language of threat intelligence entity{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="lastupdatedtimeutc_go">
 <a href="#lastupdatedtimeutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time<wbr>Utc</a>
 </span>
@@ -788,6 +833,15 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Modified by{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parsedpattern_go">
+<a href="#parsedpattern_go" style="color: inherit; text-decoration: inherit;">Parsed<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpattern">[]Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern</a></span>
+    </dt>
+    <dd>{{% md %}}Parsed patterns{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="pattern_go">
@@ -967,6 +1021,15 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extensions_nodejs">
+<a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Extensions map{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="externalid_nodejs">
 <a href="#externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
 </span>
@@ -1021,6 +1084,15 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
     <dd>{{% md %}}Labels  of threat intelligence entity{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="language_nodejs">
+<a href="#language_nodejs" style="color: inherit; text-decoration: inherit;">language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Language of threat intelligence entity{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="lastupdatedtimeutc_nodejs">
 <a href="#lastupdatedtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time<wbr>Utc</a>
 </span>
@@ -1037,6 +1109,15 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Modified by{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parsedpattern_nodejs">
+<a href="#parsedpattern_nodejs" style="color: inherit; text-decoration: inherit;">parsed<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpattern">Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern[]</a></span>
+    </dt>
+    <dd>{{% md %}}Parsed patterns{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="pattern_nodejs">
@@ -1216,6 +1297,15 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extensions_python">
+<a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Extensions map{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="external_id_python">
 <a href="#external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
 </span>
@@ -1270,6 +1360,15 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
     <dd>{{% md %}}Labels  of threat intelligence entity{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="language_python">
+<a href="#language_python" style="color: inherit; text-decoration: inherit;">language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Language of threat intelligence entity{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="last_updated_time_utc_python">
 <a href="#last_updated_time_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time_<wbr>utc</a>
 </span>
@@ -1286,6 +1385,15 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Modified by{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parsed_pattern_python">
+<a href="#parsed_pattern_python" style="color: inherit; text-decoration: inherit;">parsed_<wbr>pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpattern">Sequence[Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Parsed patterns{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="pattern_python">
@@ -1628,7 +1736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phasename_csharp" style="color: inherit; text-decoration: inherit;">Phase<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phase name{{% /md %}}</dd>
 </dl>
@@ -1652,7 +1760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phasename_go" style="color: inherit; text-decoration: inherit;">Phase<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phase name{{% /md %}}</dd>
 </dl>
@@ -1676,7 +1784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phasename_nodejs" style="color: inherit; text-decoration: inherit;">phase<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phase name{{% /md %}}</dd>
 </dl>
@@ -1700,9 +1808,205 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phase_name_python" style="color: inherit; text-decoration: inherit;">phase_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Phase name{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="threatintelligenceparsedpattern">Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patterntypekey_csharp">
+<a href="#patterntypekey_csharp" style="color: inherit; text-decoration: inherit;">Pattern<wbr>Type<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Pattern type key{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patterntypevalues_csharp">
+<a href="#patterntypevalues_csharp" style="color: inherit; text-decoration: inherit;">Pattern<wbr>Type<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Pattern type keys{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patterntypekey_go">
+<a href="#patterntypekey_go" style="color: inherit; text-decoration: inherit;">Pattern<wbr>Type<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Pattern type key{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patterntypevalues_go">
+<a href="#patterntypevalues_go" style="color: inherit; text-decoration: inherit;">Pattern<wbr>Type<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">[]Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value</a></span>
+    </dt>
+    <dd>{{% md %}}Pattern type keys{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patterntypekey_nodejs">
+<a href="#patterntypekey_nodejs" style="color: inherit; text-decoration: inherit;">pattern<wbr>Type<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Pattern type key{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patterntypevalues_nodejs">
+<a href="#patterntypevalues_nodejs" style="color: inherit; text-decoration: inherit;">pattern<wbr>Type<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value[]</a></span>
+    </dt>
+    <dd>{{% md %}}Pattern type keys{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pattern_type_key_python">
+<a href="#pattern_type_key_python" style="color: inherit; text-decoration: inherit;">pattern_<wbr>type_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Pattern type key{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pattern_type_values_python">
+<a href="#pattern_type_values_python" style="color: inherit; text-decoration: inherit;">pattern_<wbr>type_<wbr>values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">Sequence[Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Pattern type keys{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="threatintelligenceparsedpatterntypevalue">Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value of parsed pattern{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="valuetype_csharp">
+<a href="#valuetype_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the value{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value of parsed pattern{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="valuetype_go">
+<a href="#valuetype_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the value{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value of parsed pattern{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="valuetype_nodejs">
+<a href="#valuetype_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the value{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Value of parsed pattern{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_type_python">
+<a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of the value{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

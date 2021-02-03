@@ -11,31 +11,17 @@ Explore the resources and functions of the management module in the Azure NextGe
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="artifact" title="Artifact"><span class="symbol resource"></span>Artifact</a></li>
-    <li><a href="blueprint" title="Blueprint"><span class="symbol resource"></span>Blueprint</a></li>
-    <li><a href="deploymentatmanagementgroupscope" title="DeploymentAtManagementGroupScope"><span class="symbol resource"></span>DeploymentAtManagementGroupScope</a></li>
     <li><a href="hierarchysetting" title="HierarchySetting"><span class="symbol resource"></span>HierarchySetting</a></li>
     <li><a href="managementgroup" title="ManagementGroup"><span class="symbol resource"></span>ManagementGroup</a></li>
-    <li><a href="managementgroupdiagnosticsetting" title="ManagementGroupDiagnosticSetting"><span class="symbol resource"></span>ManagementGroupDiagnosticSetting</a></li>
     <li><a href="managementgroupsubscription" title="ManagementGroupSubscription"><span class="symbol resource"></span>ManagementGroupSubscription</a></li>
-    <li><a href="policydefinitionatmanagementgroup" title="PolicyDefinitionAtManagementGroup"><span class="symbol resource"></span>PolicyDefinitionAtManagementGroup</a></li>
-    <li><a href="policysetdefinitionatmanagementgroup" title="PolicySetDefinitionAtManagementGroup"><span class="symbol resource"></span>PolicySetDefinitionAtManagementGroup</a></li>
-    <li><a href="publishedblueprint" title="PublishedBlueprint"><span class="symbol resource"></span>PublishedBlueprint</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getartifact" title="GetArtifact"><span class="symbol function"></span>GetArtifact</a></li>
-    <li><a href="getblueprint" title="GetBlueprint"><span class="symbol function"></span>GetBlueprint</a></li>
-    <li><a href="getdeploymentatmanagementgroupscope" title="GetDeploymentAtManagementGroupScope"><span class="symbol function"></span>GetDeploymentAtManagementGroupScope</a></li>
     <li><a href="getentity" title="GetEntity"><span class="symbol function"></span>GetEntity</a></li>
     <li><a href="gethierarchysetting" title="GetHierarchySetting"><span class="symbol function"></span>GetHierarchySetting</a></li>
     <li><a href="getmanagementgroup" title="GetManagementGroup"><span class="symbol function"></span>GetManagementGroup</a></li>
-    <li><a href="getmanagementgroupdiagnosticsetting" title="GetManagementGroupDiagnosticSetting"><span class="symbol function"></span>GetManagementGroupDiagnosticSetting</a></li>
     <li><a href="getmanagementgroupsubscription" title="GetManagementGroupSubscription"><span class="symbol function"></span>GetManagementGroupSubscription</a></li>
-    <li><a href="getpolicydefinitionatmanagementgroup" title="GetPolicyDefinitionAtManagementGroup"><span class="symbol function"></span>GetPolicyDefinitionAtManagementGroup</a></li>
-    <li><a href="getpolicysetdefinitionatmanagementgroup" title="GetPolicySetDefinitionAtManagementGroup"><span class="symbol function"></span>GetPolicySetDefinitionAtManagementGroup</a></li>
-    <li><a href="getpublishedblueprint" title="GetPublishedBlueprint"><span class="symbol function"></span>GetPublishedBlueprint</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -45,7 +31,7 @@ Explore the resources and functions of the management module in the Azure NextGe
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
 

@@ -11,7 +11,6 @@ meta_desc: "Documentation for the azure-nextgen.synapse.SqlPoolSensitivityLabel 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A sensitivity label.
-Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlPoolSensitivityLabel = new AzureNextGen.Synapse.Latest.SqlPoolSensitivityLabel("sqlPoolSensitivityLabel", new AzureNextGen.Synapse.Latest.SqlPoolSensitivityLabelArgs
+        var sqlPoolSensitivityLabel = new AzureNextGen.Synapse.V20190601Preview.SqlPoolSensitivityLabel("sqlPoolSensitivityLabel", new AzureNextGen.Synapse.V20190601Preview.SqlPoolSensitivityLabelArgs
         {
             ColumnName = "myColumn",
             InformationType = "PhoneNumber",
@@ -55,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/v20190601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +90,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_pool_sensitivity_label = azure_nextgen.synapse.latest.SqlPoolSensitivityLabel("sqlPoolSensitivityLabel",
+sql_pool_sensitivity_label = azure_nextgen.synapse.v20190601preview.SqlPoolSensitivityLabel("sqlPoolSensitivityLabel",
     column_name="myColumn",
     information_type="PhoneNumber",
     information_type_id="d22fa6e9-5ee4-3bde-4c2b-a409604c4646",
@@ -114,7 +113,7 @@ sql_pool_sensitivity_label = azure_nextgen.synapse.latest.SqlPoolSensitivityLabe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlPoolSensitivityLabel = new azure_nextgen.synapse.latest.SqlPoolSensitivityLabel("sqlPoolSensitivityLabel", {
+const sqlPoolSensitivityLabel = new azure_nextgen.synapse.v20190601preview.SqlPoolSensitivityLabel("sqlPoolSensitivityLabel", {
     columnName: "myColumn",
     informationType: "PhoneNumber",
     informationTypeId: "d22fa6e9-5ee4-3bde-4c2b-a409604c4646",
@@ -1056,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/latest:SqlPoolSensitivityLabel current /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myRG/providers/Microsoft.Synapse/workspaces/myServer/sqlPools/myDatabase/schemas/dbo/tables/myTable/columns/myColumn/sensitivityLabels/current 
+$ pulumi import azure-nextgen:synapse/v20190601preview:SqlPoolSensitivityLabel current /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myRG/providers/Microsoft.Synapse/workspaces/myServer/sqlPools/myDatabase/schemas/dbo/tables/myTable/columns/myColumn/sensitivityLabels/current 
 ```
 
 

@@ -45,6 +45,8 @@ Explore the resources and functions of the servicebus module in the Azure NextGe
     <li><a href="gettopicauthorizationrule" title="GetTopicAuthorizationRule"><span class="symbol function"></span>GetTopicAuthorizationRule</a></li>
     <li><a href="listdisasterrecoveryconfigkeys" title="ListDisasterRecoveryConfigKeys"><span class="symbol function"></span>ListDisasterRecoveryConfigKeys</a></li>
     <li><a href="listnamespacekeys" title="ListNamespaceKeys"><span class="symbol function"></span>ListNamespaceKeys</a></li>
+    <li><a href="listqueuekeys" title="ListQueueKeys"><span class="symbol function"></span>ListQueueKeys</a></li>
+    <li><a href="listtopickeys" title="ListTopicKeys"><span class="symbol function"></span>ListTopicKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -54,7 +56,7 @@ Explore the resources and functions of the servicebus module in the Azure NextGe
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
 

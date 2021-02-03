@@ -50,7 +50,6 @@ class MyStack : Stack
             ForwardingProtocol = "MatchRequest",
             HttpsRedirect = "Enabled",
             LinkToDefaultDomain = "Enabled",
-            OptimizationType = "DynamicSiteAcceleration",
             OriginGroup = new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/originGroups/originGroup1",
@@ -110,7 +109,6 @@ route = azure_nextgen.cdn.latest.Route("route",
     forwarding_protocol="MatchRequest",
     https_redirect="Enabled",
     link_to_default_domain="Enabled",
-    optimization_type="DynamicSiteAcceleration",
     origin_group=azure_nextgen.cdn.latest.ResourceReferenceArgs(
         id="/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/originGroups/originGroup1",
     ),
@@ -153,7 +151,6 @@ const route = new azure_nextgen.cdn.latest.Route("route", {
     forwardingProtocol: "MatchRequest",
     httpsRedirect: "Enabled",
     linkToDefaultDomain: "Enabled",
-    optimizationType: "DynamicSiteAcceleration",
     originGroup: {
         id: "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/originGroups/originGroup1",
     },
@@ -187,7 +184,7 @@ const route = new azure_nextgen.cdn.latest.Route("route", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">compression_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[CompressionSettingsArgs]]</span> = None<span class="p">, </span><span class="nx">custom_domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">enabled_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, EnabledState]]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forwarding_protocol</span><span class="p">:</span> <span class="nx">Optional[Union[str, ForwardingProtocol]]</span> = None<span class="p">, </span><span class="nx">https_redirect</span><span class="p">:</span> <span class="nx">Optional[Union[str, HttpsRedirect]]</span> = None<span class="p">, </span><span class="nx">link_to_default_domain</span><span class="p">:</span> <span class="nx">Optional[Union[str, LinkToDefaultDomain]]</span> = None<span class="p">, </span><span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, OptimizationType]]</span> = None<span class="p">, </span><span class="nx">origin_group</span><span class="p">:</span> <span class="nx">Optional[ResourceReferenceArgs]</span> = None<span class="p">, </span><span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">patterns_to_match</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_string_caching_behavior</span><span class="p">:</span> <span class="nx">Optional[QueryStringCachingBehavior]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">supported_protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, AFDEndpointProtocols]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">compression_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[CompressionSettingsArgs]]</span> = None<span class="p">, </span><span class="nx">custom_domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">enabled_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, EnabledState]]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forwarding_protocol</span><span class="p">:</span> <span class="nx">Optional[Union[str, ForwardingProtocol]]</span> = None<span class="p">, </span><span class="nx">https_redirect</span><span class="p">:</span> <span class="nx">Optional[Union[str, HttpsRedirect]]</span> = None<span class="p">, </span><span class="nx">link_to_default_domain</span><span class="p">:</span> <span class="nx">Optional[Union[str, LinkToDefaultDomain]]</span> = None<span class="p">, </span><span class="nx">origin_group</span><span class="p">:</span> <span class="nx">Optional[ResourceReferenceArgs]</span> = None<span class="p">, </span><span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">patterns_to_match</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_string_caching_behavior</span><span class="p">:</span> <span class="nx">Optional[AfdQueryStringCachingBehavior]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">supported_protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, AFDEndpointProtocols]]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -459,15 +456,6 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="optimizationtype_csharp">
-<a href="#optimizationtype_csharp" style="color: inherit; text-decoration: inherit;">Optimization<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#optimizationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Optimization<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies what scenario the customer wants this AzureFrontDoor endpoint to optimize for, e.g. Download, Media services. With this information, AzureFrontDoor can apply scenario driven optimization.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="originpath_csharp">
 <a href="#originpath_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Path</a>
 </span>
@@ -490,9 +478,9 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#querystringcachingbehavior_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Caching<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querystringcachingbehavior">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#afdquerystringcachingbehavior">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior</a></span>
     </dt>
-    <dd>{{% md %}}Defines how AzureFrontDoor caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
+    <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rulesets_csharp">
@@ -618,15 +606,6 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="optimizationtype_go">
-<a href="#optimizationtype_go" style="color: inherit; text-decoration: inherit;">Optimization<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#optimizationtype">Optimization<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies what scenario the customer wants this AzureFrontDoor endpoint to optimize for, e.g. Download, Media services. With this information, AzureFrontDoor can apply scenario driven optimization.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="originpath_go">
 <a href="#originpath_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Path</a>
 </span>
@@ -649,9 +628,9 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#querystringcachingbehavior_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Caching<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querystringcachingbehavior">Query<wbr>String<wbr>Caching<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#afdquerystringcachingbehavior">Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior</a></span>
     </dt>
-    <dd>{{% md %}}Defines how AzureFrontDoor caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
+    <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rulesets_go">
@@ -777,15 +756,6 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="optimizationtype_nodejs">
-<a href="#optimizationtype_nodejs" style="color: inherit; text-decoration: inherit;">optimization<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#optimizationtype">Optimization<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies what scenario the customer wants this AzureFrontDoor endpoint to optimize for, e.g. Download, Media services. With this information, AzureFrontDoor can apply scenario driven optimization.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="originpath_nodejs">
 <a href="#originpath_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Path</a>
 </span>
@@ -808,9 +778,9 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#querystringcachingbehavior_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Caching<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querystringcachingbehavior">Query<wbr>String<wbr>Caching<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#afdquerystringcachingbehavior">Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior</a></span>
     </dt>
-    <dd>{{% md %}}Defines how AzureFrontDoor caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
+    <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rulesets_nodejs">
@@ -936,15 +906,6 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="optimization_type_python">
-<a href="#optimization_type_python" style="color: inherit; text-decoration: inherit;">optimization_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#optimizationtype">Optimization<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies what scenario the customer wants this AzureFrontDoor endpoint to optimize for, e.g. Download, Media services. With this information, AzureFrontDoor can apply scenario driven optimization.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="origin_path_python">
 <a href="#origin_path_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>path</a>
 </span>
@@ -967,9 +928,9 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#query_string_caching_behavior_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>caching_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querystringcachingbehavior">Query<wbr>String<wbr>Caching<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#afdquerystringcachingbehavior">Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior</a></span>
     </dt>
-    <dd>{{% md %}}Defines how AzureFrontDoor caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
+    <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rule_sets_python">
@@ -1283,6 +1244,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Http</dd>
     <dt>HTTPS</dt>
     <dd>Https</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="afdquerystringcachingbehavior">Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Ignore<wbr>Query<wbr>String</dt>
+    <dd>IgnoreQueryString</dd>
+    <dt>Use<wbr>Query<wbr>String</dt>
+    <dd>UseQueryString</dd>
+    <dt>Not<wbr>Set</dt>
+    <dd>NotSet</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior<wbr>Ignore<wbr>Query<wbr>String</dt>
+    <dd>IgnoreQueryString</dd>
+    <dt>Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior<wbr>Use<wbr>Query<wbr>String</dt>
+    <dd>UseQueryString</dd>
+    <dt>Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior<wbr>Not<wbr>Set</dt>
+    <dd>NotSet</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Ignore<wbr>Query<wbr>String</dt>
+    <dd>IgnoreQueryString</dd>
+    <dt>Use<wbr>Query<wbr>String</dt>
+    <dd>UseQueryString</dd>
+    <dt>Not<wbr>Set</dt>
+    <dd>NotSet</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>IGNORE_QUERY_STRING</dt>
+    <dd>IgnoreQueryString</dd>
+    <dt>USE_QUERY_STRING</dt>
+    <dd>UseQueryString</dd>
+    <dt>NOT_SET</dt>
+    <dd>NotSet</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1639,122 +1646,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Enabled</dd>
     <dt>DISABLED</dt>
     <dd>Disabled</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="optimizationtype">Optimization<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>General<wbr>Web<wbr>Delivery</dt>
-    <dd>GeneralWebDelivery</dd>
-    <dt>General<wbr>Media<wbr>Streaming</dt>
-    <dd>GeneralMediaStreaming</dd>
-    <dt>Video<wbr>On<wbr>Demand<wbr>Media<wbr>Streaming</dt>
-    <dd>VideoOnDemandMediaStreaming</dd>
-    <dt>Large<wbr>File<wbr>Download</dt>
-    <dd>LargeFileDownload</dd>
-    <dt>Dynamic<wbr>Site<wbr>Acceleration</dt>
-    <dd>DynamicSiteAcceleration</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular">
-    <dt>Optimization<wbr>Type<wbr>General<wbr>Web<wbr>Delivery</dt>
-    <dd>GeneralWebDelivery</dd>
-    <dt>Optimization<wbr>Type<wbr>General<wbr>Media<wbr>Streaming</dt>
-    <dd>GeneralMediaStreaming</dd>
-    <dt>Optimization<wbr>Type<wbr>Video<wbr>On<wbr>Demand<wbr>Media<wbr>Streaming</dt>
-    <dd>VideoOnDemandMediaStreaming</dd>
-    <dt>Optimization<wbr>Type<wbr>Large<wbr>File<wbr>Download</dt>
-    <dd>LargeFileDownload</dd>
-    <dt>Optimization<wbr>Type<wbr>Dynamic<wbr>Site<wbr>Acceleration</dt>
-    <dd>DynamicSiteAcceleration</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>General<wbr>Web<wbr>Delivery</dt>
-    <dd>GeneralWebDelivery</dd>
-    <dt>General<wbr>Media<wbr>Streaming</dt>
-    <dd>GeneralMediaStreaming</dd>
-    <dt>Video<wbr>On<wbr>Demand<wbr>Media<wbr>Streaming</dt>
-    <dd>VideoOnDemandMediaStreaming</dd>
-    <dt>Large<wbr>File<wbr>Download</dt>
-    <dd>LargeFileDownload</dd>
-    <dt>Dynamic<wbr>Site<wbr>Acceleration</dt>
-    <dd>DynamicSiteAcceleration</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular">
-    <dt>GENERAL_WEB_DELIVERY</dt>
-    <dd>GeneralWebDelivery</dd>
-    <dt>GENERAL_MEDIA_STREAMING</dt>
-    <dd>GeneralMediaStreaming</dd>
-    <dt>VIDEO_ON_DEMAND_MEDIA_STREAMING</dt>
-    <dd>VideoOnDemandMediaStreaming</dd>
-    <dt>LARGE_FILE_DOWNLOAD</dt>
-    <dd>LargeFileDownload</dd>
-    <dt>DYNAMIC_SITE_ACCELERATION</dt>
-    <dd>DynamicSiteAcceleration</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="querystringcachingbehavior">Query<wbr>String<wbr>Caching<wbr>Behavior</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Ignore<wbr>Query<wbr>String</dt>
-    <dd>IgnoreQueryString</dd>
-    <dt>Bypass<wbr>Caching</dt>
-    <dd>BypassCaching</dd>
-    <dt>Use<wbr>Query<wbr>String</dt>
-    <dd>UseQueryString</dd>
-    <dt>Not<wbr>Set</dt>
-    <dd>NotSet</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular">
-    <dt>Query<wbr>String<wbr>Caching<wbr>Behavior<wbr>Ignore<wbr>Query<wbr>String</dt>
-    <dd>IgnoreQueryString</dd>
-    <dt>Query<wbr>String<wbr>Caching<wbr>Behavior<wbr>Bypass<wbr>Caching</dt>
-    <dd>BypassCaching</dd>
-    <dt>Query<wbr>String<wbr>Caching<wbr>Behavior<wbr>Use<wbr>Query<wbr>String</dt>
-    <dd>UseQueryString</dd>
-    <dt>Query<wbr>String<wbr>Caching<wbr>Behavior<wbr>Not<wbr>Set</dt>
-    <dd>NotSet</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Ignore<wbr>Query<wbr>String</dt>
-    <dd>IgnoreQueryString</dd>
-    <dt>Bypass<wbr>Caching</dt>
-    <dd>BypassCaching</dd>
-    <dt>Use<wbr>Query<wbr>String</dt>
-    <dd>UseQueryString</dd>
-    <dt>Not<wbr>Set</dt>
-    <dd>NotSet</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular">
-    <dt>IGNORE_QUERY_STRING</dt>
-    <dd>IgnoreQueryString</dd>
-    <dt>BYPASS_CACHING</dt>
-    <dd>BypassCaching</dd>
-    <dt>USE_QUERY_STRING</dt>
-    <dd>UseQueryString</dd>
-    <dt>NOT_SET</dt>
-    <dd>NotSet</dd>
 </dl>
 {{% /choosable %}}
 
