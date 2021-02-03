@@ -11,16 +11,14 @@ meta_desc: "Explore the NrqlAlertCondition resource of the New Relic package, in
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this resource to create and manage NRQL alert conditions in New Relic.
+
 ## NRQL
 
 The `nrql` block supports the following arguments:
 
 - `query` - (Required) The NRQL query to execute for the condition.
-- `evaluation_offset` - (Optional*) Represented in minutes and must be within 1-20 minutes (inclusive). NRQL queries are evaluated in one-minute time windows. The start time depends on this value. It's recommended to set this to 3 minutes. An offset of less than 3 minutes will trigger violations sooner, but you may see more false positives and negatives due to data latency. With `evaluation_offset` set to 3 minutes, the NRQL time window applied to your query will be: `SINCE 3 minutes ago UNTIL 2 minutes ago`.<br>
-<small>\***Note**: One of `evaluation_offset` _or_ `since_value` must be set, but not both.</small>
-
-- `since_value` - (Optional*)  **DEPRECATED:** Use `evaluation_offset` instead. The value to be used in the `SINCE <X> minutes ago` clause for the NRQL query. Must be between 1-20 (inclusive). <br>
-<small>\***Note**: One of `evaluation_offset` _or_ `since_value` must be set, but not both.</small>
+- `evaluation_offset` - (Optional) Represented in minutes and must be within 1-20 minutes (inclusive). NRQL queries are evaluated in one-minute time windows. The start time depends on this value. It's recommended to set this to 3 minutes. An offset of less than 3 minutes will trigger violations sooner, but you may see more false positives and negatives due to data latency. With `evaluation_offset` set to 3 minutes, the NRQL time window applied to your query will be: `SINCE 3 minutes ago UNTIL 2 minutes ago`.
+- `since_value` - (Optional)  **DEPRECATED:** Use `evaluation_offset` instead. The value to be used in the `SINCE <X> minutes ago` clause for the NRQL query. Must be between 1-20 (inclusive).
 
 ## Terms
 
@@ -30,7 +28,8 @@ NRQL alert conditions support up to two terms. At least one `term` must have `pr
 
 The `term` block the following arguments:
 
-- `operator` - (Optional) Valid values are `above`, `below`, or `equals` (case insensitive). Defaults to `equals`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
+- `duration` - (Required) In minutes, must be in the range of `1` to `120`, inclusive.
+- `operator` - (Optional) `above`, `below`, or `equal`. Defaults to `equal`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
 - `priority` - (Optional) `critical` or `warning`. Defaults to `critical`.
 - `threshold` - (Required) The value which will trigger a violation. Must be `0` or greater.
 - `threshold_duration` - (Optional) The duration of time, in seconds, that the threshold must violate for in order to create a violation. Value must be a multiple of 60.
@@ -261,7 +260,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
+    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -341,7 +340,8 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. If static, the 'fill value' will be used for filling gaps in the
+signal. Valid values are: 'NONE', 'LAST_VALUE', or 'STATIC' (case insensitive).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -351,7 +351,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+    <dd>{{% md %}}If using the 'static' fill option, this value will be used for filling gaps in the signal.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -431,7 +431,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -441,8 +441,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -452,8 +451,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -509,7 +507,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
+    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -589,7 +587,8 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. If static, the 'fill value' will be used for filling gaps in the
+signal. Valid values are: 'NONE', 'LAST_VALUE', or 'STATIC' (case insensitive).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -599,7 +598,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+    <dd>{{% md %}}If using the 'static' fill option, this value will be used for filling gaps in the signal.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -679,7 +678,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -689,8 +688,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -700,8 +698,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -757,7 +754,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
+    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -837,7 +834,8 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. If static, the 'fill value' will be used for filling gaps in the
+signal. Valid values are: 'NONE', 'LAST_VALUE', or 'STATIC' (case insensitive).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -847,7 +845,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+    <dd>{{% md %}}If using the 'static' fill option, this value will be used for filling gaps in the signal.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -927,7 +925,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -937,8 +935,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -948,8 +945,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1005,7 +1001,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
+    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1085,7 +1081,8 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. If static, the 'fill value' will be used for filling gaps in the
+signal. Valid values are: 'NONE', 'LAST_VALUE', or 'STATIC' (case insensitive).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1095,7 +1092,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+    <dd>{{% md %}}If using the 'static' fill option, this value will be used for filling gaps in the signal.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1175,7 +1172,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1185,8 +1182,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -1196,8 +1192,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1423,7 +1418,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
+    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1503,7 +1498,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. If static, the 'fill value' will be used for filling gaps in the
+signal. Valid values are: 'NONE', 'LAST_VALUE', or 'STATIC' (case insensitive).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1513,7 +1509,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+    <dd>{{% md %}}If using the 'static' fill option, this value will be used for filling gaps in the signal.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1613,7 +1609,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1623,8 +1619,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -1634,8 +1629,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1671,7 +1665,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
+    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1751,7 +1745,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. If static, the 'fill value' will be used for filling gaps in the
+signal. Valid values are: 'NONE', 'LAST_VALUE', or 'STATIC' (case insensitive).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1761,7 +1756,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+    <dd>{{% md %}}If using the 'static' fill option, this value will be used for filling gaps in the signal.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1861,7 +1856,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1871,8 +1866,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -1882,8 +1876,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1919,7 +1912,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
+    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1999,7 +1992,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. If static, the 'fill value' will be used for filling gaps in the
+signal. Valid values are: 'NONE', 'LAST_VALUE', or 'STATIC' (case insensitive).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2009,7 +2003,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+    <dd>{{% md %}}If using the 'static' fill option, this value will be used for filling gaps in the signal.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2109,7 +2103,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2119,8 +2113,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -2130,8 +2123,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2167,7 +2159,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
+    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2247,7 +2239,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. If static, the 'fill value' will be used for filling gaps in the
+signal. Valid values are: 'NONE', 'LAST_VALUE', or 'STATIC' (case insensitive).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2257,7 +2250,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+    <dd>{{% md %}}If using the 'static' fill option, this value will be used for filling gaps in the signal.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2357,7 +2350,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2367,8 +2360,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -2378,8 +2370,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
