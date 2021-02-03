@@ -987,7 +987,7 @@ type.</p>
 <dt id="pulumi.Output.from_input">
 <em class="property">static </em><code class="sig-name descname">from_input</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>T<span class="p">, </span>Awaitable<span class="p">[</span>T<span class="p">]</span><span class="p">, </span>pulumi.output.Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output<span class="p">[</span>T<span class="p">]</span><a class="headerlink" href="#pulumi.Output.from_input" title="Permalink to this definition"></a></dt>
 <dd><p>Takes an Input value and produces an Output value from it, deeply unwrapping nested Input values through nested
-lists and dicts.  Nested objects of other types (including Resources) are not deeply unwrapped.</p>
+lists, dicts, and input classes.  Nested objects of other types (including Resources) are not deeply unwrapped.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>val</strong> (<em>Input</em><em>[</em><em>T</em><em>]</em>) – An Input to be converted to an Output.</p>
