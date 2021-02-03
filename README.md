@@ -23,7 +23,6 @@ just check the resulting files directly into the repo under `./content/reference
 - [Yarn](https://yarnpkg.com/en/docs/install) for installing dependencies in package.json
 - [Hugo](#hugo)
 - [Go](https://golang.org/dl/)
-- [DocFX](https://dotnet.github.io/docfx/)
 
 #### Hugo
 
@@ -85,14 +84,6 @@ go get -u github.com/cbroglie/mustache
 go get -u github.com/gobuffalo/packr
 go get -u github.com/pkg/errors
 go get -u gopkg.in/russross/blackfriday.v2
-```
-
-#### DocFX
-
-[DocFX](https://dotnet.github.io/docfx/) is used to generate .NET API Reference docs. Install it with
-
-```bash
-brew install docfx
 ```
 
 ### Makefile
@@ -162,7 +153,6 @@ However, there may be times when you need to generate docs for all providers out
  do that, ensure that the following files have all of the providers listed:
 * For NodeJS API docs: `scripts/run_typedoc.sh`
 * For Python API docs: `scripts/generate_python_docs.sh` and `tools/pydocgen/pulumi-docs.json`
-* For .NET API docs: `docfx/docfx.json`
 * For Resource docs: `scripts/generate_all_resource_docs.sh`
 
 See each script for its usage, and the optional arguments they may accept.
