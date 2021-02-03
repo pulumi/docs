@@ -28,7 +28,7 @@ A Pulumi package for creating and managing Kafka.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`kafka` Terraform Provider](https://github.com/Mongey/terraform-provider-kafka).</dd>
 	<dt>Version</dt>
-	<dd>2.5.0</dd>
+	<dd>2.5.1</dd>
 </dl>
 
 
