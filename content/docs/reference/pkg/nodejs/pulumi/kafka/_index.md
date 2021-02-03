@@ -3,7 +3,7 @@ title: "Package @pulumi/kafka"
 title_tag: "Package @pulumi/kafka | Node.js SDK"
 linktitle: "@pulumi/kafka"
 meta_desc: "Explore members of the @pulumi/kafka package."
-git_sha: "56d0955865d51d874944c3a8f50b3e62584879aa"
+git_sha: "922693330e2c84bf36099185ca70573a7686ecf5"
 block_external_search_index: true
 ---
 
@@ -67,7 +67,7 @@ import * as kafka from "@pulumi/kafka";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Acl" data-link-title="Acl">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L26">
         Resource <strong>Acl</strong>
     </a>
 </h3>
@@ -93,7 +93,7 @@ const test = new kafka.Acl("test", {
 ```
 
 <h4 class="pdoc-member-header" id="Acl-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -107,7 +107,7 @@ Create a Acl resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Acl-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -118,14 +118,14 @@ Get an existing Acl resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Acl-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Acl-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -136,7 +136,7 @@ Returns true if the given object is an instance of Acl.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Acl-aclHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L58">property <b>aclHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L58">property <b>aclHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aclHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -145,7 +145,7 @@ Host from which principal listed in `aclPrincipal`
 will have access.
 
 <h4 class="pdoc-member-header" id="Acl-aclOperation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L64">property <b>aclOperation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L64">property <b>aclOperation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aclOperation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -155,7 +155,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
 `Describe`, `ClusterAction`, `DescribeConfigs`, `AlterConfigs`, `IdempotentWrite`.
 
 <h4 class="pdoc-member-header" id="Acl-aclPermissionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L69">property <b>aclPermissionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L69">property <b>aclPermissionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aclPermissionType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ Type of permission. Valid values are `Unknown`,
 `Any`, `Allow`, `Deny`.
 
 <h4 class="pdoc-member-header" id="Acl-aclPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L73">property <b>aclPrincipal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L73">property <b>aclPrincipal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aclPrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -172,7 +172,7 @@ Type of permission. Valid values are `Unknown`,
 Principal that is being allowed or denied.
 
 <h4 class="pdoc-member-header" id="Acl-aclResourceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L77">property <b>aclResourceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L77">property <b>aclResourceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aclResourceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ Principal that is being allowed or denied.
 The name of the resource.
 
 <h4 class="pdoc-member-header" id="Acl-aclResourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L82">property <b>aclResourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L82">property <b>aclResourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aclResourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -189,7 +189,7 @@ The type of resource. Valid values are `Unknown`,
 `Any`, `Topic`, `Group`, `Cluster`, `TransactionalID`.
 
 <h4 class="pdoc-member-header" id="Acl-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -198,7 +198,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Acl-resourcePatternTypeFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L87">property <b>resourcePatternTypeFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L87">property <b>resourcePatternTypeFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourcePatternTypeFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -207,7 +207,7 @@ The pattern filter. Valid values
 are `Prefixed`, `Any`, `Match`, `Literal`.
 
 <h4 class="pdoc-member-header" id="Acl-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -216,7 +216,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -229,7 +229,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -243,14 +243,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -261,14 +261,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -277,7 +277,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -286,7 +286,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Topic" data-link-title="Topic">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L34">
         Resource <strong>Topic</strong>
     </a>
 </h3>
@@ -320,7 +320,7 @@ Topics can be imported using their ARN, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Topic-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L77"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L77"> <b>constructor</b></a>
 </h4>
 
 
@@ -334,7 +334,7 @@ Create a Topic resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Topic-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -345,14 +345,14 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Topic-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Topic-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -363,7 +363,7 @@ Returns true if the given object is an instance of Topic.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Topic-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L65">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L65">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -371,7 +371,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A map of string k/v attributes.
 
 <h4 class="pdoc-member-header" id="Topic-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -380,7 +380,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Topic-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L69">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -388,7 +388,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the topic.
 
 <h4 class="pdoc-member-header" id="Topic-partitions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L73">property <b>partitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L73">property <b>partitions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>partitions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -396,7 +396,7 @@ The name of the topic.
 The number of partitions the topic should have.
 
 <h4 class="pdoc-member-header" id="Topic-replicationFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L77">property <b>replicationFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L77">property <b>replicationFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationFactor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -404,7 +404,7 @@ The number of partitions the topic should have.
 The number of replicas the topic should have.
 
 <h4 class="pdoc-member-header" id="Topic-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -416,7 +416,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AclArgs" data-link-title="AclArgs">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L190">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L190">
         interface <strong>AclArgs</strong>
     </a>
 </h3>
@@ -426,7 +426,7 @@ deployments.
 The set of arguments for constructing a Acl resource.
 
 <h4 class="pdoc-member-header" id="AclArgs-aclHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L195">property <b>aclHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L195">property <b>aclHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -435,7 +435,7 @@ Host from which principal listed in `aclPrincipal`
 will have access.
 
 <h4 class="pdoc-member-header" id="AclArgs-aclOperation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L201">property <b>aclOperation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L201">property <b>aclOperation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclOperation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -445,7 +445,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
 `Describe`, `ClusterAction`, `DescribeConfigs`, `AlterConfigs`, `IdempotentWrite`.
 
 <h4 class="pdoc-member-header" id="AclArgs-aclPermissionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L206">property <b>aclPermissionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L206">property <b>aclPermissionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclPermissionType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -454,7 +454,7 @@ Type of permission. Valid values are `Unknown`,
 `Any`, `Allow`, `Deny`.
 
 <h4 class="pdoc-member-header" id="AclArgs-aclPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L210">property <b>aclPrincipal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L210">property <b>aclPrincipal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclPrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -462,7 +462,7 @@ Type of permission. Valid values are `Unknown`,
 Principal that is being allowed or denied.
 
 <h4 class="pdoc-member-header" id="AclArgs-aclResourceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L214">property <b>aclResourceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L214">property <b>aclResourceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclResourceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -470,7 +470,7 @@ Principal that is being allowed or denied.
 The name of the resource.
 
 <h4 class="pdoc-member-header" id="AclArgs-aclResourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L219">property <b>aclResourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L219">property <b>aclResourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclResourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -479,7 +479,7 @@ The type of resource. Valid values are `Unknown`,
 `Any`, `Topic`, `Group`, `Cluster`, `TransactionalID`.
 
 <h4 class="pdoc-member-header" id="AclArgs-resourcePatternTypeFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L224">property <b>resourcePatternTypeFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L224">property <b>resourcePatternTypeFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourcePatternTypeFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -488,7 +488,7 @@ The pattern filter. Valid values
 are `Prefixed`, `Any`, `Match`, `Literal`.
 
 <h3 class="pdoc-module-header" id="AclState" data-link-title="AclState">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L150">
         interface <strong>AclState</strong>
     </a>
 </h3>
@@ -498,7 +498,7 @@ are `Prefixed`, `Any`, `Match`, `Literal`.
 Input properties used for looking up and filtering Acl resources.
 
 <h4 class="pdoc-member-header" id="AclState-aclHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L155">property <b>aclHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L155">property <b>aclHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -507,7 +507,7 @@ Host from which principal listed in `aclPrincipal`
 will have access.
 
 <h4 class="pdoc-member-header" id="AclState-aclOperation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L161">property <b>aclOperation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L161">property <b>aclOperation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclOperation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -517,7 +517,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
 `Describe`, `ClusterAction`, `DescribeConfigs`, `AlterConfigs`, `IdempotentWrite`.
 
 <h4 class="pdoc-member-header" id="AclState-aclPermissionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L166">property <b>aclPermissionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L166">property <b>aclPermissionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclPermissionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -526,7 +526,7 @@ Type of permission. Valid values are `Unknown`,
 `Any`, `Allow`, `Deny`.
 
 <h4 class="pdoc-member-header" id="AclState-aclPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L170">property <b>aclPrincipal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L170">property <b>aclPrincipal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclPrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -534,7 +534,7 @@ Type of permission. Valid values are `Unknown`,
 Principal that is being allowed or denied.
 
 <h4 class="pdoc-member-header" id="AclState-aclResourceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L174">property <b>aclResourceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L174">property <b>aclResourceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclResourceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -542,7 +542,7 @@ Principal that is being allowed or denied.
 The name of the resource.
 
 <h4 class="pdoc-member-header" id="AclState-aclResourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L179">property <b>aclResourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L179">property <b>aclResourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclResourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -551,7 +551,7 @@ The type of resource. Valid values are `Unknown`,
 `Any`, `Topic`, `Group`, `Cluster`, `TransactionalID`.
 
 <h4 class="pdoc-member-header" id="AclState-resourcePatternTypeFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/acl.ts#L184">property <b>resourcePatternTypeFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/acl.ts#L184">property <b>resourcePatternTypeFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourcePatternTypeFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -560,7 +560,7 @@ The pattern filter. Valid values
 are `Prefixed`, `Any`, `Match`, `Literal`.
 
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -569,7 +569,7 @@ are `Prefixed`, `Any`, `Match`, `Literal`.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -578,7 +578,7 @@ are `Prefixed`, `Any`, `Match`, `Literal`.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -587,7 +587,7 @@ are `Prefixed`, `Any`, `Match`, `Literal`.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -596,7 +596,7 @@ are `Prefixed`, `Any`, `Match`, `Literal`.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L71">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -606,7 +606,7 @@ are `Prefixed`, `Any`, `Match`, `Literal`.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-bootstrapServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L75">property <b>bootstrapServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L75">property <b>bootstrapServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bootstrapServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -614,7 +614,7 @@ The set of arguments for constructing a Provider resource.
 A list of kafka brokers
 
 <h4 class="pdoc-member-header" id="ProviderArgs-caCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L79">property <b>caCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L79">property <b>caCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>caCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -622,7 +622,7 @@ A list of kafka brokers
 CA certificate file to validate the server's certificate.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-caCertFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L85">property <b>caCertFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L85">property <b>caCertFile</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -634,7 +634,7 @@ This parameter is now deprecated and will be removed in a later release, please 
 Path to a CA certificate file to validate the server's certificate.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-clientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L89">property <b>clientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L89">property <b>clientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -642,7 +642,7 @@ Path to a CA certificate file to validate the server's certificate.
 The client certificate.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-clientCertFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L95">property <b>clientCertFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L95">property <b>clientCertFile</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -654,7 +654,7 @@ This parameter is now deprecated and will be removed in a later release, please 
 Path to a file containing the client certificate.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-clientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L99">property <b>clientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L99">property <b>clientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -662,7 +662,7 @@ Path to a file containing the client certificate.
 The private key that the certificate was issued for.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-clientKeyFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L105">property <b>clientKeyFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L105">property <b>clientKeyFile</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -674,7 +674,7 @@ This parameter is now deprecated and will be removed in a later release, please 
 Path to a file containing the private key that the certificate was issued for.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-clientKeyPassphrase">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L109">property <b>clientKeyPassphrase</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L109">property <b>clientKeyPassphrase</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientKeyPassphrase?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -682,7 +682,7 @@ Path to a file containing the private key that the certificate was issued for.
 The passphrase for the private key that the certificate was issued for.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-saslMechanism">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L113">property <b>saslMechanism</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L113">property <b>saslMechanism</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>saslMechanism?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -690,7 +690,7 @@ The passphrase for the private key that the certificate was issued for.
 SASL mechanism, can be plain, scram-sha512, scram-sha256
 
 <h4 class="pdoc-member-header" id="ProviderArgs-saslPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L117">property <b>saslPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L117">property <b>saslPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>saslPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -698,7 +698,7 @@ SASL mechanism, can be plain, scram-sha512, scram-sha256
 Password for SASL authentication.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-saslUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L121">property <b>saslUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L121">property <b>saslUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>saslUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -706,7 +706,7 @@ Password for SASL authentication.
 Username for SASL authentication.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-skipTlsVerify">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L125">property <b>skipTlsVerify</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L125">property <b>skipTlsVerify</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipTlsVerify?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -714,7 +714,7 @@ Username for SASL authentication.
 Set this to true only if the target Kafka server is an insecure development instance.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L129">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L129">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -722,7 +722,7 @@ Set this to true only if the target Kafka server is an insecure development inst
 Timeout in seconds
 
 <h4 class="pdoc-member-header" id="ProviderArgs-tlsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/provider.ts#L133">property <b>tlsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/provider.ts#L133">property <b>tlsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -730,7 +730,7 @@ Timeout in seconds
 Enable communication with the Kafka Cluster over TLS.
 
 <h3 class="pdoc-module-header" id="TopicArgs" data-link-title="TopicArgs">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L144">
         interface <strong>TopicArgs</strong>
     </a>
 </h3>
@@ -740,7 +740,7 @@ Enable communication with the Kafka Cluster over TLS.
 The set of arguments for constructing a Topic resource.
 
 <h4 class="pdoc-member-header" id="TopicArgs-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L148">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L148">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -748,7 +748,7 @@ The set of arguments for constructing a Topic resource.
 A map of string k/v attributes.
 
 <h4 class="pdoc-member-header" id="TopicArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L152">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L152">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -756,7 +756,7 @@ A map of string k/v attributes.
 The name of the topic.
 
 <h4 class="pdoc-member-header" id="TopicArgs-partitions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L156">property <b>partitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L156">property <b>partitions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>partitions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -764,7 +764,7 @@ The name of the topic.
 The number of partitions the topic should have.
 
 <h4 class="pdoc-member-header" id="TopicArgs-replicationFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L160">property <b>replicationFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L160">property <b>replicationFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationFactor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -772,7 +772,7 @@ The number of partitions the topic should have.
 The number of replicas the topic should have.
 
 <h3 class="pdoc-module-header" id="TopicState" data-link-title="TopicState">
-    <a href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L122">
         interface <strong>TopicState</strong>
     </a>
 </h3>
@@ -782,7 +782,7 @@ The number of replicas the topic should have.
 Input properties used for looking up and filtering Topic resources.
 
 <h4 class="pdoc-member-header" id="TopicState-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L126">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L126">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -790,7 +790,7 @@ Input properties used for looking up and filtering Topic resources.
 A map of string k/v attributes.
 
 <h4 class="pdoc-member-header" id="TopicState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L130">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -798,7 +798,7 @@ A map of string k/v attributes.
 The name of the topic.
 
 <h4 class="pdoc-member-header" id="TopicState-partitions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L134">property <b>partitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L134">property <b>partitions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>partitions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -806,7 +806,7 @@ The name of the topic.
 The number of partitions the topic should have.
 
 <h4 class="pdoc-member-header" id="TopicState-replicationFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/56d0955865d51d874944c3a8f50b3e62584879aa/sdk/nodejs/topic.ts#L138">property <b>replicationFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kafka/blob/922693330e2c84bf36099185ca70573a7686ecf5/sdk/nodejs/topic.ts#L138">property <b>replicationFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationFactor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>

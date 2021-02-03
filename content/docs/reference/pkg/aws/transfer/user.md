@@ -56,6 +56,11 @@ const fooUser = new aws.transfer.User("fooUser", {
     serverId: fooServer.id,
     userName: "tftestuser",
     role: fooRole.arn,
+    homeDirectoryType: "LOGICAL",
+    homeDirectoryMappings: [{
+        entry: "/test.pdf",
+        target: "/bucket3/test-path/tftestuser.pdf",
+    }],
 });
 ```
 ```python
@@ -99,7 +104,12 @@ foo_role_policy = aws.iam.RolePolicy("fooRolePolicy",
 foo_user = aws.transfer.User("fooUser",
     server_id=foo_server.id,
     user_name="tftestuser",
-    role=foo_role.arn)
+    role=foo_role.arn,
+    home_directory_type="LOGICAL",
+    home_directory_mappings=[aws.transfer.UserHomeDirectoryMappingArgs(
+        entry="/test.pdf",
+        target="/bucket3/test-path/tftestuser.pdf",
+    )])
 ```
 ```csharp
 using Pulumi;
@@ -156,6 +166,15 @@ class MyStack : Stack
             ServerId = fooServer.Id,
             UserName = "tftestuser",
             Role = fooRole.Arn,
+            HomeDirectoryType = "LOGICAL",
+            HomeDirectoryMappings = 
+            {
+                new Aws.Transfer.Inputs.UserHomeDirectoryMappingArgs
+                {
+                    Entry = "/test.pdf",
+                    Target = "/bucket3/test-path/tftestuser.pdf",
+                },
+            },
         });
     }
 
@@ -197,9 +216,16 @@ func main() {
 			return err
 		}
 		_, err = transfer.NewUser(ctx, "fooUser", &transfer.UserArgs{
-			ServerId: fooServer.ID(),
-			UserName: pulumi.String("tftestuser"),
-			Role:     fooRole.Arn,
+			ServerId:          fooServer.ID(),
+			UserName:          pulumi.String("tftestuser"),
+			Role:              fooRole.Arn,
+			HomeDirectoryType: pulumi.String("LOGICAL"),
+			HomeDirectoryMappings: transfer.UserHomeDirectoryMappingArray{
+				&transfer.UserHomeDirectoryMappingArgs{
+					Entry:  pulumi.String("/test.pdf"),
+					Target: pulumi.String("/bucket3/test-path/tftestuser.pdf"),
+				},
+			},
 		})
 		if err != nil {
 			return err

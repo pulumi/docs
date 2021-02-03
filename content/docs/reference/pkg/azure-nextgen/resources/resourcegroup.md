@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.resources.ResourceGroup resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Resource group information.
-Latest API Version: 2020-08-01.
+Latest API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage

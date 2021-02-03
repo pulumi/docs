@@ -17,14 +17,14 @@ We generally use Hugo's [`relref` shortcode](https://gohugo.io/content-managemen
 
 ```markdown
 [Install]({{< relref "/docs/get-started/install" >}})
-[Outputs]({{< relref "/docs/intro/concepts/programming-model#stack-outputs" >}})
+[Outputs]({{< relref "/docs/intro/concepts/stack#outputs" >}})
 ```
 
 Which, on a page inside the `./content/reference` directory, will generate:
 
 ```html
 <a href="/docs/install/">Install</a>
-<a href="/docs/intro/concepts/programming-model/#stack-outputs">Outputs</a>
+<a href="/docs/intro/concepts/stack/#stack-outputs">Outputs</a>
 ```
 
 ### Hugo tips

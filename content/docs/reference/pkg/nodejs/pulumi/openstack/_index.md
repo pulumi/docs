@@ -3,7 +3,7 @@ title: "Package @pulumi/openstack"
 title_tag: "Package @pulumi/openstack | Node.js SDK"
 linktitle: "@pulumi/openstack"
 meta_desc: "Explore members of the @pulumi/openstack package."
-git_sha: "d24d5450db2b9b67bf7e69c0c5715d7a04a180f3"
+git_sha: "716e95132dbe1032a5df03b01bcfa62403541d3c"
 block_external_search_index: true
 ---
 
@@ -77,7 +77,7 @@ import * as openstack from "@pulumi/openstack";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -90,7 +90,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -104,14 +104,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -122,14 +122,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -138,7 +138,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -150,7 +150,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -159,7 +159,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -168,7 +168,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -177,7 +177,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -186,7 +186,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L85">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -196,7 +196,7 @@ deployments.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-allowReauth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L90">property <b>allowReauth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L90">property <b>allowReauth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowReauth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -205,7 +205,7 @@ If set to `false`, OpenStack authorization won't be perfomed automatically, if t
 Defaults to `true`
 
 <h4 class="pdoc-member-header" id="ProviderArgs-applicationCredentialId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L94">property <b>applicationCredentialId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L94">property <b>applicationCredentialId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationCredentialId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -213,7 +213,7 @@ Defaults to `true`
 Application Credential ID to login with.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-applicationCredentialName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L98">property <b>applicationCredentialName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L98">property <b>applicationCredentialName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationCredentialName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -221,7 +221,7 @@ Application Credential ID to login with.
 Application Credential name to login with.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-applicationCredentialSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L102">property <b>applicationCredentialSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L102">property <b>applicationCredentialSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationCredentialSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -229,7 +229,7 @@ Application Credential name to login with.
 Application Credential secret to login with.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-authUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L106">property <b>authUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L106">property <b>authUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -237,7 +237,7 @@ Application Credential secret to login with.
 The Identity authentication URL.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-cacertFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L110">property <b>cacertFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L110">property <b>cacertFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacertFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -245,7 +245,7 @@ The Identity authentication URL.
 A Custom CA certificate.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-cert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L114">property <b>cert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L114">property <b>cert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -253,7 +253,7 @@ A Custom CA certificate.
 A client certificate to authenticate with.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-cloud">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L118">property <b>cloud</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L118">property <b>cloud</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloud?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -261,7 +261,7 @@ A client certificate to authenticate with.
 An entry in a `clouds.yaml` file to use.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-defaultDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L122">property <b>defaultDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L122">property <b>defaultDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -269,7 +269,7 @@ An entry in a `clouds.yaml` file to use.
 The name of the Domain ID to scope to if no other domain is specified. Defaults to `default` (Identity v3).
 
 <h4 class="pdoc-member-header" id="ProviderArgs-delayedAuth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L127">property <b>delayedAuth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L127">property <b>delayedAuth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>delayedAuth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -278,7 +278,7 @@ If set to `false`, OpenStack authorization will be perfomed, every time the serv
 to `true`.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-disableNoCacheHeader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L131">property <b>disableNoCacheHeader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L131">property <b>disableNoCacheHeader</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableNoCacheHeader?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -286,7 +286,7 @@ to `true`.
 If set to `true`, the HTTP `Cache-Control: no-cache` header will not be added by default to all API requests.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L135">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L135">property <b>domainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -294,7 +294,7 @@ If set to `true`, the HTTP `Cache-Control: no-cache` header will not be added by
 The ID of the Domain to scope to (Identity v3).
 
 <h4 class="pdoc-member-header" id="ProviderArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L139">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L139">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -302,7 +302,7 @@ The ID of the Domain to scope to (Identity v3).
 The name of the Domain to scope to (Identity v3).
 
 <h4 class="pdoc-member-header" id="ProviderArgs-endpointOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L143">property <b>endpointOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L143">property <b>endpointOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointOverrides?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -310,12 +310,12 @@ The name of the Domain to scope to (Identity v3).
 A map of services with an endpoint to override what was from the Keystone catalog
 
 <h4 class="pdoc-member-header" id="ProviderArgs-endpointType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L144">property <b>endpointType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L144">property <b>endpointType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-insecure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L148">property <b>insecure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L148">property <b>insecure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insecure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -323,7 +323,7 @@ A map of services with an endpoint to override what was from the Keystone catalo
 Trust self-signed certificates.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L152">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L152">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -331,7 +331,7 @@ Trust self-signed certificates.
 A client private key to authenticate with.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-maxRetries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L156">property <b>maxRetries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L156">property <b>maxRetries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxRetries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -339,7 +339,7 @@ A client private key to authenticate with.
 How many times HTTP connection should be retried until giving up.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L160">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L160">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -347,7 +347,7 @@ How many times HTTP connection should be retried until giving up.
 Password to login with.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-projectDomainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L164">property <b>projectDomainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L164">property <b>projectDomainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectDomainId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -355,7 +355,7 @@ Password to login with.
 The ID of the domain where the proejct resides (Identity v3).
 
 <h4 class="pdoc-member-header" id="ProviderArgs-projectDomainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L168">property <b>projectDomainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L168">property <b>projectDomainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectDomainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -363,7 +363,7 @@ The ID of the domain where the proejct resides (Identity v3).
 The name of the domain where the project resides (Identity v3).
 
 <h4 class="pdoc-member-header" id="ProviderArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L172">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L172">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -371,7 +371,7 @@ The name of the domain where the project resides (Identity v3).
 The OpenStack region to connect to.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-swauth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L176">property <b>swauth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L176">property <b>swauth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>swauth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -379,7 +379,7 @@ The OpenStack region to connect to.
 Use Swift's authentication system instead of Keystone. Only used for interaction with Swift.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L180">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L180">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -387,7 +387,7 @@ Use Swift's authentication system instead of Keystone. Only used for interaction
 The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-tenantName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L184">property <b>tenantName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L184">property <b>tenantName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -395,7 +395,7 @@ The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.
 The name of the Tenant (Identity v2) or Project (Identity v3) to login with.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L188">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L188">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -403,7 +403,7 @@ The name of the Tenant (Identity v2) or Project (Identity v3) to login with.
 Authentication token to use as an alternative to username/password.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-useOctavia">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L192">property <b>useOctavia</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L192">property <b>useOctavia</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useOctavia?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -411,7 +411,7 @@ Authentication token to use as an alternative to username/password.
 If set to `true`, API requests will go the Load Balancer service (Octavia) instead of the Networking service (Neutron).
 
 <h4 class="pdoc-member-header" id="ProviderArgs-userDomainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L196">property <b>userDomainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L196">property <b>userDomainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userDomainId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -419,7 +419,7 @@ If set to `true`, API requests will go the Load Balancer service (Octavia) inste
 The ID of the domain where the user resides (Identity v3).
 
 <h4 class="pdoc-member-header" id="ProviderArgs-userDomainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L200">property <b>userDomainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L200">property <b>userDomainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userDomainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -427,7 +427,7 @@ The ID of the domain where the user resides (Identity v3).
 The name of the domain where the user resides (Identity v3).
 
 <h4 class="pdoc-member-header" id="ProviderArgs-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L204">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L204">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -435,7 +435,7 @@ The name of the domain where the user resides (Identity v3).
 Username to login with.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d24d5450db2b9b67bf7e69c0c5715d7a04a180f3/sdk/nodejs/provider.ts#L208">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/provider.ts#L208">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

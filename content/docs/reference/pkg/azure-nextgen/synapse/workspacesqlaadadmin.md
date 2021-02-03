@@ -11,7 +11,6 @@ meta_desc: "Documentation for the azure-nextgen.synapse.WorkspaceSqlAadAdmin res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Workspace active directory administrator
-Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspaceSqlAadAdmin = new AzureNextGen.Synapse.Latest.WorkspaceSqlAadAdmin("workspaceSqlAadAdmin", new AzureNextGen.Synapse.Latest.WorkspaceSqlAadAdminArgs
+        var workspaceSqlAadAdmin = new AzureNextGen.Synapse.V20190601Preview.WorkspaceSqlAadAdmin("workspaceSqlAadAdmin", new AzureNextGen.Synapse.V20190601Preview.WorkspaceSqlAadAdminArgs
         {
             AdministratorType = "ActiveDirectory",
             Login = "bob@contoso.com",
@@ -50,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/v20190601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +80,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace_sql_aad_admin = azure_nextgen.synapse.latest.WorkspaceSqlAadAdmin("workspaceSqlAadAdmin",
+workspace_sql_aad_admin = azure_nextgen.synapse.v20190601preview.WorkspaceSqlAadAdmin("workspaceSqlAadAdmin",
     administrator_type="ActiveDirectory",
     login="bob@contoso.com",
     resource_group_name="resourceGroup1",
@@ -99,7 +98,7 @@ workspace_sql_aad_admin = azure_nextgen.synapse.latest.WorkspaceSqlAadAdmin("wor
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspaceSqlAadAdmin = new azure_nextgen.synapse.latest.WorkspaceSqlAadAdmin("workspaceSqlAadAdmin", {
+const workspaceSqlAadAdmin = new azure_nextgen.synapse.v20190601preview.WorkspaceSqlAadAdmin("workspaceSqlAadAdmin", {
     administratorType: "ActiveDirectory",
     login: "bob@contoso.com",
     resourceGroupName: "resourceGroup1",
@@ -682,7 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/latest:WorkspaceSqlAadAdmin activeDirectory /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/workspaces/workspace1/administrators/activeDirectory 
+$ pulumi import azure-nextgen:synapse/v20190601preview:WorkspaceSqlAadAdmin activeDirectory /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/workspaces/workspace1/administrators/activeDirectory 
 ```
 
 

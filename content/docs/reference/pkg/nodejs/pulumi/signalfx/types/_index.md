@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/signalfx | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/signalfx package."
-git_sha: "dc97d24b1111b0ba29e162bd99ff92526d308ea1"
+git_sha: "d5b94eeca1b030e756d885056b5d5182d598a76e"
 block_external_search_index: true
 ---
 

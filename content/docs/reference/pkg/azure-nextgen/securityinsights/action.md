@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.Action resource
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Action for alert rule.
+Latest API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -26,12 +27,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var action = new AzureNextGen.SecurityInsights.V20190101Preview.Action("action", new AzureNextGen.SecurityInsights.V20190101Preview.ActionArgs
+        var action = new AzureNextGen.SecurityInsights.Latest.Action("action", new AzureNextGen.SecurityInsights.Latest.ActionArgs
         {
             ActionId = "912bec42-cb66-4c03-ac63-1761b6898c3e",
             Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
             LogicAppResourceId = "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts",
-            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
             ResourceGroupName = "myRg",
             RuleId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
             TriggerUri = "https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=signature",
@@ -53,21 +53,20 @@ package main
 import (
 	"fmt"
 
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/v20190101preview"
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := securityinsights.NewAction(ctx, "action", &securityinsights.ActionArgs{
-			ActionId:                            pulumi.String("912bec42-cb66-4c03-ac63-1761b6898c3e"),
-			Etag:                                pulumi.String("\"0300bf09-0000-0000-0000-5c37296e0000\""),
-			LogicAppResourceId:                  pulumi.String("/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts"),
-			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
-			ResourceGroupName:                   pulumi.String("myRg"),
-			RuleId:                              pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
-			TriggerUri:                          pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v", "https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=", "%", "2Ftriggers", "%", "2Fmanual", "%", "2Frun&sv=1.0&sig=signature")),
-			WorkspaceName:                       pulumi.String("myWorkspace"),
+			ActionId:           pulumi.String("912bec42-cb66-4c03-ac63-1761b6898c3e"),
+			Etag:               pulumi.String("\"0300bf09-0000-0000-0000-5c37296e0000\""),
+			LogicAppResourceId: pulumi.String("/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts"),
+			ResourceGroupName:  pulumi.String("myRg"),
+			RuleId:             pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
+			TriggerUri:         pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v", "https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=", "%", "2Ftriggers", "%", "2Fmanual", "%", "2Frun&sv=1.0&sig=signature")),
+			WorkspaceName:      pulumi.String("myWorkspace"),
 		})
 		if err != nil {
 			return err
@@ -86,11 +85,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-action = azure_nextgen.securityinsights.v20190101preview.Action("action",
+action = azure_nextgen.securityinsights.latest.Action("action",
     action_id="912bec42-cb66-4c03-ac63-1761b6898c3e",
     etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
     logic_app_resource_id="/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts",
-    operational_insights_resource_provider="Microsoft.OperationalInsights",
     resource_group_name="myRg",
     rule_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     trigger_uri="https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=signature",
@@ -106,11 +104,10 @@ action = azure_nextgen.securityinsights.v20190101preview.Action("action",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const action = new azure_nextgen.securityinsights.v20190101preview.Action("action", {
+const action = new azure_nextgen.securityinsights.latest.Action("action", {
     actionId: "912bec42-cb66-4c03-ac63-1761b6898c3e",
     etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
     logicAppResourceId: "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts",
-    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
     resourceGroupName: "myRg",
     ruleId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     triggerUri: `https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=signature`,
@@ -133,7 +130,7 @@ const action = new azure_nextgen.securityinsights.v20190101preview.Action("actio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Action</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logic_app_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Action</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logic_app_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -315,13 +312,13 @@ The Action resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Action ID{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="operationalinsightsresourceprovider_csharp">
-<a href="#operationalinsightsresourceprovider_csharp" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
+        <span id="logicappresourceid_csharp">
+<a href="#logicappresourceid_csharp" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
+    <dd>{{% md %}}Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -360,15 +357,6 @@ The Action resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="logicappresourceid_csharp">
-<a href="#logicappresourceid_csharp" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="triggeruri_csharp">
 <a href="#triggeruri_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Uri</a>
 </span>
@@ -393,13 +381,13 @@ The Action resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Action ID{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="operationalinsightsresourceprovider_go">
-<a href="#operationalinsightsresourceprovider_go" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
+        <span id="logicappresourceid_go">
+<a href="#logicappresourceid_go" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
+    <dd>{{% md %}}Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -438,15 +426,6 @@ The Action resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="logicappresourceid_go">
-<a href="#logicappresourceid_go" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="triggeruri_go">
 <a href="#triggeruri_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Uri</a>
 </span>
@@ -471,13 +450,13 @@ The Action resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Action ID{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="operationalinsightsresourceprovider_nodejs">
-<a href="#operationalinsightsresourceprovider_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
+        <span id="logicappresourceid_nodejs">
+<a href="#logicappresourceid_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
+    <dd>{{% md %}}Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -516,15 +495,6 @@ The Action resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="logicappresourceid_nodejs">
-<a href="#logicappresourceid_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="triggeruri_nodejs">
 <a href="#triggeruri_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Uri</a>
 </span>
@@ -549,13 +519,13 @@ The Action resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Action ID{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="operational_insights_resource_provider_python">
-<a href="#operational_insights_resource_provider_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>insights_<wbr>resource_<wbr>provider</a>
+        <span id="logic_app_resource_id_python">
+<a href="#logic_app_resource_id_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
+    <dd>{{% md %}}Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -592,15 +562,6 @@ The Action resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="logic_app_resource_id_python">
-<a href="#logic_app_resource_id_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>resource_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="trigger_uri_python">
@@ -799,7 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:securityinsights/v20190101preview:Action 912bec42-cb66-4c03-ac63-1761b6898c3e /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/73e01a99-5cd7-4139-a149-9f2736ff2ab5/actions/912bec42-cb66-4c03-ac63-1761b6898c3e 
+$ pulumi import azure-nextgen:securityinsights/latest:Action 912bec42-cb66-4c03-ac63-1761b6898c3e /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/73e01a99-5cd7-4139-a149-9f2736ff2ab5/actions/912bec42-cb66-4c03-ac63-1761b6898c3e 
 ```
 
 

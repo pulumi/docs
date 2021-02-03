@@ -24,7 +24,7 @@ meta_desc: "Explore the GetAction function of the securityinsights module, inclu
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_action(</span><span class="nx">action_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetActionResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_action(</span><span class="nx">action_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetActionResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -59,15 +59,6 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action ID{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operationalinsightsresourceprovider_csharp">
-<a href="#operationalinsightsresourceprovider_csharp" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -112,15 +103,6 @@ The following arguments are supported:
     <dd>{{% md %}}Action ID{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="operationalinsightsresourceprovider_go">
-<a href="#operationalinsightsresourceprovider_go" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -163,15 +145,6 @@ The following arguments are supported:
     <dd>{{% md %}}Action ID{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="operationalinsightsresourceprovider_nodejs">
-<a href="#operationalinsightsresourceprovider_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -212,15 +185,6 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action ID{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operational_insights_resource_provider_python">
-<a href="#operational_insights_resource_provider_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>insights_<wbr>resource_<wbr>provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -274,6 +238,15 @@ The following output properties are available:
     <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="logicappresourceid_csharp">
+<a href="#logicappresourceid_csharp" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -301,15 +274,6 @@ The following output properties are available:
     <dd>{{% md %}}Etag of the action.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="logicappresourceid_csharp">
-<a href="#logicappresourceid_csharp" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="workflowid_csharp">
 <a href="#workflowid_csharp" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Id</a>
 </span>
@@ -332,6 +296,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="logicappresourceid_go">
+<a href="#logicappresourceid_go" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_go">
@@ -361,15 +334,6 @@ The following output properties are available:
     <dd>{{% md %}}Etag of the action.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="logicappresourceid_go">
-<a href="#logicappresourceid_go" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="workflowid_go">
 <a href="#workflowid_go" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Id</a>
 </span>
@@ -392,6 +356,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="logicappresourceid_nodejs">
+<a href="#logicappresourceid_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_nodejs">
@@ -421,15 +394,6 @@ The following output properties are available:
     <dd>{{% md %}}Etag of the action.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="logicappresourceid_nodejs">
-<a href="#logicappresourceid_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="workflowid_nodejs">
 <a href="#workflowid_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Id</a>
 </span>
@@ -452,6 +416,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="logic_app_resource_id_python">
+<a href="#logic_app_resource_id_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_python">
@@ -479,15 +452,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Etag of the action.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="logic_app_resource_id_python">
-<a href="#logic_app_resource_id_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>resource_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="workflow_id_python">

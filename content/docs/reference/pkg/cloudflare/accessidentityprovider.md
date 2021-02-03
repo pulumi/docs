@@ -88,6 +88,7 @@ import (
 	"fmt"
 
 	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

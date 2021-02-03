@@ -11,7 +11,6 @@ meta_desc: "Documentation for the azure-nextgen.softwareplan.HybridUseBenefit re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Response on GET of a hybrid use benefit
-Latest API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hybridUseBenefit = new AzureNextGen.SoftwarePlan.Latest.HybridUseBenefit("hybridUseBenefit", new AzureNextGen.SoftwarePlan.Latest.HybridUseBenefitArgs
+        var hybridUseBenefit = new AzureNextGen.SoftwarePlan.V20190601Preview.HybridUseBenefit("hybridUseBenefit", new AzureNextGen.SoftwarePlan.V20190601Preview.HybridUseBenefitArgs
         {
             PlanId = "94f46eda-45f8-493a-8425-251921463a89",
             Scope = "subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}",
-            Sku = new AzureNextGen.SoftwarePlan.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.SoftwarePlan.V20190601Preview.Inputs.SkuArgs
             {
                 Name = "SQL_Server_Perpetual",
             },
@@ -50,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	softwareplan "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/softwareplan/latest"
+	softwareplan "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/softwareplan/v20190601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,10 +79,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hybrid_use_benefit = azure_nextgen.softwareplan.latest.HybridUseBenefit("hybridUseBenefit",
+hybrid_use_benefit = azure_nextgen.softwareplan.v20190601preview.HybridUseBenefit("hybridUseBenefit",
     plan_id="94f46eda-45f8-493a-8425-251921463a89",
     scope="subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}",
-    sku=azure_nextgen.softwareplan.latest.SkuArgs(
+    sku=azure_nextgen.softwareplan.v20190601preview.SkuArgs(
         name="SQL_Server_Perpetual",
     ))
 
@@ -97,7 +96,7 @@ hybrid_use_benefit = azure_nextgen.softwareplan.latest.HybridUseBenefit("hybridU
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const hybridUseBenefit = new azure_nextgen.softwareplan.latest.HybridUseBenefit("hybridUseBenefit", {
+const hybridUseBenefit = new azure_nextgen.softwareplan.v20190601preview.HybridUseBenefit("hybridUseBenefit", {
     planId: "94f46eda-45f8-493a-8425-251921463a89",
     scope: "subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}",
     sku: {
@@ -843,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:softwareplan/latest:HybridUseBenefit SQL_{hostGroupName}_{hostName} /subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}/providers/Microsoft.SoftwarePlan/hybridUseBenefits/SQL_{hostGroupName}_{hostName} 
+$ pulumi import azure-nextgen:softwareplan/v20190601preview:HybridUseBenefit SQL_{hostGroupName}_{hostName} /subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}/providers/Microsoft.SoftwarePlan/hybridUseBenefits/SQL_{hostGroupName}_{hostName} 
 ```
 
 

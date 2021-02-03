@@ -488,7 +488,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of a single item of the Availability Zone which the Redis Cache should be allocated in.
+    <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -646,7 +646,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of a single item of the Availability Zone which the Redis Cache should be allocated in.
+    <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -804,7 +804,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of a single item of the Availability Zone which the Redis Cache should be allocated in.
+    <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -962,7 +962,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A list of a single item of the Availability Zone which the Redis Cache should be allocated in.
+    <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1660,7 +1660,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of a single item of the Availability Zone which the Redis Cache should be allocated in.
+    <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1888,7 +1888,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of a single item of the Availability Zone which the Redis Cache should be allocated in.
+    <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2116,7 +2116,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of a single item of the Availability Zone which the Redis Cache should be allocated in.
+    <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2344,7 +2344,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A list of a single item of the Availability Zone which the Redis Cache should be allocated in.
+    <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

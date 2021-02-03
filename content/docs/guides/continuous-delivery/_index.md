@@ -23,7 +23,7 @@ infrastructure the same way it would for your application code.
 Pulumi can easily integrate into any continuous integration/continuous deliver (CI/CD) system. If your CI/CD system isn't listed below or you are testing something new, see our guide for using Pulumi
 within a [generic CI/CD system]({{< relref "other" >}}).
 
-> Looking to troubleshoot failures related to running Pulumi in CI/CD? Check out our [CI/CD troubleshooting guide]({{< relref troubleshooting-guide >}}).
+> Looking to troubleshoot failures related to running Pulumi in CI/CD? Check out our [CI/CD troubleshooting guide]({{< relref "/docs/guides/continuous-delivery/troubleshooting-guide" >}}).
 
 <div class="supported-cicd-platforms">
     <a href="{{< relref aws-code-services >}}">
@@ -96,7 +96,7 @@ sensitive information. See [Managing Secrets with Pulumi]({{< relref "managing-s
 ### Managing Complex Environments
 
 Most real-world environments are complex. Perhaps you have a networking stack that's independent from your data
-and application stacks. Pulumi [supports "stack references"]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}), which
+and application stacks. Pulumi [supports "stack references"]({{< relref "/docs/guides/organizing-projects-stacks" >}}), which
 permit one stack to depend upon another. This facilitates continuous delivery and integration at scale.
 
 ### Using Branches for Environments

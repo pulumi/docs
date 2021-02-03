@@ -694,6 +694,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="forwards_csharp">
+<a href="#forwards_csharp" style="color: inherit; text-decoration: inherit;">Forwards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforward">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
 </span>
@@ -759,6 +768,15 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlistenerdefaultactionfixedresponse">[]Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="forwards_go">
+<a href="#forwards_go" style="color: inherit; text-decoration: inherit;">Forwards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforward">[]Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -832,6 +850,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="forwards_nodejs">
+<a href="#forwards_nodejs" style="color: inherit; text-decoration: inherit;">forwards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforward">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
@@ -897,6 +924,15 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlistenerdefaultactionfixedresponse">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="forwards_python">
+<a href="#forwards_python" style="color: inherit; text-decoration: inherit;">forwards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforward">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -1839,6 +1875,340 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getlistenerdefaultactionforward">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionForward">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/alb?tab=doc#GetListenerDefaultActionForward">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.GetListenerDefaultActionForward.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stickinesses_csharp">
+<a href="#stickinesses_csharp" style="color: inherit; text-decoration: inherit;">Stickinesses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardstickiness">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="targetgroups_csharp">
+<a href="#targetgroups_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardtargetgroup">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stickinesses_go">
+<a href="#stickinesses_go" style="color: inherit; text-decoration: inherit;">Stickinesses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardstickiness">[]Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="targetgroups_go">
+<a href="#targetgroups_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardtargetgroup">[]Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stickinesses_nodejs">
+<a href="#stickinesses_nodejs" style="color: inherit; text-decoration: inherit;">stickinesses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardstickiness">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="targetgroups_nodejs">
+<a href="#targetgroups_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardtargetgroup">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stickinesses_python">
+<a href="#stickinesses_python" style="color: inherit; text-decoration: inherit;">stickinesses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardstickiness">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="target_groups_python">
+<a href="#target_groups_python" style="color: inherit; text-decoration: inherit;">target_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardtargetgroup">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getlistenerdefaultactionforwardstickiness">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionForwardStickiness">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/alb?tab=doc#GetListenerDefaultActionForwardStickiness">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.GetListenerDefaultActionForwardStickiness.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_csharp">
+<a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_go">
+<a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_nodejs">
+<a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_python">
+<a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getlistenerdefaultactionforwardtargetgroup">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionForwardTargetGroup">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/alb?tab=doc#GetListenerDefaultActionForwardTargetGroup">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.GetListenerDefaultActionForwardTargetGroup.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The arn of the listener. Required if `load_balancer_arn` and `port` is not set.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="weight_csharp">
+<a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The arn of the listener. Required if `load_balancer_arn` and `port` is not set.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="weight_go">
+<a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The arn of the listener. Required if `load_balancer_arn` and `port` is not set.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="weight_nodejs">
+<a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The arn of the listener. Required if `load_balancer_arn` and `port` is not set.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="weight_python">
+<a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>

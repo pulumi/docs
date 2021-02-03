@@ -12,6 +12,7 @@ Explore the resources and functions of the resources module in the Azure NextGen
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="deployment" title="Deployment"><span class="symbol resource"></span>Deployment</a></li>
+    <li><a href="deploymentatmanagementgroupscope" title="DeploymentAtManagementGroupScope"><span class="symbol resource"></span>DeploymentAtManagementGroupScope</a></li>
     <li><a href="deploymentatscope" title="DeploymentAtScope"><span class="symbol resource"></span>DeploymentAtScope</a></li>
     <li><a href="deploymentatsubscriptionscope" title="DeploymentAtSubscriptionScope"><span class="symbol resource"></span>DeploymentAtSubscriptionScope</a></li>
     <li><a href="deploymentattenantscope" title="DeploymentAtTenantScope"><span class="symbol resource"></span>DeploymentAtTenantScope</a></li>
@@ -26,6 +27,7 @@ Explore the resources and functions of the resources module in the Azure NextGen
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getdeployment" title="GetDeployment"><span class="symbol function"></span>GetDeployment</a></li>
+    <li><a href="getdeploymentatmanagementgroupscope" title="GetDeploymentAtManagementGroupScope"><span class="symbol function"></span>GetDeploymentAtManagementGroupScope</a></li>
     <li><a href="getdeploymentatscope" title="GetDeploymentAtScope"><span class="symbol function"></span>GetDeploymentAtScope</a></li>
     <li><a href="getdeploymentatsubscriptionscope" title="GetDeploymentAtSubscriptionScope"><span class="symbol function"></span>GetDeploymentAtSubscriptionScope</a></li>
     <li><a href="getdeploymentattenantscope" title="GetDeploymentAtTenantScope"><span class="symbol function"></span>GetDeploymentAtTenantScope</a></li>
@@ -44,7 +46,7 @@ Explore the resources and functions of the resources module in the Azure NextGen
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
 

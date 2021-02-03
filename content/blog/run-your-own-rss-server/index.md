@@ -88,7 +88,7 @@ The Pulumi program we're writing will:
 * create a new instance of PostgreSQL, with minimal settings, placing it into the subnet group and giving it access to your default [ECS Cluster](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_clusters.html);
 * create a new [Network Listener](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-listeners.html) to define a publicly accessible URL for the Miniflux service;
 * create a new Fargate service for the Miniflux app, in your default ECS Cluster, passing it the newly created DB connection and Pulumi config settings; and finally,
-* export the URL as a Pulumi stack [Output]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) so we can navigate to the service.
+* export the URL as a Pulumi stack [Output]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) so we can navigate to the service.
 
 Let's get coding!
 
@@ -225,6 +225,6 @@ And with that, you should now be able to browse your RSS server securely:
 
 ## Finishing Up
 
-In this post, we've seen how easy it is to run a container as a service connected to an RDS database with Pulumi, and to expose that container securely on the web. If we wanted, we could go even farther --- we could refactor the program into Pulumi [Components]({{< relref "/docs/intro/concepts/programming-model#components" >}}), perhaps (one for the service, one for the database), package it up for sharing on npm, and so on.
+In this post, we've seen how easy it is to run a container as a service connected to an RDS database with Pulumi, and to expose that container securely on the web. If we wanted, we could go even farther --- we could refactor the program into Pulumi [Components]({{< relref "/docs/intro/concepts/resources#components" >}}), perhaps (one for the service, one for the database), package it up for sharing on npm, and so on.
 
 But we'll leave those improvements for another day. For now, let's enjoy what we've created! And start catching up on all that reading we've missed.

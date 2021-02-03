@@ -12,12 +12,14 @@ Explore the resources and functions of the automanage module in the Azure NextGe
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
+    <li><a href="configurationprofileassignment" title="ConfigurationProfileAssignment"><span class="symbol resource"></span>ConfigurationProfileAssignment</a></li>
     <li><a href="configurationprofilepreference" title="ConfigurationProfilePreference"><span class="symbol resource"></span>ConfigurationProfilePreference</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
+    <li><a href="getconfigurationprofileassignment" title="GetConfigurationProfileAssignment"><span class="symbol function"></span>GetConfigurationProfileAssignment</a></li>
     <li><a href="getconfigurationprofilepreference" title="GetConfigurationProfilePreference"><span class="symbol function"></span>GetConfigurationProfilePreference</a></li>
 </ul>
 
@@ -28,7 +30,7 @@ Explore the resources and functions of the automanage module in the Azure NextGe
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
 

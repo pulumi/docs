@@ -256,6 +256,15 @@ The following output properties are available:
     <dd>{{% md %}}The sku associated with this account{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="storageaccountname_csharp">
+<a href="#storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the storage account associated with this accountId{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -368,6 +377,15 @@ The following output properties are available:
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku associated with this account{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="storageaccountname_go">
+<a href="#storageaccountname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the storage account associated with this accountId{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_go">
@@ -484,6 +502,15 @@ The following output properties are available:
     <dd>{{% md %}}The sku associated with this account{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="storageaccountname_nodejs">
+<a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the storage account associated with this accountId{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -596,6 +623,15 @@ The following output properties are available:
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku associated with this account{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="storage_account_name_python">
+<a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the storage account associated with this accountId{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_python">

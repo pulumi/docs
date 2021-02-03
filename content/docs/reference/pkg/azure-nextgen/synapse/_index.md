@@ -17,7 +17,6 @@ Explore the resources and functions of the synapse module in the Azure NextGen p
     <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="privatelinkhub" title="PrivateLinkHub"><span class="symbol resource"></span>PrivateLinkHub</a></li>
-    <li><a href="sqldatabase" title="SqlDatabase"><span class="symbol resource"></span>SqlDatabase</a></li>
     <li><a href="sqlpool" title="SqlPool"><span class="symbol resource"></span>SqlPool</a></li>
     <li><a href="sqlpoolsensitivitylabel" title="SqlPoolSensitivityLabel"><span class="symbol resource"></span>SqlPoolSensitivityLabel</a></li>
     <li><a href="sqlpooltransparentdataencryption" title="SqlPoolTransparentDataEncryption"><span class="symbol resource"></span>SqlPoolTransparentDataEncryption</a></li>
@@ -42,7 +41,6 @@ Explore the resources and functions of the synapse module in the Azure NextGen p
     <li><a href="getkey" title="GetKey"><span class="symbol function"></span>GetKey</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getprivatelinkhub" title="GetPrivateLinkHub"><span class="symbol function"></span>GetPrivateLinkHub</a></li>
-    <li><a href="getsqldatabase" title="GetSqlDatabase"><span class="symbol function"></span>GetSqlDatabase</a></li>
     <li><a href="getsqlpool" title="GetSqlPool"><span class="symbol function"></span>GetSqlPool</a></li>
     <li><a href="getsqlpoolsensitivitylabel" title="GetSqlPoolSensitivityLabel"><span class="symbol function"></span>GetSqlPoolSensitivityLabel</a></li>
     <li><a href="getsqlpooltransparentdataencryption" title="GetSqlPoolTransparentDataEncryption"><span class="symbol function"></span>GetSqlPoolTransparentDataEncryption</a></li>
@@ -64,7 +62,7 @@ Explore the resources and functions of the synapse module in the Azure NextGen p
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
 

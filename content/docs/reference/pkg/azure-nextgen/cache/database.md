@@ -1283,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:cache/v20201001preview:Database cache1/default /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redisEnterprise/cache1/databases/default 
+$ pulumi import azure-nextgen:cache/v20201001preview:Database cache1/db1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redisEnterprise/cache1/databases/db1 
 ```
 
 

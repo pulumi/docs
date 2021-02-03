@@ -3,7 +3,7 @@ title: "Module appplatform"
 title_tag: "Module appplatform | Package @pulumi/azure | Node.js SDK"
 linktitle: "appplatform"
 meta_desc: "Explore members of the appplatform module in the @pulumi/azure package."
-git_sha: "fe5baac3cc5e17086011b8b3dedece23d90729ee"
+git_sha: "ddb23e43788a327f80b21bf9dceb8eafe16876eb"
 block_external_search_index: true
 ---
 
@@ -17,8 +17,10 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
+    <li><a href="#SpringCloudActiveDeployment"><span class="symbol resource"></span>SpringCloudActiveDeployment</a></li>
     <li><a href="#SpringCloudApp"><span class="symbol resource"></span>SpringCloudApp</a></li>
     <li><a href="#SpringCloudCertificate"><span class="symbol resource"></span>SpringCloudCertificate</a></li>
+    <li><a href="#SpringCloudJavaDeployment"><span class="symbol resource"></span>SpringCloudJavaDeployment</a></li>
     <li><a href="#SpringCloudService"><span class="symbol resource"></span>SpringCloudService</a></li>
 </ul>
 
@@ -31,18 +33,152 @@ block_external_search_index: true
 <ul class="api">
     <li><a href="#GetSpringCloudServiceArgs"><span class="symbol api"></span>GetSpringCloudServiceArgs</a></li>
     <li><a href="#GetSpringCloudServiceResult"><span class="symbol api"></span>GetSpringCloudServiceResult</a></li>
+    <li><a href="#SpringCloudActiveDeploymentArgs"><span class="symbol api"></span>SpringCloudActiveDeploymentArgs</a></li>
+    <li><a href="#SpringCloudActiveDeploymentState"><span class="symbol api"></span>SpringCloudActiveDeploymentState</a></li>
     <li><a href="#SpringCloudAppArgs"><span class="symbol api"></span>SpringCloudAppArgs</a></li>
     <li><a href="#SpringCloudAppState"><span class="symbol api"></span>SpringCloudAppState</a></li>
     <li><a href="#SpringCloudCertificateArgs"><span class="symbol api"></span>SpringCloudCertificateArgs</a></li>
     <li><a href="#SpringCloudCertificateState"><span class="symbol api"></span>SpringCloudCertificateState</a></li>
+    <li><a href="#SpringCloudJavaDeploymentArgs"><span class="symbol api"></span>SpringCloudJavaDeploymentArgs</a></li>
+    <li><a href="#SpringCloudJavaDeploymentState"><span class="symbol api"></span>SpringCloudJavaDeploymentState</a></li>
     <li><a href="#SpringCloudServiceArgs"><span class="symbol api"></span>SpringCloudServiceArgs</a></li>
     <li><a href="#SpringCloudServiceState"><span class="symbol api"></span>SpringCloudServiceState</a></li>
 </ul>
 
 
 <h2 id="resources">Resources</h2>
+<h3 class="pdoc-module-header" id="SpringCloudActiveDeployment" data-link-title="SpringCloudActiveDeployment">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudActiveDeployment.ts#L53">
+        Resource <strong>SpringCloudActiveDeployment</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>SpringCloudActiveDeployment</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Manages an Active Azure Spring Cloud Deployment.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exampleSpringCloudService", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+});
+const exampleSpringCloudApp = new azure.appplatform.SpringCloudApp("exampleSpringCloudApp", {
+    resourceGroupName: exampleResourceGroup.name,
+    serviceName: exampleSpringCloudService.name,
+    identity: {
+        type: "SystemAssigned",
+    },
+});
+const exampleSpringCloudJavaDeployment = new azure.appplatform.SpringCloudJavaDeployment("exampleSpringCloudJavaDeployment", {
+    springCloudAppId: exampleSpringCloudApp.id,
+    cpu: 2,
+    memoryInGb: 4,
+    instanceCount: 2,
+    jvmOptions: "-XX:+PrintGC",
+    runtimeVersion: "Java_11",
+    environmentVariables: {
+        Env: "Staging",
+    },
+});
+const exampleSpringCloudActiveDeployment = new azure.appplatform.SpringCloudActiveDeployment("exampleSpringCloudActiveDeployment", {
+    springCloudAppId: exampleSpringCloudApp.id,
+    deploymentName: exampleSpringCloudJavaDeployment.name,
+});
+```
+
+#### Import
+
+Spring Cloud Active Deployment can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:appplatform/springCloudActiveDeployment:SpringCloudActiveDeployment example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourcegroup1/providers/Microsoft.AppPlatform/Spring/service1/apps/app1
+```
+
+<h4 class="pdoc-member-header" id="SpringCloudActiveDeployment-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudActiveDeployment.ts#L88"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> SpringCloudActiveDeployment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SpringCloudActiveDeploymentArgs'>SpringCloudActiveDeploymentArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a SpringCloudActiveDeployment resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="SpringCloudActiveDeployment-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudActiveDeployment.ts#L63">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SpringCloudActiveDeploymentState'>SpringCloudActiveDeploymentState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SpringCloudActiveDeployment'>SpringCloudActiveDeployment</a></code></pre>
+
+
+Get an existing SpringCloudActiveDeployment resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="SpringCloudActiveDeployment-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudActiveDeployment.ts#L53">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="SpringCloudActiveDeployment-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudActiveDeployment.ts#L74">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SpringCloudActiveDeployment</code></pre>
+
+
+Returns true if the given object is an instance of SpringCloudActiveDeployment.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="SpringCloudActiveDeployment-deploymentName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudActiveDeployment.ts#L84">property <b>deploymentName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>deploymentName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the name of Spring Cloud Deployment which is going to be active.
+
+<h4 class="pdoc-member-header" id="SpringCloudActiveDeployment-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudActiveDeployment.ts#L53">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="SpringCloudActiveDeployment-springCloudAppId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudActiveDeployment.ts#L88">property <b>springCloudAppId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>springCloudAppId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the id of the Spring Cloud Application. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="SpringCloudActiveDeployment-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudActiveDeployment.ts#L53">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h3 class="pdoc-module-header" id="SpringCloudApp" data-link-title="SpringCloudApp">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L39">
         Resource <strong>SpringCloudApp</strong>
     </a>
 </h3>
@@ -80,7 +216,7 @@ Spring Cloud Application can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="SpringCloudApp-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -94,7 +230,7 @@ Create a SpringCloudApp resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SpringCloudApp-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -105,14 +241,14 @@ Get an existing SpringCloudApp resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SpringCloudApp-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SpringCloudApp-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -123,7 +259,7 @@ Returns true if the given object is an instance of SpringCloudApp.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SpringCloudApp-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L70">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L70">property <b>httpsOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpsOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -131,7 +267,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Is only https allowed? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SpringCloudApp-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -140,7 +276,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SpringCloudApp-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L74">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L74">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SpringCloudAppIdentity'>SpringCloudAppIdentity</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -148,7 +284,7 @@ deployments and may be missing (undefined) during planning phases.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="SpringCloudApp-isPublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L78">property <b>isPublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L78">property <b>isPublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isPublic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -156,7 +292,7 @@ An `identity` block as defined below.
 Does the Spring Cloud Application have public endpoint? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SpringCloudApp-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -164,7 +300,7 @@ Does the Spring Cloud Application have public endpoint? Defaults to `false`.
 Specifies the name of the Spring Cloud Application. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudApp-persistentDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L86">property <b>persistentDisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L86">property <b>persistentDisk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>persistentDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SpringCloudAppPersistentDisk'>SpringCloudAppPersistentDisk</a>&gt;;</code></pre>
@@ -172,7 +308,7 @@ Specifies the name of the Spring Cloud Application. Changing this forces a new r
 An `persistentDisk` block as defined below.
 
 <h4 class="pdoc-member-header" id="SpringCloudApp-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L90">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L90">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -180,7 +316,7 @@ An `persistentDisk` block as defined below.
 Specifies the name of the resource group in which to create the Spring Cloud Application. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudApp-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L94">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L94">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -188,7 +324,7 @@ Specifies the name of the resource group in which to create the Spring Cloud App
 Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudApp-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L98">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L98">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -196,7 +332,7 @@ Specifies the name of the Spring Cloud Service resource. Changing this forces a 
 The public endpoint of the Spring Cloud Application.
 
 <h4 class="pdoc-member-header" id="SpringCloudApp-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -205,7 +341,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SpringCloudCertificate" data-link-title="SpringCloudCertificate">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L109">
         Resource <strong>SpringCloudCertificate</strong>
     </a>
 </h3>
@@ -314,7 +450,7 @@ Spring Cloud Certificate can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L152"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L152"> <b>constructor</b></a>
 </h4>
 
 
@@ -328,7 +464,7 @@ Create a SpringCloudCertificate resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L119">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L119">method <b>get</b></a>
 </h4>
 
 
@@ -339,14 +475,14 @@ Get an existing SpringCloudCertificate resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L109">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L109">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L130">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L130">method <b>isInstance</b></a>
 </h4>
 
 
@@ -357,7 +493,7 @@ Returns true if the given object is an instance of SpringCloudCertificate.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L109">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L109">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -366,7 +502,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificate-keyVaultCertificateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L140">property <b>keyVaultCertificateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L140">property <b>keyVaultCertificateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyVaultCertificateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -374,7 +510,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the ID of the Key Vault Certificate resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificate-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L144">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -382,7 +518,7 @@ Specifies the ID of the Key Vault Certificate resource. Changing this forces a n
 Specifies the name of the Spring Cloud Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificate-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L148">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L148">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -390,7 +526,7 @@ Specifies the name of the Spring Cloud Certificate. Changing this forces a new r
 Specifies the name of the resource group in which to create the Spring Cloud Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificate-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L152">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L152">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -398,7 +534,182 @@ Specifies the name of the resource group in which to create the Spring Cloud Cer
 Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L109">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L109">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-module-header" id="SpringCloudJavaDeployment" data-link-title="SpringCloudJavaDeployment">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L50">
+        Resource <strong>SpringCloudJavaDeployment</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>SpringCloudJavaDeployment</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Manages an Azure Spring Cloud Deployment with a Java runtime.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exampleSpringCloudService", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+});
+const exampleSpringCloudApp = new azure.appplatform.SpringCloudApp("exampleSpringCloudApp", {
+    resourceGroupName: exampleResourceGroup.name,
+    serviceName: exampleSpringCloudService.name,
+    identity: {
+        type: "SystemAssigned",
+    },
+});
+const exampleSpringCloudJavaDeployment = new azure.appplatform.SpringCloudJavaDeployment("exampleSpringCloudJavaDeployment", {
+    springCloudAppId: exampleSpringCloudApp.id,
+    cpu: 2,
+    instanceCount: 2,
+    jvmOptions: "-XX:+PrintGC",
+    memoryInGb: 4,
+    runtimeVersion: "Java_11",
+    environmentVariables: {
+        Foo: "Bar",
+        Env: "Staging",
+    },
+});
+```
+
+#### Import
+
+Spring Cloud Deployment can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:appplatform/springCloudJavaDeployment:SpringCloudJavaDeployment example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourcegroup1/providers/Microsoft.AppPlatform/Spring/service1/apps/app1/deployments/deploy1
+```
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeployment-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L109"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> SpringCloudJavaDeployment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SpringCloudJavaDeploymentArgs'>SpringCloudJavaDeploymentArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a SpringCloudJavaDeployment resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeployment-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L60">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SpringCloudJavaDeploymentState'>SpringCloudJavaDeploymentState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SpringCloudJavaDeployment'>SpringCloudJavaDeployment</a></code></pre>
+
+
+Get an existing SpringCloudJavaDeployment resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeployment-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L50">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeployment-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L71">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is SpringCloudJavaDeployment</code></pre>
+
+
+Returns true if the given object is an instance of SpringCloudJavaDeployment.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeployment-cpu">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L81">property <b>cpu</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>cpu: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeployment-environmentVariables">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L85">property <b>environmentVariables</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>environmentVariables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeployment-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L50">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeployment-instanceCount">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L89">property <b>instanceCount</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>instanceCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Specifies the required instance count of the Spring Cloud Deployment. Possible Values are between `1` and `500`. Defaults to `1` if not specified.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeployment-jvmOptions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L93">property <b>jvmOptions</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>jvmOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Specifies the jvm option of the Spring Cloud Deployment.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeployment-memoryInGb">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L97">property <b>memoryInGb</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>memoryInGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeployment-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L101">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeployment-runtimeVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L105">property <b>runtimeVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>runtimeVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Specifies the runtime version of the Spring Cloud Deployment. Possible Values are `Java_8` and `Java_11`. Defaults to `Java_8`.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeployment-springCloudAppId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L109">property <b>springCloudAppId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>springCloudAppId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the id of the Spring Cloud Application in which to create the Deployment. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeployment-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L50">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -407,7 +718,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SpringCloudService" data-link-title="SpringCloudService">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L52">
         Resource <strong>SpringCloudService</strong>
     </a>
 </h3>
@@ -458,7 +769,7 @@ Spring Cloud services can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="SpringCloudService-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L115"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L115"> <b>constructor</b></a>
 </h4>
 
 
@@ -472,7 +783,7 @@ Create a SpringCloudService resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SpringCloudService-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L62">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L62">method <b>get</b></a>
 </h4>
 
 
@@ -483,14 +794,14 @@ Get an existing SpringCloudService resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SpringCloudService-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L52">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L52">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SpringCloudService-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L73">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L73">method <b>isInstance</b></a>
 </h4>
 
 
@@ -501,7 +812,7 @@ Returns true if the given object is an instance of SpringCloudService.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SpringCloudService-configServerGitSetting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L83">property <b>configServerGitSetting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L83">property <b>configServerGitSetting</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configServerGitSetting: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SpringCloudServiceConfigServerGitSetting'>SpringCloudServiceConfigServerGitSetting</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -509,7 +820,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A `configServerGitSetting` block as defined below.
 
 <h4 class="pdoc-member-header" id="SpringCloudService-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -518,7 +829,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SpringCloudService-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L87">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L87">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -526,7 +837,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudService-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L91">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L91">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -534,7 +845,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudService-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L95">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L95">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SpringCloudServiceNetwork'>SpringCloudServiceNetwork</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -542,7 +853,7 @@ Specifies the name of the Spring Cloud Service resource. Changing this forces a 
 A `network` block as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudService-outboundPublicIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L99">property <b>outboundPublicIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L99">property <b>outboundPublicIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outboundPublicIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -550,7 +861,7 @@ A `network` block as defined below. Changing this forces a new resource to be cr
 A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 
 <h4 class="pdoc-member-header" id="SpringCloudService-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L103">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L103">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -558,7 +869,7 @@ A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 Specifies The name of the resource group in which to create the Spring Cloud Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudService-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L107">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L107">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -566,7 +877,7 @@ Specifies The name of the resource group in which to create the Spring Cloud Ser
 Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
 
 <h4 class="pdoc-member-header" id="SpringCloudService-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L111">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L111">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -574,7 +885,7 @@ Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` a
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="SpringCloudService-trace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L115">property <b>trace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L115">property <b>trace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>trace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SpringCloudServiceTrace'>SpringCloudServiceTrace</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -582,7 +893,7 @@ A mapping of tags to assign to the resource.
 A `trace` block as defined below.
 
 <h4 class="pdoc-member-header" id="SpringCloudService-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L52">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L52">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -593,7 +904,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getSpringCloudService" data-link-title="getSpringCloudService">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/getSpringCloudService.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/getSpringCloudService.ts#L24">
         Function <strong>getSpringCloudService</strong>
     </a>
 </h3>
@@ -620,7 +931,7 @@ export const springCloudServiceId = example.then(example => example.id);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetSpringCloudServiceArgs" data-link-title="GetSpringCloudServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/getSpringCloudService.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/getSpringCloudService.ts#L41">
         interface <strong>GetSpringCloudServiceArgs</strong>
     </a>
 </h3>
@@ -630,7 +941,7 @@ export const springCloudServiceId = example.then(example => example.id);
 A collection of arguments for invoking getSpringCloudService.
 
 <h4 class="pdoc-member-header" id="GetSpringCloudServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/getSpringCloudService.ts#L45">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/getSpringCloudService.ts#L45">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -638,7 +949,7 @@ A collection of arguments for invoking getSpringCloudService.
 Specifies The name of the Spring Cloud Service resource.
 
 <h4 class="pdoc-member-header" id="GetSpringCloudServiceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/getSpringCloudService.ts#L49">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/getSpringCloudService.ts#L49">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -646,7 +957,7 @@ Specifies The name of the Spring Cloud Service resource.
 Specifies the name of the Resource Group where the Spring Cloud Service exists.
 
 <h3 class="pdoc-module-header" id="GetSpringCloudServiceResult" data-link-title="GetSpringCloudServiceResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/getSpringCloudService.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/getSpringCloudService.ts#L55">
         interface <strong>GetSpringCloudServiceResult</strong>
     </a>
 </h3>
@@ -656,7 +967,7 @@ Specifies the name of the Resource Group where the Spring Cloud Service exists.
 A collection of values returned by getSpringCloudService.
 
 <h4 class="pdoc-member-header" id="GetSpringCloudServiceResult-configServerGitSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/getSpringCloudService.ts#L59">property <b>configServerGitSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/getSpringCloudService.ts#L59">property <b>configServerGitSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configServerGitSettings: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSpringCloudServiceConfigServerGitSetting'>GetSpringCloudServiceConfigServerGitSetting</a>[];</code></pre>
@@ -664,7 +975,7 @@ A collection of values returned by getSpringCloudService.
 A `configServerGitSetting` block as defined below.
 
 <h4 class="pdoc-member-header" id="GetSpringCloudServiceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/getSpringCloudService.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/getSpringCloudService.ts#L63">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -672,7 +983,7 @@ A `configServerGitSetting` block as defined below.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSpringCloudServiceResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/getSpringCloudService.ts#L67">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/getSpringCloudService.ts#L67">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -680,7 +991,7 @@ The provider-assigned unique ID for this managed resource.
 The location of Spring Cloud Service.
 
 <h4 class="pdoc-member-header" id="GetSpringCloudServiceResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/getSpringCloudService.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/getSpringCloudService.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -688,7 +999,7 @@ The location of Spring Cloud Service.
 The name to identify on the Git repository.
 
 <h4 class="pdoc-member-header" id="GetSpringCloudServiceResult-outboundPublicIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/getSpringCloudService.ts#L75">property <b>outboundPublicIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/getSpringCloudService.ts#L75">property <b>outboundPublicIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outboundPublicIpAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -696,20 +1007,72 @@ The name to identify on the Git repository.
 A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 
 <h4 class="pdoc-member-header" id="GetSpringCloudServiceResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/getSpringCloudService.ts#L76">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/getSpringCloudService.ts#L76">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSpringCloudServiceResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/getSpringCloudService.ts#L80">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/getSpringCloudService.ts#L80">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 
 A mapping of tags assigned to Spring Cloud Service.
 
+<h3 class="pdoc-module-header" id="SpringCloudActiveDeploymentArgs" data-link-title="SpringCloudActiveDeploymentArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudActiveDeployment.ts#L143">
+        interface <strong>SpringCloudActiveDeploymentArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SpringCloudActiveDeploymentArgs</span></code></pre>
+
+The set of arguments for constructing a SpringCloudActiveDeployment resource.
+
+<h4 class="pdoc-member-header" id="SpringCloudActiveDeploymentArgs-deploymentName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudActiveDeployment.ts#L147">property <b>deploymentName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>deploymentName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the name of Spring Cloud Deployment which is going to be active.
+
+<h4 class="pdoc-member-header" id="SpringCloudActiveDeploymentArgs-springCloudAppId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudActiveDeployment.ts#L151">property <b>springCloudAppId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>springCloudAppId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the id of the Spring Cloud Application. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-module-header" id="SpringCloudActiveDeploymentState" data-link-title="SpringCloudActiveDeploymentState">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudActiveDeployment.ts#L129">
+        interface <strong>SpringCloudActiveDeploymentState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SpringCloudActiveDeploymentState</span></code></pre>
+
+Input properties used for looking up and filtering SpringCloudActiveDeployment resources.
+
+<h4 class="pdoc-member-header" id="SpringCloudActiveDeploymentState-deploymentName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudActiveDeployment.ts#L133">property <b>deploymentName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>deploymentName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the name of Spring Cloud Deployment which is going to be active.
+
+<h4 class="pdoc-member-header" id="SpringCloudActiveDeploymentState-springCloudAppId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudActiveDeployment.ts#L137">property <b>springCloudAppId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>springCloudAppId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the id of the Spring Cloud Application. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-module-header" id="SpringCloudAppArgs" data-link-title="SpringCloudAppArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L189">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L189">
         interface <strong>SpringCloudAppArgs</strong>
     </a>
 </h3>
@@ -719,7 +1082,7 @@ A mapping of tags assigned to Spring Cloud Service.
 The set of arguments for constructing a SpringCloudApp resource.
 
 <h4 class="pdoc-member-header" id="SpringCloudAppArgs-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L193">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L193">property <b>httpsOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -727,7 +1090,7 @@ The set of arguments for constructing a SpringCloudApp resource.
 Is only https allowed? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SpringCloudAppArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L197">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L197">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudAppIdentity'>SpringCloudAppIdentity</a>&gt;;</code></pre>
@@ -735,7 +1098,7 @@ Is only https allowed? Defaults to `false`.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="SpringCloudAppArgs-isPublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L201">property <b>isPublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L201">property <b>isPublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isPublic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -743,7 +1106,7 @@ An `identity` block as defined below.
 Does the Spring Cloud Application have public endpoint? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SpringCloudAppArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L205">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L205">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -751,7 +1114,7 @@ Does the Spring Cloud Application have public endpoint? Defaults to `false`.
 Specifies the name of the Spring Cloud Application. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudAppArgs-persistentDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L209">property <b>persistentDisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L209">property <b>persistentDisk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>persistentDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudAppPersistentDisk'>SpringCloudAppPersistentDisk</a>&gt;;</code></pre>
@@ -759,7 +1122,7 @@ Specifies the name of the Spring Cloud Application. Changing this forces a new r
 An `persistentDisk` block as defined below.
 
 <h4 class="pdoc-member-header" id="SpringCloudAppArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L213">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L213">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -767,7 +1130,7 @@ An `persistentDisk` block as defined below.
 Specifies the name of the resource group in which to create the Spring Cloud Application. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudAppArgs-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L217">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L217">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -775,7 +1138,7 @@ Specifies the name of the resource group in which to create the Spring Cloud App
 Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="SpringCloudAppState" data-link-title="SpringCloudAppState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L151">
         interface <strong>SpringCloudAppState</strong>
     </a>
 </h3>
@@ -785,7 +1148,7 @@ Specifies the name of the Spring Cloud Service resource. Changing this forces a 
 Input properties used for looking up and filtering SpringCloudApp resources.
 
 <h4 class="pdoc-member-header" id="SpringCloudAppState-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L155">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L155">property <b>httpsOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -793,7 +1156,7 @@ Input properties used for looking up and filtering SpringCloudApp resources.
 Is only https allowed? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SpringCloudAppState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L159">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L159">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudAppIdentity'>SpringCloudAppIdentity</a>&gt;;</code></pre>
@@ -801,7 +1164,7 @@ Is only https allowed? Defaults to `false`.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="SpringCloudAppState-isPublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L163">property <b>isPublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L163">property <b>isPublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isPublic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -809,7 +1172,7 @@ An `identity` block as defined below.
 Does the Spring Cloud Application have public endpoint? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SpringCloudAppState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L167">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L167">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -817,7 +1180,7 @@ Does the Spring Cloud Application have public endpoint? Defaults to `false`.
 Specifies the name of the Spring Cloud Application. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudAppState-persistentDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L171">property <b>persistentDisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L171">property <b>persistentDisk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>persistentDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudAppPersistentDisk'>SpringCloudAppPersistentDisk</a>&gt;;</code></pre>
@@ -825,7 +1188,7 @@ Specifies the name of the Spring Cloud Application. Changing this forces a new r
 An `persistentDisk` block as defined below.
 
 <h4 class="pdoc-member-header" id="SpringCloudAppState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L175">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L175">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -833,7 +1196,7 @@ An `persistentDisk` block as defined below.
 Specifies the name of the resource group in which to create the Spring Cloud Application. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudAppState-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L179">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L179">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -841,7 +1204,7 @@ Specifies the name of the resource group in which to create the Spring Cloud App
 Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudAppState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudApp.ts#L183">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudApp.ts#L183">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -849,7 +1212,7 @@ Specifies the name of the Spring Cloud Service resource. Changing this forces a 
 The public endpoint of the Spring Cloud Application.
 
 <h3 class="pdoc-module-header" id="SpringCloudCertificateArgs" data-link-title="SpringCloudCertificateArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L222">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L222">
         interface <strong>SpringCloudCertificateArgs</strong>
     </a>
 </h3>
@@ -859,7 +1222,7 @@ The public endpoint of the Spring Cloud Application.
 The set of arguments for constructing a SpringCloudCertificate resource.
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificateArgs-keyVaultCertificateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L226">property <b>keyVaultCertificateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L226">property <b>keyVaultCertificateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultCertificateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -867,7 +1230,7 @@ The set of arguments for constructing a SpringCloudCertificate resource.
 Specifies the ID of the Key Vault Certificate resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificateArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L230">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L230">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -875,7 +1238,7 @@ Specifies the ID of the Key Vault Certificate resource. Changing this forces a n
 Specifies the name of the Spring Cloud Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificateArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L234">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L234">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -883,7 +1246,7 @@ Specifies the name of the Spring Cloud Certificate. Changing this forces a new r
 Specifies the name of the resource group in which to create the Spring Cloud Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificateArgs-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L238">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L238">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -891,7 +1254,7 @@ Specifies the name of the resource group in which to create the Spring Cloud Cer
 Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="SpringCloudCertificateState" data-link-title="SpringCloudCertificateState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L200">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L200">
         interface <strong>SpringCloudCertificateState</strong>
     </a>
 </h3>
@@ -901,7 +1264,7 @@ Specifies the name of the Spring Cloud Service resource. Changing this forces a 
 Input properties used for looking up and filtering SpringCloudCertificate resources.
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificateState-keyVaultCertificateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L204">property <b>keyVaultCertificateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L204">property <b>keyVaultCertificateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultCertificateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -909,7 +1272,7 @@ Input properties used for looking up and filtering SpringCloudCertificate resour
 Specifies the ID of the Key Vault Certificate resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificateState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L208">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L208">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -917,7 +1280,7 @@ Specifies the ID of the Key Vault Certificate resource. Changing this forces a n
 Specifies the name of the Spring Cloud Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificateState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L212">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L212">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -925,15 +1288,163 @@ Specifies the name of the Spring Cloud Certificate. Changing this forces a new r
 Specifies the name of the resource group in which to create the Spring Cloud Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudCertificateState-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudCertificate.ts#L216">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudCertificate.ts#L216">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
 
+<h3 class="pdoc-module-header" id="SpringCloudJavaDeploymentArgs" data-link-title="SpringCloudJavaDeploymentArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L197">
+        interface <strong>SpringCloudJavaDeploymentArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SpringCloudJavaDeploymentArgs</span></code></pre>
+
+The set of arguments for constructing a SpringCloudJavaDeployment resource.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeploymentArgs-cpu">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L201">property <b>cpu</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>cpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeploymentArgs-environmentVariables">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L205">property <b>environmentVariables</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>environmentVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeploymentArgs-instanceCount">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L209">property <b>instanceCount</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>instanceCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+Specifies the required instance count of the Spring Cloud Deployment. Possible Values are between `1` and `500`. Defaults to `1` if not specified.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeploymentArgs-jvmOptions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L213">property <b>jvmOptions</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>jvmOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the jvm option of the Spring Cloud Deployment.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeploymentArgs-memoryInGb">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L217">property <b>memoryInGb</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>memoryInGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeploymentArgs-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L221">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeploymentArgs-runtimeVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L225">property <b>runtimeVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>runtimeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the runtime version of the Spring Cloud Deployment. Possible Values are `Java_8` and `Java_11`. Defaults to `Java_8`.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeploymentArgs-springCloudAppId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L229">property <b>springCloudAppId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>springCloudAppId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the id of the Spring Cloud Application in which to create the Deployment. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-module-header" id="SpringCloudJavaDeploymentState" data-link-title="SpringCloudJavaDeploymentState">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L159">
+        interface <strong>SpringCloudJavaDeploymentState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SpringCloudJavaDeploymentState</span></code></pre>
+
+Input properties used for looking up and filtering SpringCloudJavaDeployment resources.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeploymentState-cpu">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L163">property <b>cpu</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>cpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeploymentState-environmentVariables">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L167">property <b>environmentVariables</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>environmentVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeploymentState-instanceCount">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L171">property <b>instanceCount</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>instanceCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+Specifies the required instance count of the Spring Cloud Deployment. Possible Values are between `1` and `500`. Defaults to `1` if not specified.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeploymentState-jvmOptions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L175">property <b>jvmOptions</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>jvmOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the jvm option of the Spring Cloud Deployment.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeploymentState-memoryInGb">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L179">property <b>memoryInGb</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>memoryInGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeploymentState-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L183">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeploymentState-runtimeVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L187">property <b>runtimeVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>runtimeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the runtime version of the Spring Cloud Deployment. Possible Values are `Java_8` and `Java_11`. Defaults to `Java_8`.
+
+<h4 class="pdoc-member-header" id="SpringCloudJavaDeploymentState-springCloudAppId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudJavaDeployment.ts#L191">property <b>springCloudAppId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>springCloudAppId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the id of the Spring Cloud Application in which to create the Deployment. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-module-header" id="SpringCloudServiceArgs" data-link-title="SpringCloudServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L209">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L209">
         interface <strong>SpringCloudServiceArgs</strong>
     </a>
 </h3>
@@ -943,7 +1454,7 @@ Specifies the name of the Spring Cloud Service resource. Changing this forces a 
 The set of arguments for constructing a SpringCloudService resource.
 
 <h4 class="pdoc-member-header" id="SpringCloudServiceArgs-configServerGitSetting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L213">property <b>configServerGitSetting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L213">property <b>configServerGitSetting</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configServerGitSetting?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudServiceConfigServerGitSetting'>SpringCloudServiceConfigServerGitSetting</a>&gt;;</code></pre>
@@ -951,7 +1462,7 @@ The set of arguments for constructing a SpringCloudService resource.
 A `configServerGitSetting` block as defined below.
 
 <h4 class="pdoc-member-header" id="SpringCloudServiceArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L217">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L217">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -959,7 +1470,7 @@ A `configServerGitSetting` block as defined below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L221">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L221">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -967,7 +1478,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudServiceArgs-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L225">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L225">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudServiceNetwork'>SpringCloudServiceNetwork</a>&gt;;</code></pre>
@@ -975,7 +1486,7 @@ Specifies the name of the Spring Cloud Service resource. Changing this forces a 
 A `network` block as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudServiceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L229">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L229">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -983,7 +1494,7 @@ A `network` block as defined below. Changing this forces a new resource to be cr
 Specifies The name of the resource group in which to create the Spring Cloud Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudServiceArgs-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L233">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L233">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -991,7 +1502,7 @@ Specifies The name of the resource group in which to create the Spring Cloud Ser
 Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
 
 <h4 class="pdoc-member-header" id="SpringCloudServiceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L237">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L237">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -999,7 +1510,7 @@ Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` a
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="SpringCloudServiceArgs-trace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L241">property <b>trace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L241">property <b>trace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudServiceTrace'>SpringCloudServiceTrace</a>&gt;;</code></pre>
@@ -1007,7 +1518,7 @@ A mapping of tags to assign to the resource.
 A `trace` block as defined below.
 
 <h3 class="pdoc-module-header" id="SpringCloudServiceState" data-link-title="SpringCloudServiceState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L167">
         interface <strong>SpringCloudServiceState</strong>
     </a>
 </h3>
@@ -1017,7 +1528,7 @@ A `trace` block as defined below.
 Input properties used for looking up and filtering SpringCloudService resources.
 
 <h4 class="pdoc-member-header" id="SpringCloudServiceState-configServerGitSetting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L171">property <b>configServerGitSetting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L171">property <b>configServerGitSetting</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configServerGitSetting?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudServiceConfigServerGitSetting'>SpringCloudServiceConfigServerGitSetting</a>&gt;;</code></pre>
@@ -1025,7 +1536,7 @@ Input properties used for looking up and filtering SpringCloudService resources.
 A `configServerGitSetting` block as defined below.
 
 <h4 class="pdoc-member-header" id="SpringCloudServiceState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L175">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L175">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1033,7 +1544,7 @@ A `configServerGitSetting` block as defined below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudServiceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L179">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L179">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1041,7 +1552,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudServiceState-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L183">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L183">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudServiceNetwork'>SpringCloudServiceNetwork</a>&gt;;</code></pre>
@@ -1049,7 +1560,7 @@ Specifies the name of the Spring Cloud Service resource. Changing this forces a 
 A `network` block as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudServiceState-outboundPublicIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L187">property <b>outboundPublicIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L187">property <b>outboundPublicIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outboundPublicIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1057,7 +1568,7 @@ A `network` block as defined below. Changing this forces a new resource to be cr
 A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 
 <h4 class="pdoc-member-header" id="SpringCloudServiceState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L191">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L191">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1065,7 +1576,7 @@ A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 Specifies The name of the resource group in which to create the Spring Cloud Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SpringCloudServiceState-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L195">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L195">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1073,7 +1584,7 @@ Specifies The name of the resource group in which to create the Spring Cloud Ser
 Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
 
 <h4 class="pdoc-member-header" id="SpringCloudServiceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L199">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L199">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1081,7 +1592,7 @@ Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` a
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="SpringCloudServiceState-trace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/appplatform/springCloudService.ts#L203">property <b>trace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/appplatform/springCloudService.ts#L203">property <b>trace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudServiceTrace'>SpringCloudServiceTrace</a>&gt;;</code></pre>

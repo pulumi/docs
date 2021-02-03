@@ -78,6 +78,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
+	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -166,6 +167,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
+	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

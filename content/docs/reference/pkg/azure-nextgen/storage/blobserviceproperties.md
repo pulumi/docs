@@ -17,6 +17,119 @@ Latest API Version: 2019-06-01.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### BlobServicesPutLastAccessTimeBasedTracking
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var blobServiceProperties = new AzureNextGen.Storage.Latest.BlobServiceProperties("blobServiceProperties", new AzureNextGen.Storage.Latest.BlobServicePropertiesArgs
+        {
+            AccountName = "sto8607",
+            BlobServicesName = "default",
+            LastAccessTimeTrackingPolicy = new AzureNextGen.Storage.Latest.Inputs.LastAccessTimeTrackingPolicyArgs
+            {
+                BlobType = 
+                {
+                    "blockBlob",
+                },
+                Enable = true,
+                Name = "AccessTimeTracking",
+                TrackingGranularityInDays = 1,
+            },
+            ResourceGroupName = "res4410",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storage.NewBlobServiceProperties(ctx, "blobServiceProperties", &storage.BlobServicePropertiesArgs{
+			AccountName:      pulumi.String("sto8607"),
+			BlobServicesName: pulumi.String("default"),
+			LastAccessTimeTrackingPolicy: &storage.LastAccessTimeTrackingPolicyArgs{
+				BlobType: pulumi.StringArray{
+					pulumi.String("blockBlob"),
+				},
+				Enable:                    pulumi.Bool(true),
+				Name:                      pulumi.String("AccessTimeTracking"),
+				TrackingGranularityInDays: pulumi.Int(1),
+			},
+			ResourceGroupName: pulumi.String("res4410"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+blob_service_properties = azure_nextgen.storage.latest.BlobServiceProperties("blobServiceProperties",
+    account_name="sto8607",
+    blob_services_name="default",
+    last_access_time_tracking_policy=azure_nextgen.storage.latest.LastAccessTimeTrackingPolicyArgs(
+        blob_type=["blockBlob"],
+        enable=True,
+        name="AccessTimeTracking",
+        tracking_granularity_in_days=1,
+    ),
+    resource_group_name="res4410")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const blobServiceProperties = new azure_nextgen.storage.latest.BlobServiceProperties("blobServiceProperties", {
+    accountName: "sto8607",
+    blobServicesName: "default",
+    lastAccessTimeTrackingPolicy: {
+        blobType: ["blockBlob"],
+        enable: true,
+        name: "AccessTimeTracking",
+        trackingGranularityInDays: 1,
+    },
+    resourceGroupName: "res4410",
+});
+
+```
+
+{{% /example %}}
+
 ### PutBlobServices
 {{% example csharp %}}
 ```csharp
@@ -34,6 +147,7 @@ class MyStack : Stack
             ChangeFeed = new AzureNextGen.Storage.Latest.Inputs.ChangeFeedArgs
             {
                 Enabled = true,
+                RetentionInDays = 7,
             },
             Cors = new AzureNextGen.Storage.Latest.Inputs.CorsRulesArgs
             {
@@ -146,7 +260,8 @@ func main() {
 			AccountName:      pulumi.String("sto8607"),
 			BlobServicesName: pulumi.String("default"),
 			ChangeFeed: &storage.ChangeFeedArgs{
-				Enabled: pulumi.Bool(true),
+				Enabled:         pulumi.Bool(true),
+				RetentionInDays: pulumi.Int(7),
 			},
 			Cors: &storage.CorsRulesArgs{
 				CorsRules: storage.CorsRuleArray{
@@ -239,6 +354,7 @@ blob_service_properties = azure_nextgen.storage.latest.BlobServiceProperties("bl
     blob_services_name="default",
     change_feed=azure_nextgen.storage.latest.ChangeFeedArgs(
         enabled=True,
+        retention_in_days=7,
     ),
     cors=azure_nextgen.storage.latest.CorsRulesArgs(
         cors_rules=[
@@ -312,6 +428,7 @@ const blobServiceProperties = new azure_nextgen.storage.latest.BlobServiceProper
     blobServicesName: "default",
     changeFeed: {
         enabled: true,
+        retentionInDays: 7,
     },
     cors: {
         corsRules: [
@@ -387,7 +504,7 @@ const blobServiceProperties = new azure_nextgen.storage.latest.BlobServiceProper
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BlobServiceProperties</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">automatic_snapshot_policy_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">blob_services_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">change_feed</span><span class="p">:</span> <span class="nx">Optional[ChangeFeedArgs]</span> = None<span class="p">, </span><span class="nx">container_delete_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DeleteRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[CorsRulesArgs]</span> = None<span class="p">, </span><span class="nx">default_service_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DeleteRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">is_versioning_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_policy</span><span class="p">:</span> <span class="nx">Optional[RestorePolicyPropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BlobServiceProperties</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">automatic_snapshot_policy_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">blob_services_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">change_feed</span><span class="p">:</span> <span class="nx">Optional[ChangeFeedArgs]</span> = None<span class="p">, </span><span class="nx">container_delete_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DeleteRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[CorsRulesArgs]</span> = None<span class="p">, </span><span class="nx">default_service_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DeleteRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">is_versioning_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">last_access_time_tracking_policy</span><span class="p">:</span> <span class="nx">Optional[LastAccessTimeTrackingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_policy</span><span class="p">:</span> <span class="nx">Optional[RestorePolicyPropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -650,6 +767,15 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
     <dd>{{% md %}}Versioning is enabled if set to true.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="lastaccesstimetrackingpolicy_csharp">
+<a href="#lastaccesstimetrackingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Access<wbr>Time<wbr>Tracking<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#lastaccesstimetrackingpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Last<wbr>Access<wbr>Time<wbr>Tracking<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The blob service property to configure last access time based tracking policy.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="restorepolicy_csharp">
 <a href="#restorepolicy_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policy</a>
 </span>
@@ -753,6 +879,15 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Versioning is enabled if set to true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastaccesstimetrackingpolicy_go">
+<a href="#lastaccesstimetrackingpolicy_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Access<wbr>Time<wbr>Tracking<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#lastaccesstimetrackingpolicy">Last<wbr>Access<wbr>Time<wbr>Tracking<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The blob service property to configure last access time based tracking policy.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="restorepolicy_go">
@@ -860,6 +995,15 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
     <dd>{{% md %}}Versioning is enabled if set to true.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="lastaccesstimetrackingpolicy_nodejs">
+<a href="#lastaccesstimetrackingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Access<wbr>Time<wbr>Tracking<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#lastaccesstimetrackingpolicy">Last<wbr>Access<wbr>Time<wbr>Tracking<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The blob service property to configure last access time based tracking policy.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="restorepolicy_nodejs">
 <a href="#restorepolicy_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Policy</a>
 </span>
@@ -963,6 +1107,15 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Versioning is enabled if set to true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_access_time_tracking_policy_python">
+<a href="#last_access_time_tracking_policy_python" style="color: inherit; text-decoration: inherit;">last_<wbr>access_<wbr>time_<wbr>tracking_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#lastaccesstimetrackingpolicy">Last<wbr>Access<wbr>Time<wbr>Tracking<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The blob service property to configure last access time based tracking policy.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="restore_policy_python">
@@ -1174,6 +1327,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether change feed event logging is enabled for the Blob service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionindays_csharp">
+<a href="#retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1189,6 +1351,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether change feed event logging is enabled for the Blob service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionindays_go">
+<a href="#retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1204,6 +1375,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether change feed event logging is enabled for the Blob service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionindays_nodejs">
+<a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1219,6 +1399,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether change feed event logging is enabled for the Blob service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retention_in_days_python">
+<a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1236,6 +1425,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether change feed event logging is enabled for the Blob service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionindays_csharp">
+<a href="#retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1251,6 +1449,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether change feed event logging is enabled for the Blob service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionindays_go">
+<a href="#retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1266,6 +1473,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether change feed event logging is enabled for the Blob service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionindays_nodejs">
+<a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1281,6 +1497,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether change feed event logging is enabled for the Blob service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retention_in_days_python">
+<a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2013,6 +2238,376 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether DeleteRetentionPolicy is enabled.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="lastaccesstimetrackingpolicy">Last<wbr>Access<wbr>Time<wbr>Tracking<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enable_csharp">
+<a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true last access time based tracking is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobtype_csharp">
+<a href="#blobtype_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#name">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Name</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the policy. The valid value is AccessTimeTracking. This field is currently read only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trackinggranularityindays_csharp">
+<a href="#trackinggranularityindays_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Granularity<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enable_go">
+<a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true last access time based tracking is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobtype_go">
+<a href="#blobtype_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#name">Name</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the policy. The valid value is AccessTimeTracking. This field is currently read only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trackinggranularityindays_go">
+<a href="#trackinggranularityindays_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Granularity<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enable_nodejs">
+<a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When set to true last access time based tracking is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobtype_nodejs">
+<a href="#blobtype_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#name">Name</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the policy. The valid value is AccessTimeTracking. This field is currently read only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trackinggranularityindays_nodejs">
+<a href="#trackinggranularityindays_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Granularity<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enable_python">
+<a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true last access time based tracking is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blob_type_python">
+<a href="#blob_type_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#name">Name</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the policy. The valid value is AccessTimeTracking. This field is currently read only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tracking_granularity_in_days_python">
+<a href="#tracking_granularity_in_days_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>granularity_<wbr>in_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="lastaccesstimetrackingpolicyresponse">Last<wbr>Access<wbr>Time<wbr>Tracking<wbr>Policy<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enable_csharp">
+<a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true last access time based tracking is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobtype_csharp">
+<a href="#blobtype_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the policy. The valid value is AccessTimeTracking. This field is currently read only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trackinggranularityindays_csharp">
+<a href="#trackinggranularityindays_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Granularity<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enable_go">
+<a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true last access time based tracking is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobtype_go">
+<a href="#blobtype_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the policy. The valid value is AccessTimeTracking. This field is currently read only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trackinggranularityindays_go">
+<a href="#trackinggranularityindays_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Granularity<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enable_nodejs">
+<a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When set to true last access time based tracking is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobtype_nodejs">
+<a href="#blobtype_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the policy. The valid value is AccessTimeTracking. This field is currently read only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trackinggranularityindays_nodejs">
+<a href="#trackinggranularityindays_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Granularity<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enable_python">
+<a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true last access time based tracking is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blob_type_python">
+<a href="#blob_type_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the policy. The valid value is AccessTimeTracking. This field is currently read only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tracking_granularity_in_days_python">
+<a href="#tracking_granularity_in_days_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>granularity_<wbr>in_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="name">Name</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Access<wbr>Time<wbr>Tracking</dt>
+    <dd>AccessTimeTracking</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Name<wbr>Access<wbr>Time<wbr>Tracking</dt>
+    <dd>AccessTimeTracking</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Access<wbr>Time<wbr>Tracking</dt>
+    <dd>AccessTimeTracking</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ACCESS_TIME_TRACKING</dt>
+    <dd>AccessTimeTracking</dd>
 </dl>
 {{% /choosable %}}
 

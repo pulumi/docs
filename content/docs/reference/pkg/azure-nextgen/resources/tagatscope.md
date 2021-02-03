@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.resources.TagAtScope resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Wrapper resource for tags API requests and responses.
-Latest API Version: 2020-08-01.
+Latest API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage

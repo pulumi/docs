@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storagesync.PrivateEndpointConne
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Private Endpoint Connection resource.
-Latest API Version: 2020-09-01.
+Latest API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage

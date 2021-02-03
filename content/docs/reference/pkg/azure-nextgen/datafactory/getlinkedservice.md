@@ -4896,6 +4896,15 @@ The following output properties are available:
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="policyid_csharp">
+<a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The policy id for limiting the ability to configure clusters based on a user defined set of rules. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="workspaceresourceid_csharp">
 <a href="#workspaceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
 </span>
@@ -5089,6 +5098,15 @@ The following output properties are available:
         <span class="property-type">map[string]Parameter<wbr>Specification<wbr>Response</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_go">
+<a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The policy id for limiting the ability to configure clusters based on a user defined set of rules. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="workspaceresourceid_go">
@@ -5286,6 +5304,15 @@ The following output properties are available:
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="policyid_nodejs">
+<a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The policy id for limiting the ability to configure clusters based on a user defined set of rules. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="workspaceresourceid_nodejs">
 <a href="#workspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Resource<wbr>Id</a>
 </span>
@@ -5479,6 +5506,15 @@ The following output properties are available:
         <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_id_python">
+<a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The policy id for limiting the ability to configure clusters based on a user defined set of rules. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="workspace_resource_id_python">

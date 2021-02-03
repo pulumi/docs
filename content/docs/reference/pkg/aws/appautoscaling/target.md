@@ -366,6 +366,91 @@ const replicas = new aws.appautoscaling.Target("replicas", {
 
 {{% /example %}}
 
+### MSK / Kafka Autoscaling
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mskTarget = new Aws.AppAutoScaling.Target("mskTarget", new Aws.AppAutoScaling.TargetArgs
+        {
+            MaxCapacity = 8,
+            MinCapacity = 1,
+            ResourceId = aws_msk_cluster.Example.Arn,
+            ScalableDimension = "kafka:broker-storage:VolumeSize",
+            ServiceNamespace = "kafka",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := appautoscaling.NewTarget(ctx, "mskTarget", &appautoscaling.TargetArgs{
+			MaxCapacity:       pulumi.Int(8),
+			MinCapacity:       pulumi.Int(1),
+			ResourceId:        pulumi.Any(aws_msk_cluster.Example.Arn),
+			ScalableDimension: pulumi.String("kafka:broker-storage:VolumeSize"),
+			ServiceNamespace:  pulumi.String("kafka"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+msk_target = aws.appautoscaling.Target("mskTarget",
+    max_capacity=8,
+    min_capacity=1,
+    resource_id=aws_msk_cluster["example"]["arn"],
+    scalable_dimension="kafka:broker-storage:VolumeSize",
+    service_namespace="kafka")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const mskTarget = new aws.appautoscaling.Target("msk_target", {
+    maxCapacity: 8,
+    minCapacity: 1,
+    resourceId: aws_msk_cluster_example.arn,
+    scalableDimension: "kafka:broker-storage:VolumeSize",
+    serviceNamespace: "kafka",
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 

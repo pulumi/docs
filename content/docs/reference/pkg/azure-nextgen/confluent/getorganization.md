@@ -193,6 +193,15 @@ The following output properties are available:
     <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="ssourl_csharp">
 <a href="#ssourl_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Url</a>
 </span>
@@ -227,15 +236,6 @@ The following output properties are available:
         <span class="property-type"><a href="#organizationresourcepropertiesresponseofferdetail">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confluent.<wbr>Outputs.<wbr>Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>Offer<wbr>Detail</a></span>
     </dt>
     <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_csharp">
@@ -298,6 +298,15 @@ The following output properties are available:
     <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="ssourl_go">
 <a href="#ssourl_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Url</a>
 </span>
@@ -332,15 +341,6 @@ The following output properties are available:
         <span class="property-type"><a href="#organizationresourcepropertiesresponseofferdetail">Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>Offer<wbr>Detail</a></span>
     </dt>
     <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_go">
@@ -403,6 +403,15 @@ The following output properties are available:
     <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="ssourl_nodejs">
 <a href="#ssourl_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Url</a>
 </span>
@@ -437,15 +446,6 @@ The following output properties are available:
         <span class="property-type"><a href="#organizationresourcepropertiesresponseofferdetail">Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>Offer<wbr>Detail</a></span>
     </dt>
     <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
@@ -508,6 +508,15 @@ The following output properties are available:
     <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="sso_url_python">
 <a href="#sso_url_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>url</a>
 </span>
@@ -542,15 +551,6 @@ The following output properties are available:
         <span class="property-type"><a href="#organizationresourcepropertiesresponseofferdetail">Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>Offer<wbr>Detail</a></span>
     </dt>
     <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_python">

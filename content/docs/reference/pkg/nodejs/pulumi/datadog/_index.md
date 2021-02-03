@@ -3,7 +3,7 @@ title: "Package @pulumi/datadog"
 title_tag: "Package @pulumi/datadog | Node.js SDK"
 linktitle: "@pulumi/datadog"
 meta_desc: "Explore members of the @pulumi/datadog package."
-git_sha: "7169429ad73f674dfb6999252d3e5e0e48a03daa"
+git_sha: "029a54a8c270d6c9f28d0bfe4458568f463c7810"
 block_external_search_index: true
 ---
 
@@ -156,7 +156,7 @@ import * as datadog from "@pulumi/datadog";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Dashboard" data-link-title="Dashboard">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L659">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L659">
         Resource <strong>Dashboard</strong>
     </a>
 </h3>
@@ -814,7 +814,7 @@ dashboards can be imported using their ID, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Dashboard-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L730"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L730"> <b>constructor</b></a>
 </h4>
 
 
@@ -828,7 +828,7 @@ Create a Dashboard resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Dashboard-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L669">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L669">method <b>get</b></a>
 </h4>
 
 
@@ -839,14 +839,14 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Dashboard-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L659">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L659">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Dashboard-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L680">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L680">method <b>isInstance</b></a>
 </h4>
 
 
@@ -857,7 +857,7 @@ Returns true if the given object is an instance of Dashboard.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Dashboard-dashboardLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L690">property <b>dashboardLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L690">property <b>dashboardLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dashboardLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -865,7 +865,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The list of dashboard lists this dashboard belongs to.
 
 <h4 class="pdoc-member-header" id="Dashboard-dashboardListsRemoveds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L694">property <b>dashboardListsRemoveds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L694">property <b>dashboardListsRemoveds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dashboardListsRemoveds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[]&gt;;</code></pre>
@@ -873,7 +873,7 @@ The list of dashboard lists this dashboard belongs to.
 The list of dashboard lists this dashboard should be removed from. Internal only.
 
 <h4 class="pdoc-member-header" id="Dashboard-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L698">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L698">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -881,7 +881,7 @@ The list of dashboard lists this dashboard should be removed from. Internal only
 The description of the dashboard.
 
 <h4 class="pdoc-member-header" id="Dashboard-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L659">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L659">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -890,7 +890,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Dashboard-isReadOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L702">property <b>isReadOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L702">property <b>isReadOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isReadOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -898,7 +898,7 @@ deployments and may be missing (undefined) during planning phases.
 Whether this dashboard is read-only.
 
 <h4 class="pdoc-member-header" id="Dashboard-layoutType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L706">property <b>layoutType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L706">property <b>layoutType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>layoutType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -906,7 +906,7 @@ Whether this dashboard is read-only.
 The layout type of the dashboard, either 'free' or 'ordered'.
 
 <h4 class="pdoc-member-header" id="Dashboard-notifyLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L710">property <b>notifyLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L710">property <b>notifyLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notifyLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -914,7 +914,7 @@ The layout type of the dashboard, either 'free' or 'ordered'.
 The list of handles of users to notify when changes are made to this dashboard.
 
 <h4 class="pdoc-member-header" id="Dashboard-templateVariablePresets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L714">property <b>templateVariablePresets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L714">property <b>templateVariablePresets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateVariablePresets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardTemplateVariablePreset'>DashboardTemplateVariablePreset</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -922,7 +922,7 @@ The list of handles of users to notify when changes are made to this dashboard.
 The list of selectable template variable presets for this dashboard.
 
 <h4 class="pdoc-member-header" id="Dashboard-templateVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L718">property <b>templateVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L718">property <b>templateVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateVariables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardTemplateVariable'>DashboardTemplateVariable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -930,7 +930,7 @@ The list of selectable template variable presets for this dashboard.
 The list of template variables for this dashboard.
 
 <h4 class="pdoc-member-header" id="Dashboard-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L722">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L722">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -938,7 +938,7 @@ The list of template variables for this dashboard.
 The title of the dashboard.
 
 <h4 class="pdoc-member-header" id="Dashboard-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L726">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L726">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -946,7 +946,7 @@ The title of the dashboard.
 The URL of the dashboard.
 
 <h4 class="pdoc-member-header" id="Dashboard-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L659">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L659">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -955,7 +955,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Dashboard-widgets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L730">property <b>widgets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L730">property <b>widgets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>widgets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidget'>DashboardWidget</a>[]&gt;;</code></pre>
@@ -963,7 +963,7 @@ deployments.
 The list of widgets to display on the dashboard.
 
 <h3 class="pdoc-module-header" id="DashboardList" data-link-title="DashboardList">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboardList.ts#L82">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboardList.ts#L82">
         Resource <strong>DashboardList</strong>
     </a>
 </h3>
@@ -1044,7 +1044,7 @@ dashboard lists can be imported using their id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="DashboardList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboardList.ts#L117"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboardList.ts#L117"> <b>constructor</b></a>
 </h4>
 
 
@@ -1058,7 +1058,7 @@ Create a DashboardList resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DashboardList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboardList.ts#L92">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboardList.ts#L92">method <b>get</b></a>
 </h4>
 
 
@@ -1069,14 +1069,14 @@ Get an existing DashboardList resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DashboardList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboardList.ts#L82">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboardList.ts#L82">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DashboardList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboardList.ts#L103">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboardList.ts#L103">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1087,7 +1087,7 @@ Returns true if the given object is an instance of DashboardList.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DashboardList-dashItems">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboardList.ts#L113">property <b>dashItems</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboardList.ts#L113">property <b>dashItems</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dashItems: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardListDashItem'>DashboardListDashItem</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1095,7 +1095,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A set of dashbaord items that belong to this list
 
 <h4 class="pdoc-member-header" id="DashboardList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboardList.ts#L82">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboardList.ts#L82">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1104,7 +1104,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DashboardList-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboardList.ts#L117">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboardList.ts#L117">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1112,7 +1112,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Dashboard List
 
 <h4 class="pdoc-member-header" id="DashboardList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboardList.ts#L82">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboardList.ts#L82">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1121,7 +1121,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Downtime" data-link-title="Downtime">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L56">
         Resource <strong>Downtime</strong>
     </a>
 </h3>
@@ -1176,7 +1176,7 @@ Downtimes can be imported using their numeric ID, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Downtime-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L131"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L131"> <b>constructor</b></a>
 </h4>
 
 
@@ -1190,7 +1190,7 @@ Create a Downtime resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Downtime-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L66">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L66">method <b>get</b></a>
 </h4>
 
 
@@ -1201,14 +1201,14 @@ Get an existing Downtime resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Downtime-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L56">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L56">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Downtime-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L77">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L77">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1219,7 +1219,7 @@ Returns true if the given object is an instance of Downtime.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Downtime-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L87">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L87">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>active: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1227,7 +1227,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 When true indicates this downtime is being actively applied
 
 <h4 class="pdoc-member-header" id="Downtime-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L91">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L91">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1235,7 +1235,7 @@ When true indicates this downtime is being actively applied
 When true indicates this downtime is not being applied
 
 <h4 class="pdoc-member-header" id="Downtime-end">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L95">property <b>end</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L95">property <b>end</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>end: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1243,7 +1243,7 @@ When true indicates this downtime is not being applied
 Optionally specify an end date when this downtime should expire
 
 <h4 class="pdoc-member-header" id="Downtime-endDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L99">property <b>endDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L99">property <b>endDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1251,7 +1251,7 @@ Optionally specify an end date when this downtime should expire
 String representing date and time to end the downtime in RFC3339 format.
 
 <h4 class="pdoc-member-header" id="Downtime-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1260,7 +1260,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Downtime-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L103">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L103">property <b>message</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>message: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1268,7 +1268,7 @@ deployments and may be missing (undefined) during planning phases.
 An optional message to provide when creating the downtime, can include notification handles
 
 <h4 class="pdoc-member-header" id="Downtime-monitorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L107">property <b>monitorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L107">property <b>monitorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1276,7 +1276,7 @@ An optional message to provide when creating the downtime, can include notificat
 When specified, this downtime will only apply to this monitor
 
 <h4 class="pdoc-member-header" id="Downtime-monitorTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L111">property <b>monitorTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L111">property <b>monitorTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitorTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1284,7 +1284,7 @@ When specified, this downtime will only apply to this monitor
 A list of monitor tags (up to 25), i.e. tags that are applied directly to monitors to which the downtime applies
 
 <h4 class="pdoc-member-header" id="Downtime-recurrence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L115">property <b>recurrence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L115">property <b>recurrence</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DowntimeRecurrence'>DowntimeRecurrence</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1292,7 +1292,7 @@ A list of monitor tags (up to 25), i.e. tags that are applied directly to monito
 Optional recurring schedule for this downtime
 
 <h4 class="pdoc-member-header" id="Downtime-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L119">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L119">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1300,7 +1300,7 @@ Optional recurring schedule for this downtime
 specify the group scope to which this downtime applies. For everything use '*'
 
 <h4 class="pdoc-member-header" id="Downtime-start">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L123">property <b>start</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L123">property <b>start</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>start: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1308,7 +1308,7 @@ specify the group scope to which this downtime applies. For everything use '*'
 Specify when this downtime should start
 
 <h4 class="pdoc-member-header" id="Downtime-startDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L127">property <b>startDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L127">property <b>startDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>startDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1316,7 +1316,7 @@ Specify when this downtime should start
 String representing date and time to start the downtime in RFC3339 format.
 
 <h4 class="pdoc-member-header" id="Downtime-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L131">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L131">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1324,7 +1324,7 @@ String representing date and time to start the downtime in RFC3339 format.
 The timezone for the downtime, default UTC
 
 <h4 class="pdoc-member-header" id="Downtime-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L56">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L56">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1333,7 +1333,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogsArchive" data-link-title="LogsArchive">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L89">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L89">
         Resource <strong>LogsArchive</strong>
     </a>
 </h3>
@@ -1421,7 +1421,7 @@ Import is supported using the following syntax
 ```
 
 <h4 class="pdoc-member-header" id="LogsArchive-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L163"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L163"> <b>constructor</b></a>
 </h4>
 
 
@@ -1435,7 +1435,7 @@ Create a LogsArchive resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogsArchive-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L99">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L99">method <b>get</b></a>
 </h4>
 
 
@@ -1446,14 +1446,14 @@ Get an existing LogsArchive resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogsArchive-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L89">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L89">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogsArchive-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L110">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L110">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1464,7 +1464,7 @@ Returns true if the given object is an instance of LogsArchive.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogsArchive-azure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L122">property <b>azure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L122">property <b>azure</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1476,7 +1476,7 @@ Define `azure_archive` list with one element instead.
 Definition of an azure archive.
 
 <h4 class="pdoc-member-header" id="LogsArchive-azureArchive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L126">property <b>azureArchive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L126">property <b>azureArchive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azureArchive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsArchiveAzureArchive'>LogsArchiveAzureArchive</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1484,7 +1484,7 @@ Definition of an azure archive.
 Definition of an azure archive.
 
 <h4 class="pdoc-member-header" id="LogsArchive-gcs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L132">property <b>gcs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L132">property <b>gcs</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1496,7 +1496,7 @@ Define `gcs_archive` list with one element instead.
 Definition of a GCS archive.
 
 <h4 class="pdoc-member-header" id="LogsArchive-gcsArchive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L136">property <b>gcsArchive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L136">property <b>gcsArchive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>gcsArchive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsArchiveGcsArchive'>LogsArchiveGcsArchive</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1504,7 +1504,7 @@ Definition of a GCS archive.
 Definition of a GCS archive.
 
 <h4 class="pdoc-member-header" id="LogsArchive-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L89">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L89">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1513,7 +1513,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogsArchive-includeTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L141">property <b>includeTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L141">property <b>includeTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>includeTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1522,7 +1522,7 @@ To store the tags in the archive, set the value `true`. If it is set to `false`,
 are sent to the archive.
 
 <h4 class="pdoc-member-header" id="LogsArchive-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L145">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L145">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1530,7 +1530,7 @@ are sent to the archive.
 Your archive name.
 
 <h4 class="pdoc-member-header" id="LogsArchive-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L149">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L149">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1538,7 +1538,7 @@ Your archive name.
 The archive query/filter. Logs matching this query are included in the archive.
 
 <h4 class="pdoc-member-header" id="LogsArchive-rehydrationTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L153">property <b>rehydrationTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L153">property <b>rehydrationTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rehydrationTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1546,7 +1546,7 @@ The archive query/filter. Logs matching this query are included in the archive.
 An array of tags to add to rehydrated logs from an archive.
 
 <h4 class="pdoc-member-header" id="LogsArchive-s3">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L159">property <b>s3</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L159">property <b>s3</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1558,7 +1558,7 @@ Define `s3_archive` list with one element instead.
 Definition of an s3 archive.
 
 <h4 class="pdoc-member-header" id="LogsArchive-s3Archive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L163">property <b>s3Archive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L163">property <b>s3Archive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3Archive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsArchiveS3Archive'>LogsArchiveS3Archive</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1566,7 +1566,7 @@ Definition of an s3 archive.
 Definition of an s3 archive.
 
 <h4 class="pdoc-member-header" id="LogsArchive-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L89">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L89">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1575,7 +1575,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogsArchiveOrder" data-link-title="LogsArchiveOrder">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchiveOrder.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchiveOrder.ts#L32">
         Resource <strong>LogsArchiveOrder</strong>
     </a>
 </h3>
@@ -1607,7 +1607,7 @@ There must be at most one `datadog_logs_archive_order` resource. You can import 
 ```
 
 <h4 class="pdoc-member-header" id="LogsArchiveOrder-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchiveOrder.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchiveOrder.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -1621,7 +1621,7 @@ Create a LogsArchiveOrder resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogsArchiveOrder-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchiveOrder.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchiveOrder.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -1632,14 +1632,14 @@ Get an existing LogsArchiveOrder resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogsArchiveOrder-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchiveOrder.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchiveOrder.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogsArchiveOrder-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchiveOrder.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchiveOrder.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1650,7 +1650,7 @@ Returns true if the given object is an instance of LogsArchiveOrder.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogsArchiveOrder-archiveIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchiveOrder.ts#L65">property <b>archiveIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchiveOrder.ts#L65">property <b>archiveIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>archiveIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1660,7 +1660,7 @@ The archive IDs list. The order of archive IDs in this attribute defines the ove
 will try to update the order.
 
 <h4 class="pdoc-member-header" id="LogsArchiveOrder-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchiveOrder.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchiveOrder.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1669,7 +1669,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogsArchiveOrder-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchiveOrder.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchiveOrder.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1678,7 +1678,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogsCustomPipeline" data-link-title="LogsCustomPipeline">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L194">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L194">
         Resource <strong>LogsCustomPipeline</strong>
     </a>
 </h3>
@@ -1871,7 +1871,7 @@ Each `datadog.LogsCustomPipeline` resource defines a complete pipeline. The orde
 ```
 
 <h4 class="pdoc-member-header" id="LogsCustomPipeline-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L225"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L225"> <b>constructor</b></a>
 </h4>
 
 
@@ -1885,7 +1885,7 @@ Create a LogsCustomPipeline resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogsCustomPipeline-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L204">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L204">method <b>get</b></a>
 </h4>
 
 
@@ -1896,14 +1896,14 @@ Get an existing LogsCustomPipeline resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogsCustomPipeline-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L194">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L194">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogsCustomPipeline-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L215">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L215">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1914,12 +1914,12 @@ Returns true if the given object is an instance of LogsCustomPipeline.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogsCustomPipeline-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L222">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L222">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineFilter'>LogsCustomPipelineFilter</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipeline-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L194">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L194">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1928,22 +1928,22 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogsCustomPipeline-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L223">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L223">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipeline-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L224">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L224">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipeline-processors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L225">property <b>processors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L225">property <b>processors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>processors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessor'>LogsCustomPipelineProcessor</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipeline-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L194">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L194">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1952,7 +1952,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogsIndex" data-link-title="LogsIndex">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L15">
         Resource <strong>LogsIndex</strong>
     </a>
 </h3>
@@ -1966,7 +1966,7 @@ deployments.
 ```
 
 <h4 class="pdoc-member-header" id="LogsIndex-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L54"> <b>constructor</b></a>
 </h4>
 
 
@@ -1980,7 +1980,7 @@ Create a LogsIndex resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogsIndex-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L25">method <b>get</b></a>
 </h4>
 
 
@@ -1991,14 +1991,14 @@ Get an existing LogsIndex resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogsIndex-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L15">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L15">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogsIndex-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L36">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L36">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2009,7 +2009,7 @@ Returns true if the given object is an instance of LogsIndex.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogsIndex-exclusionFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L46">property <b>exclusionFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L46">property <b>exclusionFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>exclusionFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsIndexExclusionFilter'>LogsIndexExclusionFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2017,7 +2017,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 List of exclusion filters.
 
 <h4 class="pdoc-member-header" id="LogsIndex-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L50">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L50">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsIndexFilter'>LogsIndexFilter</a>[]&gt;;</code></pre>
@@ -2025,7 +2025,7 @@ List of exclusion filters.
 Logs filter
 
 <h4 class="pdoc-member-header" id="LogsIndex-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L15">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L15">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2034,7 +2034,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogsIndex-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L54">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2042,7 +2042,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the index.
 
 <h4 class="pdoc-member-header" id="LogsIndex-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L15">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L15">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2051,7 +2051,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogsIndexOrder" data-link-title="LogsIndexOrder">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndexOrder.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndexOrder.ts#L30">
         Resource <strong>LogsIndexOrder</strong>
     </a>
 </h3>
@@ -2081,7 +2081,7 @@ const sampleIndexOrder = new datadog.LogsIndexOrder("sampleIndexOrder", {
 ```
 
 <h4 class="pdoc-member-header" id="LogsIndexOrder-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndexOrder.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndexOrder.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
@@ -2095,7 +2095,7 @@ Create a LogsIndexOrder resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogsIndexOrder-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndexOrder.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndexOrder.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -2106,14 +2106,14 @@ Get an existing LogsIndexOrder resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogsIndexOrder-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndexOrder.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndexOrder.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogsIndexOrder-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndexOrder.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndexOrder.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2124,7 +2124,7 @@ Returns true if the given object is an instance of LogsIndexOrder.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogsIndexOrder-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndexOrder.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndexOrder.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2133,7 +2133,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogsIndexOrder-indexes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndexOrder.ts#L62">property <b>indexes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndexOrder.ts#L62">property <b>indexes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>indexes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -2142,7 +2142,7 @@ The index resource list. Logs are tested against the query filter of each index 
 list.
 
 <h4 class="pdoc-member-header" id="LogsIndexOrder-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndexOrder.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndexOrder.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2150,7 +2150,7 @@ list.
 The unique name of the index order resource.
 
 <h4 class="pdoc-member-header" id="LogsIndexOrder-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndexOrder.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndexOrder.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2159,7 +2159,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogsIntegrationPipeline" data-link-title="LogsIntegrationPipeline">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIntegrationPipeline.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIntegrationPipeline.ts#L29">
         Resource <strong>LogsIntegrationPipeline</strong>
     </a>
 </h3>
@@ -2188,7 +2188,7 @@ const python = new datadog.LogsIntegrationPipeline("python", {
 ```
 
 <h4 class="pdoc-member-header" id="LogsIntegrationPipeline-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIntegrationPipeline.ts#L60"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIntegrationPipeline.ts#L60"> <b>constructor</b></a>
 </h4>
 
 
@@ -2202,7 +2202,7 @@ Create a LogsIntegrationPipeline resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogsIntegrationPipeline-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIntegrationPipeline.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIntegrationPipeline.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -2213,14 +2213,14 @@ Get an existing LogsIntegrationPipeline resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogsIntegrationPipeline-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIntegrationPipeline.ts#L29">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIntegrationPipeline.ts#L29">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogsIntegrationPipeline-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIntegrationPipeline.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIntegrationPipeline.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2231,7 +2231,7 @@ Returns true if the given object is an instance of LogsIntegrationPipeline.  Thi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogsIntegrationPipeline-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIntegrationPipeline.ts#L29">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIntegrationPipeline.ts#L29">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2240,7 +2240,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogsIntegrationPipeline-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIntegrationPipeline.ts#L60">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIntegrationPipeline.ts#L60">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2248,7 +2248,7 @@ deployments and may be missing (undefined) during planning phases.
 Boolean value to enable your pipeline.
 
 <h4 class="pdoc-member-header" id="LogsIntegrationPipeline-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIntegrationPipeline.ts#L29">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIntegrationPipeline.ts#L29">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2257,7 +2257,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogsMetric" data-link-title="LogsMetric">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L79">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L79">
         Resource <strong>LogsMetric</strong>
     </a>
 </h3>
@@ -2335,7 +2335,7 @@ Import is supported using the following syntax
 ```
 
 <h4 class="pdoc-member-header" id="LogsMetric-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L122"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L122"> <b>constructor</b></a>
 </h4>
 
 
@@ -2349,7 +2349,7 @@ Create a LogsMetric resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogsMetric-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L89">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L89">method <b>get</b></a>
 </h4>
 
 
@@ -2360,14 +2360,14 @@ Get an existing LogsMetric resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogsMetric-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L79">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L79">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogsMetric-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L100">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L100">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2378,7 +2378,7 @@ Returns true if the given object is an instance of LogsMetric.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogsMetric-compute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L110">property <b>compute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L110">property <b>compute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsMetricCompute'>LogsMetricCompute</a>&gt;;</code></pre>
@@ -2386,7 +2386,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The compute rule to compute the log-based metric. This field can't be updated after creation.
 
 <h4 class="pdoc-member-header" id="LogsMetric-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L114">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L114">property <b>filter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsMetricFilter'>LogsMetricFilter</a>&gt;;</code></pre>
@@ -2394,7 +2394,7 @@ The compute rule to compute the log-based metric. This field can't be updated af
 The log-based metric filter. Logs matching this filter will be aggregated in this metric.
 
 <h4 class="pdoc-member-header" id="LogsMetric-groupBies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L118">property <b>groupBies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L118">property <b>groupBies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupBies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsMetricGroupBy'>LogsMetricGroupBy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2402,7 +2402,7 @@ The log-based metric filter. Logs matching this filter will be aggregated in thi
 The rules for the group by.
 
 <h4 class="pdoc-member-header" id="LogsMetric-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L79">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L79">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2411,7 +2411,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogsMetric-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L122">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2419,7 +2419,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the log-based metric. This field can't be updated after creation.
 
 <h4 class="pdoc-member-header" id="LogsMetric-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L79">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L79">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2428,7 +2428,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogsPipelineOrder" data-link-title="LogsPipelineOrder">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsPipelineOrder.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsPipelineOrder.ts#L38">
         Resource <strong>LogsPipelineOrder</strong>
     </a>
 </h3>
@@ -2466,7 +2466,7 @@ There must be at most one `datadog_logs_pipeline_order` resource. Pipeline order
 ```
 
 <h4 class="pdoc-member-header" id="LogsPipelineOrder-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsPipelineOrder.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsPipelineOrder.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
@@ -2480,7 +2480,7 @@ Create a LogsPipelineOrder resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogsPipelineOrder-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsPipelineOrder.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsPipelineOrder.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -2491,14 +2491,14 @@ Get an existing LogsPipelineOrder resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogsPipelineOrder-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsPipelineOrder.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsPipelineOrder.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogsPipelineOrder-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsPipelineOrder.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsPipelineOrder.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2509,7 +2509,7 @@ Returns true if the given object is an instance of LogsPipelineOrder.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogsPipelineOrder-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsPipelineOrder.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsPipelineOrder.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2518,7 +2518,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogsPipelineOrder-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsPipelineOrder.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsPipelineOrder.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2528,7 +2528,7 @@ value as the resource name. No related field is available in [Logs Pipeline
 API](https://docs.datadoghq.com/api/v1/logs-pipelines/#get-pipeline-order).
 
 <h4 class="pdoc-member-header" id="LogsPipelineOrder-pipelines">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsPipelineOrder.ts#L75">property <b>pipelines</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsPipelineOrder.ts#L75">property <b>pipelines</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pipelines: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -2536,7 +2536,7 @@ API](https://docs.datadoghq.com/api/v1/logs-pipelines/#get-pipeline-order).
 The pipeline IDs list. The order of pipeline IDs in this attribute defines the overall pipeline order for logs.
 
 <h4 class="pdoc-member-header" id="LogsPipelineOrder-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsPipelineOrder.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsPipelineOrder.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2545,7 +2545,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="MetricMetadata" data-link-title="MetricMetadata">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L26">
         Resource <strong>MetricMetadata</strong>
     </a>
 </h3>
@@ -2571,7 +2571,7 @@ const requestTime = new datadog.MetricMetadata("request_time", {
 ```
 
 <h4 class="pdoc-member-header" id="MetricMetadata-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L81"> <b>constructor</b></a>
 </h4>
 
 
@@ -2585,7 +2585,7 @@ Create a MetricMetadata resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MetricMetadata-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -2596,14 +2596,14 @@ Get an existing MetricMetadata resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MetricMetadata-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MetricMetadata-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2614,7 +2614,7 @@ Returns true if the given object is an instance of MetricMetadata.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MetricMetadata-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L57">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L57">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2622,7 +2622,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A description of the metric.
 
 <h4 class="pdoc-member-header" id="MetricMetadata-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2631,7 +2631,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MetricMetadata-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L61">property <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L61">property <b>metric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metric: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2639,7 +2639,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the metric.
 
 <h4 class="pdoc-member-header" id="MetricMetadata-perUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L65">property <b>perUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L65">property <b>perUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>perUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2647,7 +2647,7 @@ The name of the metric.
 Per unit of the metric such as `second` in `bytes per second`.
 
 <h4 class="pdoc-member-header" id="MetricMetadata-shortName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L69">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L69">property <b>shortName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>shortName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2655,7 +2655,7 @@ Per unit of the metric such as `second` in `bytes per second`.
 A short name of the metric.
 
 <h4 class="pdoc-member-header" id="MetricMetadata-statsdInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L73">property <b>statsdInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L73">property <b>statsdInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>statsdInterval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2663,7 +2663,7 @@ A short name of the metric.
 If applicable, statsd flush interval in seconds for the metric.
 
 <h4 class="pdoc-member-header" id="MetricMetadata-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L77">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L77">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2671,7 +2671,7 @@ If applicable, statsd flush interval in seconds for the metric.
 Type of the metric.
 
 <h4 class="pdoc-member-header" id="MetricMetadata-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L81">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L81">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>unit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2679,7 +2679,7 @@ Type of the metric.
 Primary unit of the metric such as `byte` or `operation`.
 
 <h4 class="pdoc-member-header" id="MetricMetadata-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2688,7 +2688,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Monitor" data-link-title="Monitor">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L17">
         Resource <strong>Monitor</strong>
     </a>
 </h3>
@@ -2704,7 +2704,7 @@ Import is supported using the following syntax
 ```
 
 <h4 class="pdoc-member-header" id="Monitor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L170"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L170"> <b>constructor</b></a>
 </h4>
 
 
@@ -2718,7 +2718,7 @@ Create a Monitor resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Monitor-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L27">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L27">method <b>get</b></a>
 </h4>
 
 
@@ -2729,14 +2729,14 @@ Get an existing Monitor resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Monitor-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L17">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Monitor-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L38">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L38">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2747,7 +2747,7 @@ Returns true if the given object is an instance of Monitor.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Monitor-enableLogsSample">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L49">property <b>enableLogsSample</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L49">property <b>enableLogsSample</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableLogsSample: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2756,7 +2756,7 @@ A boolean indicating whether or not to include a list of log values which trigge
 monitors. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Monitor-escalationMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L53">property <b>escalationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L53">property <b>escalationMessage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>escalationMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2764,7 +2764,7 @@ monitors. Defaults to `false`.
 A message to include with a re-notification. Supports the `@username` notification allowed elsewhere.
 
 <h4 class="pdoc-member-header" id="Monitor-evaluationDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L60">property <b>evaluationDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L60">property <b>evaluationDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>evaluationDelay: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2775,7 +2775,7 @@ from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled metric
 data during evaluation.
 
 <h4 class="pdoc-member-header" id="Monitor-forceDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L65">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L65">property <b>forceDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceDelete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2784,7 +2784,7 @@ A boolean indicating whether this monitor can be deleted even if it’s referenc
 composite monitor).
 
 <h4 class="pdoc-member-header" id="Monitor-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L17">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2793,7 +2793,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Monitor-includeTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L70">property <b>includeTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L70">property <b>includeTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>includeTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2802,7 +2802,7 @@ A boolean indicating whether notifications from this monitor automatically inser
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="Monitor-locked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L75">property <b>locked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L75">property <b>locked</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>locked: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2811,7 +2811,7 @@ A boolean indicating whether changes to to this monitor should be restricted to 
 `false`.
 
 <h4 class="pdoc-member-header" id="Monitor-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L80">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L80">property <b>message</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>message: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2820,7 +2820,7 @@ A message to include with notifications for this monitor. Email notifications ca
 same `@username` notation as events.
 
 <h4 class="pdoc-member-header" id="Monitor-monitorThresholdWindows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L85">property <b>monitorThresholdWindows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L85">property <b>monitorThresholdWindows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitorThresholdWindows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#MonitorMonitorThresholdWindows'>MonitorMonitorThresholdWindows</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2829,7 +2829,7 @@ A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_1
 required for, anomaly monitors.
 
 <h4 class="pdoc-member-header" id="Monitor-monitorThresholds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L89">property <b>monitorThresholds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L89">property <b>monitorThresholds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitorThresholds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#MonitorMonitorThresholds'>MonitorMonitorThresholds</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2837,7 +2837,7 @@ required for, anomaly monitors.
 Alert thresholds of the monitor.
 
 <h4 class="pdoc-member-header" id="Monitor-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L93">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2845,7 +2845,7 @@ Alert thresholds of the monitor.
 Name of Datadog monitor.
 
 <h4 class="pdoc-member-header" id="Monitor-newHostDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L98">property <b>newHostDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L98">property <b>newHostDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>newHostDelay: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2854,7 +2854,7 @@ Time (in seconds) to allow a host to boot and applications to fully start before
 results. Should be a non negative integer. Defaults to `300`.
 
 <h4 class="pdoc-member-header" id="Monitor-noDataTimeframe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L103">property <b>noDataTimeframe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L103">property <b>noDataTimeframe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>noDataTimeframe: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2863,7 +2863,7 @@ The number of minutes before a monitor will notify when data stops reporting. Pr
 recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
 
 <h4 class="pdoc-member-header" id="Monitor-notifyAudit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L107">property <b>notifyAudit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L107">property <b>notifyAudit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notifyAudit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2871,7 +2871,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Monitor-notifyNoData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L111">property <b>notifyNoData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L111">property <b>notifyNoData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notifyNoData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2879,12 +2879,12 @@ A boolean indicating whether tagged users will be notified on changes to this mo
 A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.
 
 <h4 class="pdoc-member-header" id="Monitor-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L112">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L112">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Monitor-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L118">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L118">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2894,7 +2894,7 @@ on the monitor type, please see the [API Reference](https://docs.datadoghq.com/a
 details. Warning: `terraform plan` won't perform any validation of the query contents.
 
 <h4 class="pdoc-member-header" id="Monitor-renotifyInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L123">property <b>renotifyInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L123">property <b>renotifyInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>renotifyInterval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2903,7 +2903,7 @@ The number of minutes after the last notification before a monitor will re-notif
 re-notify if it's not resolved.
 
 <h4 class="pdoc-member-header" id="Monitor-requireFullWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L129">property <b>requireFullWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L129">property <b>requireFullWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requireFullWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2913,7 +2913,7 @@ this to `false` for s metrics, otherwise some evaluations will be skipped. Defau
 times` and `in total` aggregation. `false` otherwise.
 
 <h4 class="pdoc-member-header" id="Monitor-silenced">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L137">property <b>silenced</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L137">property <b>silenced</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2927,7 +2927,7 @@ the scope. Deprecated: the silenced parameter is being deprecated in favor of th
 removed in the next major version of the Terraform Provider.
 
 <h4 class="pdoc-member-header" id="Monitor-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L142">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L142">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2936,7 +2936,7 @@ A list of tags to associate with your monitor. This can help you categorize and 
 page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
 
 <h4 class="pdoc-member-header" id="Monitor-thresholdWindows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L149">property <b>thresholdWindows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L149">property <b>thresholdWindows</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2949,7 +2949,7 @@ A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_1
 required for, anomaly monitors.
 
 <h4 class="pdoc-member-header" id="Monitor-thresholds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L155">property <b>thresholds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L155">property <b>thresholds</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2961,7 +2961,7 @@ Define `monitor_thresholds` list with one element instead.
 Alert thresholds of the monitor.
 
 <h4 class="pdoc-member-header" id="Monitor-timeoutH">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L160">property <b>timeoutH</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L160">property <b>timeoutH</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeoutH: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2970,7 +2970,7 @@ The number of hours of the monitor not reporting data before it will automatical
 Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Monitor-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L166">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L166">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2980,7 +2980,7 @@ Datadog API [documentation page](https://docs.datadoghq.com/api/v1/monitors/#cre
 cannot be changed after a monitor is created.
 
 <h4 class="pdoc-member-header" id="Monitor-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2989,7 +2989,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Monitor-validate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L170">property <b>validate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L170">property <b>validate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>validate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2997,7 +2997,7 @@ deployments.
 If set to `false`, skip the validation call done during plan.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -3010,7 +3010,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -3024,14 +3024,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3042,14 +3042,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3058,7 +3058,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3067,7 +3067,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Role" data-link-title="Role">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/role.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/role.ts#L40">
         Resource <strong>Role</strong>
     </a>
 </h3>
@@ -3106,7 +3106,7 @@ Roles can be imported using their ID, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Role-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/role.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/role.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -3120,7 +3120,7 @@ Create a Role resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Role-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/role.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/role.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -3131,14 +3131,14 @@ Get an existing Role resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Role-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/role.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/role.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Role-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/role.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/role.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3149,7 +3149,7 @@ Returns true if the given object is an instance of Role.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Role-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/role.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/role.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3158,7 +3158,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Role-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/role.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/role.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3166,7 +3166,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the role.
 
 <h4 class="pdoc-member-header" id="Role-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/role.ts#L75">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/role.ts#L75">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#RolePermission'>RolePermission</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3174,7 +3174,7 @@ Name of the role.
 Set of objects containing the permission ID and the name of the permissions granted to this role.
 
 <h4 class="pdoc-member-header" id="Role-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/role.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/role.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3183,7 +3183,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Role-userCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/role.ts#L79">property <b>userCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/role.ts#L79">property <b>userCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3191,7 +3191,7 @@ deployments.
 Number of users that have this role.
 
 <h3 class="pdoc-module-header" id="ScreenBoard" data-link-title="ScreenBoard">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L410">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L410">
         Resource <strong>ScreenBoard</strong>
     </a>
 </h3>
@@ -3600,7 +3600,7 @@ screenboards can be imported using their numeric ID, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ScreenBoard-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L465"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L465"> <b>constructor</b></a>
 </h4>
 
 
@@ -3614,7 +3614,7 @@ Create a ScreenBoard resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ScreenBoard-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L420">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L420">method <b>get</b></a>
 </h4>
 
 
@@ -3625,14 +3625,14 @@ Get an existing ScreenBoard resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ScreenBoard-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L410">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L410">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ScreenBoard-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L431">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L431">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3643,7 +3643,7 @@ Returns true if the given object is an instance of ScreenBoard.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ScreenBoard-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L441">property <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L441">property <b>height</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>height: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3651,7 +3651,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Height of the screenboard
 
 <h4 class="pdoc-member-header" id="ScreenBoard-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L410">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L410">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3660,7 +3660,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ScreenBoard-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L445">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L445">property <b>readOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>readOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3668,7 +3668,7 @@ deployments and may be missing (undefined) during planning phases.
 The read-only status of the screenboard. Default is `false`.
 
 <h4 class="pdoc-member-header" id="ScreenBoard-shared">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L449">property <b>shared</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L449">property <b>shared</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>shared: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3676,7 +3676,7 @@ The read-only status of the screenboard. Default is `false`.
 Whether the screenboard is shared or not
 
 <h4 class="pdoc-member-header" id="ScreenBoard-templateVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L453">property <b>templateVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L453">property <b>templateVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateVariables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardTemplateVariable'>ScreenBoardTemplateVariable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3684,7 +3684,7 @@ Whether the screenboard is shared or not
 A list of template variables for using Dashboard templating.
 
 <h4 class="pdoc-member-header" id="ScreenBoard-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L457">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L457">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3692,7 +3692,7 @@ A list of template variables for using Dashboard templating.
 Name of the screenboard
 
 <h4 class="pdoc-member-header" id="ScreenBoard-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L410">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L410">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3701,7 +3701,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ScreenBoard-widgets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L461">property <b>widgets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L461">property <b>widgets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>widgets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidget'>ScreenBoardWidget</a>[]&gt;;</code></pre>
@@ -3709,7 +3709,7 @@ deployments.
 A list of widget definitions.
 
 <h4 class="pdoc-member-header" id="ScreenBoard-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L465">property <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L465">property <b>width</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>width: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3717,7 +3717,7 @@ A list of widget definitions.
 Width of the screenboard
 
 <h3 class="pdoc-module-header" id="SecurityMonitoringRule" data-link-title="SecurityMonitoringRule">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L59">
         Resource <strong>SecurityMonitoringRule</strong>
     </a>
 </h3>
@@ -3775,7 +3775,7 @@ Security monitoring rules can be imported using ID, e.g. console
 ```
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L114"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L114"> <b>constructor</b></a>
 </h4>
 
 
@@ -3789,7 +3789,7 @@ Create a SecurityMonitoringRule resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L69">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L69">method <b>get</b></a>
 </h4>
 
 
@@ -3800,14 +3800,14 @@ Get an existing SecurityMonitoringRule resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L59">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L59">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L80">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L80">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3818,7 +3818,7 @@ Returns true if the given object is an instance of SecurityMonitoringRule.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRule-cases">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L90">property <b>cases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L90">property <b>cases</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cases: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#SecurityMonitoringRuleCase'>SecurityMonitoringRuleCase</a>[]&gt;;</code></pre>
@@ -3826,7 +3826,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Cases for generating signals.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRule-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L94">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L94">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3834,7 +3834,7 @@ Cases for generating signals.
 Whether the rule is enabled.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L59">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L59">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3843,7 +3843,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRule-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L98">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L98">property <b>message</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>message: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3851,7 +3851,7 @@ deployments and may be missing (undefined) during planning phases.
 Message for generated signals.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L102">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3859,7 +3859,7 @@ Message for generated signals.
 The name of the rule.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRule-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L106">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L106">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>options: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#SecurityMonitoringRuleOptions'>SecurityMonitoringRuleOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3867,7 +3867,7 @@ The name of the rule.
 Options on rules.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRule-queries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L110">property <b>queries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L110">property <b>queries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>queries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#SecurityMonitoringRuleQuery'>SecurityMonitoringRuleQuery</a>[]&gt;;</code></pre>
@@ -3875,7 +3875,7 @@ Options on rules.
 Queries for selecting logs which are part of the rule.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRule-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L114">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L114">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3883,7 +3883,7 @@ Queries for selecting logs which are part of the rule.
 Tags for generated signals.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L59">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L59">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3892,7 +3892,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServiceLevelObjective" data-link-title="ServiceLevelObjective">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L92">
         Resource <strong>ServiceLevelObjective</strong>
     </a>
 </h3>
@@ -3983,7 +3983,7 @@ Service Level Objectives can be imported using their string ID, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjective-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L163"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L163"> <b>constructor</b></a>
 </h4>
 
 
@@ -3997,7 +3997,7 @@ Create a ServiceLevelObjective resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjective-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L102">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L102">method <b>get</b></a>
 </h4>
 
 
@@ -4008,14 +4008,14 @@ Get an existing ServiceLevelObjective resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjective-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L92">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L92">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjective-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L113">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L113">method <b>isInstance</b></a>
 </h4>
 
 
@@ -4026,7 +4026,7 @@ Returns true if the given object is an instance of ServiceLevelObjective.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjective-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L123">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L123">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4034,7 +4034,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A description of this service level objective.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjective-forceDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L128">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L128">property <b>forceDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceDelete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4043,7 +4043,7 @@ A boolean indicating whether this monitor can be deleted even if it’s referenc
 -   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjective-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L132">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L132">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4051,7 +4051,7 @@ A boolean indicating whether this monitor can be deleted even if it’s referenc
 A static set of groups to filter monitor-based SLOs
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjective-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L92">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L92">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -4060,7 +4060,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjective-monitorIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L136">property <b>monitorIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L136">property <b>monitorIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitorIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4068,7 +4068,7 @@ deployments and may be missing (undefined) during planning phases.
 A static set of monitor IDs to use as part of the SLO
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjective-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L140">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L140">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4076,7 +4076,7 @@ A static set of monitor IDs to use as part of the SLO
 Name of Datadog service level objective
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjective-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L144">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L144">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ServiceLevelObjectiveQuery'>ServiceLevelObjectiveQuery</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4084,7 +4084,7 @@ Name of Datadog service level objective
 The metric query of good / total events
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjective-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L148">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L148">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4092,7 +4092,7 @@ The metric query of good / total events
 A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjective-thresholds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L152">property <b>thresholds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L152">property <b>thresholds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>thresholds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ServiceLevelObjectiveThreshold'>ServiceLevelObjectiveThreshold</a>[]&gt;;</code></pre>
@@ -4100,7 +4100,7 @@ A list of tags to associate with your service level objective. This can help you
 A list of thresholds and targets that define the service level objectives from the provided SLIs.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjective-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L159">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L159">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4111,7 +4111,7 @@ page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-o
 are: `metric` and `monitor`.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjective-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L92">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L92">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -4120,7 +4120,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjective-validate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L163">property <b>validate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L163">property <b>validate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>validate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4128,7 +4128,7 @@ deployments.
 Whether or not to validate the SLO.
 
 <h3 class="pdoc-module-header" id="SyntheticsGlobalVariable" data-link-title="SyntheticsGlobalVariable">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L36">
         Resource <strong>SyntheticsGlobalVariable</strong>
     </a>
 </h3>
@@ -4163,7 +4163,7 @@ Synthetics global variables can be imported using their string ID, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariable-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L91"> <b>constructor</b></a>
 </h4>
 
 
@@ -4177,7 +4177,7 @@ Create a SyntheticsGlobalVariable resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariable-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -4188,14 +4188,14 @@ Get an existing SyntheticsGlobalVariable resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariable-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariable-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -4206,7 +4206,7 @@ Returns true if the given object is an instance of SyntheticsGlobalVariable.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariable-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L67">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L67">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4214,7 +4214,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Description of the global variable.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariable-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -4223,7 +4223,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariable-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4231,7 +4231,7 @@ deployments and may be missing (undefined) during planning phases.
 Synthetics global variable name.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariable-parseTestId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L75">property <b>parseTestId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L75">property <b>parseTestId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parseTestId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4239,7 +4239,7 @@ Synthetics global variable name.
 Id of the Synthetics test to use for a variable from test.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariable-parseTestOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L79">property <b>parseTestOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L79">property <b>parseTestOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parseTestOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#SyntheticsGlobalVariableParseTestOptions'>SyntheticsGlobalVariableParseTestOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4247,7 +4247,7 @@ Id of the Synthetics test to use for a variable from test.
 ID of the Synthetics test to use a source of the global variable value.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariable-secure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L83">property <b>secure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L83">property <b>secure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secure: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4255,7 +4255,7 @@ ID of the Synthetics test to use a source of the global variable value.
 Sets the variable as secure. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariable-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L87">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L87">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4263,7 +4263,7 @@ Sets the variable as secure. Defaults to `false`.
 A list of tags to associate with your synthetics global variable.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariable-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -4272,7 +4272,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariable-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L91">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L91">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4280,7 +4280,7 @@ deployments.
 The value of the global variable.
 
 <h3 class="pdoc-module-header" id="SyntheticsPrivateLocation" data-link-title="SyntheticsPrivateLocation">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L34">
         Resource <strong>SyntheticsPrivateLocation</strong>
     </a>
 </h3>
@@ -4314,7 +4314,7 @@ Synthetics private locations can be imported using their string ID, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="SyntheticsPrivateLocation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -4328,7 +4328,7 @@ Create a SyntheticsPrivateLocation resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SyntheticsPrivateLocation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -4339,14 +4339,14 @@ Get an existing SyntheticsPrivateLocation resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SyntheticsPrivateLocation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SyntheticsPrivateLocation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -4357,7 +4357,7 @@ Returns true if the given object is an instance of SyntheticsPrivateLocation.  T
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SyntheticsPrivateLocation-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L66">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L66">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4366,7 +4366,7 @@ Configuration skeleton for the private location. See installation instructions o
 this configuration.
 
 <h4 class="pdoc-member-header" id="SyntheticsPrivateLocation-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L70">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4374,7 +4374,7 @@ this configuration.
 Description of the private location.
 
 <h4 class="pdoc-member-header" id="SyntheticsPrivateLocation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -4383,7 +4383,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SyntheticsPrivateLocation-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L74">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4391,7 +4391,7 @@ deployments and may be missing (undefined) during planning phases.
 Synthetics private location name.
 
 <h4 class="pdoc-member-header" id="SyntheticsPrivateLocation-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L78">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L78">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4399,7 +4399,7 @@ Synthetics private location name.
 A list of tags to associate with your synthetics private location.
 
 <h4 class="pdoc-member-header" id="SyntheticsPrivateLocation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -4408,7 +4408,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SyntheticsTest" data-link-title="SyntheticsTest">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L271">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L271">
         Resource <strong>SyntheticsTest</strong>
     </a>
 </h3>
@@ -4678,7 +4678,7 @@ Synthetics tests can be imported using their public string ID, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L389"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L389"> <b>constructor</b></a>
 </h4>
 
 
@@ -4692,7 +4692,7 @@ Create a SyntheticsTest resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L281">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L281">method <b>get</b></a>
 </h4>
 
 
@@ -4703,14 +4703,14 @@ Get an existing SyntheticsTest resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L271">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L271">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L292">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L292">method <b>isInstance</b></a>
 </h4>
 
 
@@ -4721,7 +4721,7 @@ Returns true if the given object is an instance of SyntheticsTest.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-assertions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L304">property <b>assertions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L304">property <b>assertions</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -4733,7 +4733,7 @@ Use assertion instead
 List of assertions.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-browserVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L308">property <b>browserVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L308">property <b>browserVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>browserVariables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#SyntheticsTestBrowserVariable'>SyntheticsTestBrowserVariable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4741,7 +4741,7 @@ List of assertions.
 Variables used for a browser test steps. Multiple `variable` blocks are allowed with the structure below.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-configVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L312">property <b>configVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L312">property <b>configVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configVariables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#SyntheticsTestConfigVariable'>SyntheticsTestConfigVariable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4749,7 +4749,7 @@ Variables used for a browser test steps. Multiple `variable` blocks are allowed 
 Variables used for the test configuration. Multiple `config_variable` blocks are allowed with the structure below.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-deviceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L317">property <b>deviceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L317">property <b>deviceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deviceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4758,7 +4758,7 @@ Array with the different device IDs used to run the test. Allowed enum values: `
 (only available for `browser` tests).
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L271">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L271">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -4767,7 +4767,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-locations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L323">property <b>locations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L323">property <b>locations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>locations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -4777,7 +4777,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 `aws:eu-central-1`).
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L328">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L328">property <b>message</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>message: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4786,7 +4786,7 @@ A message to include with notifications for this synthetics test. Email notifica
 using the same `@username` notation as events.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-monitorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L332">property <b>monitorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L332">property <b>monitorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4794,7 +4794,7 @@ using the same `@username` notation as events.
 ID of the monitor associated with the Datadog synthetics test.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L336">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L336">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4802,7 +4802,7 @@ ID of the monitor associated with the Datadog synthetics test.
 Name of Datadog synthetics test.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L340">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L340">property <b>options</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -4811,12 +4811,12 @@ This parameter is deprecated, please use `options_list`
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>options: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#SyntheticsTestOptions'>SyntheticsTestOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SyntheticsTest-optionsList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L341">property <b>optionsList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L341">property <b>optionsList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>optionsList: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#SyntheticsTestOptionsList'>SyntheticsTestOptionsList</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SyntheticsTest-request">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L345">property <b>request</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L345">property <b>request</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>request: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#SyntheticsTestRequest'>SyntheticsTestRequest</a>&gt;;</code></pre>
@@ -4824,7 +4824,7 @@ This parameter is deprecated, please use `options_list`
 The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-requestBasicauth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L349">property <b>requestBasicauth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L349">property <b>requestBasicauth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestBasicauth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#SyntheticsTestRequestBasicauth'>SyntheticsTestRequestBasicauth</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4832,7 +4832,7 @@ The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
 The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-requestClientCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L354">property <b>requestClientCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L354">property <b>requestClientCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestClientCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#SyntheticsTestRequestClientCertificate'>SyntheticsTestRequestClientCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4841,7 +4841,7 @@ Client certificate to use when performing the test request. Exactly one nested b
 below.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-requestHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L358">property <b>requestHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L358">property <b>requestHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestHeaders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4849,7 +4849,7 @@ below.
 Header name and value map.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-requestQuery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L362">property <b>requestQuery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L362">property <b>requestQuery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestQuery: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4857,7 +4857,7 @@ Header name and value map.
 Query arguments name and value map.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L366">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L366">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4865,7 +4865,7 @@ Query arguments name and value map.
 Define whether you want to start (`live`) or pause (`paused`) a Synthetic test. Allowed enum values: `live`, `paused`
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-steps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L370">property <b>steps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L370">property <b>steps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>steps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#SyntheticsTestStep'>SyntheticsTestStep</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4873,7 +4873,7 @@ Define whether you want to start (`live`) or pause (`paused`) a Synthetic test. 
 Steps for browser tests.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-subtype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L374">property <b>subtype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L374">property <b>subtype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subtype: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4881,7 +4881,7 @@ Steps for browser tests.
 When `type` is `api`, choose from `http`, `ssl`, `tcp` or `dns`. Defaults to `http`.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L379">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L379">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4890,7 +4890,7 @@ A list of tags to associate with your synthetics test. This can help you categor
 synthetics page of the UI. Default is an empty list (`[]`).
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L383">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L383">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4898,7 +4898,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 Synthetics test type (`api` or `browser`).
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L271">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L271">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -4907,7 +4907,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SyntheticsTest-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L389">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L389">property <b>variables</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -4919,7 +4919,7 @@ This parameter is deprecated, please use `browser_variable`
 Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below.
 
 <h3 class="pdoc-module-header" id="TimeBoard" data-link-title="TimeBoard">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L17">
         Resource <strong>TimeBoard</strong>
     </a>
 </h3>
@@ -4935,7 +4935,7 @@ Timeboards can be imported using their numeric ID, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="TimeBoard-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L64"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L64"> <b>constructor</b></a>
 </h4>
 
 
@@ -4949,7 +4949,7 @@ Create a TimeBoard resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TimeBoard-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L27">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L27">method <b>get</b></a>
 </h4>
 
 
@@ -4960,14 +4960,14 @@ Get an existing TimeBoard resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TimeBoard-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L17">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TimeBoard-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L38">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L38">method <b>isInstance</b></a>
 </h4>
 
 
@@ -4978,7 +4978,7 @@ Returns true if the given object is an instance of TimeBoard.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TimeBoard-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L48">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L48">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4986,7 +4986,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A description of the dashboard's content.
 
 <h4 class="pdoc-member-header" id="TimeBoard-graphs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L52">property <b>graphs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L52">property <b>graphs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>graphs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraph'>TimeBoardGraph</a>[]&gt;;</code></pre>
@@ -4994,7 +4994,7 @@ A description of the dashboard's content.
 A list of graph definitions.
 
 <h4 class="pdoc-member-header" id="TimeBoard-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L17">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -5003,7 +5003,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TimeBoard-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L56">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L56">property <b>readOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>readOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -5011,7 +5011,7 @@ deployments and may be missing (undefined) during planning phases.
 The read-only status of the timeboard. Default is false.
 
 <h4 class="pdoc-member-header" id="TimeBoard-templateVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L60">property <b>templateVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L60">property <b>templateVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateVariables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardTemplateVariable'>TimeBoardTemplateVariable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -5019,7 +5019,7 @@ The read-only status of the timeboard. Default is false.
 A list of template variables for using Dashboard templating.
 
 <h4 class="pdoc-member-header" id="TimeBoard-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L64">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L64">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5027,7 +5027,7 @@ A list of template variables for using Dashboard templating.
 The name of the dashboard.
 
 <h4 class="pdoc-member-header" id="TimeBoard-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -5036,7 +5036,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="User" data-link-title="User">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L56">
         Resource <strong>User</strong>
     </a>
 </h3>
@@ -5092,7 +5092,7 @@ Import is supported using the following syntax
 ```
 
 <h4 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L138"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L138"> <b>constructor</b></a>
 </h4>
 
 
@@ -5106,7 +5106,7 @@ Create a User resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L66">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L66">method <b>get</b></a>
 </h4>
 
 
@@ -5117,14 +5117,14 @@ Get an existing User resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L56">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L56">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L77">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L77">method <b>isInstance</b></a>
 </h4>
 
 
@@ -5135,7 +5135,7 @@ Returns true if the given object is an instance of User.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="User-accessRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L90">property <b>accessRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L90">property <b>accessRole</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -5148,7 +5148,7 @@ Role description for user. Can be `st` (standard user), `adm` (admin user) or `r
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
 
 <h4 class="pdoc-member-header" id="User-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L94">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L94">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -5156,7 +5156,7 @@ Role description for user. Can be `st` (standard user), `adm` (admin user) or `r
 Whether the user is disabled.
 
 <h4 class="pdoc-member-header" id="User-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L98">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L98">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5164,7 +5164,7 @@ Whether the user is disabled.
 Email address for user.
 
 <h4 class="pdoc-member-header" id="User-handle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L104">property <b>handle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L104">property <b>handle</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -5176,7 +5176,7 @@ This parameter is deprecated and will be removed from the next Major version
 The user handle, must be a valid email.
 
 <h4 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -5185,7 +5185,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="User-isAdmin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L111">property <b>isAdmin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L111">property <b>isAdmin</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -5198,7 +5198,7 @@ Whether the user is an administrator. Warning: the corresponding query parameter
 argument would always trigger an execution plan.
 
 <h4 class="pdoc-member-header" id="User-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L115">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L115">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -5206,7 +5206,7 @@ argument would always trigger an execution plan.
 Name for user.
 
 <h4 class="pdoc-member-header" id="User-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L122">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L122">property <b>role</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -5219,7 +5219,7 @@ Role description for user. Warning: the corresponding query parameter is ignored
 would always trigger an execution plan.
 
 <h4 class="pdoc-member-header" id="User-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L126">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L126">property <b>roles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -5227,7 +5227,7 @@ would always trigger an execution plan.
 A list a role IDs to assign to the user.
 
 <h4 class="pdoc-member-header" id="User-sendUserInvitation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L130">property <b>sendUserInvitation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L130">property <b>sendUserInvitation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sendUserInvitation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -5235,7 +5235,7 @@ A list a role IDs to assign to the user.
 Whether an invitation email should be sent when the user is created.
 
 <h4 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L56">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L56">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -5244,7 +5244,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="User-userInvitationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L134">property <b>userInvitationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L134">property <b>userInvitationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userInvitationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5252,7 +5252,7 @@ deployments.
 The ID of the user invitation that was sent when creating the user.
 
 <h4 class="pdoc-member-header" id="User-verified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L138">property <b>verified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L138">property <b>verified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>verified: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5262,7 +5262,7 @@ Returns true if Datadog user is verified.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDashboard" data-link-title="getDashboard">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getDashboard.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getDashboard.ts#L22">
         Function <strong>getDashboard</strong>
     </a>
 </h3>
@@ -5285,7 +5285,7 @@ const test = pulumi.output(datadog.getDashboard({
 ```
 
 <h3 class="pdoc-module-header" id="getDashboardList" data-link-title="getDashboardList">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getDashboardList.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getDashboardList.ts#L22">
         Function <strong>getDashboardList</strong>
     </a>
 </h3>
@@ -5308,7 +5308,7 @@ const test = pulumi.output(datadog.getDashboardList({
 ```
 
 <h3 class="pdoc-module-header" id="getIpRanges" data-link-title="getIpRanges">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getIpRanges.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getIpRanges.ts#L20">
         Function <strong>getIpRanges</strong>
     </a>
 </h3>
@@ -5329,7 +5329,7 @@ const test = pulumi.output(datadog.getIpRanges({ async: true }));
 ```
 
 <h3 class="pdoc-module-header" id="getMonitor" data-link-title="getMonitor">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L75">
         Function <strong>getMonitor</strong>
     </a>
 </h3>
@@ -5405,7 +5405,7 @@ Read-only:
 - **warning_recovery** (String)
 
 <h3 class="pdoc-module-header" id="getPermissions" data-link-title="getPermissions">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getPermissions.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getPermissions.ts#L20">
         Function <strong>getPermissions</strong>
     </a>
 </h3>
@@ -5426,7 +5426,7 @@ const permissions = pulumi.output(datadog.getPermissions({ async: true }));
 ```
 
 <h3 class="pdoc-module-header" id="getRole" data-link-title="getRole">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getRole.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getRole.ts#L22">
         Function <strong>getRole</strong>
     </a>
 </h3>
@@ -5449,7 +5449,7 @@ const test = pulumi.output(datadog.getRole({
 ```
 
 <h3 class="pdoc-module-header" id="getSecurityMonitoringRules" data-link-title="getSecurityMonitoringRules">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSecurityMonitoringRules.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSecurityMonitoringRules.ts#L24">
         Function <strong>getSecurityMonitoringRules</strong>
     </a>
 </h3>
@@ -5474,7 +5474,7 @@ const test = pulumi.output(datadog.getSecurityMonitoringRules({
 ```
 
 <h3 class="pdoc-module-header" id="getSyntheticsLocations" data-link-title="getSyntheticsLocations">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSyntheticsLocations.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSyntheticsLocations.ts#L11">
         Function <strong>getSyntheticsLocations</strong>
     </a>
 </h3>
@@ -5488,7 +5488,7 @@ Use this data source to retrieve Datadog's Synthetics Locations (to be used in S
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DashboardArgs" data-link-title="DashboardArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L842">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L842">
         interface <strong>DashboardArgs</strong>
     </a>
 </h3>
@@ -5498,7 +5498,7 @@ Use this data source to retrieve Datadog's Synthetics Locations (to be used in S
 The set of arguments for constructing a Dashboard resource.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-dashboardLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L846">property <b>dashboardLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L846">property <b>dashboardLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -5506,7 +5506,7 @@ The set of arguments for constructing a Dashboard resource.
 The list of dashboard lists this dashboard belongs to.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L850">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L850">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5514,7 +5514,7 @@ The list of dashboard lists this dashboard belongs to.
 The description of the dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-isReadOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L854">property <b>isReadOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L854">property <b>isReadOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isReadOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5522,7 +5522,7 @@ The description of the dashboard.
 Whether this dashboard is read-only.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-layoutType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L858">property <b>layoutType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L858">property <b>layoutType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>layoutType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5530,7 +5530,7 @@ Whether this dashboard is read-only.
 The layout type of the dashboard, either 'free' or 'ordered'.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-notifyLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L862">property <b>notifyLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L862">property <b>notifyLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5538,7 +5538,7 @@ The layout type of the dashboard, either 'free' or 'ordered'.
 The list of handles of users to notify when changes are made to this dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-templateVariablePresets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L866">property <b>templateVariablePresets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L866">property <b>templateVariablePresets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateVariablePresets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardTemplateVariablePreset'>DashboardTemplateVariablePreset</a>&gt;[]&gt;;</code></pre>
@@ -5546,7 +5546,7 @@ The list of handles of users to notify when changes are made to this dashboard.
 The list of selectable template variable presets for this dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-templateVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L870">property <b>templateVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L870">property <b>templateVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardTemplateVariable'>DashboardTemplateVariable</a>&gt;[]&gt;;</code></pre>
@@ -5554,7 +5554,7 @@ The list of selectable template variable presets for this dashboard.
 The list of template variables for this dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L874">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L874">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5562,7 +5562,7 @@ The list of template variables for this dashboard.
 The title of the dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L878">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L878">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5570,7 +5570,7 @@ The title of the dashboard.
 The URL of the dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-widgets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L882">property <b>widgets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L882">property <b>widgets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>widgets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidget'>DashboardWidget</a>&gt;[]&gt;;</code></pre>
@@ -5578,7 +5578,7 @@ The URL of the dashboard.
 The list of widgets to display on the dashboard.
 
 <h3 class="pdoc-module-header" id="DashboardListArgs" data-link-title="DashboardListArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboardList.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboardList.ts#L169">
         interface <strong>DashboardListArgs</strong>
     </a>
 </h3>
@@ -5588,7 +5588,7 @@ The list of widgets to display on the dashboard.
 The set of arguments for constructing a DashboardList resource.
 
 <h4 class="pdoc-member-header" id="DashboardListArgs-dashItems">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboardList.ts#L173">property <b>dashItems</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboardList.ts#L173">property <b>dashItems</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashItems?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardListDashItem'>DashboardListDashItem</a>&gt;[]&gt;;</code></pre>
@@ -5596,7 +5596,7 @@ The set of arguments for constructing a DashboardList resource.
 A set of dashbaord items that belong to this list
 
 <h4 class="pdoc-member-header" id="DashboardListArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboardList.ts#L177">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboardList.ts#L177">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5604,7 +5604,7 @@ A set of dashbaord items that belong to this list
 The name of the Dashboard List
 
 <h3 class="pdoc-module-header" id="DashboardListState" data-link-title="DashboardListState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboardList.ts#L155">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboardList.ts#L155">
         interface <strong>DashboardListState</strong>
     </a>
 </h3>
@@ -5614,7 +5614,7 @@ The name of the Dashboard List
 Input properties used for looking up and filtering DashboardList resources.
 
 <h4 class="pdoc-member-header" id="DashboardListState-dashItems">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboardList.ts#L159">property <b>dashItems</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboardList.ts#L159">property <b>dashItems</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashItems?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardListDashItem'>DashboardListDashItem</a>&gt;[]&gt;;</code></pre>
@@ -5622,7 +5622,7 @@ Input properties used for looking up and filtering DashboardList resources.
 A set of dashbaord items that belong to this list
 
 <h4 class="pdoc-member-header" id="DashboardListState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboardList.ts#L163">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboardList.ts#L163">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5630,7 +5630,7 @@ A set of dashbaord items that belong to this list
 The name of the Dashboard List
 
 <h3 class="pdoc-module-header" id="DashboardState" data-link-title="DashboardState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L792">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L792">
         interface <strong>DashboardState</strong>
     </a>
 </h3>
@@ -5640,7 +5640,7 @@ The name of the Dashboard List
 Input properties used for looking up and filtering Dashboard resources.
 
 <h4 class="pdoc-member-header" id="DashboardState-dashboardLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L796">property <b>dashboardLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L796">property <b>dashboardLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -5648,7 +5648,7 @@ Input properties used for looking up and filtering Dashboard resources.
 The list of dashboard lists this dashboard belongs to.
 
 <h4 class="pdoc-member-header" id="DashboardState-dashboardListsRemoveds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L800">property <b>dashboardListsRemoveds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L800">property <b>dashboardListsRemoveds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardListsRemoveds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -5656,7 +5656,7 @@ The list of dashboard lists this dashboard belongs to.
 The list of dashboard lists this dashboard should be removed from. Internal only.
 
 <h4 class="pdoc-member-header" id="DashboardState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L804">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L804">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5664,7 +5664,7 @@ The list of dashboard lists this dashboard should be removed from. Internal only
 The description of the dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardState-isReadOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L808">property <b>isReadOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L808">property <b>isReadOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isReadOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5672,7 +5672,7 @@ The description of the dashboard.
 Whether this dashboard is read-only.
 
 <h4 class="pdoc-member-header" id="DashboardState-layoutType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L812">property <b>layoutType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L812">property <b>layoutType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>layoutType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5680,7 +5680,7 @@ Whether this dashboard is read-only.
 The layout type of the dashboard, either 'free' or 'ordered'.
 
 <h4 class="pdoc-member-header" id="DashboardState-notifyLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L816">property <b>notifyLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L816">property <b>notifyLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5688,7 +5688,7 @@ The layout type of the dashboard, either 'free' or 'ordered'.
 The list of handles of users to notify when changes are made to this dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardState-templateVariablePresets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L820">property <b>templateVariablePresets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L820">property <b>templateVariablePresets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateVariablePresets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardTemplateVariablePreset'>DashboardTemplateVariablePreset</a>&gt;[]&gt;;</code></pre>
@@ -5696,7 +5696,7 @@ The list of handles of users to notify when changes are made to this dashboard.
 The list of selectable template variable presets for this dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardState-templateVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L824">property <b>templateVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L824">property <b>templateVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardTemplateVariable'>DashboardTemplateVariable</a>&gt;[]&gt;;</code></pre>
@@ -5704,7 +5704,7 @@ The list of selectable template variable presets for this dashboard.
 The list of template variables for this dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardState-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L828">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L828">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5712,7 +5712,7 @@ The list of template variables for this dashboard.
 The title of the dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L832">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L832">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5720,7 +5720,7 @@ The title of the dashboard.
 The URL of the dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardState-widgets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/dashboard.ts#L836">property <b>widgets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/dashboard.ts#L836">property <b>widgets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>widgets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidget'>DashboardWidget</a>&gt;[]&gt;;</code></pre>
@@ -5728,7 +5728,7 @@ The URL of the dashboard.
 The list of widgets to display on the dashboard.
 
 <h3 class="pdoc-module-header" id="DowntimeArgs" data-link-title="DowntimeArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L243">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L243">
         interface <strong>DowntimeArgs</strong>
     </a>
 </h3>
@@ -5738,7 +5738,7 @@ The list of widgets to display on the dashboard.
 The set of arguments for constructing a Downtime resource.
 
 <h4 class="pdoc-member-header" id="DowntimeArgs-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L247">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L247">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5746,7 +5746,7 @@ The set of arguments for constructing a Downtime resource.
 When true indicates this downtime is being actively applied
 
 <h4 class="pdoc-member-header" id="DowntimeArgs-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L251">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L251">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5754,7 +5754,7 @@ When true indicates this downtime is being actively applied
 When true indicates this downtime is not being applied
 
 <h4 class="pdoc-member-header" id="DowntimeArgs-end">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L255">property <b>end</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L255">property <b>end</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>end?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5762,7 +5762,7 @@ When true indicates this downtime is not being applied
 Optionally specify an end date when this downtime should expire
 
 <h4 class="pdoc-member-header" id="DowntimeArgs-endDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L259">property <b>endDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L259">property <b>endDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5770,7 +5770,7 @@ Optionally specify an end date when this downtime should expire
 String representing date and time to end the downtime in RFC3339 format.
 
 <h4 class="pdoc-member-header" id="DowntimeArgs-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L263">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L263">property <b>message</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>message?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5778,7 +5778,7 @@ String representing date and time to end the downtime in RFC3339 format.
 An optional message to provide when creating the downtime, can include notification handles
 
 <h4 class="pdoc-member-header" id="DowntimeArgs-monitorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L267">property <b>monitorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L267">property <b>monitorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5786,7 +5786,7 @@ An optional message to provide when creating the downtime, can include notificat
 When specified, this downtime will only apply to this monitor
 
 <h4 class="pdoc-member-header" id="DowntimeArgs-monitorTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L271">property <b>monitorTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L271">property <b>monitorTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5794,7 +5794,7 @@ When specified, this downtime will only apply to this monitor
 A list of monitor tags (up to 25), i.e. tags that are applied directly to monitors to which the downtime applies
 
 <h4 class="pdoc-member-header" id="DowntimeArgs-recurrence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L275">property <b>recurrence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L275">property <b>recurrence</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DowntimeRecurrence'>DowntimeRecurrence</a>&gt;;</code></pre>
@@ -5802,7 +5802,7 @@ A list of monitor tags (up to 25), i.e. tags that are applied directly to monito
 Optional recurring schedule for this downtime
 
 <h4 class="pdoc-member-header" id="DowntimeArgs-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L279">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L279">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5810,7 +5810,7 @@ Optional recurring schedule for this downtime
 specify the group scope to which this downtime applies. For everything use '*'
 
 <h4 class="pdoc-member-header" id="DowntimeArgs-start">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L283">property <b>start</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L283">property <b>start</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>start?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5818,7 +5818,7 @@ specify the group scope to which this downtime applies. For everything use '*'
 Specify when this downtime should start
 
 <h4 class="pdoc-member-header" id="DowntimeArgs-startDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L287">property <b>startDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L287">property <b>startDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5826,7 +5826,7 @@ Specify when this downtime should start
 String representing date and time to start the downtime in RFC3339 format.
 
 <h4 class="pdoc-member-header" id="DowntimeArgs-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L291">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L291">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5834,7 +5834,7 @@ String representing date and time to start the downtime in RFC3339 format.
 The timezone for the downtime, default UTC
 
 <h3 class="pdoc-module-header" id="DowntimeState" data-link-title="DowntimeState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L189">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L189">
         interface <strong>DowntimeState</strong>
     </a>
 </h3>
@@ -5844,7 +5844,7 @@ The timezone for the downtime, default UTC
 Input properties used for looking up and filtering Downtime resources.
 
 <h4 class="pdoc-member-header" id="DowntimeState-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L193">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L193">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5852,7 +5852,7 @@ Input properties used for looking up and filtering Downtime resources.
 When true indicates this downtime is being actively applied
 
 <h4 class="pdoc-member-header" id="DowntimeState-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L197">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L197">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5860,7 +5860,7 @@ When true indicates this downtime is being actively applied
 When true indicates this downtime is not being applied
 
 <h4 class="pdoc-member-header" id="DowntimeState-end">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L201">property <b>end</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L201">property <b>end</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>end?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5868,7 +5868,7 @@ When true indicates this downtime is not being applied
 Optionally specify an end date when this downtime should expire
 
 <h4 class="pdoc-member-header" id="DowntimeState-endDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L205">property <b>endDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L205">property <b>endDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5876,7 +5876,7 @@ Optionally specify an end date when this downtime should expire
 String representing date and time to end the downtime in RFC3339 format.
 
 <h4 class="pdoc-member-header" id="DowntimeState-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L209">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L209">property <b>message</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>message?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5884,7 +5884,7 @@ String representing date and time to end the downtime in RFC3339 format.
 An optional message to provide when creating the downtime, can include notification handles
 
 <h4 class="pdoc-member-header" id="DowntimeState-monitorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L213">property <b>monitorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L213">property <b>monitorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5892,7 +5892,7 @@ An optional message to provide when creating the downtime, can include notificat
 When specified, this downtime will only apply to this monitor
 
 <h4 class="pdoc-member-header" id="DowntimeState-monitorTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L217">property <b>monitorTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L217">property <b>monitorTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5900,7 +5900,7 @@ When specified, this downtime will only apply to this monitor
 A list of monitor tags (up to 25), i.e. tags that are applied directly to monitors to which the downtime applies
 
 <h4 class="pdoc-member-header" id="DowntimeState-recurrence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L221">property <b>recurrence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L221">property <b>recurrence</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DowntimeRecurrence'>DowntimeRecurrence</a>&gt;;</code></pre>
@@ -5908,7 +5908,7 @@ A list of monitor tags (up to 25), i.e. tags that are applied directly to monito
 Optional recurring schedule for this downtime
 
 <h4 class="pdoc-member-header" id="DowntimeState-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L225">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L225">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5916,7 +5916,7 @@ Optional recurring schedule for this downtime
 specify the group scope to which this downtime applies. For everything use '*'
 
 <h4 class="pdoc-member-header" id="DowntimeState-start">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L229">property <b>start</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L229">property <b>start</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>start?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5924,7 +5924,7 @@ specify the group scope to which this downtime applies. For everything use '*'
 Specify when this downtime should start
 
 <h4 class="pdoc-member-header" id="DowntimeState-startDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L233">property <b>startDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L233">property <b>startDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5932,7 +5932,7 @@ Specify when this downtime should start
 String representing date and time to start the downtime in RFC3339 format.
 
 <h4 class="pdoc-member-header" id="DowntimeState-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/downtime.ts#L237">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/downtime.ts#L237">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5940,7 +5940,7 @@ String representing date and time to start the downtime in RFC3339 format.
 The timezone for the downtime, default UTC
 
 <h3 class="pdoc-module-header" id="GetDashboardArgs" data-link-title="GetDashboardArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getDashboard.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getDashboard.ts#L38">
         interface <strong>GetDashboardArgs</strong>
     </a>
 </h3>
@@ -5950,12 +5950,12 @@ The timezone for the downtime, default UTC
 A collection of arguments for invoking getDashboard.
 
 <h4 class="pdoc-member-header" id="GetDashboardArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getDashboard.ts#L39">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getDashboard.ts#L39">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDashboardListArgs" data-link-title="GetDashboardListArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getDashboardList.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getDashboardList.ts#L38">
         interface <strong>GetDashboardListArgs</strong>
     </a>
 </h3>
@@ -5965,12 +5965,12 @@ A collection of arguments for invoking getDashboard.
 A collection of arguments for invoking getDashboardList.
 
 <h4 class="pdoc-member-header" id="GetDashboardListArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getDashboardList.ts#L39">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getDashboardList.ts#L39">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDashboardListResult" data-link-title="GetDashboardListResult">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getDashboardList.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getDashboardList.ts#L45">
         interface <strong>GetDashboardListResult</strong>
     </a>
 </h3>
@@ -5980,7 +5980,7 @@ A collection of arguments for invoking getDashboardList.
 A collection of values returned by getDashboardList.
 
 <h4 class="pdoc-member-header" id="GetDashboardListResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getDashboardList.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getDashboardList.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5988,12 +5988,12 @@ A collection of values returned by getDashboardList.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDashboardListResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getDashboardList.ts#L50">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getDashboardList.ts#L50">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDashboardResult" data-link-title="GetDashboardResult">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getDashboard.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getDashboard.ts#L45">
         interface <strong>GetDashboardResult</strong>
     </a>
 </h3>
@@ -6003,7 +6003,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of values returned by getDashboard.
 
 <h4 class="pdoc-member-header" id="GetDashboardResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getDashboard.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getDashboard.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6011,22 +6011,22 @@ A collection of values returned by getDashboard.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDashboardResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getDashboard.ts#L50">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getDashboard.ts#L50">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDashboardResult-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getDashboard.ts#L51">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getDashboard.ts#L51">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDashboardResult-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getDashboard.ts#L52">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getDashboard.ts#L52">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -6035,7 +6035,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -6044,7 +6044,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -6053,7 +6053,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetIpRangesResult" data-link-title="GetIpRangesResult">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getIpRanges.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getIpRanges.ts#L35">
         interface <strong>GetIpRangesResult</strong>
     </a>
 </h3>
@@ -6063,37 +6063,37 @@ The provider-assigned unique ID for this managed resource.
 A collection of values returned by getIpRanges.
 
 <h4 class="pdoc-member-header" id="GetIpRangesResult-agentsIpv4s">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getIpRanges.ts#L36">property <b>agentsIpv4s</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getIpRanges.ts#L36">property <b>agentsIpv4s</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>agentsIpv4s: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetIpRangesResult-agentsIpv6s">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getIpRanges.ts#L37">property <b>agentsIpv6s</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getIpRanges.ts#L37">property <b>agentsIpv6s</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>agentsIpv6s: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetIpRangesResult-apiIpv4s">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getIpRanges.ts#L38">property <b>apiIpv4s</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getIpRanges.ts#L38">property <b>apiIpv4s</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiIpv4s: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetIpRangesResult-apiIpv6s">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getIpRanges.ts#L39">property <b>apiIpv6s</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getIpRanges.ts#L39">property <b>apiIpv6s</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiIpv6s: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetIpRangesResult-apmIpv4s">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getIpRanges.ts#L40">property <b>apmIpv4s</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getIpRanges.ts#L40">property <b>apmIpv4s</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apmIpv4s: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetIpRangesResult-apmIpv6s">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getIpRanges.ts#L41">property <b>apmIpv6s</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getIpRanges.ts#L41">property <b>apmIpv6s</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apmIpv6s: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetIpRangesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getIpRanges.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getIpRanges.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6101,47 +6101,47 @@ A collection of values returned by getIpRanges.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetIpRangesResult-logsIpv4s">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getIpRanges.ts#L46">property <b>logsIpv4s</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getIpRanges.ts#L46">property <b>logsIpv4s</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logsIpv4s: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetIpRangesResult-logsIpv6s">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getIpRanges.ts#L47">property <b>logsIpv6s</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getIpRanges.ts#L47">property <b>logsIpv6s</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logsIpv6s: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetIpRangesResult-processIpv4s">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getIpRanges.ts#L48">property <b>processIpv4s</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getIpRanges.ts#L48">property <b>processIpv4s</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>processIpv4s: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetIpRangesResult-processIpv6s">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getIpRanges.ts#L49">property <b>processIpv6s</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getIpRanges.ts#L49">property <b>processIpv6s</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>processIpv6s: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetIpRangesResult-syntheticsIpv4s">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getIpRanges.ts#L50">property <b>syntheticsIpv4s</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getIpRanges.ts#L50">property <b>syntheticsIpv4s</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>syntheticsIpv4s: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetIpRangesResult-syntheticsIpv6s">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getIpRanges.ts#L51">property <b>syntheticsIpv6s</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getIpRanges.ts#L51">property <b>syntheticsIpv6s</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>syntheticsIpv6s: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetIpRangesResult-webhooksIpv4s">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getIpRanges.ts#L52">property <b>webhooksIpv4s</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getIpRanges.ts#L52">property <b>webhooksIpv4s</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webhooksIpv4s: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetIpRangesResult-webhooksIpv6s">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getIpRanges.ts#L53">property <b>webhooksIpv6s</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getIpRanges.ts#L53">property <b>webhooksIpv6s</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webhooksIpv6s: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetMonitorArgs" data-link-title="GetMonitorArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L94">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L94">
         interface <strong>GetMonitorArgs</strong>
     </a>
 </h3>
@@ -6151,22 +6151,22 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getMonitor.
 
 <h4 class="pdoc-member-header" id="GetMonitorArgs-monitorTagsFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L95">property <b>monitorTagsFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L95">property <b>monitorTagsFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorTagsFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorArgs-nameFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L96">property <b>nameFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L96">property <b>nameFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameFilter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorArgs-tagsFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L97">property <b>tagsFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L97">property <b>tagsFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagsFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetMonitorResult" data-link-title="GetMonitorResult">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L103">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L103">
         interface <strong>GetMonitorResult</strong>
     </a>
 </h3>
@@ -6176,22 +6176,22 @@ A collection of arguments for invoking getMonitor.
 A collection of values returned by getMonitor.
 
 <h4 class="pdoc-member-header" id="GetMonitorResult-enableLogsSample">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L104">property <b>enableLogsSample</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L104">property <b>enableLogsSample</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableLogsSample: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-escalationMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L105">property <b>escalationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L105">property <b>escalationMessage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>escalationMessage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-evaluationDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L106">property <b>evaluationDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L106">property <b>evaluationDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationDelay: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L110">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L110">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6199,92 +6199,92 @@ A collection of values returned by getMonitor.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetMonitorResult-includeTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L111">property <b>includeTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L111">property <b>includeTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeTags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-locked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L112">property <b>locked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L112">property <b>locked</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locked: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L113">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L113">property <b>message</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-monitorTagsFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L114">property <b>monitorTagsFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L114">property <b>monitorTagsFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorTagsFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-monitorThresholdWindows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L115">property <b>monitorThresholdWindows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L115">property <b>monitorThresholdWindows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorThresholdWindows: <a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#GetMonitorMonitorThresholdWindows'>GetMonitorMonitorThresholdWindows</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-monitorThresholds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L116">property <b>monitorThresholds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L116">property <b>monitorThresholds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorThresholds: <a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#GetMonitorMonitorThresholds'>GetMonitorMonitorThresholds</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L117">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L117">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-nameFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L118">property <b>nameFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L118">property <b>nameFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameFilter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-newHostDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L119">property <b>newHostDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L119">property <b>newHostDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>newHostDelay: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-noDataTimeframe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L120">property <b>noDataTimeframe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L120">property <b>noDataTimeframe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noDataTimeframe: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-notifyAudit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L121">property <b>notifyAudit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L121">property <b>notifyAudit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyAudit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-notifyNoData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L122">property <b>notifyNoData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L122">property <b>notifyNoData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyNoData: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L123">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L123">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-renotifyInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L124">property <b>renotifyInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L124">property <b>renotifyInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renotifyInterval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-requireFullWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L125">property <b>requireFullWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L125">property <b>requireFullWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireFullWindow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L126">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L126">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-tagsFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L127">property <b>tagsFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L127">property <b>tagsFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagsFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-thresholdWindows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L131">property <b>thresholdWindows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L131">property <b>thresholdWindows</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -6293,7 +6293,7 @@ Define `monitor_threshold_windows` list with one element instead.
 </div>
 <pre class="highlight"><code><span class='kd'></span>thresholdWindows: <a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#GetMonitorThresholdWindows'>GetMonitorThresholdWindows</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-thresholds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L135">property <b>thresholds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L135">property <b>thresholds</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -6302,17 +6302,17 @@ Define `monitor_thresholds` list with one element instead.
 </div>
 <pre class="highlight"><code><span class='kd'></span>thresholds: <a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#GetMonitorThresholds'>GetMonitorThresholds</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-timeoutH">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L136">property <b>timeoutH</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L136">property <b>timeoutH</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeoutH: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getMonitor.ts#L137">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getMonitor.ts#L137">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetPermissionsResult" data-link-title="GetPermissionsResult">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getPermissions.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getPermissions.ts#L35">
         interface <strong>GetPermissionsResult</strong>
     </a>
 </h3>
@@ -6322,7 +6322,7 @@ Define `monitor_thresholds` list with one element instead.
 A collection of values returned by getPermissions.
 
 <h4 class="pdoc-member-header" id="GetPermissionsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getPermissions.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getPermissions.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6330,12 +6330,12 @@ A collection of values returned by getPermissions.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPermissionsResult-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getPermissions.ts#L40">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getPermissions.ts#L40">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="GetRoleArgs" data-link-title="GetRoleArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getRole.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getRole.ts#L38">
         interface <strong>GetRoleArgs</strong>
     </a>
 </h3>
@@ -6345,12 +6345,12 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getRole.
 
 <h4 class="pdoc-member-header" id="GetRoleArgs-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getRole.ts#L39">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getRole.ts#L39">property <b>filter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRoleResult" data-link-title="GetRoleResult">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getRole.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getRole.ts#L45">
         interface <strong>GetRoleResult</strong>
     </a>
 </h3>
@@ -6360,12 +6360,12 @@ A collection of arguments for invoking getRole.
 A collection of values returned by getRole.
 
 <h4 class="pdoc-member-header" id="GetRoleResult-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getRole.ts#L46">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getRole.ts#L46">property <b>filter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRoleResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getRole.ts#L50">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getRole.ts#L50">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6373,17 +6373,17 @@ A collection of values returned by getRole.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRoleResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getRole.ts#L51">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getRole.ts#L51">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRoleResult-userCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getRole.ts#L52">property <b>userCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getRole.ts#L52">property <b>userCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetSecurityMonitoringRulesArgs" data-link-title="GetSecurityMonitoringRulesArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSecurityMonitoringRules.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSecurityMonitoringRules.ts#L44">
         interface <strong>GetSecurityMonitoringRulesArgs</strong>
     </a>
 </h3>
@@ -6393,27 +6393,27 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getSecurityMonitoringRules.
 
 <h4 class="pdoc-member-header" id="GetSecurityMonitoringRulesArgs-defaultOnlyFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSecurityMonitoringRules.ts#L45">property <b>defaultOnlyFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSecurityMonitoringRules.ts#L45">property <b>defaultOnlyFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultOnlyFilter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSecurityMonitoringRulesArgs-nameFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSecurityMonitoringRules.ts#L46">property <b>nameFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSecurityMonitoringRules.ts#L46">property <b>nameFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameFilter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSecurityMonitoringRulesArgs-tagsFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSecurityMonitoringRules.ts#L47">property <b>tagsFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSecurityMonitoringRules.ts#L47">property <b>tagsFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagsFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSecurityMonitoringRulesArgs-userOnlyFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSecurityMonitoringRules.ts#L48">property <b>userOnlyFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSecurityMonitoringRules.ts#L48">property <b>userOnlyFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userOnlyFilter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetSecurityMonitoringRulesResult" data-link-title="GetSecurityMonitoringRulesResult">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSecurityMonitoringRules.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSecurityMonitoringRules.ts#L54">
         interface <strong>GetSecurityMonitoringRulesResult</strong>
     </a>
 </h3>
@@ -6423,12 +6423,12 @@ A collection of arguments for invoking getSecurityMonitoringRules.
 A collection of values returned by getSecurityMonitoringRules.
 
 <h4 class="pdoc-member-header" id="GetSecurityMonitoringRulesResult-defaultOnlyFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSecurityMonitoringRules.ts#L55">property <b>defaultOnlyFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSecurityMonitoringRules.ts#L55">property <b>defaultOnlyFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultOnlyFilter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSecurityMonitoringRulesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSecurityMonitoringRules.ts#L59">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSecurityMonitoringRules.ts#L59">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6436,32 +6436,32 @@ A collection of values returned by getSecurityMonitoringRules.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSecurityMonitoringRulesResult-nameFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSecurityMonitoringRules.ts#L60">property <b>nameFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSecurityMonitoringRules.ts#L60">property <b>nameFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameFilter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSecurityMonitoringRulesResult-ruleIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSecurityMonitoringRules.ts#L61">property <b>ruleIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSecurityMonitoringRules.ts#L61">property <b>ruleIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSecurityMonitoringRulesResult-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSecurityMonitoringRules.ts#L62">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSecurityMonitoringRules.ts#L62">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#GetSecurityMonitoringRulesRule'>GetSecurityMonitoringRulesRule</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSecurityMonitoringRulesResult-tagsFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSecurityMonitoringRules.ts#L63">property <b>tagsFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSecurityMonitoringRules.ts#L63">property <b>tagsFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagsFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSecurityMonitoringRulesResult-userOnlyFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSecurityMonitoringRules.ts#L64">property <b>userOnlyFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSecurityMonitoringRules.ts#L64">property <b>userOnlyFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userOnlyFilter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetSyntheticsLocationsResult" data-link-title="GetSyntheticsLocationsResult">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSyntheticsLocations.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSyntheticsLocations.ts#L26">
         interface <strong>GetSyntheticsLocationsResult</strong>
     </a>
 </h3>
@@ -6471,7 +6471,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of values returned by getSyntheticsLocations.
 
 <h4 class="pdoc-member-header" id="GetSyntheticsLocationsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSyntheticsLocations.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSyntheticsLocations.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6479,12 +6479,12 @@ A collection of values returned by getSyntheticsLocations.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSyntheticsLocationsResult-locations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/getSyntheticsLocations.ts#L31">property <b>locations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/getSyntheticsLocations.ts#L31">property <b>locations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locations: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -6493,7 +6493,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="LogsArchiveArgs" data-link-title="LogsArchiveArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L273">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L273">
         interface <strong>LogsArchiveArgs</strong>
     </a>
 </h3>
@@ -6503,7 +6503,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a LogsArchive resource.
 
 <h4 class="pdoc-member-header" id="LogsArchiveArgs-azure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L279">property <b>azure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L279">property <b>azure</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -6515,7 +6515,7 @@ Define `azure_archive` list with one element instead.
 Definition of an azure archive.
 
 <h4 class="pdoc-member-header" id="LogsArchiveArgs-azureArchive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L283">property <b>azureArchive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L283">property <b>azureArchive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureArchive?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsArchiveAzureArchive'>LogsArchiveAzureArchive</a>&gt;;</code></pre>
@@ -6523,7 +6523,7 @@ Definition of an azure archive.
 Definition of an azure archive.
 
 <h4 class="pdoc-member-header" id="LogsArchiveArgs-gcs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L289">property <b>gcs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L289">property <b>gcs</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -6535,7 +6535,7 @@ Define `gcs_archive` list with one element instead.
 Definition of a GCS archive.
 
 <h4 class="pdoc-member-header" id="LogsArchiveArgs-gcsArchive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L293">property <b>gcsArchive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L293">property <b>gcsArchive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gcsArchive?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsArchiveGcsArchive'>LogsArchiveGcsArchive</a>&gt;;</code></pre>
@@ -6543,7 +6543,7 @@ Definition of a GCS archive.
 Definition of a GCS archive.
 
 <h4 class="pdoc-member-header" id="LogsArchiveArgs-includeTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L298">property <b>includeTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L298">property <b>includeTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6552,7 +6552,7 @@ To store the tags in the archive, set the value `true`. If it is set to `false`,
 are sent to the archive.
 
 <h4 class="pdoc-member-header" id="LogsArchiveArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L302">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L302">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6560,7 +6560,7 @@ are sent to the archive.
 Your archive name.
 
 <h4 class="pdoc-member-header" id="LogsArchiveArgs-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L306">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L306">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6568,7 +6568,7 @@ Your archive name.
 The archive query/filter. Logs matching this query are included in the archive.
 
 <h4 class="pdoc-member-header" id="LogsArchiveArgs-rehydrationTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L310">property <b>rehydrationTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L310">property <b>rehydrationTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rehydrationTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6576,7 +6576,7 @@ The archive query/filter. Logs matching this query are included in the archive.
 An array of tags to add to rehydrated logs from an archive.
 
 <h4 class="pdoc-member-header" id="LogsArchiveArgs-s3">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L316">property <b>s3</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L316">property <b>s3</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -6588,7 +6588,7 @@ Define `s3_archive` list with one element instead.
 Definition of an s3 archive.
 
 <h4 class="pdoc-member-header" id="LogsArchiveArgs-s3Archive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L320">property <b>s3Archive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L320">property <b>s3Archive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Archive?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsArchiveS3Archive'>LogsArchiveS3Archive</a>&gt;;</code></pre>
@@ -6596,7 +6596,7 @@ Definition of an s3 archive.
 Definition of an s3 archive.
 
 <h3 class="pdoc-module-header" id="LogsArchiveOrderArgs" data-link-title="LogsArchiveOrderArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchiveOrder.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchiveOrder.ts#L110">
         interface <strong>LogsArchiveOrderArgs</strong>
     </a>
 </h3>
@@ -6606,7 +6606,7 @@ Definition of an s3 archive.
 The set of arguments for constructing a LogsArchiveOrder resource.
 
 <h4 class="pdoc-member-header" id="LogsArchiveOrderArgs-archiveIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchiveOrder.ts#L116">property <b>archiveIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchiveOrder.ts#L116">property <b>archiveIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>archiveIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6616,7 +6616,7 @@ The archive IDs list. The order of archive IDs in this attribute defines the ove
 will try to update the order.
 
 <h3 class="pdoc-module-header" id="LogsArchiveOrderState" data-link-title="LogsArchiveOrderState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchiveOrder.ts#L98">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchiveOrder.ts#L98">
         interface <strong>LogsArchiveOrderState</strong>
     </a>
 </h3>
@@ -6626,7 +6626,7 @@ will try to update the order.
 Input properties used for looking up and filtering LogsArchiveOrder resources.
 
 <h4 class="pdoc-member-header" id="LogsArchiveOrderState-archiveIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchiveOrder.ts#L104">property <b>archiveIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchiveOrder.ts#L104">property <b>archiveIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>archiveIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6636,7 +6636,7 @@ The archive IDs list. The order of archive IDs in this attribute defines the ove
 will try to update the order.
 
 <h3 class="pdoc-module-header" id="LogsArchiveState" data-link-title="LogsArchiveState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L220">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L220">
         interface <strong>LogsArchiveState</strong>
     </a>
 </h3>
@@ -6646,7 +6646,7 @@ will try to update the order.
 Input properties used for looking up and filtering LogsArchive resources.
 
 <h4 class="pdoc-member-header" id="LogsArchiveState-azure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L226">property <b>azure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L226">property <b>azure</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -6658,7 +6658,7 @@ Define `azure_archive` list with one element instead.
 Definition of an azure archive.
 
 <h4 class="pdoc-member-header" id="LogsArchiveState-azureArchive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L230">property <b>azureArchive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L230">property <b>azureArchive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureArchive?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsArchiveAzureArchive'>LogsArchiveAzureArchive</a>&gt;;</code></pre>
@@ -6666,7 +6666,7 @@ Definition of an azure archive.
 Definition of an azure archive.
 
 <h4 class="pdoc-member-header" id="LogsArchiveState-gcs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L236">property <b>gcs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L236">property <b>gcs</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -6678,7 +6678,7 @@ Define `gcs_archive` list with one element instead.
 Definition of a GCS archive.
 
 <h4 class="pdoc-member-header" id="LogsArchiveState-gcsArchive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L240">property <b>gcsArchive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L240">property <b>gcsArchive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gcsArchive?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsArchiveGcsArchive'>LogsArchiveGcsArchive</a>&gt;;</code></pre>
@@ -6686,7 +6686,7 @@ Definition of a GCS archive.
 Definition of a GCS archive.
 
 <h4 class="pdoc-member-header" id="LogsArchiveState-includeTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L245">property <b>includeTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L245">property <b>includeTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6695,7 +6695,7 @@ To store the tags in the archive, set the value `true`. If it is set to `false`,
 are sent to the archive.
 
 <h4 class="pdoc-member-header" id="LogsArchiveState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L249">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L249">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6703,7 +6703,7 @@ are sent to the archive.
 Your archive name.
 
 <h4 class="pdoc-member-header" id="LogsArchiveState-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L253">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L253">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6711,7 +6711,7 @@ Your archive name.
 The archive query/filter. Logs matching this query are included in the archive.
 
 <h4 class="pdoc-member-header" id="LogsArchiveState-rehydrationTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L257">property <b>rehydrationTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L257">property <b>rehydrationTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rehydrationTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6719,7 +6719,7 @@ The archive query/filter. Logs matching this query are included in the archive.
 An array of tags to add to rehydrated logs from an archive.
 
 <h4 class="pdoc-member-header" id="LogsArchiveState-s3">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L263">property <b>s3</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L263">property <b>s3</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -6731,7 +6731,7 @@ Define `s3_archive` list with one element instead.
 Definition of an s3 archive.
 
 <h4 class="pdoc-member-header" id="LogsArchiveState-s3Archive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsArchive.ts#L267">property <b>s3Archive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsArchive.ts#L267">property <b>s3Archive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Archive?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsArchiveS3Archive'>LogsArchiveS3Archive</a>&gt;;</code></pre>
@@ -6739,7 +6739,7 @@ Definition of an s3 archive.
 Definition of an s3 archive.
 
 <h3 class="pdoc-module-header" id="LogsCustomPipelineArgs" data-link-title="LogsCustomPipelineArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L280">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L280">
         interface <strong>LogsCustomPipelineArgs</strong>
     </a>
 </h3>
@@ -6749,27 +6749,27 @@ Definition of an s3 archive.
 The set of arguments for constructing a LogsCustomPipeline resource.
 
 <h4 class="pdoc-member-header" id="LogsCustomPipelineArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L281">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L281">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineFilter'>LogsCustomPipelineFilter</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineArgs-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L282">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L282">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L283">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L283">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineArgs-processors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L284">property <b>processors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L284">property <b>processors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>processors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessor'>LogsCustomPipelineProcessor</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="LogsCustomPipelineState" data-link-title="LogsCustomPipelineState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L270">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L270">
         interface <strong>LogsCustomPipelineState</strong>
     </a>
 </h3>
@@ -6779,27 +6779,27 @@ The set of arguments for constructing a LogsCustomPipeline resource.
 Input properties used for looking up and filtering LogsCustomPipeline resources.
 
 <h4 class="pdoc-member-header" id="LogsCustomPipelineState-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L271">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L271">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineFilter'>LogsCustomPipelineFilter</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineState-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L272">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L272">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L273">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L273">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LogsCustomPipelineState-processors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsCustomPipeline.ts#L274">property <b>processors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsCustomPipeline.ts#L274">property <b>processors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>processors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessor'>LogsCustomPipelineProcessor</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="LogsIndexArgs" data-link-title="LogsIndexArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L115">
         interface <strong>LogsIndexArgs</strong>
     </a>
 </h3>
@@ -6809,7 +6809,7 @@ Input properties used for looking up and filtering LogsCustomPipeline resources.
 The set of arguments for constructing a LogsIndex resource.
 
 <h4 class="pdoc-member-header" id="LogsIndexArgs-exclusionFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L119">property <b>exclusionFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L119">property <b>exclusionFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exclusionFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsIndexExclusionFilter'>LogsIndexExclusionFilter</a>&gt;[]&gt;;</code></pre>
@@ -6817,7 +6817,7 @@ The set of arguments for constructing a LogsIndex resource.
 List of exclusion filters.
 
 <h4 class="pdoc-member-header" id="LogsIndexArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L123">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L123">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsIndexFilter'>LogsIndexFilter</a>&gt;[]&gt;;</code></pre>
@@ -6825,7 +6825,7 @@ List of exclusion filters.
 Logs filter
 
 <h4 class="pdoc-member-header" id="LogsIndexArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L127">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L127">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6833,7 +6833,7 @@ Logs filter
 The name of the index.
 
 <h3 class="pdoc-module-header" id="LogsIndexOrderArgs" data-link-title="LogsIndexOrderArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndexOrder.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndexOrder.ts#L122">
         interface <strong>LogsIndexOrderArgs</strong>
     </a>
 </h3>
@@ -6843,7 +6843,7 @@ The name of the index.
 The set of arguments for constructing a LogsIndexOrder resource.
 
 <h4 class="pdoc-member-header" id="LogsIndexOrderArgs-indexes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndexOrder.ts#L127">property <b>indexes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndexOrder.ts#L127">property <b>indexes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>indexes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6852,7 +6852,7 @@ The index resource list. Logs are tested against the query filter of each index 
 list.
 
 <h4 class="pdoc-member-header" id="LogsIndexOrderArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndexOrder.ts#L131">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndexOrder.ts#L131">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6860,7 +6860,7 @@ list.
 The unique name of the index order resource.
 
 <h3 class="pdoc-module-header" id="LogsIndexOrderState" data-link-title="LogsIndexOrderState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndexOrder.ts#L107">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndexOrder.ts#L107">
         interface <strong>LogsIndexOrderState</strong>
     </a>
 </h3>
@@ -6870,7 +6870,7 @@ The unique name of the index order resource.
 Input properties used for looking up and filtering LogsIndexOrder resources.
 
 <h4 class="pdoc-member-header" id="LogsIndexOrderState-indexes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndexOrder.ts#L112">property <b>indexes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndexOrder.ts#L112">property <b>indexes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>indexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6879,7 +6879,7 @@ The index resource list. Logs are tested against the query filter of each index 
 list.
 
 <h4 class="pdoc-member-header" id="LogsIndexOrderState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndexOrder.ts#L116">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndexOrder.ts#L116">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6887,7 +6887,7 @@ list.
 The unique name of the index order resource.
 
 <h3 class="pdoc-module-header" id="LogsIndexState" data-link-title="LogsIndexState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L97">
         interface <strong>LogsIndexState</strong>
     </a>
 </h3>
@@ -6897,7 +6897,7 @@ The unique name of the index order resource.
 Input properties used for looking up and filtering LogsIndex resources.
 
 <h4 class="pdoc-member-header" id="LogsIndexState-exclusionFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L101">property <b>exclusionFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L101">property <b>exclusionFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exclusionFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsIndexExclusionFilter'>LogsIndexExclusionFilter</a>&gt;[]&gt;;</code></pre>
@@ -6905,7 +6905,7 @@ Input properties used for looking up and filtering LogsIndex resources.
 List of exclusion filters.
 
 <h4 class="pdoc-member-header" id="LogsIndexState-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L105">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L105">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsIndexFilter'>LogsIndexFilter</a>&gt;[]&gt;;</code></pre>
@@ -6913,7 +6913,7 @@ List of exclusion filters.
 Logs filter
 
 <h4 class="pdoc-member-header" id="LogsIndexState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIndex.ts#L109">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIndex.ts#L109">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6921,7 +6921,7 @@ Logs filter
 The name of the index.
 
 <h3 class="pdoc-module-header" id="LogsIntegrationPipelineArgs" data-link-title="LogsIntegrationPipelineArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIntegrationPipeline.ts#L103">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIntegrationPipeline.ts#L103">
         interface <strong>LogsIntegrationPipelineArgs</strong>
     </a>
 </h3>
@@ -6931,7 +6931,7 @@ The name of the index.
 The set of arguments for constructing a LogsIntegrationPipeline resource.
 
 <h4 class="pdoc-member-header" id="LogsIntegrationPipelineArgs-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIntegrationPipeline.ts#L107">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIntegrationPipeline.ts#L107">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6939,7 +6939,7 @@ The set of arguments for constructing a LogsIntegrationPipeline resource.
 Boolean value to enable your pipeline.
 
 <h3 class="pdoc-module-header" id="LogsIntegrationPipelineState" data-link-title="LogsIntegrationPipelineState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIntegrationPipeline.ts#L93">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIntegrationPipeline.ts#L93">
         interface <strong>LogsIntegrationPipelineState</strong>
     </a>
 </h3>
@@ -6949,7 +6949,7 @@ Boolean value to enable your pipeline.
 Input properties used for looking up and filtering LogsIntegrationPipeline resources.
 
 <h4 class="pdoc-member-header" id="LogsIntegrationPipelineState-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsIntegrationPipeline.ts#L97">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsIntegrationPipeline.ts#L97">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6957,7 +6957,7 @@ Input properties used for looking up and filtering LogsIntegrationPipeline resou
 Boolean value to enable your pipeline.
 
 <h3 class="pdoc-module-header" id="LogsMetricArgs" data-link-title="LogsMetricArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L192">
         interface <strong>LogsMetricArgs</strong>
     </a>
 </h3>
@@ -6967,7 +6967,7 @@ Boolean value to enable your pipeline.
 The set of arguments for constructing a LogsMetric resource.
 
 <h4 class="pdoc-member-header" id="LogsMetricArgs-compute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L196">property <b>compute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L196">property <b>compute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>compute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsMetricCompute'>LogsMetricCompute</a>&gt;;</code></pre>
@@ -6975,7 +6975,7 @@ The set of arguments for constructing a LogsMetric resource.
 The compute rule to compute the log-based metric. This field can't be updated after creation.
 
 <h4 class="pdoc-member-header" id="LogsMetricArgs-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L200">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L200">property <b>filter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsMetricFilter'>LogsMetricFilter</a>&gt;;</code></pre>
@@ -6983,7 +6983,7 @@ The compute rule to compute the log-based metric. This field can't be updated af
 The log-based metric filter. Logs matching this filter will be aggregated in this metric.
 
 <h4 class="pdoc-member-header" id="LogsMetricArgs-groupBies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L204">property <b>groupBies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L204">property <b>groupBies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsMetricGroupBy'>LogsMetricGroupBy</a>&gt;[]&gt;;</code></pre>
@@ -6991,7 +6991,7 @@ The log-based metric filter. Logs matching this filter will be aggregated in thi
 The rules for the group by.
 
 <h4 class="pdoc-member-header" id="LogsMetricArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L208">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L208">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6999,7 +6999,7 @@ The rules for the group by.
 The name of the log-based metric. This field can't be updated after creation.
 
 <h3 class="pdoc-module-header" id="LogsMetricState" data-link-title="LogsMetricState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L170">
         interface <strong>LogsMetricState</strong>
     </a>
 </h3>
@@ -7009,7 +7009,7 @@ The name of the log-based metric. This field can't be updated after creation.
 Input properties used for looking up and filtering LogsMetric resources.
 
 <h4 class="pdoc-member-header" id="LogsMetricState-compute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L174">property <b>compute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L174">property <b>compute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>compute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsMetricCompute'>LogsMetricCompute</a>&gt;;</code></pre>
@@ -7017,7 +7017,7 @@ Input properties used for looking up and filtering LogsMetric resources.
 The compute rule to compute the log-based metric. This field can't be updated after creation.
 
 <h4 class="pdoc-member-header" id="LogsMetricState-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L178">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L178">property <b>filter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsMetricFilter'>LogsMetricFilter</a>&gt;;</code></pre>
@@ -7025,7 +7025,7 @@ The compute rule to compute the log-based metric. This field can't be updated af
 The log-based metric filter. Logs matching this filter will be aggregated in this metric.
 
 <h4 class="pdoc-member-header" id="LogsMetricState-groupBies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L182">property <b>groupBies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L182">property <b>groupBies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupBies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsMetricGroupBy'>LogsMetricGroupBy</a>&gt;[]&gt;;</code></pre>
@@ -7033,7 +7033,7 @@ The log-based metric filter. Logs matching this filter will be aggregated in thi
 The rules for the group by.
 
 <h4 class="pdoc-member-header" id="LogsMetricState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsMetric.ts#L186">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsMetric.ts#L186">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7041,7 +7041,7 @@ The rules for the group by.
 The name of the log-based metric. This field can't be updated after creation.
 
 <h3 class="pdoc-module-header" id="LogsPipelineOrderArgs" data-link-title="LogsPipelineOrderArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsPipelineOrder.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsPipelineOrder.ts#L132">
         interface <strong>LogsPipelineOrderArgs</strong>
     </a>
 </h3>
@@ -7051,7 +7051,7 @@ The name of the log-based metric. This field can't be updated after creation.
 The set of arguments for constructing a LogsPipelineOrder resource.
 
 <h4 class="pdoc-member-header" id="LogsPipelineOrderArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsPipelineOrder.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsPipelineOrder.ts#L138">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7061,7 +7061,7 @@ value as the resource name. No related field is available in [Logs Pipeline
 API](https://docs.datadoghq.com/api/v1/logs-pipelines/#get-pipeline-order).
 
 <h4 class="pdoc-member-header" id="LogsPipelineOrderArgs-pipelines">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsPipelineOrder.ts#L142">property <b>pipelines</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsPipelineOrder.ts#L142">property <b>pipelines</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pipelines: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7069,7 +7069,7 @@ API](https://docs.datadoghq.com/api/v1/logs-pipelines/#get-pipeline-order).
 The pipeline IDs list. The order of pipeline IDs in this attribute defines the overall pipeline order for logs.
 
 <h3 class="pdoc-module-header" id="LogsPipelineOrderState" data-link-title="LogsPipelineOrderState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsPipelineOrder.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsPipelineOrder.ts#L116">
         interface <strong>LogsPipelineOrderState</strong>
     </a>
 </h3>
@@ -7079,7 +7079,7 @@ The pipeline IDs list. The order of pipeline IDs in this attribute defines the o
 Input properties used for looking up and filtering LogsPipelineOrder resources.
 
 <h4 class="pdoc-member-header" id="LogsPipelineOrderState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsPipelineOrder.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsPipelineOrder.ts#L122">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7089,7 +7089,7 @@ value as the resource name. No related field is available in [Logs Pipeline
 API](https://docs.datadoghq.com/api/v1/logs-pipelines/#get-pipeline-order).
 
 <h4 class="pdoc-member-header" id="LogsPipelineOrderState-pipelines">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/logsPipelineOrder.ts#L126">property <b>pipelines</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/logsPipelineOrder.ts#L126">property <b>pipelines</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pipelines?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7097,7 +7097,7 @@ API](https://docs.datadoghq.com/api/v1/logs-pipelines/#get-pipeline-order).
 The pipeline IDs list. The order of pipeline IDs in this attribute defines the overall pipeline order for logs.
 
 <h3 class="pdoc-module-header" id="MetricMetadataArgs" data-link-title="MetricMetadataArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L163">
         interface <strong>MetricMetadataArgs</strong>
     </a>
 </h3>
@@ -7107,7 +7107,7 @@ The pipeline IDs list. The order of pipeline IDs in this attribute defines the o
 The set of arguments for constructing a MetricMetadata resource.
 
 <h4 class="pdoc-member-header" id="MetricMetadataArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L167">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L167">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7115,7 +7115,7 @@ The set of arguments for constructing a MetricMetadata resource.
 A description of the metric.
 
 <h4 class="pdoc-member-header" id="MetricMetadataArgs-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L171">property <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L171">property <b>metric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metric: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7123,7 +7123,7 @@ A description of the metric.
 The name of the metric.
 
 <h4 class="pdoc-member-header" id="MetricMetadataArgs-perUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L175">property <b>perUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L175">property <b>perUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>perUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7131,7 +7131,7 @@ The name of the metric.
 Per unit of the metric such as `second` in `bytes per second`.
 
 <h4 class="pdoc-member-header" id="MetricMetadataArgs-shortName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L179">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L179">property <b>shortName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shortName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7139,7 +7139,7 @@ Per unit of the metric such as `second` in `bytes per second`.
 A short name of the metric.
 
 <h4 class="pdoc-member-header" id="MetricMetadataArgs-statsdInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L183">property <b>statsdInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L183">property <b>statsdInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statsdInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7147,7 +7147,7 @@ A short name of the metric.
 If applicable, statsd flush interval in seconds for the metric.
 
 <h4 class="pdoc-member-header" id="MetricMetadataArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L187">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L187">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7155,7 +7155,7 @@ If applicable, statsd flush interval in seconds for the metric.
 Type of the metric.
 
 <h4 class="pdoc-member-header" id="MetricMetadataArgs-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L191">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L191">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7163,7 +7163,7 @@ Type of the metric.
 Primary unit of the metric such as `byte` or `operation`.
 
 <h3 class="pdoc-module-header" id="MetricMetadataState" data-link-title="MetricMetadataState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L129">
         interface <strong>MetricMetadataState</strong>
     </a>
 </h3>
@@ -7173,7 +7173,7 @@ Primary unit of the metric such as `byte` or `operation`.
 Input properties used for looking up and filtering MetricMetadata resources.
 
 <h4 class="pdoc-member-header" id="MetricMetadataState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L133">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L133">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7181,7 +7181,7 @@ Input properties used for looking up and filtering MetricMetadata resources.
 A description of the metric.
 
 <h4 class="pdoc-member-header" id="MetricMetadataState-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L137">property <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L137">property <b>metric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metric?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7189,7 +7189,7 @@ A description of the metric.
 The name of the metric.
 
 <h4 class="pdoc-member-header" id="MetricMetadataState-perUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L141">property <b>perUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L141">property <b>perUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>perUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7197,7 +7197,7 @@ The name of the metric.
 Per unit of the metric such as `second` in `bytes per second`.
 
 <h4 class="pdoc-member-header" id="MetricMetadataState-shortName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L145">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L145">property <b>shortName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shortName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7205,7 +7205,7 @@ Per unit of the metric such as `second` in `bytes per second`.
 A short name of the metric.
 
 <h4 class="pdoc-member-header" id="MetricMetadataState-statsdInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L149">property <b>statsdInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L149">property <b>statsdInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statsdInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7213,7 +7213,7 @@ A short name of the metric.
 If applicable, statsd flush interval in seconds for the metric.
 
 <h4 class="pdoc-member-header" id="MetricMetadataState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L153">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L153">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7221,7 +7221,7 @@ If applicable, statsd flush interval in seconds for the metric.
 Type of the metric.
 
 <h4 class="pdoc-member-header" id="MetricMetadataState-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/metricMetadata.ts#L157">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/metricMetadata.ts#L157">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7229,7 +7229,7 @@ Type of the metric.
 Primary unit of the metric such as `byte` or `operation`.
 
 <h3 class="pdoc-module-header" id="MonitorArgs" data-link-title="MonitorArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L395">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L395">
         interface <strong>MonitorArgs</strong>
     </a>
 </h3>
@@ -7239,7 +7239,7 @@ Primary unit of the metric such as `byte` or `operation`.
 The set of arguments for constructing a Monitor resource.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-enableLogsSample">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L400">property <b>enableLogsSample</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L400">property <b>enableLogsSample</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableLogsSample?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7248,7 +7248,7 @@ A boolean indicating whether or not to include a list of log values which trigge
 monitors. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-escalationMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L404">property <b>escalationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L404">property <b>escalationMessage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>escalationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7256,7 +7256,7 @@ monitors. Defaults to `false`.
 A message to include with a re-notification. Supports the `@username` notification allowed elsewhere.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-evaluationDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L411">property <b>evaluationDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L411">property <b>evaluationDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationDelay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7267,7 +7267,7 @@ from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled metric
 data during evaluation.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-forceDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L416">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L416">property <b>forceDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7276,7 +7276,7 @@ A boolean indicating whether this monitor can be deleted even if it’s referenc
 composite monitor).
 
 <h4 class="pdoc-member-header" id="MonitorArgs-includeTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L421">property <b>includeTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L421">property <b>includeTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7285,7 +7285,7 @@ A boolean indicating whether notifications from this monitor automatically inser
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-locked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L426">property <b>locked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L426">property <b>locked</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locked?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7294,7 +7294,7 @@ A boolean indicating whether changes to to this monitor should be restricted to 
 `false`.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L431">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L431">property <b>message</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>message: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7303,7 +7303,7 @@ A message to include with notifications for this monitor. Email notifications ca
 same `@username` notation as events.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-monitorThresholdWindows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L436">property <b>monitorThresholdWindows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L436">property <b>monitorThresholdWindows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorThresholdWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#MonitorMonitorThresholdWindows'>MonitorMonitorThresholdWindows</a>&gt;;</code></pre>
@@ -7312,7 +7312,7 @@ A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_1
 required for, anomaly monitors.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-monitorThresholds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L440">property <b>monitorThresholds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L440">property <b>monitorThresholds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorThresholds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#MonitorMonitorThresholds'>MonitorMonitorThresholds</a>&gt;;</code></pre>
@@ -7320,7 +7320,7 @@ required for, anomaly monitors.
 Alert thresholds of the monitor.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L444">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L444">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7328,7 +7328,7 @@ Alert thresholds of the monitor.
 Name of Datadog monitor.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-newHostDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L449">property <b>newHostDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L449">property <b>newHostDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>newHostDelay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7337,7 +7337,7 @@ Time (in seconds) to allow a host to boot and applications to fully start before
 results. Should be a non negative integer. Defaults to `300`.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-noDataTimeframe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L454">property <b>noDataTimeframe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L454">property <b>noDataTimeframe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noDataTimeframe?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7346,7 +7346,7 @@ The number of minutes before a monitor will notify when data stops reporting. Pr
 recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-notifyAudit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L458">property <b>notifyAudit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L458">property <b>notifyAudit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyAudit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7354,7 +7354,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-notifyNoData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L462">property <b>notifyNoData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L462">property <b>notifyNoData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyNoData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7362,12 +7362,12 @@ A boolean indicating whether tagged users will be notified on changes to this mo
 A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L463">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L463">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MonitorArgs-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L469">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L469">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7377,7 +7377,7 @@ on the monitor type, please see the [API Reference](https://docs.datadoghq.com/a
 details. Warning: `terraform plan` won't perform any validation of the query contents.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-renotifyInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L474">property <b>renotifyInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L474">property <b>renotifyInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renotifyInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7386,7 +7386,7 @@ The number of minutes after the last notification before a monitor will re-notif
 re-notify if it's not resolved.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-requireFullWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L480">property <b>requireFullWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L480">property <b>requireFullWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireFullWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7396,7 +7396,7 @@ this to `false` for s metrics, otherwise some evaluations will be skipped. Defau
 times` and `in total` aggregation. `false` otherwise.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-silenced">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L488">property <b>silenced</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L488">property <b>silenced</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -7410,7 +7410,7 @@ the scope. Deprecated: the silenced parameter is being deprecated in favor of th
 removed in the next major version of the Terraform Provider.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L493">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L493">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7419,7 +7419,7 @@ A list of tags to associate with your monitor. This can help you categorize and 
 page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
 
 <h4 class="pdoc-member-header" id="MonitorArgs-thresholdWindows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L500">property <b>thresholdWindows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L500">property <b>thresholdWindows</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -7432,7 +7432,7 @@ A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_1
 required for, anomaly monitors.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-thresholds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L506">property <b>thresholds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L506">property <b>thresholds</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -7444,7 +7444,7 @@ Define `monitor_thresholds` list with one element instead.
 Alert thresholds of the monitor.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-timeoutH">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L511">property <b>timeoutH</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L511">property <b>timeoutH</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeoutH?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7453,7 +7453,7 @@ The number of hours of the monitor not reporting data before it will automatical
 Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L517">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L517">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7463,7 +7463,7 @@ Datadog API [documentation page](https://docs.datadoghq.com/api/v1/monitors/#cre
 cannot be changed after a monitor is created.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-validate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L521">property <b>validate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L521">property <b>validate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7471,7 +7471,7 @@ cannot be changed after a monitor is created.
 If set to `false`, skip the validation call done during plan.
 
 <h3 class="pdoc-module-header" id="MonitorState" data-link-title="MonitorState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L263">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L263">
         interface <strong>MonitorState</strong>
     </a>
 </h3>
@@ -7481,7 +7481,7 @@ If set to `false`, skip the validation call done during plan.
 Input properties used for looking up and filtering Monitor resources.
 
 <h4 class="pdoc-member-header" id="MonitorState-enableLogsSample">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L268">property <b>enableLogsSample</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L268">property <b>enableLogsSample</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableLogsSample?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7490,7 +7490,7 @@ A boolean indicating whether or not to include a list of log values which trigge
 monitors. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="MonitorState-escalationMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L272">property <b>escalationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L272">property <b>escalationMessage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>escalationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7498,7 +7498,7 @@ monitors. Defaults to `false`.
 A message to include with a re-notification. Supports the `@username` notification allowed elsewhere.
 
 <h4 class="pdoc-member-header" id="MonitorState-evaluationDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L279">property <b>evaluationDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L279">property <b>evaluationDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationDelay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7509,7 +7509,7 @@ from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled metric
 data during evaluation.
 
 <h4 class="pdoc-member-header" id="MonitorState-forceDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L284">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L284">property <b>forceDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7518,7 +7518,7 @@ A boolean indicating whether this monitor can be deleted even if it’s referenc
 composite monitor).
 
 <h4 class="pdoc-member-header" id="MonitorState-includeTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L289">property <b>includeTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L289">property <b>includeTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7527,7 +7527,7 @@ A boolean indicating whether notifications from this monitor automatically inser
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="MonitorState-locked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L294">property <b>locked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L294">property <b>locked</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locked?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7536,7 +7536,7 @@ A boolean indicating whether changes to to this monitor should be restricted to 
 `false`.
 
 <h4 class="pdoc-member-header" id="MonitorState-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L299">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L299">property <b>message</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>message?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7545,7 +7545,7 @@ A message to include with notifications for this monitor. Email notifications ca
 same `@username` notation as events.
 
 <h4 class="pdoc-member-header" id="MonitorState-monitorThresholdWindows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L304">property <b>monitorThresholdWindows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L304">property <b>monitorThresholdWindows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorThresholdWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#MonitorMonitorThresholdWindows'>MonitorMonitorThresholdWindows</a>&gt;;</code></pre>
@@ -7554,7 +7554,7 @@ A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_1
 required for, anomaly monitors.
 
 <h4 class="pdoc-member-header" id="MonitorState-monitorThresholds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L308">property <b>monitorThresholds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L308">property <b>monitorThresholds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorThresholds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#MonitorMonitorThresholds'>MonitorMonitorThresholds</a>&gt;;</code></pre>
@@ -7562,7 +7562,7 @@ required for, anomaly monitors.
 Alert thresholds of the monitor.
 
 <h4 class="pdoc-member-header" id="MonitorState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L312">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L312">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7570,7 +7570,7 @@ Alert thresholds of the monitor.
 Name of Datadog monitor.
 
 <h4 class="pdoc-member-header" id="MonitorState-newHostDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L317">property <b>newHostDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L317">property <b>newHostDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>newHostDelay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7579,7 +7579,7 @@ Time (in seconds) to allow a host to boot and applications to fully start before
 results. Should be a non negative integer. Defaults to `300`.
 
 <h4 class="pdoc-member-header" id="MonitorState-noDataTimeframe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L322">property <b>noDataTimeframe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L322">property <b>noDataTimeframe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noDataTimeframe?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7588,7 +7588,7 @@ The number of minutes before a monitor will notify when data stops reporting. Pr
 recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
 
 <h4 class="pdoc-member-header" id="MonitorState-notifyAudit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L326">property <b>notifyAudit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L326">property <b>notifyAudit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyAudit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7596,7 +7596,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
 A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="MonitorState-notifyNoData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L330">property <b>notifyNoData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L330">property <b>notifyNoData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyNoData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7604,12 +7604,12 @@ A boolean indicating whether tagged users will be notified on changes to this mo
 A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.
 
 <h4 class="pdoc-member-header" id="MonitorState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L331">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L331">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MonitorState-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L337">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L337">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7619,7 +7619,7 @@ on the monitor type, please see the [API Reference](https://docs.datadoghq.com/a
 details. Warning: `terraform plan` won't perform any validation of the query contents.
 
 <h4 class="pdoc-member-header" id="MonitorState-renotifyInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L342">property <b>renotifyInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L342">property <b>renotifyInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renotifyInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7628,7 +7628,7 @@ The number of minutes after the last notification before a monitor will re-notif
 re-notify if it's not resolved.
 
 <h4 class="pdoc-member-header" id="MonitorState-requireFullWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L348">property <b>requireFullWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L348">property <b>requireFullWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireFullWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7638,7 +7638,7 @@ this to `false` for s metrics, otherwise some evaluations will be skipped. Defau
 times` and `in total` aggregation. `false` otherwise.
 
 <h4 class="pdoc-member-header" id="MonitorState-silenced">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L356">property <b>silenced</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L356">property <b>silenced</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -7652,7 +7652,7 @@ the scope. Deprecated: the silenced parameter is being deprecated in favor of th
 removed in the next major version of the Terraform Provider.
 
 <h4 class="pdoc-member-header" id="MonitorState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L361">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L361">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7661,7 +7661,7 @@ A list of tags to associate with your monitor. This can help you categorize and 
 page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
 
 <h4 class="pdoc-member-header" id="MonitorState-thresholdWindows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L368">property <b>thresholdWindows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L368">property <b>thresholdWindows</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -7674,7 +7674,7 @@ A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_1
 required for, anomaly monitors.
 
 <h4 class="pdoc-member-header" id="MonitorState-thresholds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L374">property <b>thresholds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L374">property <b>thresholds</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -7686,7 +7686,7 @@ Define `monitor_thresholds` list with one element instead.
 Alert thresholds of the monitor.
 
 <h4 class="pdoc-member-header" id="MonitorState-timeoutH">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L379">property <b>timeoutH</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L379">property <b>timeoutH</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeoutH?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7695,7 +7695,7 @@ The number of hours of the monitor not reporting data before it will automatical
 Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="MonitorState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L385">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L385">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7705,7 +7705,7 @@ Datadog API [documentation page](https://docs.datadoghq.com/api/v1/monitors/#cre
 cannot be changed after a monitor is created.
 
 <h4 class="pdoc-member-header" id="MonitorState-validate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/monitor.ts#L389">property <b>validate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/monitor.ts#L389">property <b>validate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7713,7 +7713,7 @@ cannot be changed after a monitor is created.
 If set to `false`, skip the validation call done during plan.
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/provider.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/provider.ts#L58">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -7723,7 +7723,7 @@ If set to `false`, skip the validation call done during plan.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/provider.ts#L62">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/provider.ts#L62">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7731,7 +7731,7 @@ The set of arguments for constructing a Provider resource.
 (Required unless validate is false) Datadog API key. This can also be set via the DD_API_KEY environment variable.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-apiUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/provider.ts#L68">property <b>apiUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/provider.ts#L68">property <b>apiUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7741,7 +7741,7 @@ path. For example, https://api.datadoghq.com/ is a correct value, while https://
 you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-appKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/provider.ts#L72">property <b>appKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/provider.ts#L72">property <b>appKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7749,7 +7749,7 @@ you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
 (Required unless validate is false) Datadog APP key. This can also be set via the DD_APP_KEY environment variable.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-validate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/provider.ts#L77">property <b>validate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/provider.ts#L77">property <b>validate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7758,7 +7758,7 @@ Enables validation of the provided API and APP keys during provider initializati
 and app_key won't be checked.
 
 <h3 class="pdoc-module-header" id="RoleArgs" data-link-title="RoleArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/role.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/role.ts#L137">
         interface <strong>RoleArgs</strong>
     </a>
 </h3>
@@ -7768,7 +7768,7 @@ and app_key won't be checked.
 The set of arguments for constructing a Role resource.
 
 <h4 class="pdoc-member-header" id="RoleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/role.ts#L141">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/role.ts#L141">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7776,7 +7776,7 @@ The set of arguments for constructing a Role resource.
 Name of the role.
 
 <h4 class="pdoc-member-header" id="RoleArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/role.ts#L145">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/role.ts#L145">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#RolePermission'>RolePermission</a>&gt;[]&gt;;</code></pre>
@@ -7784,7 +7784,7 @@ Name of the role.
 Set of objects containing the permission ID and the name of the permissions granted to this role.
 
 <h3 class="pdoc-module-header" id="RoleState" data-link-title="RoleState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/role.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/role.ts#L119">
         interface <strong>RoleState</strong>
     </a>
 </h3>
@@ -7794,7 +7794,7 @@ Set of objects containing the permission ID and the name of the permissions gran
 Input properties used for looking up and filtering Role resources.
 
 <h4 class="pdoc-member-header" id="RoleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/role.ts#L123">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/role.ts#L123">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7802,7 +7802,7 @@ Input properties used for looking up and filtering Role resources.
 Name of the role.
 
 <h4 class="pdoc-member-header" id="RoleState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/role.ts#L127">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/role.ts#L127">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#RolePermission'>RolePermission</a>&gt;[]&gt;;</code></pre>
@@ -7810,7 +7810,7 @@ Name of the role.
 Set of objects containing the permission ID and the name of the permissions granted to this role.
 
 <h4 class="pdoc-member-header" id="RoleState-userCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/role.ts#L131">property <b>userCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/role.ts#L131">property <b>userCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7818,7 +7818,7 @@ Set of objects containing the permission ID and the name of the permissions gran
 Number of users that have this role.
 
 <h3 class="pdoc-module-header" id="ScreenBoardArgs" data-link-title="ScreenBoardArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L550">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L550">
         interface <strong>ScreenBoardArgs</strong>
     </a>
 </h3>
@@ -7828,7 +7828,7 @@ Number of users that have this role.
 The set of arguments for constructing a ScreenBoard resource.
 
 <h4 class="pdoc-member-header" id="ScreenBoardArgs-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L554">property <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L554">property <b>height</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>height?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7836,7 +7836,7 @@ The set of arguments for constructing a ScreenBoard resource.
 Height of the screenboard
 
 <h4 class="pdoc-member-header" id="ScreenBoardArgs-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L558">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L558">property <b>readOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7844,7 +7844,7 @@ Height of the screenboard
 The read-only status of the screenboard. Default is `false`.
 
 <h4 class="pdoc-member-header" id="ScreenBoardArgs-shared">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L562">property <b>shared</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L562">property <b>shared</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shared?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7852,7 +7852,7 @@ The read-only status of the screenboard. Default is `false`.
 Whether the screenboard is shared or not
 
 <h4 class="pdoc-member-header" id="ScreenBoardArgs-templateVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L566">property <b>templateVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L566">property <b>templateVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardTemplateVariable'>ScreenBoardTemplateVariable</a>&gt;[]&gt;;</code></pre>
@@ -7860,7 +7860,7 @@ Whether the screenboard is shared or not
 A list of template variables for using Dashboard templating.
 
 <h4 class="pdoc-member-header" id="ScreenBoardArgs-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L570">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L570">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7868,7 +7868,7 @@ A list of template variables for using Dashboard templating.
 Name of the screenboard
 
 <h4 class="pdoc-member-header" id="ScreenBoardArgs-widgets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L574">property <b>widgets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L574">property <b>widgets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>widgets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidget'>ScreenBoardWidget</a>&gt;[]&gt;;</code></pre>
@@ -7876,7 +7876,7 @@ Name of the screenboard
 A list of widget definitions.
 
 <h4 class="pdoc-member-header" id="ScreenBoardArgs-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L578">property <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L578">property <b>width</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>width?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7884,7 +7884,7 @@ A list of widget definitions.
 Width of the screenboard
 
 <h3 class="pdoc-module-header" id="ScreenBoardState" data-link-title="ScreenBoardState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L516">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L516">
         interface <strong>ScreenBoardState</strong>
     </a>
 </h3>
@@ -7894,7 +7894,7 @@ Width of the screenboard
 Input properties used for looking up and filtering ScreenBoard resources.
 
 <h4 class="pdoc-member-header" id="ScreenBoardState-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L520">property <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L520">property <b>height</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>height?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7902,7 +7902,7 @@ Input properties used for looking up and filtering ScreenBoard resources.
 Height of the screenboard
 
 <h4 class="pdoc-member-header" id="ScreenBoardState-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L524">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L524">property <b>readOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7910,7 +7910,7 @@ Height of the screenboard
 The read-only status of the screenboard. Default is `false`.
 
 <h4 class="pdoc-member-header" id="ScreenBoardState-shared">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L528">property <b>shared</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L528">property <b>shared</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shared?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7918,7 +7918,7 @@ The read-only status of the screenboard. Default is `false`.
 Whether the screenboard is shared or not
 
 <h4 class="pdoc-member-header" id="ScreenBoardState-templateVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L532">property <b>templateVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L532">property <b>templateVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardTemplateVariable'>ScreenBoardTemplateVariable</a>&gt;[]&gt;;</code></pre>
@@ -7926,7 +7926,7 @@ Whether the screenboard is shared or not
 A list of template variables for using Dashboard templating.
 
 <h4 class="pdoc-member-header" id="ScreenBoardState-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L536">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L536">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7934,7 +7934,7 @@ A list of template variables for using Dashboard templating.
 Name of the screenboard
 
 <h4 class="pdoc-member-header" id="ScreenBoardState-widgets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L540">property <b>widgets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L540">property <b>widgets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>widgets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidget'>ScreenBoardWidget</a>&gt;[]&gt;;</code></pre>
@@ -7942,7 +7942,7 @@ Name of the screenboard
 A list of widget definitions.
 
 <h4 class="pdoc-member-header" id="ScreenBoardState-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/screenBoard.ts#L544">property <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/screenBoard.ts#L544">property <b>width</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>width?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7950,7 +7950,7 @@ A list of widget definitions.
 Width of the screenboard
 
 <h3 class="pdoc-module-header" id="SecurityMonitoringRuleArgs" data-link-title="SecurityMonitoringRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L205">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L205">
         interface <strong>SecurityMonitoringRuleArgs</strong>
     </a>
 </h3>
@@ -7960,7 +7960,7 @@ Width of the screenboard
 The set of arguments for constructing a SecurityMonitoringRule resource.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRuleArgs-cases">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L209">property <b>cases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L209">property <b>cases</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cases: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SecurityMonitoringRuleCase'>SecurityMonitoringRuleCase</a>&gt;[]&gt;;</code></pre>
@@ -7968,7 +7968,7 @@ The set of arguments for constructing a SecurityMonitoringRule resource.
 Cases for generating signals.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRuleArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L213">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L213">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7976,7 +7976,7 @@ Cases for generating signals.
 Whether the rule is enabled.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRuleArgs-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L217">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L217">property <b>message</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>message: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7984,7 +7984,7 @@ Whether the rule is enabled.
 Message for generated signals.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L221">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L221">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7992,7 +7992,7 @@ Message for generated signals.
 The name of the rule.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRuleArgs-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L225">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L225">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SecurityMonitoringRuleOptions'>SecurityMonitoringRuleOptions</a>&gt;;</code></pre>
@@ -8000,7 +8000,7 @@ The name of the rule.
 Options on rules.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRuleArgs-queries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L229">property <b>queries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L229">property <b>queries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SecurityMonitoringRuleQuery'>SecurityMonitoringRuleQuery</a>&gt;[]&gt;;</code></pre>
@@ -8008,7 +8008,7 @@ Options on rules.
 Queries for selecting logs which are part of the rule.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRuleArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L233">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L233">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8016,7 +8016,7 @@ Queries for selecting logs which are part of the rule.
 Tags for generated signals.
 
 <h3 class="pdoc-module-header" id="SecurityMonitoringRuleState" data-link-title="SecurityMonitoringRuleState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L171">
         interface <strong>SecurityMonitoringRuleState</strong>
     </a>
 </h3>
@@ -8026,7 +8026,7 @@ Tags for generated signals.
 Input properties used for looking up and filtering SecurityMonitoringRule resources.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRuleState-cases">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L175">property <b>cases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L175">property <b>cases</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SecurityMonitoringRuleCase'>SecurityMonitoringRuleCase</a>&gt;[]&gt;;</code></pre>
@@ -8034,7 +8034,7 @@ Input properties used for looking up and filtering SecurityMonitoringRule resour
 Cases for generating signals.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRuleState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L179">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L179">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8042,7 +8042,7 @@ Cases for generating signals.
 Whether the rule is enabled.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRuleState-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L183">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L183">property <b>message</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>message?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8050,7 +8050,7 @@ Whether the rule is enabled.
 Message for generated signals.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L187">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L187">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8058,7 +8058,7 @@ Message for generated signals.
 The name of the rule.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRuleState-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L191">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L191">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SecurityMonitoringRuleOptions'>SecurityMonitoringRuleOptions</a>&gt;;</code></pre>
@@ -8066,7 +8066,7 @@ The name of the rule.
 Options on rules.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRuleState-queries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L195">property <b>queries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L195">property <b>queries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SecurityMonitoringRuleQuery'>SecurityMonitoringRuleQuery</a>&gt;[]&gt;;</code></pre>
@@ -8074,7 +8074,7 @@ Options on rules.
 Queries for selecting logs which are part of the rule.
 
 <h4 class="pdoc-member-header" id="SecurityMonitoringRuleState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/securityMonitoringRule.ts#L199">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/securityMonitoringRule.ts#L199">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8082,7 +8082,7 @@ Queries for selecting logs which are part of the rule.
 Tags for generated signals.
 
 <h3 class="pdoc-module-header" id="ServiceLevelObjectiveArgs" data-link-title="ServiceLevelObjectiveArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L273">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L273">
         interface <strong>ServiceLevelObjectiveArgs</strong>
     </a>
 </h3>
@@ -8092,7 +8092,7 @@ Tags for generated signals.
 The set of arguments for constructing a ServiceLevelObjective resource.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L277">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L277">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8100,7 +8100,7 @@ The set of arguments for constructing a ServiceLevelObjective resource.
 A description of this service level objective.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveArgs-forceDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L282">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L282">property <b>forceDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8109,7 +8109,7 @@ A boolean indicating whether this monitor can be deleted even if it’s referenc
 -   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveArgs-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L286">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L286">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8117,7 +8117,7 @@ A boolean indicating whether this monitor can be deleted even if it’s referenc
 A static set of groups to filter monitor-based SLOs
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveArgs-monitorIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L290">property <b>monitorIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L290">property <b>monitorIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -8125,7 +8125,7 @@ A static set of groups to filter monitor-based SLOs
 A static set of monitor IDs to use as part of the SLO
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L294">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L294">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8133,7 +8133,7 @@ A static set of monitor IDs to use as part of the SLO
 Name of Datadog service level objective
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveArgs-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L298">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L298">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ServiceLevelObjectiveQuery'>ServiceLevelObjectiveQuery</a>&gt;;</code></pre>
@@ -8141,7 +8141,7 @@ Name of Datadog service level objective
 The metric query of good / total events
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L302">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L302">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8149,7 +8149,7 @@ The metric query of good / total events
 A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveArgs-thresholds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L306">property <b>thresholds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L306">property <b>thresholds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thresholds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ServiceLevelObjectiveThreshold'>ServiceLevelObjectiveThreshold</a>&gt;[]&gt;;</code></pre>
@@ -8157,7 +8157,7 @@ A list of tags to associate with your service level objective. This can help you
 A list of thresholds and targets that define the service level objectives from the provided SLIs.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L313">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L313">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8168,7 +8168,7 @@ page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-o
 are: `metric` and `monitor`.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveArgs-validate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L317">property <b>validate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L317">property <b>validate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8176,7 +8176,7 @@ are: `metric` and `monitor`.
 Whether or not to validate the SLO.
 
 <h3 class="pdoc-module-header" id="ServiceLevelObjectiveState" data-link-title="ServiceLevelObjectiveState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L223">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L223">
         interface <strong>ServiceLevelObjectiveState</strong>
     </a>
 </h3>
@@ -8186,7 +8186,7 @@ Whether or not to validate the SLO.
 Input properties used for looking up and filtering ServiceLevelObjective resources.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L227">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L227">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8194,7 +8194,7 @@ Input properties used for looking up and filtering ServiceLevelObjective resourc
 A description of this service level objective.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveState-forceDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L232">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L232">property <b>forceDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8203,7 +8203,7 @@ A boolean indicating whether this monitor can be deleted even if it’s referenc
 -   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveState-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L236">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L236">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8211,7 +8211,7 @@ A boolean indicating whether this monitor can be deleted even if it’s referenc
 A static set of groups to filter monitor-based SLOs
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveState-monitorIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L240">property <b>monitorIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L240">property <b>monitorIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -8219,7 +8219,7 @@ A static set of groups to filter monitor-based SLOs
 A static set of monitor IDs to use as part of the SLO
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L244">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L244">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8227,7 +8227,7 @@ A static set of monitor IDs to use as part of the SLO
 Name of Datadog service level objective
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveState-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L248">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L248">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ServiceLevelObjectiveQuery'>ServiceLevelObjectiveQuery</a>&gt;;</code></pre>
@@ -8235,7 +8235,7 @@ Name of Datadog service level objective
 The metric query of good / total events
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L252">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L252">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8243,7 +8243,7 @@ The metric query of good / total events
 A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveState-thresholds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L256">property <b>thresholds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L256">property <b>thresholds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thresholds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ServiceLevelObjectiveThreshold'>ServiceLevelObjectiveThreshold</a>&gt;[]&gt;;</code></pre>
@@ -8251,7 +8251,7 @@ A list of tags to associate with your service level objective. This can help you
 A list of thresholds and targets that define the service level objectives from the provided SLIs.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L263">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L263">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8262,7 +8262,7 @@ page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-o
 are: `metric` and `monitor`.
 
 <h4 class="pdoc-member-header" id="ServiceLevelObjectiveState-validate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/serviceLevelObjective.ts#L267">property <b>validate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/serviceLevelObjective.ts#L267">property <b>validate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8270,7 +8270,7 @@ are: `metric` and `monitor`.
 Whether or not to validate the SLO.
 
 <h3 class="pdoc-module-header" id="SyntheticsGlobalVariableArgs" data-link-title="SyntheticsGlobalVariableArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L176">
         interface <strong>SyntheticsGlobalVariableArgs</strong>
     </a>
 </h3>
@@ -8280,7 +8280,7 @@ Whether or not to validate the SLO.
 The set of arguments for constructing a SyntheticsGlobalVariable resource.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariableArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L180">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L180">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8288,7 +8288,7 @@ The set of arguments for constructing a SyntheticsGlobalVariable resource.
 Description of the global variable.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariableArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L184">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L184">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8296,7 +8296,7 @@ Description of the global variable.
 Synthetics global variable name.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariableArgs-parseTestId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L188">property <b>parseTestId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L188">property <b>parseTestId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parseTestId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8304,7 +8304,7 @@ Synthetics global variable name.
 Id of the Synthetics test to use for a variable from test.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariableArgs-parseTestOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L192">property <b>parseTestOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L192">property <b>parseTestOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parseTestOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsGlobalVariableParseTestOptions'>SyntheticsGlobalVariableParseTestOptions</a>&gt;;</code></pre>
@@ -8312,7 +8312,7 @@ Id of the Synthetics test to use for a variable from test.
 ID of the Synthetics test to use a source of the global variable value.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariableArgs-secure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L196">property <b>secure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L196">property <b>secure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8320,7 +8320,7 @@ ID of the Synthetics test to use a source of the global variable value.
 Sets the variable as secure. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariableArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L200">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L200">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8328,7 +8328,7 @@ Sets the variable as secure. Defaults to `false`.
 A list of tags to associate with your synthetics global variable.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariableArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L204">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L204">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8336,7 +8336,7 @@ A list of tags to associate with your synthetics global variable.
 The value of the global variable.
 
 <h3 class="pdoc-module-header" id="SyntheticsGlobalVariableState" data-link-title="SyntheticsGlobalVariableState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L142">
         interface <strong>SyntheticsGlobalVariableState</strong>
     </a>
 </h3>
@@ -8346,7 +8346,7 @@ The value of the global variable.
 Input properties used for looking up and filtering SyntheticsGlobalVariable resources.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariableState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L146">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L146">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8354,7 +8354,7 @@ Input properties used for looking up and filtering SyntheticsGlobalVariable reso
 Description of the global variable.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariableState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L150">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8362,7 +8362,7 @@ Description of the global variable.
 Synthetics global variable name.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariableState-parseTestId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L154">property <b>parseTestId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L154">property <b>parseTestId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parseTestId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8370,7 +8370,7 @@ Synthetics global variable name.
 Id of the Synthetics test to use for a variable from test.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariableState-parseTestOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L158">property <b>parseTestOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L158">property <b>parseTestOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parseTestOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsGlobalVariableParseTestOptions'>SyntheticsGlobalVariableParseTestOptions</a>&gt;;</code></pre>
@@ -8378,7 +8378,7 @@ Id of the Synthetics test to use for a variable from test.
 ID of the Synthetics test to use a source of the global variable value.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariableState-secure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L162">property <b>secure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L162">property <b>secure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8386,7 +8386,7 @@ ID of the Synthetics test to use a source of the global variable value.
 Sets the variable as secure. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariableState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L166">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L166">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8394,7 +8394,7 @@ Sets the variable as secure. Defaults to `false`.
 A list of tags to associate with your synthetics global variable.
 
 <h4 class="pdoc-member-header" id="SyntheticsGlobalVariableState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsGlobalVariable.ts#L170">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsGlobalVariable.ts#L170">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8402,7 +8402,7 @@ A list of tags to associate with your synthetics global variable.
 The value of the global variable.
 
 <h3 class="pdoc-module-header" id="SyntheticsPrivateLocationArgs" data-link-title="SyntheticsPrivateLocationArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L143">
         interface <strong>SyntheticsPrivateLocationArgs</strong>
     </a>
 </h3>
@@ -8412,7 +8412,7 @@ The value of the global variable.
 The set of arguments for constructing a SyntheticsPrivateLocation resource.
 
 <h4 class="pdoc-member-header" id="SyntheticsPrivateLocationArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L147">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L147">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8420,7 +8420,7 @@ The set of arguments for constructing a SyntheticsPrivateLocation resource.
 Description of the private location.
 
 <h4 class="pdoc-member-header" id="SyntheticsPrivateLocationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L151">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L151">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8428,7 +8428,7 @@ Description of the private location.
 Synthetics private location name.
 
 <h4 class="pdoc-member-header" id="SyntheticsPrivateLocationArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L155">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L155">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8436,7 +8436,7 @@ Synthetics private location name.
 A list of tags to associate with your synthetics private location.
 
 <h3 class="pdoc-module-header" id="SyntheticsPrivateLocationState" data-link-title="SyntheticsPrivateLocationState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L120">
         interface <strong>SyntheticsPrivateLocationState</strong>
     </a>
 </h3>
@@ -8446,7 +8446,7 @@ A list of tags to associate with your synthetics private location.
 Input properties used for looking up and filtering SyntheticsPrivateLocation resources.
 
 <h4 class="pdoc-member-header" id="SyntheticsPrivateLocationState-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L125">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L125">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8455,7 +8455,7 @@ Configuration skeleton for the private location. See installation instructions o
 this configuration.
 
 <h4 class="pdoc-member-header" id="SyntheticsPrivateLocationState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L129">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L129">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8463,7 +8463,7 @@ this configuration.
 Description of the private location.
 
 <h4 class="pdoc-member-header" id="SyntheticsPrivateLocationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L133">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L133">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8471,7 +8471,7 @@ Description of the private location.
 Synthetics private location name.
 
 <h4 class="pdoc-member-header" id="SyntheticsPrivateLocationState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsPrivateLocation.ts#L137">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsPrivateLocation.ts#L137">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8479,7 +8479,7 @@ Synthetics private location name.
 A list of tags to associate with your synthetics private location.
 
 <h3 class="pdoc-module-header" id="SyntheticsTestArgs" data-link-title="SyntheticsTestArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L574">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L574">
         interface <strong>SyntheticsTestArgs</strong>
     </a>
 </h3>
@@ -8489,7 +8489,7 @@ A list of tags to associate with your synthetics private location.
 The set of arguments for constructing a SyntheticsTest resource.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-assertions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L580">property <b>assertions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L580">property <b>assertions</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -8501,7 +8501,7 @@ Use assertion instead
 List of assertions.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-browserVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L584">property <b>browserVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L584">property <b>browserVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>browserVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestBrowserVariable'>SyntheticsTestBrowserVariable</a>&gt;[]&gt;;</code></pre>
@@ -8509,7 +8509,7 @@ List of assertions.
 Variables used for a browser test steps. Multiple `variable` blocks are allowed with the structure below.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-configVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L588">property <b>configVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L588">property <b>configVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestConfigVariable'>SyntheticsTestConfigVariable</a>&gt;[]&gt;;</code></pre>
@@ -8517,7 +8517,7 @@ Variables used for a browser test steps. Multiple `variable` blocks are allowed 
 Variables used for the test configuration. Multiple `config_variable` blocks are allowed with the structure below.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-deviceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L593">property <b>deviceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L593">property <b>deviceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8526,7 +8526,7 @@ Array with the different device IDs used to run the test. Allowed enum values: `
 (only available for `browser` tests).
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-locations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L599">property <b>locations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L599">property <b>locations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8536,7 +8536,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 `aws:eu-central-1`).
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L604">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L604">property <b>message</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>message?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8545,7 +8545,7 @@ A message to include with notifications for this synthetics test. Email notifica
 using the same `@username` notation as events.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L608">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L608">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8553,7 +8553,7 @@ using the same `@username` notation as events.
 Name of Datadog synthetics test.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L612">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L612">property <b>options</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -8562,12 +8562,12 @@ This parameter is deprecated, please use `options_list`
 </div>
 <pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestOptions'>SyntheticsTestOptions</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-optionsList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L613">property <b>optionsList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L613">property <b>optionsList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionsList?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestOptionsList'>SyntheticsTestOptionsList</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-request">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L617">property <b>request</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L617">property <b>request</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>request: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestRequest'>SyntheticsTestRequest</a>&gt;;</code></pre>
@@ -8575,7 +8575,7 @@ This parameter is deprecated, please use `options_list`
 The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-requestBasicauth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L621">property <b>requestBasicauth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L621">property <b>requestBasicauth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestBasicauth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestRequestBasicauth'>SyntheticsTestRequestBasicauth</a>&gt;;</code></pre>
@@ -8583,7 +8583,7 @@ The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
 The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-requestClientCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L626">property <b>requestClientCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L626">property <b>requestClientCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestClientCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestRequestClientCertificate'>SyntheticsTestRequestClientCertificate</a>&gt;;</code></pre>
@@ -8592,7 +8592,7 @@ Client certificate to use when performing the test request. Exactly one nested b
 below.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-requestHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L630">property <b>requestHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L630">property <b>requestHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -8600,7 +8600,7 @@ below.
 Header name and value map.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-requestQuery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L634">property <b>requestQuery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L634">property <b>requestQuery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -8608,7 +8608,7 @@ Header name and value map.
 Query arguments name and value map.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L638">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L638">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8616,7 +8616,7 @@ Query arguments name and value map.
 Define whether you want to start (`live`) or pause (`paused`) a Synthetic test. Allowed enum values: `live`, `paused`
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-steps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L642">property <b>steps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L642">property <b>steps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>steps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestStep'>SyntheticsTestStep</a>&gt;[]&gt;;</code></pre>
@@ -8624,7 +8624,7 @@ Define whether you want to start (`live`) or pause (`paused`) a Synthetic test. 
 Steps for browser tests.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-subtype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L646">property <b>subtype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L646">property <b>subtype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subtype?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8632,7 +8632,7 @@ Steps for browser tests.
 When `type` is `api`, choose from `http`, `ssl`, `tcp` or `dns`. Defaults to `http`.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L651">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L651">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8641,7 +8641,7 @@ A list of tags to associate with your synthetics test. This can help you categor
 synthetics page of the UI. Default is an empty list (`[]`).
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L655">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L655">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8649,7 +8649,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 Synthetics test type (`api` or `browser`).
 
 <h4 class="pdoc-member-header" id="SyntheticsTestArgs-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L661">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L661">property <b>variables</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -8661,7 +8661,7 @@ This parameter is deprecated, please use `browser_variable`
 Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below.
 
 <h3 class="pdoc-module-header" id="SyntheticsTestState" data-link-title="SyntheticsTestState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L477">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L477">
         interface <strong>SyntheticsTestState</strong>
     </a>
 </h3>
@@ -8671,7 +8671,7 @@ Variables used for a browser test steps. Multiple `browser_variable` blocks are 
 Input properties used for looking up and filtering SyntheticsTest resources.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-assertions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L483">property <b>assertions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L483">property <b>assertions</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -8683,7 +8683,7 @@ Use assertion instead
 List of assertions.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-browserVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L487">property <b>browserVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L487">property <b>browserVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>browserVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestBrowserVariable'>SyntheticsTestBrowserVariable</a>&gt;[]&gt;;</code></pre>
@@ -8691,7 +8691,7 @@ List of assertions.
 Variables used for a browser test steps. Multiple `variable` blocks are allowed with the structure below.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-configVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L491">property <b>configVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L491">property <b>configVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestConfigVariable'>SyntheticsTestConfigVariable</a>&gt;[]&gt;;</code></pre>
@@ -8699,7 +8699,7 @@ Variables used for a browser test steps. Multiple `variable` blocks are allowed 
 Variables used for the test configuration. Multiple `config_variable` blocks are allowed with the structure below.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-deviceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L496">property <b>deviceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L496">property <b>deviceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8708,7 +8708,7 @@ Array with the different device IDs used to run the test. Allowed enum values: `
 (only available for `browser` tests).
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-locations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L502">property <b>locations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L502">property <b>locations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8718,7 +8718,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 `aws:eu-central-1`).
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L507">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L507">property <b>message</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>message?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8727,7 +8727,7 @@ A message to include with notifications for this synthetics test. Email notifica
 using the same `@username` notation as events.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-monitorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L511">property <b>monitorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L511">property <b>monitorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -8735,7 +8735,7 @@ using the same `@username` notation as events.
 ID of the monitor associated with the Datadog synthetics test.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L515">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L515">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8743,7 +8743,7 @@ ID of the monitor associated with the Datadog synthetics test.
 Name of Datadog synthetics test.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L519">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L519">property <b>options</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -8752,12 +8752,12 @@ This parameter is deprecated, please use `options_list`
 </div>
 <pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestOptions'>SyntheticsTestOptions</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SyntheticsTestState-optionsList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L520">property <b>optionsList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L520">property <b>optionsList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionsList?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestOptionsList'>SyntheticsTestOptionsList</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SyntheticsTestState-request">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L524">property <b>request</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L524">property <b>request</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestRequest'>SyntheticsTestRequest</a>&gt;;</code></pre>
@@ -8765,7 +8765,7 @@ This parameter is deprecated, please use `options_list`
 The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-requestBasicauth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L528">property <b>requestBasicauth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L528">property <b>requestBasicauth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestBasicauth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestRequestBasicauth'>SyntheticsTestRequestBasicauth</a>&gt;;</code></pre>
@@ -8773,7 +8773,7 @@ The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
 The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-requestClientCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L533">property <b>requestClientCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L533">property <b>requestClientCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestClientCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestRequestClientCertificate'>SyntheticsTestRequestClientCertificate</a>&gt;;</code></pre>
@@ -8782,7 +8782,7 @@ Client certificate to use when performing the test request. Exactly one nested b
 below.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-requestHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L537">property <b>requestHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L537">property <b>requestHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -8790,7 +8790,7 @@ below.
 Header name and value map.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-requestQuery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L541">property <b>requestQuery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L541">property <b>requestQuery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -8798,7 +8798,7 @@ Header name and value map.
 Query arguments name and value map.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L545">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L545">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8806,7 +8806,7 @@ Query arguments name and value map.
 Define whether you want to start (`live`) or pause (`paused`) a Synthetic test. Allowed enum values: `live`, `paused`
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-steps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L549">property <b>steps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L549">property <b>steps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>steps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#SyntheticsTestStep'>SyntheticsTestStep</a>&gt;[]&gt;;</code></pre>
@@ -8814,7 +8814,7 @@ Define whether you want to start (`live`) or pause (`paused`) a Synthetic test. 
 Steps for browser tests.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-subtype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L553">property <b>subtype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L553">property <b>subtype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subtype?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8822,7 +8822,7 @@ Steps for browser tests.
 When `type` is `api`, choose from `http`, `ssl`, `tcp` or `dns`. Defaults to `http`.
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L558">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L558">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8831,7 +8831,7 @@ A list of tags to associate with your synthetics test. This can help you categor
 synthetics page of the UI. Default is an empty list (`[]`).
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L562">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L562">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8839,7 +8839,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 Synthetics test type (`api` or `browser`).
 
 <h4 class="pdoc-member-header" id="SyntheticsTestState-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/syntheticsTest.ts#L568">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/syntheticsTest.ts#L568">property <b>variables</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -8851,7 +8851,7 @@ This parameter is deprecated, please use `browser_variable`
 Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below.
 
 <h3 class="pdoc-module-header" id="TimeBoardArgs" data-link-title="TimeBoardArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L140">
         interface <strong>TimeBoardArgs</strong>
     </a>
 </h3>
@@ -8861,7 +8861,7 @@ Variables used for a browser test steps. Multiple `browser_variable` blocks are 
 The set of arguments for constructing a TimeBoard resource.
 
 <h4 class="pdoc-member-header" id="TimeBoardArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L144">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L144">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8869,7 +8869,7 @@ The set of arguments for constructing a TimeBoard resource.
 A description of the dashboard's content.
 
 <h4 class="pdoc-member-header" id="TimeBoardArgs-graphs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L148">property <b>graphs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L148">property <b>graphs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>graphs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraph'>TimeBoardGraph</a>&gt;[]&gt;;</code></pre>
@@ -8877,7 +8877,7 @@ A description of the dashboard's content.
 A list of graph definitions.
 
 <h4 class="pdoc-member-header" id="TimeBoardArgs-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L152">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L152">property <b>readOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8885,7 +8885,7 @@ A list of graph definitions.
 The read-only status of the timeboard. Default is false.
 
 <h4 class="pdoc-member-header" id="TimeBoardArgs-templateVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L156">property <b>templateVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L156">property <b>templateVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardTemplateVariable'>TimeBoardTemplateVariable</a>&gt;[]&gt;;</code></pre>
@@ -8893,7 +8893,7 @@ The read-only status of the timeboard. Default is false.
 A list of template variables for using Dashboard templating.
 
 <h4 class="pdoc-member-header" id="TimeBoardArgs-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L160">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L160">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8901,7 +8901,7 @@ A list of template variables for using Dashboard templating.
 The name of the dashboard.
 
 <h3 class="pdoc-module-header" id="TimeBoardState" data-link-title="TimeBoardState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L114">
         interface <strong>TimeBoardState</strong>
     </a>
 </h3>
@@ -8911,7 +8911,7 @@ The name of the dashboard.
 Input properties used for looking up and filtering TimeBoard resources.
 
 <h4 class="pdoc-member-header" id="TimeBoardState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L118">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L118">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8919,7 +8919,7 @@ Input properties used for looking up and filtering TimeBoard resources.
 A description of the dashboard's content.
 
 <h4 class="pdoc-member-header" id="TimeBoardState-graphs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L122">property <b>graphs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L122">property <b>graphs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>graphs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraph'>TimeBoardGraph</a>&gt;[]&gt;;</code></pre>
@@ -8927,7 +8927,7 @@ A description of the dashboard's content.
 A list of graph definitions.
 
 <h4 class="pdoc-member-header" id="TimeBoardState-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L126">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L126">property <b>readOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8935,7 +8935,7 @@ A list of graph definitions.
 The read-only status of the timeboard. Default is false.
 
 <h4 class="pdoc-member-header" id="TimeBoardState-templateVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L130">property <b>templateVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L130">property <b>templateVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardTemplateVariable'>TimeBoardTemplateVariable</a>&gt;[]&gt;;</code></pre>
@@ -8943,7 +8943,7 @@ The read-only status of the timeboard. Default is false.
 A list of template variables for using Dashboard templating.
 
 <h4 class="pdoc-member-header" id="TimeBoardState-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/timeBoard.ts#L134">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/timeBoard.ts#L134">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8951,7 +8951,7 @@ A list of template variables for using Dashboard templating.
 The name of the dashboard.
 
 <h3 class="pdoc-module-header" id="UserArgs" data-link-title="UserArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L255">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L255">
         interface <strong>UserArgs</strong>
     </a>
 </h3>
@@ -8961,7 +8961,7 @@ The name of the dashboard.
 The set of arguments for constructing a User resource.
 
 <h4 class="pdoc-member-header" id="UserArgs-accessRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L262">property <b>accessRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L262">property <b>accessRole</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -8974,7 +8974,7 @@ Role description for user. Can be `st` (standard user), `adm` (admin user) or `r
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
 
 <h4 class="pdoc-member-header" id="UserArgs-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L266">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L266">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8982,7 +8982,7 @@ Role description for user. Can be `st` (standard user), `adm` (admin user) or `r
 Whether the user is disabled.
 
 <h4 class="pdoc-member-header" id="UserArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L270">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L270">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8990,7 +8990,7 @@ Whether the user is disabled.
 Email address for user.
 
 <h4 class="pdoc-member-header" id="UserArgs-handle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L276">property <b>handle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L276">property <b>handle</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -9002,7 +9002,7 @@ This parameter is deprecated and will be removed from the next Major version
 The user handle, must be a valid email.
 
 <h4 class="pdoc-member-header" id="UserArgs-isAdmin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L283">property <b>isAdmin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L283">property <b>isAdmin</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -9015,7 +9015,7 @@ Whether the user is an administrator. Warning: the corresponding query parameter
 argument would always trigger an execution plan.
 
 <h4 class="pdoc-member-header" id="UserArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L287">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L287">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9023,7 +9023,7 @@ argument would always trigger an execution plan.
 Name for user.
 
 <h4 class="pdoc-member-header" id="UserArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L294">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L294">property <b>role</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -9036,7 +9036,7 @@ Role description for user. Warning: the corresponding query parameter is ignored
 would always trigger an execution plan.
 
 <h4 class="pdoc-member-header" id="UserArgs-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L298">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L298">property <b>roles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -9044,7 +9044,7 @@ would always trigger an execution plan.
 A list a role IDs to assign to the user.
 
 <h4 class="pdoc-member-header" id="UserArgs-sendUserInvitation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L302">property <b>sendUserInvitation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L302">property <b>sendUserInvitation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sendUserInvitation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -9052,7 +9052,7 @@ A list a role IDs to assign to the user.
 Whether an invitation email should be sent when the user is created.
 
 <h3 class="pdoc-module-header" id="UserState" data-link-title="UserState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L194">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L194">
         interface <strong>UserState</strong>
     </a>
 </h3>
@@ -9062,7 +9062,7 @@ Whether an invitation email should be sent when the user is created.
 Input properties used for looking up and filtering User resources.
 
 <h4 class="pdoc-member-header" id="UserState-accessRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L201">property <b>accessRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L201">property <b>accessRole</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -9075,7 +9075,7 @@ Role description for user. Can be `st` (standard user), `adm` (admin user) or `r
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
 
 <h4 class="pdoc-member-header" id="UserState-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L205">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L205">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -9083,7 +9083,7 @@ Role description for user. Can be `st` (standard user), `adm` (admin user) or `r
 Whether the user is disabled.
 
 <h4 class="pdoc-member-header" id="UserState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L209">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L209">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9091,7 +9091,7 @@ Whether the user is disabled.
 Email address for user.
 
 <h4 class="pdoc-member-header" id="UserState-handle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L215">property <b>handle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L215">property <b>handle</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -9103,7 +9103,7 @@ This parameter is deprecated and will be removed from the next Major version
 The user handle, must be a valid email.
 
 <h4 class="pdoc-member-header" id="UserState-isAdmin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L222">property <b>isAdmin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L222">property <b>isAdmin</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -9116,7 +9116,7 @@ Whether the user is an administrator. Warning: the corresponding query parameter
 argument would always trigger an execution plan.
 
 <h4 class="pdoc-member-header" id="UserState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L226">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L226">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9124,7 +9124,7 @@ argument would always trigger an execution plan.
 Name for user.
 
 <h4 class="pdoc-member-header" id="UserState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L233">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L233">property <b>role</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -9137,7 +9137,7 @@ Role description for user. Warning: the corresponding query parameter is ignored
 would always trigger an execution plan.
 
 <h4 class="pdoc-member-header" id="UserState-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L237">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L237">property <b>roles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -9145,7 +9145,7 @@ would always trigger an execution plan.
 A list a role IDs to assign to the user.
 
 <h4 class="pdoc-member-header" id="UserState-sendUserInvitation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L241">property <b>sendUserInvitation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L241">property <b>sendUserInvitation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sendUserInvitation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -9153,7 +9153,7 @@ A list a role IDs to assign to the user.
 Whether an invitation email should be sent when the user is created.
 
 <h4 class="pdoc-member-header" id="UserState-userInvitationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L245">property <b>userInvitationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L245">property <b>userInvitationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userInvitationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9161,7 +9161,7 @@ Whether an invitation email should be sent when the user is created.
 The ID of the user invitation that was sent when creating the user.
 
 <h4 class="pdoc-member-header" id="UserState-verified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/user.ts#L249">property <b>verified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/029a54a8c270d6c9f28d0bfe4458568f463c7810/sdk/nodejs/user.ts#L249">property <b>verified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>verified?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>

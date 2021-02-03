@@ -193,22 +193,58 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="agentversionexpirationdate_csharp">
-<a href="#agentversionexpirationdate_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version<wbr>Expiration<wbr>Date</a>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server Agent Version Expiration Date{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="agentversionstatus_csharp">
-<a href="#agentversionstatus_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version<wbr>Status</a>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server Agent Version Status{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="agentversion_csharp">
+<a href="#agentversion_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server Agent Version{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="clusterid_csharp">
+<a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server clusterId{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="clustername_csharp">
+<a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server clusterName{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="discoveryendpointuri_csharp">
@@ -220,13 +256,13 @@ The following output properties are available:
     <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="lastheartbeat_csharp">
@@ -283,15 +319,6 @@ The following output properties are available:
     <dd>{{% md %}}Telemetry Endpoint Uri{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -308,87 +335,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="servermanagementerrorcode_csharp">
-<a href="#servermanagementerrorcode_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Management<wbr>Error<wbr>Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="servername_csharp">
-<a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Server name{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="servicelocation_csharp">
-<a href="#servicelocation_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Service Location{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="storagesyncserviceuid_csharp">
-<a href="#storagesyncserviceuid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Sync<wbr>Service<wbr>Uid</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="agentversion_csharp">
-<a href="#agentversion_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Registered Server Agent Version{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="clusterid_csharp">
-<a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Registered Server clusterId{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="clustername_csharp">
-<a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Registered Server clusterName{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="friendlyname_csharp">
-<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="servercertificate_csharp">
@@ -409,6 +355,15 @@ The following output properties are available:
     <dd>{{% md %}}Registered Server serverId{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="servermanagementerrorcode_csharp">
+<a href="#servermanagementerrorcode_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Management<wbr>Error<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="serverosversion_csharp">
 <a href="#serverosversion_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>OSVersion</a>
 </span>
@@ -425,6 +380,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Registered Server serverRole{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="servicelocation_csharp">
+<a href="#servicelocation_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service Location{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="storagesyncserviceuid_csharp">
+<a href="#storagesyncserviceuid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Sync<wbr>Service<wbr>Uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -433,22 +406,58 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="agentversionexpirationdate_go">
-<a href="#agentversionexpirationdate_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version<wbr>Expiration<wbr>Date</a>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server Agent Version Expiration Date{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="agentversionstatus_go">
-<a href="#agentversionstatus_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version<wbr>Status</a>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server Agent Version Status{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="agentversion_go">
+<a href="#agentversion_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server Agent Version{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="clusterid_go">
+<a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server clusterId{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="clustername_go">
+<a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server clusterName{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="discoveryendpointuri_go">
@@ -460,13 +469,13 @@ The following output properties are available:
     <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="lastheartbeat_go">
@@ -523,15 +532,6 @@ The following output properties are available:
     <dd>{{% md %}}Telemetry Endpoint Uri{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -548,87 +548,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="servermanagementerrorcode_go">
-<a href="#servermanagementerrorcode_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Management<wbr>Error<wbr>Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="servername_go">
-<a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Server name{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="servicelocation_go">
-<a href="#servicelocation_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Service Location{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="storagesyncserviceuid_go">
-<a href="#storagesyncserviceuid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Sync<wbr>Service<wbr>Uid</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="agentversion_go">
-<a href="#agentversion_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Registered Server Agent Version{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="clusterid_go">
-<a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Registered Server clusterId{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="clustername_go">
-<a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Registered Server clusterName{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="friendlyname_go">
-<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="servercertificate_go">
@@ -649,6 +568,15 @@ The following output properties are available:
     <dd>{{% md %}}Registered Server serverId{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="servermanagementerrorcode_go">
+<a href="#servermanagementerrorcode_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Management<wbr>Error<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="serverosversion_go">
 <a href="#serverosversion_go" style="color: inherit; text-decoration: inherit;">Server<wbr>OSVersion</a>
 </span>
@@ -665,6 +593,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Registered Server serverRole{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="servicelocation_go">
+<a href="#servicelocation_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service Location{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="storagesyncserviceuid_go">
+<a href="#storagesyncserviceuid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Sync<wbr>Service<wbr>Uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -673,22 +619,58 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="agentversionexpirationdate_nodejs">
-<a href="#agentversionexpirationdate_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version<wbr>Expiration<wbr>Date</a>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server Agent Version Expiration Date{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="agentversionstatus_nodejs">
-<a href="#agentversionstatus_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version<wbr>Status</a>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server Agent Version Status{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="agentversion_nodejs">
+<a href="#agentversion_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server Agent Version{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="clusterid_nodejs">
+<a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server clusterId{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="clustername_nodejs">
+<a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server clusterName{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="discoveryendpointuri_nodejs">
@@ -700,13 +682,13 @@ The following output properties are available:
     <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="lastheartbeat_nodejs">
@@ -763,15 +745,6 @@ The following output properties are available:
     <dd>{{% md %}}Telemetry Endpoint Uri{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
@@ -788,87 +761,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="servermanagementerrorcode_nodejs">
-<a href="#servermanagementerrorcode_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Management<wbr>Error<wbr>Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="servername_nodejs">
-<a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Server name{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="servicelocation_nodejs">
-<a href="#servicelocation_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Service Location{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="storagesyncserviceuid_nodejs">
-<a href="#storagesyncserviceuid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Sync<wbr>Service<wbr>Uid</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="agentversion_nodejs">
-<a href="#agentversion_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Registered Server Agent Version{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="clusterid_nodejs">
-<a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Registered Server clusterId{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="clustername_nodejs">
-<a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Registered Server clusterName{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="friendlyname_nodejs">
-<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="servercertificate_nodejs">
@@ -889,6 +781,15 @@ The following output properties are available:
     <dd>{{% md %}}Registered Server serverId{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="servermanagementerrorcode_nodejs">
+<a href="#servermanagementerrorcode_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Management<wbr>Error<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="serverosversion_nodejs">
 <a href="#serverosversion_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>OSVersion</a>
 </span>
@@ -905,6 +806,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Registered Server serverRole{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="servicelocation_nodejs">
+<a href="#servicelocation_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service Location{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="storagesyncserviceuid_nodejs">
+<a href="#storagesyncserviceuid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Sync<wbr>Service<wbr>Uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -913,22 +832,58 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="agent_version_expiration_date_python">
-<a href="#agent_version_expiration_date_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version_<wbr>expiration_<wbr>date</a>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Registered Server Agent Version Expiration Date{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="agent_version_status_python">
-<a href="#agent_version_status_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version_<wbr>status</a>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Registered Server Agent Version Status{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="agent_version_python">
+<a href="#agent_version_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Registered Server Agent Version{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="cluster_id_python">
+<a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Registered Server clusterId{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="cluster_name_python">
+<a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Registered Server clusterName{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="discovery_endpoint_uri_python">
@@ -940,13 +895,13 @@ The following output properties are available:
     <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="last_heart_beat_python">
@@ -1003,15 +958,6 @@ The following output properties are available:
     <dd>{{% md %}}Telemetry Endpoint Uri{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
@@ -1028,87 +974,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="server_management_error_code_python">
-<a href="#server_management_error_code_python" style="color: inherit; text-decoration: inherit;">server_<wbr>management_<wbr>error_<wbr>code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="server_name_python">
-<a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Server name{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="service_location_python">
-<a href="#service_location_python" style="color: inherit; text-decoration: inherit;">service_<wbr>location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Service Location{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="storage_sync_service_uid_python">
-<a href="#storage_sync_service_uid_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>sync_<wbr>service_<wbr>uid</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="agent_version_python">
-<a href="#agent_version_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Registered Server Agent Version{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="cluster_id_python">
-<a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Registered Server clusterId{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="cluster_name_python">
-<a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Registered Server clusterName{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="friendly_name_python">
-<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="server_certificate_python">
@@ -1129,6 +994,15 @@ The following output properties are available:
     <dd>{{% md %}}Registered Server serverId{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="server_management_error_code_python">
+<a href="#server_management_error_code_python" style="color: inherit; text-decoration: inherit;">server_<wbr>management_<wbr>error_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="server_os_version_python">
 <a href="#server_os_version_python" style="color: inherit; text-decoration: inherit;">server_<wbr>os_<wbr>version</a>
 </span>
@@ -1145,6 +1019,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Registered Server serverRole{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="service_location_python">
+<a href="#service_location_python" style="color: inherit; text-decoration: inherit;">service_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Service Location{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="storage_sync_service_uid_python">
+<a href="#storage_sync_service_uid_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>sync_<wbr>service_<wbr>uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

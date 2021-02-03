@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.VisualStudio.V20171101Preview.Account("account", new AzureNextGen.VisualStudio.V20171101Preview.AccountArgs
+        var account = new AzureNextGen.VisualStudio.V20140401Preview.Account("account", new AzureNextGen.VisualStudio.V20140401Preview.AccountArgs
         {
             AccountName = "Example",
             Location = "Central US",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	visualstudio "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/visualstudio/v20171101preview"
+	visualstudio "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/visualstudio/v20140401preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,7 +82,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.visualstudio.v20171101preview.Account("account",
+account = azure_nextgen.visualstudio.v20140401preview.Account("account",
     account_name="Example",
     location="Central US",
     operation_type="create",
@@ -101,7 +101,7 @@ account = azure_nextgen.visualstudio.v20171101preview.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.visualstudio.v20171101preview.Account("account", {
+const account = new azure_nextgen.visualstudio.v20140401preview.Account("account", {
     accountName: "Example",
     location: "Central US",
     operationType: "create",
@@ -779,7 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:visualstudio/v20171101preview:Account VS-Example-Group /subscriptions/0de7f055-dbea-498d-8e9e-da287eedca90/resourceGroups/VS-Example-Group/providers/Microsoft.VisualStudio/account/Example 
+$ pulumi import azure-nextgen:visualstudio/v20140401preview:Account VS-Example-Group /subscriptions/0de7f055-dbea-498d-8e9e-da287eedca90/resourceGroups/VS-Example-Group/providers/Microsoft.VisualStudio/account/Example 
 ```
 
 

@@ -1218,16 +1218,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the identity type of the Spring Cloud Application. Possible value is `SystemAssigned`.
-{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
@@ -1248,22 +1238,22 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Managed Service Identity of this Spring Cloud Application.
 {{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identity type of the Spring Cloud Application. Possible value is `SystemAssigned`.
 {{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
     <dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
@@ -1284,22 +1274,22 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Managed Service Identity of this Spring Cloud Application.
 {{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identity type of the Spring Cloud Application. Possible value is `SystemAssigned`.
 {{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
     <dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
@@ -1320,22 +1310,22 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Managed Service Identity of this Spring Cloud Application.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identity type of the Spring Cloud Application. Possible value is `SystemAssigned`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the identity type of the Spring Cloud Application. Possible value is `SystemAssigned`.
-{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
@@ -1355,6 +1345,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Managed Service Identity of this Spring Cloud Application.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identity type of the Spring Cloud Application. Possible value is `SystemAssigned`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

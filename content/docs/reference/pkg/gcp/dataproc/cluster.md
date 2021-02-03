@@ -1621,6 +1621,18 @@ option.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="tempbucket_csharp">
+<a href="#tempbucket_csharp" style="color: inherit; text-decoration: inherit;">Temp<wbr>Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Storage temp bucket used to store ephemeral cluster
+and jobs data, such as Spark and MapReduce history files.
+Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create / assign one for you.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="workerconfig_csharp">
 <a href="#workerconfig_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
 </span>
@@ -1772,6 +1784,18 @@ then GCP will auto create / assign one for you. However, you are not guaranteed
 an auto generated bucket which is solely dedicated to your cluster; it may be shared
 with other clusters in the same region/zone also choosing to use the auto generation
 option.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tempbucket_go">
+<a href="#tempbucket_go" style="color: inherit; text-decoration: inherit;">Temp<wbr>Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Storage temp bucket used to store ephemeral cluster
+and jobs data, such as Spark and MapReduce history files.
+Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create / assign one for you.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1929,6 +1953,18 @@ option.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="tempbucket_nodejs">
+<a href="#tempbucket_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Storage temp bucket used to store ephemeral cluster
+and jobs data, such as Spark and MapReduce history files.
+Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create / assign one for you.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="workerconfig_nodejs">
 <a href="#workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
 </span>
@@ -2080,6 +2116,18 @@ then GCP will auto create / assign one for you. However, you are not guaranteed
 an auto generated bucket which is solely dedicated to your cluster; it may be shared
 with other clusters in the same region/zone also choosing to use the auto generation
 option.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="temp_bucket_python">
+<a href="#temp_bucket_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Storage temp bucket used to store ephemeral cluster
+and jobs data, such as Spark and MapReduce history files.
+Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create / assign one for you.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

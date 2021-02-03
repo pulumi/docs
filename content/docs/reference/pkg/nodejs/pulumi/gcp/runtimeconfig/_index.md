@@ -3,7 +3,7 @@ title: "Module runtimeconfig"
 title_tag: "Module runtimeconfig | Package @pulumi/gcp | Node.js SDK"
 linktitle: "runtimeconfig"
 meta_desc: "Explore members of the runtimeconfig module in the @pulumi/gcp package."
-git_sha: "4f8e44f390377bd82bfb0f66dbdf6c0c289fb396"
+git_sha: "4687b672ca57745f73d83956f1fd12f569327169"
 block_external_search_index: true
 ---
 
@@ -24,6 +24,10 @@ block_external_search_index: true
     <li><a href="#Variable"><span class="symbol resource"></span>Variable</a></li>
 </ul>
 
+<h3>Functions</h3>
+<ul class="api">
+    <li><a href="#getConfig"><span class="symbol function"></span>getConfig</a></li>
+</ul>
 
 <h3>Others</h3>
 <ul class="api">
@@ -35,6 +39,8 @@ block_external_search_index: true
     <li><a href="#ConfigIamPolicyArgs"><span class="symbol api"></span>ConfigIamPolicyArgs</a></li>
     <li><a href="#ConfigIamPolicyState"><span class="symbol api"></span>ConfigIamPolicyState</a></li>
     <li><a href="#ConfigState"><span class="symbol api"></span>ConfigState</a></li>
+    <li><a href="#GetConfigArgs"><span class="symbol api"></span>GetConfigArgs</a></li>
+    <li><a href="#GetConfigResult"><span class="symbol api"></span>GetConfigResult</a></li>
     <li><a href="#VariableArgs"><span class="symbol api"></span>VariableArgs</a></li>
     <li><a href="#VariableState"><span class="symbol api"></span>VariableState</a></li>
 </ul>
@@ -42,17 +48,20 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Config" data-link-title="Config">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L43">
         Resource <strong>Config</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Config</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 
-Manages a RuntimeConfig resource in Google Cloud. For more information, see the
-[official documentation](https://cloud.google.com/deployment-manager/runtime-configurator/),
-or the
-[JSON API](https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/).
+Manages a RuntimeConfig resource in Google Cloud.
+
+To get more information about RuntimeConfigs, see:
+
+* [API documentation](https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/v1beta1/projects.configs)
+* How-to Guides
+    * [Runtime Configurator Fundamentals](https://cloud.google.com/deployment-manager/runtime-configurator/)
 
 #### Example Usage
 
@@ -82,7 +91,7 @@ Runtime Configs can be imported using the `name` or full config name, e.g.
  When importing using only the name, the provider project must be set.
 
 <h4 class="pdoc-member-header" id="Config-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -96,7 +105,7 @@ Create a Config resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Config-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -107,14 +116,14 @@ Get an existing Config resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Config-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Config-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -125,7 +134,7 @@ Returns true if the given object is an instance of Config.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Config-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L72">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L75">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -134,7 +143,7 @@ The description to associate with the runtime
 config.
 
 <h4 class="pdoc-member-header" id="Config-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -143,7 +152,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Config-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -151,7 +160,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the runtime config.
 
 <h4 class="pdoc-member-header" id="Config-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L81">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L84">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -160,7 +169,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Config-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -169,7 +178,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ConfigIamBinding" data-link-title="ConfigIamBinding">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L90">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L90">
         Resource <strong>ConfigIamBinding</strong>
     </a>
 </h3>
@@ -258,7 +267,7 @@ For all import syntaxes, the "resource in question" can take any of the followin
 full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 <h4 class="pdoc-member-header" id="ConfigIamBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L138"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L138"> <b>constructor</b></a>
 </h4>
 
 
@@ -272,7 +281,7 @@ Create a ConfigIamBinding resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ConfigIamBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L100">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L100">method <b>get</b></a>
 </h4>
 
 
@@ -283,14 +292,14 @@ Get an existing ConfigIamBinding resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ConfigIamBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L90">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L90">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigIamBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L111">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L111">method <b>isInstance</b></a>
 </h4>
 
 
@@ -301,12 +310,12 @@ Returns true if the given object is an instance of ConfigIamBinding.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ConfigIamBinding-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L118">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L118">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ConfigIamBindingCondition'>ConfigIamBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigIamBinding-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L122">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L122">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -314,7 +323,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="ConfigIamBinding-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L126">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L126">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -322,7 +331,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="ConfigIamBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L90">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L90">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -331,12 +340,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ConfigIamBinding-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L127">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L127">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigIamBinding-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L132">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L132">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -345,7 +354,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ConfigIamBinding-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L138">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L138">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -355,7 +364,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="ConfigIamBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L90">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L90">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -364,7 +373,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ConfigIamMember" data-link-title="ConfigIamMember">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L90">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L90">
         Resource <strong>ConfigIamMember</strong>
     </a>
 </h3>
@@ -453,7 +462,7 @@ For all import syntaxes, the "resource in question" can take any of the followin
 full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 <h4 class="pdoc-member-header" id="ConfigIamMember-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L138"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L138"> <b>constructor</b></a>
 </h4>
 
 
@@ -467,7 +476,7 @@ Create a ConfigIamMember resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ConfigIamMember-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L100">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L100">method <b>get</b></a>
 </h4>
 
 
@@ -478,14 +487,14 @@ Get an existing ConfigIamMember resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ConfigIamMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L90">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L90">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigIamMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L111">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L111">method <b>isInstance</b></a>
 </h4>
 
 
@@ -496,12 +505,12 @@ Returns true if the given object is an instance of ConfigIamMember.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ConfigIamMember-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L118">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L118">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ConfigIamMemberCondition'>ConfigIamMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigIamMember-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L122">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L122">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -509,7 +518,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="ConfigIamMember-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L126">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L126">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -517,7 +526,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="ConfigIamMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L90">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L90">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -526,12 +535,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ConfigIamMember-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L127">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L127">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigIamMember-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L132">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L132">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -540,7 +549,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ConfigIamMember-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L138">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L138">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -550,7 +559,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="ConfigIamMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L90">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L90">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -559,7 +568,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ConfigIamPolicy" data-link-title="ConfigIamPolicy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L89">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L89">
         Resource <strong>ConfigIamPolicy</strong>
     </a>
 </h3>
@@ -648,7 +657,7 @@ For all import syntaxes, the "resource in question" can take any of the followin
 full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 <h4 class="pdoc-member-header" id="ConfigIamPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L134"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L134"> <b>constructor</b></a>
 </h4>
 
 
@@ -662,7 +671,7 @@ Create a ConfigIamPolicy resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ConfigIamPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L99">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L99">method <b>get</b></a>
 </h4>
 
 
@@ -673,14 +682,14 @@ Get an existing ConfigIamPolicy resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ConfigIamPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L89">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L89">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigIamPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L110">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L110">method <b>isInstance</b></a>
 </h4>
 
 
@@ -691,7 +700,7 @@ Returns true if the given object is an instance of ConfigIamPolicy.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ConfigIamPolicy-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L120">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L120">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -699,7 +708,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="ConfigIamPolicy-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L124">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L124">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -707,7 +716,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="ConfigIamPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L89">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L89">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -716,7 +725,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ConfigIamPolicy-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L129">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L129">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -725,7 +734,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="ConfigIamPolicy-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L134">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L134">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -734,7 +743,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ConfigIamPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L89">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L89">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -743,7 +752,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Variable" data-link-title="Variable">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L27">
         Resource <strong>Variable</strong>
     </a>
 </h3>
@@ -770,7 +779,7 @@ Runtime Config Variables can be imported using the `name` or full variable name,
  When importing using only the name, the provider project must be set.
 
 <h4 class="pdoc-member-header" id="Variable-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -784,7 +793,7 @@ Create a Variable resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Variable-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -795,14 +804,14 @@ Get an existing Variable resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Variable-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Variable-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -813,7 +822,7 @@ Returns true if the given object is an instance of Variable.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Variable-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -822,7 +831,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Variable-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L59">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -831,7 +840,7 @@ The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. "prod-variables/hostname").
 
 <h4 class="pdoc-member-header" id="Variable-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L64">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L64">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -840,7 +849,7 @@ The name of the RuntimeConfig resource containing this
 variable.
 
 <h4 class="pdoc-member-header" id="Variable-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L69">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L69">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -849,7 +858,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Variable-text">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L76">property <b>text</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L76">property <b>text</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>text: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -860,7 +869,7 @@ it must be a valid UTF-8 string and less than 4096 bytes in length. If `value`
 is specified, it must be base64 encoded and less than 4096 bytes in length.
 
 <h4 class="pdoc-member-header" id="Variable-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L82">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L82">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updateTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -870,7 +879,7 @@ accurate to nanoseconds, representing when the variable was last updated.
 Example: "2016-10-09T12:33:37.578138407Z".
 
 <h4 class="pdoc-member-header" id="Variable-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -879,15 +888,43 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Variable-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L83">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L83">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
+<h2 id="functions">Functions</h2>
+<h3 class="pdoc-module-header" id="getConfig" data-link-title="getConfig">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/getConfig.ts#L26">
+        Function <strong>getConfig</strong>
+    </a>
+</h3>
+
+
+<pre class="highlight"><code><span class='kd'></span>getConfig(args: <a href='#GetConfigArgs'>GetConfigArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetConfigResult'>GetConfigResult</a>&gt;</code></pre>
+
+
+To get more information about RuntimeConfigs, see:
+
+* [API documentation](https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/v1beta1/projects.configs)
+* How-to Guides
+    * [Runtime Configurator Fundamentals](https://cloud.google.com/deployment-manager/runtime-configurator/)
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const run_service = pulumi.output(gcp.runtimeconfig.getConfig({
+    name: "my-service",
+}, { async: true }));
+```
+
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ConfigArgs" data-link-title="ConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L141">
         interface <strong>ConfigArgs</strong>
     </a>
 </h3>
@@ -897,7 +934,7 @@ deployments.
 The set of arguments for constructing a Config resource.
 
 <h4 class="pdoc-member-header" id="ConfigArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L143">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L146">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -906,7 +943,7 @@ The description to associate with the runtime
 config.
 
 <h4 class="pdoc-member-header" id="ConfigArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L147">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L150">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -914,7 +951,7 @@ config.
 The name of the runtime config.
 
 <h4 class="pdoc-member-header" id="ConfigArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L152">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L155">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -923,7 +960,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="ConfigIamBindingArgs" data-link-title="ConfigIamBindingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L217">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L217">
         interface <strong>ConfigIamBindingArgs</strong>
     </a>
 </h3>
@@ -933,12 +970,12 @@ is not provided, the provider project is used.
 The set of arguments for constructing a ConfigIamBinding resource.
 
 <h4 class="pdoc-member-header" id="ConfigIamBindingArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L218">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L218">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ConfigIamBindingCondition'>ConfigIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigIamBindingArgs-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L222">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L222">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -946,12 +983,12 @@ The set of arguments for constructing a ConfigIamBinding resource.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="ConfigIamBindingArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L223">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L223">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigIamBindingArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L228">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L228">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -960,7 +997,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ConfigIamBindingArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L234">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L234">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -970,7 +1007,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="ConfigIamBindingState" data-link-title="ConfigIamBindingState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L190">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L190">
         interface <strong>ConfigIamBindingState</strong>
     </a>
 </h3>
@@ -980,12 +1017,12 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering ConfigIamBinding resources.
 
 <h4 class="pdoc-member-header" id="ConfigIamBindingState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L191">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L191">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ConfigIamBindingCondition'>ConfigIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigIamBindingState-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L195">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L195">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -993,7 +1030,7 @@ Input properties used for looking up and filtering ConfigIamBinding resources.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="ConfigIamBindingState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L199">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L199">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1001,12 +1038,12 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="ConfigIamBindingState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L200">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L200">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigIamBindingState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L205">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L205">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1015,7 +1052,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ConfigIamBindingState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamBinding.ts#L211">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamBinding.ts#L211">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1025,7 +1062,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="ConfigIamMemberArgs" data-link-title="ConfigIamMemberArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L217">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L217">
         interface <strong>ConfigIamMemberArgs</strong>
     </a>
 </h3>
@@ -1035,12 +1072,12 @@ The role that should be applied. Only one
 The set of arguments for constructing a ConfigIamMember resource.
 
 <h4 class="pdoc-member-header" id="ConfigIamMemberArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L218">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L218">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ConfigIamMemberCondition'>ConfigIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigIamMemberArgs-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L222">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L222">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1048,12 +1085,12 @@ The set of arguments for constructing a ConfigIamMember resource.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="ConfigIamMemberArgs-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L223">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L223">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigIamMemberArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L228">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L228">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1062,7 +1099,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ConfigIamMemberArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L234">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L234">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1072,7 +1109,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="ConfigIamMemberState" data-link-title="ConfigIamMemberState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L190">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L190">
         interface <strong>ConfigIamMemberState</strong>
     </a>
 </h3>
@@ -1082,12 +1119,12 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering ConfigIamMember resources.
 
 <h4 class="pdoc-member-header" id="ConfigIamMemberState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L191">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L191">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ConfigIamMemberCondition'>ConfigIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigIamMemberState-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L195">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L195">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1095,7 +1132,7 @@ Input properties used for looking up and filtering ConfigIamMember resources.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="ConfigIamMemberState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L199">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L199">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1103,12 +1140,12 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="ConfigIamMemberState-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L200">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L200">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigIamMemberState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L205">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L205">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1117,7 +1154,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ConfigIamMemberState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamMember.ts#L211">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamMember.ts#L211">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1127,7 +1164,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="ConfigIamPolicyArgs" data-link-title="ConfigIamPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L203">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L203">
         interface <strong>ConfigIamPolicyArgs</strong>
     </a>
 </h3>
@@ -1137,7 +1174,7 @@ The role that should be applied. Only one
 The set of arguments for constructing a ConfigIamPolicy resource.
 
 <h4 class="pdoc-member-header" id="ConfigIamPolicyArgs-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L207">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L207">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1145,7 +1182,7 @@ The set of arguments for constructing a ConfigIamPolicy resource.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="ConfigIamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L212">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L212">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1154,7 +1191,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="ConfigIamPolicyArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L217">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L217">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1163,7 +1200,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h3 class="pdoc-module-header" id="ConfigIamPolicyState" data-link-title="ConfigIamPolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L179">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L179">
         interface <strong>ConfigIamPolicyState</strong>
     </a>
 </h3>
@@ -1173,7 +1210,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 Input properties used for looking up and filtering ConfigIamPolicy resources.
 
 <h4 class="pdoc-member-header" id="ConfigIamPolicyState-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L183">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L183">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1181,7 +1218,7 @@ Input properties used for looking up and filtering ConfigIamPolicy resources.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="ConfigIamPolicyState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L187">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L187">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1189,7 +1226,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="ConfigIamPolicyState-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L192">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L192">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1198,7 +1235,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="ConfigIamPolicyState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L197">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/configIamPolicy.ts#L197">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1207,7 +1244,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h3 class="pdoc-module-header" id="ConfigState" data-link-title="ConfigState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L121">
         interface <strong>ConfigState</strong>
     </a>
 </h3>
@@ -1217,7 +1254,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 Input properties used for looking up and filtering Config resources.
 
 <h4 class="pdoc-member-header" id="ConfigState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L123">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L126">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1226,7 +1263,7 @@ The description to associate with the runtime
 config.
 
 <h4 class="pdoc-member-header" id="ConfigState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L127">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L130">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1234,7 +1271,7 @@ config.
 The name of the runtime config.
 
 <h4 class="pdoc-member-header" id="ConfigState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/config.ts#L132">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/config.ts#L135">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1242,8 +1279,68 @@ The name of the runtime config.
 The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
+<h3 class="pdoc-module-header" id="GetConfigArgs" data-link-title="GetConfigArgs">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/getConfig.ts#L43">
+        interface <strong>GetConfigArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetConfigArgs</span></code></pre>
+
+A collection of arguments for invoking getConfig.
+
+<h4 class="pdoc-member-header" id="GetConfigArgs-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/getConfig.ts#L47">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The name of the Cloud Run Service.
+
+<h4 class="pdoc-member-header" id="GetConfigArgs-project">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/getConfig.ts#L52">property <b>project</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The project in which the resource belongs. If it
+is not provided, the provider project is used.
+
+<h3 class="pdoc-module-header" id="GetConfigResult" data-link-title="GetConfigResult">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/getConfig.ts#L58">
+        interface <strong>GetConfigResult</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetConfigResult</span></code></pre>
+
+A collection of values returned by getConfig.
+
+<h4 class="pdoc-member-header" id="GetConfigResult-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/getConfig.ts#L59">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetConfigResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/getConfig.ts#L63">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The provider-assigned unique ID for this managed resource.
+
+<h4 class="pdoc-member-header" id="GetConfigResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/getConfig.ts#L64">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetConfigResult-project">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/getConfig.ts#L65">property <b>project</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="VariableArgs" data-link-title="VariableArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L164">
         interface <strong>VariableArgs</strong>
     </a>
 </h3>
@@ -1253,7 +1350,7 @@ is not provided, the provider project is used.
 The set of arguments for constructing a Variable resource.
 
 <h4 class="pdoc-member-header" id="VariableArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L169">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L169">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1262,7 +1359,7 @@ The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. "prod-variables/hostname").
 
 <h4 class="pdoc-member-header" id="VariableArgs-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L174">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L174">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1271,7 +1368,7 @@ The name of the RuntimeConfig resource containing this
 variable.
 
 <h4 class="pdoc-member-header" id="VariableArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L179">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L179">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1280,7 +1377,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="VariableArgs-text">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L186">property <b>text</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L186">property <b>text</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>text?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1291,12 +1388,12 @@ it must be a valid UTF-8 string and less than 4096 bytes in length. If `value`
 is specified, it must be base64 encoded and less than 4096 bytes in length.
 
 <h4 class="pdoc-member-header" id="VariableArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L187">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L187">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="VariableState" data-link-title="VariableState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L129">
         interface <strong>VariableState</strong>
     </a>
 </h3>
@@ -1306,7 +1403,7 @@ is specified, it must be base64 encoded and less than 4096 bytes in length.
 Input properties used for looking up and filtering Variable resources.
 
 <h4 class="pdoc-member-header" id="VariableState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L134">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L134">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1315,7 +1412,7 @@ The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. "prod-variables/hostname").
 
 <h4 class="pdoc-member-header" id="VariableState-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L139">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L139">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1324,7 +1421,7 @@ The name of the RuntimeConfig resource containing this
 variable.
 
 <h4 class="pdoc-member-header" id="VariableState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L144">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L144">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1333,7 +1430,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="VariableState-text">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L151">property <b>text</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L151">property <b>text</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>text?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1344,7 +1441,7 @@ it must be a valid UTF-8 string and less than 4096 bytes in length. If `value`
 is specified, it must be base64 encoded and less than 4096 bytes in length.
 
 <h4 class="pdoc-member-header" id="VariableState-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L157">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L157">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1354,7 +1451,7 @@ accurate to nanoseconds, representing when the variable was last updated.
 Example: "2016-10-09T12:33:37.578138407Z".
 
 <h4 class="pdoc-member-header" id="VariableState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f8e44f390377bd82bfb0f66dbdf6c0c289fb396/sdk/nodejs/runtimeconfig/variable.ts#L158">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4687b672ca57745f73d83956f1fd12f569327169/sdk/nodejs/runtimeconfig/variable.ts#L158">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

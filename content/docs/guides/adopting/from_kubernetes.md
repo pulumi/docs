@@ -555,7 +555,7 @@ convert it into the language of your choice. You can get started using `kube2pul
 
 While Pulumi has excellent support for deploying and updating Kubernetes resources on a cluster, Pulumi also offers the ability to render YAML to make it easier to integrate into existing workflows. This gives you the ability to author Kubernetes configuration using general-purpose programming languages, consume libraries, and easily mix in infrastructure configuration (e.g., managed database endpoints, object storage, etc.), all in the same program.
 
-To render YAML during a `pulumi up` rather than have Pulumi perform the deployment against your cluster as it does by default, set the `renderYamlToDirectory` property on [an explicit Kubernetes provider]({{< relref "/docs/intro/concepts/programming-model#explicit-provider-configuration" >}}) object.
+To render YAML during a `pulumi up` rather than have Pulumi perform the deployment against your cluster as it does by default, set the `renderYamlToDirectory` property on [an explicit Kubernetes provider]({{< relref "/docs/intro/concepts/resources#explicit-provider-configuration" >}}) object.
 
 This example provisions a simple load-balanced NGINX service using a general purpose language but renders the output to YAML:
 

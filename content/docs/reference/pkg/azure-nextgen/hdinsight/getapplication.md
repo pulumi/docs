@@ -657,6 +657,15 @@ The following output properties are available:
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privateipaddress_csharp">
+<a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicport_csharp">
 <a href="#publicport_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Port</a>
 </span>
@@ -715,6 +724,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_go">
+<a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="publicport_go">
@@ -777,6 +795,15 @@ The following output properties are available:
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privateipaddress_nodejs">
+<a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicport_nodejs">
 <a href="#publicport_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Port</a>
 </span>
@@ -835,6 +862,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="public_port_python">
@@ -2509,6 +2545,15 @@ The following output properties are available:
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="vmgroupname_csharp">
+<a href="#vmgroupname_csharp" style="color: inherit; text-decoration: inherit;">VMGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworkprofile_csharp">
 <a href="#virtualnetworkprofile_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Profile</a>
 </span>
@@ -2603,6 +2648,15 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmgroupname_go">
+<a href="#vmgroupname_go" style="color: inherit; text-decoration: inherit;">VMGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkprofile_go">
@@ -2701,6 +2755,15 @@ The following output properties are available:
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="vmgroupname_nodejs">
+<a href="#vmgroupname_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>MGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworkprofile_nodejs">
 <a href="#virtualnetworkprofile_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Profile</a>
 </span>
@@ -2795,6 +2858,15 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="v_m_group_name_python">
+<a href="#v_m_group_name_python" style="color: inherit; text-decoration: inherit;">v_<wbr>m_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="virtual_network_profile_python">

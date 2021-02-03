@@ -3,7 +3,7 @@ title: "Module sns"
 title_tag: "Module sns | Package @pulumi/aws | Node.js SDK"
 linktitle: "sns"
 meta_desc: "Explore members of the sns module in the @pulumi/aws package."
-git_sha: "b321f224815d900b31a53aff3df6b62a78294480"
+git_sha: "d072b346d2519850d0b24c72316f8d7487257ab0"
 block_external_search_index: true
 ---
 
@@ -55,7 +55,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="PlatformApplication" data-link-title="PlatformApplication">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L43">
         Resource <strong>PlatformApplication</strong>
     </a>
 </h3>
@@ -98,7 +98,7 @@ SNS platform applications can be imported using the ARN, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="PlatformApplication-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L118"> <b>constructor</b></a>
 </h4>
 
 
@@ -112,7 +112,7 @@ Create a PlatformApplication resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PlatformApplication-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -123,14 +123,14 @@ Get an existing PlatformApplication resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PlatformApplication-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PlatformApplication-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -141,7 +141,7 @@ Returns true if the given object is an instance of PlatformApplication.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PlatformApplication-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L74">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L74">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -149,7 +149,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the SNS platform application
 
 <h4 class="pdoc-member-header" id="PlatformApplication-eventDeliveryFailureTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L78">property <b>eventDeliveryFailureTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L78">property <b>eventDeliveryFailureTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventDeliveryFailureTopicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -157,7 +157,7 @@ The ARN of the SNS platform application
 SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 
 <h4 class="pdoc-member-header" id="PlatformApplication-eventEndpointCreatedTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L82">property <b>eventEndpointCreatedTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L82">property <b>eventEndpointCreatedTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventEndpointCreatedTopicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -165,7 +165,7 @@ SNS Topic triggered when a delivery to any of the platform endpoints associated 
 SNS Topic triggered when a new platform endpoint is added to your platform application.
 
 <h4 class="pdoc-member-header" id="PlatformApplication-eventEndpointDeletedTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L86">property <b>eventEndpointDeletedTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L86">property <b>eventEndpointDeletedTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventEndpointDeletedTopicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -173,7 +173,7 @@ SNS Topic triggered when a new platform endpoint is added to your platform appli
 SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 
 <h4 class="pdoc-member-header" id="PlatformApplication-eventEndpointUpdatedTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L90">property <b>eventEndpointUpdatedTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L90">property <b>eventEndpointUpdatedTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventEndpointUpdatedTopicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -181,7 +181,7 @@ SNS Topic triggered when an existing platform endpoint is deleted from your plat
 SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 
 <h4 class="pdoc-member-header" id="PlatformApplication-failureFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L94">property <b>failureFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L94">property <b>failureFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>failureFeedbackRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -189,7 +189,7 @@ SNS Topic triggered when an existing platform endpoint is changed from your plat
 The IAM role permitted to receive failure feedback for this application.
 
 <h4 class="pdoc-member-header" id="PlatformApplication-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -198,7 +198,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PlatformApplication-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L98">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L98">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -206,7 +206,7 @@ deployments and may be missing (undefined) during planning phases.
 The friendly name for the SNS platform application
 
 <h4 class="pdoc-member-header" id="PlatformApplication-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L102">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L102">property <b>platform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>platform: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -214,7 +214,7 @@ The friendly name for the SNS platform application
 The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
 
 <h4 class="pdoc-member-header" id="PlatformApplication-platformCredential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L106">property <b>platformCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L106">property <b>platformCredential</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>platformCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -222,7 +222,7 @@ The platform that the app is registered with. See [Platform](http://docs.aws.ama
 Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 
 <h4 class="pdoc-member-header" id="PlatformApplication-platformPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L110">property <b>platformPrincipal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L110">property <b>platformPrincipal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>platformPrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -230,7 +230,7 @@ Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns
 Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 
 <h4 class="pdoc-member-header" id="PlatformApplication-successFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L114">property <b>successFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L114">property <b>successFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>successFeedbackRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -238,7 +238,7 @@ Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/l
 The IAM role permitted to receive success feedback for this application.
 
 <h4 class="pdoc-member-header" id="PlatformApplication-successFeedbackSampleRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L118">property <b>successFeedbackSampleRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L118">property <b>successFeedbackSampleRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>successFeedbackSampleRate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -246,7 +246,7 @@ The IAM role permitted to receive success feedback for this application.
 The percentage of success to sample (0-100)
 
 <h4 class="pdoc-member-header" id="PlatformApplication-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -255,7 +255,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SmsPreferences" data-link-title="SmsPreferences">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L19">
         Resource <strong>SmsPreferences</strong>
     </a>
 </h3>
@@ -274,7 +274,7 @@ const updateSmsPrefs = new aws.sns.SmsPreferences("update_sms_prefs", {});
 ```
 
 <h4 class="pdoc-member-header" id="SmsPreferences-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -288,7 +288,7 @@ Create a SmsPreferences resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SmsPreferences-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L29">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L29">method <b>get</b></a>
 </h4>
 
 
@@ -299,14 +299,14 @@ Get an existing SmsPreferences resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SmsPreferences-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L19">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SmsPreferences-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L40">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L40">method <b>isInstance</b></a>
 </h4>
 
 
@@ -317,7 +317,7 @@ Returns true if the given object is an instance of SmsPreferences.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SmsPreferences-defaultSenderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L50">property <b>defaultSenderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L50">property <b>defaultSenderId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultSenderId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -325,7 +325,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A string, such as your business brand, that is displayed as the sender on the receiving device.
 
 <h4 class="pdoc-member-header" id="SmsPreferences-defaultSmsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L54">property <b>defaultSmsType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L54">property <b>defaultSmsType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultSmsType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -333,7 +333,7 @@ A string, such as your business brand, that is displayed as the sender on the re
 The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
 
 <h4 class="pdoc-member-header" id="SmsPreferences-deliveryStatusIamRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L58">property <b>deliveryStatusIamRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L58">property <b>deliveryStatusIamRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deliveryStatusIamRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -341,7 +341,7 @@ The type of SMS message that you will send by default. Possible values are: Prom
 The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
 
 <h4 class="pdoc-member-header" id="SmsPreferences-deliveryStatusSuccessSamplingRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L62">property <b>deliveryStatusSuccessSamplingRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L62">property <b>deliveryStatusSuccessSamplingRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deliveryStatusSuccessSamplingRate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -349,7 +349,7 @@ The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliverie
 The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
 
 <h4 class="pdoc-member-header" id="SmsPreferences-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L19">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L19">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -358,7 +358,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SmsPreferences-monthlySpendLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L66">property <b>monthlySpendLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L66">property <b>monthlySpendLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monthlySpendLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -366,7 +366,7 @@ deployments and may be missing (undefined) during planning phases.
 The maximum amount in USD that you are willing to spend each month to send SMS messages.
 
 <h4 class="pdoc-member-header" id="SmsPreferences-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L19">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L19">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -375,7 +375,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SmsPreferences-usageReportS3Bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L70">property <b>usageReportS3Bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L70">property <b>usageReportS3Bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usageReportS3Bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -383,7 +383,7 @@ deployments.
 The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
 
 <h3 class="pdoc-module-header" id="Topic" data-link-title="Topic">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L71">
         Resource <strong>Topic</strong>
     </a>
 </h3>
@@ -452,7 +452,7 @@ SNS Topics can be imported using the `topic arn`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Topic-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L178"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L178"> <b>constructor</b></a>
 </h4>
 
 
@@ -466,7 +466,7 @@ Create a Topic resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Topic-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L81">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L81">method <b>get</b></a>
 </h4>
 
 
@@ -477,14 +477,14 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Topic-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L71">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L71">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Topic-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L92">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L92">method <b>isInstance</b></a>
 </h4>
 
 
@@ -495,7 +495,7 @@ Returns true if the given object is an instance of Topic.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Topic-onEvent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L107">method <b>onEvent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L107">method <b>onEvent</b></a>
 </h4>
 
 
@@ -506,7 +506,7 @@ Creates a new subscription to events fired from this Topic to the handler provid
 with options to control the behavior of the subscription.
 
 <h4 class="pdoc-member-header" id="Topic-applicationFailureFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L102">property <b>applicationFailureFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L102">property <b>applicationFailureFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationFailureFeedbackRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -514,7 +514,7 @@ with options to control the behavior of the subscription.
 IAM role for failure feedback
 
 <h4 class="pdoc-member-header" id="Topic-applicationSuccessFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L106">property <b>applicationSuccessFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L106">property <b>applicationSuccessFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationSuccessFeedbackRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -522,7 +522,7 @@ IAM role for failure feedback
 The IAM role permitted to receive success feedback for this topic
 
 <h4 class="pdoc-member-header" id="Topic-applicationSuccessFeedbackSampleRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L110">property <b>applicationSuccessFeedbackSampleRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L110">property <b>applicationSuccessFeedbackSampleRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationSuccessFeedbackSampleRate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -530,7 +530,7 @@ The IAM role permitted to receive success feedback for this topic
 Percentage of success to sample
 
 <h4 class="pdoc-member-header" id="Topic-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L114">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L114">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
@@ -538,7 +538,7 @@ Percentage of success to sample
 The ARN of the SNS topic, as a more obvious property (clone of id)
 
 <h4 class="pdoc-member-header" id="Topic-deliveryPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L118">property <b>deliveryPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L118">property <b>deliveryPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deliveryPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -546,7 +546,7 @@ The ARN of the SNS topic, as a more obvious property (clone of id)
 The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 
 <h4 class="pdoc-member-header" id="Topic-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L122">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L122">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -554,7 +554,7 @@ The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com
 The display name for the SNS topic
 
 <h4 class="pdoc-member-header" id="Topic-httpFailureFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L126">property <b>httpFailureFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L126">property <b>httpFailureFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpFailureFeedbackRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -562,7 +562,7 @@ The display name for the SNS topic
 IAM role for failure feedback
 
 <h4 class="pdoc-member-header" id="Topic-httpSuccessFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L130">property <b>httpSuccessFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L130">property <b>httpSuccessFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpSuccessFeedbackRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -570,7 +570,7 @@ IAM role for failure feedback
 The IAM role permitted to receive success feedback for this topic
 
 <h4 class="pdoc-member-header" id="Topic-httpSuccessFeedbackSampleRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L134">property <b>httpSuccessFeedbackSampleRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L134">property <b>httpSuccessFeedbackSampleRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpSuccessFeedbackSampleRate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -578,7 +578,7 @@ The IAM role permitted to receive success feedback for this topic
 Percentage of success to sample
 
 <h4 class="pdoc-member-header" id="Topic-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -587,7 +587,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Topic-kmsMasterKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L138">property <b>kmsMasterKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L138">property <b>kmsMasterKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsMasterKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -595,7 +595,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 
 <h4 class="pdoc-member-header" id="Topic-lambdaFailureFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L142">property <b>lambdaFailureFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L142">property <b>lambdaFailureFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lambdaFailureFeedbackRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -603,7 +603,7 @@ The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CM
 IAM role for failure feedback
 
 <h4 class="pdoc-member-header" id="Topic-lambdaSuccessFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L146">property <b>lambdaSuccessFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L146">property <b>lambdaSuccessFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lambdaSuccessFeedbackRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -611,7 +611,7 @@ IAM role for failure feedback
 The IAM role permitted to receive success feedback for this topic
 
 <h4 class="pdoc-member-header" id="Topic-lambdaSuccessFeedbackSampleRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L150">property <b>lambdaSuccessFeedbackSampleRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L150">property <b>lambdaSuccessFeedbackSampleRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lambdaSuccessFeedbackSampleRate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -619,7 +619,7 @@ The IAM role permitted to receive success feedback for this topic
 Percentage of success to sample
 
 <h4 class="pdoc-member-header" id="Topic-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L154">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L154">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -627,7 +627,7 @@ Percentage of success to sample
 The friendly name for the SNS topic. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="Topic-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L158">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L158">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -635,7 +635,7 @@ The friendly name for the SNS topic. By default generated by this provider.
 The friendly name for the SNS topic. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="Topic-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L162">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L162">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -643,7 +643,7 @@ The friendly name for the SNS topic. Conflicts with `name`.
 The fully-formed AWS policy as JSON.
 
 <h4 class="pdoc-member-header" id="Topic-sqsFailureFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L166">property <b>sqsFailureFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L166">property <b>sqsFailureFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sqsFailureFeedbackRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -651,7 +651,7 @@ The fully-formed AWS policy as JSON.
 IAM role for failure feedback
 
 <h4 class="pdoc-member-header" id="Topic-sqsSuccessFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L170">property <b>sqsSuccessFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L170">property <b>sqsSuccessFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sqsSuccessFeedbackRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -659,7 +659,7 @@ IAM role for failure feedback
 The IAM role permitted to receive success feedback for this topic
 
 <h4 class="pdoc-member-header" id="Topic-sqsSuccessFeedbackSampleRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L174">property <b>sqsSuccessFeedbackSampleRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L174">property <b>sqsSuccessFeedbackSampleRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sqsSuccessFeedbackSampleRate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -667,7 +667,7 @@ The IAM role permitted to receive success feedback for this topic
 Percentage of success to sample
 
 <h4 class="pdoc-member-header" id="Topic-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L178">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L178">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -675,7 +675,7 @@ Percentage of success to sample
 Key-value map of resource tags
 
 <h4 class="pdoc-member-header" id="Topic-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L71">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L71">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -684,7 +684,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TopicPolicy" data-link-title="TopicPolicy">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicPolicy.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicPolicy.ts#L61">
         Resource <strong>TopicPolicy</strong>
     </a>
 </h3>
@@ -745,7 +745,7 @@ SNS Topic Policy can be imported using the topic ARN, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="TopicPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicPolicy.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicPolicy.ts#L96"> <b>constructor</b></a>
 </h4>
 
 
@@ -759,7 +759,7 @@ Create a TopicPolicy resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TopicPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicPolicy.ts#L71">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicPolicy.ts#L71">method <b>get</b></a>
 </h4>
 
 
@@ -770,14 +770,14 @@ Get an existing TopicPolicy resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TopicPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicPolicy.ts#L61">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicPolicy.ts#L61">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TopicPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicPolicy.ts#L82">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicPolicy.ts#L82">method <b>isInstance</b></a>
 </h4>
 
 
@@ -788,7 +788,7 @@ Returns true if the given object is an instance of TopicPolicy.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TopicPolicy-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicPolicy.ts#L92">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicPolicy.ts#L92">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -796,7 +796,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the SNS topic
 
 <h4 class="pdoc-member-header" id="TopicPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicPolicy.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicPolicy.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -805,7 +805,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TopicPolicy-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicPolicy.ts#L96">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicPolicy.ts#L96">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -813,7 +813,7 @@ deployments and may be missing (undefined) during planning phases.
 The fully-formed AWS policy as JSON.
 
 <h4 class="pdoc-member-header" id="TopicPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicPolicy.ts#L61">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicPolicy.ts#L61">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -822,7 +822,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TopicSubscription" data-link-title="TopicSubscription">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L189">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L189">
         Resource <strong>TopicSubscription</strong>
     </a>
 </h3>
@@ -1009,7 +1009,7 @@ SNS Topic Subscriptions can be imported using the `subscription arn`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="TopicSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L252"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L252"> <b>constructor</b></a>
 </h4>
 
 
@@ -1023,7 +1023,7 @@ Create a TopicSubscription resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TopicSubscription-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L199">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L199">method <b>get</b></a>
 </h4>
 
 
@@ -1034,14 +1034,14 @@ Get an existing TopicSubscription resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TopicSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L189">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L189">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TopicSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L210">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L210">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1052,7 +1052,7 @@ Returns true if the given object is an instance of TopicSubscription.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TopicSubscription-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L220">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L220">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1060,7 +1060,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the subscription stored as a more user-friendly property
 
 <h4 class="pdoc-member-header" id="TopicSubscription-confirmationTimeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L224">property <b>confirmationTimeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L224">property <b>confirmationTimeoutInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>confirmationTimeoutInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1068,7 +1068,7 @@ The ARN of the subscription stored as a more user-friendly property
 Integer indicating number of minutes to wait in retying mode for fetching subscription arn before marking it as failure. Only applicable for http and https protocols (default is 1 minute).
 
 <h4 class="pdoc-member-header" id="TopicSubscription-deliveryPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L228">property <b>deliveryPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L228">property <b>deliveryPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deliveryPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1076,7 +1076,7 @@ Integer indicating number of minutes to wait in retying mode for fetching subscr
 JSON String with the delivery policy (retries, backoff, etc.) that will be used in the subscription - this only applies to HTTP/S subscriptions. Refer to the [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html) for more details.
 
 <h4 class="pdoc-member-header" id="TopicSubscription-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L232">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L232">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1084,7 +1084,7 @@ JSON String with the delivery policy (retries, backoff, etc.) that will be used 
 The endpoint to send data to, the contents will vary with the protocol. (see below for more information)
 
 <h4 class="pdoc-member-header" id="TopicSubscription-endpointAutoConfirms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L236">property <b>endpointAutoConfirms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L236">property <b>endpointAutoConfirms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointAutoConfirms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1092,7 +1092,7 @@ The endpoint to send data to, the contents will vary with the protocol. (see bel
 Boolean indicating whether the end point is capable of [auto confirming subscription](http://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.html#SendMessageToHttp.prepare) e.g., PagerDuty (default is false)
 
 <h4 class="pdoc-member-header" id="TopicSubscription-filterPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L240">property <b>filterPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L240">property <b>filterPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>filterPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1100,7 +1100,7 @@ Boolean indicating whether the end point is capable of [auto confirming subscrip
 JSON String with the filter policy that will be used in the subscription to filter messages seen by the target resource. Refer to the [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/message-filtering.html) for more details.
 
 <h4 class="pdoc-member-header" id="TopicSubscription-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L189">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L189">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1109,7 +1109,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TopicSubscription-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L244">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L244">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1117,7 +1117,7 @@ deployments and may be missing (undefined) during planning phases.
 The protocol to use. The possible values for this are: `sqs`, `sms`, `lambda`, `application`. (`http` or `https` are partially supported, see below) (`email` is an option but is unsupported, see below).
 
 <h4 class="pdoc-member-header" id="TopicSubscription-rawMessageDelivery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L248">property <b>rawMessageDelivery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L248">property <b>rawMessageDelivery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rawMessageDelivery: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1125,7 +1125,7 @@ The protocol to use. The possible values for this are: `sqs`, `sms`, `lambda`, `
 Boolean indicating whether or not to enable raw message delivery (the original message is directly passed, not wrapped in JSON with the original message in the message property) (default is false).
 
 <h4 class="pdoc-member-header" id="TopicSubscription-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L252">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L252">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1133,7 +1133,7 @@ Boolean indicating whether or not to enable raw message delivery (the original m
 The ARN of the SNS topic to subscribe to
 
 <h4 class="pdoc-member-header" id="TopicSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L189">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L189">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1144,7 +1144,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getTopic" data-link-title="getTopic">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/getTopic.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/getTopic.ts#L24">
         Function <strong>getTopic</strong>
     </a>
 </h3>
@@ -1171,7 +1171,7 @@ const example = pulumi.output(aws.sns.getTopic({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetTopicArgs" data-link-title="GetTopicArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/getTopic.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/getTopic.ts#L40">
         interface <strong>GetTopicArgs</strong>
     </a>
 </h3>
@@ -1181,7 +1181,7 @@ const example = pulumi.output(aws.sns.getTopic({
 A collection of arguments for invoking getTopic.
 
 <h4 class="pdoc-member-header" id="GetTopicArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/getTopic.ts#L44">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/getTopic.ts#L44">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1189,7 +1189,7 @@ A collection of arguments for invoking getTopic.
 The friendly name of the topic to match.
 
 <h3 class="pdoc-module-header" id="GetTopicResult" data-link-title="GetTopicResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/getTopic.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/getTopic.ts#L50">
         interface <strong>GetTopicResult</strong>
     </a>
 </h3>
@@ -1199,7 +1199,7 @@ The friendly name of the topic to match.
 A collection of values returned by getTopic.
 
 <h4 class="pdoc-member-header" id="GetTopicResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/getTopic.ts#L54">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/getTopic.ts#L54">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1207,7 +1207,7 @@ A collection of values returned by getTopic.
 Amazon Resource Name (ARN) of the found topic, suitable for referencing in other resources that support SNS topics.
 
 <h4 class="pdoc-member-header" id="GetTopicResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/getTopic.ts#L58">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/getTopic.ts#L58">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1215,12 +1215,12 @@ Amazon Resource Name (ARN) of the found topic, suitable for referencing in other
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetTopicResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/getTopic.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/getTopic.ts#L59">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="PlatformApplicationArgs" data-link-title="PlatformApplicationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L233">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L233">
         interface <strong>PlatformApplicationArgs</strong>
     </a>
 </h3>
@@ -1230,7 +1230,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a PlatformApplication resource.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationArgs-eventDeliveryFailureTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L237">property <b>eventDeliveryFailureTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L237">property <b>eventDeliveryFailureTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventDeliveryFailureTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1238,7 +1238,7 @@ The set of arguments for constructing a PlatformApplication resource.
 SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationArgs-eventEndpointCreatedTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L241">property <b>eventEndpointCreatedTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L241">property <b>eventEndpointCreatedTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventEndpointCreatedTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1246,7 +1246,7 @@ SNS Topic triggered when a delivery to any of the platform endpoints associated 
 SNS Topic triggered when a new platform endpoint is added to your platform application.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationArgs-eventEndpointDeletedTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L245">property <b>eventEndpointDeletedTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L245">property <b>eventEndpointDeletedTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventEndpointDeletedTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1254,7 +1254,7 @@ SNS Topic triggered when a new platform endpoint is added to your platform appli
 SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationArgs-eventEndpointUpdatedTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L249">property <b>eventEndpointUpdatedTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L249">property <b>eventEndpointUpdatedTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventEndpointUpdatedTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1262,7 +1262,7 @@ SNS Topic triggered when an existing platform endpoint is deleted from your plat
 SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationArgs-failureFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L253">property <b>failureFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L253">property <b>failureFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>failureFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1270,7 +1270,7 @@ SNS Topic triggered when an existing platform endpoint is changed from your plat
 The IAM role permitted to receive failure feedback for this application.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L257">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L257">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1278,7 +1278,7 @@ The IAM role permitted to receive failure feedback for this application.
 The friendly name for the SNS platform application
 
 <h4 class="pdoc-member-header" id="PlatformApplicationArgs-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L261">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L261">property <b>platform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platform: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1286,7 +1286,7 @@ The friendly name for the SNS platform application
 The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationArgs-platformCredential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L265">property <b>platformCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L265">property <b>platformCredential</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1294,7 +1294,7 @@ The platform that the app is registered with. See [Platform](http://docs.aws.ama
 Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationArgs-platformPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L269">property <b>platformPrincipal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L269">property <b>platformPrincipal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformPrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1302,7 +1302,7 @@ Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns
 Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationArgs-successFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L273">property <b>successFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L273">property <b>successFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>successFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1310,7 +1310,7 @@ Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/l
 The IAM role permitted to receive success feedback for this application.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationArgs-successFeedbackSampleRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L277">property <b>successFeedbackSampleRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L277">property <b>successFeedbackSampleRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>successFeedbackSampleRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1318,7 +1318,7 @@ The IAM role permitted to receive success feedback for this application.
 The percentage of success to sample (0-100)
 
 <h3 class="pdoc-module-header" id="PlatformApplicationState" data-link-title="PlatformApplicationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L179">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L179">
         interface <strong>PlatformApplicationState</strong>
     </a>
 </h3>
@@ -1328,7 +1328,7 @@ The percentage of success to sample (0-100)
 Input properties used for looking up and filtering PlatformApplication resources.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L183">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L183">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1336,7 +1336,7 @@ Input properties used for looking up and filtering PlatformApplication resources
 The ARN of the SNS platform application
 
 <h4 class="pdoc-member-header" id="PlatformApplicationState-eventDeliveryFailureTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L187">property <b>eventDeliveryFailureTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L187">property <b>eventDeliveryFailureTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventDeliveryFailureTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1344,7 +1344,7 @@ The ARN of the SNS platform application
 SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationState-eventEndpointCreatedTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L191">property <b>eventEndpointCreatedTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L191">property <b>eventEndpointCreatedTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventEndpointCreatedTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1352,7 +1352,7 @@ SNS Topic triggered when a delivery to any of the platform endpoints associated 
 SNS Topic triggered when a new platform endpoint is added to your platform application.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationState-eventEndpointDeletedTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L195">property <b>eventEndpointDeletedTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L195">property <b>eventEndpointDeletedTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventEndpointDeletedTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1360,7 +1360,7 @@ SNS Topic triggered when a new platform endpoint is added to your platform appli
 SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationState-eventEndpointUpdatedTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L199">property <b>eventEndpointUpdatedTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L199">property <b>eventEndpointUpdatedTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventEndpointUpdatedTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1368,7 +1368,7 @@ SNS Topic triggered when an existing platform endpoint is deleted from your plat
 SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationState-failureFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L203">property <b>failureFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L203">property <b>failureFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>failureFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1376,7 +1376,7 @@ SNS Topic triggered when an existing platform endpoint is changed from your plat
 The IAM role permitted to receive failure feedback for this application.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L207">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L207">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1384,7 +1384,7 @@ The IAM role permitted to receive failure feedback for this application.
 The friendly name for the SNS platform application
 
 <h4 class="pdoc-member-header" id="PlatformApplicationState-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L211">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L211">property <b>platform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1392,7 +1392,7 @@ The friendly name for the SNS platform application
 The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationState-platformCredential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L215">property <b>platformCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L215">property <b>platformCredential</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1400,7 +1400,7 @@ The platform that the app is registered with. See [Platform](http://docs.aws.ama
 Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationState-platformPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L219">property <b>platformPrincipal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L219">property <b>platformPrincipal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformPrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1408,7 +1408,7 @@ Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns
 Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationState-successFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L223">property <b>successFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L223">property <b>successFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>successFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1416,7 +1416,7 @@ Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/l
 The IAM role permitted to receive success feedback for this application.
 
 <h4 class="pdoc-member-header" id="PlatformApplicationState-successFeedbackSampleRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/platformApplication.ts#L227">property <b>successFeedbackSampleRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/platformApplication.ts#L227">property <b>successFeedbackSampleRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>successFeedbackSampleRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1424,7 +1424,7 @@ The IAM role permitted to receive success feedback for this application.
 The percentage of success to sample (0-100)
 
 <h3 class="pdoc-module-header" id="SmsPreferencesArgs" data-link-title="SmsPreferencesArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L143">
         interface <strong>SmsPreferencesArgs</strong>
     </a>
 </h3>
@@ -1434,7 +1434,7 @@ The percentage of success to sample (0-100)
 The set of arguments for constructing a SmsPreferences resource.
 
 <h4 class="pdoc-member-header" id="SmsPreferencesArgs-defaultSenderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L147">property <b>defaultSenderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L147">property <b>defaultSenderId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultSenderId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1442,7 +1442,7 @@ The set of arguments for constructing a SmsPreferences resource.
 A string, such as your business brand, that is displayed as the sender on the receiving device.
 
 <h4 class="pdoc-member-header" id="SmsPreferencesArgs-defaultSmsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L151">property <b>defaultSmsType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L151">property <b>defaultSmsType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultSmsType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1450,7 +1450,7 @@ A string, such as your business brand, that is displayed as the sender on the re
 The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
 
 <h4 class="pdoc-member-header" id="SmsPreferencesArgs-deliveryStatusIamRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L155">property <b>deliveryStatusIamRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L155">property <b>deliveryStatusIamRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryStatusIamRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1458,7 +1458,7 @@ The type of SMS message that you will send by default. Possible values are: Prom
 The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
 
 <h4 class="pdoc-member-header" id="SmsPreferencesArgs-deliveryStatusSuccessSamplingRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L159">property <b>deliveryStatusSuccessSamplingRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L159">property <b>deliveryStatusSuccessSamplingRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryStatusSuccessSamplingRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1466,7 +1466,7 @@ The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliverie
 The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
 
 <h4 class="pdoc-member-header" id="SmsPreferencesArgs-monthlySpendLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L163">property <b>monthlySpendLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L163">property <b>monthlySpendLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monthlySpendLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1474,7 +1474,7 @@ The percentage of successful SMS deliveries for which Amazon SNS will write logs
 The maximum amount in USD that you are willing to spend each month to send SMS messages.
 
 <h4 class="pdoc-member-header" id="SmsPreferencesArgs-usageReportS3Bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L167">property <b>usageReportS3Bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L167">property <b>usageReportS3Bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usageReportS3Bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1482,7 +1482,7 @@ The maximum amount in USD that you are willing to spend each month to send SMS m
 The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
 
 <h3 class="pdoc-module-header" id="SmsPreferencesState" data-link-title="SmsPreferencesState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L113">
         interface <strong>SmsPreferencesState</strong>
     </a>
 </h3>
@@ -1492,7 +1492,7 @@ The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon 
 Input properties used for looking up and filtering SmsPreferences resources.
 
 <h4 class="pdoc-member-header" id="SmsPreferencesState-defaultSenderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L117">property <b>defaultSenderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L117">property <b>defaultSenderId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultSenderId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1500,7 +1500,7 @@ Input properties used for looking up and filtering SmsPreferences resources.
 A string, such as your business brand, that is displayed as the sender on the receiving device.
 
 <h4 class="pdoc-member-header" id="SmsPreferencesState-defaultSmsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L121">property <b>defaultSmsType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L121">property <b>defaultSmsType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultSmsType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1508,7 +1508,7 @@ A string, such as your business brand, that is displayed as the sender on the re
 The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
 
 <h4 class="pdoc-member-header" id="SmsPreferencesState-deliveryStatusIamRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L125">property <b>deliveryStatusIamRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L125">property <b>deliveryStatusIamRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryStatusIamRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1516,7 +1516,7 @@ The type of SMS message that you will send by default. Possible values are: Prom
 The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
 
 <h4 class="pdoc-member-header" id="SmsPreferencesState-deliveryStatusSuccessSamplingRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L129">property <b>deliveryStatusSuccessSamplingRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L129">property <b>deliveryStatusSuccessSamplingRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryStatusSuccessSamplingRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1524,7 +1524,7 @@ The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliverie
 The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
 
 <h4 class="pdoc-member-header" id="SmsPreferencesState-monthlySpendLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L133">property <b>monthlySpendLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L133">property <b>monthlySpendLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monthlySpendLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1532,7 +1532,7 @@ The percentage of successful SMS deliveries for which Amazon SNS will write logs
 The maximum amount in USD that you are willing to spend each month to send SMS messages.
 
 <h4 class="pdoc-member-header" id="SmsPreferencesState-usageReportS3Bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/smsPreferences.ts#L137">property <b>usageReportS3Bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/smsPreferences.ts#L137">property <b>usageReportS3Bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usageReportS3Bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1540,86 +1540,86 @@ The maximum amount in USD that you are willing to spend each month to send SMS m
 The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
 
 <h3 class="pdoc-module-header" id="SNSItem" data-link-title="SNSItem">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L33">
         interface <strong>SNSItem</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SNSItem</span></code></pre>
 <h4 class="pdoc-member-header" id="SNSItem-Message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L39">property <b>Message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L39">property <b>Message</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>Message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SNSItem-MessageAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L40">property <b>MessageAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L40">property <b>MessageAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>MessageAttributes: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='#SNSMessageAttribute'>SNSMessageAttribute</a>};</code></pre>
 <h4 class="pdoc-member-header" id="SNSItem-MessageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L38">property <b>MessageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L38">property <b>MessageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>MessageId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SNSItem-Signature">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L36">property <b>Signature</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L36">property <b>Signature</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>Signature: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SNSItem-SignatureVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L34">property <b>SignatureVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L34">property <b>SignatureVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>SignatureVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SNSItem-SigningCertUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L37">property <b>SigningCertUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L37">property <b>SigningCertUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>SigningCertUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SNSItem-Subject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L44">property <b>Subject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L44">property <b>Subject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>Subject: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SNSItem-Timestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L35">property <b>Timestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L35">property <b>Timestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>Timestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SNSItem-TopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L43">property <b>TopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L43">property <b>TopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>TopicArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SNSItem-Type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L41">property <b>Type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L41">property <b>Type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>Type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SNSItem-UnsubscribeUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L42">property <b>UnsubscribeUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L42">property <b>UnsubscribeUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>UnsubscribeUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="SNSMessageAttribute" data-link-title="SNSMessageAttribute">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L47">
         interface <strong>SNSMessageAttribute</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SNSMessageAttribute</span></code></pre>
 <h4 class="pdoc-member-header" id="SNSMessageAttribute-Type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L48">property <b>Type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L48">property <b>Type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>Type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SNSMessageAttribute-Value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L49">property <b>Value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L49">property <b>Value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>Value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="TopicArgs" data-link-title="TopicArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L335">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L335">
         interface <strong>TopicArgs</strong>
     </a>
 </h3>
@@ -1629,7 +1629,7 @@ The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon 
 The set of arguments for constructing a Topic resource.
 
 <h4 class="pdoc-member-header" id="TopicArgs-applicationFailureFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L339">property <b>applicationFailureFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L339">property <b>applicationFailureFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationFailureFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1637,7 +1637,7 @@ The set of arguments for constructing a Topic resource.
 IAM role for failure feedback
 
 <h4 class="pdoc-member-header" id="TopicArgs-applicationSuccessFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L343">property <b>applicationSuccessFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L343">property <b>applicationSuccessFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationSuccessFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1645,7 +1645,7 @@ IAM role for failure feedback
 The IAM role permitted to receive success feedback for this topic
 
 <h4 class="pdoc-member-header" id="TopicArgs-applicationSuccessFeedbackSampleRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L347">property <b>applicationSuccessFeedbackSampleRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L347">property <b>applicationSuccessFeedbackSampleRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationSuccessFeedbackSampleRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1653,7 +1653,7 @@ The IAM role permitted to receive success feedback for this topic
 Percentage of success to sample
 
 <h4 class="pdoc-member-header" id="TopicArgs-deliveryPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L351">property <b>deliveryPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L351">property <b>deliveryPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1661,7 +1661,7 @@ Percentage of success to sample
 The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 
 <h4 class="pdoc-member-header" id="TopicArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L355">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L355">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1669,7 +1669,7 @@ The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com
 The display name for the SNS topic
 
 <h4 class="pdoc-member-header" id="TopicArgs-httpFailureFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L359">property <b>httpFailureFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L359">property <b>httpFailureFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpFailureFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1677,7 +1677,7 @@ The display name for the SNS topic
 IAM role for failure feedback
 
 <h4 class="pdoc-member-header" id="TopicArgs-httpSuccessFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L363">property <b>httpSuccessFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L363">property <b>httpSuccessFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpSuccessFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1685,7 +1685,7 @@ IAM role for failure feedback
 The IAM role permitted to receive success feedback for this topic
 
 <h4 class="pdoc-member-header" id="TopicArgs-httpSuccessFeedbackSampleRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L367">property <b>httpSuccessFeedbackSampleRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L367">property <b>httpSuccessFeedbackSampleRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpSuccessFeedbackSampleRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1693,7 +1693,7 @@ The IAM role permitted to receive success feedback for this topic
 Percentage of success to sample
 
 <h4 class="pdoc-member-header" id="TopicArgs-kmsMasterKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L371">property <b>kmsMasterKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L371">property <b>kmsMasterKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsMasterKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1701,7 +1701,7 @@ Percentage of success to sample
 The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 
 <h4 class="pdoc-member-header" id="TopicArgs-lambdaFailureFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L375">property <b>lambdaFailureFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L375">property <b>lambdaFailureFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lambdaFailureFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1709,7 +1709,7 @@ The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CM
 IAM role for failure feedback
 
 <h4 class="pdoc-member-header" id="TopicArgs-lambdaSuccessFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L379">property <b>lambdaSuccessFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L379">property <b>lambdaSuccessFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lambdaSuccessFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1717,7 +1717,7 @@ IAM role for failure feedback
 The IAM role permitted to receive success feedback for this topic
 
 <h4 class="pdoc-member-header" id="TopicArgs-lambdaSuccessFeedbackSampleRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L383">property <b>lambdaSuccessFeedbackSampleRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L383">property <b>lambdaSuccessFeedbackSampleRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lambdaSuccessFeedbackSampleRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1725,7 +1725,7 @@ The IAM role permitted to receive success feedback for this topic
 Percentage of success to sample
 
 <h4 class="pdoc-member-header" id="TopicArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L387">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L387">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1733,7 +1733,7 @@ Percentage of success to sample
 The friendly name for the SNS topic. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="TopicArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L391">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L391">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1741,7 +1741,7 @@ The friendly name for the SNS topic. By default generated by this provider.
 The friendly name for the SNS topic. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="TopicArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L395">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L395">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1749,7 +1749,7 @@ The friendly name for the SNS topic. Conflicts with `name`.
 The fully-formed AWS policy as JSON.
 
 <h4 class="pdoc-member-header" id="TopicArgs-sqsFailureFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L399">property <b>sqsFailureFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L399">property <b>sqsFailureFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqsFailureFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1757,7 +1757,7 @@ The fully-formed AWS policy as JSON.
 IAM role for failure feedback
 
 <h4 class="pdoc-member-header" id="TopicArgs-sqsSuccessFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L403">property <b>sqsSuccessFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L403">property <b>sqsSuccessFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqsSuccessFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1765,7 +1765,7 @@ IAM role for failure feedback
 The IAM role permitted to receive success feedback for this topic
 
 <h4 class="pdoc-member-header" id="TopicArgs-sqsSuccessFeedbackSampleRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L407">property <b>sqsSuccessFeedbackSampleRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L407">property <b>sqsSuccessFeedbackSampleRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqsSuccessFeedbackSampleRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1773,7 +1773,7 @@ The IAM role permitted to receive success feedback for this topic
 Percentage of success to sample
 
 <h4 class="pdoc-member-header" id="TopicArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L411">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L411">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1781,40 +1781,40 @@ Percentage of success to sample
 Key-value map of resource tags
 
 <h3 class="pdoc-module-header" id="TopicEvent" data-link-title="TopicEvent">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L22">
         interface <strong>TopicEvent</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TopicEvent</span></code></pre>
 <h4 class="pdoc-member-header" id="TopicEvent-Records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L23">property <b>Records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L23">property <b>Records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>Records: <a href='#TopicRecord'>TopicRecord</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="TopicEventHandler" data-link-title="TopicEventHandler">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L52">
         type <strong>TopicEventHandler</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> TopicEventHandler = lambda.EventHandler&lt;<a href='#TopicEvent'>TopicEvent</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TopicEventSubscription" data-link-title="TopicEventSubscription">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L60">
         class <strong>TopicEventSubscription</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>TopicEventSubscription</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#EventSubscription'>EventSubscription</a></code></pre>
 <h4 class="pdoc-member-header" id="TopicEventSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span><span class='kd'>new</span> TopicEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, topic: Topic, handler: <a href='#TopicEventHandler'>TopicEventHandler</a>, args: <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="TopicEventSubscription-getData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L60">method <b>getData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L60">method <b>getData</b></a>
 </h4>
 
 
@@ -1825,14 +1825,14 @@ Retrieves the data produces by [initialize].  The data is immediately available 
 derived class's constructor after the `super(...)` call to `ComponentResource`.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L60">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L60">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TopicEventSubscription-initialize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L60">method <b>initialize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L60">method <b>initialize</b></a>
 </h4>
 
 
@@ -1844,7 +1844,7 @@ automatically when constructed.  The data will be available immediately for subc
 constructors to use.  To access the data use `.getData`.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1855,7 +1855,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscription-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L60">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L60">method <b>registerOutputs</b></a>
 </h4>
 
 
@@ -1870,17 +1870,17 @@ done creating child resources.  This is not strictly necessary as this will auto
 called after the `initialize` method completes.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscription-func">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lambda/lambdaMixins.ts#L250">property <b>func</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lambda/lambdaMixins.ts#L250">property <b>func</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>func: LambdaFunction;</code></pre>
 <h4 class="pdoc-member-header" id="TopicEventSubscription-permission">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lambda/lambdaMixins.ts#L249">property <b>permission</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lambda/lambdaMixins.ts#L249">property <b>permission</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permission: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Permission'>Permission</a>;</code></pre>
 <h4 class="pdoc-member-header" id="TopicEventSubscription-subscription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L66">property <b>subscription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L66">property <b>subscription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subscription: <a href='#TopicSubscription'>TopicSubscription</a>;</code></pre>
@@ -1888,12 +1888,12 @@ called after the `initialize` method completes.
 The underlying sns object created for the subscription.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscription-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L61">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L61">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>topic: Topic;</code></pre>
 <h4 class="pdoc-member-header" id="TopicEventSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L60">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L60">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1902,7 +1902,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TopicEventSubscriptionArgs" data-link-title="TopicEventSubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L58">
         type <strong>TopicEventSubscriptionArgs</strong>
     </a>
 </h3>
@@ -1913,7 +1913,7 @@ Arguments to control the topic subscription.  Currently empty, but still defined
 future need.
 
 <h3 class="pdoc-module-header" id="TopicPolicyArgs" data-link-title="TopicPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicPolicy.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicPolicy.ts#L151">
         interface <strong>TopicPolicyArgs</strong>
     </a>
 </h3>
@@ -1923,7 +1923,7 @@ future need.
 The set of arguments for constructing a TopicPolicy resource.
 
 <h4 class="pdoc-member-header" id="TopicPolicyArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicPolicy.ts#L155">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicPolicy.ts#L155">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1931,7 +1931,7 @@ The set of arguments for constructing a TopicPolicy resource.
 The ARN of the SNS topic
 
 <h4 class="pdoc-member-header" id="TopicPolicyArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicPolicy.ts#L159">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicPolicy.ts#L159">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1939,7 +1939,7 @@ The ARN of the SNS topic
 The fully-formed AWS policy as JSON.
 
 <h3 class="pdoc-module-header" id="TopicPolicyState" data-link-title="TopicPolicyState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicPolicy.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicPolicy.ts#L137">
         interface <strong>TopicPolicyState</strong>
     </a>
 </h3>
@@ -1949,7 +1949,7 @@ The fully-formed AWS policy as JSON.
 Input properties used for looking up and filtering TopicPolicy resources.
 
 <h4 class="pdoc-member-header" id="TopicPolicyState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicPolicy.ts#L141">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicPolicy.ts#L141">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1957,7 +1957,7 @@ Input properties used for looking up and filtering TopicPolicy resources.
 The ARN of the SNS topic
 
 <h4 class="pdoc-member-header" id="TopicPolicyState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicPolicy.ts#L145">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicPolicy.ts#L145">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1965,34 +1965,34 @@ The ARN of the SNS topic
 The fully-formed AWS policy as JSON.
 
 <h3 class="pdoc-module-header" id="TopicRecord" data-link-title="TopicRecord">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L26">
         interface <strong>TopicRecord</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TopicRecord</span></code></pre>
 <h4 class="pdoc-member-header" id="TopicRecord-EventSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L29">property <b>EventSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L29">property <b>EventSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>EventSource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="TopicRecord-EventSubscriptionArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L28">property <b>EventSubscriptionArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L28">property <b>EventSubscriptionArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>EventSubscriptionArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="TopicRecord-EventVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L27">property <b>EventVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L27">property <b>EventVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>EventVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="TopicRecord-Sns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/snsMixins.ts#L30">property <b>Sns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/snsMixins.ts#L30">property <b>Sns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>Sns: <a href='#SNSItem'>SNSItem</a>;</code></pre>
 <h3 class="pdoc-module-header" id="TopicState" data-link-title="TopicState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L249">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L249">
         interface <strong>TopicState</strong>
     </a>
 </h3>
@@ -2002,7 +2002,7 @@ The fully-formed AWS policy as JSON.
 Input properties used for looking up and filtering Topic resources.
 
 <h4 class="pdoc-member-header" id="TopicState-applicationFailureFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L253">property <b>applicationFailureFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L253">property <b>applicationFailureFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationFailureFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2010,7 +2010,7 @@ Input properties used for looking up and filtering Topic resources.
 IAM role for failure feedback
 
 <h4 class="pdoc-member-header" id="TopicState-applicationSuccessFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L257">property <b>applicationSuccessFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L257">property <b>applicationSuccessFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationSuccessFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2018,7 +2018,7 @@ IAM role for failure feedback
 The IAM role permitted to receive success feedback for this topic
 
 <h4 class="pdoc-member-header" id="TopicState-applicationSuccessFeedbackSampleRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L261">property <b>applicationSuccessFeedbackSampleRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L261">property <b>applicationSuccessFeedbackSampleRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationSuccessFeedbackSampleRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2026,7 +2026,7 @@ The IAM role permitted to receive success feedback for this topic
 Percentage of success to sample
 
 <h4 class="pdoc-member-header" id="TopicState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L265">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L265">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
@@ -2034,7 +2034,7 @@ Percentage of success to sample
 The ARN of the SNS topic, as a more obvious property (clone of id)
 
 <h4 class="pdoc-member-header" id="TopicState-deliveryPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L269">property <b>deliveryPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L269">property <b>deliveryPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2042,7 +2042,7 @@ The ARN of the SNS topic, as a more obvious property (clone of id)
 The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 
 <h4 class="pdoc-member-header" id="TopicState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L273">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L273">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2050,7 +2050,7 @@ The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com
 The display name for the SNS topic
 
 <h4 class="pdoc-member-header" id="TopicState-httpFailureFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L277">property <b>httpFailureFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L277">property <b>httpFailureFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpFailureFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2058,7 +2058,7 @@ The display name for the SNS topic
 IAM role for failure feedback
 
 <h4 class="pdoc-member-header" id="TopicState-httpSuccessFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L281">property <b>httpSuccessFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L281">property <b>httpSuccessFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpSuccessFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2066,7 +2066,7 @@ IAM role for failure feedback
 The IAM role permitted to receive success feedback for this topic
 
 <h4 class="pdoc-member-header" id="TopicState-httpSuccessFeedbackSampleRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L285">property <b>httpSuccessFeedbackSampleRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L285">property <b>httpSuccessFeedbackSampleRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpSuccessFeedbackSampleRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2074,7 +2074,7 @@ The IAM role permitted to receive success feedback for this topic
 Percentage of success to sample
 
 <h4 class="pdoc-member-header" id="TopicState-kmsMasterKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L289">property <b>kmsMasterKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L289">property <b>kmsMasterKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsMasterKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2082,7 +2082,7 @@ Percentage of success to sample
 The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 
 <h4 class="pdoc-member-header" id="TopicState-lambdaFailureFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L293">property <b>lambdaFailureFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L293">property <b>lambdaFailureFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lambdaFailureFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2090,7 +2090,7 @@ The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CM
 IAM role for failure feedback
 
 <h4 class="pdoc-member-header" id="TopicState-lambdaSuccessFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L297">property <b>lambdaSuccessFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L297">property <b>lambdaSuccessFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lambdaSuccessFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2098,7 +2098,7 @@ IAM role for failure feedback
 The IAM role permitted to receive success feedback for this topic
 
 <h4 class="pdoc-member-header" id="TopicState-lambdaSuccessFeedbackSampleRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L301">property <b>lambdaSuccessFeedbackSampleRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L301">property <b>lambdaSuccessFeedbackSampleRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lambdaSuccessFeedbackSampleRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2106,7 +2106,7 @@ The IAM role permitted to receive success feedback for this topic
 Percentage of success to sample
 
 <h4 class="pdoc-member-header" id="TopicState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L305">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L305">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2114,7 +2114,7 @@ Percentage of success to sample
 The friendly name for the SNS topic. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="TopicState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L309">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L309">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2122,7 +2122,7 @@ The friendly name for the SNS topic. By default generated by this provider.
 The friendly name for the SNS topic. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="TopicState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L313">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L313">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2130,7 +2130,7 @@ The friendly name for the SNS topic. Conflicts with `name`.
 The fully-formed AWS policy as JSON.
 
 <h4 class="pdoc-member-header" id="TopicState-sqsFailureFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L317">property <b>sqsFailureFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L317">property <b>sqsFailureFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqsFailureFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2138,7 +2138,7 @@ The fully-formed AWS policy as JSON.
 IAM role for failure feedback
 
 <h4 class="pdoc-member-header" id="TopicState-sqsSuccessFeedbackRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L321">property <b>sqsSuccessFeedbackRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L321">property <b>sqsSuccessFeedbackRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqsSuccessFeedbackRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2146,7 +2146,7 @@ IAM role for failure feedback
 The IAM role permitted to receive success feedback for this topic
 
 <h4 class="pdoc-member-header" id="TopicState-sqsSuccessFeedbackSampleRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L325">property <b>sqsSuccessFeedbackSampleRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L325">property <b>sqsSuccessFeedbackSampleRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqsSuccessFeedbackSampleRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2154,7 +2154,7 @@ The IAM role permitted to receive success feedback for this topic
 Percentage of success to sample
 
 <h4 class="pdoc-member-header" id="TopicState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topic.ts#L329">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topic.ts#L329">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2162,7 +2162,7 @@ Percentage of success to sample
 Key-value map of resource tags
 
 <h3 class="pdoc-module-header" id="TopicSubscriptionArgs" data-link-title="TopicSubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L352">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L352">
         interface <strong>TopicSubscriptionArgs</strong>
     </a>
 </h3>
@@ -2172,7 +2172,7 @@ Key-value map of resource tags
 The set of arguments for constructing a TopicSubscription resource.
 
 <h4 class="pdoc-member-header" id="TopicSubscriptionArgs-confirmationTimeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L356">property <b>confirmationTimeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L356">property <b>confirmationTimeoutInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>confirmationTimeoutInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2180,7 +2180,7 @@ The set of arguments for constructing a TopicSubscription resource.
 Integer indicating number of minutes to wait in retying mode for fetching subscription arn before marking it as failure. Only applicable for http and https protocols (default is 1 minute).
 
 <h4 class="pdoc-member-header" id="TopicSubscriptionArgs-deliveryPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L360">property <b>deliveryPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L360">property <b>deliveryPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2188,7 +2188,7 @@ Integer indicating number of minutes to wait in retying mode for fetching subscr
 JSON String with the delivery policy (retries, backoff, etc.) that will be used in the subscription - this only applies to HTTP/S subscriptions. Refer to the [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html) for more details.
 
 <h4 class="pdoc-member-header" id="TopicSubscriptionArgs-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L364">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L364">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2196,7 +2196,7 @@ JSON String with the delivery policy (retries, backoff, etc.) that will be used 
 The endpoint to send data to, the contents will vary with the protocol. (see below for more information)
 
 <h4 class="pdoc-member-header" id="TopicSubscriptionArgs-endpointAutoConfirms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L368">property <b>endpointAutoConfirms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L368">property <b>endpointAutoConfirms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointAutoConfirms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2204,7 +2204,7 @@ The endpoint to send data to, the contents will vary with the protocol. (see bel
 Boolean indicating whether the end point is capable of [auto confirming subscription](http://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.html#SendMessageToHttp.prepare) e.g., PagerDuty (default is false)
 
 <h4 class="pdoc-member-header" id="TopicSubscriptionArgs-filterPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L372">property <b>filterPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L372">property <b>filterPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2212,7 +2212,7 @@ Boolean indicating whether the end point is capable of [auto confirming subscrip
 JSON String with the filter policy that will be used in the subscription to filter messages seen by the target resource. Refer to the [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/message-filtering.html) for more details.
 
 <h4 class="pdoc-member-header" id="TopicSubscriptionArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L376">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L376">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2220,7 +2220,7 @@ JSON String with the filter policy that will be used in the subscription to filt
 The protocol to use. The possible values for this are: `sqs`, `sms`, `lambda`, `application`. (`http` or `https` are partially supported, see below) (`email` is an option but is unsupported, see below).
 
 <h4 class="pdoc-member-header" id="TopicSubscriptionArgs-rawMessageDelivery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L380">property <b>rawMessageDelivery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L380">property <b>rawMessageDelivery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rawMessageDelivery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2228,7 +2228,7 @@ The protocol to use. The possible values for this are: `sqs`, `sms`, `lambda`, `
 Boolean indicating whether or not to enable raw message delivery (the original message is directly passed, not wrapped in JSON with the original message in the message property) (default is false).
 
 <h4 class="pdoc-member-header" id="TopicSubscriptionArgs-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L384">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L384">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | Topic&gt;;</code></pre>
@@ -2236,7 +2236,7 @@ Boolean indicating whether or not to enable raw message delivery (the original m
 The ARN of the SNS topic to subscribe to
 
 <h3 class="pdoc-module-header" id="TopicSubscriptionState" data-link-title="TopicSubscriptionState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L310">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L310">
         interface <strong>TopicSubscriptionState</strong>
     </a>
 </h3>
@@ -2246,7 +2246,7 @@ The ARN of the SNS topic to subscribe to
 Input properties used for looking up and filtering TopicSubscription resources.
 
 <h4 class="pdoc-member-header" id="TopicSubscriptionState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L314">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L314">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2254,7 +2254,7 @@ Input properties used for looking up and filtering TopicSubscription resources.
 The ARN of the subscription stored as a more user-friendly property
 
 <h4 class="pdoc-member-header" id="TopicSubscriptionState-confirmationTimeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L318">property <b>confirmationTimeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L318">property <b>confirmationTimeoutInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>confirmationTimeoutInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2262,7 +2262,7 @@ The ARN of the subscription stored as a more user-friendly property
 Integer indicating number of minutes to wait in retying mode for fetching subscription arn before marking it as failure. Only applicable for http and https protocols (default is 1 minute).
 
 <h4 class="pdoc-member-header" id="TopicSubscriptionState-deliveryPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L322">property <b>deliveryPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L322">property <b>deliveryPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2270,7 +2270,7 @@ Integer indicating number of minutes to wait in retying mode for fetching subscr
 JSON String with the delivery policy (retries, backoff, etc.) that will be used in the subscription - this only applies to HTTP/S subscriptions. Refer to the [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html) for more details.
 
 <h4 class="pdoc-member-header" id="TopicSubscriptionState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L326">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L326">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2278,7 +2278,7 @@ JSON String with the delivery policy (retries, backoff, etc.) that will be used 
 The endpoint to send data to, the contents will vary with the protocol. (see below for more information)
 
 <h4 class="pdoc-member-header" id="TopicSubscriptionState-endpointAutoConfirms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L330">property <b>endpointAutoConfirms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L330">property <b>endpointAutoConfirms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointAutoConfirms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2286,7 +2286,7 @@ The endpoint to send data to, the contents will vary with the protocol. (see bel
 Boolean indicating whether the end point is capable of [auto confirming subscription](http://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.html#SendMessageToHttp.prepare) e.g., PagerDuty (default is false)
 
 <h4 class="pdoc-member-header" id="TopicSubscriptionState-filterPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L334">property <b>filterPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L334">property <b>filterPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2294,7 +2294,7 @@ Boolean indicating whether the end point is capable of [auto confirming subscrip
 JSON String with the filter policy that will be used in the subscription to filter messages seen by the target resource. Refer to the [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/message-filtering.html) for more details.
 
 <h4 class="pdoc-member-header" id="TopicSubscriptionState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L338">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L338">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2302,7 +2302,7 @@ JSON String with the filter policy that will be used in the subscription to filt
 The protocol to use. The possible values for this are: `sqs`, `sms`, `lambda`, `application`. (`http` or `https` are partially supported, see below) (`email` is an option but is unsupported, see below).
 
 <h4 class="pdoc-member-header" id="TopicSubscriptionState-rawMessageDelivery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L342">property <b>rawMessageDelivery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L342">property <b>rawMessageDelivery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rawMessageDelivery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2310,7 +2310,7 @@ The protocol to use. The possible values for this are: `sqs`, `sms`, `lambda`, `
 Boolean indicating whether or not to enable raw message delivery (the original message is directly passed, not wrapped in JSON with the original message in the message property) (default is false).
 
 <h4 class="pdoc-member-header" id="TopicSubscriptionState-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/sns/topicSubscription.ts#L346">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/sns/topicSubscription.ts#L346">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | Topic&gt;;</code></pre>

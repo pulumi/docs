@@ -1444,6 +1444,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="numberofworkers_csharp">
+<a href="#numberofworkers_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Workers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The scaled number of workers (for per site scaling) of this App Service.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="phpversion_csharp">
 <a href="#phpversion_csharp" style="color: inherit; text-decoration: inherit;">Php<wbr>Version</a>
 </span>
@@ -1707,6 +1717,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for this App Service.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="numberofworkers_go">
+<a href="#numberofworkers_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Workers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The scaled number of workers (for per site scaling) of this App Service.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1976,6 +1996,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="numberofworkers_nodejs">
+<a href="#numberofworkers_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Workers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The scaled number of workers (for per site scaling) of this App Service.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="phpversion_nodejs">
 <a href="#phpversion_nodejs" style="color: inherit; text-decoration: inherit;">php<wbr>Version</a>
 </span>
@@ -2239,6 +2269,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for this App Service.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="number_of_workers_python">
+<a href="#number_of_workers_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>workers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The scaled number of workers (for per site scaling) of this App Service.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">

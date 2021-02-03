@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/okta | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/okta package."
-git_sha: "d8223ec34121f866677918fc6244e020f13ce023"
+git_sha: "d53f0a183ea2c7c4e23c737f4b79e208b145d020"
 block_external_search_index: true
 ---
 

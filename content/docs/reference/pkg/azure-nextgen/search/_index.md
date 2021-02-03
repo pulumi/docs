@@ -32,7 +32,7 @@ Explore the resources and functions of the search module in the Azure NextGen pa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
 
