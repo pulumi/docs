@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/cloudamqp | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/cloudamqp package."
-git_sha: "7553e0d84c7267a7301a6f1c8dd0fd0f06cce315"
+git_sha: "ec7a82bc35709eb50172263b763635e73d0128e3"
 block_external_search_index: true
 ---
 
