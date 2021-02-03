@@ -1,6 +1,6 @@
 ---
 # Name of the webinar.
-title: "Multicloud OSS  database deployments with Zero downtime - Pulumi and Aiven"
+title: "Multicloud OSS Database Deployments With Zero Downtime"
 meta_desc: "With Pulumi and Aiven, you can build multi-cloud applications using the language of your choice, the database of your choice, and the cloud of your choice."
 
 # A featured webinar will display first in the list.
@@ -39,7 +39,7 @@ url_slug: "multicloud-oss-database-deployments-with-aiven"
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Multicloud OSS  database deployments with Zero downtime - Pulumi and Aiven"
+    title: "Multicloud OSS Database Deployments With Zero Downtime - Pulumi and Aiven"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
@@ -52,7 +52,7 @@ hero:
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Multicloud OSS  database deployments with Zero downtime - Pulumi and Aiven"
+    title: "Multicloud OSS Database Deployments With Zero Downtime - Pulumi and Aiven"
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
