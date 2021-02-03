@@ -244,8 +244,8 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
@@ -254,7 +254,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -312,8 +312,8 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
@@ -322,7 +322,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -380,8 +380,8 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
@@ -390,7 +390,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -448,8 +448,8 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
@@ -458,7 +458,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -706,8 +706,8 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_policies_csharp">
 <a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
@@ -716,7 +716,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -774,8 +774,8 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_policies_go">
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
@@ -784,7 +784,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -842,8 +842,8 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_policies_nodejs">
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
@@ -852,7 +852,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -910,8 +910,8 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_policies_python">
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
@@ -920,7 +920,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 

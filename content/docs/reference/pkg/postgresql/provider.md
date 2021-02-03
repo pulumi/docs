@@ -27,7 +27,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_postgresql/#pulumi_postgresql.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clientcert</span><span class="p">:</span> <span class="nx">Optional[ProviderClientcertArgs]</span> = None<span class="p">, </span><span class="nx">connect_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_connections</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ssl_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sslmode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sslrootcert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">superuser</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_postgresql/#pulumi_postgresql.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clientcert</span><span class="p">:</span> <span class="nx">Optional[ProviderClientcertArgs]</span> = None<span class="p">, </span><span class="nx">connect_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_connections</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sslmode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sslrootcert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">superuser</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -288,6 +288,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The PostgreSQL port number to connect to at the server host, or socket file name extension for Unix-domain connections
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheme_csharp">
+<a href="#scheme_csharp" style="color: inherit; text-decoration: inherit;">Scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="sslmode_csharp">
@@ -435,6 +444,15 @@ Refreshing state password from Postgres)
     </dt>
     <dd>{{% md %}}The PostgreSQL port number to connect to at the server host, or socket file name extension for Unix-domain connections
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheme_go">
+<a href="#scheme_go" style="color: inherit; text-decoration: inherit;">Scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="sslmode_go">
@@ -582,6 +600,15 @@ Refreshing state password from Postgres)
     </dt>
     <dd>{{% md %}}The PostgreSQL port number to connect to at the server host, or socket file name extension for Unix-domain connections
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheme_nodejs">
+<a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="sslmode_nodejs">
@@ -729,6 +756,15 @@ Refreshing state password from Postgres)
     </dt>
     <dd>{{% md %}}The PostgreSQL port number to connect to at the server host, or socket file name extension for Unix-domain connections
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheme_python">
+<a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ssl_mode_python">

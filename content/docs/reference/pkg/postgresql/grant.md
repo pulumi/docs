@@ -68,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql"
+	"github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,6 +82,78 @@ func main() {
 			},
 			Role:   pulumi.String("test_role"),
 			Schema: pulumi.String("public"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## Examples
+
+Revoke default accesses for public schema:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as postgresql from "@pulumi/postgresql";
+
+const revokePublic = new postgresql.Grant("revoke_public", {
+    database: "test_db",
+    objectType: "schema",
+    privileges: [],
+    role: "public",
+    schema: "public",
+});
+```
+```python
+import pulumi
+import pulumi_postgresql as postgresql
+
+revoke_public = postgresql.Grant("revokePublic",
+    database="test_db",
+    object_type="schema",
+    privileges=[],
+    role="public",
+    schema="public")
+```
+```csharp
+using Pulumi;
+using PostgreSql = Pulumi.PostgreSql;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var revokePublic = new PostgreSql.Grant("revokePublic", new PostgreSql.GrantArgs
+        {
+            Database = "test_db",
+            ObjectType = "schema",
+            Privileges = {},
+            Role = "public",
+            Schema = "public",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := postgresql.NewGrant(ctx, "revokePublic", &postgresql.GrantArgs{
+			Database:   pulumi.String("test_db"),
+			ObjectType: pulumi.String("schema"),
+			Privileges: []interface{}{},
+			Role:       pulumi.String("public"),
+			Schema:     pulumi.String("public"),
 		})
 		if err != nil {
 			return err
@@ -292,7 +364,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, table, sequence,function).
+    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence,function).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -302,7 +374,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE.
+    <dd>{{% md %}}The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE. An empty list could be provided to revoke all privileges for this role.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -312,7 +384,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role to grant privileges on.
+    <dd>{{% md %}}The name of the role to grant privileges on, Set it to "public" for all roles.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -322,7 +394,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database schema to grant privileges on for this role.
+    <dd>{{% md %}}The database schema to grant privileges on for this role (Required except if object_type is "database")
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -358,7 +430,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, table, sequence,function).
+    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence,function).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -368,7 +440,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE.
+    <dd>{{% md %}}The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE. An empty list could be provided to revoke all privileges for this role.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -378,7 +450,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role to grant privileges on.
+    <dd>{{% md %}}The name of the role to grant privileges on, Set it to "public" for all roles.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -388,7 +460,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database schema to grant privileges on for this role.
+    <dd>{{% md %}}The database schema to grant privileges on for this role (Required except if object_type is "database")
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -424,7 +496,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, table, sequence,function).
+    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence,function).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -434,7 +506,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE.
+    <dd>{{% md %}}The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE. An empty list could be provided to revoke all privileges for this role.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -444,7 +516,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role to grant privileges on.
+    <dd>{{% md %}}The name of the role to grant privileges on, Set it to "public" for all roles.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -454,7 +526,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database schema to grant privileges on for this role.
+    <dd>{{% md %}}The database schema to grant privileges on for this role (Required except if object_type is "database")
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -490,7 +562,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, table, sequence,function).
+    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence,function).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -500,7 +572,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE.
+    <dd>{{% md %}}The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE. An empty list could be provided to revoke all privileges for this role.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -510,7 +582,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the role to grant privileges on.
+    <dd>{{% md %}}The name of the role to grant privileges on, Set it to "public" for all roles.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -520,7 +592,7 @@ The Grant resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The database schema to grant privileges on for this role.
+    <dd>{{% md %}}The database schema to grant privileges on for this role (Required except if object_type is "database")
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -746,7 +818,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, table, sequence,function).
+    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence,function).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -756,7 +828,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE.
+    <dd>{{% md %}}The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE. An empty list could be provided to revoke all privileges for this role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -766,7 +838,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role to grant privileges on.
+    <dd>{{% md %}}The name of the role to grant privileges on, Set it to "public" for all roles.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -776,7 +848,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database schema to grant privileges on for this role.
+    <dd>{{% md %}}The database schema to grant privileges on for this role (Required except if object_type is "database")
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -812,7 +884,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, table, sequence,function).
+    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence,function).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -822,7 +894,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE.
+    <dd>{{% md %}}The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE. An empty list could be provided to revoke all privileges for this role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -832,7 +904,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role to grant privileges on.
+    <dd>{{% md %}}The name of the role to grant privileges on, Set it to "public" for all roles.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -842,7 +914,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database schema to grant privileges on for this role.
+    <dd>{{% md %}}The database schema to grant privileges on for this role (Required except if object_type is "database")
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -878,7 +950,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, table, sequence,function).
+    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence,function).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -888,7 +960,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE.
+    <dd>{{% md %}}The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE. An empty list could be provided to revoke all privileges for this role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -898,7 +970,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role to grant privileges on.
+    <dd>{{% md %}}The name of the role to grant privileges on, Set it to "public" for all roles.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -908,7 +980,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database schema to grant privileges on for this role.
+    <dd>{{% md %}}The database schema to grant privileges on for this role (Required except if object_type is "database")
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -944,7 +1016,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, table, sequence,function).
+    <dd>{{% md %}}The PostgreSQL object type to grant the privileges on (one of: database, schema, table, sequence,function).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -954,7 +1026,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE.
+    <dd>{{% md %}}The list of privileges to grant. There are different kinds of privileges: SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER, CREATE, CONNECT, TEMPORARY, EXECUTE, and USAGE. An empty list could be provided to revoke all privileges for this role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -964,7 +1036,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the role to grant privileges on.
+    <dd>{{% md %}}The name of the role to grant privileges on, Set it to "public" for all roles.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -974,7 +1046,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The database schema to grant privileges on for this role.
+    <dd>{{% md %}}The database schema to grant privileges on for this role (Required except if object_type is "database")
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql"
+	"github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -73,7 +73,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_postgresql/#pulumi_postgresql.Extension">Extension</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_postgresql/#pulumi_postgresql.Extension">Extension</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">drop_cascade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -256,6 +256,17 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dropcascade_csharp">
+<a href="#dropcascade_csharp" style="color: inherit; text-decoration: inherit;">Drop<wbr>Cascade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, will also drop all the objects that depend on the extension, and in turn all objects that depend on those
+objects
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -299,6 +310,17 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which database to create the extension on. Defaults to provider database.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dropcascade_go">
+<a href="#dropcascade_go" style="color: inherit; text-decoration: inherit;">Drop<wbr>Cascade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, will also drop all the objects that depend on the extension, and in turn all objects that depend on those
+objects
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -348,6 +370,17 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dropcascade_nodejs">
+<a href="#dropcascade_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Cascade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When true, will also drop all the objects that depend on the extension, and in turn all objects that depend on those
+objects
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -391,6 +424,17 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Which database to create the extension on. Defaults to provider database.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="drop_cascade_python">
+<a href="#drop_cascade_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>cascade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, will also drop all the objects that depend on the extension, and in turn all objects that depend on those
+objects
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -505,7 +549,7 @@ Get an existing Extension resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Extension</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">drop_cascade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Extension</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -630,6 +674,17 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_dropcascade_csharp">
+<a href="#state_dropcascade_csharp" style="color: inherit; text-decoration: inherit;">Drop<wbr>Cascade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, will also drop all the objects that depend on the extension, and in turn all objects that depend on those
+objects
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -673,6 +728,17 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which database to create the extension on. Defaults to provider database.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_dropcascade_go">
+<a href="#state_dropcascade_go" style="color: inherit; text-decoration: inherit;">Drop<wbr>Cascade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, will also drop all the objects that depend on the extension, and in turn all objects that depend on those
+objects
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -722,6 +788,17 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_dropcascade_nodejs">
+<a href="#state_dropcascade_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Cascade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When true, will also drop all the objects that depend on the extension, and in turn all objects that depend on those
+objects
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -765,6 +842,17 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Which database to create the extension on. Defaults to provider database.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_drop_cascade_python">
+<a href="#state_drop_cascade_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>cascade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, will also drop all the objects that depend on the extension, and in turn all objects that depend on those
+objects
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
