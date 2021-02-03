@@ -1,6 +1,6 @@
 ---
 title: "Building a Development Environment for Cloud Engineering"
-date: 2021-02-04
+date: 2021-02-03
 meta_desc: "A complete guide to preparing your development environment for building infrastructure with code."
 meta_image: anti-patterns.png
 authors:
