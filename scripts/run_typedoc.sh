@@ -117,6 +117,7 @@ REPOS=(
     "ns1,pulumi-ns1,sdk/nodejs"
     "okta,pulumi-okta,sdk/nodejs"
     "openstack,pulumi-openstack,sdk/nodejs"
+    "opsgenie,pulumi-opsgenie,sdk/nodejs"
     "pagerduty,pulumi-pagerduty,sdk/nodejs"
     "policy,pulumi-policy,sdk/nodejs/policy"
     "postgresql,pulumi-postgresql,sdk/nodejs"
