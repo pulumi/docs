@@ -52,9 +52,10 @@ const ptfeService = new aws.ec2.VpcEndpoint("ptfe_service", {
     vpcId: "vpc-7fc0a543",
 });
 const testMongodbatlasPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointService("test", {
-    interfaceEndpointId: ptfeService.id,
+    endpointServiceId: ptfeService.id,
     privateLinkId: testPrivateLinkEndpoint.privateLinkId,
     projectId: testPrivateLinkEndpoint.projectId,
+    providerName: "AWS",
 });
 const testPrivateLinkEndpointService = pulumi.all([testMongodbatlasPrivateLinkEndpointService.interfaceEndpointId, testMongodbatlasPrivateLinkEndpointService.privateLinkId, testMongodbatlasPrivateLinkEndpointService.projectId]).apply(([interfaceEndpointId, privateLinkId, projectId]) => mongodbatlas.getPrivateLinkEndpointService({
     interfaceEndpointId: interfaceEndpointId,
@@ -113,7 +114,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the private endpoint service for which you want to create a private endpoint service.
+    <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` resource.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -123,7 +124,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` PrivateLink connection.
+    <dd>{{% md %}}Unique identifier of the private endpoint service for which you want to retrieve a private endpoint.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -159,7 +160,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the private endpoint service for which you want to create a private endpoint service.
+    <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` resource.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -169,7 +170,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` PrivateLink connection.
+    <dd>{{% md %}}Unique identifier of the private endpoint service for which you want to retrieve a private endpoint.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -205,7 +206,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the private endpoint service for which you want to create a private endpoint service.
+    <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` resource.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -215,7 +216,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` PrivateLink connection.
+    <dd>{{% md %}}Unique identifier of the private endpoint service for which you want to retrieve a private endpoint.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -251,7 +252,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the private endpoint service for which you want to create a private endpoint service.
+    <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` resource.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -261,7 +262,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` PrivateLink connection.
+    <dd>{{% md %}}Unique identifier of the private endpoint service for which you want to retrieve a private endpoint.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -300,13 +301,24 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="connectionstatus_csharp">
-<a href="#connectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+        <span id="awsconnectionstatus_csharp">
+<a href="#awsconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="azurestatus_csharp">
+<a href="#azurestatus_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
@@ -423,13 +435,24 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span id="connectionstatus_go">
-<a href="#connectionstatus_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+        <span id="awsconnectionstatus_go">
+<a href="#awsconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="azurestatus_go">
+<a href="#azurestatus_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
@@ -546,13 +569,24 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span id="connectionstatus_nodejs">
-<a href="#connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
+        <span id="awsconnectionstatus_nodejs">
+<a href="#awsconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="azurestatus_nodejs">
+<a href="#azurestatus_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
@@ -669,13 +703,24 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span id="connection_status_python">
-<a href="#connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
+        <span id="aws_connection_status_python">
+<a href="#aws_connection_status_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>connection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="azure_status_python">
+<a href="#azure_status_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"

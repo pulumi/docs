@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -513,7 +513,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Azure Private Link Service that Atlas manages.
-Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -523,7 +522,8 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the Private Link Service.
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -609,7 +609,6 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Azure Private Link Service that Atlas manages.
-Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -619,7 +618,8 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the Private Link Service.
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -705,7 +705,6 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Azure Private Link Service that Atlas manages.
-Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -715,7 +714,8 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the Private Link Service.
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -801,7 +801,6 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Azure Private Link Service that Atlas manages.
-Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -811,7 +810,8 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the Private Link Service.
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1011,7 +1011,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Azure Private Link Service that Atlas manages.
-Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1051,7 +1050,8 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the Private Link Service.
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1128,7 +1128,6 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Azure Private Link Service that Atlas manages.
-Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1168,7 +1167,8 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the Private Link Service.
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1245,7 +1245,6 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Azure Private Link Service that Atlas manages.
-Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1285,7 +1284,8 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the Private Link Service.
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1362,7 +1362,6 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Azure Private Link Service that Atlas manages.
-Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1402,7 +1401,8 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the Private Link Service.
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1414,10 +1414,10 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
 ## Import
 
 
-Private Endpoint Service can be imported using project ID and username, in the format `{project_id}-{private_link_id}-{provider_name}`, e.g.
+Private Endpoint Service can be imported using project ID, private link ID, provider name and region, in the format `{project_id}-{private_link_id}-{provider_name}-{region}`, e.g.
 
 ```sh
- $ pulumi import mongodbatlas:index/privateLinkEndpoint:PrivateLinkEndpoint test 1112222b3bf99403840e8934-3242342343112-AWS
+ $ pulumi import mongodbatlas:index/privateLinkEndpoint:PrivateLinkEndpoint test 1112222b3bf99403840e8934-3242342343112-AWS-us-east-1
 ```
 
  See detailed information for arguments and attributes[MongoDB API Private Endpoint Service](https://docs.atlas.mongodb.com/reference/api/private-endpoints-service-create-one//)

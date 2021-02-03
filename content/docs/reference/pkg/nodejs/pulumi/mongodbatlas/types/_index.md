@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/mongodbatlas | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/mongodbatlas package."
-git_sha: "0b65d8ebe52e3af8a9a0c663fff1385355511624"
+git_sha: "97bb5def5625d41c77582412db352f42361196b5"
 block_external_search_index: true
 ---
 

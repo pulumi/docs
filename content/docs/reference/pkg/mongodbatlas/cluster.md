@@ -80,6 +80,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -235,6 +236,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -381,6 +383,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -542,6 +545,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -748,6 +752,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -918,7 +923,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -5107,24 +5112,24 @@ Do not specify this field when creating a multi-region cluster using the replica
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="awsprivatelink_csharp">
 <a href="#awsprivatelink_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Private<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].connection_string instead{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="awsprivatelinksrv_csharp">
 <a href="#awsprivatelinksrv_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Private<wbr>Link<wbr>Srv</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].srv_connection_string instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="private_csharp">
@@ -5132,6 +5137,15 @@ Do not specify this field when creating a multi-region cluster using the replica
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoints_csharp">
+<a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconnectionstringsprivateendpoint">List&lt;Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5167,24 +5181,24 @@ Do not specify this field when creating a multi-region cluster using the replica
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="awsprivatelink_go">
 <a href="#awsprivatelink_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Private<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].connection_string instead{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="awsprivatelinksrv_go">
 <a href="#awsprivatelinksrv_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Private<wbr>Link<wbr>Srv</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].srv_connection_string instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="private_go">
@@ -5192,6 +5206,15 @@ Do not specify this field when creating a multi-region cluster using the replica
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoints_go">
+<a href="#privateendpoints_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconnectionstringsprivateendpoint">[]Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5227,24 +5250,24 @@ Do not specify this field when creating a multi-region cluster using the replica
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="awsprivatelink_nodejs">
 <a href="#awsprivatelink_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Private<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].connection_string instead{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="awsprivatelinksrv_nodejs">
 <a href="#awsprivatelinksrv_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Private<wbr>Link<wbr>Srv</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].srv_connection_string instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="private_nodejs">
@@ -5252,6 +5275,15 @@ Do not specify this field when creating a multi-region cluster using the replica
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoints_nodejs">
+<a href="#privateendpoints_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconnectionstringsprivateendpoint">Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5287,24 +5319,24 @@ Do not specify this field when creating a multi-region cluster using the replica
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="aws_private_link_python">
 <a href="#aws_private_link_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>private_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].connection_string instead{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="aws_private_link_srv_python">
 <a href="#aws_private_link_srv_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>private_<wbr>link_<wbr>srv</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].srv_connection_string instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="private_python">
@@ -5312,6 +5344,15 @@ Do not specify this field when creating a multi-region cluster using the replica
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_endpoints_python">
+<a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconnectionstringsprivateendpoint">Sequence[Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5336,6 +5377,338 @@ Do not specify this field when creating a multi-region cluster using the replica
             title="Optional">
         <span id="standard_srv_python">
 <a href="#standard_srv_python" style="color: inherit; text-decoration: inherit;">standard_<wbr>srv</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="clusterconnectionstringsprivateendpoint">Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#ClusterConnectionStringsPrivateEndpoint">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#ClusterConnectionStringsPrivateEndpointOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.ClusterConnectionStringsPrivateEndpoint.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionstring_csharp">
+<a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpoints_csharp">
+<a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconnectionstringsprivateendpointendpoint">List&lt;Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="srvconnectionstring_csharp">
+<a href="#srvconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Srv<wbr>Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionstring_go">
+<a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpoints_go">
+<a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconnectionstringsprivateendpointendpoint">[]Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="srvconnectionstring_go">
+<a href="#srvconnectionstring_go" style="color: inherit; text-decoration: inherit;">Srv<wbr>Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionstring_nodejs">
+<a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpoints_nodejs">
+<a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconnectionstringsprivateendpointendpoint">Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="srvconnectionstring_nodejs">
+<a href="#srvconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">srv<wbr>Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connection_string_python">
+<a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpoints_python">
+<a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconnectionstringsprivateendpointendpoint">Sequence[Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="srv_connection_string_python">
+<a href="#srv_connection_string_python" style="color: inherit; text-decoration: inherit;">srv_<wbr>connection_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="clusterconnectionstringsprivateendpointendpoint">Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#ClusterConnectionStringsPrivateEndpointEndpoint">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#ClusterConnectionStringsPrivateEndpointEndpointOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.ClusterConnectionStringsPrivateEndpointEndpoint.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpointid_csharp">
+<a href="#endpointid_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="providername_csharp">
+<a href="#providername_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cloud service provider on which the servers are provisioned.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpointid_go">
+<a href="#endpointid_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="providername_go">
+<a href="#providername_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cloud service provider on which the servers are provisioned.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpointid_nodejs">
+<a href="#endpointid_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="providername_nodejs">
+<a href="#providername_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cloud service provider on which the servers are provisioned.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpoint_id_python">
+<a href="#endpoint_id_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provider_name_python">
+<a href="#provider_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Cloud service provider on which the servers are provisioned.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
