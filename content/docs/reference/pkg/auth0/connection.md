@@ -73,6 +73,7 @@ import (
 	"fmt"
 
 	"github.com/pulumi/pulumi-auth0/sdk/go/auth0"
+	"github.com/pulumi/pulumi-auth0/sdk/go/auth0/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1648,6 +1649,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="mfa_csharp">
+<a href="#mfa_csharp" style="color: inherit; text-decoration: inherit;">Mfa</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoptionsmfa">Connection<wbr>Options<wbr>Mfa<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration settings Options for multifactor authentication. For details, see MFA Options.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -2302,6 +2313,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SID for Copilot. Used when SMS Source is Copilot.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mfa_go">
+<a href="#mfa_go" style="color: inherit; text-decoration: inherit;">Mfa</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoptionsmfa">Connection<wbr>Options<wbr>Mfa</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration settings Options for multifactor authentication. For details, see MFA Options.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2962,6 +2983,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="mfa_nodejs">
+<a href="#mfa_nodejs" style="color: inherit; text-decoration: inherit;">mfa</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoptionsmfa">Connection<wbr>Options<wbr>Mfa</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration settings Options for multifactor authentication. For details, see MFA Options.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -3619,6 +3650,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="mfa_python">
+<a href="#mfa_python" style="color: inherit; text-decoration: inherit;">mfa</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoptionsmfa">Connection<wbr>Options<wbr>Mfa<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration settings Options for multifactor authentication. For details, see MFA Options.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -4108,6 +4149,124 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="connectionoptionsmfa">Connection<wbr>Options<wbr>Mfa</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#ConnectionOptionsMfa">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsMfa">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsMfaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsMfaOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.ConnectionOptionsMfaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.ConnectionOptionsMfa.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="active_csharp">
+<a href="#active_csharp" style="color: inherit; text-decoration: inherit;">Active</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether multifactor authentication is enabled for this connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="returnenrollsettings_csharp">
+<a href="#returnenrollsettings_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Enroll<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether multifactor authentication enrollment settings will be returned.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="active_go">
+<a href="#active_go" style="color: inherit; text-decoration: inherit;">Active</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether multifactor authentication is enabled for this connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="returnenrollsettings_go">
+<a href="#returnenrollsettings_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Enroll<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether multifactor authentication enrollment settings will be returned.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="active_nodejs">
+<a href="#active_nodejs" style="color: inherit; text-decoration: inherit;">active</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether multifactor authentication is enabled for this connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="returnenrollsettings_nodejs">
+<a href="#returnenrollsettings_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Enroll<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether multifactor authentication enrollment settings will be returned.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="active_python">
+<a href="#active_python" style="color: inherit; text-decoration: inherit;">active</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether multifactor authentication is enabled for this connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="return_enroll_settings_python">
+<a href="#return_enroll_settings_python" style="color: inherit; text-decoration: inherit;">return_<wbr>enroll_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether multifactor authentication enrollment settings will be returned.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

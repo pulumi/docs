@@ -5096,6 +5096,33 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="idletokenlifetime_csharp">
+<a href="#idletokenlifetime_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infiniteidletokenlifetime_csharp">
+<a href="#infiniteidletokenlifetime_csharp" style="color: inherit; text-decoration: inherit;">Infinite<wbr>Idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infinitetokenlifetime_csharp">
+<a href="#infinitetokenlifetime_csharp" style="color: inherit; text-decoration: inherit;">Infinite<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="leeway_csharp">
 <a href="#leeway_csharp" style="color: inherit; text-decoration: inherit;">Leeway</a>
 </span>
@@ -5134,6 +5161,33 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idletokenlifetime_go">
+<a href="#idletokenlifetime_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infiniteidletokenlifetime_go">
+<a href="#infiniteidletokenlifetime_go" style="color: inherit; text-decoration: inherit;">Infinite<wbr>Idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infinitetokenlifetime_go">
+<a href="#infinitetokenlifetime_go" style="color: inherit; text-decoration: inherit;">Infinite<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5180,6 +5234,33 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="idletokenlifetime_nodejs">
+<a href="#idletokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infiniteidletokenlifetime_nodejs">
+<a href="#infiniteidletokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">infinite<wbr>Idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infinitetokenlifetime_nodejs">
+<a href="#infinitetokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">infinite<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="leeway_nodejs">
 <a href="#leeway_nodejs" style="color: inherit; text-decoration: inherit;">leeway</a>
 </span>
@@ -5218,6 +5299,33 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_token_lifetime_python">
+<a href="#idle_token_lifetime_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>token_<wbr>lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infinite_idle_token_lifetime_python">
+<a href="#infinite_idle_token_lifetime_python" style="color: inherit; text-decoration: inherit;">infinite_<wbr>idle_<wbr>token_<wbr>lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infinite_token_lifetime_python">
+<a href="#infinite_token_lifetime_python" style="color: inherit; text-decoration: inherit;">infinite_<wbr>token_<wbr>lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
