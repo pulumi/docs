@@ -109,7 +109,7 @@ export const firstResourceGroupId = example.groups[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_resource_groups(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetResourceGroupsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_resource_groups(</span><span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetResourceGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -133,6 +133,16 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}-(Optional, Available in v1.114.0+) Default to `false`. Set it to true can output more details.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
@@ -170,7 +180,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`OK` and `PendingDelete`.
+    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`Deleting`(Available 1.114.0+) `OK` and `PendingDelete`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -178,6 +188,16 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}-(Optional, Available in v1.114.0+) Default to `false`. Set it to true can output more details.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ids_go">
@@ -215,7 +235,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`OK` and `PendingDelete`.
+    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`Deleting`(Available 1.114.0+) `OK` and `PendingDelete`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -223,6 +243,16 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}-(Optional, Available in v1.114.0+) Default to `false`. Set it to true can output more details.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
@@ -260,7 +290,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`OK` and `PendingDelete`.
+    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`Deleting`(Available 1.114.0+) `OK` and `PendingDelete`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -268,6 +298,16 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}-(Optional, Available in v1.114.0+) Default to `false`. Set it to true can output more details.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ids_python">
@@ -305,7 +345,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`OK` and `PendingDelete`.
+    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`Deleting`(Available 1.114.0+) `OK` and `PendingDelete`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -364,6 +404,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
@@ -388,7 +437,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`OK` and `PendingDelete`.
+    <dd>{{% md %}}The status of the regional resource group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -438,6 +487,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
@@ -462,7 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`OK` and `PendingDelete`.
+    <dd>{{% md %}}The status of the regional resource group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -512,6 +570,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
 </span>
@@ -536,7 +603,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`OK` and `PendingDelete`.
+    <dd>{{% md %}}The status of the regional resource group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -586,6 +653,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
 </span>
@@ -610,7 +686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`OK` and `PendingDelete`.
+    <dd>{{% md %}}The status of the regional resource group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -650,16 +726,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="createdate_csharp">
-<a href="#createdate_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The time when the resource group was created.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span>
@@ -690,13 +756,32 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="regionstatuses_csharp">
+<a href="#regionstatuses_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getresourcegroupsgroupregionstatus">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Resource<wbr>Manager.<wbr>Inputs.<wbr>Get<wbr>Resource<wbr>Groups<wbr>Group<wbr>Region<wbr>Status<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.114.0+) The unique identifier of the resource group.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`OK` and `PendingDelete`.
+    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`Deleting`(Available 1.114.0+) `OK` and `PendingDelete`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -713,16 +798,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Alibaba Cloud account to which the resource group belongs.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="createdate_go">
-<a href="#createdate_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The time when the resource group was created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -756,13 +831,32 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="regionstatuses_go">
+<a href="#regionstatuses_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getresourcegroupsgroupregionstatus">[]Get<wbr>Resource<wbr>Groups<wbr>Group<wbr>Region<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.114.0+) The unique identifier of the resource group.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`OK` and `PendingDelete`.
+    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`Deleting`(Available 1.114.0+) `OK` and `PendingDelete`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -779,16 +873,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Alibaba Cloud account to which the resource group belongs.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="createdate_nodejs">
-<a href="#createdate_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The time when the resource group was created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -822,13 +906,32 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="regionstatuses_nodejs">
+<a href="#regionstatuses_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getresourcegroupsgroupregionstatus">Get<wbr>Resource<wbr>Groups<wbr>Group<wbr>Region<wbr>Status[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.114.0+) The unique identifier of the resource group.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`OK` and `PendingDelete`.
+    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`Deleting`(Available 1.114.0+) `OK` and `PendingDelete`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -845,16 +948,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Alibaba Cloud account to which the resource group belongs.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="create_date_python">
-<a href="#create_date_python" style="color: inherit; text-decoration: inherit;">create_<wbr>date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The time when the resource group was created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -888,13 +981,150 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="region_statuses_python">
+<a href="#region_statuses_python" style="color: inherit; text-decoration: inherit;">region_<wbr>statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getresourcegroupsgroupregionstatus">Sequence[Get<wbr>Resource<wbr>Groups<wbr>Group<wbr>Region<wbr>Status<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.114.0+) The unique identifier of the resource group.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`OK` and `PendingDelete`.
+    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`Deleting`(Available 1.114.0+) `OK` and `PendingDelete`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getresourcegroupsgroupregionstatus">Get<wbr>Resource<wbr>Groups<wbr>Group<wbr>Region<wbr>Status</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetResourceGroupsGroupRegionStatus">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/resourcemanager?tab=doc#GetResourceGroupsGroupRegionStatus">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ResourceManager.Outputs.GetResourceGroupsGroupRegionStatus.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="regionid_csharp">
+<a href="#regionid_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region ID.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`Deleting`(Available 1.114.0+) `OK` and `PendingDelete`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="regionid_go">
+<a href="#regionid_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region ID.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`Deleting`(Available 1.114.0+) `OK` and `PendingDelete`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="regionid_nodejs">
+<a href="#regionid_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region ID.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`Deleting`(Available 1.114.0+) `OK` and `PendingDelete`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region ID.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of the resource group. Possible values:`Creating`,`Deleted`,`Deleting`(Available 1.114.0+) `OK` and `PendingDelete`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

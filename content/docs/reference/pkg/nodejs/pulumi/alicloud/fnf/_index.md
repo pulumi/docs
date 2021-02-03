@@ -3,7 +3,7 @@ title: "Module fnf"
 title_tag: "Module fnf | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "fnf"
 meta_desc: "Explore members of the fnf module in the @pulumi/alicloud package."
-git_sha: "84d761bea49f23fb37c890ced8154c67c2c45089"
+git_sha: "a277e806d72e42d207af3a56f9e24fd99611ec00"
 block_external_search_index: true
 ---
 
@@ -25,6 +25,7 @@ block_external_search_index: true
 <ul class="api">
     <li><a href="#getFlows"><span class="symbol function"></span>getFlows</a></li>
     <li><a href="#getSchedules"><span class="symbol function"></span>getSchedules</a></li>
+    <li><a href="#getService"><span class="symbol function"></span>getService</a></li>
 </ul>
 
 <h3>Others</h3>
@@ -35,6 +36,8 @@ block_external_search_index: true
     <li><a href="#GetFlowsResult"><span class="symbol api"></span>GetFlowsResult</a></li>
     <li><a href="#GetSchedulesArgs"><span class="symbol api"></span>GetSchedulesArgs</a></li>
     <li><a href="#GetSchedulesResult"><span class="symbol api"></span>GetSchedulesResult</a></li>
+    <li><a href="#GetServiceArgs"><span class="symbol api"></span>GetServiceArgs</a></li>
+    <li><a href="#GetServiceResult"><span class="symbol api"></span>GetServiceResult</a></li>
     <li><a href="#ScheduleArgs"><span class="symbol api"></span>ScheduleArgs</a></li>
     <li><a href="#ScheduleState"><span class="symbol api"></span>ScheduleState</a></li>
 </ul>
@@ -42,7 +45,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Flow" data-link-title="Flow">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L58">
         Resource <strong>Flow</strong>
     </a>
 </h3>
@@ -100,7 +103,7 @@ Serverless Workflow Flow can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Flow-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L113"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L113"> <b>constructor</b></a>
 </h4>
 
 
@@ -114,7 +117,7 @@ Create a Flow resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Flow-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L68">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L68">method <b>get</b></a>
 </h4>
 
 
@@ -125,14 +128,14 @@ Get an existing Flow resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Flow-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L58">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L58">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Flow-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L79">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L79">method <b>isInstance</b></a>
 </h4>
 
 
@@ -143,7 +146,7 @@ Returns true if the given object is an instance of Flow.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Flow-definition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L89">property <b>definition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L89">property <b>definition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>definition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -151,7 +154,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The definition of the flow. It must comply with the Flow Definition Language (FDL) syntax.
 
 <h4 class="pdoc-member-header" id="Flow-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L93">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L93">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -159,7 +162,7 @@ The definition of the flow. It must comply with the Flow Definition Language (FD
 The description of the flow.
 
 <h4 class="pdoc-member-header" id="Flow-flowId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L97">property <b>flowId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L97">property <b>flowId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>flowId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -167,7 +170,7 @@ The description of the flow.
 The unique ID of the flow.
 
 <h4 class="pdoc-member-header" id="Flow-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L58">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L58">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -176,7 +179,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Flow-lastModifiedTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L101">property <b>lastModifiedTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L101">property <b>lastModifiedTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastModifiedTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -184,7 +187,7 @@ deployments and may be missing (undefined) during planning phases.
 The time when the flow was last modified.
 
 <h4 class="pdoc-member-header" id="Flow-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L105">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L105">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -192,7 +195,7 @@ The time when the flow was last modified.
 The name of the flow. The name must be unique in an Alibaba Cloud account.
 
 <h4 class="pdoc-member-header" id="Flow-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L109">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L109">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -200,7 +203,7 @@ The name of the flow. The name must be unique in an Alibaba Cloud account.
 The ARN of the specified RAM role that Serverless Workflow uses to assume the role when Serverless Workflow executes a flow.
 
 <h4 class="pdoc-member-header" id="Flow-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L113">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L113">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -208,7 +211,7 @@ The ARN of the specified RAM role that Serverless Workflow uses to assume the ro
 The type of the flow. Valid values are `FDL` or `DEFAULT`.
 
 <h4 class="pdoc-member-header" id="Flow-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L58">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L58">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -217,7 +220,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Schedule" data-link-title="Schedule">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L50">
         Resource <strong>Schedule</strong>
     </a>
 </h3>
@@ -267,7 +270,7 @@ Serverless Workflow Schedule can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Schedule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L109"> <b>constructor</b></a>
 </h4>
 
 
@@ -281,7 +284,7 @@ Create a Schedule resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Schedule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L60">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L60">method <b>get</b></a>
 </h4>
 
 
@@ -292,14 +295,14 @@ Get an existing Schedule resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Schedule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L50">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L50">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Schedule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L71">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L71">method <b>isInstance</b></a>
 </h4>
 
 
@@ -310,7 +313,7 @@ Returns true if the given object is an instance of Schedule.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Schedule-cronExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L81">property <b>cronExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L81">property <b>cronExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cronExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -318,7 +321,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The CRON expression of the time-based schedule to be created.
 
 <h4 class="pdoc-member-header" id="Schedule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L85">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L85">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -326,7 +329,7 @@ The CRON expression of the time-based schedule to be created.
 The description of the time-based schedule to be created.
 
 <h4 class="pdoc-member-header" id="Schedule-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L89">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L89">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -334,7 +337,7 @@ The description of the time-based schedule to be created.
 Specifies whether to enable the time-based schedule you want to create. Valid values: `false`, `true`.
 
 <h4 class="pdoc-member-header" id="Schedule-flowName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L93">property <b>flowName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L93">property <b>flowName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>flowName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -342,7 +345,7 @@ Specifies whether to enable the time-based schedule you want to create. Valid va
 The name of the flow bound to the time-based schedule you want to create.
 
 <h4 class="pdoc-member-header" id="Schedule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L50">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L50">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -351,7 +354,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Schedule-lastModifiedTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L97">property <b>lastModifiedTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L97">property <b>lastModifiedTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastModifiedTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -359,7 +362,7 @@ deployments and may be missing (undefined) during planning phases.
 The time when the time-based schedule was last updated.
 
 <h4 class="pdoc-member-header" id="Schedule-payload">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L101">property <b>payload</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L101">property <b>payload</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>payload: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -367,7 +370,7 @@ The time when the time-based schedule was last updated.
 The trigger message of the time-based schedule to be created. It must be in JSON object format.
 
 <h4 class="pdoc-member-header" id="Schedule-scheduleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L105">property <b>scheduleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L105">property <b>scheduleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheduleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -375,7 +378,7 @@ The trigger message of the time-based schedule to be created. It must be in JSON
 The ID of the time-based schedule.
 
 <h4 class="pdoc-member-header" id="Schedule-scheduleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L109">property <b>scheduleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L109">property <b>scheduleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheduleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -383,7 +386,7 @@ The ID of the time-based schedule.
 The name of the time-based schedule to be created.
 
 <h4 class="pdoc-member-header" id="Schedule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L50">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L50">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -394,7 +397,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getFlows" data-link-title="getFlows">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getFlows.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getFlows.ts#L28">
         Function <strong>getFlows</strong>
     </a>
 </h3>
@@ -423,7 +426,7 @@ export const firstFnfFlowId = example.then(example => example.flows[0].id);
 ```
 
 <h3 class="pdoc-module-header" id="getSchedules" data-link-title="getSchedules">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getSchedules.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getSchedules.ts#L29">
         Function <strong>getSchedules</strong>
     </a>
 </h3>
@@ -452,10 +455,37 @@ const example = alicloud.fnf.getSchedules({
 export const firstFnfScheduleId = example.then(example => example.schedules[0].id);
 ```
 
+<h3 class="pdoc-module-header" id="getService" data-link-title="getService">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getService.ts#L26">
+        Function <strong>getService</strong>
+    </a>
+</h3>
+
+
+<pre class="highlight"><code><span class='kd'></span>getService(args?: <a href='#GetServiceArgs'>GetServiceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetServiceResult'>GetServiceResult</a>&gt;</code></pre>
+
+
+Using this data source can open Fnf service automatically. If the service has been opened, it will return opened.
+
+For information about Fnf and how to use it, see [What is Fnf](https://www.alibabacloud.com/help/en/product/113549.htm).
+
+> **NOTE:** Available in v1.114.0+
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const open = pulumi.output(alicloud.fnf.getService({
+    enable: "On",
+}, { async: true }));
+```
+
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="FlowArgs" data-link-title="FlowArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L201">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L201">
         interface <strong>FlowArgs</strong>
     </a>
 </h3>
@@ -465,7 +495,7 @@ export const firstFnfScheduleId = example.then(example => example.schedules[0].i
 The set of arguments for constructing a Flow resource.
 
 <h4 class="pdoc-member-header" id="FlowArgs-definition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L205">property <b>definition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L205">property <b>definition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>definition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -473,7 +503,7 @@ The set of arguments for constructing a Flow resource.
 The definition of the flow. It must comply with the Flow Definition Language (FDL) syntax.
 
 <h4 class="pdoc-member-header" id="FlowArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L209">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L209">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -481,7 +511,7 @@ The definition of the flow. It must comply with the Flow Definition Language (FD
 The description of the flow.
 
 <h4 class="pdoc-member-header" id="FlowArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L213">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L213">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -489,7 +519,7 @@ The description of the flow.
 The name of the flow. The name must be unique in an Alibaba Cloud account.
 
 <h4 class="pdoc-member-header" id="FlowArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L217">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L217">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -497,7 +527,7 @@ The name of the flow. The name must be unique in an Alibaba Cloud account.
 The ARN of the specified RAM role that Serverless Workflow uses to assume the role when Serverless Workflow executes a flow.
 
 <h4 class="pdoc-member-header" id="FlowArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L221">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L221">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -505,7 +535,7 @@ The ARN of the specified RAM role that Serverless Workflow uses to assume the ro
 The type of the flow. Valid values are `FDL` or `DEFAULT`.
 
 <h3 class="pdoc-module-header" id="FlowState" data-link-title="FlowState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L167">
         interface <strong>FlowState</strong>
     </a>
 </h3>
@@ -515,7 +545,7 @@ The type of the flow. Valid values are `FDL` or `DEFAULT`.
 Input properties used for looking up and filtering Flow resources.
 
 <h4 class="pdoc-member-header" id="FlowState-definition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L171">property <b>definition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L171">property <b>definition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>definition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -523,7 +553,7 @@ Input properties used for looking up and filtering Flow resources.
 The definition of the flow. It must comply with the Flow Definition Language (FDL) syntax.
 
 <h4 class="pdoc-member-header" id="FlowState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L175">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L175">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -531,7 +561,7 @@ The definition of the flow. It must comply with the Flow Definition Language (FD
 The description of the flow.
 
 <h4 class="pdoc-member-header" id="FlowState-flowId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L179">property <b>flowId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L179">property <b>flowId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flowId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -539,7 +569,7 @@ The description of the flow.
 The unique ID of the flow.
 
 <h4 class="pdoc-member-header" id="FlowState-lastModifiedTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L183">property <b>lastModifiedTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L183">property <b>lastModifiedTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModifiedTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -547,7 +577,7 @@ The unique ID of the flow.
 The time when the flow was last modified.
 
 <h4 class="pdoc-member-header" id="FlowState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L187">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L187">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -555,7 +585,7 @@ The time when the flow was last modified.
 The name of the flow. The name must be unique in an Alibaba Cloud account.
 
 <h4 class="pdoc-member-header" id="FlowState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L191">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L191">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -563,7 +593,7 @@ The name of the flow. The name must be unique in an Alibaba Cloud account.
 The ARN of the specified RAM role that Serverless Workflow uses to assume the role when Serverless Workflow executes a flow.
 
 <h4 class="pdoc-member-header" id="FlowState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/flow.ts#L195">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/flow.ts#L195">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -571,7 +601,7 @@ The ARN of the specified RAM role that Serverless Workflow uses to assume the ro
 The type of the flow. Valid values are `FDL` or `DEFAULT`.
 
 <h3 class="pdoc-module-header" id="GetFlowsArgs" data-link-title="GetFlowsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getFlows.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getFlows.ts#L48">
         interface <strong>GetFlowsArgs</strong>
     </a>
 </h3>
@@ -581,7 +611,7 @@ The type of the flow. Valid values are `FDL` or `DEFAULT`.
 A collection of arguments for invoking getFlows.
 
 <h4 class="pdoc-member-header" id="GetFlowsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getFlows.ts#L52">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getFlows.ts#L52">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -589,7 +619,7 @@ A collection of arguments for invoking getFlows.
 A list of Flow IDs.
 
 <h4 class="pdoc-member-header" id="GetFlowsArgs-limit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getFlows.ts#L56">property <b>limit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getFlows.ts#L56">property <b>limit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>limit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -597,7 +627,7 @@ A list of Flow IDs.
 The number of resource queries.
 
 <h4 class="pdoc-member-header" id="GetFlowsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getFlows.ts#L60">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getFlows.ts#L60">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -605,12 +635,12 @@ The number of resource queries.
 A regex string to filter results by Flow name.
 
 <h4 class="pdoc-member-header" id="GetFlowsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getFlows.ts#L61">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getFlows.ts#L61">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetFlowsResult" data-link-title="GetFlowsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getFlows.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getFlows.ts#L67">
         interface <strong>GetFlowsResult</strong>
     </a>
 </h3>
@@ -620,12 +650,12 @@ A regex string to filter results by Flow name.
 A collection of values returned by getFlows.
 
 <h4 class="pdoc-member-header" id="GetFlowsResult-flows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getFlows.ts#L68">property <b>flows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getFlows.ts#L68">property <b>flows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flows: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetFlowsFlow'>GetFlowsFlow</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetFlowsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getFlows.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getFlows.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -633,32 +663,32 @@ A collection of values returned by getFlows.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetFlowsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getFlows.ts#L73">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getFlows.ts#L73">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetFlowsResult-limit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getFlows.ts#L74">property <b>limit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getFlows.ts#L74">property <b>limit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>limit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFlowsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getFlows.ts#L75">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getFlows.ts#L75">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFlowsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getFlows.ts#L76">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getFlows.ts#L76">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetFlowsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getFlows.ts#L77">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getFlows.ts#L77">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetSchedulesArgs" data-link-title="GetSchedulesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getSchedules.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getSchedules.ts#L49">
         interface <strong>GetSchedulesArgs</strong>
     </a>
 </h3>
@@ -668,7 +698,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getSchedules.
 
 <h4 class="pdoc-member-header" id="GetSchedulesArgs-flowName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getSchedules.ts#L53">property <b>flowName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getSchedules.ts#L53">property <b>flowName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flowName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -676,7 +706,7 @@ A collection of arguments for invoking getSchedules.
 The name of the flow bound to the time-based schedule you want to create.
 
 <h4 class="pdoc-member-header" id="GetSchedulesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getSchedules.ts#L57">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getSchedules.ts#L57">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -684,7 +714,7 @@ The name of the flow bound to the time-based schedule you want to create.
 A list of Schedule IDs.
 
 <h4 class="pdoc-member-header" id="GetSchedulesArgs-limit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getSchedules.ts#L61">property <b>limit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getSchedules.ts#L61">property <b>limit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>limit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -692,7 +722,7 @@ A list of Schedule IDs.
 The number of resource queries.
 
 <h4 class="pdoc-member-header" id="GetSchedulesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getSchedules.ts#L65">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getSchedules.ts#L65">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -700,12 +730,12 @@ The number of resource queries.
 A regex string to filter results by Schedule name.
 
 <h4 class="pdoc-member-header" id="GetSchedulesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getSchedules.ts#L66">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getSchedules.ts#L66">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetSchedulesResult" data-link-title="GetSchedulesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getSchedules.ts#L72">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getSchedules.ts#L72">
         interface <strong>GetSchedulesResult</strong>
     </a>
 </h3>
@@ -715,12 +745,12 @@ A regex string to filter results by Schedule name.
 A collection of values returned by getSchedules.
 
 <h4 class="pdoc-member-header" id="GetSchedulesResult-flowName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getSchedules.ts#L73">property <b>flowName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getSchedules.ts#L73">property <b>flowName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flowName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSchedulesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getSchedules.ts#L77">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getSchedules.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -728,37 +758,86 @@ A collection of values returned by getSchedules.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSchedulesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getSchedules.ts#L78">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getSchedules.ts#L78">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSchedulesResult-limit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getSchedules.ts#L79">property <b>limit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getSchedules.ts#L79">property <b>limit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>limit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSchedulesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getSchedules.ts#L80">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getSchedules.ts#L80">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSchedulesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getSchedules.ts#L81">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getSchedules.ts#L81">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSchedulesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getSchedules.ts#L82">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getSchedules.ts#L82">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSchedulesResult-schedules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/getSchedules.ts#L83">property <b>schedules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getSchedules.ts#L83">property <b>schedules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedules: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetSchedulesSchedule'>GetSchedulesSchedule</a>[];</code></pre>
+<h3 class="pdoc-module-header" id="GetServiceArgs" data-link-title="GetServiceArgs">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getService.ts#L43">
+        interface <strong>GetServiceArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceArgs</span></code></pre>
+
+A collection of arguments for invoking getService.
+
+<h4 class="pdoc-member-header" id="GetServiceArgs-enable">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getService.ts#L47">property <b>enable</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off". Default to "Off".
+
+<h3 class="pdoc-module-header" id="GetServiceResult" data-link-title="GetServiceResult">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getService.ts#L53">
+        interface <strong>GetServiceResult</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceResult</span></code></pre>
+
+A collection of values returned by getService.
+
+<h4 class="pdoc-member-header" id="GetServiceResult-enable">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getService.ts#L54">property <b>enable</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetServiceResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getService.ts#L58">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The provider-assigned unique ID for this managed resource.
+
+<h4 class="pdoc-member-header" id="GetServiceResult-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/getService.ts#L62">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The current service enable status.
+
 <h3 class="pdoc-module-header" id="ScheduleArgs" data-link-title="ScheduleArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L203">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L203">
         interface <strong>ScheduleArgs</strong>
     </a>
 </h3>
@@ -768,7 +847,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a Schedule resource.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-cronExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L207">property <b>cronExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L207">property <b>cronExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cronExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -776,7 +855,7 @@ The set of arguments for constructing a Schedule resource.
 The CRON expression of the time-based schedule to be created.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L211">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L211">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -784,7 +863,7 @@ The CRON expression of the time-based schedule to be created.
 The description of the time-based schedule to be created.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L215">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L215">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -792,7 +871,7 @@ The description of the time-based schedule to be created.
 Specifies whether to enable the time-based schedule you want to create. Valid values: `false`, `true`.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-flowName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L219">property <b>flowName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L219">property <b>flowName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flowName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -800,7 +879,7 @@ Specifies whether to enable the time-based schedule you want to create. Valid va
 The name of the flow bound to the time-based schedule you want to create.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-payload">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L223">property <b>payload</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L223">property <b>payload</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payload?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -808,7 +887,7 @@ The name of the flow bound to the time-based schedule you want to create.
 The trigger message of the time-based schedule to be created. It must be in JSON object format.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-scheduleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L227">property <b>scheduleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L227">property <b>scheduleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -816,7 +895,7 @@ The trigger message of the time-based schedule to be created. It must be in JSON
 The name of the time-based schedule to be created.
 
 <h3 class="pdoc-module-header" id="ScheduleState" data-link-title="ScheduleState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L165">
         interface <strong>ScheduleState</strong>
     </a>
 </h3>
@@ -826,7 +905,7 @@ The name of the time-based schedule to be created.
 Input properties used for looking up and filtering Schedule resources.
 
 <h4 class="pdoc-member-header" id="ScheduleState-cronExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L169">property <b>cronExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L169">property <b>cronExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cronExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -834,7 +913,7 @@ Input properties used for looking up and filtering Schedule resources.
 The CRON expression of the time-based schedule to be created.
 
 <h4 class="pdoc-member-header" id="ScheduleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L173">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L173">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -842,7 +921,7 @@ The CRON expression of the time-based schedule to be created.
 The description of the time-based schedule to be created.
 
 <h4 class="pdoc-member-header" id="ScheduleState-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L177">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L177">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -850,7 +929,7 @@ The description of the time-based schedule to be created.
 Specifies whether to enable the time-based schedule you want to create. Valid values: `false`, `true`.
 
 <h4 class="pdoc-member-header" id="ScheduleState-flowName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L181">property <b>flowName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L181">property <b>flowName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flowName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -858,7 +937,7 @@ Specifies whether to enable the time-based schedule you want to create. Valid va
 The name of the flow bound to the time-based schedule you want to create.
 
 <h4 class="pdoc-member-header" id="ScheduleState-lastModifiedTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L185">property <b>lastModifiedTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L185">property <b>lastModifiedTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModifiedTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -866,7 +945,7 @@ The name of the flow bound to the time-based schedule you want to create.
 The time when the time-based schedule was last updated.
 
 <h4 class="pdoc-member-header" id="ScheduleState-payload">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L189">property <b>payload</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L189">property <b>payload</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payload?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -874,7 +953,7 @@ The time when the time-based schedule was last updated.
 The trigger message of the time-based schedule to be created. It must be in JSON object format.
 
 <h4 class="pdoc-member-header" id="ScheduleState-scheduleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L193">property <b>scheduleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L193">property <b>scheduleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -882,7 +961,7 @@ The trigger message of the time-based schedule to be created. It must be in JSON
 The ID of the time-based schedule.
 
 <h4 class="pdoc-member-header" id="ScheduleState-scheduleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/fnf/schedule.ts#L197">property <b>scheduleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/fnf/schedule.ts#L197">property <b>scheduleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

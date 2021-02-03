@@ -3,7 +3,7 @@ title: "Module resourcemanager"
 title_tag: "Module resourcemanager | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "resourcemanager"
 meta_desc: "Explore members of the resourcemanager module in the @pulumi/alicloud package."
-git_sha: "84d761bea49f23fb37c890ced8154c67c2c45089"
+git_sha: "a277e806d72e42d207af3a56f9e24fd99611ec00"
 block_external_search_index: true
 ---
 
@@ -102,7 +102,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Account" data-link-title="Account">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L35">
         Resource <strong>Account</strong>
     </a>
 </h3>
@@ -137,7 +137,7 @@ Resource Manager Account can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
@@ -151,7 +151,7 @@ Create a Account resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -162,14 +162,14 @@ Get an existing Account resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Account-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -179,8 +179,16 @@ properties used to qualify the lookup.
 Returns true if the given object is an instance of Account.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
+<h4 class="pdoc-member-header" id="Account-accountNamePrefix">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L66">property <b>accountNamePrefix</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>accountNamePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The name prefix of account.
+
 <h4 class="pdoc-member-header" id="Account-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L66">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L70">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -188,15 +196,15 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Member name. The length is 2 ~ 50 characters or Chinese characters, which can include Chinese characters, English letters, numbers, underscores (_), dots (.) And dashes (-).
 
 <h4 class="pdoc-member-header" id="Account-folderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L70">property <b>folderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L74">property <b>folderId</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>folderId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>folderId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The ID of the parent folder.
 
 <h4 class="pdoc-member-header" id="Account-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -205,7 +213,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Account-joinMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L74">property <b>joinMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L78">property <b>joinMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>joinMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -213,7 +221,7 @@ deployments and may be missing (undefined) during planning phases.
 Ways for members to join the resource directory. Valid values: `invited`, `created`.
 
 <h4 class="pdoc-member-header" id="Account-joinTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L78">property <b>joinTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L82">property <b>joinTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>joinTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -221,7 +229,7 @@ Ways for members to join the resource directory. Valid values: `invited`, `creat
 The time when the member joined the resource directory.
 
 <h4 class="pdoc-member-header" id="Account-modifyTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L82">property <b>modifyTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L86">property <b>modifyTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>modifyTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -229,7 +237,7 @@ The time when the member joined the resource directory.
 The modification time of the invitation.
 
 <h4 class="pdoc-member-header" id="Account-payerAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L86">property <b>payerAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L90">property <b>payerAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>payerAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -237,7 +245,7 @@ The modification time of the invitation.
 Settlement account ID. If the value is empty, the current account will be used for settlement.
 
 <h4 class="pdoc-member-header" id="Account-resourceDirectoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L90">property <b>resourceDirectoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L94">property <b>resourceDirectoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceDirectoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -245,7 +253,7 @@ Settlement account ID. If the value is empty, the current account will be used f
 Resource directory ID.
 
 <h4 class="pdoc-member-header" id="Account-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L94">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L98">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -253,7 +261,7 @@ Resource directory ID.
 Member joining status. Valid values: `CreateSuccess`,`CreateVerifying`,`CreateFailed`,`CreateExpired`,`CreateCancelled`,`PromoteVerifying`,`PromoteFailed`,`PromoteExpired`,`PromoteCancelled`,`PromoteSuccess`,`InviteSuccess`,`Removed`.
 
 <h4 class="pdoc-member-header" id="Account-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L98">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L102">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -261,7 +269,7 @@ Member joining status. Valid values: `CreateSuccess`,`CreateVerifying`,`CreateFa
 Member type. The value of `ResourceAccount` indicates the resource account.
 
 <h4 class="pdoc-member-header" id="Account-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -270,7 +278,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Folder" data-link-title="Folder">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/folder.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/folder.ts#L36">
         Resource <strong>Folder</strong>
     </a>
 </h3>
@@ -306,7 +314,7 @@ Resource Manager Folder can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Folder-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/folder.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/folder.ts#L71"> <b>constructor</b></a>
 </h4>
 
 
@@ -320,7 +328,7 @@ Create a Folder resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Folder-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/folder.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/folder.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -331,14 +339,14 @@ Get an existing Folder resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Folder-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/folder.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/folder.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Folder-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/folder.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/folder.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -349,7 +357,7 @@ Returns true if the given object is an instance of Folder.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Folder-folderName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/folder.ts#L67">property <b>folderName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/folder.ts#L67">property <b>folderName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>folderName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -357,7 +365,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the folder. The name must be 1 to 24 characters in length and can contain letters, digits, underscores (_), periods (.), and hyphens (-).
 
 <h4 class="pdoc-member-header" id="Folder-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/folder.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/folder.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -366,7 +374,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Folder-parentFolderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/folder.ts#L71">property <b>parentFolderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/folder.ts#L71">property <b>parentFolderId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parentFolderId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -374,7 +382,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the parent folder. If not set, the system default value will be used.
 
 <h4 class="pdoc-member-header" id="Folder-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/folder.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/folder.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -383,7 +391,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Handshake" data-link-title="Handshake">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L35">
         Resource <strong>Handshake</strong>
     </a>
 </h3>
@@ -418,7 +426,7 @@ Resource Manager handshake can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Handshake-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -432,7 +440,7 @@ Create a Handshake resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Handshake-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -443,14 +451,14 @@ Get an existing Handshake resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Handshake-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Handshake-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -461,7 +469,7 @@ Returns true if the given object is an instance of Handshake.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Handshake-expireTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L66">property <b>expireTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L66">property <b>expireTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expireTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -469,7 +477,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The expiration time of the invitation.
 
 <h4 class="pdoc-member-header" id="Handshake-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -478,7 +486,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Handshake-masterAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L70">property <b>masterAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L70">property <b>masterAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -486,7 +494,7 @@ deployments and may be missing (undefined) during planning phases.
 Resource account master account ID.
 
 <h4 class="pdoc-member-header" id="Handshake-masterAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L74">property <b>masterAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L74">property <b>masterAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -494,7 +502,7 @@ Resource account master account ID.
 The name of the main account of the resource directory.
 
 <h4 class="pdoc-member-header" id="Handshake-modifyTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L78">property <b>modifyTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L78">property <b>modifyTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>modifyTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -502,7 +510,7 @@ The name of the main account of the resource directory.
 The modification time of the invitation.
 
 <h4 class="pdoc-member-header" id="Handshake-note">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L82">property <b>note</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L82">property <b>note</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>note: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -510,7 +518,7 @@ The modification time of the invitation.
 Remarks. The maximum length is 1024 characters.
 
 <h4 class="pdoc-member-header" id="Handshake-resourceDirectoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L86">property <b>resourceDirectoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L86">property <b>resourceDirectoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceDirectoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -518,7 +526,7 @@ Remarks. The maximum length is 1024 characters.
 Resource directory ID.
 
 <h4 class="pdoc-member-header" id="Handshake-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L90">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L90">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -526,7 +534,7 @@ Resource directory ID.
 Invitation status. Valid values: `Pending` waiting for confirmation, `Accepted`, `Cancelled`, `Declined`, `Expired`.
 
 <h4 class="pdoc-member-header" id="Handshake-targetEntity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L94">property <b>targetEntity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L94">property <b>targetEntity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetEntity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -534,7 +542,7 @@ Invitation status. Valid values: `Pending` waiting for confirmation, `Accepted`,
 Invited account ID or login email.
 
 <h4 class="pdoc-member-header" id="Handshake-targetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L98">property <b>targetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L98">property <b>targetType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -542,7 +550,7 @@ Invited account ID or login email.
 Type of account being invited. Valid values: `Account`, `Email`.
 
 <h4 class="pdoc-member-header" id="Handshake-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -551,7 +559,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Policy" data-link-title="Policy">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L43">
         Resource <strong>Policy</strong>
     </a>
 </h3>
@@ -594,7 +602,7 @@ Resource Manager Policy can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Policy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L92"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -608,7 +616,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Policy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -619,14 +627,14 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Policy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Policy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -637,7 +645,7 @@ Returns true if the given object is an instance of Policy.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Policy-defaultVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L76">property <b>defaultVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L76">property <b>defaultVersion</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -649,7 +657,7 @@ Field &#39;default_version&#39; has been deprecated from provider version 1.90.0
 The version of the policy. Default to v1.
 
 <h4 class="pdoc-member-header" id="Policy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L80">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L80">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -657,7 +665,7 @@ The version of the policy. Default to v1.
 The description of the policy. The description must be 1 to 1,024 characters in length.
 
 <h4 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -666,7 +674,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Policy-policyDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L84">property <b>policyDocument</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L84">property <b>policyDocument</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -674,7 +682,7 @@ deployments and may be missing (undefined) during planning phases.
 The content of the policy. The content must be 1 to 2,048 characters in length.
 
 <h4 class="pdoc-member-header" id="Policy-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L88">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L88">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -682,7 +690,7 @@ The content of the policy. The content must be 1 to 2,048 characters in length.
 The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
 
 <h4 class="pdoc-member-header" id="Policy-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L92">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L92">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -690,7 +698,7 @@ The name of the policy. name must be 1 to 128 characters in length and can conta
 The type of the policy. Valid values: `Custom`, `System`.
 
 <h4 class="pdoc-member-header" id="Policy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -699,7 +707,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PolicyAttachment" data-link-title="PolicyAttachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L21">
         Resource <strong>PolicyAttachment</strong>
     </a>
 </h3>
@@ -720,7 +728,7 @@ Resource Manager Policy Attachment can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -734,7 +742,7 @@ Create a PolicyAttachment resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -745,14 +753,14 @@ Get an existing PolicyAttachment resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -763,7 +771,7 @@ Returns true if the given object is an instance of PolicyAttachment.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -772,7 +780,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L52">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L52">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -780,7 +788,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L56">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L56">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -788,7 +796,7 @@ The name of the policy. name must be 1 to 128 characters in length and can conta
 - (Required, ForceNew) The type of the policy. Valid values: `Custom`, `System`.
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-principalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L60">property <b>principalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L60">property <b>principalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principalName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -796,7 +804,7 @@ The name of the policy. name must be 1 to 128 characters in length and can conta
 The name of the object to which you want to attach the policy.
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-principalType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L64">property <b>principalType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L64">property <b>principalType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principalType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -804,7 +812,7 @@ The name of the object to which you want to attach the policy.
 The type of the object to which you want to attach the policy. Valid values: `IMSUser`: RAM user, `IMSGroup`: RAM user group, `ServiceRole`: RAM role.
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L68">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L68">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -812,7 +820,7 @@ The type of the object to which you want to attach the policy. Valid values: `IM
 The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs.
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -821,7 +829,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PolicyVersion" data-link-title="PolicyVersion">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L16">
         Resource <strong>PolicyVersion</strong>
     </a>
 </h3>
@@ -837,7 +845,7 @@ Resource Manager Policy Version can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="PolicyVersion-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L57"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L57"> <b>constructor</b></a>
 </h4>
 
 
@@ -851,7 +859,7 @@ Create a PolicyVersion resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PolicyVersion-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -862,14 +870,14 @@ Get an existing PolicyVersion resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PolicyVersion-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PolicyVersion-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -880,7 +888,7 @@ Returns true if the given object is an instance of PolicyVersion.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PolicyVersion-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -889,7 +897,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PolicyVersion-isDefaultVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L49">property <b>isDefaultVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L49">property <b>isDefaultVersion</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -901,7 +909,7 @@ Field &#39;is_default_version&#39; has been deprecated from provider version 1.9
 Specifies whether to set the policy version as the default version. Default to `false`.
 
 <h4 class="pdoc-member-header" id="PolicyVersion-policyDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L53">property <b>policyDocument</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L53">property <b>policyDocument</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -909,7 +917,7 @@ Specifies whether to set the policy version as the default version. Default to `
 The content of the policy. The content must be 1 to 2,048 characters in length.
 
 <h4 class="pdoc-member-header" id="PolicyVersion-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L57">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L57">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -917,7 +925,7 @@ The content of the policy. The content must be 1 to 2,048 characters in length.
 The name of the policy. Name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
 
 <h4 class="pdoc-member-header" id="PolicyVersion-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -926,7 +934,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ResourceDirectory" data-link-title="ResourceDirectory">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceDirectory.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceDirectory.ts#L39">
         Resource <strong>ResourceDirectory</strong>
     </a>
 </h3>
@@ -965,7 +973,7 @@ Resource Manager Resource Directory can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ResourceDirectory-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceDirectory.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceDirectory.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -979,7 +987,7 @@ Create a ResourceDirectory resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ResourceDirectory-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceDirectory.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceDirectory.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -990,14 +998,14 @@ Get an existing ResourceDirectory resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ResourceDirectory-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceDirectory.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceDirectory.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ResourceDirectory-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceDirectory.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceDirectory.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1008,7 +1016,7 @@ Returns true if the given object is an instance of ResourceDirectory.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ResourceDirectory-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceDirectory.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceDirectory.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1017,7 +1025,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ResourceDirectory-masterAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceDirectory.ts#L70">property <b>masterAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceDirectory.ts#L70">property <b>masterAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1025,7 +1033,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the master account.
 
 <h4 class="pdoc-member-header" id="ResourceDirectory-masterAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceDirectory.ts#L74">property <b>masterAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceDirectory.ts#L74">property <b>masterAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1033,7 +1041,7 @@ The ID of the master account.
 The name of the master account.
 
 <h4 class="pdoc-member-header" id="ResourceDirectory-rootFolderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceDirectory.ts#L78">property <b>rootFolderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceDirectory.ts#L78">property <b>rootFolderId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rootFolderId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1041,7 +1049,7 @@ The name of the master account.
 The ID of the root folder.
 
 <h4 class="pdoc-member-header" id="ResourceDirectory-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceDirectory.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceDirectory.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1050,7 +1058,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ResourceGroup" data-link-title="ResourceGroup">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L36">
         Resource <strong>ResourceGroup</strong>
     </a>
 </h3>
@@ -1072,6 +1080,7 @@ import * as alicloud from "@pulumi/alicloud";
 
 const example = new alicloud.resourcemanager.ResourceGroup("example", {
     displayName: "testrd",
+    resourceGroupName: "testrd",
 });
 ```
 
@@ -1084,7 +1093,7 @@ Resource Manager Resource Group can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ResourceGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -1098,7 +1107,7 @@ Create a ResourceGroup resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -1109,14 +1118,14 @@ Get an existing ResourceGroup resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ResourceGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1127,24 +1136,15 @@ Returns true if the given object is an instance of ResourceGroup.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L66">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L67">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The ID of the Alibaba Cloud account to which the resource group belongs.
 
-<h4 class="pdoc-member-header" id="ResourceGroup-createDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L71">property <b>createDate</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'>public </span>createDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-The time when the resource group was created.
-* `regionStatuses` -The status of the resource group in all regions.
-
 <h4 class="pdoc-member-header" id="ResourceGroup-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L75">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L71">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1152,7 +1152,7 @@ The time when the resource group was created.
 The display name of the resource group. The name must be 1 to 30 characters in length and can contain letters, digits, periods (.), at signs (@), and hyphens (-).
 
 <h4 class="pdoc-member-header" id="ResourceGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1161,20 +1161,29 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L77">property <b>name</b></a>
 </h4>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;name&#39; has been deprecated from version 1.114.0. Use &#39;resource_group_name&#39; instead.
+</div>
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The unique identifier of the resource group.The identifier must be 3 to 12 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The identifier must start with a letter.
+Field `name` has been deprecated from version 1.114.0. Use `resourceGroupName` instead.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-regionStatuses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L80">property <b>regionStatuses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L78">property <b>regionStatuses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>regionStatuses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ResourceGroupRegionStatus'>ResourceGroupRegionStatus</a>[]&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ResourceGroup-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L79">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ResourceGroup-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L84">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L83">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1182,7 +1191,7 @@ The unique identifier of the resource group.The identifier must be 3 to 12 chara
 The status of the regional resource group.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1191,7 +1200,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ResourceShare" data-link-title="ResourceShare">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceShare.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceShare.ts#L35">
         Resource <strong>ResourceShare</strong>
     </a>
 </h3>
@@ -1226,7 +1235,7 @@ Resource Manager Resource Share can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ResourceShare-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceShare.ts#L74"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceShare.ts#L74"> <b>constructor</b></a>
 </h4>
 
 
@@ -1240,7 +1249,7 @@ Create a ResourceShare resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ResourceShare-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceShare.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceShare.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -1251,14 +1260,14 @@ Get an existing ResourceShare resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ResourceShare-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceShare.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceShare.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ResourceShare-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceShare.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceShare.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1269,7 +1278,7 @@ Returns true if the given object is an instance of ResourceShare.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ResourceShare-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceShare.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceShare.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1278,7 +1287,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ResourceShare-resourceShareName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceShare.ts#L66">property <b>resourceShareName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceShare.ts#L66">property <b>resourceShareName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceShareName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1286,7 +1295,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of resource share.
 
 <h4 class="pdoc-member-header" id="ResourceShare-resourceShareOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceShare.ts#L70">property <b>resourceShareOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceShare.ts#L70">property <b>resourceShareOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceShareOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1294,7 +1303,7 @@ The name of resource share.
 The owner of resource share.
 
 <h4 class="pdoc-member-header" id="ResourceShare-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceShare.ts#L74">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceShare.ts#L74">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1302,7 +1311,7 @@ The owner of resource share.
 The status of resource share.
 
 <h4 class="pdoc-member-header" id="ResourceShare-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceShare.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceShare.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1311,7 +1320,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Role" data-link-title="Role">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L49">
         Resource <strong>Role</strong>
     </a>
 </h3>
@@ -1360,7 +1369,7 @@ Resource Manager can be imported using the id or role_name, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Role-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L105"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
@@ -1374,7 +1383,7 @@ Create a Role resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Role-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -1385,14 +1394,14 @@ Get an existing Role resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Role-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Role-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1403,31 +1412,24 @@ Returns true if the given object is an instance of Role.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Role-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L80">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L81">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The resource descriptor of the role.
+* `createDate` (Removed form v1.114.0) - Role creation time.
 
 <h4 class="pdoc-member-header" id="Role-assumeRolePolicyDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L84">property <b>assumeRolePolicyDocument</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L85">property <b>assumeRolePolicyDocument</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assumeRolePolicyDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The content of the permissions strategy that plays a role.
 
-<h4 class="pdoc-member-header" id="Role-createDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L88">property <b>createDate</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'>public </span>createDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-Role creation time.
-
 <h4 class="pdoc-member-header" id="Role-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L92">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L89">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1435,7 +1437,7 @@ Role creation time.
 The description of the Resource Manager role.
 
 <h4 class="pdoc-member-header" id="Role-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1444,7 +1446,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Role-maxSessionDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L96">property <b>maxSessionDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L93">property <b>maxSessionDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxSessionDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1452,12 +1454,12 @@ deployments and may be missing (undefined) during planning phases.
 Role maximum session time. Valid values: [3600-43200]. Default to `3600`.
 
 <h4 class="pdoc-member-header" id="Role-roleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L97">property <b>roleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L94">property <b>roleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Role-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L101">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L98">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1465,7 +1467,7 @@ Role maximum session time. Valid values: [3600-43200]. Default to `3600`.
 Role Name. The length is 1 ~ 64 characters, which can include English letters, numbers, dots "." and dashes "-".
 
 <h4 class="pdoc-member-header" id="Role-updateDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L105">property <b>updateDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L102">property <b>updateDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updateDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1473,7 +1475,7 @@ Role Name. The length is 1 ~ 64 characters, which can include English letters, n
 Role update time.
 
 <h4 class="pdoc-member-header" id="Role-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1482,7 +1484,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SharedResource" data-link-title="SharedResource">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L22">
         Resource <strong>SharedResource</strong>
     </a>
 </h3>
@@ -1504,7 +1506,7 @@ Resource Manager Shared Resource can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="SharedResource-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -1518,7 +1520,7 @@ Create a SharedResource resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SharedResource-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L32">method <b>get</b></a>
 </h4>
 
 
@@ -1529,14 +1531,14 @@ Get an existing SharedResource resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SharedResource-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SharedResource-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L43">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1547,7 +1549,7 @@ Returns true if the given object is an instance of SharedResource.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SharedResource-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1556,7 +1558,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SharedResource-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L53">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L53">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1564,7 +1566,7 @@ deployments and may be missing (undefined) during planning phases.
 The resource ID need shared.
 
 <h4 class="pdoc-member-header" id="SharedResource-resourceShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L57">property <b>resourceShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L57">property <b>resourceShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceShareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1572,7 +1574,7 @@ The resource ID need shared.
 The resource share ID of resource manager.
 
 <h4 class="pdoc-member-header" id="SharedResource-resourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L61">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L61">property <b>resourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1580,7 +1582,7 @@ The resource share ID of resource manager.
 The resource type of should shared, valid value `VSwitch`.
 
 <h4 class="pdoc-member-header" id="SharedResource-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L65">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L65">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1588,7 +1590,7 @@ The resource type of should shared, valid value `VSwitch`.
 status.
 
 <h4 class="pdoc-member-header" id="SharedResource-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1597,7 +1599,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SharedTarget" data-link-title="SharedTarget">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedTarget.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedTarget.ts#L22">
         Resource <strong>SharedTarget</strong>
     </a>
 </h3>
@@ -1619,7 +1621,7 @@ Resource Manager Shared Target can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="SharedTarget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedTarget.ts#L61"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedTarget.ts#L61"> <b>constructor</b></a>
 </h4>
 
 
@@ -1633,7 +1635,7 @@ Create a SharedTarget resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SharedTarget-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedTarget.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedTarget.ts#L32">method <b>get</b></a>
 </h4>
 
 
@@ -1644,14 +1646,14 @@ Get an existing SharedTarget resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SharedTarget-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedTarget.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedTarget.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SharedTarget-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedTarget.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedTarget.ts#L43">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1662,7 +1664,7 @@ Returns true if the given object is an instance of SharedTarget.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SharedTarget-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedTarget.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedTarget.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1671,7 +1673,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SharedTarget-resourceShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedTarget.ts#L53">property <b>resourceShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedTarget.ts#L53">property <b>resourceShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceShareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1679,7 +1681,7 @@ deployments and may be missing (undefined) during planning phases.
 The resource share ID of resource manager.
 
 <h4 class="pdoc-member-header" id="SharedTarget-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedTarget.ts#L57">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedTarget.ts#L57">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1687,7 +1689,7 @@ The resource share ID of resource manager.
 The status of shared target.
 
 <h4 class="pdoc-member-header" id="SharedTarget-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedTarget.ts#L61">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedTarget.ts#L61">property <b>targetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1695,7 +1697,7 @@ The status of shared target.
 The member account ID in resource directory.
 
 <h4 class="pdoc-member-header" id="SharedTarget-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedTarget.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedTarget.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1706,7 +1708,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAccounts" data-link-title="getAccounts">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getAccounts.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getAccounts.ts#L24">
         Function <strong>getAccounts</strong>
     </a>
 </h3>
@@ -1731,7 +1733,7 @@ export const firstAccountId = defaultAccounts.accounts[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getFolders" data-link-title="getFolders">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getFolders.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L28">
         Function <strong>getFolders</strong>
     </a>
 </h3>
@@ -1760,7 +1762,7 @@ export const firstFolderId = example.folders[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getHandshakes" data-link-title="getHandshakes">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getHandshakes.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getHandshakes.ts#L24">
         Function <strong>getHandshakes</strong>
     </a>
 </h3>
@@ -1785,7 +1787,7 @@ export const firstHandshakeId = example.handshakes[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getPolicies" data-link-title="getPolicies">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicies.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicies.ts#L28">
         Function <strong>getPolicies</strong>
     </a>
 </h3>
@@ -1814,7 +1816,7 @@ export const firstPolicyId = example.policies[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getPolicyAttachments" data-link-title="getPolicyAttachments">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L24">
         Function <strong>getPolicyAttachments</strong>
     </a>
 </h3>
@@ -1839,7 +1841,7 @@ export const firstAttachmentId = example.attachments[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getPolicyVersions" data-link-title="getPolicyVersions">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L27">
         Function <strong>getPolicyVersions</strong>
     </a>
 </h3>
@@ -1867,7 +1869,7 @@ export const firstPolicyVersionId = defaultPolicyVersions.versions[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getResourceDirectories" data-link-title="getResourceDirectories">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceDirectories.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceDirectories.ts#L24">
         Function <strong>getResourceDirectories</strong>
     </a>
 </h3>
@@ -1892,7 +1894,7 @@ export const resourceDirectoryId = defaultResourceDirectories.directories[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getResourceGroups" data-link-title="getResourceGroups">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceGroups.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceGroups.ts#L26">
         Function <strong>getResourceGroups</strong>
     </a>
 </h3>
@@ -1919,7 +1921,7 @@ export const firstResourceGroupId = example.groups[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getResourceShares" data-link-title="getResourceShares">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L29">
         Function <strong>getResourceShares</strong>
     </a>
 </h3>
@@ -1949,7 +1951,7 @@ export const firstResourceManagerResourceShareId = example.then(example => examp
 ```
 
 <h3 class="pdoc-module-header" id="getRoles" data-link-title="getRoles">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getRoles.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getRoles.ts#L26">
         Function <strong>getRoles</strong>
     </a>
 </h3>
@@ -1976,7 +1978,7 @@ export const firstRoleId = example.roles[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getSharedResources" data-link-title="getSharedResources">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedResources.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedResources.ts#L28">
         Function <strong>getSharedResources</strong>
     </a>
 </h3>
@@ -2005,7 +2007,7 @@ export const firstResourceManagerSharedResourceId = data.alicloud_resource_manag
 ```
 
 <h3 class="pdoc-module-header" id="getSharedTargets" data-link-title="getSharedTargets">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedTargets.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedTargets.ts#L27">
         Function <strong>getSharedTargets</strong>
     </a>
 </h3>
@@ -2035,7 +2037,7 @@ export const firstResourceManagerSharedTargetId = example.then(example => exampl
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AccountArgs" data-link-title="AccountArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L202">
         interface <strong>AccountArgs</strong>
     </a>
 </h3>
@@ -2044,8 +2046,16 @@ export const firstResourceManagerSharedTargetId = example.then(example => exampl
 
 The set of arguments for constructing a Account resource.
 
+<h4 class="pdoc-member-header" id="AccountArgs-accountNamePrefix">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L206">property <b>accountNamePrefix</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>accountNamePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name prefix of account.
+
 <h4 class="pdoc-member-header" id="AccountArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L196">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L210">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2053,7 +2063,7 @@ The set of arguments for constructing a Account resource.
 Member name. The length is 2 ~ 50 characters or Chinese characters, which can include Chinese characters, English letters, numbers, underscores (_), dots (.) And dashes (-).
 
 <h4 class="pdoc-member-header" id="AccountArgs-folderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L200">property <b>folderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L214">property <b>folderId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folderId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2061,7 +2071,7 @@ Member name. The length is 2 ~ 50 characters or Chinese characters, which can in
 The ID of the parent folder.
 
 <h4 class="pdoc-member-header" id="AccountArgs-payerAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L204">property <b>payerAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L218">property <b>payerAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payerAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2069,7 +2079,7 @@ The ID of the parent folder.
 Settlement account ID. If the value is empty, the current account will be used for settlement.
 
 <h3 class="pdoc-module-header" id="AccountState" data-link-title="AccountState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L156">
         interface <strong>AccountState</strong>
     </a>
 </h3>
@@ -2078,8 +2088,16 @@ Settlement account ID. If the value is empty, the current account will be used f
 
 Input properties used for looking up and filtering Account resources.
 
+<h4 class="pdoc-member-header" id="AccountState-accountNamePrefix">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L160">property <b>accountNamePrefix</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>accountNamePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name prefix of account.
+
 <h4 class="pdoc-member-header" id="AccountState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L154">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L164">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2087,7 +2105,7 @@ Input properties used for looking up and filtering Account resources.
 Member name. The length is 2 ~ 50 characters or Chinese characters, which can include Chinese characters, English letters, numbers, underscores (_), dots (.) And dashes (-).
 
 <h4 class="pdoc-member-header" id="AccountState-folderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L158">property <b>folderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L168">property <b>folderId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folderId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2095,7 +2113,7 @@ Member name. The length is 2 ~ 50 characters or Chinese characters, which can in
 The ID of the parent folder.
 
 <h4 class="pdoc-member-header" id="AccountState-joinMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L162">property <b>joinMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L172">property <b>joinMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>joinMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2103,7 +2121,7 @@ The ID of the parent folder.
 Ways for members to join the resource directory. Valid values: `invited`, `created`.
 
 <h4 class="pdoc-member-header" id="AccountState-joinTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L166">property <b>joinTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L176">property <b>joinTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>joinTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2111,7 +2129,7 @@ Ways for members to join the resource directory. Valid values: `invited`, `creat
 The time when the member joined the resource directory.
 
 <h4 class="pdoc-member-header" id="AccountState-modifyTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L170">property <b>modifyTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L180">property <b>modifyTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>modifyTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2119,7 +2137,7 @@ The time when the member joined the resource directory.
 The modification time of the invitation.
 
 <h4 class="pdoc-member-header" id="AccountState-payerAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L174">property <b>payerAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L184">property <b>payerAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payerAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2127,7 +2145,7 @@ The modification time of the invitation.
 Settlement account ID. If the value is empty, the current account will be used for settlement.
 
 <h4 class="pdoc-member-header" id="AccountState-resourceDirectoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L178">property <b>resourceDirectoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L188">property <b>resourceDirectoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceDirectoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2135,7 +2153,7 @@ Settlement account ID. If the value is empty, the current account will be used f
 Resource directory ID.
 
 <h4 class="pdoc-member-header" id="AccountState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L182">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L192">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2143,7 +2161,7 @@ Resource directory ID.
 Member joining status. Valid values: `CreateSuccess`,`CreateVerifying`,`CreateFailed`,`CreateExpired`,`CreateCancelled`,`PromoteVerifying`,`PromoteFailed`,`PromoteExpired`,`PromoteCancelled`,`PromoteSuccess`,`InviteSuccess`,`Removed`.
 
 <h4 class="pdoc-member-header" id="AccountState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/account.ts#L186">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/account.ts#L196">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2151,7 +2169,7 @@ Member joining status. Valid values: `CreateSuccess`,`CreateVerifying`,`CreateFa
 Member type. The value of `ResourceAccount` indicates the resource account.
 
 <h3 class="pdoc-module-header" id="FolderArgs" data-link-title="FolderArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/folder.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/folder.ts#L123">
         interface <strong>FolderArgs</strong>
     </a>
 </h3>
@@ -2161,7 +2179,7 @@ Member type. The value of `ResourceAccount` indicates the resource account.
 The set of arguments for constructing a Folder resource.
 
 <h4 class="pdoc-member-header" id="FolderArgs-folderName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/folder.ts#L127">property <b>folderName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/folder.ts#L127">property <b>folderName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folderName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2169,7 +2187,7 @@ The set of arguments for constructing a Folder resource.
 The name of the folder. The name must be 1 to 24 characters in length and can contain letters, digits, underscores (_), periods (.), and hyphens (-).
 
 <h4 class="pdoc-member-header" id="FolderArgs-parentFolderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/folder.ts#L131">property <b>parentFolderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/folder.ts#L131">property <b>parentFolderId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentFolderId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2177,7 +2195,7 @@ The name of the folder. The name must be 1 to 24 characters in length and can co
 The ID of the parent folder. If not set, the system default value will be used.
 
 <h3 class="pdoc-module-header" id="FolderState" data-link-title="FolderState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/folder.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/folder.ts#L109">
         interface <strong>FolderState</strong>
     </a>
 </h3>
@@ -2187,7 +2205,7 @@ The ID of the parent folder. If not set, the system default value will be used.
 Input properties used for looking up and filtering Folder resources.
 
 <h4 class="pdoc-member-header" id="FolderState-folderName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/folder.ts#L113">property <b>folderName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/folder.ts#L113">property <b>folderName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folderName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2195,7 +2213,7 @@ Input properties used for looking up and filtering Folder resources.
 The name of the folder. The name must be 1 to 24 characters in length and can contain letters, digits, underscores (_), periods (.), and hyphens (-).
 
 <h4 class="pdoc-member-header" id="FolderState-parentFolderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/folder.ts#L117">property <b>parentFolderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/folder.ts#L117">property <b>parentFolderId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentFolderId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2203,7 +2221,7 @@ The name of the folder. The name must be 1 to 24 characters in length and can co
 The ID of the parent folder. If not set, the system default value will be used.
 
 <h3 class="pdoc-module-header" id="GetAccountsArgs" data-link-title="GetAccountsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getAccounts.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getAccounts.ts#L43">
         interface <strong>GetAccountsArgs</strong>
     </a>
 </h3>
@@ -2213,7 +2231,7 @@ The ID of the parent folder. If not set, the system default value will be used.
 A collection of arguments for invoking getAccounts.
 
 <h4 class="pdoc-member-header" id="GetAccountsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getAccounts.ts#L46">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getAccounts.ts#L47">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2221,12 +2239,20 @@ A collection of arguments for invoking getAccounts.
 A list of account IDs.
 
 <h4 class="pdoc-member-header" id="GetAccountsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getAccounts.ts#L47">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getAccounts.ts#L48">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetAccountsArgs-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getAccounts.ts#L52">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The status of account, valid values: `CreateCancelled`, `CreateExpired`, `CreateFailed`, `CreateSuccess`, `CreateVerifying`, `InviteSuccess`, `PromoteCancelled`, `PromoteExpired`, `PromoteFailed`, `PromoteSuccess`, and `PromoteVerifying`.
+
 <h3 class="pdoc-module-header" id="GetAccountsResult" data-link-title="GetAccountsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getAccounts.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getAccounts.ts#L58">
         interface <strong>GetAccountsResult</strong>
     </a>
 </h3>
@@ -2236,7 +2262,7 @@ A list of account IDs.
 A collection of values returned by getAccounts.
 
 <h4 class="pdoc-member-header" id="GetAccountsResult-accounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getAccounts.ts#L57">property <b>accounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getAccounts.ts#L62">property <b>accounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accounts: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAccountsAccount'>GetAccountsAccount</a>[];</code></pre>
@@ -2244,7 +2270,7 @@ A collection of values returned by getAccounts.
 A list of accounts. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetAccountsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getAccounts.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getAccounts.ts#L66">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2252,7 +2278,7 @@ A list of accounts. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAccountsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getAccounts.ts#L65">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getAccounts.ts#L70">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2260,12 +2286,20 @@ The provider-assigned unique ID for this managed resource.
 A list of account IDs.
 
 <h4 class="pdoc-member-header" id="GetAccountsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getAccounts.ts#L66">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getAccounts.ts#L71">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetAccountsResult-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getAccounts.ts#L75">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The status of the member account.
+
 <h3 class="pdoc-module-header" id="GetFoldersArgs" data-link-title="GetFoldersArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getFolders.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L50">
         interface <strong>GetFoldersArgs</strong>
     </a>
 </h3>
@@ -2274,8 +2308,16 @@ A list of account IDs.
 
 A collection of arguments for invoking getFolders.
 
+<h4 class="pdoc-member-header" id="GetFoldersArgs-enableDetails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L54">property <b>enableDetails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
+
+-(Optional, Available in v1.114.0+) Default to `false`. Set it to true can output more details.
+
 <h4 class="pdoc-member-header" id="GetFoldersArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getFolders.ts#L52">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L58">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2283,7 +2325,7 @@ A collection of arguments for invoking getFolders.
 A list of resource manager folders IDs.
 
 <h4 class="pdoc-member-header" id="GetFoldersArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getFolders.ts#L56">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L62">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2291,20 +2333,28 @@ A list of resource manager folders IDs.
 A regex string to filter results by folder name.
 
 <h4 class="pdoc-member-header" id="GetFoldersArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getFolders.ts#L57">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L63">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFoldersArgs-parentFolderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getFolders.ts#L61">property <b>parentFolderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L67">property <b>parentFolderId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentFolderId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
 The ID of the parent folder.
 
+<h4 class="pdoc-member-header" id="GetFoldersArgs-queryKeyword">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L71">property <b>queryKeyword</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>queryKeyword?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The query keyword.
+
 <h3 class="pdoc-module-header" id="GetFoldersResult" data-link-title="GetFoldersResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getFolders.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L77">
         interface <strong>GetFoldersResult</strong>
     </a>
 </h3>
@@ -2313,8 +2363,13 @@ The ID of the parent folder.
 
 A collection of values returned by getFolders.
 
+<h4 class="pdoc-member-header" id="GetFoldersResult-enableDetails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L78">property <b>enableDetails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFoldersResult-folders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getFolders.ts#L71">property <b>folders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L82">property <b>folders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folders: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetFoldersFolder'>GetFoldersFolder</a>[];</code></pre>
@@ -2322,7 +2377,7 @@ A collection of values returned by getFolders.
 A list of folders. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetFoldersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getFolders.ts#L75">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L86">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2330,7 +2385,7 @@ A list of folders. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetFoldersResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getFolders.ts#L79">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L90">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2338,12 +2393,12 @@ The provider-assigned unique ID for this managed resource.
 A list of folder IDs.
 
 <h4 class="pdoc-member-header" id="GetFoldersResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getFolders.ts#L80">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L91">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFoldersResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getFolders.ts#L84">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L95">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2351,17 +2406,22 @@ A list of folder IDs.
 A list of folder names.
 
 <h4 class="pdoc-member-header" id="GetFoldersResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getFolders.ts#L85">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L96">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFoldersResult-parentFolderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getFolders.ts#L86">property <b>parentFolderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L97">property <b>parentFolderId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentFolderId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetFoldersResult-queryKeyword">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getFolders.ts#L98">property <b>queryKeyword</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>queryKeyword?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetHandshakesArgs" data-link-title="GetHandshakesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getHandshakes.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getHandshakes.ts#L44">
         interface <strong>GetHandshakesArgs</strong>
     </a>
 </h3>
@@ -2370,8 +2430,16 @@ A list of folder names.
 
 A collection of arguments for invoking getHandshakes.
 
+<h4 class="pdoc-member-header" id="GetHandshakesArgs-enableDetails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getHandshakes.ts#L48">property <b>enableDetails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
+
+-(Optional, Available in v1.114.0+) Default to `false`. Set it to true can output more details.
+
 <h4 class="pdoc-member-header" id="GetHandshakesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getHandshakes.ts#L46">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getHandshakes.ts#L52">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2379,12 +2447,20 @@ A collection of arguments for invoking getHandshakes.
 A list of Resource Manager Handshake IDs.
 
 <h4 class="pdoc-member-header" id="GetHandshakesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getHandshakes.ts#L47">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getHandshakes.ts#L53">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetHandshakesArgs-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getHandshakes.ts#L57">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The status of handshake, valid values: `Accepted`, `Cancelled`, `Declined`, `Deleted`, `Expired` and `Pending`.
+
 <h3 class="pdoc-module-header" id="GetHandshakesResult" data-link-title="GetHandshakesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getHandshakes.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getHandshakes.ts#L63">
         interface <strong>GetHandshakesResult</strong>
     </a>
 </h3>
@@ -2393,8 +2469,13 @@ A list of Resource Manager Handshake IDs.
 
 A collection of values returned by getHandshakes.
 
+<h4 class="pdoc-member-header" id="GetHandshakesResult-enableDetails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getHandshakes.ts#L64">property <b>enableDetails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetHandshakesResult-handshakes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getHandshakes.ts#L57">property <b>handshakes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getHandshakes.ts#L68">property <b>handshakes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>handshakes: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetHandshakesHandshake'>GetHandshakesHandshake</a>[];</code></pre>
@@ -2402,7 +2483,7 @@ A collection of values returned by getHandshakes.
 A list of Resource Manager Handshakes. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetHandshakesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getHandshakes.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getHandshakes.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2410,7 +2491,7 @@ A list of Resource Manager Handshakes. Each element contains the following attri
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetHandshakesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getHandshakes.ts#L65">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getHandshakes.ts#L76">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2418,12 +2499,20 @@ The provider-assigned unique ID for this managed resource.
 A list of Resource Manager Handshake IDs.
 
 <h4 class="pdoc-member-header" id="GetHandshakesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getHandshakes.ts#L66">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getHandshakes.ts#L77">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetHandshakesResult-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getHandshakes.ts#L81">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The status of the invitation.
+
 <h3 class="pdoc-module-header" id="GetPoliciesArgs" data-link-title="GetPoliciesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicies.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicies.ts#L48">
         interface <strong>GetPoliciesArgs</strong>
     </a>
 </h3>
@@ -2433,7 +2522,7 @@ A list of Resource Manager Handshake IDs.
 A collection of arguments for invoking getPolicies.
 
 <h4 class="pdoc-member-header" id="GetPoliciesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicies.ts#L52">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicies.ts#L52">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2441,7 +2530,7 @@ A collection of arguments for invoking getPolicies.
 A list of Resource Manager Policy IDs.
 
 <h4 class="pdoc-member-header" id="GetPoliciesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicies.ts#L56">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicies.ts#L56">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2449,12 +2538,12 @@ A list of Resource Manager Policy IDs.
 A regex string to filter results by policy name.
 
 <h4 class="pdoc-member-header" id="GetPoliciesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicies.ts#L57">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicies.ts#L57">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPoliciesArgs-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicies.ts#L61">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicies.ts#L61">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2462,7 +2551,7 @@ A regex string to filter results by policy name.
 The type of the policy. If you do not specify this parameter, the system lists all types of policies. Valid values: `Custom` and `System`.
 
 <h3 class="pdoc-module-header" id="GetPoliciesResult" data-link-title="GetPoliciesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicies.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicies.ts#L67">
         interface <strong>GetPoliciesResult</strong>
     </a>
 </h3>
@@ -2472,7 +2561,7 @@ The type of the policy. If you do not specify this parameter, the system lists a
 A collection of values returned by getPolicies.
 
 <h4 class="pdoc-member-header" id="GetPoliciesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicies.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicies.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2480,7 +2569,7 @@ A collection of values returned by getPolicies.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPoliciesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicies.ts#L75">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicies.ts#L75">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2488,12 +2577,12 @@ The provider-assigned unique ID for this managed resource.
 A list of policy IDs.
 
 <h4 class="pdoc-member-header" id="GetPoliciesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicies.ts#L76">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicies.ts#L76">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPoliciesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicies.ts#L80">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicies.ts#L80">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2501,12 +2590,12 @@ A list of policy IDs.
 A list of policy names.
 
 <h4 class="pdoc-member-header" id="GetPoliciesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicies.ts#L81">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicies.ts#L81">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPoliciesResult-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicies.ts#L85">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicies.ts#L85">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetPoliciesPolicy'>GetPoliciesPolicy</a>[];</code></pre>
@@ -2514,12 +2603,12 @@ A list of policy names.
 A list of policies. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetPoliciesResult-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicies.ts#L86">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicies.ts#L86">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetPolicyAttachmentsArgs" data-link-title="GetPolicyAttachmentsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L47">
         interface <strong>GetPolicyAttachmentsArgs</strong>
     </a>
 </h3>
@@ -2529,7 +2618,7 @@ A list of policies. Each element contains the following attributes:
 A collection of arguments for invoking getPolicyAttachments.
 
 <h4 class="pdoc-member-header" id="GetPolicyAttachmentsArgs-language">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L51">property <b>language</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L51">property <b>language</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>language?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2537,12 +2626,12 @@ A collection of arguments for invoking getPolicyAttachments.
 The language that is used to return the description of the system policy. Valid values:`en`: English, `zh-CN`: Chinese, `ja`: Japanese.
 
 <h4 class="pdoc-member-header" id="GetPolicyAttachmentsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L52">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L52">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyAttachmentsArgs-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L56">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L56">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2550,7 +2639,7 @@ The language that is used to return the description of the system policy. Valid 
 The name of the policy. The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
 
 <h4 class="pdoc-member-header" id="GetPolicyAttachmentsArgs-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L60">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L60">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2558,7 +2647,7 @@ The name of the policy. The name must be 1 to 128 characters in length and can c
 The type of the policy. Valid values: `Custom` and `System`.
 
 <h4 class="pdoc-member-header" id="GetPolicyAttachmentsArgs-principalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L64">property <b>principalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L64">property <b>principalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2566,7 +2655,7 @@ The type of the policy. Valid values: `Custom` and `System`.
 The name of the object to which the policy is attached.
 
 <h4 class="pdoc-member-header" id="GetPolicyAttachmentsArgs-principalType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L68">property <b>principalType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L68">property <b>principalType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2574,7 +2663,7 @@ The name of the object to which the policy is attached.
 The type of the object to which the policy is attached. If you do not specify this parameter, the system lists all types of objects. Valid values: `IMSUser`: RAM user, `IMSGroup`: RAM user group, `ServiceRole`: RAM role.
 
 <h4 class="pdoc-member-header" id="GetPolicyAttachmentsArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L72">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L72">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2582,7 +2671,7 @@ The type of the object to which the policy is attached. If you do not specify th
 The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs. If you do not specify this parameter, the system lists all policy attachment records under the current account.
 
 <h3 class="pdoc-module-header" id="GetPolicyAttachmentsResult" data-link-title="GetPolicyAttachmentsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L78">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L78">
         interface <strong>GetPolicyAttachmentsResult</strong>
     </a>
 </h3>
@@ -2592,7 +2681,7 @@ The ID of the resource group or the ID of the Alibaba Cloud account to which the
 A collection of values returned by getPolicyAttachments.
 
 <h4 class="pdoc-member-header" id="GetPolicyAttachmentsResult-attachments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L82">property <b>attachments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L82">property <b>attachments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attachments: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetPolicyAttachmentsAttachment'>GetPolicyAttachmentsAttachment</a>[];</code></pre>
@@ -2600,7 +2689,7 @@ A collection of values returned by getPolicyAttachments.
 A list of Resource Manager Policy Attachment. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetPolicyAttachmentsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L86">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2608,7 +2697,7 @@ A list of Resource Manager Policy Attachment. Each element contains the followin
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPolicyAttachmentsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L90">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L90">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2616,37 +2705,37 @@ The provider-assigned unique ID for this managed resource.
 A list of Resource Manager Policy Attachment IDs.
 
 <h4 class="pdoc-member-header" id="GetPolicyAttachmentsResult-language">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L91">property <b>language</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L91">property <b>language</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>language?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyAttachmentsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L92">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L92">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyAttachmentsResult-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L93">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L93">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyAttachmentsResult-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L94">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L94">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyAttachmentsResult-principalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L95">property <b>principalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L95">property <b>principalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyAttachmentsResult-principalType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L96">property <b>principalType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L96">property <b>principalType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyAttachmentsResult-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L100">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyAttachments.ts#L100">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2654,7 +2743,7 @@ A list of Resource Manager Policy Attachment IDs.
 The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs.
 
 <h3 class="pdoc-module-header" id="GetPolicyVersionsArgs" data-link-title="GetPolicyVersionsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L47">
         interface <strong>GetPolicyVersionsArgs</strong>
     </a>
 </h3>
@@ -2663,8 +2752,16 @@ The ID of the resource group or the ID of the Alibaba Cloud account to which the
 
 A collection of arguments for invoking getPolicyVersions.
 
+<h4 class="pdoc-member-header" id="GetPolicyVersionsArgs-enableDetails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L51">property <b>enableDetails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
+
+-(Optional, Available in v1.114.0+) Default to `false`. Set it to true can output more details.
+
 <h4 class="pdoc-member-header" id="GetPolicyVersionsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L50">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L55">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2672,12 +2769,12 @@ A collection of arguments for invoking getPolicyVersions.
 A list of policy version IDs.
 
 <h4 class="pdoc-member-header" id="GetPolicyVersionsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L51">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L56">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyVersionsArgs-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L55">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L60">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2685,7 +2782,7 @@ A list of policy version IDs.
 The name of the policy.
 
 <h4 class="pdoc-member-header" id="GetPolicyVersionsArgs-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L59">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L64">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2693,7 +2790,7 @@ The name of the policy.
 The type of the policy. Valid values:`Custom` and `System`.
 
 <h3 class="pdoc-module-header" id="GetPolicyVersionsResult" data-link-title="GetPolicyVersionsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L70">
         interface <strong>GetPolicyVersionsResult</strong>
     </a>
 </h3>
@@ -2702,8 +2799,13 @@ The type of the policy. Valid values:`Custom` and `System`.
 
 A collection of values returned by getPolicyVersions.
 
+<h4 class="pdoc-member-header" id="GetPolicyVersionsResult-enableDetails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L71">property <b>enableDetails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyVersionsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L69">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L75">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2711,7 +2813,7 @@ A collection of values returned by getPolicyVersions.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPolicyVersionsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L73">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L79">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2719,22 +2821,22 @@ The provider-assigned unique ID for this managed resource.
 A list of policy version IDs.
 
 <h4 class="pdoc-member-header" id="GetPolicyVersionsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L74">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L80">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyVersionsResult-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L75">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L81">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyVersionsResult-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L76">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L82">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyVersionsResult-versions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L80">property <b>versions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getPolicyVersions.ts#L86">property <b>versions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versions: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetPolicyVersionsVersion'>GetPolicyVersionsVersion</a>[];</code></pre>
@@ -2742,7 +2844,7 @@ A list of policy version IDs.
 A list of policy versions. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="GetResourceDirectoriesArgs" data-link-title="GetResourceDirectoriesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceDirectories.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceDirectories.ts#L41">
         interface <strong>GetResourceDirectoriesArgs</strong>
     </a>
 </h3>
@@ -2752,12 +2854,12 @@ A list of policy versions. Each element contains the following attributes:
 A collection of arguments for invoking getResourceDirectories.
 
 <h4 class="pdoc-member-header" id="GetResourceDirectoriesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceDirectories.ts#L42">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceDirectories.ts#L42">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetResourceDirectoriesResult" data-link-title="GetResourceDirectoriesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceDirectories.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceDirectories.ts#L48">
         interface <strong>GetResourceDirectoriesResult</strong>
     </a>
 </h3>
@@ -2767,7 +2869,7 @@ A collection of arguments for invoking getResourceDirectories.
 A collection of values returned by getResourceDirectories.
 
 <h4 class="pdoc-member-header" id="GetResourceDirectoriesResult-directories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceDirectories.ts#L52">property <b>directories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceDirectories.ts#L52">property <b>directories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directories: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetResourceDirectoriesDirectory'>GetResourceDirectoriesDirectory</a>[];</code></pre>
@@ -2775,7 +2877,7 @@ A collection of values returned by getResourceDirectories.
 A list of resource directories. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetResourceDirectoriesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceDirectories.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceDirectories.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2783,12 +2885,12 @@ A list of resource directories. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetResourceDirectoriesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceDirectories.ts#L57">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceDirectories.ts#L57">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetResourceGroupsArgs" data-link-title="GetResourceGroupsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceGroups.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceGroups.ts#L47">
         interface <strong>GetResourceGroupsArgs</strong>
     </a>
 </h3>
@@ -2797,8 +2899,16 @@ The provider-assigned unique ID for this managed resource.
 
 A collection of arguments for invoking getResourceGroups.
 
+<h4 class="pdoc-member-header" id="GetResourceGroupsArgs-enableDetails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceGroups.ts#L51">property <b>enableDetails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
+
+-(Optional, Available in v1.114.0+) Default to `false`. Set it to true can output more details.
+
 <h4 class="pdoc-member-header" id="GetResourceGroupsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceGroups.ts#L50">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceGroups.ts#L55">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2806,7 +2916,7 @@ A collection of arguments for invoking getResourceGroups.
 A list of resource group IDs.
 
 <h4 class="pdoc-member-header" id="GetResourceGroupsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceGroups.ts#L54">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceGroups.ts#L59">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2814,20 +2924,20 @@ A list of resource group IDs.
 A regex string to filter results by resource group name.
 
 <h4 class="pdoc-member-header" id="GetResourceGroupsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceGroups.ts#L55">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceGroups.ts#L60">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetResourceGroupsArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceGroups.ts#L59">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceGroups.ts#L64">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
-The status of the resource group. Possible values:`Creating`,`Deleted`,`OK` and `PendingDelete`.
+The status of the resource group. Possible values:`Creating`,`Deleted`,`Deleting`(Available 1.114.0+) `OK` and `PendingDelete`.
 
 <h3 class="pdoc-module-header" id="GetResourceGroupsResult" data-link-title="GetResourceGroupsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceGroups.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceGroups.ts#L70">
         interface <strong>GetResourceGroupsResult</strong>
     </a>
 </h3>
@@ -2836,8 +2946,13 @@ The status of the resource group. Possible values:`Creating`,`Deleted`,`OK` and 
 
 A collection of values returned by getResourceGroups.
 
+<h4 class="pdoc-member-header" id="GetResourceGroupsResult-enableDetails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceGroups.ts#L71">property <b>enableDetails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetResourceGroupsResult-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceGroups.ts#L69">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceGroups.ts#L75">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetResourceGroupsGroup'>GetResourceGroupsGroup</a>[];</code></pre>
@@ -2845,7 +2960,7 @@ A collection of values returned by getResourceGroups.
 A list of resource groups. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetResourceGroupsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceGroups.ts#L73">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceGroups.ts#L79">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2853,7 +2968,7 @@ A list of resource groups. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetResourceGroupsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceGroups.ts#L77">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceGroups.ts#L83">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2861,12 +2976,12 @@ The provider-assigned unique ID for this managed resource.
 A list of resource group IDs.
 
 <h4 class="pdoc-member-header" id="GetResourceGroupsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceGroups.ts#L78">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceGroups.ts#L84">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetResourceGroupsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceGroups.ts#L82">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceGroups.ts#L88">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2874,20 +2989,20 @@ A list of resource group IDs.
 A list of resource group names.
 
 <h4 class="pdoc-member-header" id="GetResourceGroupsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceGroups.ts#L83">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceGroups.ts#L89">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetResourceGroupsResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceGroups.ts#L87">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceGroups.ts#L93">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
-The status of the resource group. Possible values:`Creating`,`Deleted`,`OK` and `PendingDelete`.
+The status of the regional resource group.
 
 <h3 class="pdoc-module-header" id="GetResourceSharesArgs" data-link-title="GetResourceSharesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L50">
         interface <strong>GetResourceSharesArgs</strong>
     </a>
 </h3>
@@ -2897,7 +3012,7 @@ The status of the resource group. Possible values:`Creating`,`Deleted`,`OK` and 
 A collection of arguments for invoking getResourceShares.
 
 <h4 class="pdoc-member-header" id="GetResourceSharesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L54">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L54">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2905,7 +3020,7 @@ A collection of arguments for invoking getResourceShares.
 A list of Resource Share IDs.
 
 <h4 class="pdoc-member-header" id="GetResourceSharesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L58">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L58">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2913,12 +3028,12 @@ A list of Resource Share IDs.
 A regex string to filter results by Resource Share name.
 
 <h4 class="pdoc-member-header" id="GetResourceSharesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L59">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L59">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetResourceSharesArgs-resourceShareName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L63">property <b>resourceShareName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L63">property <b>resourceShareName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceShareName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2926,7 +3041,7 @@ A regex string to filter results by Resource Share name.
 The name of resource share.
 
 <h4 class="pdoc-member-header" id="GetResourceSharesArgs-resourceShareOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L67">property <b>resourceShareOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L67">property <b>resourceShareOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceShareOwner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2934,7 +3049,7 @@ The name of resource share.
 The owner of resource share.
 
 <h4 class="pdoc-member-header" id="GetResourceSharesArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L71">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L71">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2942,7 +3057,7 @@ The owner of resource share.
 The status of resource share.
 
 <h3 class="pdoc-module-header" id="GetResourceSharesResult" data-link-title="GetResourceSharesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L77">
         interface <strong>GetResourceSharesResult</strong>
     </a>
 </h3>
@@ -2952,7 +3067,7 @@ The status of resource share.
 A collection of values returned by getResourceShares.
 
 <h4 class="pdoc-member-header" id="GetResourceSharesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L81">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L81">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2960,47 +3075,47 @@ A collection of values returned by getResourceShares.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetResourceSharesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L82">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L82">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetResourceSharesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L83">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L83">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetResourceSharesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L84">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L84">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetResourceSharesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L85">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L85">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetResourceSharesResult-resourceShareName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L86">property <b>resourceShareName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L86">property <b>resourceShareName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceShareName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetResourceSharesResult-resourceShareOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L87">property <b>resourceShareOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L87">property <b>resourceShareOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceShareOwner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetResourceSharesResult-shares">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L88">property <b>shares</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L88">property <b>shares</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shares: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetResourceSharesShare'>GetResourceSharesShare</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetResourceSharesResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getResourceShares.ts#L89">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getResourceShares.ts#L89">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRolesArgs" data-link-title="GetRolesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getRoles.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getRoles.ts#L46">
         interface <strong>GetRolesArgs</strong>
     </a>
 </h3>
@@ -3009,8 +3124,16 @@ The provider-assigned unique ID for this managed resource.
 
 A collection of arguments for invoking getRoles.
 
+<h4 class="pdoc-member-header" id="GetRolesArgs-enableDetails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getRoles.ts#L50">property <b>enableDetails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
+
+-(Optional, Available in v1.114.0+) Default to `false`. Set it to true can output more details.
+
 <h4 class="pdoc-member-header" id="GetRolesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getRoles.ts#L49">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getRoles.ts#L54">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3018,7 +3141,7 @@ A collection of arguments for invoking getRoles.
 A list of Resource Manager Role IDs.
 
 <h4 class="pdoc-member-header" id="GetRolesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getRoles.ts#L53">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getRoles.ts#L58">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3026,12 +3149,12 @@ A list of Resource Manager Role IDs.
 A regex string to filter results by role name.
 
 <h4 class="pdoc-member-header" id="GetRolesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getRoles.ts#L54">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getRoles.ts#L59">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRolesResult" data-link-title="GetRolesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getRoles.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getRoles.ts#L65">
         interface <strong>GetRolesResult</strong>
     </a>
 </h3>
@@ -3040,8 +3163,13 @@ A regex string to filter results by role name.
 
 A collection of values returned by getRoles.
 
+<h4 class="pdoc-member-header" id="GetRolesResult-enableDetails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getRoles.ts#L66">property <b>enableDetails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRolesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getRoles.ts#L64">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getRoles.ts#L70">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3049,7 +3177,7 @@ A collection of values returned by getRoles.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRolesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getRoles.ts#L68">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getRoles.ts#L74">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3057,12 +3185,12 @@ The provider-assigned unique ID for this managed resource.
 A list of role IDs.
 
 <h4 class="pdoc-member-header" id="GetRolesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getRoles.ts#L69">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getRoles.ts#L75">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRolesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getRoles.ts#L73">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getRoles.ts#L79">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3070,12 +3198,12 @@ A list of role IDs.
 A list of role names.
 
 <h4 class="pdoc-member-header" id="GetRolesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getRoles.ts#L74">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getRoles.ts#L80">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRolesResult-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getRoles.ts#L78">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getRoles.ts#L84">property <b>roles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRolesRole'>GetRolesRole</a>[];</code></pre>
@@ -3083,7 +3211,7 @@ A list of role names.
 A list of roles. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="GetSharedResourcesArgs" data-link-title="GetSharedResourcesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedResources.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedResources.ts#L48">
         interface <strong>GetSharedResourcesArgs</strong>
     </a>
 </h3>
@@ -3093,7 +3221,7 @@ A list of roles. Each element contains the following attributes:
 A collection of arguments for invoking getSharedResources.
 
 <h4 class="pdoc-member-header" id="GetSharedResourcesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedResources.ts#L52">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedResources.ts#L52">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3101,12 +3229,12 @@ A collection of arguments for invoking getSharedResources.
 A list of shared resource ID.
 
 <h4 class="pdoc-member-header" id="GetSharedResourcesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedResources.ts#L53">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedResources.ts#L53">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSharedResourcesArgs-resourceShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedResources.ts#L57">property <b>resourceShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedResources.ts#L57">property <b>resourceShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceShareId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3114,7 +3242,7 @@ A list of shared resource ID.
 The resource share ID of resource manager.
 
 <h4 class="pdoc-member-header" id="GetSharedResourcesArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedResources.ts#L61">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedResources.ts#L61">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3122,7 +3250,7 @@ The resource share ID of resource manager.
 The status of shared resource.
 
 <h3 class="pdoc-module-header" id="GetSharedResourcesResult" data-link-title="GetSharedResourcesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedResources.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedResources.ts#L67">
         interface <strong>GetSharedResourcesResult</strong>
     </a>
 </h3>
@@ -3132,7 +3260,7 @@ The status of shared resource.
 A collection of values returned by getSharedResources.
 
 <h4 class="pdoc-member-header" id="GetSharedResourcesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedResources.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedResources.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3140,32 +3268,32 @@ A collection of values returned by getSharedResources.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSharedResourcesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedResources.ts#L72">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedResources.ts#L72">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSharedResourcesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedResources.ts#L73">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedResources.ts#L73">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSharedResourcesResult-resourceShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedResources.ts#L74">property <b>resourceShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedResources.ts#L74">property <b>resourceShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceShareId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSharedResourcesResult-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedResources.ts#L75">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedResources.ts#L75">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetSharedResourcesResource'>GetSharedResourcesResource</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSharedResourcesResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedResources.ts#L76">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedResources.ts#L76">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetSharedTargetsArgs" data-link-title="GetSharedTargetsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedTargets.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedTargets.ts#L47">
         interface <strong>GetSharedTargetsArgs</strong>
     </a>
 </h3>
@@ -3175,7 +3303,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getSharedTargets.
 
 <h4 class="pdoc-member-header" id="GetSharedTargetsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedTargets.ts#L51">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedTargets.ts#L51">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3183,12 +3311,12 @@ A collection of arguments for invoking getSharedTargets.
 A list of Shared Target IDs.
 
 <h4 class="pdoc-member-header" id="GetSharedTargetsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedTargets.ts#L52">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedTargets.ts#L52">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSharedTargetsArgs-resourceShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedTargets.ts#L56">property <b>resourceShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedTargets.ts#L56">property <b>resourceShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceShareId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3196,7 +3324,7 @@ A list of Shared Target IDs.
 The resource shared ID of resource manager.
 
 <h4 class="pdoc-member-header" id="GetSharedTargetsArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedTargets.ts#L60">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedTargets.ts#L60">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3204,7 +3332,7 @@ The resource shared ID of resource manager.
 The status of shared target.
 
 <h3 class="pdoc-module-header" id="GetSharedTargetsResult" data-link-title="GetSharedTargetsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedTargets.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedTargets.ts#L66">
         interface <strong>GetSharedTargetsResult</strong>
     </a>
 </h3>
@@ -3214,7 +3342,7 @@ The status of shared target.
 A collection of values returned by getSharedTargets.
 
 <h4 class="pdoc-member-header" id="GetSharedTargetsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedTargets.ts#L70">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedTargets.ts#L70">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3222,32 +3350,32 @@ A collection of values returned by getSharedTargets.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSharedTargetsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedTargets.ts#L71">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedTargets.ts#L71">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSharedTargetsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedTargets.ts#L72">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedTargets.ts#L72">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSharedTargetsResult-resourceShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedTargets.ts#L73">property <b>resourceShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedTargets.ts#L73">property <b>resourceShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceShareId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSharedTargetsResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedTargets.ts#L74">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedTargets.ts#L74">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSharedTargetsResult-targets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/getSharedTargets.ts#L75">property <b>targets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/getSharedTargets.ts#L75">property <b>targets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetSharedTargetsTarget'>GetSharedTargetsTarget</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="HandshakeArgs" data-link-title="HandshakeArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L195">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L195">
         interface <strong>HandshakeArgs</strong>
     </a>
 </h3>
@@ -3257,7 +3385,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a Handshake resource.
 
 <h4 class="pdoc-member-header" id="HandshakeArgs-note">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L199">property <b>note</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L199">property <b>note</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>note?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3265,7 +3393,7 @@ The set of arguments for constructing a Handshake resource.
 Remarks. The maximum length is 1024 characters.
 
 <h4 class="pdoc-member-header" id="HandshakeArgs-targetEntity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L203">property <b>targetEntity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L203">property <b>targetEntity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetEntity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3273,7 +3401,7 @@ Remarks. The maximum length is 1024 characters.
 Invited account ID or login email.
 
 <h4 class="pdoc-member-header" id="HandshakeArgs-targetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L207">property <b>targetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L207">property <b>targetType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3281,7 +3409,7 @@ Invited account ID or login email.
 Type of account being invited. Valid values: `Account`, `Email`.
 
 <h3 class="pdoc-module-header" id="HandshakeState" data-link-title="HandshakeState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L153">
         interface <strong>HandshakeState</strong>
     </a>
 </h3>
@@ -3291,7 +3419,7 @@ Type of account being invited. Valid values: `Account`, `Email`.
 Input properties used for looking up and filtering Handshake resources.
 
 <h4 class="pdoc-member-header" id="HandshakeState-expireTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L157">property <b>expireTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L157">property <b>expireTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expireTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3299,7 +3427,7 @@ Input properties used for looking up and filtering Handshake resources.
 The expiration time of the invitation.
 
 <h4 class="pdoc-member-header" id="HandshakeState-masterAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L161">property <b>masterAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L161">property <b>masterAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3307,7 +3435,7 @@ The expiration time of the invitation.
 Resource account master account ID.
 
 <h4 class="pdoc-member-header" id="HandshakeState-masterAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L165">property <b>masterAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L165">property <b>masterAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3315,7 +3443,7 @@ Resource account master account ID.
 The name of the main account of the resource directory.
 
 <h4 class="pdoc-member-header" id="HandshakeState-modifyTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L169">property <b>modifyTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L169">property <b>modifyTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>modifyTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3323,7 +3451,7 @@ The name of the main account of the resource directory.
 The modification time of the invitation.
 
 <h4 class="pdoc-member-header" id="HandshakeState-note">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L173">property <b>note</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L173">property <b>note</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>note?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3331,7 +3459,7 @@ The modification time of the invitation.
 Remarks. The maximum length is 1024 characters.
 
 <h4 class="pdoc-member-header" id="HandshakeState-resourceDirectoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L177">property <b>resourceDirectoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L177">property <b>resourceDirectoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceDirectoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3339,7 +3467,7 @@ Remarks. The maximum length is 1024 characters.
 Resource directory ID.
 
 <h4 class="pdoc-member-header" id="HandshakeState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L181">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L181">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3347,7 +3475,7 @@ Resource directory ID.
 Invitation status. Valid values: `Pending` waiting for confirmation, `Accepted`, `Cancelled`, `Declined`, `Expired`.
 
 <h4 class="pdoc-member-header" id="HandshakeState-targetEntity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L185">property <b>targetEntity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L185">property <b>targetEntity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetEntity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3355,7 +3483,7 @@ Invitation status. Valid values: `Pending` waiting for confirmation, `Accepted`,
 Invited account ID or login email.
 
 <h4 class="pdoc-member-header" id="HandshakeState-targetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/handshake.ts#L189">property <b>targetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/handshake.ts#L189">property <b>targetType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3363,7 +3491,7 @@ Invited account ID or login email.
 Type of account being invited. Valid values: `Account`, `Email`.
 
 <h3 class="pdoc-module-header" id="PolicyArgs" data-link-title="PolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L167">
         interface <strong>PolicyArgs</strong>
     </a>
 </h3>
@@ -3373,7 +3501,7 @@ Type of account being invited. Valid values: `Account`, `Email`.
 The set of arguments for constructing a Policy resource.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-defaultVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L173">property <b>defaultVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L173">property <b>defaultVersion</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3385,7 +3513,7 @@ Field &#39;default_version&#39; has been deprecated from provider version 1.90.0
 The version of the policy. Default to v1.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L177">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L177">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3393,7 +3521,7 @@ The version of the policy. Default to v1.
 The description of the policy. The description must be 1 to 1,024 characters in length.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-policyDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L181">property <b>policyDocument</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L181">property <b>policyDocument</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3401,7 +3529,7 @@ The description of the policy. The description must be 1 to 1,024 characters in 
 The content of the policy. The content must be 1 to 2,048 characters in length.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L185">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L185">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3409,7 +3537,7 @@ The content of the policy. The content must be 1 to 2,048 characters in length.
 The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
 
 <h3 class="pdoc-module-header" id="PolicyAttachmentArgs" data-link-title="PolicyAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L150">
         interface <strong>PolicyAttachmentArgs</strong>
     </a>
 </h3>
@@ -3419,7 +3547,7 @@ The name of the policy. name must be 1 to 128 characters in length and can conta
 The set of arguments for constructing a PolicyAttachment resource.
 
 <h4 class="pdoc-member-header" id="PolicyAttachmentArgs-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L154">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L154">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3427,7 +3555,7 @@ The set of arguments for constructing a PolicyAttachment resource.
 The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
 
 <h4 class="pdoc-member-header" id="PolicyAttachmentArgs-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L158">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L158">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3435,7 +3563,7 @@ The name of the policy. name must be 1 to 128 characters in length and can conta
 - (Required, ForceNew) The type of the policy. Valid values: `Custom`, `System`.
 
 <h4 class="pdoc-member-header" id="PolicyAttachmentArgs-principalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L162">property <b>principalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L162">property <b>principalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3443,7 +3571,7 @@ The name of the policy. name must be 1 to 128 characters in length and can conta
 The name of the object to which you want to attach the policy.
 
 <h4 class="pdoc-member-header" id="PolicyAttachmentArgs-principalType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L166">property <b>principalType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L166">property <b>principalType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3451,7 +3579,7 @@ The name of the object to which you want to attach the policy.
 The type of the object to which you want to attach the policy. Valid values: `IMSUser`: RAM user, `IMSGroup`: RAM user group, `ServiceRole`: RAM role.
 
 <h4 class="pdoc-member-header" id="PolicyAttachmentArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L170">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L170">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3459,7 +3587,7 @@ The type of the object to which you want to attach the policy. Valid values: `IM
 The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs.
 
 <h3 class="pdoc-module-header" id="PolicyAttachmentState" data-link-title="PolicyAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L124">
         interface <strong>PolicyAttachmentState</strong>
     </a>
 </h3>
@@ -3469,7 +3597,7 @@ The ID of the resource group or the ID of the Alibaba Cloud account to which the
 Input properties used for looking up and filtering PolicyAttachment resources.
 
 <h4 class="pdoc-member-header" id="PolicyAttachmentState-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L128">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L128">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3477,7 +3605,7 @@ Input properties used for looking up and filtering PolicyAttachment resources.
 The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
 
 <h4 class="pdoc-member-header" id="PolicyAttachmentState-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L132">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L132">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3485,7 +3613,7 @@ The name of the policy. name must be 1 to 128 characters in length and can conta
 - (Required, ForceNew) The type of the policy. Valid values: `Custom`, `System`.
 
 <h4 class="pdoc-member-header" id="PolicyAttachmentState-principalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L136">property <b>principalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L136">property <b>principalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3493,7 +3621,7 @@ The name of the policy. name must be 1 to 128 characters in length and can conta
 The name of the object to which you want to attach the policy.
 
 <h4 class="pdoc-member-header" id="PolicyAttachmentState-principalType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L140">property <b>principalType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L140">property <b>principalType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3501,7 +3629,7 @@ The name of the object to which you want to attach the policy.
 The type of the object to which you want to attach the policy. Valid values: `IMSUser`: RAM user, `IMSGroup`: RAM user group, `ServiceRole`: RAM role.
 
 <h4 class="pdoc-member-header" id="PolicyAttachmentState-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyAttachment.ts#L144">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyAttachment.ts#L144">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3509,7 +3637,7 @@ The type of the object to which you want to attach the policy. Valid values: `IM
 The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs.
 
 <h3 class="pdoc-module-header" id="PolicyState" data-link-title="PolicyState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L139">
         interface <strong>PolicyState</strong>
     </a>
 </h3>
@@ -3519,7 +3647,7 @@ The ID of the resource group or the ID of the Alibaba Cloud account to which the
 Input properties used for looking up and filtering Policy resources.
 
 <h4 class="pdoc-member-header" id="PolicyState-defaultVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L145">property <b>defaultVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L145">property <b>defaultVersion</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3531,7 +3659,7 @@ Field &#39;default_version&#39; has been deprecated from provider version 1.90.0
 The version of the policy. Default to v1.
 
 <h4 class="pdoc-member-header" id="PolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L149">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L149">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3539,7 +3667,7 @@ The version of the policy. Default to v1.
 The description of the policy. The description must be 1 to 1,024 characters in length.
 
 <h4 class="pdoc-member-header" id="PolicyState-policyDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L153">property <b>policyDocument</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L153">property <b>policyDocument</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyDocument?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3547,7 +3675,7 @@ The description of the policy. The description must be 1 to 1,024 characters in 
 The content of the policy. The content must be 1 to 2,048 characters in length.
 
 <h4 class="pdoc-member-header" id="PolicyState-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L157">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L157">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3555,7 +3683,7 @@ The content of the policy. The content must be 1 to 2,048 characters in length.
 The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
 
 <h4 class="pdoc-member-header" id="PolicyState-policyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policy.ts#L161">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policy.ts#L161">property <b>policyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3563,7 +3691,7 @@ The name of the policy. name must be 1 to 128 characters in length and can conta
 The type of the policy. Valid values: `Custom`, `System`.
 
 <h3 class="pdoc-module-header" id="PolicyVersionArgs" data-link-title="PolicyVersionArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L120">
         interface <strong>PolicyVersionArgs</strong>
     </a>
 </h3>
@@ -3573,7 +3701,7 @@ The type of the policy. Valid values: `Custom`, `System`.
 The set of arguments for constructing a PolicyVersion resource.
 
 <h4 class="pdoc-member-header" id="PolicyVersionArgs-isDefaultVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L126">property <b>isDefaultVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L126">property <b>isDefaultVersion</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3585,7 +3713,7 @@ Field &#39;is_default_version&#39; has been deprecated from provider version 1.9
 Specifies whether to set the policy version as the default version. Default to `false`.
 
 <h4 class="pdoc-member-header" id="PolicyVersionArgs-policyDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L130">property <b>policyDocument</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L130">property <b>policyDocument</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3593,7 +3721,7 @@ Specifies whether to set the policy version as the default version. Default to `
 The content of the policy. The content must be 1 to 2,048 characters in length.
 
 <h4 class="pdoc-member-header" id="PolicyVersionArgs-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L134">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L134">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3601,7 +3729,7 @@ The content of the policy. The content must be 1 to 2,048 characters in length.
 The name of the policy. Name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
 
 <h3 class="pdoc-module-header" id="PolicyVersionState" data-link-title="PolicyVersionState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L100">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L100">
         interface <strong>PolicyVersionState</strong>
     </a>
 </h3>
@@ -3611,7 +3739,7 @@ The name of the policy. Name must be 1 to 128 characters in length and can conta
 Input properties used for looking up and filtering PolicyVersion resources.
 
 <h4 class="pdoc-member-header" id="PolicyVersionState-isDefaultVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L106">property <b>isDefaultVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L106">property <b>isDefaultVersion</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3623,7 +3751,7 @@ Field &#39;is_default_version&#39; has been deprecated from provider version 1.9
 Specifies whether to set the policy version as the default version. Default to `false`.
 
 <h4 class="pdoc-member-header" id="PolicyVersionState-policyDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L110">property <b>policyDocument</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L110">property <b>policyDocument</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyDocument?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3631,7 +3759,7 @@ Specifies whether to set the policy version as the default version. Default to `
 The content of the policy. The content must be 1 to 2,048 characters in length.
 
 <h4 class="pdoc-member-header" id="PolicyVersionState-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/policyVersion.ts#L114">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/policyVersion.ts#L114">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3639,7 +3767,7 @@ The content of the policy. The content must be 1 to 2,048 characters in length.
 The name of the policy. Name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
 
 <h3 class="pdoc-module-header" id="ResourceDirectoryArgs" data-link-title="ResourceDirectoryArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceDirectory.ts#L133">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceDirectory.ts#L133">
         interface <strong>ResourceDirectoryArgs</strong>
     </a>
 </h3>
@@ -3649,7 +3777,7 @@ The name of the policy. Name must be 1 to 128 characters in length and can conta
 The set of arguments for constructing a ResourceDirectory resource.
 
 <h3 class="pdoc-module-header" id="ResourceDirectoryState" data-link-title="ResourceDirectoryState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceDirectory.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceDirectory.ts#L115">
         interface <strong>ResourceDirectoryState</strong>
     </a>
 </h3>
@@ -3659,7 +3787,7 @@ The set of arguments for constructing a ResourceDirectory resource.
 Input properties used for looking up and filtering ResourceDirectory resources.
 
 <h4 class="pdoc-member-header" id="ResourceDirectoryState-masterAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceDirectory.ts#L119">property <b>masterAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceDirectory.ts#L119">property <b>masterAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3667,7 +3795,7 @@ Input properties used for looking up and filtering ResourceDirectory resources.
 The ID of the master account.
 
 <h4 class="pdoc-member-header" id="ResourceDirectoryState-masterAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceDirectory.ts#L123">property <b>masterAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceDirectory.ts#L123">property <b>masterAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3675,7 +3803,7 @@ The ID of the master account.
 The name of the master account.
 
 <h4 class="pdoc-member-header" id="ResourceDirectoryState-rootFolderId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceDirectory.ts#L127">property <b>rootFolderId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceDirectory.ts#L127">property <b>rootFolderId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootFolderId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3683,7 +3811,7 @@ The name of the master account.
 The ID of the root folder.
 
 <h3 class="pdoc-module-header" id="ResourceGroupArgs" data-link-title="ResourceGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L155">
         interface <strong>ResourceGroupArgs</strong>
     </a>
 </h3>
@@ -3693,7 +3821,7 @@ The ID of the root folder.
 The set of arguments for constructing a ResourceGroup resource.
 
 <h4 class="pdoc-member-header" id="ResourceGroupArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L162">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L159">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3701,15 +3829,24 @@ The set of arguments for constructing a ResourceGroup resource.
 The display name of the resource group. The name must be 1 to 30 characters in length and can contain letters, digits, periods (.), at signs (@), and hyphens (-).
 
 <h4 class="pdoc-member-header" id="ResourceGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L166">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L165">property <b>name</b></a>
 </h4>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;name&#39; has been deprecated from version 1.114.0. Use &#39;resource_group_name&#39; instead.
+</div>
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The unique identifier of the resource group.The identifier must be 3 to 12 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The identifier must start with a letter.
+Field `name` has been deprecated from version 1.114.0. Use `resourceGroupName` instead.
 
+<h4 class="pdoc-member-header" id="ResourceGroupArgs-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L166">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ResourceGroupState" data-link-title="ResourceGroupState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L129">
         interface <strong>ResourceGroupState</strong>
     </a>
 </h3>
@@ -3719,24 +3856,15 @@ The unique identifier of the resource group.The identifier must be 3 to 12 chara
 Input properties used for looking up and filtering ResourceGroup resources.
 
 <h4 class="pdoc-member-header" id="ResourceGroupState-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L134">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L133">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The ID of the Alibaba Cloud account to which the resource group belongs.
 
-<h4 class="pdoc-member-header" id="ResourceGroupState-createDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L139">property <b>createDate</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>createDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-The time when the resource group was created.
-* `regionStatuses` -The status of the resource group in all regions.
-
 <h4 class="pdoc-member-header" id="ResourceGroupState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L143">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L137">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3744,20 +3872,29 @@ The time when the resource group was created.
 The display name of the resource group. The name must be 1 to 30 characters in length and can contain letters, digits, periods (.), at signs (@), and hyphens (-).
 
 <h4 class="pdoc-member-header" id="ResourceGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L147">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L143">property <b>name</b></a>
 </h4>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;name&#39; has been deprecated from version 1.114.0. Use &#39;resource_group_name&#39; instead.
+</div>
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The unique identifier of the resource group.The identifier must be 3 to 12 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The identifier must start with a letter.
+Field `name` has been deprecated from version 1.114.0. Use `resourceGroupName` instead.
 
 <h4 class="pdoc-member-header" id="ResourceGroupState-regionStatuses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L148">property <b>regionStatuses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L144">property <b>regionStatuses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regionStatuses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ResourceGroupRegionStatus'>ResourceGroupRegionStatus</a>&gt;[]&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ResourceGroupState-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L145">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ResourceGroupState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceGroup.ts#L152">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceGroup.ts#L149">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3765,7 +3902,7 @@ The unique identifier of the resource group.The identifier must be 3 to 12 chara
 The status of the regional resource group.
 
 <h3 class="pdoc-module-header" id="ResourceShareArgs" data-link-title="ResourceShareArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceShare.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceShare.ts#L132">
         interface <strong>ResourceShareArgs</strong>
     </a>
 </h3>
@@ -3775,7 +3912,7 @@ The status of the regional resource group.
 The set of arguments for constructing a ResourceShare resource.
 
 <h4 class="pdoc-member-header" id="ResourceShareArgs-resourceShareName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceShare.ts#L136">property <b>resourceShareName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceShare.ts#L136">property <b>resourceShareName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceShareName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3783,7 +3920,7 @@ The set of arguments for constructing a ResourceShare resource.
 The name of resource share.
 
 <h3 class="pdoc-module-header" id="ResourceShareState" data-link-title="ResourceShareState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceShare.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceShare.ts#L114">
         interface <strong>ResourceShareState</strong>
     </a>
 </h3>
@@ -3793,7 +3930,7 @@ The name of resource share.
 Input properties used for looking up and filtering ResourceShare resources.
 
 <h4 class="pdoc-member-header" id="ResourceShareState-resourceShareName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceShare.ts#L118">property <b>resourceShareName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceShare.ts#L118">property <b>resourceShareName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceShareName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3801,7 +3938,7 @@ Input properties used for looking up and filtering ResourceShare resources.
 The name of resource share.
 
 <h4 class="pdoc-member-header" id="ResourceShareState-resourceShareOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceShare.ts#L122">property <b>resourceShareOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceShare.ts#L122">property <b>resourceShareOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceShareOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3809,7 +3946,7 @@ The name of resource share.
 The owner of resource share.
 
 <h4 class="pdoc-member-header" id="ResourceShareState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/resourceShare.ts#L126">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/resourceShare.ts#L126">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3817,7 +3954,7 @@ The owner of resource share.
 The status of resource share.
 
 <h3 class="pdoc-module-header" id="RoleArgs" data-link-title="RoleArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L193">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L185">
         interface <strong>RoleArgs</strong>
     </a>
 </h3>
@@ -3827,7 +3964,7 @@ The status of resource share.
 The set of arguments for constructing a Role resource.
 
 <h4 class="pdoc-member-header" id="RoleArgs-assumeRolePolicyDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L197">property <b>assumeRolePolicyDocument</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L189">property <b>assumeRolePolicyDocument</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assumeRolePolicyDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3835,7 +3972,7 @@ The set of arguments for constructing a Role resource.
 The content of the permissions strategy that plays a role.
 
 <h4 class="pdoc-member-header" id="RoleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L201">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L193">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3843,7 +3980,7 @@ The content of the permissions strategy that plays a role.
 The description of the Resource Manager role.
 
 <h4 class="pdoc-member-header" id="RoleArgs-maxSessionDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L205">property <b>maxSessionDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L197">property <b>maxSessionDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSessionDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3851,7 +3988,7 @@ The description of the Resource Manager role.
 Role maximum session time. Valid values: [3600-43200]. Default to `3600`.
 
 <h4 class="pdoc-member-header" id="RoleArgs-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L209">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L201">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3859,7 +3996,7 @@ Role maximum session time. Valid values: [3600-43200]. Default to `3600`.
 Role Name. The length is 1 ~ 64 characters, which can include English letters, numbers, dots "." and dashes "-".
 
 <h3 class="pdoc-module-header" id="RoleState" data-link-title="RoleState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L153">
         interface <strong>RoleState</strong>
     </a>
 </h3>
@@ -3869,31 +4006,24 @@ Role Name. The length is 1 ~ 64 characters, which can include English letters, n
 Input properties used for looking up and filtering Role resources.
 
 <h4 class="pdoc-member-header" id="RoleState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L162">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L158">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The resource descriptor of the role.
+* `createDate` (Removed form v1.114.0) - Role creation time.
 
 <h4 class="pdoc-member-header" id="RoleState-assumeRolePolicyDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L166">property <b>assumeRolePolicyDocument</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L162">property <b>assumeRolePolicyDocument</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assumeRolePolicyDocument?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The content of the permissions strategy that plays a role.
 
-<h4 class="pdoc-member-header" id="RoleState-createDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L170">property <b>createDate</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>createDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-Role creation time.
-
 <h4 class="pdoc-member-header" id="RoleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L174">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L166">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3901,7 +4031,7 @@ Role creation time.
 The description of the Resource Manager role.
 
 <h4 class="pdoc-member-header" id="RoleState-maxSessionDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L178">property <b>maxSessionDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L170">property <b>maxSessionDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSessionDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3909,12 +4039,12 @@ The description of the Resource Manager role.
 Role maximum session time. Valid values: [3600-43200]. Default to `3600`.
 
 <h4 class="pdoc-member-header" id="RoleState-roleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L179">property <b>roleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L171">property <b>roleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoleState-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L183">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L175">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3922,7 +4052,7 @@ Role maximum session time. Valid values: [3600-43200]. Default to `3600`.
 Role Name. The length is 1 ~ 64 characters, which can include English letters, numbers, dots "." and dashes "-".
 
 <h4 class="pdoc-member-header" id="RoleState-updateDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/role.ts#L187">property <b>updateDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/role.ts#L179">property <b>updateDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3930,7 +4060,7 @@ Role Name. The length is 1 ~ 64 characters, which can include English letters, n
 Role update time.
 
 <h3 class="pdoc-module-header" id="SharedResourceArgs" data-link-title="SharedResourceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L135">
         interface <strong>SharedResourceArgs</strong>
     </a>
 </h3>
@@ -3940,7 +4070,7 @@ Role update time.
 The set of arguments for constructing a SharedResource resource.
 
 <h4 class="pdoc-member-header" id="SharedResourceArgs-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L139">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L139">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3948,7 +4078,7 @@ The set of arguments for constructing a SharedResource resource.
 The resource ID need shared.
 
 <h4 class="pdoc-member-header" id="SharedResourceArgs-resourceShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L143">property <b>resourceShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L143">property <b>resourceShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceShareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3956,7 +4086,7 @@ The resource ID need shared.
 The resource share ID of resource manager.
 
 <h4 class="pdoc-member-header" id="SharedResourceArgs-resourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L147">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L147">property <b>resourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3964,7 +4094,7 @@ The resource share ID of resource manager.
 The resource type of should shared, valid value `VSwitch`.
 
 <h3 class="pdoc-module-header" id="SharedResourceState" data-link-title="SharedResourceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L113">
         interface <strong>SharedResourceState</strong>
     </a>
 </h3>
@@ -3974,7 +4104,7 @@ The resource type of should shared, valid value `VSwitch`.
 Input properties used for looking up and filtering SharedResource resources.
 
 <h4 class="pdoc-member-header" id="SharedResourceState-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L117">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L117">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3982,7 +4112,7 @@ Input properties used for looking up and filtering SharedResource resources.
 The resource ID need shared.
 
 <h4 class="pdoc-member-header" id="SharedResourceState-resourceShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L121">property <b>resourceShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L121">property <b>resourceShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceShareId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3990,7 +4120,7 @@ The resource ID need shared.
 The resource share ID of resource manager.
 
 <h4 class="pdoc-member-header" id="SharedResourceState-resourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L125">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L125">property <b>resourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3998,7 +4128,7 @@ The resource share ID of resource manager.
 The resource type of should shared, valid value `VSwitch`.
 
 <h4 class="pdoc-member-header" id="SharedResourceState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedResource.ts#L129">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedResource.ts#L129">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4006,7 +4136,7 @@ The resource type of should shared, valid value `VSwitch`.
 status.
 
 <h3 class="pdoc-module-header" id="SharedTargetArgs" data-link-title="SharedTargetArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedTarget.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedTarget.ts#L122">
         interface <strong>SharedTargetArgs</strong>
     </a>
 </h3>
@@ -4016,7 +4146,7 @@ status.
 The set of arguments for constructing a SharedTarget resource.
 
 <h4 class="pdoc-member-header" id="SharedTargetArgs-resourceShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedTarget.ts#L126">property <b>resourceShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedTarget.ts#L126">property <b>resourceShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceShareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4024,7 +4154,7 @@ The set of arguments for constructing a SharedTarget resource.
 The resource share ID of resource manager.
 
 <h4 class="pdoc-member-header" id="SharedTargetArgs-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedTarget.ts#L130">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedTarget.ts#L130">property <b>targetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4032,7 +4162,7 @@ The resource share ID of resource manager.
 The member account ID in resource directory.
 
 <h3 class="pdoc-module-header" id="SharedTargetState" data-link-title="SharedTargetState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedTarget.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedTarget.ts#L104">
         interface <strong>SharedTargetState</strong>
     </a>
 </h3>
@@ -4042,7 +4172,7 @@ The member account ID in resource directory.
 Input properties used for looking up and filtering SharedTarget resources.
 
 <h4 class="pdoc-member-header" id="SharedTargetState-resourceShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedTarget.ts#L108">property <b>resourceShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedTarget.ts#L108">property <b>resourceShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceShareId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4050,7 +4180,7 @@ Input properties used for looking up and filtering SharedTarget resources.
 The resource share ID of resource manager.
 
 <h4 class="pdoc-member-header" id="SharedTargetState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedTarget.ts#L112">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedTarget.ts#L112">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4058,7 +4188,7 @@ The resource share ID of resource manager.
 The status of shared target.
 
 <h4 class="pdoc-member-header" id="SharedTargetState-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/resourcemanager/sharedTarget.ts#L116">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/a277e806d72e42d207af3a56f9e24fd99611ec00/sdk/nodejs/resourcemanager/sharedTarget.ts#L116">property <b>targetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

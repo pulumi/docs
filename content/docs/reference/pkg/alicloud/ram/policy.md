@@ -30,7 +30,7 @@ RAM policy can be imported using the id or name, e.g.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ram/#pulumi_alicloud.ram.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">document</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyStatementArgs]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ram/#pulumi_alicloud.ram.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">document</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_document</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rotate_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyStatementArgs]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -211,16 +211,16 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Description of the RAM policy. This name can have a string of 1 to 1024 characters.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="document_csharp">
 <a href="#document_csharp" style="color: inherit; text-decoration: inherit;">Document</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Document of the RAM policy. It is required when the `statement` is not specified.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.114.0 and `policy_document` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;document&#39; has been deprecated from provider version 1.114.0. New field &#39;policy_document&#39; instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="force_csharp">
@@ -231,15 +231,45 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}This parameter is used for resource destroy. Default value is `false`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}It has been deprecated from provider version 1.114.0 and `policy_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.114.0. New field &#39;policy_name&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policydocument_csharp">
+<a href="#policydocument_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Document of the RAM policy. It is required when the `statement` is not specified.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyname_csharp">
+<a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rotatestrategy_csharp">
+<a href="#rotatestrategy_csharp" style="color: inherit; text-decoration: inherit;">Rotate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The rotation strategy of the policy. You can use this parameter to delete an early policy version. Valid Values: `None`, `DeleteOldestNonDefaultVersionWhenLimitExceeded`. Default to `None`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -277,16 +307,16 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Description of the RAM policy. This name can have a string of 1 to 1024 characters.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="document_go">
 <a href="#document_go" style="color: inherit; text-decoration: inherit;">Document</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Document of the RAM policy. It is required when the `statement` is not specified.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.114.0 and `policy_document` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;document&#39; has been deprecated from provider version 1.114.0. New field &#39;policy_document&#39; instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="force_go">
@@ -297,15 +327,45 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}This parameter is used for resource destroy. Default value is `false`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}It has been deprecated from provider version 1.114.0 and `policy_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.114.0. New field &#39;policy_name&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policydocument_go">
+<a href="#policydocument_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Document of the RAM policy. It is required when the `statement` is not specified.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyname_go">
+<a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rotatestrategy_go">
+<a href="#rotatestrategy_go" style="color: inherit; text-decoration: inherit;">Rotate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The rotation strategy of the policy. You can use this parameter to delete an early policy version. Valid Values: `None`, `DeleteOldestNonDefaultVersionWhenLimitExceeded`. Default to `None`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -343,16 +403,16 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Description of the RAM policy. This name can have a string of 1 to 1024 characters.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="document_nodejs">
 <a href="#document_nodejs" style="color: inherit; text-decoration: inherit;">document</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Document of the RAM policy. It is required when the `statement` is not specified.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.114.0 and `policy_document` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;document&#39; has been deprecated from provider version 1.114.0. New field &#39;policy_document&#39; instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="force_nodejs">
@@ -363,15 +423,45 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}This parameter is used for resource destroy. Default value is `false`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}It has been deprecated from provider version 1.114.0 and `policy_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.114.0. New field &#39;policy_name&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policydocument_nodejs">
+<a href="#policydocument_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Document</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Document of the RAM policy. It is required when the `statement` is not specified.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyname_nodejs">
+<a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rotatestrategy_nodejs">
+<a href="#rotatestrategy_nodejs" style="color: inherit; text-decoration: inherit;">rotate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The rotation strategy of the policy. You can use this parameter to delete an early policy version. Valid Values: `None`, `DeleteOldestNonDefaultVersionWhenLimitExceeded`. Default to `None`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -409,16 +499,16 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Description of the RAM policy. This name can have a string of 1 to 1024 characters.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="document_python">
 <a href="#document_python" style="color: inherit; text-decoration: inherit;">document</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Document of the RAM policy. It is required when the `statement` is not specified.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.114.0 and `policy_document` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;document&#39; has been deprecated from provider version 1.114.0. New field &#39;policy_document&#39; instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="force_python">
@@ -429,15 +519,45 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}This parameter is used for resource destroy. Default value is `false`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
+    <dd>{{% md %}}It has been deprecated from provider version 1.114.0 and `policy_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.114.0. New field &#39;policy_name&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_document_python">
+<a href="#policy_document_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>document</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Document of the RAM policy. It is required when the `statement` is not specified.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_name_python">
+<a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
     <dd>{{% md %}}Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rotate_strategy_python">
+<a href="#rotate_strategy_python" style="color: inherit; text-decoration: inherit;">rotate_<wbr>strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The rotation strategy of the policy. You can use this parameter to delete an early policy version. Valid Values: `None`, `DeleteOldestNonDefaultVersionWhenLimitExceeded`. Default to `None`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -484,6 +604,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="defaultversion_csharp">
+<a href="#defaultversion_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default version of policy.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -501,6 +631,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The policy type.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="versionid_csharp">
+<a href="#versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of default version policy.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -516,6 +656,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The policy attachment count.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="defaultversion_go">
+<a href="#defaultversion_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default version of policy.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -536,6 +686,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The policy type.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="versionid_go">
+<a href="#versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of default version policy.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -551,6 +711,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The policy attachment count.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="defaultversion_nodejs">
+<a href="#defaultversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default version of policy.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -571,6 +741,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The policy type.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="versionid_nodejs">
+<a href="#versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of default version policy.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -586,6 +766,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The policy attachment count.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="default_version_python">
+<a href="#default_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The default version of policy.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -606,6 +796,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The policy type.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="version_id_python">
+<a href="#version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of default version policy.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -622,7 +822,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attachment_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">document</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyStatementArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attachment_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">document</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_document</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rotate_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyStatementArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -747,6 +947,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_defaultversion_csharp">
+<a href="#state_defaultversion_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default version of policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -755,16 +965,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Description of the RAM policy. This name can have a string of 1 to 1024 characters.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_document_csharp">
 <a href="#state_document_csharp" style="color: inherit; text-decoration: inherit;">Document</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Document of the RAM policy. It is required when the `statement` is not specified.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.114.0 and `policy_document` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;document&#39; has been deprecated from provider version 1.114.0. New field &#39;policy_document&#39; instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_force_csharp">
@@ -775,15 +985,45 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}This parameter is used for resource destroy. Default value is `false`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}It has been deprecated from provider version 1.114.0 and `policy_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.114.0. New field &#39;policy_name&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_policydocument_csharp">
+<a href="#state_policydocument_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Document of the RAM policy. It is required when the `statement` is not specified.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_policyname_csharp">
+<a href="#state_policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_rotatestrategy_csharp">
+<a href="#state_rotatestrategy_csharp" style="color: inherit; text-decoration: inherit;">Rotate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The rotation strategy of the policy. You can use this parameter to delete an early policy version. Valid Values: `None`, `DeleteOldestNonDefaultVersionWhenLimitExceeded`. Default to `None`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -815,6 +1055,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(It has been deprecated from version 1.49.0, and use field 'document' to replace.) Version of the RAM policy document. Valid value is `1`. Default value is `1`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;version&#39; has been deprecated from version 1.49.0, and use field &#39;document&#39; to replace. {{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_versionid_csharp">
+<a href="#state_versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of default version policy.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -833,6 +1083,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_defaultversion_go">
+<a href="#state_defaultversion_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default version of policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -841,16 +1101,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Description of the RAM policy. This name can have a string of 1 to 1024 characters.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_document_go">
 <a href="#state_document_go" style="color: inherit; text-decoration: inherit;">Document</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Document of the RAM policy. It is required when the `statement` is not specified.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.114.0 and `policy_document` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;document&#39; has been deprecated from provider version 1.114.0. New field &#39;policy_document&#39; instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_force_go">
@@ -861,15 +1121,45 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}This parameter is used for resource destroy. Default value is `false`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}It has been deprecated from provider version 1.114.0 and `policy_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.114.0. New field &#39;policy_name&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_policydocument_go">
+<a href="#state_policydocument_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Document of the RAM policy. It is required when the `statement` is not specified.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_policyname_go">
+<a href="#state_policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_rotatestrategy_go">
+<a href="#state_rotatestrategy_go" style="color: inherit; text-decoration: inherit;">Rotate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The rotation strategy of the policy. You can use this parameter to delete an early policy version. Valid Values: `None`, `DeleteOldestNonDefaultVersionWhenLimitExceeded`. Default to `None`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -901,6 +1191,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(It has been deprecated from version 1.49.0, and use field 'document' to replace.) Version of the RAM policy document. Valid value is `1`. Default value is `1`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;version&#39; has been deprecated from version 1.49.0, and use field &#39;document&#39; to replace. {{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_versionid_go">
+<a href="#state_versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of default version policy.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -919,6 +1219,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_defaultversion_nodejs">
+<a href="#state_defaultversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default version of policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -927,16 +1237,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Description of the RAM policy. This name can have a string of 1 to 1024 characters.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_document_nodejs">
 <a href="#state_document_nodejs" style="color: inherit; text-decoration: inherit;">document</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Document of the RAM policy. It is required when the `statement` is not specified.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.114.0 and `policy_document` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;document&#39; has been deprecated from provider version 1.114.0. New field &#39;policy_document&#39; instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_force_nodejs">
@@ -947,15 +1257,45 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}This parameter is used for resource destroy. Default value is `false`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}It has been deprecated from provider version 1.114.0 and `policy_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.114.0. New field &#39;policy_name&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_policydocument_nodejs">
+<a href="#state_policydocument_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Document</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Document of the RAM policy. It is required when the `statement` is not specified.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_policyname_nodejs">
+<a href="#state_policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_rotatestrategy_nodejs">
+<a href="#state_rotatestrategy_nodejs" style="color: inherit; text-decoration: inherit;">rotate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The rotation strategy of the policy. You can use this parameter to delete an early policy version. Valid Values: `None`, `DeleteOldestNonDefaultVersionWhenLimitExceeded`. Default to `None`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -987,6 +1327,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(It has been deprecated from version 1.49.0, and use field 'document' to replace.) Version of the RAM policy document. Valid value is `1`. Default value is `1`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;version&#39; has been deprecated from version 1.49.0, and use field &#39;document&#39; to replace. {{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_versionid_nodejs">
+<a href="#state_versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of default version policy.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1005,6 +1355,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_default_version_python">
+<a href="#state_default_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The default version of policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1013,16 +1373,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Description of the RAM policy. This name can have a string of 1 to 1024 characters.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_document_python">
 <a href="#state_document_python" style="color: inherit; text-decoration: inherit;">document</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Document of the RAM policy. It is required when the `statement` is not specified.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from provider version 1.114.0 and `policy_document` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;document&#39; has been deprecated from provider version 1.114.0. New field &#39;policy_document&#39; instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_force_python">
@@ -1033,15 +1393,45 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}This parameter is used for resource destroy. Default value is `false`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
+    <dd>{{% md %}}It has been deprecated from provider version 1.114.0 and `policy_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.114.0. New field &#39;policy_name&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_policy_document_python">
+<a href="#state_policy_document_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>document</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Document of the RAM policy. It is required when the `statement` is not specified.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_policy_name_python">
+<a href="#state_policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
     <dd>{{% md %}}Name of the RAM policy. This name can have a string of 1 to 128 characters, must contain only alphanumeric characters or hyphen "-", and must not begin with a hyphen.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_rotate_strategy_python">
+<a href="#state_rotate_strategy_python" style="color: inherit; text-decoration: inherit;">rotate_<wbr>strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The rotation strategy of the policy. You can use this parameter to delete an early policy version. Valid Values: `None`, `DeleteOldestNonDefaultVersionWhenLimitExceeded`. Default to `None`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1073,6 +1463,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(It has been deprecated from version 1.49.0, and use field 'document' to replace.) Version of the RAM policy document. Valid value is `1`. Default value is `1`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;version&#39; has been deprecated from version 1.49.0, and use field &#39;document&#39; to replace. {{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_version_id_python">
+<a href="#state_version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of default version policy.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

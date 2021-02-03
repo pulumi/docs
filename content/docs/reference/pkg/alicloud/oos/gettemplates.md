@@ -771,6 +771,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.114.0+) A list of OOS Template names.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="templates_csharp">
 <a href="#templates_csharp" style="color: inherit; text-decoration: inherit;">Templates</a>
 </span>
@@ -921,6 +931,16 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of OOS Template ids. Each element in the list is same as template_name.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.114.0+) A list of OOS Template names.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1077,6 +1097,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.114.0+) A list of OOS Template names.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="templates_nodejs">
 <a href="#templates_nodejs" style="color: inherit; text-decoration: inherit;">templates</a>
 </span>
@@ -1227,6 +1257,16 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of OOS Template ids. Each element in the list is same as template_name.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.114.0+) A list of OOS Template names.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">

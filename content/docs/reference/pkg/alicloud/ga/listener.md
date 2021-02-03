@@ -32,13 +32,13 @@ class MyStack : Stack
     {
         var exampleAccelerator = new AliCloud.Ga.Accelerator("exampleAccelerator", new AliCloud.Ga.AcceleratorArgs
         {
-            AutoUseCoupon = true,
             Duration = 1,
+            AutoUseCoupon = true,
             Spec = "1",
         });
         var exampleListener = new AliCloud.Ga.Listener("exampleListener", new AliCloud.Ga.ListenerArgs
         {
-            AcceleratorId = "alicloud_ga_accelerator.example.id",
+            AcceleratorId = exampleAccelerator.Id,
             PortRanges = 
             {
                 new AliCloud.Ga.Inputs.ListenerPortRangeArgs
@@ -66,16 +66,16 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := ga.NewAccelerator(ctx, "exampleAccelerator", &ga.AcceleratorArgs{
-			AutoUseCoupon: pulumi.Bool(true),
+		exampleAccelerator, err := ga.NewAccelerator(ctx, "exampleAccelerator", &ga.AcceleratorArgs{
 			Duration:      pulumi.Int(1),
+			AutoUseCoupon: pulumi.Bool(true),
 			Spec:          pulumi.String("1"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = ga.NewListener(ctx, "exampleListener", &ga.ListenerArgs{
-			AcceleratorId: pulumi.String("alicloud_ga_accelerator.example.id"),
+			AcceleratorId: exampleAccelerator.ID(),
 			PortRanges: ga.ListenerPortRangeArray{
 				&ga.ListenerPortRangeArgs{
 					FromPort: pulumi.Int(60),
@@ -99,11 +99,11 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 example_accelerator = alicloud.ga.Accelerator("exampleAccelerator",
-    auto_use_coupon=True,
     duration=1,
+    auto_use_coupon=True,
     spec="1")
 example_listener = alicloud.ga.Listener("exampleListener",
-    accelerator_id="alicloud_ga_accelerator.example.id",
+    accelerator_id=example_accelerator.id,
     port_ranges=[alicloud.ga.ListenerPortRangeArgs(
         from_port=60,
         to_port=70,
@@ -118,13 +118,13 @@ example_listener = alicloud.ga.Listener("exampleListener",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const exampleAccelerator = new alicloud.ga.Accelerator("example", {
-    autoUseCoupon: true,
+const exampleAccelerator = new alicloud.ga.Accelerator("exampleAccelerator", {
     duration: 1,
+    autoUseCoupon: true,
     spec: "1",
 });
-const exampleListener = new alicloud.ga.Listener("example", {
-    acceleratorId: "alicloud_ga_accelerator.example.id",
+const exampleListener = new alicloud.ga.Listener("exampleListener", {
+    acceleratorId: exampleAccelerator.id,
     portRanges: [{
         fromPort: 60,
         toPort: 70,

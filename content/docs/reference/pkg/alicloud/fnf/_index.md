@@ -19,6 +19,7 @@ Explore the resources and functions of the fnf module in the AliCloud package.
 <ul class="api">
     <li><a href="getflows" title="GetFlows"><span class="symbol function"></span>GetFlows</a></li>
     <li><a href="getschedules" title="GetSchedules"><span class="symbol function"></span>GetSchedules</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,7 +31,7 @@ Explore the resources and functions of the fnf module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.32.0</dd>
+	<dd>2.34.0</dd>
 </dl>
 
 

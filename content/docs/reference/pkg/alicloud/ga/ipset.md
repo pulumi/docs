@@ -47,14 +47,14 @@ class MyStack : Stack
         });
         var exampleBandwidthPackageAttachment = new AliCloud.Ga.BandwidthPackageAttachment("exampleBandwidthPackageAttachment", new AliCloud.Ga.BandwidthPackageAttachmentArgs
         {
-            AcceleratorId = "alicloud_ga_accelerator.example.id",
-            BandwidthPackageId = "alicloud_ga_bandwidth_package.example.id",
+            AcceleratorId = exampleAccelerator.Id,
+            BandwidthPackageId = exampleBandwidthPackage.Id,
         });
         var exampleIpSet = new AliCloud.Ga.IpSet("exampleIpSet", new AliCloud.Ga.IpSetArgs
         {
             AccelerateRegionId = "cn-hangzhou",
             Bandwidth = 5,
-            AcceleratorId = "alicloud_ga_accelerator.example.id",
+            AcceleratorId = exampleAccelerator.Id,
         }, new CustomResourceOptions
         {
             DependsOn = 
@@ -80,7 +80,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := ga.NewAccelerator(ctx, "exampleAccelerator", &ga.AcceleratorArgs{
+		exampleAccelerator, err := ga.NewAccelerator(ctx, "exampleAccelerator", &ga.AcceleratorArgs{
 			Duration:      pulumi.Int(1),
 			AutoUseCoupon: pulumi.Bool(true),
 			Spec:          pulumi.String("1"),
@@ -88,7 +88,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = ga.NewBandwidthPackage(ctx, "exampleBandwidthPackage", &ga.BandwidthPackageArgs{
+		exampleBandwidthPackage, err := ga.NewBandwidthPackage(ctx, "exampleBandwidthPackage", &ga.BandwidthPackageArgs{
 			Bandwidth:     pulumi.Int(20),
 			Type:          pulumi.String("Basic"),
 			BandwidthType: pulumi.String("Basic"),
@@ -100,8 +100,8 @@ func main() {
 			return err
 		}
 		exampleBandwidthPackageAttachment, err := ga.NewBandwidthPackageAttachment(ctx, "exampleBandwidthPackageAttachment", &ga.BandwidthPackageAttachmentArgs{
-			AcceleratorId:      pulumi.String("alicloud_ga_accelerator.example.id"),
-			BandwidthPackageId: pulumi.String("alicloud_ga_bandwidth_package.example.id"),
+			AcceleratorId:      exampleAccelerator.ID(),
+			BandwidthPackageId: exampleBandwidthPackage.ID(),
 		})
 		if err != nil {
 			return err
@@ -109,7 +109,7 @@ func main() {
 		_, err = ga.NewIpSet(ctx, "exampleIpSet", &ga.IpSetArgs{
 			AccelerateRegionId: pulumi.String("cn-hangzhou"),
 			Bandwidth:          pulumi.Int(5),
-			AcceleratorId:      pulumi.String("alicloud_ga_accelerator.example.id"),
+			AcceleratorId:      exampleAccelerator.ID(),
 		}, pulumi.DependsOn([]pulumi.Resource{
 			exampleBandwidthPackageAttachment,
 		}))
@@ -140,12 +140,12 @@ example_bandwidth_package = alicloud.ga.BandwidthPackage("exampleBandwidthPackag
     auto_pay=True,
     ratio=30)
 example_bandwidth_package_attachment = alicloud.ga.BandwidthPackageAttachment("exampleBandwidthPackageAttachment",
-    accelerator_id="alicloud_ga_accelerator.example.id",
-    bandwidth_package_id="alicloud_ga_bandwidth_package.example.id")
+    accelerator_id=example_accelerator.id,
+    bandwidth_package_id=example_bandwidth_package.id)
 example_ip_set = alicloud.ga.IpSet("exampleIpSet",
     accelerate_region_id="cn-hangzhou",
     bandwidth=5,
-    accelerator_id="alicloud_ga_accelerator.example.id",
+    accelerator_id=example_accelerator.id,
     opts=pulumi.ResourceOptions(depends_on=[example_bandwidth_package_attachment]))
 ```
 
@@ -171,13 +171,13 @@ const exampleBandwidthPackage = new alicloud.ga.BandwidthPackage("exampleBandwid
     ratio: 30,
 });
 const exampleBandwidthPackageAttachment = new alicloud.ga.BandwidthPackageAttachment("exampleBandwidthPackageAttachment", {
-    acceleratorId: "alicloud_ga_accelerator.example.id",
-    bandwidthPackageId: "alicloud_ga_bandwidth_package.example.id",
+    acceleratorId: exampleAccelerator.id,
+    bandwidthPackageId: exampleBandwidthPackage.id,
 });
 const exampleIpSet = new alicloud.ga.IpSet("exampleIpSet", {
     accelerateRegionId: "cn-hangzhou",
     bandwidth: "5",
-    acceleratorId: "alicloud_ga_accelerator.example.id",
+    acceleratorId: exampleAccelerator.id,
 }, {
     dependsOn: [exampleBandwidthPackageAttachment],
 });
