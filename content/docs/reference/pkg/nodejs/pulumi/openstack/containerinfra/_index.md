@@ -3,7 +3,7 @@ title: "Module containerinfra"
 title_tag: "Module containerinfra | Package @pulumi/openstack | Node.js SDK"
 linktitle: "containerinfra"
 meta_desc: "Explore members of the containerinfra module in the @pulumi/openstack package."
-git_sha: "716e95132dbe1032a5df03b01bcfa62403541d3c"
+git_sha: "c1c363b15e3cde9b67c55610e3521ee1d15a78de"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L133">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L133">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -174,7 +174,7 @@ Clusters can be imported using the `id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L187"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L187"> <b>constructor</b></a>
 </h4>
 
 
@@ -188,7 +188,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L143">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L143">method <b>get</b></a>
 </h4>
 
 
@@ -199,14 +199,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L133">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L133">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L154">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L154">method <b>isInstance</b></a>
 </h4>
 
 
@@ -217,67 +217,67 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-apiAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L161">property <b>apiAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L161">property <b>apiAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-clusterTemplateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L162">property <b>clusterTemplateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L162">property <b>clusterTemplateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterTemplateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-coeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L163">property <b>coeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L163">property <b>coeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>coeVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-containerVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L164">property <b>containerVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L164">property <b>containerVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>containerVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-createTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L165">property <b>createTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L165">property <b>createTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L166">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L166">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-discoveryUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L167">property <b>discoveryUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L167">property <b>discoveryUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>discoveryUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-dockerVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L168">property <b>dockerVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L168">property <b>dockerVolumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dockerVolumeSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-fixedNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L169">property <b>fixedNetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L169">property <b>fixedNetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fixedNetwork: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-fixedSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L170">property <b>fixedSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L170">property <b>fixedSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fixedSubnet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-flavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L171">property <b>flavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L171">property <b>flavor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>flavor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-floatingIpEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L172">property <b>floatingIpEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L172">property <b>floatingIpEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>floatingIpEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L133">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L133">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -286,77 +286,77 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-keypair">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L173">property <b>keypair</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L173">property <b>keypair</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keypair: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-kubeconfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L174">property <b>kubeconfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L174">property <b>kubeconfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kubeconfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#ClusterKubeconfig'>ClusterKubeconfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L175">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L175">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-masterAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L176">property <b>masterAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L176">property <b>masterAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-masterCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L177">property <b>masterCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L177">property <b>masterCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-masterFlavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L178">property <b>masterFlavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L178">property <b>masterFlavor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterFlavor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-mergeLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L179">property <b>mergeLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L179">property <b>mergeLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mergeLabels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L180">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L180">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-nodeAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L181">property <b>nodeAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L181">property <b>nodeAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L182">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L182">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L183">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L183">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L184">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L184">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-stackId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L185">property <b>stackId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L185">property <b>stackId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L186">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L186">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L133">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L133">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -365,12 +365,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Cluster-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L187">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L187">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClusterTemplate" data-link-title="ClusterTemplate">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L203">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L203">
         Resource <strong>ClusterTemplate</strong>
     </a>
 </h3>
@@ -573,7 +573,7 @@ Cluster templates can be imported using the `id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ClusterTemplate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L262"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L262"> <b>constructor</b></a>
 </h4>
 
 
@@ -587,7 +587,7 @@ Create a ClusterTemplate resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClusterTemplate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L213">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L213">method <b>get</b></a>
 </h4>
 
 
@@ -598,14 +598,14 @@ Get an existing ClusterTemplate resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClusterTemplate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L203">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L203">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClusterTemplate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L224">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L224">method <b>isInstance</b></a>
 </h4>
 
 
@@ -616,77 +616,77 @@ Returns true if the given object is an instance of ClusterTemplate.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClusterTemplate-apiserverPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L231">property <b>apiserverPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L231">property <b>apiserverPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiserverPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-clusterDistro">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L232">property <b>clusterDistro</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L232">property <b>clusterDistro</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterDistro: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-coe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L233">property <b>coe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L233">property <b>coe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>coe: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L234">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L234">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-dnsNameserver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L235">property <b>dnsNameserver</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L235">property <b>dnsNameserver</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsNameserver: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-dockerStorageDriver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L236">property <b>dockerStorageDriver</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L236">property <b>dockerStorageDriver</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dockerStorageDriver: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-dockerVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L237">property <b>dockerVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L237">property <b>dockerVolumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dockerVolumeSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-externalNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L238">property <b>externalNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L238">property <b>externalNetworkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalNetworkId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-fixedNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L239">property <b>fixedNetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L239">property <b>fixedNetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fixedNetwork: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-fixedSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L240">property <b>fixedSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L240">property <b>fixedSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fixedSubnet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-flavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L241">property <b>flavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L241">property <b>flavor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>flavor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-floatingIpEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L242">property <b>floatingIpEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L242">property <b>floatingIpEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>floatingIpEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-httpProxy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L243">property <b>httpProxy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L243">property <b>httpProxy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpProxy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-httpsProxy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L244">property <b>httpsProxy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L244">property <b>httpsProxy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpsProxy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L203">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L203">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -695,87 +695,87 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClusterTemplate-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L245">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L245">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>image: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-insecureRegistry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L246">property <b>insecureRegistry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L246">property <b>insecureRegistry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>insecureRegistry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-keypairId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L247">property <b>keypairId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L247">property <b>keypairId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keypairId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L248">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L248">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-masterFlavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L249">property <b>masterFlavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L249">property <b>masterFlavor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterFlavor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-masterLbEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L250">property <b>masterLbEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L250">property <b>masterLbEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterLbEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L251">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L251">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-networkDriver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L252">property <b>networkDriver</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L252">property <b>networkDriver</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkDriver: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-noProxy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L253">property <b>noProxy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L253">property <b>noProxy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>noProxy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L254">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L254">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-public">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L255">property <b>public</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L255">property <b>public</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>public: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L256">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L256">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-registryEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L257">property <b>registryEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L257">property <b>registryEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>registryEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-serverType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L258">property <b>serverType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L258">property <b>serverType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-tlsDisabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L259">property <b>tlsDisabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L259">property <b>tlsDisabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tlsDisabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L260">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L260">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L203">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L203">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -784,19 +784,19 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ClusterTemplate-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L261">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L261">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplate-volumeDriver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L262">property <b>volumeDriver</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L262">property <b>volumeDriver</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>volumeDriver: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getCluster" data-link-title="getCluster">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L22">
         Function <strong>getCluster</strong>
     </a>
 </h3>
@@ -819,7 +819,7 @@ const cluster1 = pulumi.output(openstack.containerinfra.getCluster({
 ```
 
 <h3 class="pdoc-module-header" id="getClusterTemplate" data-link-title="getClusterTemplate">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L23">
         Function <strong>getClusterTemplate</strong>
     </a>
 </h3>
@@ -845,7 +845,7 @@ const clustertemplate1 = pulumi.output(openstack.containerinfra.getClusterTempla
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L308">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L308">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -855,87 +855,87 @@ const clustertemplate1 = pulumi.output(openstack.containerinfra.getClusterTempla
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterTemplateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L309">property <b>clusterTemplateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L309">property <b>clusterTemplateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterTemplateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-createTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L310">property <b>createTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L310">property <b>createTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-discoveryUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L311">property <b>discoveryUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L311">property <b>discoveryUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>discoveryUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-dockerVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L312">property <b>dockerVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L312">property <b>dockerVolumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerVolumeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-fixedNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L313">property <b>fixedNetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L313">property <b>fixedNetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedNetwork?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-fixedSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L314">property <b>fixedSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L314">property <b>fixedSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedSubnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-flavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L315">property <b>flavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L315">property <b>flavor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flavor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-floatingIpEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L316">property <b>floatingIpEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L316">property <b>floatingIpEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>floatingIpEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-keypair">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L317">property <b>keypair</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L317">property <b>keypair</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keypair?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L318">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L318">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-masterCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L319">property <b>masterCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L319">property <b>masterCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-masterFlavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L320">property <b>masterFlavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L320">property <b>masterFlavor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterFlavor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-mergeLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L321">property <b>mergeLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L321">property <b>mergeLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mergeLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L322">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L322">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L323">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L323">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L324">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L324">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L275">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L275">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -945,142 +945,142 @@ The set of arguments for constructing a Cluster resource.
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-apiAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L276">property <b>apiAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L276">property <b>apiAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-clusterTemplateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L277">property <b>clusterTemplateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L277">property <b>clusterTemplateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterTemplateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-coeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L278">property <b>coeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L278">property <b>coeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-containerVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L279">property <b>containerVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L279">property <b>containerVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-createTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L280">property <b>createTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L280">property <b>createTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L281">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L281">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-discoveryUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L282">property <b>discoveryUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L282">property <b>discoveryUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>discoveryUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-dockerVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L283">property <b>dockerVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L283">property <b>dockerVolumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerVolumeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-fixedNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L284">property <b>fixedNetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L284">property <b>fixedNetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedNetwork?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-fixedSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L285">property <b>fixedSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L285">property <b>fixedSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedSubnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-flavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L286">property <b>flavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L286">property <b>flavor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flavor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-floatingIpEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L287">property <b>floatingIpEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L287">property <b>floatingIpEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>floatingIpEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-keypair">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L288">property <b>keypair</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L288">property <b>keypair</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keypair?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-kubeconfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L289">property <b>kubeconfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L289">property <b>kubeconfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeconfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ClusterKubeconfig'>ClusterKubeconfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L290">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L290">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-masterAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L291">property <b>masterAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L291">property <b>masterAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-masterCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L292">property <b>masterCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L292">property <b>masterCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-masterFlavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L293">property <b>masterFlavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L293">property <b>masterFlavor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterFlavor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-mergeLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L294">property <b>mergeLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L294">property <b>mergeLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mergeLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L295">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L295">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-nodeAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L296">property <b>nodeAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L296">property <b>nodeAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L297">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L297">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L298">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L298">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L299">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L299">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-stackId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L300">property <b>stackId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L300">property <b>stackId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L301">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L301">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/cluster.ts#L302">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/cluster.ts#L302">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClusterTemplateArgs" data-link-title="ClusterTemplateArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L401">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L401">
         interface <strong>ClusterTemplateArgs</strong>
     </a>
 </h3>
@@ -1090,147 +1090,147 @@ Input properties used for looking up and filtering Cluster resources.
 The set of arguments for constructing a ClusterTemplate resource.
 
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-apiserverPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L402">property <b>apiserverPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L402">property <b>apiserverPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiserverPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-clusterDistro">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L403">property <b>clusterDistro</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L403">property <b>clusterDistro</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterDistro?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-coe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L404">property <b>coe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L404">property <b>coe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coe: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-dnsNameserver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L405">property <b>dnsNameserver</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L405">property <b>dnsNameserver</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsNameserver?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-dockerStorageDriver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L406">property <b>dockerStorageDriver</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L406">property <b>dockerStorageDriver</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerStorageDriver?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-dockerVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L407">property <b>dockerVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L407">property <b>dockerVolumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerVolumeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-externalNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L408">property <b>externalNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L408">property <b>externalNetworkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalNetworkId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-fixedNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L409">property <b>fixedNetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L409">property <b>fixedNetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedNetwork?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-fixedSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L410">property <b>fixedSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L410">property <b>fixedSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedSubnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-flavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L411">property <b>flavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L411">property <b>flavor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flavor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-floatingIpEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L412">property <b>floatingIpEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L412">property <b>floatingIpEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>floatingIpEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-httpProxy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L413">property <b>httpProxy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L413">property <b>httpProxy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpProxy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-httpsProxy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L414">property <b>httpsProxy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L414">property <b>httpsProxy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsProxy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L415">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L415">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>image: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-insecureRegistry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L416">property <b>insecureRegistry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L416">property <b>insecureRegistry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insecureRegistry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-keypairId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L417">property <b>keypairId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L417">property <b>keypairId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keypairId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L418">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L418">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-masterFlavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L419">property <b>masterFlavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L419">property <b>masterFlavor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterFlavor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-masterLbEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L420">property <b>masterLbEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L420">property <b>masterLbEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterLbEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L421">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L421">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-networkDriver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L422">property <b>networkDriver</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L422">property <b>networkDriver</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkDriver?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-noProxy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L423">property <b>noProxy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L423">property <b>noProxy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noProxy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-public">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L424">property <b>public</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L424">property <b>public</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>public?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L425">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L425">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-registryEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L426">property <b>registryEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L426">property <b>registryEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registryEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-serverType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L427">property <b>serverType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L427">property <b>serverType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-tlsDisabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L428">property <b>tlsDisabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L428">property <b>tlsDisabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsDisabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateArgs-volumeDriver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L429">property <b>volumeDriver</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L429">property <b>volumeDriver</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeDriver?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClusterTemplateState" data-link-title="ClusterTemplateState">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L363">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L363">
         interface <strong>ClusterTemplateState</strong>
     </a>
 </h3>
@@ -1240,167 +1240,167 @@ The set of arguments for constructing a ClusterTemplate resource.
 Input properties used for looking up and filtering ClusterTemplate resources.
 
 <h4 class="pdoc-member-header" id="ClusterTemplateState-apiserverPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L364">property <b>apiserverPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L364">property <b>apiserverPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiserverPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-clusterDistro">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L365">property <b>clusterDistro</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L365">property <b>clusterDistro</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterDistro?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-coe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L366">property <b>coe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L366">property <b>coe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coe?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L367">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L367">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-dnsNameserver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L368">property <b>dnsNameserver</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L368">property <b>dnsNameserver</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsNameserver?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-dockerStorageDriver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L369">property <b>dockerStorageDriver</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L369">property <b>dockerStorageDriver</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerStorageDriver?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-dockerVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L370">property <b>dockerVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L370">property <b>dockerVolumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerVolumeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-externalNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L371">property <b>externalNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L371">property <b>externalNetworkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalNetworkId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-fixedNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L372">property <b>fixedNetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L372">property <b>fixedNetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedNetwork?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-fixedSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L373">property <b>fixedSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L373">property <b>fixedSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedSubnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-flavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L374">property <b>flavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L374">property <b>flavor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flavor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-floatingIpEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L375">property <b>floatingIpEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L375">property <b>floatingIpEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>floatingIpEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-httpProxy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L376">property <b>httpProxy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L376">property <b>httpProxy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpProxy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-httpsProxy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L377">property <b>httpsProxy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L377">property <b>httpsProxy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsProxy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L378">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L378">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>image?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-insecureRegistry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L379">property <b>insecureRegistry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L379">property <b>insecureRegistry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insecureRegistry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-keypairId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L380">property <b>keypairId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L380">property <b>keypairId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keypairId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L381">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L381">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-masterFlavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L382">property <b>masterFlavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L382">property <b>masterFlavor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterFlavor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-masterLbEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L383">property <b>masterLbEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L383">property <b>masterLbEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterLbEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L384">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L384">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-networkDriver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L385">property <b>networkDriver</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L385">property <b>networkDriver</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkDriver?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-noProxy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L386">property <b>noProxy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L386">property <b>noProxy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noProxy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L387">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L387">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-public">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L388">property <b>public</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L388">property <b>public</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>public?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L389">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L389">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-registryEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L390">property <b>registryEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L390">property <b>registryEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registryEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-serverType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L391">property <b>serverType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L391">property <b>serverType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-tlsDisabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L392">property <b>tlsDisabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L392">property <b>tlsDisabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsDisabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L393">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L393">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L394">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L394">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterTemplateState-volumeDriver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/clusterTemplate.ts#L395">property <b>volumeDriver</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/clusterTemplate.ts#L395">property <b>volumeDriver</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeDriver?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GetClusterArgs" data-link-title="GetClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L39">
         interface <strong>GetClusterArgs</strong>
     </a>
 </h3>
@@ -1410,7 +1410,7 @@ Input properties used for looking up and filtering ClusterTemplate resources.
 A collection of arguments for invoking getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L43">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L43">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1418,7 +1418,7 @@ A collection of arguments for invoking getCluster.
 The name of the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L49">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L49">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1428,7 +1428,7 @@ client.
 If omitted, the `region` argument of the provider is used.
 
 <h3 class="pdoc-module-header" id="GetClusterResult" data-link-title="GetClusterResult">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L55">
         interface <strong>GetClusterResult</strong>
     </a>
 </h3>
@@ -1438,7 +1438,7 @@ If omitted, the `region` argument of the provider is used.
 A collection of values returned by getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-apiAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L59">property <b>apiAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L59">property <b>apiAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1446,7 +1446,7 @@ A collection of values returned by getCluster.
 COE API address.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterTemplateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L63">property <b>clusterTemplateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L63">property <b>clusterTemplateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterTemplateId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1454,7 +1454,7 @@ COE API address.
 The UUID of the V1 Container Infra cluster template.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-coeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L67">property <b>coeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L67">property <b>coeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coeVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1462,12 +1462,12 @@ The UUID of the V1 Container Infra cluster template.
 COE software version.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-containerVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L68">property <b>containerVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L68">property <b>containerVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-createTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L72">property <b>createTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L72">property <b>createTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTimeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1475,7 +1475,7 @@ COE software version.
 The timeout (in minutes) for creating the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L76">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L76">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1483,7 +1483,7 @@ The timeout (in minutes) for creating the cluster.
 The time at which cluster was created.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-discoveryUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L80">property <b>discoveryUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L80">property <b>discoveryUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>discoveryUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1491,7 +1491,7 @@ The time at which cluster was created.
 The URL used for cluster node discovery.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-dockerVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L84">property <b>dockerVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L84">property <b>dockerVolumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerVolumeSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1499,7 +1499,7 @@ The URL used for cluster node discovery.
 The size (in GB) of the Docker volume.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-fixedNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L88">property <b>fixedNetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L88">property <b>fixedNetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedNetwork: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1507,7 +1507,7 @@ The size (in GB) of the Docker volume.
 The fixed network that is attached to the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-fixedSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L92">property <b>fixedSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L92">property <b>fixedSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedSubnet: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1515,7 +1515,7 @@ The fixed network that is attached to the cluster.
 The fixed subnet that is attached to the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-flavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L96">property <b>flavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L96">property <b>flavor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flavor: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1523,12 +1523,12 @@ The fixed subnet that is attached to the cluster.
 The flavor for the nodes of the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-floatingIpEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L97">property <b>floatingIpEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L97">property <b>floatingIpEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>floatingIpEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L101">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L101">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1536,7 +1536,7 @@ The flavor for the nodes of the cluster.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-keypair">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L105">property <b>keypair</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L105">property <b>keypair</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keypair: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1544,7 +1544,7 @@ The provider-assigned unique ID for this managed resource.
 The name of the Compute service SSH keypair.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L110">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L110">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -1553,7 +1553,7 @@ The list of key value pairs representing additional properties of
 the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-masterAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L114">property <b>masterAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L114">property <b>masterAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1561,7 +1561,7 @@ the cluster.
 IP addresses of the master node of the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-masterCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L118">property <b>masterCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L118">property <b>masterCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1569,7 +1569,7 @@ IP addresses of the master node of the cluster.
 The number of master nodes for the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-masterFlavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L122">property <b>masterFlavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L122">property <b>masterFlavor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterFlavor: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1577,7 +1577,7 @@ The number of master nodes for the cluster.
 The flavor for the master nodes.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L126">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L126">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1585,7 +1585,7 @@ The flavor for the master nodes.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-nodeAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L130">property <b>nodeAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L130">property <b>nodeAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1593,7 +1593,7 @@ See Argument Reference above.
 IP addresses of the node of the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L134">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L134">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1601,7 +1601,7 @@ IP addresses of the node of the cluster.
 The number of nodes for the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L138">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L138">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1609,7 +1609,7 @@ The number of nodes for the cluster.
 The project of the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L142">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L142">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1617,7 +1617,7 @@ The project of the cluster.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-stackId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L146">property <b>stackId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L146">property <b>stackId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1625,7 +1625,7 @@ See Argument Reference above.
 UUID of the Orchestration service stack.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L150">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L150">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1633,7 +1633,7 @@ UUID of the Orchestration service stack.
 The time at which cluster was updated.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getCluster.ts#L154">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getCluster.ts#L154">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1641,7 +1641,7 @@ The time at which cluster was updated.
 The user of the cluster.
 
 <h3 class="pdoc-module-header" id="GetClusterTemplateArgs" data-link-title="GetClusterTemplateArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L40">
         interface <strong>GetClusterTemplateArgs</strong>
     </a>
 </h3>
@@ -1651,7 +1651,7 @@ The user of the cluster.
 A collection of arguments for invoking getClusterTemplate.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L44">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L44">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1659,7 +1659,7 @@ A collection of arguments for invoking getClusterTemplate.
 The name of the cluster template.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L50">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L50">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1669,7 +1669,7 @@ client.
 If omitted, the `region` argument of the provider is used.
 
 <h3 class="pdoc-module-header" id="GetClusterTemplateResult" data-link-title="GetClusterTemplateResult">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L56">
         interface <strong>GetClusterTemplateResult</strong>
     </a>
 </h3>
@@ -1679,7 +1679,7 @@ If omitted, the `region` argument of the provider is used.
 A collection of values returned by getClusterTemplate.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-apiserverPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L61">property <b>apiserverPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L61">property <b>apiserverPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiserverPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1688,7 +1688,7 @@ The API server port for the Container Orchestration
 Engine for this cluster template.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-clusterDistro">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L65">property <b>clusterDistro</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L65">property <b>clusterDistro</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterDistro: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1696,7 +1696,7 @@ Engine for this cluster template.
 The distro for the cluster (fedora-atomic, coreos, etc.).
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-coe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L69">property <b>coe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L69">property <b>coe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coe: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1704,7 +1704,7 @@ The distro for the cluster (fedora-atomic, coreos, etc.).
 The Container Orchestration Engine for this cluster template.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L73">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L73">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1712,7 +1712,7 @@ The Container Orchestration Engine for this cluster template.
 The time at which cluster template was created.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-dnsNameserver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L78">property <b>dnsNameserver</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L78">property <b>dnsNameserver</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsNameserver: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1721,7 +1721,7 @@ Address of the DNS nameserver that is used in nodes of the
 cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-dockerStorageDriver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L83">property <b>dockerStorageDriver</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L83">property <b>dockerStorageDriver</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerStorageDriver: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1730,7 +1730,7 @@ Docker storage driver. Changing this updates the
 Docker storage driver of the existing cluster template.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-dockerVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L87">property <b>dockerVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L87">property <b>dockerVolumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerVolumeSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1738,7 +1738,7 @@ Docker storage driver of the existing cluster template.
 The size (in GB) of the Docker volume.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-externalNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L92">property <b>externalNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L92">property <b>externalNetworkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalNetworkId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1747,7 +1747,7 @@ The ID of the external network that will be used for
 the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-fixedNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L96">property <b>fixedNetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L96">property <b>fixedNetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedNetwork: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1755,7 +1755,7 @@ the cluster.
 The fixed network that will be attached to the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-fixedSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L100">property <b>fixedSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L100">property <b>fixedSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedSubnet: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1763,7 +1763,7 @@ The fixed network that will be attached to the cluster.
 =The fixed subnet that will be attached to the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-flavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L104">property <b>flavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L104">property <b>flavor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flavor: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1771,7 +1771,7 @@ The fixed network that will be attached to the cluster.
 The flavor for the nodes of the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-floatingIpEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L109">property <b>floatingIpEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L109">property <b>floatingIpEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>floatingIpEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1780,7 +1780,7 @@ Indicates whether created cluster should create IP
 floating IP for every node or not.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-httpProxy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L114">property <b>httpProxy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L114">property <b>httpProxy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpProxy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1789,7 +1789,7 @@ The address of a proxy for receiving all HTTP requests and
 relay them.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-httpsProxy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L119">property <b>httpsProxy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L119">property <b>httpsProxy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsProxy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1798,7 +1798,7 @@ The address of a proxy for receiving all HTTPS requests and
 relay them.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L123">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L123">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1806,7 +1806,7 @@ relay them.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L127">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L127">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1814,7 +1814,7 @@ The provider-assigned unique ID for this managed resource.
 The reference to an image that is used for nodes of the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-insecureRegistry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L131">property <b>insecureRegistry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L131">property <b>insecureRegistry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insecureRegistry: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1822,7 +1822,7 @@ The reference to an image that is used for nodes of the cluster.
 The insecure registry URL for the cluster template.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-keypairId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L135">property <b>keypairId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L135">property <b>keypairId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keypairId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1830,7 +1830,7 @@ The insecure registry URL for the cluster template.
 The name of the Compute service SSH keypair.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L140">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L140">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -1839,7 +1839,7 @@ The list of key value pairs representing additional properties
 of the cluster template.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-masterFlavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L144">property <b>masterFlavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L144">property <b>masterFlavor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterFlavor: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1847,7 +1847,7 @@ of the cluster template.
 The flavor for the master nodes.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-masterLbEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L149">property <b>masterLbEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L149">property <b>masterLbEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterLbEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1856,7 +1856,7 @@ Indicates whether created cluster should has a
 loadbalancer for master nodes or not.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L153">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L153">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1864,7 +1864,7 @@ loadbalancer for master nodes or not.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-networkDriver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L157">property <b>networkDriver</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L157">property <b>networkDriver</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkDriver: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1872,7 +1872,7 @@ See Argument Reference above.
 The name of the driver for the container network.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-noProxy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L162">property <b>noProxy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L162">property <b>noProxy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noProxy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1881,7 +1881,7 @@ A comma-separated list of IP addresses that shouldn't be used in
 the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L166">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L166">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1889,7 +1889,7 @@ the cluster.
 The project of the cluster template.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-public">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L170">property <b>public</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L170">property <b>public</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>public: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1897,7 +1897,7 @@ The project of the cluster template.
 Indicates whether cluster template should be public.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L174">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L174">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1905,7 +1905,7 @@ Indicates whether cluster template should be public.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-registryEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L179">property <b>registryEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L179">property <b>registryEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registryEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1914,7 +1914,7 @@ Indicates whether Docker registry is enabled in the
 cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-serverType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L183">property <b>serverType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L183">property <b>serverType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1922,7 +1922,7 @@ cluster.
 The server type for the cluster template.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-tlsDisabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L187">property <b>tlsDisabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L187">property <b>tlsDisabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsDisabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1930,7 +1930,7 @@ The server type for the cluster template.
 Indicates whether the TLS should be disabled in the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L191">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L191">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1938,7 +1938,7 @@ Indicates whether the TLS should be disabled in the cluster.
 The time at which cluster template was updated.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L195">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L195">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1946,7 +1946,7 @@ The time at which cluster template was updated.
 The user of the cluster template.
 
 <h4 class="pdoc-member-header" id="GetClusterTemplateResult-volumeDriver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/716e95132dbe1032a5df03b01bcfa62403541d3c/sdk/nodejs/containerinfra/getClusterTemplate.ts#L200">property <b>volumeDriver</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/c1c363b15e3cde9b67c55610e3521ee1d15a78de/sdk/nodejs/containerinfra/getClusterTemplate.ts#L200">property <b>volumeDriver</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeDriver: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
