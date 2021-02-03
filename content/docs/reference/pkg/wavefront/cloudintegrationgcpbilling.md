@@ -49,7 +49,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-wavefront/sdk/go/wavefront"
+	"github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

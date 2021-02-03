@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.BlobInventoryPolicy reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The storage account blob inventory policy.
+Latest API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -26,21 +27,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blobInventoryPolicy = new AzureNextGen.Storage.V20200801Preview.BlobInventoryPolicy("blobInventoryPolicy", new AzureNextGen.Storage.V20200801Preview.BlobInventoryPolicyArgs
+        var blobInventoryPolicy = new AzureNextGen.Storage.Latest.BlobInventoryPolicy("blobInventoryPolicy", new AzureNextGen.Storage.Latest.BlobInventoryPolicyArgs
         {
             AccountName = "sto9699",
             BlobInventoryPolicyName = "default",
-            Policy = new AzureNextGen.Storage.V20200801Preview.Inputs.BlobInventoryPolicySchemaArgs
+            Policy = new AzureNextGen.Storage.Latest.Inputs.BlobInventoryPolicySchemaArgs
             {
                 Destination = "containerName",
                 Enabled = true,
                 Rules = 
                 {
-                    new AzureNextGen.Storage.V20200801Preview.Inputs.BlobInventoryPolicyRuleArgs
+                    new AzureNextGen.Storage.Latest.Inputs.BlobInventoryPolicyRuleArgs
                     {
-                        Definition = new AzureNextGen.Storage.V20200801Preview.Inputs.BlobInventoryPolicyDefinitionArgs
+                        Definition = new AzureNextGen.Storage.Latest.Inputs.BlobInventoryPolicyDefinitionArgs
                         {
-                            Filters = new AzureNextGen.Storage.V20200801Preview.Inputs.BlobInventoryPolicyFilterArgs
+                            Filters = new AzureNextGen.Storage.Latest.Inputs.BlobInventoryPolicyFilterArgs
                             {
                                 BlobTypes = 
                                 {
@@ -79,7 +80,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/v20200801preview"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -133,15 +134,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blob_inventory_policy = azure_nextgen.storage.v20200801preview.BlobInventoryPolicy("blobInventoryPolicy",
+blob_inventory_policy = azure_nextgen.storage.latest.BlobInventoryPolicy("blobInventoryPolicy",
     account_name="sto9699",
     blob_inventory_policy_name="default",
-    policy=azure_nextgen.storage.v20200801preview.BlobInventoryPolicySchemaArgs(
+    policy=azure_nextgen.storage.latest.BlobInventoryPolicySchemaArgs(
         destination="containerName",
         enabled=True,
-        rules=[azure_nextgen.storage.v20200801preview.BlobInventoryPolicyRuleArgs(
-            definition=azure_nextgen.storage.v20200801preview.BlobInventoryPolicyDefinitionArgs(
-                filters=azure_nextgen.storage.v20200801preview.BlobInventoryPolicyFilterArgs(
+        rules=[azure_nextgen.storage.latest.BlobInventoryPolicyRuleArgs(
+            definition=azure_nextgen.storage.latest.BlobInventoryPolicyDefinitionArgs(
+                filters=azure_nextgen.storage.latest.BlobInventoryPolicyFilterArgs(
                     blob_types=[
                         "blockBlob",
                         "appendBlob",
@@ -172,7 +173,7 @@ blob_inventory_policy = azure_nextgen.storage.v20200801preview.BlobInventoryPoli
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const blobInventoryPolicy = new azure_nextgen.storage.v20200801preview.BlobInventoryPolicy("blobInventoryPolicy", {
+const blobInventoryPolicy = new azure_nextgen.storage.latest.BlobInventoryPolicy("blobInventoryPolicy", {
     accountName: "sto9699",
     blobInventoryPolicyName: "default",
     policy: {
@@ -2124,7 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/v20200801preview:BlobInventoryPolicy DefaultInventoryPolicy /subscriptions/{subscription-id}/resourceGroups/res7687/providers/Microsoft.Storage/storageAccounts/sto9699/inventoryPolicies/default 
+$ pulumi import azure-nextgen:storage/latest:BlobInventoryPolicy DefaultInventoryPolicy /subscriptions/{subscription-id}/resourceGroups/res7687/providers/Microsoft.Storage/storageAccounts/sto9699/inventoryPolicies/default 
 ```
 
 

@@ -24,6 +24,16 @@ Explore the resources and functions of the web module in the Azure NextGen packa
     <li><a href="siteinstancedeploymentslot" title="SiteInstanceDeploymentSlot"><span class="symbol resource"></span>SiteInstanceDeploymentSlot</a></li>
     <li><a href="staticsite" title="StaticSite"><span class="symbol resource"></span>StaticSite</a></li>
     <li><a href="webapp" title="WebApp"><span class="symbol resource"></span>WebApp</a></li>
+    <li><a href="webappauthsettings" title="WebAppAuthSettings"><span class="symbol resource"></span>WebAppAuthSettings</a></li>
+    <li><a href="webappauthsettingsslot" title="WebAppAuthSettingsSlot"><span class="symbol resource"></span>WebAppAuthSettingsSlot</a></li>
+    <li><a href="webappauthsettingsv2" title="WebAppAuthSettingsV2"><span class="symbol resource"></span>WebAppAuthSettingsV2</a></li>
+    <li><a href="webappauthsettingsv2slot" title="WebAppAuthSettingsV2Slot"><span class="symbol resource"></span>WebAppAuthSettingsV2Slot</a></li>
+    <li><a href="webappazurestorageaccounts" title="WebAppAzureStorageAccounts"><span class="symbol resource"></span>WebAppAzureStorageAccounts</a></li>
+    <li><a href="webappazurestorageaccountsslot" title="WebAppAzureStorageAccountsSlot"><span class="symbol resource"></span>WebAppAzureStorageAccountsSlot</a></li>
+    <li><a href="webappbackupconfiguration" title="WebAppBackupConfiguration"><span class="symbol resource"></span>WebAppBackupConfiguration</a></li>
+    <li><a href="webappbackupconfigurationslot" title="WebAppBackupConfigurationSlot"><span class="symbol resource"></span>WebAppBackupConfigurationSlot</a></li>
+    <li><a href="webappconnectionstrings" title="WebAppConnectionStrings"><span class="symbol resource"></span>WebAppConnectionStrings</a></li>
+    <li><a href="webappconnectionstringsslot" title="WebAppConnectionStringsSlot"><span class="symbol resource"></span>WebAppConnectionStringsSlot</a></li>
     <li><a href="webappdeployment" title="WebAppDeployment"><span class="symbol resource"></span>WebAppDeployment</a></li>
     <li><a href="webappdeploymentslot" title="WebAppDeploymentSlot"><span class="symbol resource"></span>WebAppDeploymentSlot</a></li>
     <li><a href="webappdiagnosticlogsconfiguration" title="WebAppDiagnosticLogsConfiguration"><span class="symbol resource"></span>WebAppDiagnosticLogsConfiguration</a></li>
@@ -35,6 +45,8 @@ Explore the resources and functions of the web module in the Azure NextGen packa
     <li><a href="webapphybridconnection" title="WebAppHybridConnection"><span class="symbol resource"></span>WebAppHybridConnection</a></li>
     <li><a href="webapphybridconnectionslot" title="WebAppHybridConnectionSlot"><span class="symbol resource"></span>WebAppHybridConnectionSlot</a></li>
     <li><a href="webappinstancefunctionslot" title="WebAppInstanceFunctionSlot"><span class="symbol resource"></span>WebAppInstanceFunctionSlot</a></li>
+    <li><a href="webappmetadata" title="WebAppMetadata"><span class="symbol resource"></span>WebAppMetadata</a></li>
+    <li><a href="webappmetadataslot" title="WebAppMetadataSlot"><span class="symbol resource"></span>WebAppMetadataSlot</a></li>
     <li><a href="webapppremieraddon" title="WebAppPremierAddOn"><span class="symbol resource"></span>WebAppPremierAddOn</a></li>
     <li><a href="webapppremieraddonslot" title="WebAppPremierAddOnSlot"><span class="symbol resource"></span>WebAppPremierAddOnSlot</a></li>
     <li><a href="webappprivateendpointconnection" title="WebAppPrivateEndpointConnection"><span class="symbol resource"></span>WebAppPrivateEndpointConnection</a></li>
@@ -44,6 +56,8 @@ Explore the resources and functions of the web module in the Azure NextGen packa
     <li><a href="webapprelayserviceconnectionslot" title="WebAppRelayServiceConnectionSlot"><span class="symbol resource"></span>WebAppRelayServiceConnectionSlot</a></li>
     <li><a href="webappsiteextension" title="WebAppSiteExtension"><span class="symbol resource"></span>WebAppSiteExtension</a></li>
     <li><a href="webappsiteextensionslot" title="WebAppSiteExtensionSlot"><span class="symbol resource"></span>WebAppSiteExtensionSlot</a></li>
+    <li><a href="webappsitepushsettings" title="WebAppSitePushSettings"><span class="symbol resource"></span>WebAppSitePushSettings</a></li>
+    <li><a href="webappsitepushsettingsslot" title="WebAppSitePushSettingsSlot"><span class="symbol resource"></span>WebAppSitePushSettingsSlot</a></li>
     <li><a href="webappslot" title="WebAppSlot"><span class="symbol resource"></span>WebAppSlot</a></li>
     <li><a href="webappslotconfigurationnames" title="WebAppSlotConfigurationNames"><span class="symbol resource"></span>WebAppSlotConfigurationNames</a></li>
     <li><a href="webappsourcecontrol" title="WebAppSourceControl"><span class="symbol resource"></span>WebAppSourceControl</a></li>
@@ -52,6 +66,8 @@ Explore the resources and functions of the web module in the Azure NextGen packa
     <li><a href="webappswiftvirtualnetworkconnectionslot" title="WebAppSwiftVirtualNetworkConnectionSlot"><span class="symbol resource"></span>WebAppSwiftVirtualNetworkConnectionSlot</a></li>
     <li><a href="webappvnetconnection" title="WebAppVnetConnection"><span class="symbol resource"></span>WebAppVnetConnection</a></li>
     <li><a href="webappvnetconnectionslot" title="WebAppVnetConnectionSlot"><span class="symbol resource"></span>WebAppVnetConnectionSlot</a></li>
+    <li><a href="webapplicationsettings" title="WebApplicationSettings"><span class="symbol resource"></span>WebApplicationSettings</a></li>
+    <li><a href="webapplicationsettingsslot" title="WebApplicationSettingsSlot"><span class="symbol resource"></span>WebApplicationSettingsSlot</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -144,7 +160,7 @@ Explore the resources and functions of the web module in the Azure NextGen packa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
 

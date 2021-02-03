@@ -69,7 +69,7 @@ At the core of this architecture is a simple idea: that we should separate resou
 loosely-coupled, independently-manageable sets, based on risk and functionality.
 
 We suggest splitting infrastructure up into (roughly) six [Pulumi
-stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}) of resources.
+stacks]({{< relref "/docs/guides/organizing-projects-stacks" >}}) of resources.
 
 ### 1. Identity
 

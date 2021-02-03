@@ -86,7 +86,65 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPrivateLinkService(ctx, "privateLinkService", &network.PrivateLinkServiceArgs{
+			AutoApproval: &network.PrivateLinkServicePropertiesAutoApprovalArgs{
+				Subscriptions: pulumi.StringArray{
+					pulumi.String("subscription1"),
+					pulumi.String("subscription2"),
+				},
+			},
+			Fqdns: pulumi.StringArray{
+				pulumi.String("fqdn1"),
+				pulumi.String("fqdn2"),
+				pulumi.String("fqdn3"),
+			},
+			IpConfigurations: network.PrivateLinkServiceIpConfigurationArray{
+				&network.PrivateLinkServiceIpConfigurationArgs{
+					Name:                      pulumi.String("fe-lb"),
+					PrivateIPAddress:          pulumi.String("10.0.1.4"),
+					PrivateIPAddressVersion:   pulumi.String("IPv4"),
+					PrivateIPAllocationMethod: pulumi.String("Static"),
+					Subnet: &network.SubnetArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb"),
+					},
+				},
+			},
+			LoadBalancerFrontendIpConfigurations: network.FrontendIPConfigurationArray{
+				&network.FrontendIPConfigurationArgs{
+					Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb"),
+				},
+			},
+			Location:          pulumi.String("eastus"),
+			ResourceGroupName: pulumi.String("rg1"),
+			ServiceName:       pulumi.String("testPls"),
+			Visibility: &network.PrivateLinkServicePropertiesVisibilityArgs{
+				Subscriptions: pulumi.StringArray{
+					pulumi.String("subscription1"),
+					pulumi.String("subscription2"),
+					pulumi.String("subscription3"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}

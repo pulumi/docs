@@ -18,6 +18,11 @@ Explore the resources and functions of the runtimeconfig module in the GCP packa
     <li><a href="variable" title="Variable"><span class="symbol resource"></span>Variable</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getconfig" title="GetConfig"><span class="symbol function"></span>GetConfig</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -27,7 +32,7 @@ Explore the resources and functions of the runtimeconfig module in the GCP packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.9.0</dd>
+	<dd>4.10.0</dd>
 </dl>
 
 

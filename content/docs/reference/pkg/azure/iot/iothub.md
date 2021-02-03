@@ -16,6 +16,8 @@ Manages an IotHub
 
 > **NOTE:** Routes can be defined either directly on the `azure.iot.IoTHub` resource, or using the `azure.iot.Route` resource - but the two cannot be used together. If both are used against the same IoTHub, spurious changes will occur.
 
+> **NOTE:** Enrichments can be defined either directly on the `azure.iot.IoTHub` resource, or using the `azure.iot.Enrichment` resource - but the two cannot be used together. If both are used against the same IoTHub, spurious changes will occur.
+
 > **NOTE:** Fallback route can be defined either directly on the `azure.iot.IoTHub` resource, or using the `azure.iot.FallbackRoute` resource - but the two cannot be used together. If both are used against the same IoTHub, spurious changes will occur.
 
 {{% examples %}}
@@ -122,6 +124,19 @@ class MyStack : Stack
                     Enabled = true,
                 },
             },
+            Enrichments = 
+            {
+                new Azure.Iot.Inputs.IoTHubEnrichmentArgs
+                {
+                    Key = "tenant",
+                    Value = "$twin.tags.Tenant",
+                    EndpointNames = 
+                    {
+                        "export",
+                        "export2",
+                    },
+                },
+            },
             Tags = 
             {
                 { "purpose", "testing" },
@@ -139,6 +154,8 @@ class MyStack : Stack
 package main
 
 import (
+	"fmt"
+
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub"
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot"
@@ -240,6 +257,16 @@ func main() {
 					Enabled: pulumi.Bool(true),
 				},
 			},
+			Enrichments: iot.IoTHubEnrichmentArray{
+				&iot.IoTHubEnrichmentArgs{
+					Key:   pulumi.String("tenant"),
+					Value: pulumi.String(fmt.Sprintf("%v%v", "$", "twin.tags.Tenant")),
+					EndpointNames: pulumi.StringArray{
+						pulumi.String("export"),
+						pulumi.String("export2"),
+					},
+				},
+			},
 			Tags: pulumi.StringMap{
 				"purpose": pulumi.String("testing"),
 			},
@@ -322,6 +349,14 @@ example_io_t_hub = azure.iot.IoTHub("exampleIoTHub",
             enabled=True,
         ),
     ],
+    enrichments=[azure.iot.IoTHubEnrichmentArgs(
+        key="tenant",
+        value="$twin.tags.Tenant",
+        endpoint_names=[
+            "export",
+            "export2",
+        ],
+    )],
     tags={
         "purpose": "testing",
     })
@@ -403,6 +438,14 @@ const exampleIoTHub = new azure.iot.IoTHub("exampleIoTHub", {
             enabled: true,
         },
     ],
+    enrichments: [{
+        key: "tenant",
+        value: `$twin.tags.Tenant`,
+        endpointNames: [
+            "export",
+            "export2",
+        ],
+    }],
     tags: {
         purpose: "testing",
     },
@@ -423,7 +466,7 @@ const exampleIoTHub = new azure.iot.IoTHub("exampleIoTHub", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/iot/#pulumi_azure.iot.IoTHub">IoTHub</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">event_hub_partition_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">event_hub_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">fallback_route</span><span class="p">:</span> <span class="nx">Optional[IoTHubFallbackRouteArgs]</span> = None<span class="p">, </span><span class="nx">file_upload</span><span class="p">:</span> <span class="nx">Optional[IoTHubFileUploadArgs]</span> = None<span class="p">, </span><span class="nx">ip_filter_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubIpFilterRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubRouteArgs]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[IoTHubSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/iot/#pulumi_azure.iot.IoTHub">IoTHub</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">enrichments</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubEnrichmentArgs]]</span> = None<span class="p">, </span><span class="nx">event_hub_partition_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">event_hub_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">fallback_route</span><span class="p">:</span> <span class="nx">Optional[IoTHubFallbackRouteArgs]</span> = None<span class="p">, </span><span class="nx">file_upload</span><span class="p">:</span> <span class="nx">Optional[IoTHubFileUploadArgs]</span> = None<span class="p">, </span><span class="nx">ip_filter_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubIpFilterRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubRouteArgs]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[IoTHubSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -626,6 +669,16 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enrichments_csharp">
+<a href="#enrichments_csharp" style="color: inherit; text-decoration: inherit;">Enrichments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#iothubenrichment">List&lt;Io<wbr>THub<wbr>Enrichment<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `enrichment` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="eventhubpartitioncount_csharp">
 <a href="#eventhubpartitioncount_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Partition<wbr>Count</a>
 </span>
@@ -682,7 +735,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -772,6 +825,16 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enrichments_go">
+<a href="#enrichments_go" style="color: inherit; text-decoration: inherit;">Enrichments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#iothubenrichment">[]Io<wbr>THub<wbr>Enrichment</a></span>
+    </dt>
+    <dd>{{% md %}}A `enrichment` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="eventhubpartitioncount_go">
 <a href="#eventhubpartitioncount_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Partition<wbr>Count</a>
 </span>
@@ -828,7 +891,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -918,6 +981,16 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enrichments_nodejs">
+<a href="#enrichments_nodejs" style="color: inherit; text-decoration: inherit;">enrichments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#iothubenrichment">Io<wbr>THub<wbr>Enrichment[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `enrichment` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="eventhubpartitioncount_nodejs">
 <a href="#eventhubpartitioncount_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Partition<wbr>Count</a>
 </span>
@@ -974,7 +1047,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1064,6 +1137,16 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enrichments_python">
+<a href="#enrichments_python" style="color: inherit; text-decoration: inherit;">enrichments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#iothubenrichment">Sequence[Io<wbr>THub<wbr>Enrichment<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `enrichment` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="event_hub_partition_count_python">
 <a href="#event_hub_partition_count_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>partition_<wbr>count</a>
 </span>
@@ -1120,7 +1203,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1535,7 +1618,7 @@ Get an existing IoTHub resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">event_hub_events_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_hub_events_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_hub_operations_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_hub_operations_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_hub_partition_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">event_hub_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">fallback_route</span><span class="p">:</span> <span class="nx">Optional[IoTHubFallbackRouteArgs]</span> = None<span class="p">, </span><span class="nx">file_upload</span><span class="p">:</span> <span class="nx">Optional[IoTHubFileUploadArgs]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_filter_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubIpFilterRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubRouteArgs]]</span> = None<span class="p">, </span><span class="nx">shared_access_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubSharedAccessPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[IoTHubSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> IoTHub</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">enrichments</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubEnrichmentArgs]]</span> = None<span class="p">, </span><span class="nx">event_hub_events_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_hub_events_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_hub_operations_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_hub_operations_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_hub_partition_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">event_hub_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">fallback_route</span><span class="p">:</span> <span class="nx">Optional[IoTHubFallbackRouteArgs]</span> = None<span class="p">, </span><span class="nx">file_upload</span><span class="p">:</span> <span class="nx">Optional[IoTHubFileUploadArgs]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_filter_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubIpFilterRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubRouteArgs]]</span> = None<span class="p">, </span><span class="nx">shared_access_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubSharedAccessPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[IoTHubSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> IoTHub</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1660,6 +1743,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enrichments_csharp">
+<a href="#state_enrichments_csharp" style="color: inherit; text-decoration: inherit;">Enrichments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#iothubenrichment">List&lt;Io<wbr>THub<wbr>Enrichment<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `enrichment` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_eventhubeventsendpoint_csharp">
 <a href="#state_eventhubeventsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Events<wbr>Endpoint</a>
 </span>
@@ -1766,7 +1859,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1876,6 +1969,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enrichments_go">
+<a href="#state_enrichments_go" style="color: inherit; text-decoration: inherit;">Enrichments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#iothubenrichment">[]Io<wbr>THub<wbr>Enrichment</a></span>
+    </dt>
+    <dd>{{% md %}}A `enrichment` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_eventhubeventsendpoint_go">
 <a href="#state_eventhubeventsendpoint_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Events<wbr>Endpoint</a>
 </span>
@@ -1982,7 +2085,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2092,6 +2195,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enrichments_nodejs">
+<a href="#state_enrichments_nodejs" style="color: inherit; text-decoration: inherit;">enrichments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#iothubenrichment">Io<wbr>THub<wbr>Enrichment[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `enrichment` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_eventhubeventsendpoint_nodejs">
 <a href="#state_eventhubeventsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Events<wbr>Endpoint</a>
 </span>
@@ -2198,7 +2311,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2308,6 +2421,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enrichments_python">
+<a href="#state_enrichments_python" style="color: inherit; text-decoration: inherit;">enrichments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#iothubenrichment">Sequence[Io<wbr>THub<wbr>Enrichment<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `enrichment` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_event_hub_events_endpoint_python">
 <a href="#state_event_hub_events_endpoint_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>events_<wbr>endpoint</a>
 </span>
@@ -2414,7 +2537,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2912,6 +3035,164 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group in which the endpoint will be created.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="iothubenrichment">Io<wbr>THub<wbr>Enrichment</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IoTHubEnrichment">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#IoTHubEnrichment">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot?tab=doc#IoTHubEnrichmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot?tab=doc#IoTHubEnrichmentOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Iot.Inputs.IoTHubEnrichmentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Iot.Outputs.IoTHubEnrichment.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpointnames_csharp">
+<a href="#endpointnames_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of endpoints which will be enriched.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key of the enrichment.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the enrichment. Value can be any static string, the name of the IoT hub sending the message (use `$iothubname`) or information from the device twin (ex: `$twin.tags.latitude`)
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpointnames_go">
+<a href="#endpointnames_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of endpoints which will be enriched.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key of the enrichment.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the enrichment. Value can be any static string, the name of the IoT hub sending the message (use `$iothubname`) or information from the device twin (ex: `$twin.tags.latitude`)
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpointnames_nodejs">
+<a href="#endpointnames_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of endpoints which will be enriched.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key of the enrichment.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the enrichment. Value can be any static string, the name of the IoT hub sending the message (use `$iothubname`) or information from the device twin (ex: `$twin.tags.latitude`)
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoint_names_python">
+<a href="#endpoint_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of endpoints which will be enriched.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The key of the enrichment.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value of the enrichment. Value can be any static string, the name of the IoT hub sending the message (use `$iothubname`) or information from the device twin (ex: `$twin.tags.latitude`)
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

@@ -28,7 +28,7 @@ second, let's now see how to adopt existing resources.
 There are two ways to adopt existing resources so that Pulumi is able to manage subsequent updates to them. The first way is to use the
 [`import`]({{< relref "/docs/reference/cli/pulumi_import" >}}) cli command. This command specifies that a resource defined in
 your Pulumi program should adopt an existing resource from a cloud provider rather than creating a new one after running `pulumi up`.
-Another way is to use the [`import`]({{< relref "/docs/intro/concepts/programming-model#import" >}}) resource option.
+Another way is to use the [`import`]({{< relref "/docs/intro/concepts/resources#import" >}}) resource option.
 This resource option is defined in your Pulumi program, and like the `import` command, the `import` resource option adopts an existing resource in the cloud provider rather
 creating a new one. Using this option lets you specify
 the `import` behavior inside the Pulumi code for your infrastructure deployment, instead of outside of it in a manual workflow.
@@ -147,7 +147,7 @@ class MyStack : Stack
 
 After successfully importing a resource and adding the generated code to your program, you can run `pulumi up` and all subsequent operations
 will behave as though Pulumi provisioned the resource from the outset. The resource is added to the Pulumi
-[state](https://www.pulumi.com/docs/intro/concepts/state/#state), and marked as a [protected](https://www.pulumi.com/docs/intro/concepts/programming-model/#protect)
+[state]({{ relref "/docs/intro/concepts/state#state" >}}), and marked as a [protected]({{< relref "/docs/intro/concepts/resources#protect" >}})
 resource (by default) to ensure that imported infrastructure is not accidentally deleted if the user forgets to include the code for the resource in their program before doing a deployment.
 
 ### Pulumi Import Resource Operation
@@ -330,7 +330,7 @@ Diagnostics:
     error: imported resource sg-04aeda9a214730248's property 'ingress' does not match the existing value
 ```
 
-> **Note:** Because of [auto-naming]({{< relref "/docs/intro/concepts/programming-model#autonaming" >}}), it's common to accidentally get in a situation where names don't match. For example, if we left off the security group's name, `"my-sg-62a569b"`, in the earlier example, Pulumi would still auto-name the resource, leading to an error `imported resource sg-04aeda9a214730248's property 'name' does not match the existing value`. To fix this problem, make sure to specify names for all resources explicitly.
+> **Note:** Because of [auto-naming]({{< relref "/docs/intro/concepts/resources#autonaming" >}}), it's common to accidentally get in a situation where names don't match. For example, if we left off the security group's name, `"my-sg-62a569b"`, in the earlier example, Pulumi would still auto-name the resource, leading to an error `imported resource sg-04aeda9a214730248's property 'name' does not match the existing value`. To fix this problem, make sure to specify names for all resources explicitly.
 
 ### Bulk Import Operations
 

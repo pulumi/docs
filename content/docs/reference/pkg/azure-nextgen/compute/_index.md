@@ -12,8 +12,6 @@ Explore the resources and functions of the compute module in the Azure NextGen p
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="availabilityset" title="AvailabilitySet"><span class="symbol resource"></span>AvailabilitySet</a></li>
-    <li><a href="cloudservice" title="CloudService"><span class="symbol resource"></span>CloudService</a></li>
-    <li><a href="configurationprofileassignment" title="ConfigurationProfileAssignment"><span class="symbol resource"></span>ConfigurationProfileAssignment</a></li>
     <li><a href="dedicatedhost" title="DedicatedHost"><span class="symbol resource"></span>DedicatedHost</a></li>
     <li><a href="dedicatedhostgroup" title="DedicatedHostGroup"><span class="symbol resource"></span>DedicatedHostGroup</a></li>
     <li><a href="disk" title="Disk"><span class="symbol resource"></span>Disk</a></li>
@@ -25,7 +23,6 @@ Explore the resources and functions of the compute module in the Azure NextGen p
     <li><a href="galleryapplicationversion" title="GalleryApplicationVersion"><span class="symbol resource"></span>GalleryApplicationVersion</a></li>
     <li><a href="galleryimage" title="GalleryImage"><span class="symbol resource"></span>GalleryImage</a></li>
     <li><a href="galleryimageversion" title="GalleryImageVersion"><span class="symbol resource"></span>GalleryImageVersion</a></li>
-    <li><a href="guestconfigurationassignment" title="GuestConfigurationAssignment"><span class="symbol resource"></span>GuestConfigurationAssignment</a></li>
     <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
     <li><a href="proximityplacementgroup" title="ProximityPlacementGroup"><span class="symbol resource"></span>ProximityPlacementGroup</a></li>
     <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
@@ -43,8 +40,6 @@ Explore the resources and functions of the compute module in the Azure NextGen p
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getavailabilityset" title="GetAvailabilitySet"><span class="symbol function"></span>GetAvailabilitySet</a></li>
-    <li><a href="getcloudservice" title="GetCloudService"><span class="symbol function"></span>GetCloudService</a></li>
-    <li><a href="getconfigurationprofileassignment" title="GetConfigurationProfileAssignment"><span class="symbol function"></span>GetConfigurationProfileAssignment</a></li>
     <li><a href="getdedicatedhost" title="GetDedicatedHost"><span class="symbol function"></span>GetDedicatedHost</a></li>
     <li><a href="getdedicatedhostgroup" title="GetDedicatedHostGroup"><span class="symbol function"></span>GetDedicatedHostGroup</a></li>
     <li><a href="getdisk" title="GetDisk"><span class="symbol function"></span>GetDisk</a></li>
@@ -56,7 +51,6 @@ Explore the resources and functions of the compute module in the Azure NextGen p
     <li><a href="getgalleryapplicationversion" title="GetGalleryApplicationVersion"><span class="symbol function"></span>GetGalleryApplicationVersion</a></li>
     <li><a href="getgalleryimage" title="GetGalleryImage"><span class="symbol function"></span>GetGalleryImage</a></li>
     <li><a href="getgalleryimageversion" title="GetGalleryImageVersion"><span class="symbol function"></span>GetGalleryImageVersion</a></li>
-    <li><a href="getguestconfigurationassignment" title="GetGuestConfigurationAssignment"><span class="symbol function"></span>GetGuestConfigurationAssignment</a></li>
     <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
     <li><a href="getloganalyticexportrequestratebyinterval" title="GetLogAnalyticExportRequestRateByInterval"><span class="symbol function"></span>GetLogAnalyticExportRequestRateByInterval</a></li>
     <li><a href="getloganalyticexportthrottledrequests" title="GetLogAnalyticExportThrottledRequests"><span class="symbol function"></span>GetLogAnalyticExportThrottledRequests</a></li>
@@ -80,7 +74,7 @@ Explore the resources and functions of the compute module in the Azure NextGen p
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
 

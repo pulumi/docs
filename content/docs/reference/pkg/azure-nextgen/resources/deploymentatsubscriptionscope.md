@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.resources.DeploymentAtSubscripti
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Deployment information.
-Latest API Version: 2020-08-01.
+Latest API Version: 2020-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -1856,6 +1856,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="expressionevaluationoptions_csharp">
+<a href="#expressionevaluationoptions_csharp" style="color: inherit; text-decoration: inherit;">Expression<wbr>Evaluation<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressionevaluationoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Expression<wbr>Evaluation<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="onerrordeployment_csharp">
 <a href="#onerrordeployment_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Error<wbr>Deployment</a>
 </span>
@@ -1923,6 +1932,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#debugsetting">Debug<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expressionevaluationoptions_go">
+<a href="#expressionevaluationoptions_go" style="color: inherit; text-decoration: inherit;">Expression<wbr>Evaluation<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressionevaluationoptions">Expression<wbr>Evaluation<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="onerrordeployment_go">
@@ -1994,6 +2012,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="expressionevaluationoptions_nodejs">
+<a href="#expressionevaluationoptions_nodejs" style="color: inherit; text-decoration: inherit;">expression<wbr>Evaluation<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressionevaluationoptions">Expression<wbr>Evaluation<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="onerrordeployment_nodejs">
 <a href="#onerrordeployment_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Error<wbr>Deployment</a>
 </span>
@@ -2061,6 +2088,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#debugsetting">Debug<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expression_evaluation_options_python">
+<a href="#expression_evaluation_options_python" style="color: inherit; text-decoration: inherit;">expression_<wbr>evaluation_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressionevaluationoptions">Expression<wbr>Evaluation<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="on_error_deployment_python">
@@ -3048,6 +3084,114 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The error target.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="expressionevaluationoptions">Expression<wbr>Evaluation<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#expressionevaluationoptionsscopetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Expression<wbr>Evaluation<wbr>Options<wbr>Scope<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The scope to be used for evaluation of parameters, variables and functions in a nested template.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#expressionevaluationoptionsscopetype">Expression<wbr>Evaluation<wbr>Options<wbr>Scope<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The scope to be used for evaluation of parameters, variables and functions in a nested template.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#expressionevaluationoptionsscopetype">Expression<wbr>Evaluation<wbr>Options<wbr>Scope<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The scope to be used for evaluation of parameters, variables and functions in a nested template.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#expressionevaluationoptionsscopetype">Expression<wbr>Evaluation<wbr>Options<wbr>Scope<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The scope to be used for evaluation of parameters, variables and functions in a nested template.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="expressionevaluationoptionsscopetype">Expression<wbr>Evaluation<wbr>Options<wbr>Scope<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd>
+    <dt>Outer</dt>
+    <dd>Outer</dd>
+    <dt>Inner</dt>
+    <dd>Inner</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Expression<wbr>Evaluation<wbr>Options<wbr>Scope<wbr>Type<wbr>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd>
+    <dt>Expression<wbr>Evaluation<wbr>Options<wbr>Scope<wbr>Type<wbr>Outer</dt>
+    <dd>Outer</dd>
+    <dt>Expression<wbr>Evaluation<wbr>Options<wbr>Scope<wbr>Type<wbr>Inner</dt>
+    <dd>Inner</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd>
+    <dt>Outer</dt>
+    <dd>Outer</dd>
+    <dt>Inner</dt>
+    <dd>Inner</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>NOT_SPECIFIED</dt>
+    <dd>NotSpecified</dd>
+    <dt>OUTER</dt>
+    <dd>Outer</dd>
+    <dt>INNER</dt>
+    <dd>Inner</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4294,13 +4438,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="querystring_csharp">
+<a href="#querystring_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="relativepath_csharp">
 <a href="#relativepath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.{{% /md %}}</dd>
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
@@ -4336,13 +4489,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="querystring_go">
+<a href="#querystring_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="relativepath_go">
 <a href="#relativepath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.{{% /md %}}</dd>
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uri_go">
@@ -4378,13 +4540,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="querystring_nodejs">
+<a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="relativepath_nodejs">
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.{{% /md %}}</dd>
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
@@ -4420,13 +4591,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="query_string_python">
+<a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="relative_path_python">
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.{{% /md %}}</dd>
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uri_python">
@@ -4464,13 +4644,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="querystring_csharp">
+<a href="#querystring_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="relativepath_csharp">
 <a href="#relativepath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.{{% /md %}}</dd>
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
@@ -4506,13 +4695,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="querystring_go">
+<a href="#querystring_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="relativepath_go">
 <a href="#relativepath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.{{% /md %}}</dd>
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uri_go">
@@ -4548,13 +4746,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="querystring_nodejs">
+<a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="relativepath_nodejs">
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.{{% /md %}}</dd>
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
@@ -4590,13 +4797,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="query_string_python">
+<a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="relative_path_python">
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.{{% /md %}}</dd>
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uri_python">

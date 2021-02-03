@@ -534,6 +534,144 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicasPolicy", {
 
 {{% /example %}}
 
+### MSK / Kafka Autoscaling
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mskTarget = new Aws.AppAutoScaling.Target("mskTarget", new Aws.AppAutoScaling.TargetArgs
+        {
+            ServiceNamespace = "kafka",
+            ScalableDimension = "kafka:broker-storage:VolumeSize",
+            ResourceId = aws_msk_cluster.Example.Arn,
+            MinCapacity = 1,
+            MaxCapacity = 8,
+        });
+        var targets = new Aws.AppAutoScaling.Policy("targets", new Aws.AppAutoScaling.PolicyArgs
+        {
+            ServiceNamespace = mskTarget.ServiceNamespace,
+            ScalableDimension = mskTarget.ScalableDimension,
+            ResourceId = mskTarget.ResourceId,
+            PolicyType = "TargetTrackingScaling",
+            TargetTrackingScalingPolicyConfiguration = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs
+            {
+                PredefinedMetricSpecification = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs
+                {
+                    PredefinedMetricType = "KafkaBrokerStorageUtilization",
+                },
+                TargetValue = 55,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		mskTarget, err := appautoscaling.NewTarget(ctx, "mskTarget", &appautoscaling.TargetArgs{
+			ServiceNamespace:  pulumi.String("kafka"),
+			ScalableDimension: pulumi.String("kafka:broker-storage:VolumeSize"),
+			ResourceId:        pulumi.Any(aws_msk_cluster.Example.Arn),
+			MinCapacity:       pulumi.Int(1),
+			MaxCapacity:       pulumi.Int(8),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appautoscaling.NewPolicy(ctx, "targets", &appautoscaling.PolicyArgs{
+			ServiceNamespace:  mskTarget.ServiceNamespace,
+			ScalableDimension: mskTarget.ScalableDimension,
+			ResourceId:        mskTarget.ResourceId,
+			PolicyType:        pulumi.String("TargetTrackingScaling"),
+			TargetTrackingScalingPolicyConfiguration: &appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationArgs{
+				PredefinedMetricSpecification: &appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs{
+					PredefinedMetricType: pulumi.String("KafkaBrokerStorageUtilization"),
+				},
+				TargetValue: pulumi.Float64(55),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+msk_target = aws.appautoscaling.Target("mskTarget",
+    service_namespace="kafka",
+    scalable_dimension="kafka:broker-storage:VolumeSize",
+    resource_id=aws_msk_cluster["example"]["arn"],
+    min_capacity=1,
+    max_capacity=8)
+targets = aws.appautoscaling.Policy("targets",
+    service_namespace=msk_target.service_namespace,
+    scalable_dimension=msk_target.scalable_dimension,
+    resource_id=msk_target.resource_id,
+    policy_type="TargetTrackingScaling",
+    target_tracking_scaling_policy_configuration=aws.appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationArgs(
+        predefined_metric_specification=aws.appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs(
+            predefined_metric_type="KafkaBrokerStorageUtilization",
+        ),
+        target_value=55,
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const mskTarget = new aws.appautoscaling.Target("mskTarget", {
+    serviceNamespace: "kafka",
+    scalableDimension: "kafka:broker-storage:VolumeSize",
+    resourceId: aws_msk_cluster.example.arn,
+    minCapacity: 1,
+    maxCapacity: 8,
+});
+const targets = new aws.appautoscaling.Policy("targets", {
+    serviceNamespace: mskTarget.serviceNamespace,
+    scalableDimension: mskTarget.scalableDimension,
+    resourceId: mskTarget.resourceId,
+    policyType: "TargetTrackingScaling",
+    targetTrackingScalingPolicyConfiguration: {
+        predefinedMetricSpecification: {
+            predefinedMetricType: "KafkaBrokerStorageUtilization",
+        },
+        targetValue: 55,
+    },
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 

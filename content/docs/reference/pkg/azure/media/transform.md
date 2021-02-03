@@ -757,7 +757,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutput">[]Transform<wbr>Output</a></span>
+        <span class="property-type"><a href="#transformoutput">[]Transform<wbr>Output<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}One or more `output` blocks as defined below. At least one `output` must be defined.
 {{% /md %}}</dd>
@@ -1161,7 +1161,7 @@ The following state arguments are supported:
 <a href="#state_outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutput">[]Transform<wbr>Output</a></span>
+        <span class="property-type"><a href="#transformoutput">[]Transform<wbr>Output<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}One or more `output` blocks as defined below. At least one `output` must be defined.
 {{% /md %}}</dd>
@@ -1305,7 +1305,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/media?tab=doc#TransformOutputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/media?tab=doc#TransformOutputOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/media?tab=doc#TransformOutputTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/media?tab=doc#TransformOutputTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

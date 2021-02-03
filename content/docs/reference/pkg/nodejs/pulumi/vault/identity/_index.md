@@ -3,7 +3,7 @@ title: "Module identity"
 title_tag: "Module identity | Package @pulumi/vault | Node.js SDK"
 linktitle: "identity"
 meta_desc: "Explore members of the identity module in the @pulumi/vault package."
-git_sha: "ebbace55ace6f59a082f504fcae2277b394db92f"
+git_sha: "d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2"
 block_external_search_index: true
 ---
 
@@ -69,7 +69,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Entity" data-link-title="Entity">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L16">
         Resource <strong>Entity</strong>
     </a>
 </h3>
@@ -85,7 +85,7 @@ Identity entity can be imported using the `id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Entity-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L63"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L63"> <b>constructor</b></a>
 </h4>
 
 
@@ -99,7 +99,7 @@ Create a Entity resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Entity-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -110,14 +110,14 @@ Get an existing Entity resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Entity-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Entity-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -128,7 +128,7 @@ Returns true if the given object is an instance of Entity.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Entity-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L47">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L47">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -136,7 +136,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 True/false Is this entity currently disabled. Defaults to `false`
 
 <h4 class="pdoc-member-header" id="Entity-externalPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L51">property <b>externalPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L51">property <b>externalPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ True/false Is this entity currently disabled. Defaults to `false`
 `false` by default. If set to `true`, this resource will ignore any policies return from Vault or specified in the resource. You can use `vault.identity.EntityPolicies` to manage policies for this entity in a decoupled manner.
 
 <h4 class="pdoc-member-header" id="Entity-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -153,7 +153,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Entity-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L55">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L55">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ deployments and may be missing (undefined) during planning phases.
 A Map of additional metadata to associate with the user.
 
 <h4 class="pdoc-member-header" id="Entity-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L59">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -169,7 +169,7 @@ A Map of additional metadata to associate with the user.
 Name of the identity entity to create.
 
 <h4 class="pdoc-member-header" id="Entity-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L63">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L63">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ Name of the identity entity to create.
 A list of policies to apply to the entity.
 
 <h4 class="pdoc-member-header" id="Entity-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -186,7 +186,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EntityAlias" data-link-title="EntityAlias">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L16">
         Resource <strong>EntityAlias</strong>
     </a>
 </h3>
@@ -202,7 +202,7 @@ Identity entity alias can be imported using the `id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="EntityAlias-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L55"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L55"> <b>constructor</b></a>
 </h4>
 
 
@@ -216,7 +216,7 @@ Create a EntityAlias resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EntityAlias-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -227,14 +227,14 @@ Get an existing EntityAlias resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EntityAlias-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EntityAlias-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -245,7 +245,7 @@ Returns true if the given object is an instance of EntityAlias.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EntityAlias-canonicalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L47">property <b>canonicalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L47">property <b>canonicalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>canonicalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -253,7 +253,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Entity ID to which this alias belongs to.
 
 <h4 class="pdoc-member-header" id="EntityAlias-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -262,7 +262,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EntityAlias-mountAccessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L51">property <b>mountAccessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L51">property <b>mountAccessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mountAccessor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -270,7 +270,7 @@ deployments and may be missing (undefined) during planning phases.
 Accessor of the mount to which the alias should belong to.
 
 <h4 class="pdoc-member-header" id="EntityAlias-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L55">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L55">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -278,7 +278,7 @@ Accessor of the mount to which the alias should belong to.
 Name of the alias. Name should be the identifier of the client in the authentication source. For example, if the alias belongs to userpass backend, the name should be a valid username within userpass backend. If alias belongs to GitHub, it should be the GitHub username.
 
 <h4 class="pdoc-member-header" id="EntityAlias-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -287,7 +287,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EntityPolicies" data-link-title="EntityPolicies">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L49">
         Resource <strong>EntityPolicies</strong>
     </a>
 </h3>
@@ -336,7 +336,7 @@ const others = new vault.identity.EntityPolicies("others", {
 ```
 
 <h4 class="pdoc-member-header" id="EntityPolicies-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L92"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -350,7 +350,7 @@ Create a EntityPolicies resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EntityPolicies-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -361,14 +361,14 @@ Get an existing EntityPolicies resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EntityPolicies-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EntityPolicies-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -379,7 +379,7 @@ Returns true if the given object is an instance of EntityPolicies.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EntityPolicies-entityId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L80">property <b>entityId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L80">property <b>entityId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entityId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -387,7 +387,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Entity ID to assign policies to.
 
 <h4 class="pdoc-member-header" id="EntityPolicies-entityName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L84">property <b>entityName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L84">property <b>entityName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entityName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -395,7 +395,7 @@ Entity ID to assign policies to.
 The name of the entity that are assigned the policies.
 
 <h4 class="pdoc-member-header" id="EntityPolicies-exclusive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L88">property <b>exclusive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L88">property <b>exclusive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>exclusive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -403,7 +403,7 @@ The name of the entity that are assigned the policies.
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="EntityPolicies-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -412,7 +412,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EntityPolicies-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L92">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L92">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -420,7 +420,7 @@ deployments and may be missing (undefined) during planning phases.
 List of policies to assign to the entity
 
 <h4 class="pdoc-member-header" id="EntityPolicies-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -429,7 +429,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Group" data-link-title="Group">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L45">
         Resource <strong>Group</strong>
     </a>
 </h3>
@@ -474,7 +474,7 @@ const group = new vault.identity.Group("group", {
 ```
 
 <h4 class="pdoc-member-header" id="Group-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L104"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L104"> <b>constructor</b></a>
 </h4>
 
 
@@ -488,7 +488,7 @@ Create a Group resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Group-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L55">method <b>get</b></a>
 </h4>
 
 
@@ -499,14 +499,14 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Group-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L45">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L45">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Group-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -517,7 +517,7 @@ Returns true if the given object is an instance of Group.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Group-externalMemberEntityIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L76">property <b>externalMemberEntityIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L76">property <b>externalMemberEntityIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalMemberEntityIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -525,7 +525,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 `false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
 
 <h4 class="pdoc-member-header" id="Group-externalPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L80">property <b>externalPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L80">property <b>externalPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -533,7 +533,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 `false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
 
 <h4 class="pdoc-member-header" id="Group-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -542,7 +542,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Group-memberEntityIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L84">property <b>memberEntityIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L84">property <b>memberEntityIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memberEntityIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -550,7 +550,7 @@ deployments and may be missing (undefined) during planning phases.
 A list of Entity IDs to be assigned as group members. Not allowed on `external` groups.
 
 <h4 class="pdoc-member-header" id="Group-memberGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L88">property <b>memberGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L88">property <b>memberGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memberGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -558,7 +558,7 @@ A list of Entity IDs to be assigned as group members. Not allowed on `external` 
 A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
 
 <h4 class="pdoc-member-header" id="Group-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L92">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L92">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -566,7 +566,7 @@ A list of Group IDs to be assigned as group members. Not allowed on `external` g
 A Map of additional metadata to associate with the group.
 
 <h4 class="pdoc-member-header" id="Group-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L96">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L96">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -574,7 +574,7 @@ A Map of additional metadata to associate with the group.
 Name of the identity group to create.
 
 <h4 class="pdoc-member-header" id="Group-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L100">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L100">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -582,7 +582,7 @@ Name of the identity group to create.
 A list of policies to apply to the group.
 
 <h4 class="pdoc-member-header" id="Group-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L104">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L104">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -590,7 +590,7 @@ A list of policies to apply to the group.
 Type of the group, internal or external. Defaults to `internal`.
 
 <h4 class="pdoc-member-header" id="Group-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L45">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L45">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -599,7 +599,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="GroupAlias" data-link-title="GroupAlias">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L33">
         Resource <strong>GroupAlias</strong>
     </a>
 </h3>
@@ -632,7 +632,7 @@ const group_alias = new vault.identity.GroupAlias("group-alias", {
 ```
 
 <h4 class="pdoc-member-header" id="GroupAlias-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L72"> <b>constructor</b></a>
 </h4>
 
 
@@ -646,7 +646,7 @@ Create a GroupAlias resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GroupAlias-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -657,14 +657,14 @@ Get an existing GroupAlias resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GroupAlias-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GroupAlias-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -675,7 +675,7 @@ Returns true if the given object is an instance of GroupAlias.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GroupAlias-canonicalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L64">property <b>canonicalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L64">property <b>canonicalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>canonicalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -683,7 +683,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 ID of the group to which this is an alias.
 
 <h4 class="pdoc-member-header" id="GroupAlias-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -692,7 +692,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GroupAlias-mountAccessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L68">property <b>mountAccessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L68">property <b>mountAccessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mountAccessor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -700,7 +700,7 @@ deployments and may be missing (undefined) during planning phases.
 Mount accessor of the authentication backend to which this alias belongs to.
 
 <h4 class="pdoc-member-header" id="GroupAlias-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -708,7 +708,7 @@ Mount accessor of the authentication backend to which this alias belongs to.
 Name of the group alias to create.
 
 <h4 class="pdoc-member-header" id="GroupAlias-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -717,7 +717,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="GroupMemberEntityIds" data-link-title="GroupMemberEntityIds">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L62">
         Resource <strong>GroupMemberEntityIds</strong>
     </a>
 </h3>
@@ -779,7 +779,7 @@ const others = new vault.identity.GroupMemberEntityIds("others", {
 ```
 
 <h4 class="pdoc-member-header" id="GroupMemberEntityIds-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L105"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L105"> <b>constructor</b></a>
 </h4>
 
 
@@ -793,7 +793,7 @@ Create a GroupMemberEntityIds resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GroupMemberEntityIds-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L72">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L72">method <b>get</b></a>
 </h4>
 
 
@@ -804,14 +804,14 @@ Get an existing GroupMemberEntityIds resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GroupMemberEntityIds-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L62">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L62">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GroupMemberEntityIds-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L83">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L83">method <b>isInstance</b></a>
 </h4>
 
 
@@ -822,7 +822,7 @@ Returns true if the given object is an instance of GroupMemberEntityIds.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GroupMemberEntityIds-exclusive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L93">property <b>exclusive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L93">property <b>exclusive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>exclusive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -830,7 +830,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupMemberEntityIds-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L97">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L97">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -838,7 +838,7 @@ Defaults to `true`.
 Group ID to assign member entities to.
 
 <h4 class="pdoc-member-header" id="GroupMemberEntityIds-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L101">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L101">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -846,7 +846,7 @@ Group ID to assign member entities to.
 The name of the group that are assigned the member entities.
 
 <h4 class="pdoc-member-header" id="GroupMemberEntityIds-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -855,7 +855,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GroupMemberEntityIds-memberEntityIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L105">property <b>memberEntityIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L105">property <b>memberEntityIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memberEntityIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -863,7 +863,7 @@ deployments and may be missing (undefined) during planning phases.
 List of member entities that belong to the group
 
 <h4 class="pdoc-member-header" id="GroupMemberEntityIds-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L62">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L62">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -872,7 +872,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="GroupPolicies" data-link-title="GroupPolicies">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L61">
         Resource <strong>GroupPolicies</strong>
     </a>
 </h3>
@@ -933,7 +933,7 @@ const others = new vault.identity.GroupPolicies("others", {
 ```
 
 <h4 class="pdoc-member-header" id="GroupPolicies-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L104"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L104"> <b>constructor</b></a>
 </h4>
 
 
@@ -947,7 +947,7 @@ Create a GroupPolicies resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GroupPolicies-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L71">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L71">method <b>get</b></a>
 </h4>
 
 
@@ -958,14 +958,14 @@ Get an existing GroupPolicies resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GroupPolicies-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L61">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L61">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GroupPolicies-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L82">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L82">method <b>isInstance</b></a>
 </h4>
 
 
@@ -976,7 +976,7 @@ Returns true if the given object is an instance of GroupPolicies.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GroupPolicies-exclusive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L92">property <b>exclusive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L92">property <b>exclusive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>exclusive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -984,7 +984,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupPolicies-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L96">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L96">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -992,7 +992,7 @@ Defaults to `true`.
 Group ID to assign policies to.
 
 <h4 class="pdoc-member-header" id="GroupPolicies-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L100">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L100">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1000,7 +1000,7 @@ Group ID to assign policies to.
 The name of the group that are assigned the policies.
 
 <h4 class="pdoc-member-header" id="GroupPolicies-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1009,7 +1009,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GroupPolicies-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L104">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L104">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1017,7 +1017,7 @@ deployments and may be missing (undefined) during planning phases.
 List of policies to assign to the group
 
 <h4 class="pdoc-member-header" id="GroupPolicies-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L61">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L61">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1026,7 +1026,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Oidc" data-link-title="Oidc">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidc.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidc.ts#L26">
         Resource <strong>Oidc</strong>
     </a>
 </h3>
@@ -1052,7 +1052,7 @@ const server = new vault.identity.Oidc("server", {
 ```
 
 <h4 class="pdoc-member-header" id="Oidc-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidc.ts#L60"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidc.ts#L60"> <b>constructor</b></a>
 </h4>
 
 
@@ -1066,7 +1066,7 @@ Create a Oidc resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Oidc-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidc.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidc.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -1077,14 +1077,14 @@ Get an existing Oidc resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Oidc-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidc.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidc.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Oidc-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidc.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidc.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1095,7 +1095,7 @@ Returns true if the given object is an instance of Oidc.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Oidc-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidc.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidc.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1104,7 +1104,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Oidc-issuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidc.ts#L60">property <b>issuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidc.ts#L60">property <b>issuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1115,7 +1115,7 @@ scheme, host, and optionally, port number and path components, but no query or f
 components.
 
 <h4 class="pdoc-member-header" id="Oidc-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidc.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidc.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1124,7 +1124,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="OidcKey" data-link-title="OidcKey">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L16">
         Resource <strong>OidcKey</strong>
     </a>
 </h3>
@@ -1140,7 +1140,7 @@ The key can be imported with the key name, for example
 ```
 
 <h4 class="pdoc-member-header" id="OidcKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
@@ -1154,7 +1154,7 @@ Create a OidcKey resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OidcKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -1165,14 +1165,14 @@ Get an existing OidcKey resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OidcKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OidcKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1183,7 +1183,7 @@ Returns true if the given object is an instance of OidcKey.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OidcKey-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L48">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L48">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>algorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1192,7 +1192,7 @@ Signing algorithm to use. Signing algorithm to use.
 Allowed values are: RS256 (default), RS384, RS512, ES256, ES384, ES512, EdDSA.
 
 <h4 class="pdoc-member-header" id="OidcKey-allowedClientIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L53">property <b>allowedClientIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L53">property <b>allowedClientIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedClientIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1201,7 +1201,7 @@ Array of role client ids allowed to use this key for signing. If empty, no roles
 allowed.
 
 <h4 class="pdoc-member-header" id="OidcKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1210,7 +1210,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OidcKey-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L57">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1218,7 +1218,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the OIDC Key to create.
 
 <h4 class="pdoc-member-header" id="OidcKey-rotationPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L61">property <b>rotationPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L61">property <b>rotationPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rotationPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1226,7 +1226,7 @@ Name of the OIDC Key to create.
 How often to generate a new signing key in number of seconds
 
 <h4 class="pdoc-member-header" id="OidcKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1235,7 +1235,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="OidcKey-verificationTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L66">property <b>verificationTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L66">property <b>verificationTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>verificationTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1244,14 +1244,14 @@ deployments.
 available for verification after being rotated in seconds.
 
 <h3 class="pdoc-module-header" id="OidcKeyAllowedClientID" data-link-title="OidcKeyAllowedClientID">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L7">
         Resource <strong>OidcKeyAllowedClientID</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>OidcKeyAllowedClientID</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="OidcKeyAllowedClientID-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L42"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L42"> <b>constructor</b></a>
 </h4>
 
 
@@ -1265,7 +1265,7 @@ Create a OidcKeyAllowedClientID resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OidcKeyAllowedClientID-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -1276,14 +1276,14 @@ Get an existing OidcKeyAllowedClientID resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OidcKeyAllowedClientID-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OidcKeyAllowedClientID-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1294,7 +1294,7 @@ Returns true if the given object is an instance of OidcKeyAllowedClientID.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OidcKeyAllowedClientID-allowedClientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L38">property <b>allowedClientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L38">property <b>allowedClientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1302,7 +1302,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Client ID to allow usage with the OIDC named key
 
 <h4 class="pdoc-member-header" id="OidcKeyAllowedClientID-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1311,7 +1311,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OidcKeyAllowedClientID-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L42">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L42">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1319,7 +1319,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the OIDC Key allow the Client ID.
 
 <h4 class="pdoc-member-header" id="OidcKeyAllowedClientID-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1328,7 +1328,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="OidcRole" data-link-title="OidcRole">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L16">
         Resource <strong>OidcRole</strong>
     </a>
 </h3>
@@ -1344,7 +1344,7 @@ The key can be imported with the role name, for example
 ```
 
 <h4 class="pdoc-member-header" id="OidcRole-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -1358,7 +1358,7 @@ Create a OidcRole resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OidcRole-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -1369,14 +1369,14 @@ Get an existing OidcRole resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OidcRole-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OidcRole-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1387,7 +1387,7 @@ Returns true if the given object is an instance of OidcRole.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OidcRole-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L48">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L48">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1396,7 +1396,7 @@ The value that will be included in the `aud` field of all the OIDC identity
 tokens issued by this role
 
 <h4 class="pdoc-member-header" id="OidcRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1405,7 +1405,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OidcRole-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L53">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L53">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1414,7 +1414,7 @@ A configured named key, the key must already exist
 before tokens can be issued.
 
 <h4 class="pdoc-member-header" id="OidcRole-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L57">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1422,7 +1422,7 @@ before tokens can be issued.
 Name of the OIDC Role to create.
 
 <h4 class="pdoc-member-header" id="OidcRole-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L64">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L64">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1433,7 +1433,7 @@ string-ified JSON or base64 format. See the
 for the template format.
 
 <h4 class="pdoc-member-header" id="OidcRole-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L68">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L68">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1441,7 +1441,7 @@ for the template format.
 TTL of the tokens generated against the role in number of seconds.
 
 <h4 class="pdoc-member-header" id="OidcRole-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1452,7 +1452,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getEntity" data-link-title="getEntity">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L8">
         Function <strong>getEntity</strong>
     </a>
 </h3>
@@ -1461,7 +1461,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getEntity(args?: <a href='#GetEntityArgs'>GetEntityArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetEntityResult'>GetEntityResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getGroup" data-link-title="getGroup">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L8">
         Function <strong>getGroup</strong>
     </a>
 </h3>
@@ -1472,7 +1472,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="EntityAliasArgs" data-link-title="EntityAliasArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L116">
         interface <strong>EntityAliasArgs</strong>
     </a>
 </h3>
@@ -1482,7 +1482,7 @@ deployments.
 The set of arguments for constructing a EntityAlias resource.
 
 <h4 class="pdoc-member-header" id="EntityAliasArgs-canonicalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L120">property <b>canonicalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L120">property <b>canonicalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canonicalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1490,7 +1490,7 @@ The set of arguments for constructing a EntityAlias resource.
 Entity ID to which this alias belongs to.
 
 <h4 class="pdoc-member-header" id="EntityAliasArgs-mountAccessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L124">property <b>mountAccessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L124">property <b>mountAccessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mountAccessor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1498,7 +1498,7 @@ Entity ID to which this alias belongs to.
 Accessor of the mount to which the alias should belong to.
 
 <h4 class="pdoc-member-header" id="EntityAliasArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L128">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L128">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1506,7 +1506,7 @@ Accessor of the mount to which the alias should belong to.
 Name of the alias. Name should be the identifier of the client in the authentication source. For example, if the alias belongs to userpass backend, the name should be a valid username within userpass backend. If alias belongs to GitHub, it should be the GitHub username.
 
 <h3 class="pdoc-module-header" id="EntityAliasState" data-link-title="EntityAliasState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L98">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L98">
         interface <strong>EntityAliasState</strong>
     </a>
 </h3>
@@ -1516,7 +1516,7 @@ Name of the alias. Name should be the identifier of the client in the authentica
 Input properties used for looking up and filtering EntityAlias resources.
 
 <h4 class="pdoc-member-header" id="EntityAliasState-canonicalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L102">property <b>canonicalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L102">property <b>canonicalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canonicalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1524,7 +1524,7 @@ Input properties used for looking up and filtering EntityAlias resources.
 Entity ID to which this alias belongs to.
 
 <h4 class="pdoc-member-header" id="EntityAliasState-mountAccessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L106">property <b>mountAccessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L106">property <b>mountAccessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mountAccessor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1532,7 +1532,7 @@ Entity ID to which this alias belongs to.
 Accessor of the mount to which the alias should belong to.
 
 <h4 class="pdoc-member-header" id="EntityAliasState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityAlias.ts#L110">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityAlias.ts#L110">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1540,7 +1540,7 @@ Accessor of the mount to which the alias should belong to.
 Name of the alias. Name should be the identifier of the client in the authentication source. For example, if the alias belongs to userpass backend, the name should be a valid username within userpass backend. If alias belongs to GitHub, it should be the GitHub username.
 
 <h3 class="pdoc-module-header" id="EntityArgs" data-link-title="EntityArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L130">
         interface <strong>EntityArgs</strong>
     </a>
 </h3>
@@ -1550,7 +1550,7 @@ Name of the alias. Name should be the identifier of the client in the authentica
 The set of arguments for constructing a Entity resource.
 
 <h4 class="pdoc-member-header" id="EntityArgs-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L134">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L134">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1558,7 +1558,7 @@ The set of arguments for constructing a Entity resource.
 True/false Is this entity currently disabled. Defaults to `false`
 
 <h4 class="pdoc-member-header" id="EntityArgs-externalPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L138">property <b>externalPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L138">property <b>externalPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1566,7 +1566,7 @@ True/false Is this entity currently disabled. Defaults to `false`
 `false` by default. If set to `true`, this resource will ignore any policies return from Vault or specified in the resource. You can use `vault.identity.EntityPolicies` to manage policies for this entity in a decoupled manner.
 
 <h4 class="pdoc-member-header" id="EntityArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L142">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L142">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1574,7 +1574,7 @@ True/false Is this entity currently disabled. Defaults to `false`
 A Map of additional metadata to associate with the user.
 
 <h4 class="pdoc-member-header" id="EntityArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L146">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L146">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1582,7 +1582,7 @@ A Map of additional metadata to associate with the user.
 Name of the identity entity to create.
 
 <h4 class="pdoc-member-header" id="EntityArgs-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L150">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L150">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1590,7 +1590,7 @@ Name of the identity entity to create.
 A list of policies to apply to the entity.
 
 <h3 class="pdoc-module-header" id="EntityPoliciesArgs" data-link-title="EntityPoliciesArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L159">
         interface <strong>EntityPoliciesArgs</strong>
     </a>
 </h3>
@@ -1600,7 +1600,7 @@ A list of policies to apply to the entity.
 The set of arguments for constructing a EntityPolicies resource.
 
 <h4 class="pdoc-member-header" id="EntityPoliciesArgs-entityId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L163">property <b>entityId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L163">property <b>entityId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entityId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1608,7 +1608,7 @@ The set of arguments for constructing a EntityPolicies resource.
 Entity ID to assign policies to.
 
 <h4 class="pdoc-member-header" id="EntityPoliciesArgs-exclusive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L167">property <b>exclusive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L167">property <b>exclusive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exclusive?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1616,7 +1616,7 @@ Entity ID to assign policies to.
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="EntityPoliciesArgs-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L171">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L171">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1624,7 +1624,7 @@ Defaults to `true`.
 List of policies to assign to the entity
 
 <h3 class="pdoc-module-header" id="EntityPoliciesState" data-link-title="EntityPoliciesState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L137">
         interface <strong>EntityPoliciesState</strong>
     </a>
 </h3>
@@ -1634,7 +1634,7 @@ List of policies to assign to the entity
 Input properties used for looking up and filtering EntityPolicies resources.
 
 <h4 class="pdoc-member-header" id="EntityPoliciesState-entityId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L141">property <b>entityId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L141">property <b>entityId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entityId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1642,7 +1642,7 @@ Input properties used for looking up and filtering EntityPolicies resources.
 Entity ID to assign policies to.
 
 <h4 class="pdoc-member-header" id="EntityPoliciesState-entityName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L145">property <b>entityName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L145">property <b>entityName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entityName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1650,7 +1650,7 @@ Entity ID to assign policies to.
 The name of the entity that are assigned the policies.
 
 <h4 class="pdoc-member-header" id="EntityPoliciesState-exclusive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L149">property <b>exclusive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L149">property <b>exclusive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exclusive?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1658,7 +1658,7 @@ The name of the entity that are assigned the policies.
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="EntityPoliciesState-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entityPolicies.ts#L153">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entityPolicies.ts#L153">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1666,7 +1666,7 @@ Defaults to `true`.
 List of policies to assign to the entity
 
 <h3 class="pdoc-module-header" id="EntityState" data-link-title="EntityState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L104">
         interface <strong>EntityState</strong>
     </a>
 </h3>
@@ -1676,7 +1676,7 @@ List of policies to assign to the entity
 Input properties used for looking up and filtering Entity resources.
 
 <h4 class="pdoc-member-header" id="EntityState-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L108">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L108">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1684,7 +1684,7 @@ Input properties used for looking up and filtering Entity resources.
 True/false Is this entity currently disabled. Defaults to `false`
 
 <h4 class="pdoc-member-header" id="EntityState-externalPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L112">property <b>externalPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L112">property <b>externalPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1692,7 +1692,7 @@ True/false Is this entity currently disabled. Defaults to `false`
 `false` by default. If set to `true`, this resource will ignore any policies return from Vault or specified in the resource. You can use `vault.identity.EntityPolicies` to manage policies for this entity in a decoupled manner.
 
 <h4 class="pdoc-member-header" id="EntityState-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L116">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L116">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1700,7 +1700,7 @@ True/false Is this entity currently disabled. Defaults to `false`
 A Map of additional metadata to associate with the user.
 
 <h4 class="pdoc-member-header" id="EntityState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L120">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L120">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1708,7 +1708,7 @@ A Map of additional metadata to associate with the user.
 Name of the identity entity to create.
 
 <h4 class="pdoc-member-header" id="EntityState-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/entity.ts#L124">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/entity.ts#L124">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1716,7 +1716,7 @@ Name of the identity entity to create.
 A list of policies to apply to the entity.
 
 <h3 class="pdoc-module-header" id="GetEntityArgs" data-link-title="GetEntityArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L29">
         interface <strong>GetEntityArgs</strong>
     </a>
 </h3>
@@ -1726,7 +1726,7 @@ A list of policies to apply to the entity.
 A collection of arguments for invoking getEntity.
 
 <h4 class="pdoc-member-header" id="GetEntityArgs-aliasId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L33">property <b>aliasId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L33">property <b>aliasId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1734,7 +1734,7 @@ A collection of arguments for invoking getEntity.
 ID of the alias.
 
 <h4 class="pdoc-member-header" id="GetEntityArgs-aliasMountAccessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L38">property <b>aliasMountAccessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L38">property <b>aliasMountAccessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasMountAccessor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1743,7 +1743,7 @@ Accessor of the mount to which the alias belongs to.
 This should be supplied in conjunction with `aliasName`.
 
 <h4 class="pdoc-member-header" id="GetEntityArgs-aliasName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L43">property <b>aliasName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L43">property <b>aliasName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1752,7 +1752,7 @@ Name of the alias. This should be supplied in conjunction with
 `aliasMountAccessor`.
 
 <h4 class="pdoc-member-header" id="GetEntityArgs-entityId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L47">property <b>entityId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L47">property <b>entityId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entityId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1760,7 +1760,7 @@ Name of the alias. This should be supplied in conjunction with
 ID of the entity.
 
 <h4 class="pdoc-member-header" id="GetEntityArgs-entityName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L51">property <b>entityName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L51">property <b>entityName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entityName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1768,7 +1768,7 @@ ID of the entity.
 Name of the entity.
 
 <h3 class="pdoc-module-header" id="GetEntityResult" data-link-title="GetEntityResult">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L57">
         interface <strong>GetEntityResult</strong>
     </a>
 </h3>
@@ -1778,22 +1778,22 @@ Name of the entity.
 A collection of values returned by getEntity.
 
 <h4 class="pdoc-member-header" id="GetEntityResult-aliasId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L58">property <b>aliasId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L58">property <b>aliasId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEntityResult-aliasMountAccessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L59">property <b>aliasMountAccessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L59">property <b>aliasMountAccessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasMountAccessor: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEntityResult-aliasName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L60">property <b>aliasName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L60">property <b>aliasName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEntityResult-aliases">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L64">property <b>aliases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L64">property <b>aliases</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliases: <a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#GetEntityAlias'>GetEntityAlias</a>[];</code></pre>
@@ -1801,7 +1801,7 @@ A collection of values returned by getEntity.
 A list of entity alias. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GetEntityResult-creationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L68">property <b>creationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L68">property <b>creationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1809,7 +1809,7 @@ A list of entity alias. Structure is documented below.
 Creation time of the Alias
 
 <h4 class="pdoc-member-header" id="GetEntityResult-dataJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L73">property <b>dataJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L73">property <b>dataJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataJson: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1818,7 +1818,7 @@ A string containing the full data payload retrieved from
 Vault, serialized in JSON format.
 
 <h4 class="pdoc-member-header" id="GetEntityResult-directGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L77">property <b>directGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L77">property <b>directGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directGroupIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1826,7 +1826,7 @@ Vault, serialized in JSON format.
 List of Group IDs of which the entity is directly a member of
 
 <h4 class="pdoc-member-header" id="GetEntityResult-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L81">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L81">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1834,17 +1834,17 @@ List of Group IDs of which the entity is directly a member of
 Whether the entity is disabled
 
 <h4 class="pdoc-member-header" id="GetEntityResult-entityId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L82">property <b>entityId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L82">property <b>entityId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entityId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEntityResult-entityName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L83">property <b>entityName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L83">property <b>entityName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entityName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEntityResult-groupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L87">property <b>groupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L87">property <b>groupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1852,7 +1852,7 @@ Whether the entity is disabled
 List of all Group IDs of which the entity is a member of
 
 <h4 class="pdoc-member-header" id="GetEntityResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L91">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L91">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1860,7 +1860,7 @@ List of all Group IDs of which the entity is a member of
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetEntityResult-inheritedGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L95">property <b>inheritedGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L95">property <b>inheritedGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inheritedGroupIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1868,7 +1868,7 @@ The provider-assigned unique ID for this managed resource.
 List of all Group IDs of which the entity is a member of transitively
 
 <h4 class="pdoc-member-header" id="GetEntityResult-lastUpdateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L99">property <b>lastUpdateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L99">property <b>lastUpdateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdateTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1876,7 +1876,7 @@ List of all Group IDs of which the entity is a member of transitively
 Last update time of the alias
 
 <h4 class="pdoc-member-header" id="GetEntityResult-mergedEntityIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L103">property <b>mergedEntityIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L103">property <b>mergedEntityIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mergedEntityIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1884,7 +1884,7 @@ Last update time of the alias
 Other entity IDs which is merged with this entity
 
 <h4 class="pdoc-member-header" id="GetEntityResult-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L107">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L107">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -1892,7 +1892,7 @@ Other entity IDs which is merged with this entity
 Arbitrary metadata
 
 <h4 class="pdoc-member-header" id="GetEntityResult-namespaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L111">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L111">property <b>namespaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1900,7 +1900,7 @@ Arbitrary metadata
 Namespace of which the entity is part of
 
 <h4 class="pdoc-member-header" id="GetEntityResult-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getEntity.ts#L115">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getEntity.ts#L115">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1908,7 +1908,7 @@ Namespace of which the entity is part of
 List of policies attached to the entity
 
 <h3 class="pdoc-module-header" id="GetGroupArgs" data-link-title="GetGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L29">
         interface <strong>GetGroupArgs</strong>
     </a>
 </h3>
@@ -1918,7 +1918,7 @@ List of policies attached to the entity
 A collection of arguments for invoking getGroup.
 
 <h4 class="pdoc-member-header" id="GetGroupArgs-aliasId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L33">property <b>aliasId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L33">property <b>aliasId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1926,7 +1926,7 @@ A collection of arguments for invoking getGroup.
 ID of the alias.
 
 <h4 class="pdoc-member-header" id="GetGroupArgs-aliasMountAccessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L38">property <b>aliasMountAccessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L38">property <b>aliasMountAccessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasMountAccessor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1935,7 +1935,7 @@ Accessor of the mount to which the alias belongs to.
 This should be supplied in conjunction with `aliasName`.
 
 <h4 class="pdoc-member-header" id="GetGroupArgs-aliasName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L43">property <b>aliasName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L43">property <b>aliasName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1944,7 +1944,7 @@ Name of the alias. This should be supplied in conjunction with
 `aliasMountAccessor`.
 
 <h4 class="pdoc-member-header" id="GetGroupArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L47">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L47">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1952,7 +1952,7 @@ Name of the alias. This should be supplied in conjunction with
 ID of the group.
 
 <h4 class="pdoc-member-header" id="GetGroupArgs-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L51">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L51">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1960,7 +1960,7 @@ ID of the group.
 Name of the group.
 
 <h3 class="pdoc-module-header" id="GetGroupResult" data-link-title="GetGroupResult">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L57">
         interface <strong>GetGroupResult</strong>
     </a>
 </h3>
@@ -1970,7 +1970,7 @@ Name of the group.
 A collection of values returned by getGroup.
 
 <h4 class="pdoc-member-header" id="GetGroupResult-aliasCanonicalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L61">property <b>aliasCanonicalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L61">property <b>aliasCanonicalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasCanonicalId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1978,7 +1978,7 @@ A collection of values returned by getGroup.
 Canonical ID of the Alias
 
 <h4 class="pdoc-member-header" id="GetGroupResult-aliasCreationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L65">property <b>aliasCreationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L65">property <b>aliasCreationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasCreationTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1986,12 +1986,12 @@ Canonical ID of the Alias
 Creation time of the Alias
 
 <h4 class="pdoc-member-header" id="GetGroupResult-aliasId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L66">property <b>aliasId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L66">property <b>aliasId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupResult-aliasLastUpdateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L70">property <b>aliasLastUpdateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L70">property <b>aliasLastUpdateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasLastUpdateTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1999,7 +1999,7 @@ Creation time of the Alias
 Last update time of the alias
 
 <h4 class="pdoc-member-header" id="GetGroupResult-aliasMergedFromCanonicalIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L74">property <b>aliasMergedFromCanonicalIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L74">property <b>aliasMergedFromCanonicalIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasMergedFromCanonicalIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2007,7 +2007,7 @@ Last update time of the alias
 List of canonical IDs merged with this alias
 
 <h4 class="pdoc-member-header" id="GetGroupResult-aliasMetadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L78">property <b>aliasMetadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L78">property <b>aliasMetadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasMetadata: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -2015,12 +2015,12 @@ List of canonical IDs merged with this alias
 Arbitrary metadata
 
 <h4 class="pdoc-member-header" id="GetGroupResult-aliasMountAccessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L79">property <b>aliasMountAccessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L79">property <b>aliasMountAccessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasMountAccessor: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupResult-aliasMountPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L83">property <b>aliasMountPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L83">property <b>aliasMountPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasMountPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2028,7 +2028,7 @@ Arbitrary metadata
 Authentication mount path which this alias belongs to
 
 <h4 class="pdoc-member-header" id="GetGroupResult-aliasMountType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L87">property <b>aliasMountType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L87">property <b>aliasMountType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasMountType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2036,12 +2036,12 @@ Authentication mount path which this alias belongs to
 Authentication mount type which this alias belongs to
 
 <h4 class="pdoc-member-header" id="GetGroupResult-aliasName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L88">property <b>aliasName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L88">property <b>aliasName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupResult-creationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L92">property <b>creationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L92">property <b>creationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2049,7 +2049,7 @@ Authentication mount type which this alias belongs to
 Creation timestamp of the group
 
 <h4 class="pdoc-member-header" id="GetGroupResult-dataJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L97">property <b>dataJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L97">property <b>dataJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataJson: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2058,17 +2058,17 @@ A string containing the full data payload retrieved from
 Vault, serialized in JSON format.
 
 <h4 class="pdoc-member-header" id="GetGroupResult-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L98">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L98">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupResult-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L99">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L99">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L103">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L103">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2076,7 +2076,7 @@ Vault, serialized in JSON format.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetGroupResult-lastUpdateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L107">property <b>lastUpdateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L107">property <b>lastUpdateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdateTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2084,7 +2084,7 @@ The provider-assigned unique ID for this managed resource.
 Last updated time of the group
 
 <h4 class="pdoc-member-header" id="GetGroupResult-memberEntityIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L111">property <b>memberEntityIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L111">property <b>memberEntityIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberEntityIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2092,7 +2092,7 @@ Last updated time of the group
 List of Entity IDs which are members of this group
 
 <h4 class="pdoc-member-header" id="GetGroupResult-memberGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L115">property <b>memberGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L115">property <b>memberGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberGroupIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2100,7 +2100,7 @@ List of Entity IDs which are members of this group
 List of Group IDs which are members of this group
 
 <h4 class="pdoc-member-header" id="GetGroupResult-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L119">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L119">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -2108,7 +2108,7 @@ List of Group IDs which are members of this group
 Arbitrary metadata
 
 <h4 class="pdoc-member-header" id="GetGroupResult-modifyIndex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L123">property <b>modifyIndex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L123">property <b>modifyIndex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>modifyIndex: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2116,7 +2116,7 @@ Arbitrary metadata
 Modify index of the group
 
 <h4 class="pdoc-member-header" id="GetGroupResult-namespaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L127">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L127">property <b>namespaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2124,7 +2124,7 @@ Modify index of the group
 Namespace of which the group is part of
 
 <h4 class="pdoc-member-header" id="GetGroupResult-parentGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L131">property <b>parentGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L131">property <b>parentGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentGroupIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2132,7 +2132,7 @@ Namespace of which the group is part of
 List of Group IDs which are parents of this group.
 
 <h4 class="pdoc-member-header" id="GetGroupResult-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L135">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L135">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2140,7 +2140,7 @@ List of Group IDs which are parents of this group.
 List of policies attached to the group
 
 <h4 class="pdoc-member-header" id="GetGroupResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/getGroup.ts#L139">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/getGroup.ts#L139">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2148,7 +2148,7 @@ List of policies attached to the group
 Type of group
 
 <h3 class="pdoc-module-header" id="GroupAliasArgs" data-link-title="GroupAliasArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L136">
         interface <strong>GroupAliasArgs</strong>
     </a>
 </h3>
@@ -2158,7 +2158,7 @@ Type of group
 The set of arguments for constructing a GroupAlias resource.
 
 <h4 class="pdoc-member-header" id="GroupAliasArgs-canonicalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L140">property <b>canonicalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L140">property <b>canonicalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canonicalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2166,7 +2166,7 @@ The set of arguments for constructing a GroupAlias resource.
 ID of the group to which this is an alias.
 
 <h4 class="pdoc-member-header" id="GroupAliasArgs-mountAccessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L144">property <b>mountAccessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L144">property <b>mountAccessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mountAccessor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2174,7 +2174,7 @@ ID of the group to which this is an alias.
 Mount accessor of the authentication backend to which this alias belongs to.
 
 <h4 class="pdoc-member-header" id="GroupAliasArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L148">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L148">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2182,7 +2182,7 @@ Mount accessor of the authentication backend to which this alias belongs to.
 Name of the group alias to create.
 
 <h3 class="pdoc-module-header" id="GroupAliasState" data-link-title="GroupAliasState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L118">
         interface <strong>GroupAliasState</strong>
     </a>
 </h3>
@@ -2192,7 +2192,7 @@ Name of the group alias to create.
 Input properties used for looking up and filtering GroupAlias resources.
 
 <h4 class="pdoc-member-header" id="GroupAliasState-canonicalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L122">property <b>canonicalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L122">property <b>canonicalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canonicalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2200,7 +2200,7 @@ Input properties used for looking up and filtering GroupAlias resources.
 ID of the group to which this is an alias.
 
 <h4 class="pdoc-member-header" id="GroupAliasState-mountAccessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L126">property <b>mountAccessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L126">property <b>mountAccessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mountAccessor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2208,7 +2208,7 @@ ID of the group to which this is an alias.
 Mount accessor of the authentication backend to which this alias belongs to.
 
 <h4 class="pdoc-member-header" id="GroupAliasState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupAlias.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupAlias.ts#L130">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2216,7 +2216,7 @@ Mount accessor of the authentication backend to which this alias belongs to.
 Name of the group alias to create.
 
 <h3 class="pdoc-module-header" id="GroupArgs" data-link-title="GroupArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L189">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L189">
         interface <strong>GroupArgs</strong>
     </a>
 </h3>
@@ -2226,7 +2226,7 @@ Name of the group alias to create.
 The set of arguments for constructing a Group resource.
 
 <h4 class="pdoc-member-header" id="GroupArgs-externalMemberEntityIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L193">property <b>externalMemberEntityIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L193">property <b>externalMemberEntityIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalMemberEntityIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2234,7 +2234,7 @@ The set of arguments for constructing a Group resource.
 `false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
 
 <h4 class="pdoc-member-header" id="GroupArgs-externalPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L197">property <b>externalPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L197">property <b>externalPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2242,7 +2242,7 @@ The set of arguments for constructing a Group resource.
 `false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
 
 <h4 class="pdoc-member-header" id="GroupArgs-memberEntityIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L201">property <b>memberEntityIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L201">property <b>memberEntityIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberEntityIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2250,7 +2250,7 @@ The set of arguments for constructing a Group resource.
 A list of Entity IDs to be assigned as group members. Not allowed on `external` groups.
 
 <h4 class="pdoc-member-header" id="GroupArgs-memberGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L205">property <b>memberGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L205">property <b>memberGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2258,7 +2258,7 @@ A list of Entity IDs to be assigned as group members. Not allowed on `external` 
 A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
 
 <h4 class="pdoc-member-header" id="GroupArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L209">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L209">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2266,7 +2266,7 @@ A list of Group IDs to be assigned as group members. Not allowed on `external` g
 A Map of additional metadata to associate with the group.
 
 <h4 class="pdoc-member-header" id="GroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L213">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L213">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2274,7 +2274,7 @@ A Map of additional metadata to associate with the group.
 Name of the identity group to create.
 
 <h4 class="pdoc-member-header" id="GroupArgs-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L217">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L217">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2282,7 +2282,7 @@ Name of the identity group to create.
 A list of policies to apply to the group.
 
 <h4 class="pdoc-member-header" id="GroupArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L221">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L221">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2290,7 +2290,7 @@ A list of policies to apply to the group.
 Type of the group, internal or external. Defaults to `internal`.
 
 <h3 class="pdoc-module-header" id="GroupMemberEntityIdsArgs" data-link-title="GroupMemberEntityIdsArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L169">
         interface <strong>GroupMemberEntityIdsArgs</strong>
     </a>
 </h3>
@@ -2300,7 +2300,7 @@ Type of the group, internal or external. Defaults to `internal`.
 The set of arguments for constructing a GroupMemberEntityIds resource.
 
 <h4 class="pdoc-member-header" id="GroupMemberEntityIdsArgs-exclusive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L173">property <b>exclusive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L173">property <b>exclusive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exclusive?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2308,7 +2308,7 @@ The set of arguments for constructing a GroupMemberEntityIds resource.
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupMemberEntityIdsArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L177">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L177">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2316,7 +2316,7 @@ Defaults to `true`.
 Group ID to assign member entities to.
 
 <h4 class="pdoc-member-header" id="GroupMemberEntityIdsArgs-memberEntityIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L181">property <b>memberEntityIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L181">property <b>memberEntityIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberEntityIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2324,7 +2324,7 @@ Group ID to assign member entities to.
 List of member entities that belong to the group
 
 <h3 class="pdoc-module-header" id="GroupMemberEntityIdsState" data-link-title="GroupMemberEntityIdsState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L147">
         interface <strong>GroupMemberEntityIdsState</strong>
     </a>
 </h3>
@@ -2334,7 +2334,7 @@ List of member entities that belong to the group
 Input properties used for looking up and filtering GroupMemberEntityIds resources.
 
 <h4 class="pdoc-member-header" id="GroupMemberEntityIdsState-exclusive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L151">property <b>exclusive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L151">property <b>exclusive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exclusive?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2342,7 +2342,7 @@ Input properties used for looking up and filtering GroupMemberEntityIds resource
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupMemberEntityIdsState-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L155">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L155">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2350,7 +2350,7 @@ Defaults to `true`.
 Group ID to assign member entities to.
 
 <h4 class="pdoc-member-header" id="GroupMemberEntityIdsState-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L159">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L159">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2358,7 +2358,7 @@ Group ID to assign member entities to.
 The name of the group that are assigned the member entities.
 
 <h4 class="pdoc-member-header" id="GroupMemberEntityIdsState-memberEntityIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupMemberEntityIds.ts#L163">property <b>memberEntityIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupMemberEntityIds.ts#L163">property <b>memberEntityIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberEntityIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2366,7 +2366,7 @@ The name of the group that are assigned the member entities.
 List of member entities that belong to the group
 
 <h3 class="pdoc-module-header" id="GroupPoliciesArgs" data-link-title="GroupPoliciesArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L171">
         interface <strong>GroupPoliciesArgs</strong>
     </a>
 </h3>
@@ -2376,7 +2376,7 @@ List of member entities that belong to the group
 The set of arguments for constructing a GroupPolicies resource.
 
 <h4 class="pdoc-member-header" id="GroupPoliciesArgs-exclusive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L175">property <b>exclusive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L175">property <b>exclusive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exclusive?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2384,7 +2384,7 @@ The set of arguments for constructing a GroupPolicies resource.
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupPoliciesArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L179">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L179">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2392,7 +2392,7 @@ Defaults to `true`.
 Group ID to assign policies to.
 
 <h4 class="pdoc-member-header" id="GroupPoliciesArgs-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L183">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L183">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2400,7 +2400,7 @@ Group ID to assign policies to.
 List of policies to assign to the group
 
 <h3 class="pdoc-module-header" id="GroupPoliciesState" data-link-title="GroupPoliciesState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L149">
         interface <strong>GroupPoliciesState</strong>
     </a>
 </h3>
@@ -2410,7 +2410,7 @@ List of policies to assign to the group
 Input properties used for looking up and filtering GroupPolicies resources.
 
 <h4 class="pdoc-member-header" id="GroupPoliciesState-exclusive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L153">property <b>exclusive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L153">property <b>exclusive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exclusive?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2418,7 +2418,7 @@ Input properties used for looking up and filtering GroupPolicies resources.
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupPoliciesState-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L157">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L157">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2426,7 +2426,7 @@ Defaults to `true`.
 Group ID to assign policies to.
 
 <h4 class="pdoc-member-header" id="GroupPoliciesState-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L161">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L161">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2434,7 +2434,7 @@ Group ID to assign policies to.
 The name of the group that are assigned the policies.
 
 <h4 class="pdoc-member-header" id="GroupPoliciesState-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/groupPolicies.ts#L165">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/groupPolicies.ts#L165">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2442,7 +2442,7 @@ The name of the group that are assigned the policies.
 List of policies to assign to the group
 
 <h3 class="pdoc-module-header" id="GroupState" data-link-title="GroupState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L151">
         interface <strong>GroupState</strong>
     </a>
 </h3>
@@ -2452,7 +2452,7 @@ List of policies to assign to the group
 Input properties used for looking up and filtering Group resources.
 
 <h4 class="pdoc-member-header" id="GroupState-externalMemberEntityIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L155">property <b>externalMemberEntityIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L155">property <b>externalMemberEntityIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalMemberEntityIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2460,7 +2460,7 @@ Input properties used for looking up and filtering Group resources.
 `false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
 
 <h4 class="pdoc-member-header" id="GroupState-externalPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L159">property <b>externalPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L159">property <b>externalPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2468,7 +2468,7 @@ Input properties used for looking up and filtering Group resources.
 `false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
 
 <h4 class="pdoc-member-header" id="GroupState-memberEntityIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L163">property <b>memberEntityIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L163">property <b>memberEntityIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberEntityIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2476,7 +2476,7 @@ Input properties used for looking up and filtering Group resources.
 A list of Entity IDs to be assigned as group members. Not allowed on `external` groups.
 
 <h4 class="pdoc-member-header" id="GroupState-memberGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L167">property <b>memberGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L167">property <b>memberGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2484,7 +2484,7 @@ A list of Entity IDs to be assigned as group members. Not allowed on `external` 
 A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
 
 <h4 class="pdoc-member-header" id="GroupState-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L171">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L171">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2492,7 +2492,7 @@ A list of Group IDs to be assigned as group members. Not allowed on `external` g
 A Map of additional metadata to associate with the group.
 
 <h4 class="pdoc-member-header" id="GroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L175">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L175">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2500,7 +2500,7 @@ A Map of additional metadata to associate with the group.
 Name of the identity group to create.
 
 <h4 class="pdoc-member-header" id="GroupState-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L179">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L179">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2508,7 +2508,7 @@ Name of the identity group to create.
 A list of policies to apply to the group.
 
 <h4 class="pdoc-member-header" id="GroupState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/group.ts#L183">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/group.ts#L183">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2516,7 +2516,7 @@ A list of policies to apply to the group.
 Type of the group, internal or external. Defaults to `internal`.
 
 <h3 class="pdoc-module-header" id="OidcArgs" data-link-title="OidcArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidc.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidc.ts#L106">
         interface <strong>OidcArgs</strong>
     </a>
 </h3>
@@ -2526,7 +2526,7 @@ Type of the group, internal or external. Defaults to `internal`.
 The set of arguments for constructing a Oidc resource.
 
 <h4 class="pdoc-member-header" id="OidcArgs-issuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidc.ts#L113">property <b>issuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidc.ts#L113">property <b>issuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2537,7 +2537,7 @@ scheme, host, and optionally, port number and path components, but no query or f
 components.
 
 <h3 class="pdoc-module-header" id="OidcKeyAllowedClientIDArgs" data-link-title="OidcKeyAllowedClientIDArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L97">
         interface <strong>OidcKeyAllowedClientIDArgs</strong>
     </a>
 </h3>
@@ -2547,7 +2547,7 @@ components.
 The set of arguments for constructing a OidcKeyAllowedClientID resource.
 
 <h4 class="pdoc-member-header" id="OidcKeyAllowedClientIDArgs-allowedClientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L101">property <b>allowedClientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L101">property <b>allowedClientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2555,7 +2555,7 @@ The set of arguments for constructing a OidcKeyAllowedClientID resource.
 Client ID to allow usage with the OIDC named key
 
 <h4 class="pdoc-member-header" id="OidcKeyAllowedClientIDArgs-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L105">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L105">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2563,7 +2563,7 @@ Client ID to allow usage with the OIDC named key
 Name of the OIDC Key allow the Client ID.
 
 <h3 class="pdoc-module-header" id="OidcKeyAllowedClientIDState" data-link-title="OidcKeyAllowedClientIDState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L83">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L83">
         interface <strong>OidcKeyAllowedClientIDState</strong>
     </a>
 </h3>
@@ -2573,7 +2573,7 @@ Name of the OIDC Key allow the Client ID.
 Input properties used for looking up and filtering OidcKeyAllowedClientID resources.
 
 <h4 class="pdoc-member-header" id="OidcKeyAllowedClientIDState-allowedClientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L87">property <b>allowedClientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L87">property <b>allowedClientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedClientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2581,7 +2581,7 @@ Input properties used for looking up and filtering OidcKeyAllowedClientID resour
 Client ID to allow usage with the OIDC named key
 
 <h4 class="pdoc-member-header" id="OidcKeyAllowedClientIDState-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L91">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKeyAllowedClientID.ts#L91">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2589,7 +2589,7 @@ Client ID to allow usage with the OIDC named key
 Name of the OIDC Key allow the Client ID.
 
 <h3 class="pdoc-module-header" id="OidcKeyArgs" data-link-title="OidcKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L136">
         interface <strong>OidcKeyArgs</strong>
     </a>
 </h3>
@@ -2599,7 +2599,7 @@ Name of the OIDC Key allow the Client ID.
 The set of arguments for constructing a OidcKey resource.
 
 <h4 class="pdoc-member-header" id="OidcKeyArgs-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L141">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L141">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2608,7 +2608,7 @@ Signing algorithm to use. Signing algorithm to use.
 Allowed values are: RS256 (default), RS384, RS512, ES256, ES384, ES512, EdDSA.
 
 <h4 class="pdoc-member-header" id="OidcKeyArgs-allowedClientIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L146">property <b>allowedClientIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L146">property <b>allowedClientIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedClientIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2617,7 +2617,7 @@ Array of role client ids allowed to use this key for signing. If empty, no roles
 allowed.
 
 <h4 class="pdoc-member-header" id="OidcKeyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L150">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2625,7 +2625,7 @@ allowed.
 Name of the OIDC Key to create.
 
 <h4 class="pdoc-member-header" id="OidcKeyArgs-rotationPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L154">property <b>rotationPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L154">property <b>rotationPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rotationPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2633,7 +2633,7 @@ Name of the OIDC Key to create.
 How often to generate a new signing key in number of seconds
 
 <h4 class="pdoc-member-header" id="OidcKeyArgs-verificationTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L159">property <b>verificationTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L159">property <b>verificationTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>verificationTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2642,7 +2642,7 @@ How often to generate a new signing key in number of seconds
 available for verification after being rotated in seconds.
 
 <h3 class="pdoc-module-header" id="OidcKeyState" data-link-title="OidcKeyState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L107">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L107">
         interface <strong>OidcKeyState</strong>
     </a>
 </h3>
@@ -2652,7 +2652,7 @@ available for verification after being rotated in seconds.
 Input properties used for looking up and filtering OidcKey resources.
 
 <h4 class="pdoc-member-header" id="OidcKeyState-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L112">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L112">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2661,7 +2661,7 @@ Signing algorithm to use. Signing algorithm to use.
 Allowed values are: RS256 (default), RS384, RS512, ES256, ES384, ES512, EdDSA.
 
 <h4 class="pdoc-member-header" id="OidcKeyState-allowedClientIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L117">property <b>allowedClientIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L117">property <b>allowedClientIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedClientIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2670,7 +2670,7 @@ Array of role client ids allowed to use this key for signing. If empty, no roles
 allowed.
 
 <h4 class="pdoc-member-header" id="OidcKeyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L121">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L121">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2678,7 +2678,7 @@ allowed.
 Name of the OIDC Key to create.
 
 <h4 class="pdoc-member-header" id="OidcKeyState-rotationPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L125">property <b>rotationPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L125">property <b>rotationPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rotationPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2686,7 +2686,7 @@ Name of the OIDC Key to create.
 How often to generate a new signing key in number of seconds
 
 <h4 class="pdoc-member-header" id="OidcKeyState-verificationTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcKey.ts#L130">property <b>verificationTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcKey.ts#L130">property <b>verificationTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>verificationTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2695,7 +2695,7 @@ How often to generate a new signing key in number of seconds
 available for verification after being rotated in seconds.
 
 <h3 class="pdoc-module-header" id="OidcRoleArgs" data-link-title="OidcRoleArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L143">
         interface <strong>OidcRoleArgs</strong>
     </a>
 </h3>
@@ -2705,7 +2705,7 @@ available for verification after being rotated in seconds.
 The set of arguments for constructing a OidcRole resource.
 
 <h4 class="pdoc-member-header" id="OidcRoleArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L148">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L148">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2714,7 +2714,7 @@ The value that will be included in the `aud` field of all the OIDC identity
 tokens issued by this role
 
 <h4 class="pdoc-member-header" id="OidcRoleArgs-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L153">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L153">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2723,7 +2723,7 @@ A configured named key, the key must already exist
 before tokens can be issued.
 
 <h4 class="pdoc-member-header" id="OidcRoleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L157">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L157">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2731,7 +2731,7 @@ before tokens can be issued.
 Name of the OIDC Role to create.
 
 <h4 class="pdoc-member-header" id="OidcRoleArgs-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L164">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L164">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2742,7 +2742,7 @@ string-ified JSON or base64 format. See the
 for the template format.
 
 <h4 class="pdoc-member-header" id="OidcRoleArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L168">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L168">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2750,7 +2750,7 @@ for the template format.
 TTL of the tokens generated against the role in number of seconds.
 
 <h3 class="pdoc-module-header" id="OidcRoleState" data-link-title="OidcRoleState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L112">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L112">
         interface <strong>OidcRoleState</strong>
     </a>
 </h3>
@@ -2760,7 +2760,7 @@ TTL of the tokens generated against the role in number of seconds.
 Input properties used for looking up and filtering OidcRole resources.
 
 <h4 class="pdoc-member-header" id="OidcRoleState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L117">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L117">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2769,7 +2769,7 @@ The value that will be included in the `aud` field of all the OIDC identity
 tokens issued by this role
 
 <h4 class="pdoc-member-header" id="OidcRoleState-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L122">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L122">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2778,7 +2778,7 @@ A configured named key, the key must already exist
 before tokens can be issued.
 
 <h4 class="pdoc-member-header" id="OidcRoleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L126">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L126">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2786,7 +2786,7 @@ before tokens can be issued.
 Name of the OIDC Role to create.
 
 <h4 class="pdoc-member-header" id="OidcRoleState-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L133">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L133">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2797,7 +2797,7 @@ string-ified JSON or base64 format. See the
 for the template format.
 
 <h4 class="pdoc-member-header" id="OidcRoleState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidcRole.ts#L137">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidcRole.ts#L137">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2805,7 +2805,7 @@ for the template format.
 TTL of the tokens generated against the role in number of seconds.
 
 <h3 class="pdoc-module-header" id="OidcState" data-link-title="OidcState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidc.ts#L93">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidc.ts#L93">
         interface <strong>OidcState</strong>
     </a>
 </h3>
@@ -2815,7 +2815,7 @@ TTL of the tokens generated against the role in number of seconds.
 Input properties used for looking up and filtering Oidc resources.
 
 <h4 class="pdoc-member-header" id="OidcState-issuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/identity/oidc.ts#L100">property <b>issuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/identity/oidc.ts#L100">property <b>issuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

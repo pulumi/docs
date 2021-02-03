@@ -12,6 +12,9 @@ meta_desc: "Documentation for the azure.appservice.FunctionApp resource with exa
 
 Manages a Function App.
 
+> **Note:** To connect an Azure Function App and a subnet within the same region `azure.appservice.VirtualNetworkSwiftConnection` can be used.
+For an example, check the `azure.appservice.VirtualNetworkSwiftConnection` documentation.
+
 {{% examples %}}
 ## Example Usage
 

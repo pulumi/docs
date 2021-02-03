@@ -197,7 +197,7 @@ The following output properties are available:
 <a href="#ismigrated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Migrated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}the value indicating whether this alert rule is migrated.{{% /md %}}</dd>
     <dt class="property-"
@@ -365,7 +365,7 @@ The following output properties are available:
 <a href="#ismigrated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Migrated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}the value indicating whether this alert rule is migrated.{{% /md %}}</dd>
     <dt class="property-"
@@ -533,7 +533,7 @@ The following output properties are available:
 <a href="#ismigrated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Migrated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}the value indicating whether this alert rule is migrated.{{% /md %}}</dd>
     <dt class="property-"
@@ -701,7 +701,7 @@ The following output properties are available:
 <a href="#is_migrated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>migrated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}the value indicating whether this alert rule is migrated.{{% /md %}}</dd>
     <dt class="property-"

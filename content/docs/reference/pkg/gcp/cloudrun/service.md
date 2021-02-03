@@ -345,15 +345,7 @@ class MyStack : Stack
     {
         var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
         {
-            AutogenerateRevisionName = true,
             Location = "us-central1",
-            Metadata = new Gcp.CloudRun.Inputs.ServiceMetadataArgs
-            {
-                Annotations = 
-                {
-                    { "generated-by", "magic-modules" },
-                },
-            },
             Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
             {
                 Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
@@ -362,32 +354,40 @@ class MyStack : Stack
                     {
                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
                         {
-                            Env = 
+                            Image = "us-docker.pkg.dev/cloudrun/container/hello",
+                            Envs = 
                             {
-                                
+                                new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvArgs
                                 {
-                                    { "name", "SOURCE" },
-                                    { "value", "remote" },
+                                    Name = "SOURCE",
+                                    Value = "remote",
                                 },
-                                
+                                new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvArgs
                                 {
-                                    { "name", "TARGET" },
-                                    { "value", "home" },
+                                    Name = "TARGET",
+                                    Value = "home",
                                 },
                             },
-                            Image = "us-docker.pkg.dev/cloudrun/container/hello",
                         },
                     },
+                },
+            },
+            Metadata = new Gcp.CloudRun.Inputs.ServiceMetadataArgs
+            {
+                Annotations = 
+                {
+                    { "generated-by", "magic-modules" },
                 },
             },
             Traffics = 
             {
                 new Gcp.CloudRun.Inputs.ServiceTrafficArgs
                 {
-                    LatestRevision = true,
                     Percent = 100,
+                    LatestRevision = true,
                 },
             },
+            AutogenerateRevisionName = true,
         });
     }
 
@@ -408,38 +408,38 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := cloudrun.NewService(ctx, "_default", &cloudrun.ServiceArgs{
-			AutogenerateRevisionName: pulumi.Bool(true),
-			Location:                 pulumi.String("us-central1"),
+			Location: pulumi.String("us-central1"),
+			Template: &cloudrun.ServiceTemplateArgs{
+				Spec: &cloudrun.ServiceTemplateSpecArgs{
+					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+						&cloudrun.ServiceTemplateSpecContainerArgs{
+							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
+							Envs: cloudrun.ServiceTemplateSpecContainerEnvArray{
+								&cloudrun.ServiceTemplateSpecContainerEnvArgs{
+									Name:  pulumi.String("SOURCE"),
+									Value: pulumi.String("remote"),
+								},
+								&cloudrun.ServiceTemplateSpecContainerEnvArgs{
+									Name:  pulumi.String("TARGET"),
+									Value: pulumi.String("home"),
+								},
+							},
+						},
+					},
+				},
+			},
 			Metadata: &cloudrun.ServiceMetadataArgs{
 				Annotations: pulumi.StringMap{
 					"generated-by": pulumi.String("magic-modules"),
 				},
 			},
-			Template: &cloudrun.ServiceTemplateArgs{
-				Spec: &cloudrun.ServiceTemplateSpecArgs{
-					Containers: cloudrun.ServiceTemplateSpecContainerArray{
-						&cloudrun.ServiceTemplateSpecContainerArgs{
-							Env: pulumi.StringMapArray{
-								pulumi.StringMap{
-									"name":  pulumi.String("SOURCE"),
-									"value": pulumi.String("remote"),
-								},
-								pulumi.StringMap{
-									"name":  pulumi.String("TARGET"),
-									"value": pulumi.String("home"),
-								},
-							},
-							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
-						},
-					},
-				},
-			},
 			Traffics: cloudrun.ServiceTrafficArray{
 				&cloudrun.ServiceTrafficArgs{
-					LatestRevision: pulumi.Bool(true),
 					Percent:        pulumi.Int(100),
+					LatestRevision: pulumi.Bool(true),
 				},
 			},
+			AutogenerateRevisionName: pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -457,34 +457,34 @@ import pulumi
 import pulumi_gcp as gcp
 
 default = gcp.cloudrun.Service("default",
-    autogenerate_revision_name=True,
     location="us-central1",
+    template=gcp.cloudrun.ServiceTemplateArgs(
+        spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+            containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+                image="us-docker.pkg.dev/cloudrun/container/hello",
+                envs=[
+                    gcp.cloudrun.ServiceTemplateSpecContainerEnvArgs(
+                        name="SOURCE",
+                        value="remote",
+                    ),
+                    gcp.cloudrun.ServiceTemplateSpecContainerEnvArgs(
+                        name="TARGET",
+                        value="home",
+                    ),
+                ],
+            )],
+        ),
+    ),
     metadata=gcp.cloudrun.ServiceMetadataArgs(
         annotations={
             "generated-by": "magic-modules",
         },
     ),
-    template=gcp.cloudrun.ServiceTemplateArgs(
-        spec=gcp.cloudrun.ServiceTemplateSpecArgs(
-            containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
-                env=[
-                    {
-                        "name": "SOURCE",
-                        "value": "remote",
-                    },
-                    {
-                        "name": "TARGET",
-                        "value": "home",
-                    },
-                ],
-                image="us-docker.pkg.dev/cloudrun/container/hello",
-            )],
-        ),
-    ),
     traffics=[gcp.cloudrun.ServiceTrafficArgs(
-        latest_revision=True,
         percent=100,
-    )])
+        latest_revision=True,
+    )],
+    autogenerate_revision_name=True)
 ```
 
 {{% /example %}}
@@ -495,17 +495,12 @@ default = gcp.cloudrun.Service("default",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const defaultService = new gcp.cloudrun.Service("default", {
-    autogenerateRevisionName: true,
+const _default = new gcp.cloudrun.Service("default", {
     location: "us-central1",
-    metadata: {
-        annotations: {
-            "generated-by": "magic-modules",
-        },
-    },
     template: {
         spec: {
             containers: [{
+                image: "us-docker.pkg.dev/cloudrun/container/hello",
                 envs: [
                     {
                         name: "SOURCE",
@@ -516,14 +511,19 @@ const defaultService = new gcp.cloudrun.Service("default", {
                         value: "home",
                     },
                 ],
-                image: "us-docker.pkg.dev/cloudrun/container/hello",
             }],
         },
     },
+    metadata: {
+        annotations: {
+            "generated-by": "magic-modules",
+        },
+    },
     traffics: [{
-        latestRevision: true,
         percent: 100,
+        latestRevision: true,
     }],
+    autogenerateRevisionName: true,
 });
 ```
 
@@ -1927,10 +1927,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_csharp">
@@ -2021,10 +2018,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_go">
@@ -2115,10 +2109,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_nodejs">
@@ -2209,10 +2200,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_python">
@@ -2847,10 +2835,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_csharp">
@@ -2951,10 +2936,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_go">
@@ -3055,10 +3037,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_nodejs">
@@ -3159,10 +3138,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_python">

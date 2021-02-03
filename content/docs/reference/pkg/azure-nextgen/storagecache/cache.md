@@ -53,8 +53,8 @@ class MyStack : Stack
                         BindDn = "cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                         BindPassword = "<bindPassword>",
                     },
-                    ExtendedGroupsEnabled = true,
-                    LdapBaseDn = "dc=contosoad,dc=contoso,dc=local",
+                    ExtendedGroups = true,
+                    LdapBaseDN = "dc=contosoad,dc=contoso,dc=local",
                     LdapServer = "192.0.2.12",
                     UsernameSource = "LDAP",
                 },
@@ -143,10 +143,10 @@ func main() {
 						BindDn:       pulumi.String("cn=ldapadmin,dc=contosoad,dc=contoso,dc=local"),
 						BindPassword: pulumi.String("<bindPassword>"),
 					},
-					ExtendedGroupsEnabled: pulumi.Bool(true),
-					LdapBaseDn:            pulumi.String("dc=contosoad,dc=contoso,dc=local"),
-					LdapServer:            pulumi.String("192.0.2.12"),
-					UsernameSource:        pulumi.String("LDAP"),
+					ExtendedGroups: pulumi.Bool(true),
+					LdapBaseDN:     pulumi.String("dc=contosoad,dc=contoso,dc=local"),
+					LdapServer:     pulumi.String("192.0.2.12"),
+					UsernameSource: pulumi.String("LDAP"),
 				},
 			},
 			EncryptionSettings: &storagecache.CacheEncryptionSettingsArgs{
@@ -220,7 +220,7 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
                 bind_dn="cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                 bind_password="<bindPassword>",
             ),
-            extended_groups_enabled=True,
+            extended_groups=True,
             ldap_base_dn="dc=contosoad,dc=contoso,dc=local",
             ldap_server="192.0.2.12",
             username_source="LDAP",
@@ -286,8 +286,8 @@ const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
                 bindDn: "cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                 bindPassword: "<bindPassword>",
             },
-            extendedGroupsEnabled: true,
-            ldapBaseDn: "dc=contosoad,dc=contoso,dc=local",
+            extendedGroups: true,
+            ldapBaseDN: "dc=contosoad,dc=contoso,dc=local",
             ldapServer: "192.0.2.12",
             usernameSource: "LDAP",
         },
@@ -350,8 +350,8 @@ class MyStack : Stack
                         BindDn = "cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                         BindPassword = "<bindPassword>",
                     },
-                    ExtendedGroupsEnabled = true,
-                    LdapBaseDn = "dc=contosoad,dc=contoso,dc=local",
+                    ExtendedGroups = true,
+                    LdapBaseDN = "dc=contosoad,dc=contoso,dc=local",
                     LdapServer = "192.0.2.12",
                     UsernameSource = "LDAP",
                 },
@@ -429,10 +429,10 @@ func main() {
 						BindDn:       pulumi.String("cn=ldapadmin,dc=contosoad,dc=contoso,dc=local"),
 						BindPassword: pulumi.String("<bindPassword>"),
 					},
-					ExtendedGroupsEnabled: pulumi.Bool(true),
-					LdapBaseDn:            pulumi.String("dc=contosoad,dc=contoso,dc=local"),
-					LdapServer:            pulumi.String("192.0.2.12"),
-					UsernameSource:        pulumi.String("LDAP"),
+					ExtendedGroups: pulumi.Bool(true),
+					LdapBaseDN:     pulumi.String("dc=contosoad,dc=contoso,dc=local"),
+					LdapServer:     pulumi.String("192.0.2.12"),
+					UsernameSource: pulumi.String("LDAP"),
 				},
 			},
 			EncryptionSettings: &storagecache.CacheEncryptionSettingsArgs{
@@ -495,7 +495,7 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
                 bind_dn="cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                 bind_password="<bindPassword>",
             ),
-            extended_groups_enabled=True,
+            extended_groups=True,
             ldap_base_dn="dc=contosoad,dc=contoso,dc=local",
             ldap_server="192.0.2.12",
             username_source="LDAP",
@@ -550,8 +550,8 @@ const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
                 bindDn: "cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                 bindPassword: "<bindPassword>",
             },
-            extendedGroupsEnabled: true,
-            ldapBaseDn: "dc=contosoad,dc=contoso,dc=local",
+            extendedGroups: true,
+            ldapBaseDN: "dc=contosoad,dc=contoso,dc=local",
             ldapServer: "192.0.2.12",
             usernameSource: "LDAP",
         },
@@ -3581,8 +3581,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedgroupsenabled_csharp">
-<a href="#extendedgroupsenabled_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups<wbr>Enabled</a>
+        <span id="extendedgroups_csharp">
+<a href="#extendedgroups_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -3600,7 +3600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="ldapbasedn_csharp">
-<a href="#ldapbasedn_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>Dn</a>
+<a href="#ldapbasedn_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3686,8 +3686,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedgroupsenabled_go">
-<a href="#extendedgroupsenabled_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups<wbr>Enabled</a>
+        <span id="extendedgroups_go">
+<a href="#extendedgroups_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -3705,7 +3705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="ldapbasedn_go">
-<a href="#ldapbasedn_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>Dn</a>
+<a href="#ldapbasedn_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3791,8 +3791,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedgroupsenabled_nodejs">
-<a href="#extendedgroupsenabled_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Groups<wbr>Enabled</a>
+        <span id="extendedgroups_nodejs">
+<a href="#extendedgroups_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
@@ -3810,7 +3810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="ldapbasedn_nodejs">
-<a href="#ldapbasedn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Base<wbr>Dn</a>
+<a href="#ldapbasedn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Base<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3896,8 +3896,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extended_groups_enabled_python">
-<a href="#extended_groups_enabled_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>groups_<wbr>enabled</a>
+        <span id="extended_groups_python">
+<a href="#extended_groups_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -4110,8 +4110,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedgroupsenabled_csharp">
-<a href="#extendedgroupsenabled_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups<wbr>Enabled</a>
+        <span id="extendedgroups_csharp">
+<a href="#extendedgroups_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -4129,7 +4129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="ldapbasedn_csharp">
-<a href="#ldapbasedn_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>Dn</a>
+<a href="#ldapbasedn_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4224,8 +4224,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedgroupsenabled_go">
-<a href="#extendedgroupsenabled_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups<wbr>Enabled</a>
+        <span id="extendedgroups_go">
+<a href="#extendedgroups_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -4243,7 +4243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="ldapbasedn_go">
-<a href="#ldapbasedn_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>Dn</a>
+<a href="#ldapbasedn_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4338,8 +4338,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedgroupsenabled_nodejs">
-<a href="#extendedgroupsenabled_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Groups<wbr>Enabled</a>
+        <span id="extendedgroups_nodejs">
+<a href="#extendedgroups_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
@@ -4357,7 +4357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="ldapbasedn_nodejs">
-<a href="#ldapbasedn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Base<wbr>Dn</a>
+<a href="#ldapbasedn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Base<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4452,8 +4452,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extended_groups_enabled_python">
-<a href="#extended_groups_enabled_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>groups_<wbr>enabled</a>
+        <span id="extended_groups_python">
+<a href="#extended_groups_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>

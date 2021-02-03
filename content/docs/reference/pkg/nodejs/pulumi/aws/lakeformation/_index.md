@@ -3,7 +3,7 @@ title: "Module lakeformation"
 title_tag: "Module lakeformation | Package @pulumi/aws | Node.js SDK"
 linktitle: "lakeformation"
 meta_desc: "Explore members of the lakeformation module in the @pulumi/aws package."
-git_sha: "b321f224815d900b31a53aff3df6b62a78294480"
+git_sha: "d072b346d2519850d0b24c72316f8d7487257ab0"
 block_external_search_index: true
 ---
 
@@ -48,7 +48,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="DataLakeSettings" data-link-title="DataLakeSettings">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L51">
         Resource <strong>DataLakeSettings</strong>
     </a>
 </h3>
@@ -98,7 +98,7 @@ const example = new aws.lakeformation.DataLakeSettings("example", {
 ```
 
 <h4 class="pdoc-member-header" id="DataLakeSettings-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -112,7 +112,7 @@ Create a DataLakeSettings resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DataLakeSettings-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L61">method <b>get</b></a>
 </h4>
 
 
@@ -123,14 +123,14 @@ Get an existing DataLakeSettings resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DataLakeSettings-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L51">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L51">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DataLakeSettings-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L72">method <b>isInstance</b></a>
 </h4>
 
 
@@ -141,7 +141,7 @@ Returns true if the given object is an instance of DataLakeSettings.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DataLakeSettings-admins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L82">property <b>admins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L82">property <b>admins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>admins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -149,7 +149,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 
 <h4 class="pdoc-member-header" id="DataLakeSettings-catalogId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L86">property <b>catalogId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L86">property <b>catalogId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>catalogId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -157,7 +157,7 @@ Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 Identifier for the Data Catalog. By default, the account ID.
 
 <h4 class="pdoc-member-header" id="DataLakeSettings-createDatabaseDefaultPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L90">property <b>createDatabaseDefaultPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L90">property <b>createDatabaseDefaultPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createDatabaseDefaultPermissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DataLakeSettingsCreateDatabaseDefaultPermission'>DataLakeSettingsCreateDatabaseDefaultPermission</a>[]&gt;;</code></pre>
@@ -165,7 +165,7 @@ Identifier for the Data Catalog. By default, the account ID.
 Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
 
 <h4 class="pdoc-member-header" id="DataLakeSettings-createTableDefaultPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L94">property <b>createTableDefaultPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L94">property <b>createTableDefaultPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTableDefaultPermissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DataLakeSettingsCreateTableDefaultPermission'>DataLakeSettingsCreateTableDefaultPermission</a>[]&gt;;</code></pre>
@@ -173,7 +173,7 @@ Up to three configuration blocks of principal permissions for default create dat
 Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
 
 <h4 class="pdoc-member-header" id="DataLakeSettings-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L51">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L51">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -182,7 +182,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DataLakeSettings-trustedResourceOwners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L98">property <b>trustedResourceOwners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L98">property <b>trustedResourceOwners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>trustedResourceOwners: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -190,7 +190,7 @@ deployments and may be missing (undefined) during planning phases.
 List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
 
 <h4 class="pdoc-member-header" id="DataLakeSettings-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L51">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L51">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -199,7 +199,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Permissions" data-link-title="Permissions">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L48">
         Resource <strong>Permissions</strong>
     </a>
 </h3>
@@ -246,7 +246,7 @@ const test = new aws.lakeformation.Permissions("test", {
 ```
 
 <h4 class="pdoc-member-header" id="Permissions-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L111"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L111"> <b>constructor</b></a>
 </h4>
 
 
@@ -260,7 +260,7 @@ Create a Permissions resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Permissions-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -271,14 +271,14 @@ Get an existing Permissions resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Permissions-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L48">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Permissions-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -289,7 +289,7 @@ Returns true if the given object is an instance of Permissions.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Permissions-catalogId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L79">property <b>catalogId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L79">property <b>catalogId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>catalogId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -297,7 +297,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Identifier for the Data Catalog. By default, it is the account ID of the caller.
 
 <h4 class="pdoc-member-header" id="Permissions-catalogResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L83">property <b>catalogResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L83">property <b>catalogResource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>catalogResource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -305,7 +305,7 @@ Identifier for the Data Catalog. By default, it is the account ID of the caller.
 Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Permissions-dataLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L87">property <b>dataLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L87">property <b>dataLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PermissionsDataLocation'>PermissionsDataLocation</a>&gt;;</code></pre>
@@ -313,7 +313,7 @@ Whether the permissions are to be granted for the Data Catalog. Defaults to `fal
 Configuration block for a data location resource. Detailed below.
 
 <h4 class="pdoc-member-header" id="Permissions-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L91">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L91">property <b>database</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PermissionsDatabase'>PermissionsDatabase</a>&gt;;</code></pre>
@@ -321,7 +321,7 @@ Configuration block for a data location resource. Detailed below.
 Configuration block for a database resource. Detailed below.
 
 <h4 class="pdoc-member-header" id="Permissions-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -330,7 +330,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Permissions-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L95">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L95">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -338,7 +338,7 @@ deployments and may be missing (undefined) during planning phases.
 List of permissions granted to the principal. Valid values may include `ALL`, `ALTER`, `CREATE_DATABASE`, `CREATE_TABLE`, `DATA_LOCATION_ACCESS`, `DELETE`, `DESCRIBE`, `DROP`, `INSERT`, and `SELECT`. For details on each permission, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
 
 <h4 class="pdoc-member-header" id="Permissions-permissionsWithGrantOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L99">property <b>permissionsWithGrantOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L99">property <b>permissionsWithGrantOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissionsWithGrantOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -346,7 +346,7 @@ List of permissions granted to the principal. Valid values may include `ALL`, `A
 Subset of `permissions` which the principal can pass.
 
 <h4 class="pdoc-member-header" id="Permissions-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L103">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L103">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -354,7 +354,7 @@ Subset of `permissions` which the principal can pass.
 Principal to be granted the permissions on the resource. Supported principals include IAM users and IAM roles.
 
 <h4 class="pdoc-member-header" id="Permissions-table">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L107">property <b>table</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L107">property <b>table</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>table: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PermissionsTable'>PermissionsTable</a>&gt;;</code></pre>
@@ -362,7 +362,7 @@ Principal to be granted the permissions on the resource. Supported principals in
 Configuration block for a table resource. Detailed below.
 
 <h4 class="pdoc-member-header" id="Permissions-tableWithColumns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L111">property <b>tableWithColumns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L111">property <b>tableWithColumns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tableWithColumns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PermissionsTableWithColumns'>PermissionsTableWithColumns</a>&gt;;</code></pre>
@@ -370,7 +370,7 @@ Configuration block for a table resource. Detailed below.
 Configuration block for a table with columns resource. Detailed below.
 
 <h4 class="pdoc-member-header" id="Permissions-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L48">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -379,7 +379,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Resource" data-link-title="Resource">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/resource.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/resource.ts#L24">
         Resource <strong>Resource</strong>
     </a>
 </h3>
@@ -403,7 +403,7 @@ const exampleResource = new aws.lakeformation.Resource("exampleResource", {arn: 
 ```
 
 <h4 class="pdoc-member-header" id="Resource-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/resource.ts#L63"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/resource.ts#L63"> <b>constructor</b></a>
 </h4>
 
 
@@ -417,7 +417,7 @@ Create a Resource resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Resource-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/resource.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/resource.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -428,14 +428,14 @@ Get an existing Resource resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Resource-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/resource.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/resource.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Resource-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/resource.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/resource.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -446,7 +446,7 @@ Returns true if the given object is an instance of Resource.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Resource-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/resource.ts#L55">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/resource.ts#L55">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -454,7 +454,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the resource, an S3 path.
 
 <h4 class="pdoc-member-header" id="Resource-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/resource.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/resource.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -463,7 +463,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Resource-lastModified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/resource.ts#L59">property <b>lastModified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/resource.ts#L59">property <b>lastModified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastModified: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -471,7 +471,7 @@ deployments and may be missing (undefined) during planning phases.
 (Optional) The date and time the resource was last modified in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 
 <h4 class="pdoc-member-header" id="Resource-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/resource.ts#L63">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/resource.ts#L63">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -479,7 +479,7 @@ deployments and may be missing (undefined) during planning phases.
 Role that has read/write access to the resource. If not provided, the Lake Formation service-linked role must exist and is used.
 
 <h4 class="pdoc-member-header" id="Resource-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/resource.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/resource.ts#L24">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -490,7 +490,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDataLakeSettings" data-link-title="getDataLakeSettings">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L22">
         Function <strong>getDataLakeSettings</strong>
     </a>
 </h3>
@@ -513,7 +513,7 @@ const example = pulumi.output(aws.lakeformation.getDataLakeSettings({
 ```
 
 <h3 class="pdoc-module-header" id="getPermissions" data-link-title="getPermissions">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L29">
         Function <strong>getPermissions</strong>
     </a>
 </h3>
@@ -543,7 +543,7 @@ const test = aws.lakeformation.getPermissions({
 ```
 
 <h3 class="pdoc-module-header" id="getResource" data-link-title="getResource">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getResource.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getResource.ts#L22">
         Function <strong>getResource</strong>
     </a>
 </h3>
@@ -568,7 +568,7 @@ const example = pulumi.output(aws.lakeformation.getResource({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DataLakeSettingsArgs" data-link-title="DataLakeSettingsArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L165">
         interface <strong>DataLakeSettingsArgs</strong>
     </a>
 </h3>
@@ -578,7 +578,7 @@ const example = pulumi.output(aws.lakeformation.getResource({
 The set of arguments for constructing a DataLakeSettings resource.
 
 <h4 class="pdoc-member-header" id="DataLakeSettingsArgs-admins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L169">property <b>admins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L169">property <b>admins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>admins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -586,7 +586,7 @@ The set of arguments for constructing a DataLakeSettings resource.
 Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 
 <h4 class="pdoc-member-header" id="DataLakeSettingsArgs-catalogId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L173">property <b>catalogId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L173">property <b>catalogId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>catalogId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -594,7 +594,7 @@ Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 Identifier for the Data Catalog. By default, the account ID.
 
 <h4 class="pdoc-member-header" id="DataLakeSettingsArgs-createDatabaseDefaultPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L177">property <b>createDatabaseDefaultPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L177">property <b>createDatabaseDefaultPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createDatabaseDefaultPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataLakeSettingsCreateDatabaseDefaultPermission'>DataLakeSettingsCreateDatabaseDefaultPermission</a>&gt;[]&gt;;</code></pre>
@@ -602,7 +602,7 @@ Identifier for the Data Catalog. By default, the account ID.
 Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
 
 <h4 class="pdoc-member-header" id="DataLakeSettingsArgs-createTableDefaultPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L181">property <b>createTableDefaultPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L181">property <b>createTableDefaultPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTableDefaultPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataLakeSettingsCreateTableDefaultPermission'>DataLakeSettingsCreateTableDefaultPermission</a>&gt;[]&gt;;</code></pre>
@@ -610,7 +610,7 @@ Up to three configuration blocks of principal permissions for default create dat
 Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
 
 <h4 class="pdoc-member-header" id="DataLakeSettingsArgs-trustedResourceOwners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L185">property <b>trustedResourceOwners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L185">property <b>trustedResourceOwners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trustedResourceOwners?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -618,7 +618,7 @@ Up to three configuration blocks of principal permissions for default create tab
 List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
 
 <h3 class="pdoc-module-header" id="DataLakeSettingsState" data-link-title="DataLakeSettingsState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L139">
         interface <strong>DataLakeSettingsState</strong>
     </a>
 </h3>
@@ -628,7 +628,7 @@ List of the resource-owning account IDs that the caller's account can use to sha
 Input properties used for looking up and filtering DataLakeSettings resources.
 
 <h4 class="pdoc-member-header" id="DataLakeSettingsState-admins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L143">property <b>admins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L143">property <b>admins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>admins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -636,7 +636,7 @@ Input properties used for looking up and filtering DataLakeSettings resources.
 Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 
 <h4 class="pdoc-member-header" id="DataLakeSettingsState-catalogId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L147">property <b>catalogId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L147">property <b>catalogId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>catalogId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -644,7 +644,7 @@ Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 Identifier for the Data Catalog. By default, the account ID.
 
 <h4 class="pdoc-member-header" id="DataLakeSettingsState-createDatabaseDefaultPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L151">property <b>createDatabaseDefaultPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L151">property <b>createDatabaseDefaultPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createDatabaseDefaultPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataLakeSettingsCreateDatabaseDefaultPermission'>DataLakeSettingsCreateDatabaseDefaultPermission</a>&gt;[]&gt;;</code></pre>
@@ -652,7 +652,7 @@ Identifier for the Data Catalog. By default, the account ID.
 Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
 
 <h4 class="pdoc-member-header" id="DataLakeSettingsState-createTableDefaultPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L155">property <b>createTableDefaultPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L155">property <b>createTableDefaultPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTableDefaultPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DataLakeSettingsCreateTableDefaultPermission'>DataLakeSettingsCreateTableDefaultPermission</a>&gt;[]&gt;;</code></pre>
@@ -660,7 +660,7 @@ Up to three configuration blocks of principal permissions for default create dat
 Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
 
 <h4 class="pdoc-member-header" id="DataLakeSettingsState-trustedResourceOwners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/dataLakeSettings.ts#L159">property <b>trustedResourceOwners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/dataLakeSettings.ts#L159">property <b>trustedResourceOwners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trustedResourceOwners?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -668,7 +668,7 @@ Up to three configuration blocks of principal permissions for default create tab
 List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
 
 <h3 class="pdoc-module-header" id="GetDataLakeSettingsArgs" data-link-title="GetDataLakeSettingsArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L39">
         interface <strong>GetDataLakeSettingsArgs</strong>
     </a>
 </h3>
@@ -678,7 +678,7 @@ List of the resource-owning account IDs that the caller's account can use to sha
 A collection of arguments for invoking getDataLakeSettings.
 
 <h4 class="pdoc-member-header" id="GetDataLakeSettingsArgs-catalogId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L43">property <b>catalogId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L43">property <b>catalogId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>catalogId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -686,7 +686,7 @@ A collection of arguments for invoking getDataLakeSettings.
 Identifier for the Data Catalog. By default, the account ID.
 
 <h3 class="pdoc-module-header" id="GetDataLakeSettingsResult" data-link-title="GetDataLakeSettingsResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L49">
         interface <strong>GetDataLakeSettingsResult</strong>
     </a>
 </h3>
@@ -696,7 +696,7 @@ Identifier for the Data Catalog. By default, the account ID.
 A collection of values returned by getDataLakeSettings.
 
 <h4 class="pdoc-member-header" id="GetDataLakeSettingsResult-admins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L53">property <b>admins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L53">property <b>admins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>admins: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -704,12 +704,12 @@ A collection of values returned by getDataLakeSettings.
 List of ARNs of AWS Lake Formation principals (IAM users or roles).
 
 <h4 class="pdoc-member-header" id="GetDataLakeSettingsResult-catalogId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L54">property <b>catalogId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L54">property <b>catalogId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>catalogId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDataLakeSettingsResult-createDatabaseDefaultPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L58">property <b>createDatabaseDefaultPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L58">property <b>createDatabaseDefaultPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createDatabaseDefaultPermissions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDataLakeSettingsCreateDatabaseDefaultPermission'>GetDataLakeSettingsCreateDatabaseDefaultPermission</a>[];</code></pre>
@@ -717,7 +717,7 @@ List of ARNs of AWS Lake Formation principals (IAM users or roles).
 Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
 
 <h4 class="pdoc-member-header" id="GetDataLakeSettingsResult-createTableDefaultPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L62">property <b>createTableDefaultPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L62">property <b>createTableDefaultPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTableDefaultPermissions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDataLakeSettingsCreateTableDefaultPermission'>GetDataLakeSettingsCreateTableDefaultPermission</a>[];</code></pre>
@@ -725,7 +725,7 @@ Up to three configuration blocks of principal permissions for default create dat
 Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
 
 <h4 class="pdoc-member-header" id="GetDataLakeSettingsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L66">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -733,7 +733,7 @@ Up to three configuration blocks of principal permissions for default create tab
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDataLakeSettingsResult-trustedResourceOwners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L70">property <b>trustedResourceOwners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getDataLakeSettings.ts#L70">property <b>trustedResourceOwners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trustedResourceOwners: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -741,7 +741,7 @@ The provider-assigned unique ID for this managed resource.
 List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
 
 <h3 class="pdoc-module-header" id="GetPermissionsArgs" data-link-title="GetPermissionsArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L51">
         interface <strong>GetPermissionsArgs</strong>
     </a>
 </h3>
@@ -751,7 +751,7 @@ List of the resource-owning account IDs that the caller's account can use to sha
 A collection of arguments for invoking getPermissions.
 
 <h4 class="pdoc-member-header" id="GetPermissionsArgs-catalogId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L55">property <b>catalogId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L55">property <b>catalogId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>catalogId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -759,7 +759,7 @@ A collection of arguments for invoking getPermissions.
 Identifier for the Data Catalog. By default, it is the account ID of the caller.
 
 <h4 class="pdoc-member-header" id="GetPermissionsArgs-catalogResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L59">property <b>catalogResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L59">property <b>catalogResource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>catalogResource?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -767,7 +767,7 @@ Identifier for the Data Catalog. By default, it is the account ID of the caller.
 Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="GetPermissionsArgs-dataLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L63">property <b>dataLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L63">property <b>dataLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetPermissionsDataLocation'>inputs.lakeformation.GetPermissionsDataLocation</a>;</code></pre>
@@ -775,7 +775,7 @@ Whether the permissions are to be granted for the Data Catalog. Defaults to `fal
 Configuration block for a data location resource. Detailed below.
 
 <h4 class="pdoc-member-header" id="GetPermissionsArgs-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L67">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L67">property <b>database</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetPermissionsDatabase'>inputs.lakeformation.GetPermissionsDatabase</a>;</code></pre>
@@ -783,7 +783,7 @@ Configuration block for a data location resource. Detailed below.
 Configuration block for a database resource. Detailed below.
 
 <h4 class="pdoc-member-header" id="GetPermissionsArgs-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L71">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L71">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -791,7 +791,7 @@ Configuration block for a database resource. Detailed below.
 Principal to be granted the permissions on the resource. Supported principals are IAM users or IAM roles.
 
 <h4 class="pdoc-member-header" id="GetPermissionsArgs-table">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L75">property <b>table</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L75">property <b>table</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>table?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetPermissionsTable'>inputs.lakeformation.GetPermissionsTable</a>;</code></pre>
@@ -799,7 +799,7 @@ Principal to be granted the permissions on the resource. Supported principals ar
 Configuration block for a table resource. Detailed below.
 
 <h4 class="pdoc-member-header" id="GetPermissionsArgs-tableWithColumns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L79">property <b>tableWithColumns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L79">property <b>tableWithColumns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableWithColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetPermissionsTableWithColumns'>inputs.lakeformation.GetPermissionsTableWithColumns</a>;</code></pre>
@@ -807,7 +807,7 @@ Configuration block for a table resource. Detailed below.
 Configuration block for a table with columns resource. Detailed below.
 
 <h3 class="pdoc-module-header" id="GetPermissionsResult" data-link-title="GetPermissionsResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L85">
         interface <strong>GetPermissionsResult</strong>
     </a>
 </h3>
@@ -817,27 +817,27 @@ Configuration block for a table with columns resource. Detailed below.
 A collection of values returned by getPermissions.
 
 <h4 class="pdoc-member-header" id="GetPermissionsResult-catalogId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L86">property <b>catalogId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L86">property <b>catalogId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>catalogId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPermissionsResult-catalogResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L87">property <b>catalogResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L87">property <b>catalogResource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>catalogResource?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPermissionsResult-dataLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L88">property <b>dataLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L88">property <b>dataLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataLocation: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPermissionsDataLocation'>GetPermissionsDataLocation</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPermissionsResult-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L89">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L89">property <b>database</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>database: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPermissionsDatabase'>GetPermissionsDatabase</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPermissionsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L93">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L93">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -845,7 +845,7 @@ A collection of values returned by getPermissions.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPermissionsResult-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L97">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L97">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -853,7 +853,7 @@ The provider-assigned unique ID for this managed resource.
 List of permissions granted to the principal. For details on permissions, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
 
 <h4 class="pdoc-member-header" id="GetPermissionsResult-permissionsWithGrantOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L101">property <b>permissionsWithGrantOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L101">property <b>permissionsWithGrantOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissionsWithGrantOptions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -861,22 +861,22 @@ List of permissions granted to the principal. For details on permissions, see [L
 Subset of `permissions` which the principal can pass.
 
 <h4 class="pdoc-member-header" id="GetPermissionsResult-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L102">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L102">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPermissionsResult-table">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L103">property <b>table</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L103">property <b>table</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>table: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPermissionsTable'>GetPermissionsTable</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPermissionsResult-tableWithColumns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getPermissions.ts#L104">property <b>tableWithColumns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getPermissions.ts#L104">property <b>tableWithColumns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableWithColumns: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPermissionsTableWithColumns'>GetPermissionsTableWithColumns</a>;</code></pre>
 <h3 class="pdoc-module-header" id="GetResourceArgs" data-link-title="GetResourceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getResource.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getResource.ts#L38">
         interface <strong>GetResourceArgs</strong>
     </a>
 </h3>
@@ -886,7 +886,7 @@ Subset of `permissions` which the principal can pass.
 A collection of arguments for invoking getResource.
 
 <h4 class="pdoc-member-header" id="GetResourceArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getResource.ts#L42">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getResource.ts#L42">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -894,7 +894,7 @@ A collection of arguments for invoking getResource.
 Amazon Resource Name (ARN) of the resource, an S3 path.
 
 <h3 class="pdoc-module-header" id="GetResourceResult" data-link-title="GetResourceResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getResource.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getResource.ts#L48">
         interface <strong>GetResourceResult</strong>
     </a>
 </h3>
@@ -904,12 +904,12 @@ Amazon Resource Name (ARN) of the resource, an S3 path.
 A collection of values returned by getResource.
 
 <h4 class="pdoc-member-header" id="GetResourceResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getResource.ts#L49">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getResource.ts#L49">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetResourceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getResource.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getResource.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -917,7 +917,7 @@ A collection of values returned by getResource.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetResourceResult-lastModified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getResource.ts#L57">property <b>lastModified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getResource.ts#L57">property <b>lastModified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModified: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -925,7 +925,7 @@ The provider-assigned unique ID for this managed resource.
 The date and time the resource was last modified in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 
 <h4 class="pdoc-member-header" id="GetResourceResult-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/getResource.ts#L61">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/getResource.ts#L61">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -933,7 +933,7 @@ The date and time the resource was last modified in [RFC 3339 format](https://to
 Role that the resource was registered with.
 
 <h3 class="pdoc-module-header" id="PermissionsArgs" data-link-title="PermissionsArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L208">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L208">
         interface <strong>PermissionsArgs</strong>
     </a>
 </h3>
@@ -943,7 +943,7 @@ Role that the resource was registered with.
 The set of arguments for constructing a Permissions resource.
 
 <h4 class="pdoc-member-header" id="PermissionsArgs-catalogId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L212">property <b>catalogId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L212">property <b>catalogId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>catalogId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -951,7 +951,7 @@ The set of arguments for constructing a Permissions resource.
 Identifier for the Data Catalog. By default, it is the account ID of the caller.
 
 <h4 class="pdoc-member-header" id="PermissionsArgs-catalogResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L216">property <b>catalogResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L216">property <b>catalogResource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>catalogResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -959,7 +959,7 @@ Identifier for the Data Catalog. By default, it is the account ID of the caller.
 Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="PermissionsArgs-dataLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L220">property <b>dataLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L220">property <b>dataLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PermissionsDataLocation'>PermissionsDataLocation</a>&gt;;</code></pre>
@@ -967,7 +967,7 @@ Whether the permissions are to be granted for the Data Catalog. Defaults to `fal
 Configuration block for a data location resource. Detailed below.
 
 <h4 class="pdoc-member-header" id="PermissionsArgs-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L224">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L224">property <b>database</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PermissionsDatabase'>PermissionsDatabase</a>&gt;;</code></pre>
@@ -975,7 +975,7 @@ Configuration block for a data location resource. Detailed below.
 Configuration block for a database resource. Detailed below.
 
 <h4 class="pdoc-member-header" id="PermissionsArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L228">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L228">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -983,7 +983,7 @@ Configuration block for a database resource. Detailed below.
 List of permissions granted to the principal. Valid values may include `ALL`, `ALTER`, `CREATE_DATABASE`, `CREATE_TABLE`, `DATA_LOCATION_ACCESS`, `DELETE`, `DESCRIBE`, `DROP`, `INSERT`, and `SELECT`. For details on each permission, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
 
 <h4 class="pdoc-member-header" id="PermissionsArgs-permissionsWithGrantOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L232">property <b>permissionsWithGrantOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L232">property <b>permissionsWithGrantOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissionsWithGrantOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -991,7 +991,7 @@ List of permissions granted to the principal. Valid values may include `ALL`, `A
 Subset of `permissions` which the principal can pass.
 
 <h4 class="pdoc-member-header" id="PermissionsArgs-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L236">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L236">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -999,7 +999,7 @@ Subset of `permissions` which the principal can pass.
 Principal to be granted the permissions on the resource. Supported principals include IAM users and IAM roles.
 
 <h4 class="pdoc-member-header" id="PermissionsArgs-table">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L240">property <b>table</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L240">property <b>table</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>table?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PermissionsTable'>PermissionsTable</a>&gt;;</code></pre>
@@ -1007,7 +1007,7 @@ Principal to be granted the permissions on the resource. Supported principals in
 Configuration block for a table resource. Detailed below.
 
 <h4 class="pdoc-member-header" id="PermissionsArgs-tableWithColumns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L244">property <b>tableWithColumns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L244">property <b>tableWithColumns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableWithColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PermissionsTableWithColumns'>PermissionsTableWithColumns</a>&gt;;</code></pre>
@@ -1015,7 +1015,7 @@ Configuration block for a table resource. Detailed below.
 Configuration block for a table with columns resource. Detailed below.
 
 <h3 class="pdoc-module-header" id="PermissionsState" data-link-title="PermissionsState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L166">
         interface <strong>PermissionsState</strong>
     </a>
 </h3>
@@ -1025,7 +1025,7 @@ Configuration block for a table with columns resource. Detailed below.
 Input properties used for looking up and filtering Permissions resources.
 
 <h4 class="pdoc-member-header" id="PermissionsState-catalogId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L170">property <b>catalogId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L170">property <b>catalogId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>catalogId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1033,7 +1033,7 @@ Input properties used for looking up and filtering Permissions resources.
 Identifier for the Data Catalog. By default, it is the account ID of the caller.
 
 <h4 class="pdoc-member-header" id="PermissionsState-catalogResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L174">property <b>catalogResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L174">property <b>catalogResource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>catalogResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1041,7 +1041,7 @@ Identifier for the Data Catalog. By default, it is the account ID of the caller.
 Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="PermissionsState-dataLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L178">property <b>dataLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L178">property <b>dataLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PermissionsDataLocation'>PermissionsDataLocation</a>&gt;;</code></pre>
@@ -1049,7 +1049,7 @@ Whether the permissions are to be granted for the Data Catalog. Defaults to `fal
 Configuration block for a data location resource. Detailed below.
 
 <h4 class="pdoc-member-header" id="PermissionsState-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L182">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L182">property <b>database</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PermissionsDatabase'>PermissionsDatabase</a>&gt;;</code></pre>
@@ -1057,7 +1057,7 @@ Configuration block for a data location resource. Detailed below.
 Configuration block for a database resource. Detailed below.
 
 <h4 class="pdoc-member-header" id="PermissionsState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L186">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L186">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1065,7 +1065,7 @@ Configuration block for a database resource. Detailed below.
 List of permissions granted to the principal. Valid values may include `ALL`, `ALTER`, `CREATE_DATABASE`, `CREATE_TABLE`, `DATA_LOCATION_ACCESS`, `DELETE`, `DESCRIBE`, `DROP`, `INSERT`, and `SELECT`. For details on each permission, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
 
 <h4 class="pdoc-member-header" id="PermissionsState-permissionsWithGrantOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L190">property <b>permissionsWithGrantOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L190">property <b>permissionsWithGrantOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissionsWithGrantOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1073,7 +1073,7 @@ List of permissions granted to the principal. Valid values may include `ALL`, `A
 Subset of `permissions` which the principal can pass.
 
 <h4 class="pdoc-member-header" id="PermissionsState-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L194">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L194">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1081,7 +1081,7 @@ Subset of `permissions` which the principal can pass.
 Principal to be granted the permissions on the resource. Supported principals include IAM users and IAM roles.
 
 <h4 class="pdoc-member-header" id="PermissionsState-table">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L198">property <b>table</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L198">property <b>table</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>table?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PermissionsTable'>PermissionsTable</a>&gt;;</code></pre>
@@ -1089,7 +1089,7 @@ Principal to be granted the permissions on the resource. Supported principals in
 Configuration block for a table resource. Detailed below.
 
 <h4 class="pdoc-member-header" id="PermissionsState-tableWithColumns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/permissions.ts#L202">property <b>tableWithColumns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/permissions.ts#L202">property <b>tableWithColumns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableWithColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PermissionsTableWithColumns'>PermissionsTableWithColumns</a>&gt;;</code></pre>
@@ -1097,7 +1097,7 @@ Configuration block for a table resource. Detailed below.
 Configuration block for a table with columns resource. Detailed below.
 
 <h3 class="pdoc-module-header" id="ResourceArgs" data-link-title="ResourceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/resource.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/resource.ts#L121">
         interface <strong>ResourceArgs</strong>
     </a>
 </h3>
@@ -1107,7 +1107,7 @@ Configuration block for a table with columns resource. Detailed below.
 The set of arguments for constructing a Resource resource.
 
 <h4 class="pdoc-member-header" id="ResourceArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/resource.ts#L125">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/resource.ts#L125">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1115,7 +1115,7 @@ The set of arguments for constructing a Resource resource.
 Amazon Resource Name (ARN) of the resource, an S3 path.
 
 <h4 class="pdoc-member-header" id="ResourceArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/resource.ts#L129">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/resource.ts#L129">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1123,7 +1123,7 @@ Amazon Resource Name (ARN) of the resource, an S3 path.
 Role that has read/write access to the resource. If not provided, the Lake Formation service-linked role must exist and is used.
 
 <h3 class="pdoc-module-header" id="ResourceState" data-link-title="ResourceState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/resource.ts#L103">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/resource.ts#L103">
         interface <strong>ResourceState</strong>
     </a>
 </h3>
@@ -1133,7 +1133,7 @@ Role that has read/write access to the resource. If not provided, the Lake Forma
 Input properties used for looking up and filtering Resource resources.
 
 <h4 class="pdoc-member-header" id="ResourceState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/resource.ts#L107">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/resource.ts#L107">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1141,7 +1141,7 @@ Input properties used for looking up and filtering Resource resources.
 Amazon Resource Name (ARN) of the resource, an S3 path.
 
 <h4 class="pdoc-member-header" id="ResourceState-lastModified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/resource.ts#L111">property <b>lastModified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/resource.ts#L111">property <b>lastModified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModified?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1149,7 +1149,7 @@ Amazon Resource Name (ARN) of the resource, an S3 path.
 (Optional) The date and time the resource was last modified in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 
 <h4 class="pdoc-member-header" id="ResourceState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/lakeformation/resource.ts#L115">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/lakeformation/resource.ts#L115">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

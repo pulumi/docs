@@ -17532,6 +17532,15 @@ The following output properties are available:
     <dd>{{% md %}}Activity name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="autouserspecification_csharp">
+<a href="#autouserspecification_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>User<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="dependson_csharp">
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
@@ -17644,6 +17653,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Activity name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autouserspecification_go">
+<a href="#autouserspecification_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>User<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dependson_go">
@@ -17760,6 +17778,15 @@ The following output properties are available:
     <dd>{{% md %}}Activity name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="autouserspecification_nodejs">
+<a href="#autouserspecification_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>User<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="dependson_nodejs">
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
@@ -17872,6 +17899,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Activity name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="auto_user_specification_python">
+<a href="#auto_user_specification_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>user_<wbr>specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="depends_on_python">

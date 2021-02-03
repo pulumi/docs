@@ -172,7 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the policy exemption.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_csharp">
@@ -181,7 +181,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy exemption.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="policyassignmentid_csharp">
@@ -208,7 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource (Microsoft.Authorization/policyExemptions).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="description_csharp">
@@ -277,7 +277,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the policy exemption.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_go">
@@ -286,7 +286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy exemption.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="policyassignmentid_go">
@@ -313,7 +313,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource (Microsoft.Authorization/policyExemptions).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="description_go">
@@ -382,7 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the policy exemption.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_nodejs">
@@ -391,7 +391,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy exemption.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="policyassignmentid_nodejs">
@@ -418,7 +418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource (Microsoft.Authorization/policyExemptions).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="description_nodejs">
@@ -487,7 +487,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the policy exemption.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_python">
@@ -496,7 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy exemption.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="policy_assignment_id_python">
@@ -523,7 +523,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource (Microsoft.Authorization/policyExemptions).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="description_python">

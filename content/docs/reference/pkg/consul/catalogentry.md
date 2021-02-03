@@ -65,6 +65,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-consul/sdk/v2/go/consul"
+	"github.com/pulumi/pulumi-consul/sdk/v2/go/consul/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

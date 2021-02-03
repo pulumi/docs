@@ -2133,8 +2133,8 @@ The following output properties are available:
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedgroupsenabled_csharp">
-<a href="#extendedgroupsenabled_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups<wbr>Enabled</a>
+        <span id="extendedgroups_csharp">
+<a href="#extendedgroups_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -2152,7 +2152,7 @@ The following output properties are available:
     <dt class="property-optional"
             title="Optional">
         <span id="ldapbasedn_csharp">
-<a href="#ldapbasedn_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>Dn</a>
+<a href="#ldapbasedn_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2247,8 +2247,8 @@ The following output properties are available:
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedgroupsenabled_go">
-<a href="#extendedgroupsenabled_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups<wbr>Enabled</a>
+        <span id="extendedgroups_go">
+<a href="#extendedgroups_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -2266,7 +2266,7 @@ The following output properties are available:
     <dt class="property-optional"
             title="Optional">
         <span id="ldapbasedn_go">
-<a href="#ldapbasedn_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>Dn</a>
+<a href="#ldapbasedn_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2361,8 +2361,8 @@ The following output properties are available:
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedgroupsenabled_nodejs">
-<a href="#extendedgroupsenabled_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Groups<wbr>Enabled</a>
+        <span id="extendedgroups_nodejs">
+<a href="#extendedgroups_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
@@ -2380,7 +2380,7 @@ The following output properties are available:
     <dt class="property-optional"
             title="Optional">
         <span id="ldapbasedn_nodejs">
-<a href="#ldapbasedn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Base<wbr>Dn</a>
+<a href="#ldapbasedn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Base<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2475,8 +2475,8 @@ The following output properties are available:
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extended_groups_enabled_python">
-<a href="#extended_groups_enabled_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>groups_<wbr>enabled</a>
+        <span id="extended_groups_python">
+<a href="#extended_groups_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>

@@ -3,7 +3,7 @@ title: "Module consul"
 title_tag: "Module consul | Package @pulumi/vault | Node.js SDK"
 linktitle: "consul"
 meta_desc: "Explore members of the consul module in the @pulumi/vault package."
-git_sha: "ebbace55ace6f59a082f504fcae2277b394db92f"
+git_sha: "d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2"
 block_external_search_index: true
 ---
 
@@ -33,7 +33,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="SecretBackend" data-link-title="SecretBackend">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L16">
         Resource <strong>SecretBackend</strong>
     </a>
 </h3>
@@ -49,7 +49,7 @@ Consul secret backends can be imported using the `path`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="SecretBackend-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -63,7 +63,7 @@ Create a SecretBackend resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackend-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -74,14 +74,14 @@ Get an existing SecretBackend resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackend-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackend-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -92,7 +92,7 @@ Returns true if the given object is an instance of SecretBackend.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackend-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L47">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L47">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -100,7 +100,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the address of the Consul instance, provided as "host:port" like "127.0.0.1:8500".
 
 <h4 class="pdoc-member-header" id="SecretBackend-caCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L51">property <b>caCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L51">property <b>caCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>caCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -108,7 +108,7 @@ Specifies the address of the Consul instance, provided as "host:port" like "127.
 CA certificate to use when verifying Consul server certificate, must be x509 PEM encoded.
 
 <h4 class="pdoc-member-header" id="SecretBackend-clientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L55">property <b>clientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L55">property <b>clientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -116,7 +116,7 @@ CA certificate to use when verifying Consul server certificate, must be x509 PEM
 Client certificate used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.
 
 <h4 class="pdoc-member-header" id="SecretBackend-clientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L59">property <b>clientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L59">property <b>clientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -124,7 +124,7 @@ Client certificate used for Consul's TLS communication, must be x509 PEM encoded
 Client key used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.
 
 <h4 class="pdoc-member-header" id="SecretBackend-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L63">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L63">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultLeaseTtlSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -132,7 +132,7 @@ Client key used for Consul's TLS communication, must be x509 PEM encoded and if 
 The default TTL for credentials issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackend-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L67">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L67">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -140,7 +140,7 @@ The default TTL for credentials issued by this backend.
 A human-friendly description for this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackend-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -149,7 +149,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackend-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L72">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L72">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxLeaseTtlSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -158,7 +158,7 @@ The maximum TTL that can be requested
 for credentials issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackend-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L76">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L76">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -166,7 +166,7 @@ for credentials issued by this backend.
 The unique location this backend should be mounted at. Must not begin or end with a `/`. Defaults to `consul`.
 
 <h4 class="pdoc-member-header" id="SecretBackend-scheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L80">property <b>scheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L80">property <b>scheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheme: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -174,7 +174,7 @@ The unique location this backend should be mounted at. Must not begin or end wit
 Specifies the URL scheme to use. Defaults to `http`.
 
 <h4 class="pdoc-member-header" id="SecretBackend-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L84">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L84">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -182,7 +182,7 @@ Specifies the URL scheme to use. Defaults to `http`.
 The Consul management token this backend should use to issue new tokens.
 
 <h4 class="pdoc-member-header" id="SecretBackend-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -191,7 +191,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretBackendRole" data-link-title="SecretBackendRole">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L36">
         Resource <strong>SecretBackendRole</strong>
     </a>
 </h3>
@@ -227,7 +227,7 @@ Consul secret backend roles can be imported using the `backend`, `/roles/`, and 
 ```
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L97"> <b>constructor</b></a>
 </h4>
 
 
@@ -241,7 +241,7 @@ Create a SecretBackendRole resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -252,14 +252,14 @@ Get an existing SecretBackendRole resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -270,7 +270,7 @@ Returns true if the given object is an instance of SecretBackendRole.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L67">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L67">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -278,7 +278,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The unique name of an existing Consul secrets backend mount. Must not begin or end with a `/`. One of `path` or `backend` is required.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -287,7 +287,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-local">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L71">property <b>local</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L71">property <b>local</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>local: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -295,7 +295,7 @@ deployments and may be missing (undefined) during planning phases.
 Indicates that the token should not be replicated globally and instead be local to the current datacenter.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L75">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L75">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -303,7 +303,7 @@ Indicates that the token should not be replicated globally and instead be local 
 Maximum TTL for leases associated with this role, in seconds.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -311,7 +311,7 @@ Maximum TTL for leases associated with this role, in seconds.
 The name of the Consul secrets engine role to create.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L85">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L85">property <b>path</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -323,7 +323,7 @@ use `backend` instead
 The unique name of an existing Consul secrets backend mount. Must not begin or end with a `/`. **Deprecated**
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L89">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L89">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -331,7 +331,7 @@ The unique name of an existing Consul secrets backend mount. Must not begin or e
 The list of Consul ACL policies to associate with these roles.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L93">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L93">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -339,7 +339,7 @@ The list of Consul ACL policies to associate with these roles.
 Specifies the type of token to create when using this role. Valid values are "client" or "management".
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L97">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L97">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -347,7 +347,7 @@ Specifies the type of token to create when using this role. Valid values are "cl
 Specifies the TTL for this role.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -359,7 +359,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="SecretBackendArgs" data-link-title="SecretBackendArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L188">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L188">
         interface <strong>SecretBackendArgs</strong>
     </a>
 </h3>
@@ -369,7 +369,7 @@ deployments.
 The set of arguments for constructing a SecretBackend resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L192">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L192">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -377,7 +377,7 @@ The set of arguments for constructing a SecretBackend resource.
 Specifies the address of the Consul instance, provided as "host:port" like "127.0.0.1:8500".
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-caCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L196">property <b>caCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L196">property <b>caCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>caCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -385,7 +385,7 @@ Specifies the address of the Consul instance, provided as "host:port" like "127.
 CA certificate to use when verifying Consul server certificate, must be x509 PEM encoded.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-clientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L200">property <b>clientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L200">property <b>clientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -393,7 +393,7 @@ CA certificate to use when verifying Consul server certificate, must be x509 PEM
 Client certificate used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-clientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L204">property <b>clientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L204">property <b>clientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -401,7 +401,7 @@ Client certificate used for Consul's TLS communication, must be x509 PEM encoded
 Client key used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L208">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L208">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -409,7 +409,7 @@ Client key used for Consul's TLS communication, must be x509 PEM encoded and if 
 The default TTL for credentials issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L212">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L212">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -417,7 +417,7 @@ The default TTL for credentials issued by this backend.
 A human-friendly description for this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L217">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L217">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -426,7 +426,7 @@ The maximum TTL that can be requested
 for credentials issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L221">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L221">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -434,7 +434,7 @@ for credentials issued by this backend.
 The unique location this backend should be mounted at. Must not begin or end with a `/`. Defaults to `consul`.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-scheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L225">property <b>scheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L225">property <b>scheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheme?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -442,7 +442,7 @@ The unique location this backend should be mounted at. Must not begin or end wit
 Specifies the URL scheme to use. Defaults to `http`.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L229">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L229">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -450,7 +450,7 @@ Specifies the URL scheme to use. Defaults to `http`.
 The Consul management token this backend should use to issue new tokens.
 
 <h3 class="pdoc-module-header" id="SecretBackendRoleArgs" data-link-title="SecretBackendRoleArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L187">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L187">
         interface <strong>SecretBackendRoleArgs</strong>
     </a>
 </h3>
@@ -460,7 +460,7 @@ The Consul management token this backend should use to issue new tokens.
 The set of arguments for constructing a SecretBackendRole resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L191">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L191">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -468,7 +468,7 @@ The set of arguments for constructing a SecretBackendRole resource.
 The unique name of an existing Consul secrets backend mount. Must not begin or end with a `/`. One of `path` or `backend` is required.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-local">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L195">property <b>local</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L195">property <b>local</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>local?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -476,7 +476,7 @@ The unique name of an existing Consul secrets backend mount. Must not begin or e
 Indicates that the token should not be replicated globally and instead be local to the current datacenter.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L199">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L199">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -484,7 +484,7 @@ Indicates that the token should not be replicated globally and instead be local 
 Maximum TTL for leases associated with this role, in seconds.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L203">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L203">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -492,7 +492,7 @@ Maximum TTL for leases associated with this role, in seconds.
 The name of the Consul secrets engine role to create.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L209">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L209">property <b>path</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -504,7 +504,7 @@ use `backend` instead
 The unique name of an existing Consul secrets backend mount. Must not begin or end with a `/`. **Deprecated**
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L213">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L213">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -512,7 +512,7 @@ The unique name of an existing Consul secrets backend mount. Must not begin or e
 The list of Consul ACL policies to associate with these roles.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L217">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L217">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -520,7 +520,7 @@ The list of Consul ACL policies to associate with these roles.
 Specifies the type of token to create when using this role. Valid values are "client" or "management".
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L221">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L221">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -528,7 +528,7 @@ Specifies the type of token to create when using this role. Valid values are "cl
 Specifies the TTL for this role.
 
 <h3 class="pdoc-module-header" id="SecretBackendRoleState" data-link-title="SecretBackendRoleState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L147">
         interface <strong>SecretBackendRoleState</strong>
     </a>
 </h3>
@@ -538,7 +538,7 @@ Specifies the TTL for this role.
 Input properties used for looking up and filtering SecretBackendRole resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L151">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L151">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -546,7 +546,7 @@ Input properties used for looking up and filtering SecretBackendRole resources.
 The unique name of an existing Consul secrets backend mount. Must not begin or end with a `/`. One of `path` or `backend` is required.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-local">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L155">property <b>local</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L155">property <b>local</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>local?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -554,7 +554,7 @@ The unique name of an existing Consul secrets backend mount. Must not begin or e
 Indicates that the token should not be replicated globally and instead be local to the current datacenter.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L159">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L159">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -562,7 +562,7 @@ Indicates that the token should not be replicated globally and instead be local 
 Maximum TTL for leases associated with this role, in seconds.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L163">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L163">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -570,7 +570,7 @@ Maximum TTL for leases associated with this role, in seconds.
 The name of the Consul secrets engine role to create.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L169">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L169">property <b>path</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -582,7 +582,7 @@ use `backend` instead
 The unique name of an existing Consul secrets backend mount. Must not begin or end with a `/`. **Deprecated**
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L173">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L173">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -590,7 +590,7 @@ The unique name of an existing Consul secrets backend mount. Must not begin or e
 The list of Consul ACL policies to associate with these roles.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L177">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L177">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -598,7 +598,7 @@ The list of Consul ACL policies to associate with these roles.
 Specifies the type of token to create when using this role. Valid values are "client" or "management".
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackendRole.ts#L181">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackendRole.ts#L181">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -606,7 +606,7 @@ Specifies the type of token to create when using this role. Valid values are "cl
 Specifies the TTL for this role.
 
 <h3 class="pdoc-module-header" id="SecretBackendState" data-link-title="SecretBackendState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L141">
         interface <strong>SecretBackendState</strong>
     </a>
 </h3>
@@ -616,7 +616,7 @@ Specifies the TTL for this role.
 Input properties used for looking up and filtering SecretBackend resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L145">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L145">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -624,7 +624,7 @@ Input properties used for looking up and filtering SecretBackend resources.
 Specifies the address of the Consul instance, provided as "host:port" like "127.0.0.1:8500".
 
 <h4 class="pdoc-member-header" id="SecretBackendState-caCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L149">property <b>caCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L149">property <b>caCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>caCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -632,7 +632,7 @@ Specifies the address of the Consul instance, provided as "host:port" like "127.
 CA certificate to use when verifying Consul server certificate, must be x509 PEM encoded.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-clientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L153">property <b>clientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L153">property <b>clientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -640,7 +640,7 @@ CA certificate to use when verifying Consul server certificate, must be x509 PEM
 Client certificate used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-clientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L157">property <b>clientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L157">property <b>clientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -648,7 +648,7 @@ Client certificate used for Consul's TLS communication, must be x509 PEM encoded
 Client key used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L161">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L161">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -656,7 +656,7 @@ Client key used for Consul's TLS communication, must be x509 PEM encoded and if 
 The default TTL for credentials issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L165">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L165">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -664,7 +664,7 @@ The default TTL for credentials issued by this backend.
 A human-friendly description for this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L170">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L170">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -673,7 +673,7 @@ The maximum TTL that can be requested
 for credentials issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L174">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L174">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -681,7 +681,7 @@ for credentials issued by this backend.
 The unique location this backend should be mounted at. Must not begin or end with a `/`. Defaults to `consul`.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-scheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L178">property <b>scheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L178">property <b>scheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheme?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -689,7 +689,7 @@ The unique location this backend should be mounted at. Must not begin or end wit
 Specifies the URL scheme to use. Defaults to `http`.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/consul/secretBackend.ts#L182">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/d1da6258c7fc58ef60f7cd2a6c5134e22c84a6d2/sdk/nodejs/consul/secretBackend.ts#L182">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

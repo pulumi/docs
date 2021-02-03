@@ -931,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
+    <dd>{{% md %}}The URI of the API, of the form `https://{api-id}.execute-api.{region}.amazonaws.com` for HTTP APIs and `wss://{api-id}.execute-api.{region}.amazonaws.com` for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -978,7 +978,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
+    <dd>{{% md %}}The URI of the API, of the form `https://{api-id}.execute-api.{region}.amazonaws.com` for HTTP APIs and `wss://{api-id}.execute-api.{region}.amazonaws.com` for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1025,7 +1025,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
+    <dd>{{% md %}}The URI of the API, of the form `https://{api-id}.execute-api.{region}.amazonaws.com` for HTTP APIs and `wss://{api-id}.execute-api.{region}.amazonaws.com` for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1072,7 +1072,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
+    <dd>{{% md %}}The URI of the API, of the form `https://{api-id}.execute-api.{region}.amazonaws.com` for HTTP APIs and `wss://{api-id}.execute-api.{region}.amazonaws.com` for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1242,7 +1242,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
+    <dd>{{% md %}}The URI of the API, of the form `https://{api-id}.execute-api.{region}.amazonaws.com` for HTTP APIs and `wss://{api-id}.execute-api.{region}.amazonaws.com` for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1417,7 +1417,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
+    <dd>{{% md %}}The URI of the API, of the form `https://{api-id}.execute-api.{region}.amazonaws.com` for HTTP APIs and `wss://{api-id}.execute-api.{region}.amazonaws.com` for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1592,7 +1592,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
+    <dd>{{% md %}}The URI of the API, of the form `https://{api-id}.execute-api.{region}.amazonaws.com` for HTTP APIs and `wss://{api-id}.execute-api.{region}.amazonaws.com` for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1767,7 +1767,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
+    <dd>{{% md %}}The URI of the API, of the form `https://{api-id}.execute-api.{region}.amazonaws.com` for HTTP APIs and `wss://{api-id}.execute-api.{region}.amazonaws.com` for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

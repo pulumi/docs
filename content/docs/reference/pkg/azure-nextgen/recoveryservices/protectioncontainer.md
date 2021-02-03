@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ProtectionConta
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Base class for container with backup items. Containers with specific workloads are derived from this class.
-Latest API Version: 2020-12-01.
+Latest API Version: 2021-01-01.
 
 {{% examples %}}
 ## Example Usage

@@ -11,7 +11,6 @@ meta_desc: "Documentation for the azure-nextgen.synapse.SqlPool resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A SQL Analytics pool
-Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,22 +26,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlPool = new AzureNextGen.Synapse.Latest.SqlPool("sqlPool", new AzureNextGen.Synapse.Latest.SqlPoolArgs
+        var sqlPool = new AzureNextGen.Synapse.V20190601Preview.SqlPool("sqlPool", new AzureNextGen.Synapse.V20190601Preview.SqlPoolArgs
         {
             Collation = "",
             CreateMode = "",
-            Location = "Southeast Asia",
+            Location = "West US 2",
             MaxSizeBytes = 0,
             RecoverableDatabaseId = "",
             ResourceGroupName = "ExampleResourceGroup",
-            Sku = new AzureNextGen.Synapse.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.Synapse.V20190601Preview.Inputs.SkuArgs
             {
                 Name = "",
                 Tier = "",
             },
             SourceDatabaseId = "",
             SqlPoolName = "ExampleSqlPool",
-            StorageAccountType = "LRS",
             Tags = ,
             WorkspaceName = "ExampleWorkspace",
         });
@@ -60,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/v20190601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -69,7 +67,7 @@ func main() {
 		_, err := synapse.NewSqlPool(ctx, "sqlPool", &synapse.SqlPoolArgs{
 			Collation:             pulumi.String(""),
 			CreateMode:            pulumi.String(""),
-			Location:              pulumi.String("Southeast Asia"),
+			Location:              pulumi.String("West US 2"),
 			MaxSizeBytes:          pulumi.Float64(0),
 			RecoverableDatabaseId: pulumi.String(""),
 			ResourceGroupName:     pulumi.String("ExampleResourceGroup"),
@@ -77,11 +75,10 @@ func main() {
 				Name: pulumi.String(""),
 				Tier: pulumi.String(""),
 			},
-			SourceDatabaseId:   pulumi.String(""),
-			SqlPoolName:        pulumi.String("ExampleSqlPool"),
-			StorageAccountType: pulumi.String("LRS"),
-			Tags:               nil,
-			WorkspaceName:      pulumi.String("ExampleWorkspace"),
+			SourceDatabaseId: pulumi.String(""),
+			SqlPoolName:      pulumi.String("ExampleSqlPool"),
+			Tags:             nil,
+			WorkspaceName:    pulumi.String("ExampleWorkspace"),
 		})
 		if err != nil {
 			return err
@@ -100,20 +97,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_pool = azure_nextgen.synapse.latest.SqlPool("sqlPool",
+sql_pool = azure_nextgen.synapse.v20190601preview.SqlPool("sqlPool",
     collation="",
     create_mode="",
-    location="Southeast Asia",
+    location="West US 2",
     max_size_bytes=0,
     recoverable_database_id="",
     resource_group_name="ExampleResourceGroup",
-    sku=azure_nextgen.synapse.latest.SkuArgs(
+    sku=azure_nextgen.synapse.v20190601preview.SkuArgs(
         name="",
         tier="",
     ),
     source_database_id="",
     sql_pool_name="ExampleSqlPool",
-    storage_account_type="LRS",
     tags={},
     workspace_name="ExampleWorkspace")
 
@@ -127,10 +123,10 @@ sql_pool = azure_nextgen.synapse.latest.SqlPool("sqlPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlPool = new azure_nextgen.synapse.latest.SqlPool("sqlPool", {
+const sqlPool = new azure_nextgen.synapse.v20190601preview.SqlPool("sqlPool", {
     collation: "",
     createMode: "",
-    location: "Southeast Asia",
+    location: "West US 2",
     maxSizeBytes: 0,
     recoverableDatabaseId: "",
     resourceGroupName: "ExampleResourceGroup",
@@ -140,7 +136,6 @@ const sqlPool = new azure_nextgen.synapse.latest.SqlPool("sqlPool", {
     },
     sourceDatabaseId: "",
     sqlPoolName: "ExampleSqlPool",
-    storageAccountType: "LRS",
     tags: {},
     workspaceName: "ExampleWorkspace",
 });
@@ -161,7 +156,7 @@ const sqlPool = new azure_nextgen.synapse.latest.SqlPool("sqlPool", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recoverable_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">source_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, StorageAccountType]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recoverable_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">source_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -460,15 +455,6 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Resource status{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="storageaccounttype_csharp">
-<a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Storage<wbr>Account<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this sql pool.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -608,15 +594,6 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource status{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageaccounttype_go">
-<a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this sql pool.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -760,15 +737,6 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Resource status{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="storageaccounttype_nodejs">
-<a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this sql pool.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -908,15 +876,6 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource status{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storage_account_type_python">
-<a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this sql pool.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1345,59 +1304,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The service tier{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-<h4 id="storageaccounttype">Storage<wbr>Account<wbr>Type</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>GRS</dt>
-    <dd>GRS</dd>
-    <dt>LRS</dt>
-    <dd>LRS</dd>
-    <dt>ZRS</dt>
-    <dd>ZRS</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular">
-    <dt>Storage<wbr>Account<wbr>Type<wbr>GRS</dt>
-    <dd>GRS</dd>
-    <dt>Storage<wbr>Account<wbr>Type<wbr>LRS</dt>
-    <dd>LRS</dd>
-    <dt>Storage<wbr>Account<wbr>Type<wbr>ZRS</dt>
-    <dd>ZRS</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>GRS</dt>
-    <dd>GRS</dd>
-    <dt>LRS</dt>
-    <dd>LRS</dd>
-    <dt>ZRS</dt>
-    <dd>ZRS</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular">
-    <dt>GRS</dt>
-    <dd>GRS</dd>
-    <dt>LRS</dt>
-    <dd>LRS</dd>
-    <dt>ZRS</dt>
-    <dd>ZRS</dd>
-</dl>
-{{% /choosable %}}
 ## Import
 
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/latest:SqlPool ExampleSqlPool /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspaces/sqlPools/ExampleSqlPool 
+$ pulumi import azure-nextgen:synapse/v20190601preview:SqlPool ExampleSqlPool /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspaces/sqlPools/ExampleSqlPool 
 ```
 
 

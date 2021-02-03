@@ -81,6 +81,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq"
+	"github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

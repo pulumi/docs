@@ -14434,10 +14434,7 @@ endpoint via private networking.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Controls cluster master global
-access settings. If unset, the provider will no longer manage this field and will
-not modify the previously-set value. Structure is documented below.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="masteripv4cidrblock_csharp">
@@ -14524,10 +14521,7 @@ endpoint via private networking.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Controls cluster master global
-access settings. If unset, the provider will no longer manage this field and will
-not modify the previously-set value. Structure is documented below.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="masteripv4cidrblock_go">
@@ -14614,10 +14608,7 @@ endpoint via private networking.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Controls cluster master global
-access settings. If unset, the provider will no longer manage this field and will
-not modify the previously-set value. Structure is documented below.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="masteripv4cidrblock_nodejs">
@@ -14704,10 +14695,7 @@ endpoint via private networking.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Controls cluster master global
-access settings. If unset, the provider will no longer manage this field and will
-not modify the previously-set value. Structure is documented below.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="master_ipv4_cidr_block_python">

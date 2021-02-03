@@ -23,6 +23,7 @@ Explore the resources and functions of the storage module in the Azure NextGen p
     <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
     <li><a href="queueserviceproperties" title="QueueServiceProperties"><span class="symbol resource"></span>QueueServiceProperties</a></li>
     <li><a href="storageaccount" title="StorageAccount"><span class="symbol resource"></span>StorageAccount</a></li>
+    <li><a href="storageaccountstaticwebsite" title="StorageAccountStaticWebsite"><span class="symbol resource"></span>StorageAccountStaticWebsite</a></li>
     <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
     <li><a href="tableserviceproperties" title="TableServiceProperties"><span class="symbol resource"></span>TableServiceProperties</a></li>
 </ul>
@@ -44,6 +45,8 @@ Explore the resources and functions of the storage module in the Azure NextGen p
     <li><a href="gettable" title="GetTable"><span class="symbol function"></span>GetTable</a></li>
     <li><a href="gettableserviceproperties" title="GetTableServiceProperties"><span class="symbol function"></span>GetTableServiceProperties</a></li>
     <li><a href="liststorageaccountkeys" title="ListStorageAccountKeys"><span class="symbol function"></span>ListStorageAccountKeys</a></li>
+    <li><a href="liststorageaccountsas" title="ListStorageAccountSAS"><span class="symbol function"></span>ListStorageAccountSAS</a></li>
+    <li><a href="liststorageaccountservicesas" title="ListStorageAccountServiceSAS"><span class="symbol function"></span>ListStorageAccountServiceSAS</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -53,7 +56,7 @@ Explore the resources and functions of the storage module in the Azure NextGen p
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
 

@@ -14,8 +14,11 @@ Explore the resources and functions of the costmanagement module in the Azure Ne
     <li><a href="budget" title="Budget"><span class="symbol resource"></span>Budget</a></li>
     <li><a href="cloudconnector" title="CloudConnector"><span class="symbol resource"></span>CloudConnector</a></li>
     <li><a href="connector" title="Connector"><span class="symbol resource"></span>Connector</a></li>
+    <li><a href="costallocationrule" title="CostAllocationRule"><span class="symbol resource"></span>CostAllocationRule</a></li>
     <li><a href="export" title="Export"><span class="symbol resource"></span>Export</a></li>
     <li><a href="report" title="Report"><span class="symbol resource"></span>Report</a></li>
+    <li><a href="reportbybillingaccount" title="ReportByBillingAccount"><span class="symbol resource"></span>ReportByBillingAccount</a></li>
+    <li><a href="reportbydepartment" title="ReportByDepartment"><span class="symbol resource"></span>ReportByDepartment</a></li>
     <li><a href="reportbyresourcegroupname" title="ReportByResourceGroupName"><span class="symbol resource"></span>ReportByResourceGroupName</a></li>
     <li><a href="reportconfig" title="ReportConfig"><span class="symbol resource"></span>ReportConfig</a></li>
     <li><a href="reportconfigbyresourcegroupname" title="ReportConfigByResourceGroupName"><span class="symbol resource"></span>ReportConfigByResourceGroupName</a></li>
@@ -28,8 +31,11 @@ Explore the resources and functions of the costmanagement module in the Azure Ne
     <li><a href="getbudget" title="GetBudget"><span class="symbol function"></span>GetBudget</a></li>
     <li><a href="getcloudconnector" title="GetCloudConnector"><span class="symbol function"></span>GetCloudConnector</a></li>
     <li><a href="getconnector" title="GetConnector"><span class="symbol function"></span>GetConnector</a></li>
+    <li><a href="getcostallocationrule" title="GetCostAllocationRule"><span class="symbol function"></span>GetCostAllocationRule</a></li>
     <li><a href="getexport" title="GetExport"><span class="symbol function"></span>GetExport</a></li>
     <li><a href="getreport" title="GetReport"><span class="symbol function"></span>GetReport</a></li>
+    <li><a href="getreportbybillingaccount" title="GetReportByBillingAccount"><span class="symbol function"></span>GetReportByBillingAccount</a></li>
+    <li><a href="getreportbydepartment" title="GetReportByDepartment"><span class="symbol function"></span>GetReportByDepartment</a></li>
     <li><a href="getreportbyresourcegroupname" title="GetReportByResourceGroupName"><span class="symbol function"></span>GetReportByResourceGroupName</a></li>
     <li><a href="getreportconfig" title="GetReportConfig"><span class="symbol function"></span>GetReportConfig</a></li>
     <li><a href="getreportconfigbyresourcegroupname" title="GetReportConfigByResourceGroupName"><span class="symbol function"></span>GetReportConfigByResourceGroupName</a></li>
@@ -44,7 +50,7 @@ Explore the resources and functions of the costmanagement module in the Azure Ne
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 
 

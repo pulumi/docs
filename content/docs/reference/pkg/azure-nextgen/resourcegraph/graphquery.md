@@ -119,7 +119,7 @@ const graphQuery = new azure_nextgen.resourcegraph.v20200401preview.GraphQuery("
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GraphQuery</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GraphQuery</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -329,7 +329,7 @@ The GraphQuery resource accepts the following [input]({{< relref "/docs/intro/co
     <dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
-<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -389,7 +389,7 @@ The GraphQuery resource accepts the following [input]({{< relref "/docs/intro/co
     <dt class="property-optional"
             title="Optional">
         <span id="etag_go">
-<a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -449,7 +449,7 @@ The GraphQuery resource accepts the following [input]({{< relref "/docs/intro/co
     <dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
-<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -508,8 +508,8 @@ The GraphQuery resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The description of a graph query.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="e_tag_python">
-<a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

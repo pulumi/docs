@@ -11740,6 +11740,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="vmgroupname_csharp">
+<a href="#vmgroupname_csharp" style="color: inherit; text-decoration: inherit;">VMGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworkprofile_csharp">
 <a href="#virtualnetworkprofile_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Profile</a>
 </span>
@@ -11834,6 +11843,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmgroupname_go">
+<a href="#vmgroupname_go" style="color: inherit; text-decoration: inherit;">VMGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkprofile_go">
@@ -11932,6 +11950,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="vmgroupname_nodejs">
+<a href="#vmgroupname_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>MGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworkprofile_nodejs">
 <a href="#virtualnetworkprofile_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Profile</a>
 </span>
@@ -12026,6 +12053,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="v_m_group_name_python">
+<a href="#v_m_group_name_python" style="color: inherit; text-decoration: inherit;">v_<wbr>m_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="virtual_network_profile_python">
@@ -12126,6 +12162,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="vmgroupname_csharp">
+<a href="#vmgroupname_csharp" style="color: inherit; text-decoration: inherit;">VMGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworkprofile_csharp">
 <a href="#virtualnetworkprofile_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Profile</a>
 </span>
@@ -12220,6 +12265,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmgroupname_go">
+<a href="#vmgroupname_go" style="color: inherit; text-decoration: inherit;">VMGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkprofile_go">
@@ -12318,6 +12372,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="vmgroupname_nodejs">
+<a href="#vmgroupname_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>MGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworkprofile_nodejs">
 <a href="#virtualnetworkprofile_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Profile</a>
 </span>
@@ -12412,6 +12475,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="v_m_group_name_python">
+<a href="#v_m_group_name_python" style="color: inherit; text-decoration: inherit;">v_<wbr>m_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="virtual_network_profile_python">
@@ -13665,6 +13737,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The filesystem, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="fileshare_csharp">
+<a href="#fileshare_csharp" style="color: inherit; text-decoration: inherit;">Fileshare</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The file share name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="isdefault_csharp">
 <a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
 </span>
@@ -13708,6 +13789,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saskey_csharp">
+<a href="#saskey_csharp" style="color: inherit; text-decoration: inherit;">Saskey</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The shared access signature key.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -13732,6 +13822,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filesystem, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fileshare_go">
+<a href="#fileshare_go" style="color: inherit; text-decoration: inherit;">Fileshare</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The file share name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isdefault_go">
@@ -13777,6 +13876,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saskey_go">
+<a href="#saskey_go" style="color: inherit; text-decoration: inherit;">Saskey</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The shared access signature key.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -13801,6 +13909,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filesystem, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fileshare_nodejs">
+<a href="#fileshare_nodejs" style="color: inherit; text-decoration: inherit;">fileshare</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The file share name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isdefault_nodejs">
@@ -13846,6 +13963,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saskey_nodejs">
+<a href="#saskey_nodejs" style="color: inherit; text-decoration: inherit;">saskey</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The shared access signature key.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -13870,6 +13996,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The filesystem, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fileshare_python">
+<a href="#fileshare_python" style="color: inherit; text-decoration: inherit;">fileshare</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The file share name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="is_default_python">
@@ -13915,6 +14050,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saskey_python">
+<a href="#saskey_python" style="color: inherit; text-decoration: inherit;">saskey</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The shared access signature key.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -13943,6 +14087,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The filesystem, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="fileshare_csharp">
+<a href="#fileshare_csharp" style="color: inherit; text-decoration: inherit;">Fileshare</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The file share name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="isdefault_csharp">
 <a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
 </span>
@@ -13986,6 +14139,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saskey_csharp">
+<a href="#saskey_csharp" style="color: inherit; text-decoration: inherit;">Saskey</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The shared access signature key.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14010,6 +14172,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filesystem, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fileshare_go">
+<a href="#fileshare_go" style="color: inherit; text-decoration: inherit;">Fileshare</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The file share name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isdefault_go">
@@ -14055,6 +14226,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saskey_go">
+<a href="#saskey_go" style="color: inherit; text-decoration: inherit;">Saskey</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The shared access signature key.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14079,6 +14259,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filesystem, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fileshare_nodejs">
+<a href="#fileshare_nodejs" style="color: inherit; text-decoration: inherit;">fileshare</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The file share name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isdefault_nodejs">
@@ -14124,6 +14313,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saskey_nodejs">
+<a href="#saskey_nodejs" style="color: inherit; text-decoration: inherit;">saskey</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The shared access signature key.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14148,6 +14346,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The filesystem, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fileshare_python">
+<a href="#fileshare_python" style="color: inherit; text-decoration: inherit;">fileshare</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The file share name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="is_default_python">
@@ -14193,6 +14400,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saskey_python">
+<a href="#saskey_python" style="color: inherit; text-decoration: inherit;">saskey</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The shared access signature key.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
