@@ -3,7 +3,7 @@ title: "Module inspector"
 title_tag: "Module inspector | Package @pulumi/aws | Node.js SDK"
 linktitle: "inspector"
 meta_desc: "Explore members of the inspector module in the @pulumi/aws package."
-git_sha: "d072b346d2519850d0b24c72316f8d7487257ab0"
+git_sha: "8e76d72238fd8b6509177ddc684ce7902374d390"
 block_external_search_index: true
 ---
 
@@ -41,7 +41,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AssessmentTarget" data-link-title="AssessmentTarget">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTarget.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTarget.ts#L31">
         Resource <strong>AssessmentTarget</strong>
     </a>
 </h3>
@@ -72,7 +72,7 @@ Inspector Assessment Targets can be imported via their Amazon Resource Name (ARN
 ```
 
 <h4 class="pdoc-member-header" id="AssessmentTarget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTarget.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTarget.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -86,7 +86,7 @@ Create a AssessmentTarget resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AssessmentTarget-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTarget.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTarget.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -97,14 +97,14 @@ Get an existing AssessmentTarget resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AssessmentTarget-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTarget.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTarget.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AssessmentTarget-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTarget.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTarget.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -115,7 +115,7 @@ Returns true if the given object is an instance of AssessmentTarget.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AssessmentTarget-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTarget.ts#L62">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTarget.ts#L62">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -123,7 +123,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The target assessment ARN.
 
 <h4 class="pdoc-member-header" id="AssessmentTarget-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTarget.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTarget.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -132,7 +132,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AssessmentTarget-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTarget.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTarget.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -140,7 +140,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the assessment target.
 
 <h4 class="pdoc-member-header" id="AssessmentTarget-resourceGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTarget.ts#L70">property <b>resourceGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTarget.ts#L70">property <b>resourceGroupArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -148,7 +148,7 @@ The name of the assessment target.
 Inspector Resource Group Amazon Resource Name (ARN) stating tags for instance matching. If not specified, all EC2 instances in the current AWS account and region are included in the assessment target.
 
 <h4 class="pdoc-member-header" id="AssessmentTarget-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTarget.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTarget.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -157,7 +157,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AssessmentTemplate" data-link-title="AssessmentTemplate">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L36">
         Resource <strong>AssessmentTemplate</strong>
     </a>
 </h3>
@@ -193,7 +193,7 @@ const example = new aws.inspector.AssessmentTemplate("example", {
 ```
 
 <h4 class="pdoc-member-header" id="AssessmentTemplate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -207,7 +207,7 @@ Create a AssessmentTemplate resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -218,14 +218,14 @@ Get an existing AssessmentTemplate resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AssessmentTemplate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -236,7 +236,7 @@ Returns true if the given object is an instance of AssessmentTemplate.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplate-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L67">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L67">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -244,7 +244,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The template assessment ARN.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplate-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L71">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L71">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -252,7 +252,7 @@ The template assessment ARN.
 The duration of the inspector run.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -261,7 +261,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplate-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -269,7 +269,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the assessment template.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplate-rulesPackageArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L79">property <b>rulesPackageArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L79">property <b>rulesPackageArns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rulesPackageArns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -277,7 +277,7 @@ The name of the assessment template.
 The rules to be used during the run.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplate-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L83">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L83">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -285,7 +285,7 @@ The rules to be used during the run.
 Key-value map of tags for the Inspector assessment template.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplate-targetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L87">property <b>targetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L87">property <b>targetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -293,7 +293,7 @@ Key-value map of tags for the Inspector assessment template.
 The assessment target ARN to attach the template to.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -302,7 +302,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ResourceGroup" data-link-title="ResourceGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/resourceGroup.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/resourceGroup.ts#L24">
         Resource <strong>ResourceGroup</strong>
     </a>
 </h3>
@@ -326,7 +326,7 @@ const example = new aws.inspector.ResourceGroup("example", {
 ```
 
 <h4 class="pdoc-member-header" id="ResourceGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/resourceGroup.ts#L59"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/resourceGroup.ts#L59"> <b>constructor</b></a>
 </h4>
 
 
@@ -340,7 +340,7 @@ Create a ResourceGroup resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/resourceGroup.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/resourceGroup.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -351,14 +351,14 @@ Get an existing ResourceGroup resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/resourceGroup.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/resourceGroup.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ResourceGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/resourceGroup.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/resourceGroup.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -369,7 +369,7 @@ Returns true if the given object is an instance of ResourceGroup.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/resourceGroup.ts#L55">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/resourceGroup.ts#L55">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -377,7 +377,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The resource group ARN.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/resourceGroup.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/resourceGroup.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -386,7 +386,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/resourceGroup.ts#L59">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/resourceGroup.ts#L59">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -394,7 +394,7 @@ deployments and may be missing (undefined) during planning phases.
 Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/resourceGroup.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/resourceGroup.ts#L24">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -405,7 +405,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getRulesPackages" data-link-title="getRulesPackages">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/getRulesPackages.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/getRulesPackages.ts#L32">
         Function <strong>getRulesPackages</strong>
     </a>
 </h3>
@@ -440,7 +440,7 @@ const assessmentAssessmentTemplate = new aws.inspector.AssessmentTemplate("asses
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AssessmentTargetArgs" data-link-title="AssessmentTargetArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTarget.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTarget.ts#L125">
         interface <strong>AssessmentTargetArgs</strong>
     </a>
 </h3>
@@ -450,7 +450,7 @@ const assessmentAssessmentTemplate = new aws.inspector.AssessmentTemplate("asses
 The set of arguments for constructing a AssessmentTarget resource.
 
 <h4 class="pdoc-member-header" id="AssessmentTargetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTarget.ts#L129">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTarget.ts#L129">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -458,7 +458,7 @@ The set of arguments for constructing a AssessmentTarget resource.
 The name of the assessment target.
 
 <h4 class="pdoc-member-header" id="AssessmentTargetArgs-resourceGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTarget.ts#L133">property <b>resourceGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTarget.ts#L133">property <b>resourceGroupArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -466,7 +466,7 @@ The name of the assessment target.
 Inspector Resource Group Amazon Resource Name (ARN) stating tags for instance matching. If not specified, all EC2 instances in the current AWS account and region are included in the assessment target.
 
 <h3 class="pdoc-module-header" id="AssessmentTargetState" data-link-title="AssessmentTargetState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTarget.ts#L107">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTarget.ts#L107">
         interface <strong>AssessmentTargetState</strong>
     </a>
 </h3>
@@ -476,7 +476,7 @@ Inspector Resource Group Amazon Resource Name (ARN) stating tags for instance ma
 Input properties used for looking up and filtering AssessmentTarget resources.
 
 <h4 class="pdoc-member-header" id="AssessmentTargetState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTarget.ts#L111">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTarget.ts#L111">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -484,7 +484,7 @@ Input properties used for looking up and filtering AssessmentTarget resources.
 The target assessment ARN.
 
 <h4 class="pdoc-member-header" id="AssessmentTargetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTarget.ts#L115">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTarget.ts#L115">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -492,7 +492,7 @@ The target assessment ARN.
 The name of the assessment target.
 
 <h4 class="pdoc-member-header" id="AssessmentTargetState-resourceGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTarget.ts#L119">property <b>resourceGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTarget.ts#L119">property <b>resourceGroupArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -500,7 +500,7 @@ The name of the assessment target.
 Inspector Resource Group Amazon Resource Name (ARN) stating tags for instance matching. If not specified, all EC2 instances in the current AWS account and region are included in the assessment target.
 
 <h3 class="pdoc-module-header" id="AssessmentTemplateArgs" data-link-title="AssessmentTemplateArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L169">
         interface <strong>AssessmentTemplateArgs</strong>
     </a>
 </h3>
@@ -510,7 +510,7 @@ Inspector Resource Group Amazon Resource Name (ARN) stating tags for instance ma
 The set of arguments for constructing a AssessmentTemplate resource.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplateArgs-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L173">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L173">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -518,7 +518,7 @@ The set of arguments for constructing a AssessmentTemplate resource.
 The duration of the inspector run.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplateArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L177">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L177">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -526,7 +526,7 @@ The duration of the inspector run.
 The name of the assessment template.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplateArgs-rulesPackageArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L181">property <b>rulesPackageArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L181">property <b>rulesPackageArns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rulesPackageArns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -534,7 +534,7 @@ The name of the assessment template.
 The rules to be used during the run.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplateArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L185">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L185">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -542,7 +542,7 @@ The rules to be used during the run.
 Key-value map of tags for the Inspector assessment template.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplateArgs-targetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L189">property <b>targetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L189">property <b>targetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -550,7 +550,7 @@ Key-value map of tags for the Inspector assessment template.
 The assessment target ARN to attach the template to.
 
 <h3 class="pdoc-module-header" id="AssessmentTemplateState" data-link-title="AssessmentTemplateState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L139">
         interface <strong>AssessmentTemplateState</strong>
     </a>
 </h3>
@@ -560,7 +560,7 @@ The assessment target ARN to attach the template to.
 Input properties used for looking up and filtering AssessmentTemplate resources.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplateState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L143">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L143">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -568,7 +568,7 @@ Input properties used for looking up and filtering AssessmentTemplate resources.
 The template assessment ARN.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplateState-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L147">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L147">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -576,7 +576,7 @@ The template assessment ARN.
 The duration of the inspector run.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplateState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L151">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L151">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -584,7 +584,7 @@ The duration of the inspector run.
 The name of the assessment template.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplateState-rulesPackageArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L155">property <b>rulesPackageArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L155">property <b>rulesPackageArns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rulesPackageArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -592,7 +592,7 @@ The name of the assessment template.
 The rules to be used during the run.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplateState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L159">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L159">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -600,7 +600,7 @@ The rules to be used during the run.
 Key-value map of tags for the Inspector assessment template.
 
 <h4 class="pdoc-member-header" id="AssessmentTemplateState-targetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/assessmentTemplate.ts#L163">property <b>targetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/assessmentTemplate.ts#L163">property <b>targetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -608,7 +608,7 @@ Key-value map of tags for the Inspector assessment template.
 The assessment target ARN to attach the template to.
 
 <h3 class="pdoc-module-header" id="GetRulesPackagesResult" data-link-title="GetRulesPackagesResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/getRulesPackages.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/getRulesPackages.ts#L47">
         interface <strong>GetRulesPackagesResult</strong>
     </a>
 </h3>
@@ -618,7 +618,7 @@ The assessment target ARN to attach the template to.
 A collection of values returned by getRulesPackages.
 
 <h4 class="pdoc-member-header" id="GetRulesPackagesResult-arns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/getRulesPackages.ts#L51">property <b>arns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/getRulesPackages.ts#L51">property <b>arns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -626,7 +626,7 @@ A collection of values returned by getRulesPackages.
 A list of the AWS Inspector Rules Packages arns available in the AWS region.
 
 <h4 class="pdoc-member-header" id="GetRulesPackagesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/getRulesPackages.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/getRulesPackages.ts#L55">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -634,7 +634,7 @@ A list of the AWS Inspector Rules Packages arns available in the AWS region.
 The provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-module-header" id="ResourceGroupArgs" data-link-title="ResourceGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/resourceGroup.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/resourceGroup.ts#L111">
         interface <strong>ResourceGroupArgs</strong>
     </a>
 </h3>
@@ -644,7 +644,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a ResourceGroup resource.
 
 <h4 class="pdoc-member-header" id="ResourceGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/resourceGroup.ts#L115">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/resourceGroup.ts#L115">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -652,7 +652,7 @@ The set of arguments for constructing a ResourceGroup resource.
 Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 
 <h3 class="pdoc-module-header" id="ResourceGroupState" data-link-title="ResourceGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/resourceGroup.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/resourceGroup.ts#L97">
         interface <strong>ResourceGroupState</strong>
     </a>
 </h3>
@@ -662,7 +662,7 @@ Key-value map of tags that are used to select the EC2 instances to be included i
 Input properties used for looking up and filtering ResourceGroup resources.
 
 <h4 class="pdoc-member-header" id="ResourceGroupState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/resourceGroup.ts#L101">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/resourceGroup.ts#L101">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -670,7 +670,7 @@ Input properties used for looking up and filtering ResourceGroup resources.
 The resource group ARN.
 
 <h4 class="pdoc-member-header" id="ResourceGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/inspector/resourceGroup.ts#L105">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/inspector/resourceGroup.ts#L105">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

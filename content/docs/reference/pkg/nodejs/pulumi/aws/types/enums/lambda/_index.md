@@ -3,7 +3,7 @@ title: "Module types/enums/lambda"
 title_tag: "Module types/enums/lambda | Package @pulumi/aws | Node.js SDK"
 linktitle: "enums/lambda"
 meta_desc: "Explore members of the enums/lambda module in the @pulumi/aws package."
-git_sha: "d072b346d2519850d0b24c72316f8d7487257ab0"
+git_sha: "8e76d72238fd8b6509177ddc684ce7902374d390"
 block_external_search_index: true
 ---
 
@@ -27,12 +27,12 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="Runtime" data-link-title="Runtime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/d072b346d2519850d0b24c72316f8d7487257ab0/sdk/nodejs/types/enums/lambda/index.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/types/enums/lambda/index.ts#L28">
         type <strong>Runtime</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>type</span> Runtime = <span class='s2'>"dotnetcore2.1"</span> | <span class='s2'>"dotnetcore3.1"</span> | <span class='s2'>"go1.x"</span> | <span class='s2'>"java8"</span> | <span class='s2'>"java8.al2"</span> | <span class='s2'>"java11"</span> | <span class='s2'>"ruby2.5"</span> | <span class='s2'>"ruby2.7"</span> | <span class='s2'>"nodejs10.x"</span> | <span class='s2'>"nodejs12.x"</span> | <span class='s2'>"python2.7"</span> | <span class='s2'>"python3.6"</span> | <span class='s2'>"python3.7"</span> | <span class='s2'>"python3.8"</span> | <span class='s2'>"provided"</span> | <span class='s2'>"provided.al2"</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> Runtime = <span class='s2'>"dotnetcore2.1"</span> | <span class='s2'>"dotnetcore3.1"</span> | <span class='s2'>"go1.x"</span> | <span class='s2'>"java8"</span> | <span class='s2'>"java8.al2"</span> | <span class='s2'>"java11"</span> | <span class='s2'>"ruby2.5"</span> | <span class='s2'>"ruby2.7"</span> | <span class='s2'>"nodejs10.x"</span> | <span class='s2'>"nodejs12.x"</span> | <span class='s2'>"nodejs14.x"</span> | <span class='s2'>"python2.7"</span> | <span class='s2'>"python3.6"</span> | <span class='s2'>"python3.7"</span> | <span class='s2'>"python3.8"</span> | <span class='s2'>"provided"</span> | <span class='s2'>"provided.al2"</span>;</code></pre>
 
 See https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html
 

@@ -3881,6 +3881,8 @@ X-Ray for a tracing decision.
     <dd>nodejs10.x</dd>
     <dt>Node<wbr>JS12d<wbr>X</dt>
     <dd>nodejs12.x</dd>
+    <dt>Node<wbr>JS14d<wbr>X</dt>
+    <dd>nodejs14.x</dd>
     <dt>Python2d7</dt>
     <dd>python2.7</dd>
     <dt>Python3d6</dt>
@@ -3918,6 +3920,8 @@ X-Ray for a tracing decision.
     <dd>nodejs10.x</dd>
     <dt>Runtime<wbr>Node<wbr>JS12d<wbr>X</dt>
     <dd>nodejs12.x</dd>
+    <dt>Runtime<wbr>Node<wbr>JS14d<wbr>X</dt>
+    <dd>nodejs14.x</dd>
     <dt>Runtime<wbr>Python2d7</dt>
     <dd>python2.7</dd>
     <dt>Runtime<wbr>Python3d6</dt>
@@ -3955,6 +3959,8 @@ X-Ray for a tracing decision.
     <dd>nodejs10.x</dd>
     <dt>Node<wbr>JS12d<wbr>X</dt>
     <dd>nodejs12.x</dd>
+    <dt>Node<wbr>JS14d<wbr>X</dt>
+    <dd>nodejs14.x</dd>
     <dt>Python2d7</dt>
     <dd>python2.7</dd>
     <dt>Python3d6</dt>
@@ -3992,6 +3998,8 @@ X-Ray for a tracing decision.
     <dd>nodejs10.x</dd>
     <dt>NODE_JS12D_X</dt>
     <dd>nodejs12.x</dd>
+    <dt>NODE_JS14D_X</dt>
+    <dd>nodejs14.x</dd>
     <dt>PYTHON2D7</dt>
     <dd>python2.7</dd>
     <dt>PYTHON3D6</dt>
