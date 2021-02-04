@@ -38,7 +38,7 @@ Python, or any other combination that suits your business.
 
 ### Next steps
 
-The next step in the story is a public preview of a seamless authoring experience that enables component creators to write, build,
+The next step in the story is a public preview of a seamless authoring experience that will enable component creators to write, build,
 and publish multi-language components. If you'd like, follow along with our progress:
 
 - Subscribe to the [multi-language components] issue for updates on the public preview
