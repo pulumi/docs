@@ -3,7 +3,7 @@ title: "Module types/output"
 title_tag: "Module types/output | Package @pulumi/hcloud | Node.js SDK"
 linktitle: "output"
 meta_desc: "Explore members of the output module in the @pulumi/hcloud package."
-git_sha: "a7d750837fe0d0a5a9b69e5d27c15cb7d2603812"
+git_sha: "13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040"
 block_external_search_index: true
 ---
 
@@ -39,14 +39,14 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="GetLoadBalancerAlgorithm" data-link-title="GetLoadBalancerAlgorithm">
-    <a href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L7">
         interface <strong>GetLoadBalancerAlgorithm</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetLoadBalancerAlgorithm</span></code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerAlgorithm-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L11">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L11">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -54,14 +54,14 @@ block_external_search_index: true
 (string) Type of the target. `server` or `labelSelector`
 
 <h3 class="pdoc-module-header" id="GetLoadBalancerService" data-link-title="GetLoadBalancerService">
-    <a href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L14">
         interface <strong>GetLoadBalancerService</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetLoadBalancerService</span></code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerService-destinationPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L18">property <b>destinationPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L18">property <b>destinationPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -69,7 +69,7 @@ block_external_search_index: true
 (int) Port the service connects to the targets on. Can be everything between `1` and `65535`.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerService-healthChecks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L22">property <b>healthChecks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L22">property <b>healthChecks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthChecks: <a href='#GetLoadBalancerServiceHealthCheck'>GetLoadBalancerServiceHealthCheck</a>[];</code></pre>
@@ -77,7 +77,7 @@ block_external_search_index: true
 (list) List of http configurations when `protocol` is `http` or `https`.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerService-https">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L26">property <b>https</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L26">property <b>https</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>https: <a href='#GetLoadBalancerServiceHttp'>GetLoadBalancerServiceHttp</a>[];</code></pre>
@@ -85,7 +85,7 @@ block_external_search_index: true
 (list) List of http configurations when `protocol` is `http` or `https`.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerService-listenPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L30">property <b>listenPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L30">property <b>listenPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listenPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -93,7 +93,7 @@ block_external_search_index: true
 (int) Port the service listen on`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerService-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L34">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L34">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -101,7 +101,7 @@ block_external_search_index: true
 (string) Protocol the health check uses. `http`, `https` or `tcp`
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerService-proxyprotocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L38">property <b>proxyprotocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L38">property <b>proxyprotocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxyprotocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -109,14 +109,14 @@ block_external_search_index: true
 (bool) Enable proxyprotocol.
 
 <h3 class="pdoc-module-header" id="GetLoadBalancerServiceHealthCheck" data-link-title="GetLoadBalancerServiceHealthCheck">
-    <a href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L41">
         interface <strong>GetLoadBalancerServiceHealthCheck</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetLoadBalancerServiceHealthCheck</span></code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerServiceHealthCheck-https">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L45">property <b>https</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L45">property <b>https</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>https: <a href='#GetLoadBalancerServiceHealthCheckHttp'>GetLoadBalancerServiceHealthCheckHttp</a>[];</code></pre>
@@ -124,7 +124,7 @@ block_external_search_index: true
 (list) List of http configurations when `protocol` is `http` or `https`.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerServiceHealthCheck-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L49">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L49">property <b>interval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>interval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -132,7 +132,7 @@ block_external_search_index: true
 (int) Interval how often the health check will be performed, in seconds.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerServiceHealthCheck-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L53">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L53">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -140,7 +140,7 @@ block_external_search_index: true
 (int) Port the health check tries to connect to. Can be everything between `1` and `65535`.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerServiceHealthCheck-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L57">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L57">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -148,7 +148,7 @@ block_external_search_index: true
 (string) Protocol the health check uses. `http`, `https` or `tcp`
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerServiceHealthCheck-retries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L61">property <b>retries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L61">property <b>retries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retries: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -156,7 +156,7 @@ block_external_search_index: true
 (int) Number of tries a health check will be performed until a target will be listed as `unhealthy`.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerServiceHealthCheck-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L65">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L65">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -164,14 +164,14 @@ block_external_search_index: true
 (int) Timeout when a health check try will be canceled if there is no response, in seconds.
 
 <h3 class="pdoc-module-header" id="GetLoadBalancerServiceHealthCheckHttp" data-link-title="GetLoadBalancerServiceHealthCheckHttp">
-    <a href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L68">
         interface <strong>GetLoadBalancerServiceHealthCheckHttp</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetLoadBalancerServiceHealthCheckHttp</span></code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerServiceHealthCheckHttp-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L72">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L72">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -179,7 +179,7 @@ block_external_search_index: true
 string) Domain we try to access when performing the Health Check.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerServiceHealthCheckHttp-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L76">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L76">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -187,7 +187,7 @@ string) Domain we try to access when performing the Health Check.
 (string) Path we try to access when performing the Health Check.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerServiceHealthCheckHttp-response">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L80">property <b>response</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L80">property <b>response</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>response: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -195,7 +195,7 @@ string) Domain we try to access when performing the Health Check.
 (string) Response we expect to be included in the Target response when a Health Check was performed.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerServiceHealthCheckHttp-statusCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L84">property <b>statusCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L84">property <b>statusCodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statusCodes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
@@ -203,7 +203,7 @@ string) Domain we try to access when performing the Health Check.
 (list[int]) We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerServiceHealthCheckHttp-tls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L88">property <b>tls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L88">property <b>tls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -211,14 +211,14 @@ string) Domain we try to access when performing the Health Check.
 (bool) Enable TLS certificate checking.
 
 <h3 class="pdoc-module-header" id="GetLoadBalancerServiceHttp" data-link-title="GetLoadBalancerServiceHttp">
-    <a href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L91">
         interface <strong>GetLoadBalancerServiceHttp</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetLoadBalancerServiceHttp</span></code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerServiceHttp-certificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L95">property <b>certificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L95">property <b>certificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificates: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -226,7 +226,7 @@ string) Domain we try to access when performing the Health Check.
 (list[int]) List of IDs from certificates which the Load Balancer has.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerServiceHttp-cookieLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L99">property <b>cookieLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L99">property <b>cookieLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cookieLifetime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -234,7 +234,7 @@ string) Domain we try to access when performing the Health Check.
 (int) Lifetime of the cookie for sticky session (in seconds).
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerServiceHttp-cookieName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L103">property <b>cookieName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L103">property <b>cookieName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cookieName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -242,7 +242,7 @@ string) Domain we try to access when performing the Health Check.
 (string) Name of the cookie for sticky session.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerServiceHttp-redirectHttp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L107">property <b>redirectHttp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L107">property <b>redirectHttp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redirectHttp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -250,7 +250,7 @@ string) Domain we try to access when performing the Health Check.
 (string) Determine if all requests from port 80 should be redirected to port 443.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerServiceHttp-stickySessions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L111">property <b>stickySessions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L111">property <b>stickySessions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stickySessions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -258,14 +258,14 @@ string) Domain we try to access when performing the Health Check.
 (string) Determine if sticky sessions are enabled or not.
 
 <h3 class="pdoc-module-header" id="GetLoadBalancerTarget" data-link-title="GetLoadBalancerTarget">
-    <a href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L114">
         interface <strong>GetLoadBalancerTarget</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetLoadBalancerTarget</span></code></pre>
 <h4 class="pdoc-member-header" id="GetLoadBalancerTarget-labelSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L118">property <b>labelSelector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L118">property <b>labelSelector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labelSelector: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -273,7 +273,7 @@ string) Domain we try to access when performing the Health Check.
 (string) Label Selector to add a group of resources based on the label.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerTarget-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L122">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L122">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -281,7 +281,7 @@ string) Domain we try to access when performing the Health Check.
 (int) ID of the server which should be a target for this Load Balancer.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerTarget-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L126">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L126">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -289,46 +289,46 @@ string) Domain we try to access when performing the Health Check.
 (string) Type of the target. `server` or `labelSelector`
 
 <h3 class="pdoc-module-header" id="GetSshKeysSshKey" data-link-title="GetSshKeysSshKey">
-    <a href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L129">
         interface <strong>GetSshKeysSshKey</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetSshKeysSshKey</span></code></pre>
 <h4 class="pdoc-member-header" id="GetSshKeysSshKey-fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L130">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L130">property <b>fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fingerprint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSshKeysSshKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L131">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L131">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSshKeysSshKey-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L132">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L132">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetSshKeysSshKey-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L133">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L133">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSshKeysSshKey-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L134">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L134">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="LoadBalancerAlgorithm" data-link-title="LoadBalancerAlgorithm">
-    <a href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L137">
         interface <strong>LoadBalancerAlgorithm</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LoadBalancerAlgorithm</span></code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancerAlgorithm-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L141">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L141">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -336,14 +336,14 @@ string) Domain we try to access when performing the Health Check.
 Type of the Load Balancer Algorithm. `roundRobin` or `leastConnections`
 
 <h3 class="pdoc-module-header" id="LoadBalancerServiceHealthCheck" data-link-title="LoadBalancerServiceHealthCheck">
-    <a href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L144">
         interface <strong>LoadBalancerServiceHealthCheck</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LoadBalancerServiceHealthCheck</span></code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancerServiceHealthCheck-http">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L148">property <b>http</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L148">property <b>http</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>http: <a href='#LoadBalancerServiceHealthCheckHttp'>LoadBalancerServiceHealthCheckHttp</a>;</code></pre>
@@ -351,7 +351,7 @@ Type of the Load Balancer Algorithm. `roundRobin` or `leastConnections`
 List of http configurations. Required if `protocol` is `http`.
 
 <h4 class="pdoc-member-header" id="LoadBalancerServiceHealthCheck-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L152">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L152">property <b>interval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>interval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -359,7 +359,7 @@ List of http configurations. Required if `protocol` is `http`.
 Interval how often the health check will be performed, in seconds.
 
 <h4 class="pdoc-member-header" id="LoadBalancerServiceHealthCheck-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L156">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L156">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -367,7 +367,7 @@ Interval how often the health check will be performed, in seconds.
 Port the health check tries to connect to, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
 
 <h4 class="pdoc-member-header" id="LoadBalancerServiceHealthCheck-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L160">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L160">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -375,7 +375,7 @@ Port the health check tries to connect to, required if protocol is `tcp`. Can be
 Protocol the health check uses. `http` or `tcp`
 
 <h4 class="pdoc-member-header" id="LoadBalancerServiceHealthCheck-retries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L164">property <b>retries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L164">property <b>retries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retries: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -383,7 +383,7 @@ Protocol the health check uses. `http` or `tcp`
 Number of tries a health check will be performed until a target will be listed as `unhealthy`.
 
 <h4 class="pdoc-member-header" id="LoadBalancerServiceHealthCheck-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L168">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L168">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -391,14 +391,14 @@ Number of tries a health check will be performed until a target will be listed a
 Timeout when a health check try will be canceled if there is no response, in seconds.
 
 <h3 class="pdoc-module-header" id="LoadBalancerServiceHealthCheckHttp" data-link-title="LoadBalancerServiceHealthCheckHttp">
-    <a href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L171">
         interface <strong>LoadBalancerServiceHealthCheckHttp</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LoadBalancerServiceHealthCheckHttp</span></code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancerServiceHealthCheckHttp-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L175">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L175">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -406,7 +406,7 @@ Timeout when a health check try will be canceled if there is no response, in sec
 Domain we try to access when performing the Health Check.
 
 <h4 class="pdoc-member-header" id="LoadBalancerServiceHealthCheckHttp-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L179">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L179">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -414,7 +414,7 @@ Domain we try to access when performing the Health Check.
 Path we try to access when performing the Health Check.
 
 <h4 class="pdoc-member-header" id="LoadBalancerServiceHealthCheckHttp-response">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L183">property <b>response</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L183">property <b>response</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>response?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -422,7 +422,7 @@ Path we try to access when performing the Health Check.
 Response we expect to be included in the Target response when a Health Check was performed.
 
 <h4 class="pdoc-member-header" id="LoadBalancerServiceHealthCheckHttp-statusCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L187">property <b>statusCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L187">property <b>statusCodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statusCodes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -430,7 +430,7 @@ Response we expect to be included in the Target response when a Health Check was
 We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
 
 <h4 class="pdoc-member-header" id="LoadBalancerServiceHealthCheckHttp-tls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L191">property <b>tls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L191">property <b>tls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tls?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -438,14 +438,14 @@ We expect that the target answers with these status codes. If not the target is 
 Enable TLS certificate checking.
 
 <h3 class="pdoc-module-header" id="LoadBalancerServiceHttp" data-link-title="LoadBalancerServiceHttp">
-    <a href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L194">
+    <a href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L194">
         interface <strong>LoadBalancerServiceHttp</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LoadBalancerServiceHttp</span></code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancerServiceHttp-certificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L198">property <b>certificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L198">property <b>certificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificates?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
@@ -453,7 +453,7 @@ Enable TLS certificate checking.
 List of IDs from certificates which the Load Balancer has.
 
 <h4 class="pdoc-member-header" id="LoadBalancerServiceHttp-cookieLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L202">property <b>cookieLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L202">property <b>cookieLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cookieLifetime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -461,7 +461,7 @@ List of IDs from certificates which the Load Balancer has.
 Lifetime of the cookie for sticky session (in seconds). Default: `300`
 
 <h4 class="pdoc-member-header" id="LoadBalancerServiceHttp-cookieName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L206">property <b>cookieName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L206">property <b>cookieName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cookieName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -469,7 +469,7 @@ Lifetime of the cookie for sticky session (in seconds). Default: `300`
 Name of the cookie for sticky session. Default: `HCLBSTICKY`
 
 <h4 class="pdoc-member-header" id="LoadBalancerServiceHttp-redirectHttp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L210">property <b>redirectHttp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L210">property <b>redirectHttp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redirectHttp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -477,7 +477,7 @@ Name of the cookie for sticky session. Default: `HCLBSTICKY`
 Redirect HTTP to HTTPS traffic. Only supported for services with `protocol` `https` using the default HTTP port `80`.
 
 <h4 class="pdoc-member-header" id="LoadBalancerServiceHttp-stickySessions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L214">property <b>stickySessions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L214">property <b>stickySessions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stickySessions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -485,14 +485,14 @@ Redirect HTTP to HTTPS traffic. Only supported for services with `protocol` `htt
 Enable sticky sessions
 
 <h3 class="pdoc-module-header" id="LoadBalancerTarget" data-link-title="LoadBalancerTarget">
-    <a href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L217">
+    <a href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L217">
         interface <strong>LoadBalancerTarget</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LoadBalancerTarget</span></code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancerTarget-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L221">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L221">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -500,7 +500,7 @@ Enable sticky sessions
 ID of the server which should be a target for this Load Balancer. Required if `type` is `server`
 
 <h4 class="pdoc-member-header" id="LoadBalancerTarget-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L225">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L225">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -508,7 +508,7 @@ ID of the server which should be a target for this Load Balancer. Required if `t
 Type of the target. `server`
 
 <h4 class="pdoc-member-header" id="LoadBalancerTarget-usePrivateIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L229">property <b>usePrivateIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L229">property <b>usePrivateIp</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -517,29 +517,29 @@ Does not work. Use the hcloud_load_balancer_target resource instead.
 </div>
 <pre class="highlight"><code><span class='kd'></span>usePrivateIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServerNetwork" data-link-title="ServerNetwork">
-    <a href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L232">
+    <a href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L232">
         interface <strong>ServerNetwork</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServerNetwork</span></code></pre>
 <h4 class="pdoc-member-header" id="ServerNetwork-aliasIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L233">property <b>aliasIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L233">property <b>aliasIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasIps?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServerNetwork-ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L234">property <b>ip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L234">property <b>ip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ip: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServerNetwork-macAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L235">property <b>macAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L235">property <b>macAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>macAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServerNetwork-networkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/a7d750837fe0d0a5a9b69e5d27c15cb7d2603812/sdk/nodejs/types/output.ts#L236">property <b>networkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-hcloud/blob/13bfdfce4b1bc8d5d9ef29f0bdabb5fba17ff040/sdk/nodejs/types/output.ts#L236">property <b>networkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
