@@ -1,5 +1,5 @@
 ---
-title: "Use Amazon Elastic Kubernetes Service (EKS) in any language supported by Pulumi"
+title: "Use Elastic Kubernetes Service (EKS) in all Pulumi languages"
 date: 2021-02-04
 draft: false
 meta_desc: The pulumi-eks package is now available in all Pulumi languages&#58; Python, Go, .NET, and TypeScript.
@@ -7,6 +7,7 @@ meta_image: multi-lang.png
 authors:
     - levi-blackstone
 tags:
+    - aws
     - eks
     - .net
     - python
