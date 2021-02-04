@@ -41,7 +41,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-docker/sdk/v2/go/docker"
+	"github.com/pulumi/pulumi-docker/sdk/v2/go/docker/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
