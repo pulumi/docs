@@ -76,19 +76,21 @@ See the next section about configuring secrets to learn how you can use private 
 
 ### Secrets
 
-To pass sensitive secrets to the Kubernetes batch job run by the plugin, define a [Kubernetes Secret](https://kubernetes.io/docs/concepts/configuration/secret/).
-The secret will need to be in the same namespace as the namespace used to run the preconfigured job.
+To pass sensitive secrets to the Kubernetes batch job run by the plugin, define a [Kubernetes `Secret`](https://kubernetes.io/docs/concepts/configuration/secret/).
+
+⚠️ The `Secret` resource must be in the same namespace as the Pulumi stage input when you configure the pipeline.
+
 Sensitive secrets such as the Pulumi Access Token, the cloud provider credentials, or even your VCS credentials
-(eg. GitHub, Bitbucket, GitLab), should be defined as key/value pairs in the Secret resource.
+(eg. GitHub, Bitbucket, GitLab), should be defined as key/value pairs in the `Secret` resource.
 
 If you are using the service backend, either the Pulumi-managed or the self-hosted one, you'll need to get a
 [Pulumi Access Token](https://app.pulumi.com/account/tokens) for the Pulumi account that you'll use in your pipeline.
-Save the value of the token with the key `PULUMI_ACCESS_TOKEN` in your Kubernetes Secret resource.
+Save the value of the token with the key `PULUMI_ACCESS_TOKEN` in your Kubernetes `Secret` resource.
 
 The `PULUMI_ACCESS_TOKEN` is optional if you don't use the Pulumi Service backend. Instead, you should make sure that
 Pulumi has the credentials to access whichever backend URL you do choose to use.
 
-Here's an **example** Secret resource applied in a Spinnaker installation.
+Here's an **example** `Secret` resource applied in a Spinnaker installation.
 
 > Tip: If your Spinnaker Kubernetes cluster was created using Pulumi, then instead of writing this YAML, you could
 > deploy the [Secret](https://www.pulumi.com/docs/reference/pkg/kubernetes/core/v1/secret/) resource using Pulumi too.
@@ -216,24 +218,29 @@ curl http://<POD_IP>
 Yes! Simply pass the Pulumi CLI arg `--color always`. Now when you open the `Console Output` modal, you should see
 colors in the log output. Note that the colored logs are only visible starting with v0.2.0 of the plugin.
 
-**How do I use the plugin with an enterprise VCS repo such as GitHub Enterprise?**
+**Can I use the plugin if my VCS repo is hosted on an enterprise git server?**
 
-The plugin allows you to specify custom container images. One option is to build the container image with the SSH
-credentials baked-in. This allows you to specify a "git SSH" URL. Consult with your Spinnaker administrator before you
-do this.
+Yes. Make sure that the credentials (username and the personal access token) for the Git repo are defined in the
+Kubernetes `Secret` and use the key names as placeholders in the repo URL you specify in the pipeline stage UI.
 
-The other option is to create a Personal Access Token and create a Secret resource that you reference in your stage.
-You can then use the key names as placeholders in the HTTPS version of your repo URL.
+**How do I set the cloud credentials for Pulumi?**
 
-**How do I specify my cloud credentials?**
+Similar to specifying Git credentials, you can define your cloud provider credentials in the same secret resource
+which will be mapped as environment variables that Pulumi can read.
 
-As mentioned before you can define a `Secrets` resource whose key/value pairs will be mapped as environment variables.
-The key names need to match the environment variables that a cloud provider supports.
+**Can I use custom container images for the RunJob container?**
 
-The other option is similar to baking the container image with SSH credentials. You can also bake any configuration
-files used by the cloud provider in the container image. For example, `~/.aws/config` and `~/.aws/credentials`.
-You also have the option to override stack configuration from the pipeline stage by passing the `-c` flag and specify
-certain cloud provider settings that way. Again, taking AWS as an example, `-c aws:profile <profile name from ~/.aws/config>`.
+Yes. Make sure that your custom image satisfies the following requirements:
+
+* Your container should include the Pulumi CLI, and any necessary language runtime tools, such as `node`, `python`,
+  `dotnet`, or `go`.
+* If your container image is in a private registry, your Spinnaker cluster must have the proper credentials to pull
+  from the registry.
+
+The following links may be helpful in building your own custom image based on Pulumi's own images:
+
+* https://github.com/pulumi/pulumi/tree/master/docker
+* https://hub.docker.com/u/pulumi
 
 ## Next Steps
 
@@ -242,7 +249,7 @@ We showed you a simple example of how you can get started with using Pulumi in y
 * Check out [detailed examples for Pulumi](https://www.pulumi.com/docs/tutorials/).
 * Learn how to use the multitude of [providers](https://www.pulumi.com/docs/reference/pkg/) available with Pulumi.
 * We hope that you find the plugin useful in running Pulumi in your Spinnaker instance. If you run into problems or
-  would like to provide feedback, we encourage you to open an issue in this [repo](https://github.com/pulumi/spinnaker-preconfigured-job-plugin).
+  would like to provide feedback, we encourage you to open an issue in the [plugin repo](https://github.com/pulumi/spinnaker-preconfigured-job-plugin).
   The plugin is free and open-source.
 * Lastly, whether you are looking to use Pulumi to deploy a Spinnaker installation on your favorite cloud and have
   questions about it, or you want to simply participate in the various conversations happening with our community of
