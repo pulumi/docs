@@ -118,7 +118,9 @@ To set this up, you need to enable Push Groups as a supported provisioning actio
 
 7. After clicking **Save**, you should see that your group was pushed and it should say **Active**.
 
-    Note: if there are members in a group that are not yet assigned to the Pulumi Console application in Okta, they will not be added to the team in the Pulumi Console. Ensure that all members in the group have been assigned to the application before pushing the group.
+    {{% notes "info" %}}
+If there are members in a group that are not yet assigned to the Pulumi Console application in Okta, they will not be added to the team in the Pulumi Console. Ensure that all members in the group have been assigned to the application before pushing the group.
+    {{% /notes %}}
 
 ## Verifying Group Provisioning
 
@@ -135,4 +137,3 @@ Here’s a list of the features that are not currently supported:
 * Secondary emails
 * Password sync
 * Bulk importing
-* Subgroups (groups composed of other groups, only groups composed of users are supported)
