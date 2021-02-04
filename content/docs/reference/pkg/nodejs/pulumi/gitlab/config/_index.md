@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/gitlab | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/gitlab package."
-git_sha: "94ebe6e87d84501eddadc01a7230f28507e4749b"
+git_sha: "4fa83c79088d7143dcae3260feb1f081821b6f76"
 block_external_search_index: true
 ---
 
@@ -32,7 +32,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="baseUrl" data-link-title="baseUrl">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/94ebe6e87d84501eddadc01a7230f28507e4749b/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/4fa83c79088d7143dcae3260feb1f081821b6f76/sdk/nodejs/config/vars.ts#L12">
         let <strong>baseUrl</strong>
     </a>
 </h3>
@@ -42,7 +42,7 @@ block_external_search_index: true
 The GitLab Base API URL
 
 <h3 class="pdoc-module-header" id="cacertFile" data-link-title="cacertFile">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/94ebe6e87d84501eddadc01a7230f28507e4749b/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/4fa83c79088d7143dcae3260feb1f081821b6f76/sdk/nodejs/config/vars.ts#L16">
         let <strong>cacertFile</strong>
     </a>
 </h3>
@@ -52,7 +52,7 @@ The GitLab Base API URL
 A file containing the ca certificate to use in case ssl certificate is not from a standard chain
 
 <h3 class="pdoc-module-header" id="clientCert" data-link-title="clientCert">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/94ebe6e87d84501eddadc01a7230f28507e4749b/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/4fa83c79088d7143dcae3260feb1f081821b6f76/sdk/nodejs/config/vars.ts#L20">
         let <strong>clientCert</strong>
     </a>
 </h3>
@@ -62,7 +62,7 @@ A file containing the ca certificate to use in case ssl certificate is not from 
 File path to client certificate when GitLab instance is behind company proxy. File must contain PEM encoded data.
 
 <h3 class="pdoc-module-header" id="clientKey" data-link-title="clientKey">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/94ebe6e87d84501eddadc01a7230f28507e4749b/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/4fa83c79088d7143dcae3260feb1f081821b6f76/sdk/nodejs/config/vars.ts#L24">
         let <strong>clientKey</strong>
     </a>
 </h3>
@@ -72,7 +72,7 @@ File path to client certificate when GitLab instance is behind company proxy. Fi
 File path to client key when GitLab instance is behind company proxy. File must contain PEM encoded data.
 
 <h3 class="pdoc-module-header" id="insecure" data-link-title="insecure">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/94ebe6e87d84501eddadc01a7230f28507e4749b/sdk/nodejs/config/vars.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/4fa83c79088d7143dcae3260feb1f081821b6f76/sdk/nodejs/config/vars.ts#L28">
         let <strong>insecure</strong>
     </a>
 </h3>
@@ -82,7 +82,7 @@ File path to client key when GitLab instance is behind company proxy. File must 
 Disable SSL verification of API calls
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/94ebe6e87d84501eddadc01a7230f28507e4749b/sdk/nodejs/config/vars.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/4fa83c79088d7143dcae3260feb1f081821b6f76/sdk/nodejs/config/vars.ts#L32">
         let <strong>token</strong>
     </a>
 </h3>
