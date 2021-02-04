@@ -7,7 +7,7 @@ menu:
         weight: 1
 ---
 
-This document covers steps to help you configure automatic provisioning/deprovisioning of your users in Pulumi using SCIM 2.0.
+This document covers steps to help you configure automatic provisioning/deprovisioning of your users and groups in Pulumi using SCIM 2.0.
 
 Please note that not all SCIM features are supported. For more information, see [Known Limitations]({{< relref "#known-limitations" >}}).
 
@@ -19,7 +19,7 @@ Please note that not all SCIM features are supported. For more information, see 
 
 ## Enabling SCIM For Your Okta Org
 
-In order to configure SCIM for your Okta tenant, email support@okta.com requesting them to enable `SCIM_PROVISIONING` for your Okta org.
+In order to configure SCIM for your Okta organization, you may need to email support@okta.com and request that they enable `SCIM_PROVISIONING` for the organization.
 
 Once the feature is enabled, navigate to the Pulumi SAML app configured in your Okta org from the **Classic UI**. Under the **General** tab, in the **App Settings** dialog box, locate the **Provisioning** section and select **SCIM**. Click **Save** to save your changes and close the **App Settings** dialog box.
 
@@ -46,10 +46,10 @@ To configure the SCIM connector, click the **Provisioning** tab, and then select
 * SCIM connector base URL: `https://api.pulumi.com/scim/v2/{orgName}`, where `{orgName}` must be replaced with your organization’s login name (not display name). If you do not know this, navigate to your SAML settings and look at the SSO URL. It will have your organization’s login name in the URL.
 * Supported provisioning actions: check **Push New Users** and **Push Profile Updates**.
 * Authentication Mode: HTTP Header
-* For **HTTP HEADER**, you will used a token from the [Pulumi Console](https://app.pulumi.com) as the authorization bearer token. To generate a token, navigate to your org in the Pulumi Console, click on the **Settings** tab, and then click **SAML SSO**. Scroll down to the **SCIM** section and generate a new token if you have never generated one for your org, or regenerate it if you have already done so in the past.
+* For **HTTP HEADER**, you will use a token from the [Pulumi Console](https://app.pulumi.com) as the authorization bearer token. To generate a token, navigate to your org in the Pulumi Console, click on the **Settings** tab, and then click **SAML SSO**. Scroll down to the **SCIM** section and generate a new token if you have never generated one for your org, or regenerate it if you have already done so in the past.
 
     {{% notes "info" %}}
-Once you generate the token, please save it securely. The Pulumi Console will not show you the token again and there is no way to retrieve it again. SCIM token can only be regenerated once it has been generated already. This means you will invalidate any previous SCIM tokens for your org by regenerating it.
+Once you generate the token, please save it securely. Neither the Pulumi Console nor Pulumi support can retrieve a token once it's been initially generated. If you lose the SCIM token and need it again, you'll have to generate a new token, which invalidates any previous tokens for your Pulumi organization.
     {{% /notes %}}
 
 * Paste the token from the Pulumi Console into the Okta SCIM configuration for **HTTP HEADER**.
@@ -60,7 +60,7 @@ The following shows how your SCIM connection info should be filled in.
 
 ## Enabling SCIM Provisioning Actions
 
-There are a few provisioning actions you need to enable, which Okta will con on the Pulumi service.
+To configure the actions that Okta will send to the Pulumi Console, you need to enable them.
 
 1. Under the **Provisioning** tab, click **Edit**.
 2. While you are in the **To App** section, check **Enable** on the following:
@@ -78,15 +78,15 @@ Now that the SCIM connector knows how to connect to Pulumi, you need to adjust t
 2. Click **Mappings** to open the Attribute Editor dialog box.
 3. Un-map all but the following attributes:
 
-    * firstName
-    * lastName
+    * givenName
+    * familyName
     * displayName
     * email
 
 4. Click on the **Okta User To …** tab and un-map all but the following attributes:
 
-    * firstName
-    * lastName
+    * givenName
+    * familyName
     * displayName
     * email
 
@@ -95,9 +95,9 @@ Now that the SCIM connector knows how to connect to Pulumi, you need to adjust t
 
 ## Setting up Group Provisioning
 
-The Pulumi console supports the provisioning of teams within your organization using SCIM. This is done by mapping the groups you have created using SCIM to create teams within your organization in the Pulumi console. Setting this up allows you to manage your team’s membership solely from the Okta side.
+The Pulumi console supports the provisioning of teams within your organization using SCIM. This is done by mapping the groups you have created using SCIM to create teams within your organization in the Pulumi console. Setting this up allows you to manage your teams' memberships solely in Okta.
 
-To do this, you will enable Push Groups as a supported provisioning action under the **Provisioning** settings and then specify which groups you would like to push through the following steps:
+To set this up, you need to enable Push Groups as a supported provisioning action under the **Provisioning** settings and then specify which groups you would like to push. To do that, performing the following steps:
 
 1. Navigate to the application that you created above by clicking the on the **Applications** tab and then selecting the application.
 
@@ -116,7 +116,7 @@ To do this, you will enable Push Groups as a supported provisioning action under
 
 7. After clicking **Save**, you should see that your group was pushed and it should say **Active**.
 
-    One thing to note is that if there are members in your group that are not yet assigned to the Pulumi Console application, they will not be added to the team on the Pulumi end. The Pulumi Console will make a best effort to add the members being requested. If any of them are not assigned to the Pulumi Console application or their user has not yet been pushed we will simply skip over adding that member.
+    Note: if there are members in a group that are not yet assigned to the Pulumi Console application in Okta, they will not be added to the team in the Pulumi Console. Ensure that all members in the group have been assigned to the application before pushing the group.
 
 ## Verifying Group Provisioning
 
