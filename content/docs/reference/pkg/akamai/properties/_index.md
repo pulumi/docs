@@ -34,7 +34,7 @@ Explore the resources and functions of the properties module in the Akamai packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).</dd>
 	<dt>Version</dt>
-	<dd>1.0.0</dd>
+	<dd>1.1.0</dd>
 </dl>
 
 

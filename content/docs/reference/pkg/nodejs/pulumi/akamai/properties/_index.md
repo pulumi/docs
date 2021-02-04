@@ -3,7 +3,7 @@ title: "Module properties"
 title_tag: "Module properties | Package @pulumi/akamai | Node.js SDK"
 linktitle: "properties"
 meta_desc: "Explore members of the properties module in the @pulumi/akamai package."
-git_sha: "d905d77c417a09f1243fecb34ad59ca0aa7657e1"
+git_sha: "252a5b7ed507b5da220e685e0df70bd30bd9b156"
 block_external_search_index: true
 ---
 
@@ -54,7 +54,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="CpCode" data-link-title="CpCode">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L10">
         Resource <strong>CpCode</strong>
     </a>
 </h3>
@@ -65,7 +65,7 @@ akamai.properties.CpCode has been deprecated in favor of akamai.CpCode
 </div>
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>CpCode</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="CpCode-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L50"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L50"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -80,7 +80,7 @@ akamai.properties.CpCode has been deprecated in favor of akamai.CpCode
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> CpCode(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#CpCodeArgs'>CpCodeArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="CpCode-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -91,14 +91,14 @@ Get an existing CpCode resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CpCode-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L10">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L10">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CpCode-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -109,7 +109,7 @@ Returns true if the given object is an instance of CpCode.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CpCode-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L42">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L42">property <b>contract</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -118,12 +118,12 @@ use &#34;contract_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>contract: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CpCode-contractId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L43">property <b>contractId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L43">property <b>contractId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contractId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CpCode-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L47">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L47">property <b>group</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -132,12 +132,12 @@ use &#34;group_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CpCode-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L48">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L48">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CpCode-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L10">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L10">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -146,17 +146,17 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CpCode-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CpCode-product">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L50">property <b>product</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L50">property <b>product</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>product: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CpCode-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L10">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L10">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -165,7 +165,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EdgeHostName" data-link-title="EdgeHostName">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L10">
         Resource <strong>EdgeHostName</strong>
     </a>
 </h3>
@@ -176,7 +176,7 @@ akamai.properties.EdgeHostName has been deprecated in favor of akamai.EdgeHostNa
 </div>
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>EdgeHostName</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostName-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L56"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L56"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -191,7 +191,7 @@ akamai.properties.EdgeHostName has been deprecated in favor of akamai.EdgeHostNa
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> EdgeHostName(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EdgeHostNameArgs'>EdgeHostNameArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="EdgeHostName-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -202,14 +202,14 @@ Get an existing EdgeHostName resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EdgeHostName-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L10">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L10">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EdgeHostName-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -220,12 +220,12 @@ Returns true if the given object is an instance of EdgeHostName.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EdgeHostName-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L39">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L39">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostName-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L43">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L43">property <b>contract</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -234,17 +234,17 @@ use &#34;contract_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>contract: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostName-contractId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L44">property <b>contractId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L44">property <b>contractId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contractId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostName-edgeHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L45">property <b>edgeHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L45">property <b>edgeHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>edgeHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostName-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L49">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L49">property <b>group</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -253,12 +253,12 @@ use &#34;group_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostName-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L50">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L50">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostName-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L10">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L10">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -267,12 +267,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EdgeHostName-ipBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L51">property <b>ipBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L51">property <b>ipBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipBehavior: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostName-product">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L55">property <b>product</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L55">property <b>product</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -281,12 +281,12 @@ use &#34;product_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>product: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostName-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L56">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L56">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>productId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostName-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L10">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L10">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -295,7 +295,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Property" data-link-title="Property">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L11">
         Resource <strong>Property</strong>
     </a>
 </h3>
@@ -306,7 +306,7 @@ akamai.properties.Property has been deprecated in favor of akamai.Property
 </div>
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Property</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Property-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L113"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L113"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -321,7 +321,7 @@ akamai.properties.Property has been deprecated in favor of akamai.Property
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Property(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#PropertyArgs'>PropertyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="Property-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -332,14 +332,14 @@ Get an existing Property resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Property-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Property-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -350,7 +350,7 @@ Returns true if the given object is an instance of Property.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Property-contacts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L43">property <b>contacts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L43">property <b>contacts</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -359,7 +359,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>contacts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Property-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L47">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L47">property <b>contract</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -368,7 +368,7 @@ use &#34;contract_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>contract: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Property-contractId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L51">property <b>contractId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L51">property <b>contractId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contractId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -376,7 +376,7 @@ use &#34;contract_id&#34; attribute instead
 Contract ID to be assigned to the Property
 
 <h4 class="pdoc-member-header" id="Property-cpCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L55">property <b>cpCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L55">property <b>cpCode</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -385,7 +385,7 @@ Contract ID to be assigned to the Property
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>cpCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Property-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L59">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L59">property <b>group</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -394,7 +394,7 @@ use &#34;group_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Property-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L63">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L63">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -402,7 +402,7 @@ use &#34;group_id&#34; attribute instead
 Group ID to be assigned to the Property
 
 <h4 class="pdoc-member-header" id="Property-hostnames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L67">property <b>hostnames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L67">property <b>hostnames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostnames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -410,7 +410,7 @@ Group ID to be assigned to the Property
 Mapping of edge hostname CNAMEs to other CNAMEs
 
 <h4 class="pdoc-member-header" id="Property-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -419,7 +419,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Property-isSecure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L71">property <b>isSecure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L71">property <b>isSecure</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -428,7 +428,7 @@ deployments and may be missing (undefined) during planning phases.
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>isSecure: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Property-latestVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L75">property <b>latestVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L75">property <b>latestVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>latestVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -436,7 +436,7 @@ deployments and may be missing (undefined) during planning phases.
 Property's current latest version number
 
 <h4 class="pdoc-member-header" id="Property-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -444,7 +444,7 @@ Property's current latest version number
 Name to give to the Property (must be unique)
 
 <h4 class="pdoc-member-header" id="Property-origins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L83">property <b>origins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L83">property <b>origins</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -453,7 +453,7 @@ Name to give to the Property (must be unique)
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>origins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#PropertyOrigin'>PropertyOrigin</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Property-product">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L87">property <b>product</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L87">property <b>product</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -462,7 +462,7 @@ use &#34;product_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>product: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Property-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L91">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L91">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>productId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -470,7 +470,7 @@ use &#34;product_id&#34; attribute instead
 Product ID to be assigned to the Property
 
 <h4 class="pdoc-member-header" id="Property-productionVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L95">property <b>productionVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L95">property <b>productionVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>productionVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -478,12 +478,12 @@ Product ID to be assigned to the Property
 Property's version currently activated in production (zero when not active in production)
 
 <h4 class="pdoc-member-header" id="Property-ruleErrors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L96">property <b>ruleErrors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L96">property <b>ruleErrors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ruleErrors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#PropertyRuleError'>PropertyRuleError</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Property-ruleFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L100">property <b>ruleFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L100">property <b>ruleFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ruleFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -491,12 +491,12 @@ Property's version currently activated in production (zero when not active in pr
 Specify the rule format version (defaults to latest version available when created)
 
 <h4 class="pdoc-member-header" id="Property-ruleWarnings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L101">property <b>ruleWarnings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L101">property <b>ruleWarnings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ruleWarnings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#PropertyRuleWarning'>PropertyRuleWarning</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Property-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L105">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L105">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -504,7 +504,7 @@ Specify the rule format version (defaults to latest version available when creat
 Property Rules as JSON
 
 <h4 class="pdoc-member-header" id="Property-stagingVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L109">property <b>stagingVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L109">property <b>stagingVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stagingVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -512,7 +512,7 @@ Property Rules as JSON
 Property's version currently activated in staging (zero when not active in staging)
 
 <h4 class="pdoc-member-header" id="Property-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -521,7 +521,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Property-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L113">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L113">property <b>variables</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -530,7 +530,7 @@ deployments.
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>variables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="PropertyActivation" data-link-title="PropertyActivation">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L10">
         Resource <strong>PropertyActivation</strong>
     </a>
 </h3>
@@ -541,7 +541,7 @@ akamai.properties.PropertyActivation has been deprecated in favor of akamai.Prop
 </div>
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>PropertyActivation</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L50"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L50"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -556,7 +556,7 @@ akamai.properties.PropertyActivation has been deprecated in favor of akamai.Prop
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> PropertyActivation(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#PropertyActivationArgs'>PropertyActivationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="PropertyActivation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -567,14 +567,14 @@ Get an existing PropertyActivation resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PropertyActivation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L10">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L10">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PropertyActivation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -585,22 +585,22 @@ Returns true if the given object is an instance of PropertyActivation.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PropertyActivation-activationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L39">property <b>activationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L39">property <b>activationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>activationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivation-contacts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L40">property <b>contacts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L40">property <b>contacts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contacts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivation-errors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L41">property <b>errors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L41">property <b>errors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>errors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L10">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L10">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -609,12 +609,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PropertyActivation-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L42">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L42">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivation-property">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L46">property <b>property</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L46">property <b>property</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -623,17 +623,17 @@ The setting &#34;property&#34; has been deprecated.
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>property: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivation-propertyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L47">property <b>propertyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L47">property <b>propertyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>propertyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivation-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L48">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L48">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L10">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L10">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -642,17 +642,17 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="PropertyActivation-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L49">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L49">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivation-warnings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L50">property <b>warnings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L50">property <b>warnings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>warnings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="PropertyVariables" data-link-title="PropertyVariables">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyVariables.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyVariables.ts#L11">
         Resource <strong>PropertyVariables</strong>
     </a>
 </h3>
@@ -663,7 +663,7 @@ akamai.properties.PropertyVariables has been deprecated in favor of akamai.Prope
 </div>
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>PropertyVariables</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="PropertyVariables-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyVariables.ts#L47"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyVariables.ts#L47"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -678,7 +678,7 @@ akamai.properties.PropertyVariables has been deprecated in favor of akamai.Prope
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> PropertyVariables(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#PropertyVariablesArgs'>PropertyVariablesArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="PropertyVariables-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyVariables.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyVariables.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -689,14 +689,14 @@ Get an existing PropertyVariables resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PropertyVariables-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyVariables.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyVariables.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PropertyVariables-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyVariables.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyVariables.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -707,7 +707,7 @@ Returns true if the given object is an instance of PropertyVariables.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PropertyVariables-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyVariables.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyVariables.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -716,7 +716,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PropertyVariables-json">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyVariables.ts#L43">property <b>json</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyVariables.ts#L43">property <b>json</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>json: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -724,7 +724,7 @@ deployments and may be missing (undefined) during planning phases.
 JSON variables representation
 
 <h4 class="pdoc-member-header" id="PropertyVariables-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyVariables.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyVariables.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -733,7 +733,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="PropertyVariables-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyVariables.ts#L47">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyVariables.ts#L47">property <b>variables</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -744,7 +744,7 @@ resource &#34;akamai_property_variables&#34; is no longer supported - See Akamai
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getCpCode" data-link-title="getCpCode">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getCpCode.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getCpCode.ts#L9">
         Function <strong>getCpCode</strong>
     </a>
 </h3>
@@ -757,7 +757,7 @@ akamai.properties.getCpCode has been deprecated in favor of akamai.getCpCode
 <pre class="highlight"><code><span class='kd'></span>getCpCode(args: <a href='#GetCpCodeArgs'>GetCpCodeArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetCpCodeResult'>GetCpCodeResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getProperty" data-link-title="getProperty">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getProperty.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getProperty.ts#L9">
         Function <strong>getProperty</strong>
     </a>
 </h3>
@@ -770,7 +770,7 @@ akamai.properties.getProperty has been deprecated in favor of akamai.getProperty
 <pre class="highlight"><code><span class='kd'></span>getProperty(args: <a href='#GetPropertyArgs'>GetPropertyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetPropertyResult'>GetPropertyResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getPropertyRules" data-link-title="getPropertyRules">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getPropertyRules.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getPropertyRules.ts#L9">
         Function <strong>getPropertyRules</strong>
     </a>
 </h3>
@@ -785,7 +785,7 @@ akamai.properties.getPropertyRules has been deprecated in favor of akamai.getPro
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="CpCodeArgs" data-link-title="CpCodeArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L117">
         interface <strong>CpCodeArgs</strong>
     </a>
 </h3>
@@ -795,7 +795,7 @@ akamai.properties.getPropertyRules has been deprecated in favor of akamai.getPro
 The set of arguments for constructing a CpCode resource.
 
 <h4 class="pdoc-member-header" id="CpCodeArgs-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L121">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L121">property <b>contract</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -804,12 +804,12 @@ use &#34;contract_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'></span>contract?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CpCodeArgs-contractId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L122">property <b>contractId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L122">property <b>contractId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contractId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CpCodeArgs-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L126">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L126">property <b>group</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -818,22 +818,22 @@ use &#34;group_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CpCodeArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L127">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L127">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CpCodeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L128">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L128">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CpCodeArgs-product">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L129">property <b>product</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L129">property <b>product</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>product: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="CpCodeState" data-link-title="CpCodeState">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L99">
         interface <strong>CpCodeState</strong>
     </a>
 </h3>
@@ -843,7 +843,7 @@ use &#34;group_id&#34; attribute instead
 Input properties used for looking up and filtering CpCode resources.
 
 <h4 class="pdoc-member-header" id="CpCodeState-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L103">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L103">property <b>contract</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -852,12 +852,12 @@ use &#34;contract_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'></span>contract?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CpCodeState-contractId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L104">property <b>contractId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L104">property <b>contractId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contractId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CpCodeState-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L108">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L108">property <b>group</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -866,22 +866,22 @@ use &#34;group_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CpCodeState-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L109">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L109">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CpCodeState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L110">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L110">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CpCodeState-product">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/cpCode.ts#L111">property <b>product</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/cpCode.ts#L111">property <b>product</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>product?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="EdgeHostNameArgs" data-link-title="EdgeHostNameArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L138">
         interface <strong>EdgeHostNameArgs</strong>
     </a>
 </h3>
@@ -891,12 +891,12 @@ use &#34;group_id&#34; attribute instead
 The set of arguments for constructing a EdgeHostName resource.
 
 <h4 class="pdoc-member-header" id="EdgeHostNameArgs-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L139">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L139">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostNameArgs-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L143">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L143">property <b>contract</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -905,17 +905,17 @@ use &#34;contract_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'></span>contract?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostNameArgs-contractId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L144">property <b>contractId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L144">property <b>contractId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contractId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostNameArgs-edgeHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L145">property <b>edgeHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L145">property <b>edgeHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>edgeHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostNameArgs-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L149">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L149">property <b>group</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -924,17 +924,17 @@ use &#34;group_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostNameArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L150">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L150">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostNameArgs-ipBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L151">property <b>ipBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L151">property <b>ipBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipBehavior: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostNameArgs-product">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L155">property <b>product</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L155">property <b>product</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -943,12 +943,12 @@ use &#34;product_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'></span>product?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostNameArgs-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L156">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L156">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="EdgeHostNameState" data-link-title="EdgeHostNameState">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L114">
         interface <strong>EdgeHostNameState</strong>
     </a>
 </h3>
@@ -958,12 +958,12 @@ use &#34;product_id&#34; attribute instead
 Input properties used for looking up and filtering EdgeHostName resources.
 
 <h4 class="pdoc-member-header" id="EdgeHostNameState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L115">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L115">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostNameState-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L119">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L119">property <b>contract</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -972,17 +972,17 @@ use &#34;contract_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'></span>contract?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostNameState-contractId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L120">property <b>contractId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L120">property <b>contractId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contractId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostNameState-edgeHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L121">property <b>edgeHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L121">property <b>edgeHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>edgeHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostNameState-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L125">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L125">property <b>group</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -991,17 +991,17 @@ use &#34;group_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostNameState-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L126">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L126">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostNameState-ipBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L127">property <b>ipBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L127">property <b>ipBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipBehavior?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostNameState-product">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L131">property <b>product</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L131">property <b>product</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1010,12 +1010,12 @@ use &#34;product_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'></span>product?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeHostNameState-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/edgeHostName.ts#L132">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/edgeHostName.ts#L132">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GetCpCodeArgs" data-link-title="GetCpCodeArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getCpCode.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getCpCode.ts#L30">
         interface <strong>GetCpCodeArgs</strong>
     </a>
 </h3>
@@ -1025,7 +1025,7 @@ use &#34;product_id&#34; attribute instead
 A collection of arguments for invoking getCpCode.
 
 <h4 class="pdoc-member-header" id="GetCpCodeArgs-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getCpCode.ts#L34">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getCpCode.ts#L34">property <b>contract</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1034,12 +1034,12 @@ The setting &#34;contract&#34; has been deprecated.
 </div>
 <pre class="highlight"><code><span class='kd'></span>contract?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCpCodeArgs-contractId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getCpCode.ts#L35">property <b>contractId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getCpCode.ts#L35">property <b>contractId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contractId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCpCodeArgs-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getCpCode.ts#L39">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getCpCode.ts#L39">property <b>group</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1048,17 +1048,17 @@ The setting &#34;group&#34; has been deprecated.
 </div>
 <pre class="highlight"><code><span class='kd'></span>group?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCpCodeArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getCpCode.ts#L40">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getCpCode.ts#L40">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCpCodeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getCpCode.ts#L41">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getCpCode.ts#L41">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetCpCodeResult" data-link-title="GetCpCodeResult">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getCpCode.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getCpCode.ts#L47">
         interface <strong>GetCpCodeResult</strong>
     </a>
 </h3>
@@ -1068,7 +1068,7 @@ The setting &#34;group&#34; has been deprecated.
 A collection of values returned by getCpCode.
 
 <h4 class="pdoc-member-header" id="GetCpCodeResult-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getCpCode.ts#L51">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getCpCode.ts#L51">property <b>contract</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1077,12 +1077,12 @@ The setting &#34;contract&#34; has been deprecated.
 </div>
 <pre class="highlight"><code><span class='kd'></span>contract: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCpCodeResult-contractId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getCpCode.ts#L52">property <b>contractId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getCpCode.ts#L52">property <b>contractId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contractId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCpCodeResult-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getCpCode.ts#L56">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getCpCode.ts#L56">property <b>group</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1091,12 +1091,12 @@ The setting &#34;group&#34; has been deprecated.
 </div>
 <pre class="highlight"><code><span class='kd'></span>group: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCpCodeResult-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getCpCode.ts#L57">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getCpCode.ts#L57">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCpCodeResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getCpCode.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getCpCode.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1104,17 +1104,17 @@ The setting &#34;group&#34; has been deprecated.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetCpCodeResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getCpCode.ts#L62">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getCpCode.ts#L62">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCpCodeResult-productIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getCpCode.ts#L63">property <b>productIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getCpCode.ts#L63">property <b>productIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetPropertyArgs" data-link-title="GetPropertyArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getProperty.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getProperty.ts#L27">
         interface <strong>GetPropertyArgs</strong>
     </a>
 </h3>
@@ -1124,17 +1124,17 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getProperty.
 
 <h4 class="pdoc-member-header" id="GetPropertyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getProperty.ts#L28">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getProperty.ts#L28">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPropertyArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getProperty.ts#L29">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getProperty.ts#L29">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetPropertyResult" data-link-title="GetPropertyResult">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getProperty.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getProperty.ts#L35">
         interface <strong>GetPropertyResult</strong>
     </a>
 </h3>
@@ -1144,7 +1144,7 @@ A collection of arguments for invoking getProperty.
 A collection of values returned by getProperty.
 
 <h4 class="pdoc-member-header" id="GetPropertyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getProperty.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getProperty.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1152,22 +1152,22 @@ A collection of values returned by getProperty.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPropertyResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getProperty.ts#L40">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getProperty.ts#L40">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPropertyResult-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getProperty.ts#L41">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getProperty.ts#L41">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPropertyResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getProperty.ts#L42">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getProperty.ts#L42">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetPropertyRulesArgs" data-link-title="GetPropertyRulesArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getPropertyRules.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getPropertyRules.ts#L29">
         interface <strong>GetPropertyRulesArgs</strong>
     </a>
 </h3>
@@ -1177,27 +1177,27 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getPropertyRules.
 
 <h4 class="pdoc-member-header" id="GetPropertyRulesArgs-contractId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getPropertyRules.ts#L30">property <b>contractId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getPropertyRules.ts#L30">property <b>contractId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contractId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPropertyRulesArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getPropertyRules.ts#L31">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getPropertyRules.ts#L31">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPropertyRulesArgs-propertyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getPropertyRules.ts#L32">property <b>propertyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getPropertyRules.ts#L32">property <b>propertyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>propertyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPropertyRulesArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getPropertyRules.ts#L33">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getPropertyRules.ts#L33">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetPropertyRulesResult" data-link-title="GetPropertyRulesResult">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getPropertyRules.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getPropertyRules.ts#L39">
         interface <strong>GetPropertyRulesResult</strong>
     </a>
 </h3>
@@ -1207,22 +1207,22 @@ A collection of arguments for invoking getPropertyRules.
 A collection of values returned by getPropertyRules.
 
 <h4 class="pdoc-member-header" id="GetPropertyRulesResult-contractId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getPropertyRules.ts#L40">property <b>contractId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getPropertyRules.ts#L40">property <b>contractId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contractId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPropertyRulesResult-errors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getPropertyRules.ts#L41">property <b>errors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getPropertyRules.ts#L41">property <b>errors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>errors: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPropertyRulesResult-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getPropertyRules.ts#L42">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getPropertyRules.ts#L42">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPropertyRulesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getPropertyRules.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getPropertyRules.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1230,22 +1230,22 @@ A collection of values returned by getPropertyRules.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPropertyRulesResult-propertyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getPropertyRules.ts#L47">property <b>propertyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getPropertyRules.ts#L47">property <b>propertyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>propertyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPropertyRulesResult-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getPropertyRules.ts#L48">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getPropertyRules.ts#L48">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPropertyRulesResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/getPropertyRules.ts#L49">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/getPropertyRules.ts#L49">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="PropertyActivationArgs" data-link-title="PropertyActivationArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L126">
         interface <strong>PropertyActivationArgs</strong>
     </a>
 </h3>
@@ -1255,22 +1255,22 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a PropertyActivation resource.
 
 <h4 class="pdoc-member-header" id="PropertyActivationArgs-activationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L127">property <b>activationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L127">property <b>activationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivationArgs-contacts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L128">property <b>contacts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L128">property <b>contacts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contacts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivationArgs-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L129">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L129">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivationArgs-property">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L133">property <b>property</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L133">property <b>property</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1279,17 +1279,17 @@ The setting &#34;property&#34; has been deprecated.
 </div>
 <pre class="highlight"><code><span class='kd'></span>property?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivationArgs-propertyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L134">property <b>propertyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L134">property <b>propertyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>propertyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivationArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L135">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L135">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="PropertyActivationState" data-link-title="PropertyActivationState">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L108">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L108">
         interface <strong>PropertyActivationState</strong>
     </a>
 </h3>
@@ -1299,27 +1299,27 @@ The setting &#34;property&#34; has been deprecated.
 Input properties used for looking up and filtering PropertyActivation resources.
 
 <h4 class="pdoc-member-header" id="PropertyActivationState-activationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L109">property <b>activationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L109">property <b>activationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivationState-contacts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L110">property <b>contacts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L110">property <b>contacts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contacts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivationState-errors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L111">property <b>errors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L111">property <b>errors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>errors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivationState-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L112">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L112">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivationState-property">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L116">property <b>property</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L116">property <b>property</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1328,27 +1328,27 @@ The setting &#34;property&#34; has been deprecated.
 </div>
 <pre class="highlight"><code><span class='kd'></span>property?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivationState-propertyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L117">property <b>propertyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L117">property <b>propertyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>propertyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivationState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L118">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L118">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivationState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L119">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L119">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyActivationState-warnings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyActivation.ts#L120">property <b>warnings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyActivation.ts#L120">property <b>warnings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>warnings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="PropertyArgs" data-link-title="PropertyArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L267">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L267">
         interface <strong>PropertyArgs</strong>
     </a>
 </h3>
@@ -1358,7 +1358,7 @@ The setting &#34;property&#34; has been deprecated.
 The set of arguments for constructing a Property resource.
 
 <h4 class="pdoc-member-header" id="PropertyArgs-contacts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L271">property <b>contacts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L271">property <b>contacts</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1367,7 +1367,7 @@ The set of arguments for constructing a Property resource.
 </div>
 <pre class="highlight"><code><span class='kd'></span>contacts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyArgs-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L275">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L275">property <b>contract</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1376,7 +1376,7 @@ use &#34;contract_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'></span>contract?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyArgs-contractId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L279">property <b>contractId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L279">property <b>contractId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contractId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1384,7 +1384,7 @@ use &#34;contract_id&#34; attribute instead
 Contract ID to be assigned to the Property
 
 <h4 class="pdoc-member-header" id="PropertyArgs-cpCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L283">property <b>cpCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L283">property <b>cpCode</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1393,7 +1393,7 @@ Contract ID to be assigned to the Property
 </div>
 <pre class="highlight"><code><span class='kd'></span>cpCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyArgs-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L287">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L287">property <b>group</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1402,7 +1402,7 @@ use &#34;group_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L291">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L291">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1410,7 +1410,7 @@ use &#34;group_id&#34; attribute instead
 Group ID to be assigned to the Property
 
 <h4 class="pdoc-member-header" id="PropertyArgs-hostnames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L295">property <b>hostnames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L295">property <b>hostnames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostnames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1418,7 +1418,7 @@ Group ID to be assigned to the Property
 Mapping of edge hostname CNAMEs to other CNAMEs
 
 <h4 class="pdoc-member-header" id="PropertyArgs-isSecure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L299">property <b>isSecure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L299">property <b>isSecure</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1427,7 +1427,7 @@ Mapping of edge hostname CNAMEs to other CNAMEs
 </div>
 <pre class="highlight"><code><span class='kd'></span>isSecure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L303">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L303">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1435,7 +1435,7 @@ Mapping of edge hostname CNAMEs to other CNAMEs
 Name to give to the Property (must be unique)
 
 <h4 class="pdoc-member-header" id="PropertyArgs-origins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L307">property <b>origins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L307">property <b>origins</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1444,7 +1444,7 @@ Name to give to the Property (must be unique)
 </div>
 <pre class="highlight"><code><span class='kd'></span>origins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#PropertyOrigin'>PropertyOrigin</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyArgs-product">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L311">property <b>product</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L311">property <b>product</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1453,7 +1453,7 @@ use &#34;product_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'></span>product?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyArgs-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L315">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L315">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1461,7 +1461,7 @@ use &#34;product_id&#34; attribute instead
 Product ID to be assigned to the Property
 
 <h4 class="pdoc-member-header" id="PropertyArgs-ruleFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L319">property <b>ruleFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L319">property <b>ruleFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1469,7 +1469,7 @@ Product ID to be assigned to the Property
 Specify the rule format version (defaults to latest version available when created)
 
 <h4 class="pdoc-member-header" id="PropertyArgs-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L323">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L323">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1477,7 +1477,7 @@ Specify the rule format version (defaults to latest version available when creat
 Property Rules as JSON
 
 <h4 class="pdoc-member-header" id="PropertyArgs-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L327">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L327">property <b>variables</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1486,7 +1486,7 @@ Property Rules as JSON
 </div>
 <pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="PropertyState" data-link-title="PropertyState">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L187">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L187">
         interface <strong>PropertyState</strong>
     </a>
 </h3>
@@ -1496,7 +1496,7 @@ Property Rules as JSON
 Input properties used for looking up and filtering Property resources.
 
 <h4 class="pdoc-member-header" id="PropertyState-contacts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L191">property <b>contacts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L191">property <b>contacts</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1505,7 +1505,7 @@ Input properties used for looking up and filtering Property resources.
 </div>
 <pre class="highlight"><code><span class='kd'></span>contacts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyState-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L195">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L195">property <b>contract</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1514,7 +1514,7 @@ use &#34;contract_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'></span>contract?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyState-contractId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L199">property <b>contractId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L199">property <b>contractId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contractId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1522,7 +1522,7 @@ use &#34;contract_id&#34; attribute instead
 Contract ID to be assigned to the Property
 
 <h4 class="pdoc-member-header" id="PropertyState-cpCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L203">property <b>cpCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L203">property <b>cpCode</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1531,7 +1531,7 @@ Contract ID to be assigned to the Property
 </div>
 <pre class="highlight"><code><span class='kd'></span>cpCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyState-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L207">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L207">property <b>group</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1540,7 +1540,7 @@ use &#34;group_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyState-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L211">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L211">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1548,7 +1548,7 @@ use &#34;group_id&#34; attribute instead
 Group ID to be assigned to the Property
 
 <h4 class="pdoc-member-header" id="PropertyState-hostnames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L215">property <b>hostnames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L215">property <b>hostnames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostnames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1556,7 +1556,7 @@ Group ID to be assigned to the Property
 Mapping of edge hostname CNAMEs to other CNAMEs
 
 <h4 class="pdoc-member-header" id="PropertyState-isSecure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L219">property <b>isSecure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L219">property <b>isSecure</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1565,7 +1565,7 @@ Mapping of edge hostname CNAMEs to other CNAMEs
 </div>
 <pre class="highlight"><code><span class='kd'></span>isSecure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyState-latestVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L223">property <b>latestVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L223">property <b>latestVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>latestVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1573,7 +1573,7 @@ Mapping of edge hostname CNAMEs to other CNAMEs
 Property's current latest version number
 
 <h4 class="pdoc-member-header" id="PropertyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L227">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L227">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1581,7 +1581,7 @@ Property's current latest version number
 Name to give to the Property (must be unique)
 
 <h4 class="pdoc-member-header" id="PropertyState-origins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L231">property <b>origins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L231">property <b>origins</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1590,7 +1590,7 @@ Name to give to the Property (must be unique)
 </div>
 <pre class="highlight"><code><span class='kd'></span>origins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#PropertyOrigin'>PropertyOrigin</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyState-product">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L235">property <b>product</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L235">property <b>product</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1599,7 +1599,7 @@ use &#34;product_id&#34; attribute instead
 </div>
 <pre class="highlight"><code><span class='kd'></span>product?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyState-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L239">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L239">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1607,7 +1607,7 @@ use &#34;product_id&#34; attribute instead
 Product ID to be assigned to the Property
 
 <h4 class="pdoc-member-header" id="PropertyState-productionVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L243">property <b>productionVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L243">property <b>productionVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productionVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1615,12 +1615,12 @@ Product ID to be assigned to the Property
 Property's version currently activated in production (zero when not active in production)
 
 <h4 class="pdoc-member-header" id="PropertyState-ruleErrors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L244">property <b>ruleErrors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L244">property <b>ruleErrors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleErrors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#PropertyRuleError'>PropertyRuleError</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyState-ruleFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L248">property <b>ruleFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L248">property <b>ruleFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1628,12 +1628,12 @@ Property's version currently activated in production (zero when not active in pr
 Specify the rule format version (defaults to latest version available when created)
 
 <h4 class="pdoc-member-header" id="PropertyState-ruleWarnings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L249">property <b>ruleWarnings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L249">property <b>ruleWarnings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleWarnings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#PropertyRuleWarning'>PropertyRuleWarning</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PropertyState-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L253">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L253">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1641,7 +1641,7 @@ Specify the rule format version (defaults to latest version available when creat
 Property Rules as JSON
 
 <h4 class="pdoc-member-header" id="PropertyState-stagingVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L257">property <b>stagingVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L257">property <b>stagingVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stagingVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1649,7 +1649,7 @@ Property Rules as JSON
 Property's version currently activated in staging (zero when not active in staging)
 
 <h4 class="pdoc-member-header" id="PropertyState-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/property.ts#L261">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/property.ts#L261">property <b>variables</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1658,7 +1658,7 @@ Property's version currently activated in staging (zero when not active in stagi
 </div>
 <pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="PropertyVariablesArgs" data-link-title="PropertyVariablesArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyVariables.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyVariables.ts#L99">
         interface <strong>PropertyVariablesArgs</strong>
     </a>
 </h3>
@@ -1668,7 +1668,7 @@ Property's version currently activated in staging (zero when not active in stagi
 The set of arguments for constructing a PropertyVariables resource.
 
 <h4 class="pdoc-member-header" id="PropertyVariablesArgs-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyVariables.ts#L103">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyVariables.ts#L103">property <b>variables</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1677,7 +1677,7 @@ resource &#34;akamai_property_variables&#34; is no longer supported - See Akamai
 </div>
 <pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#PropertyVariablesVariable'>PropertyVariablesVariable</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="PropertyVariablesState" data-link-title="PropertyVariablesState">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyVariables.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyVariables.ts#L85">
         interface <strong>PropertyVariablesState</strong>
     </a>
 </h3>
@@ -1687,7 +1687,7 @@ resource &#34;akamai_property_variables&#34; is no longer supported - See Akamai
 Input properties used for looking up and filtering PropertyVariables resources.
 
 <h4 class="pdoc-member-header" id="PropertyVariablesState-json">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyVariables.ts#L89">property <b>json</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyVariables.ts#L89">property <b>json</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>json?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1695,7 +1695,7 @@ Input properties used for looking up and filtering PropertyVariables resources.
 JSON variables representation
 
 <h4 class="pdoc-member-header" id="PropertyVariablesState-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/properties/propertyVariables.ts#L93">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/properties/propertyVariables.ts#L93">property <b>variables</b></a>
 </h4>
 
 <div class="note note-deprecated">

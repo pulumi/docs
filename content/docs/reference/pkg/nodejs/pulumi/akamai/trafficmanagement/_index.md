@@ -3,7 +3,7 @@ title: "Module trafficmanagement"
 title_tag: "Module trafficmanagement | Package @pulumi/akamai | Node.js SDK"
 linktitle: "trafficmanagement"
 meta_desc: "Explore members of the trafficmanagement module in the @pulumi/akamai package."
-git_sha: "d905d77c417a09f1243fecb34ad59ca0aa7657e1"
+git_sha: "252a5b7ed507b5da220e685e0df70bd30bd9b156"
 block_external_search_index: true
 ---
 
@@ -54,7 +54,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="GtmASmap" data-link-title="GtmASmap">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L11">
         Resource <strong>GtmASmap</strong>
     </a>
 </h3>
@@ -65,7 +65,7 @@ akamai.trafficmanagement.GtmASmap has been deprecated in favor of akamai.GtmAsma
 </div>
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>GtmASmap</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="GtmASmap-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L44"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L44"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -80,7 +80,7 @@ akamai.trafficmanagement.GtmASmap has been deprecated in favor of akamai.GtmAsma
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> GtmASmap(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GtmASmapArgs'>GtmASmapArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="GtmASmap-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -91,14 +91,14 @@ Get an existing GtmASmap resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GtmASmap-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GtmASmap-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -109,22 +109,22 @@ Returns true if the given object is an instance of GtmASmap.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GtmASmap-assignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L40">property <b>assignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L40">property <b>assignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assignments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#GtmASmapAssignment'>GtmASmapAssignment</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmASmap-defaultDatacenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L41">property <b>defaultDatacenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L41">property <b>defaultDatacenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultDatacenter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#GtmASmapDefaultDatacenter'>GtmASmapDefaultDatacenter</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmASmap-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L42">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L42">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmASmap-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -133,12 +133,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GtmASmap-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L43">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L43">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmASmap-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -147,12 +147,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="GtmASmap-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L44">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L44">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>waitOnComplete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmCidrmap" data-link-title="GtmCidrmap">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L11">
         Resource <strong>GtmCidrmap</strong>
     </a>
 </h3>
@@ -163,7 +163,7 @@ akamai.trafficmanagement.GtmCidrmap has been deprecated in favor of akamai.GtmCi
 </div>
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>GtmCidrmap</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="GtmCidrmap-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L44"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L44"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -178,7 +178,7 @@ akamai.trafficmanagement.GtmCidrmap has been deprecated in favor of akamai.GtmCi
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> GtmCidrmap(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GtmCidrmapArgs'>GtmCidrmapArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="GtmCidrmap-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -189,14 +189,14 @@ Get an existing GtmCidrmap resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GtmCidrmap-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GtmCidrmap-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -207,22 +207,22 @@ Returns true if the given object is an instance of GtmCidrmap.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GtmCidrmap-assignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L40">property <b>assignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L40">property <b>assignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assignments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#GtmCidrmapAssignment'>GtmCidrmapAssignment</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmCidrmap-defaultDatacenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L41">property <b>defaultDatacenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L41">property <b>defaultDatacenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultDatacenter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#GtmCidrmapDefaultDatacenter'>GtmCidrmapDefaultDatacenter</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmCidrmap-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L42">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L42">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmCidrmap-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -231,12 +231,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GtmCidrmap-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L43">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L43">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmCidrmap-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -245,12 +245,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="GtmCidrmap-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L44">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L44">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>waitOnComplete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmDatacenter" data-link-title="GtmDatacenter">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L11">
         Resource <strong>GtmDatacenter</strong>
     </a>
 </h3>
@@ -261,7 +261,7 @@ akamai.trafficmanagement.GtmDatacenter has been deprecated in favor of akamai.Gt
 </div>
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>GtmDatacenter</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L60"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L60"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -276,7 +276,7 @@ akamai.trafficmanagement.GtmDatacenter has been deprecated in favor of akamai.Gt
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> GtmDatacenter(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GtmDatacenterArgs'>GtmDatacenterArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="GtmDatacenter-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -287,14 +287,14 @@ Get an existing GtmDatacenter resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GtmDatacenter-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GtmDatacenter-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -305,52 +305,52 @@ Returns true if the given object is an instance of GtmDatacenter.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GtmDatacenter-city">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L40">property <b>city</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L40">property <b>city</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>city: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-cloneOf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L41">property <b>cloneOf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L41">property <b>cloneOf</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cloneOf: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-cloudServerHostHeaderOverride">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L42">property <b>cloudServerHostHeaderOverride</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L42">property <b>cloudServerHostHeaderOverride</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cloudServerHostHeaderOverride: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-cloudServerTargeting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L43">property <b>cloudServerTargeting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L43">property <b>cloudServerTargeting</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cloudServerTargeting: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-continent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L44">property <b>continent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L44">property <b>continent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>continent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-country">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L45">property <b>country</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L45">property <b>country</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>country: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-datacenterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L46">property <b>datacenterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L46">property <b>datacenterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>datacenterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-defaultLoadObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L47">property <b>defaultLoadObject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L47">property <b>defaultLoadObject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultLoadObject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#GtmDatacenterDefaultLoadObject'>GtmDatacenterDefaultLoadObject</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L48">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L48">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -359,57 +359,57 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GtmDatacenter-latitude">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L49">property <b>latitude</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L49">property <b>latitude</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>latitude: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-longitude">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L50">property <b>longitude</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L50">property <b>longitude</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>longitude: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-nickname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L51">property <b>nickname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L51">property <b>nickname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nickname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-pingInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L52">property <b>pingInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L52">property <b>pingInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pingInterval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-pingPacketSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L53">property <b>pingPacketSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L53">property <b>pingPacketSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pingPacketSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-scorePenalty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L54">property <b>scorePenalty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L54">property <b>scorePenalty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scorePenalty: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-servermonitorLivenessCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L55">property <b>servermonitorLivenessCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L55">property <b>servermonitorLivenessCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servermonitorLivenessCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-servermonitorLoadCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L56">property <b>servermonitorLoadCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L56">property <b>servermonitorLoadCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servermonitorLoadCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-servermonitorPool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L57">property <b>servermonitorPool</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L57">property <b>servermonitorPool</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servermonitorPool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-stateOrProvince">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L58">property <b>stateOrProvince</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L58">property <b>stateOrProvince</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stateOrProvince: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -418,17 +418,17 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="GtmDatacenter-virtual">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L59">property <b>virtual</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L59">property <b>virtual</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>virtual: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenter-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L60">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L60">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>waitOnComplete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmDomain" data-link-title="GtmDomain">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L10">
         Resource <strong>GtmDomain</strong>
     </a>
 </h3>
@@ -439,7 +439,7 @@ akamai.trafficmanagement.GtmDomain has been deprecated in favor of akamai.GtmDom
 </div>
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>GtmDomain</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L72"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -454,7 +454,7 @@ akamai.trafficmanagement.GtmDomain has been deprecated in favor of akamai.GtmDom
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> GtmDomain(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GtmDomainArgs'>GtmDomainArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="GtmDomain-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -465,14 +465,14 @@ Get an existing GtmDomain resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GtmDomain-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L10">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L10">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GtmDomain-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -483,82 +483,82 @@ Returns true if the given object is an instance of GtmDomain.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GtmDomain-cnameCoalescingEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L39">property <b>cnameCoalescingEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L39">property <b>cnameCoalescingEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cnameCoalescingEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L40">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L40">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L41">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L41">property <b>contract</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contract: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-defaultErrorPenalty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L42">property <b>defaultErrorPenalty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L42">property <b>defaultErrorPenalty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultErrorPenalty: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-defaultHealthMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L43">property <b>defaultHealthMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L43">property <b>defaultHealthMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultHealthMax: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-defaultHealthMultiplier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L44">property <b>defaultHealthMultiplier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L44">property <b>defaultHealthMultiplier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultHealthMultiplier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-defaultHealthThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L45">property <b>defaultHealthThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L45">property <b>defaultHealthThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultHealthThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-defaultMaxUnreachablePenalty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L46">property <b>defaultMaxUnreachablePenalty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L46">property <b>defaultMaxUnreachablePenalty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultMaxUnreachablePenalty: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-defaultSslClientCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L47">property <b>defaultSslClientCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L47">property <b>defaultSslClientCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultSslClientCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-defaultSslClientPrivateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L48">property <b>defaultSslClientPrivateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L48">property <b>defaultSslClientPrivateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultSslClientPrivateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-defaultTimeoutPenalty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L49">property <b>defaultTimeoutPenalty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L49">property <b>defaultTimeoutPenalty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultTimeoutPenalty: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-defaultUnreachableThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L50">property <b>defaultUnreachableThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L50">property <b>defaultUnreachableThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultUnreachableThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-emailNotificationLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L51">property <b>emailNotificationLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L51">property <b>emailNotificationLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>emailNotificationLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-endUserMappingEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L52">property <b>endUserMappingEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L52">property <b>endUserMappingEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endUserMappingEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L53">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L53">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L10">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L10">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -567,97 +567,97 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GtmDomain-loadFeedback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L54">property <b>loadFeedback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L54">property <b>loadFeedback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loadFeedback: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-loadImbalancePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L55">property <b>loadImbalancePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L55">property <b>loadImbalancePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loadImbalancePercentage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-mapUpdateInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L56">property <b>mapUpdateInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L56">property <b>mapUpdateInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mapUpdateInterval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-maxProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L57">property <b>maxProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L57">property <b>maxProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-maxResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L58">property <b>maxResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L58">property <b>maxResources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxResources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-maxTestTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L59">property <b>maxTestTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L59">property <b>maxTestTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxTestTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L60">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L60">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-minPingableRegionFraction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L61">property <b>minPingableRegionFraction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L61">property <b>minPingableRegionFraction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minPingableRegionFraction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-minTestInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L62">property <b>minTestInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L62">property <b>minTestInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minTestInterval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-minTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L63">property <b>minTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L63">property <b>minTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L64">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-pingInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L65">property <b>pingInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L65">property <b>pingInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pingInterval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-pingPacketSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L66">property <b>pingPacketSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L66">property <b>pingPacketSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pingPacketSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-roundRobinPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L67">property <b>roundRobinPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L67">property <b>roundRobinPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roundRobinPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-servermonitorLivenessCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L68">property <b>servermonitorLivenessCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L68">property <b>servermonitorLivenessCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servermonitorLivenessCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-servermonitorLoadCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L69">property <b>servermonitorLoadCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L69">property <b>servermonitorLoadCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servermonitorLoadCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-servermonitorPool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L70">property <b>servermonitorPool</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L70">property <b>servermonitorPool</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servermonitorPool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L71">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L71">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomain-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L10">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L10">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -666,12 +666,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="GtmDomain-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L72">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L72">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>waitOnComplete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmGeomap" data-link-title="GtmGeomap">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L11">
         Resource <strong>GtmGeomap</strong>
     </a>
 </h3>
@@ -682,7 +682,7 @@ akamai.trafficmanagement.GtmGeomap has been deprecated in favor of akamai.GtmGeo
 </div>
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>GtmGeomap</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="GtmGeomap-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L44"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L44"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -697,7 +697,7 @@ akamai.trafficmanagement.GtmGeomap has been deprecated in favor of akamai.GtmGeo
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> GtmGeomap(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GtmGeomapArgs'>GtmGeomapArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="GtmGeomap-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -708,14 +708,14 @@ Get an existing GtmGeomap resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GtmGeomap-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GtmGeomap-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -726,22 +726,22 @@ Returns true if the given object is an instance of GtmGeomap.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GtmGeomap-assignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L40">property <b>assignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L40">property <b>assignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assignments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#GtmGeomapAssignment'>GtmGeomapAssignment</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmGeomap-defaultDatacenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L41">property <b>defaultDatacenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L41">property <b>defaultDatacenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultDatacenter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#GtmGeomapDefaultDatacenter'>GtmGeomapDefaultDatacenter</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmGeomap-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L42">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L42">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmGeomap-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -750,12 +750,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GtmGeomap-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L43">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L43">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmGeomap-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -764,12 +764,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="GtmGeomap-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L44">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L44">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>waitOnComplete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmProperty" data-link-title="GtmProperty">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L11">
         Resource <strong>GtmProperty</strong>
     </a>
 </h3>
@@ -780,7 +780,7 @@ akamai.trafficmanagement.GtmProperty has been deprecated in favor of akamai.GtmP
 </div>
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>GtmProperty</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L73"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -795,7 +795,7 @@ akamai.trafficmanagement.GtmProperty has been deprecated in favor of akamai.GtmP
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> GtmProperty(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GtmPropertyArgs'>GtmPropertyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="GtmProperty-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -806,14 +806,14 @@ Get an existing GtmProperty resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GtmProperty-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GtmProperty-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -824,82 +824,82 @@ Returns true if the given object is an instance of GtmProperty.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GtmProperty-backupCname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L40">property <b>backupCname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L40">property <b>backupCname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backupCname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-backupIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L41">property <b>backupIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L41">property <b>backupIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backupIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-balanceByDownloadScore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L42">property <b>balanceByDownloadScore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L42">property <b>balanceByDownloadScore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>balanceByDownloadScore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-cname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L43">property <b>cname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L43">property <b>cname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-comments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L44">property <b>comments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L44">property <b>comments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>comments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L45">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L45">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-dynamicTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L46">property <b>dynamicTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L46">property <b>dynamicTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dynamicTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-failbackDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L47">property <b>failbackDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L47">property <b>failbackDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>failbackDelay: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-failoverDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L48">property <b>failoverDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L48">property <b>failoverDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>failoverDelay: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-ghostDemandReporting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L49">property <b>ghostDemandReporting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L49">property <b>ghostDemandReporting</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ghostDemandReporting: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-handoutLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L50">property <b>handoutLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L50">property <b>handoutLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>handoutLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-handoutMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L51">property <b>handoutMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L51">property <b>handoutMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>handoutMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-healthMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L52">property <b>healthMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L52">property <b>healthMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthMax: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-healthMultiplier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L53">property <b>healthMultiplier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L53">property <b>healthMultiplier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthMultiplier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-healthThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L54">property <b>healthThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L54">property <b>healthThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -908,82 +908,82 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GtmProperty-ipv6">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L55">property <b>ipv6</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L55">property <b>ipv6</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipv6: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-livenessTests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L56">property <b>livenessTests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L56">property <b>livenessTests</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>livenessTests: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#GtmPropertyLivenessTest'>GtmPropertyLivenessTest</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-loadImbalancePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L57">property <b>loadImbalancePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L57">property <b>loadImbalancePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loadImbalancePercentage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-mapName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L58">property <b>mapName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L58">property <b>mapName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mapName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-maxUnreachablePenalty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L59">property <b>maxUnreachablePenalty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L59">property <b>maxUnreachablePenalty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxUnreachablePenalty: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-minLiveFraction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L60">property <b>minLiveFraction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L60">property <b>minLiveFraction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minLiveFraction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-scoreAggregationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L62">property <b>scoreAggregationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L62">property <b>scoreAggregationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scoreAggregationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-staticRrSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L63">property <b>staticRrSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L63">property <b>staticRrSets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>staticRrSets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#GtmPropertyStaticRrSet'>GtmPropertyStaticRrSet</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-staticTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L64">property <b>staticTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L64">property <b>staticTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>staticTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-stickinessBonusConstant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L65">property <b>stickinessBonusConstant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L65">property <b>stickinessBonusConstant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stickinessBonusConstant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-stickinessBonusPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L66">property <b>stickinessBonusPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L66">property <b>stickinessBonusPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stickinessBonusPercentage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-trafficTargets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L67">property <b>trafficTargets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L67">property <b>trafficTargets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>trafficTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#GtmPropertyTrafficTarget'>GtmPropertyTrafficTarget</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L68">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L68">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-unreachableThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L69">property <b>unreachableThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L69">property <b>unreachableThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>unreachableThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -992,27 +992,27 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="GtmProperty-useComputedTargets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L70">property <b>useComputedTargets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L70">property <b>useComputedTargets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>useComputedTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L71">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L71">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>waitOnComplete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-weightedHashBitsForIpv4">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L72">property <b>weightedHashBitsForIpv4</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L72">property <b>weightedHashBitsForIpv4</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>weightedHashBitsForIpv4: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmProperty-weightedHashBitsForIpv6">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L73">property <b>weightedHashBitsForIpv6</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L73">property <b>weightedHashBitsForIpv6</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>weightedHashBitsForIpv6: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmResource" data-link-title="GtmResource">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L11">
         Resource <strong>GtmResource</strong>
     </a>
 </h3>
@@ -1023,7 +1023,7 @@ akamai.trafficmanagement.GtmResource has been deprecated in favor of akamai.GtmR
 </div>
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>GtmResource</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="GtmResource-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L54"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1038,7 +1038,7 @@ akamai.trafficmanagement.GtmResource has been deprecated in favor of akamai.GtmR
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> GtmResource(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GtmResourceArgs'>GtmResourceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="GtmResource-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -1049,14 +1049,14 @@ Get an existing GtmResource resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GtmResource-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GtmResource-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1067,37 +1067,37 @@ Returns true if the given object is an instance of GtmResource.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GtmResource-aggregationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L40">property <b>aggregationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L40">property <b>aggregationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aggregationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResource-constrainedProperty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L41">property <b>constrainedProperty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L41">property <b>constrainedProperty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>constrainedProperty: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResource-decayRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L42">property <b>decayRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L42">property <b>decayRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>decayRate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResource-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L43">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L43">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResource-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L44">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L44">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResource-hostHeader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L45">property <b>hostHeader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L45">property <b>hostHeader</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostHeader: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResource-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1106,47 +1106,47 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GtmResource-leaderString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L46">property <b>leaderString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L46">property <b>leaderString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>leaderString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResource-leastSquaresDecay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L47">property <b>leastSquaresDecay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L47">property <b>leastSquaresDecay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>leastSquaresDecay: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResource-loadImbalancePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L48">property <b>loadImbalancePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L48">property <b>loadImbalancePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loadImbalancePercentage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResource-maxUMultiplicativeIncrement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L49">property <b>maxUMultiplicativeIncrement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L49">property <b>maxUMultiplicativeIncrement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxUMultiplicativeIncrement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResource-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L50">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L50">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResource-resourceInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L51">property <b>resourceInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L51">property <b>resourceInstances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceInstances: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/output/#GtmResourceResourceInstance'>GtmResourceResourceInstance</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResource-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L52">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L52">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResource-upperBound">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L53">property <b>upperBound</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L53">property <b>upperBound</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>upperBound: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResource-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1155,14 +1155,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="GtmResource-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L54">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L54">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>waitOnComplete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getGtmDefaultDatacenter" data-link-title="getGtmDefaultDatacenter">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L9">
         Function <strong>getGtmDefaultDatacenter</strong>
     </a>
 </h3>
@@ -1177,7 +1177,7 @@ akamai.trafficmanagement.getGtmDefaultDatacenter has been deprecated in favor of
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetGtmDefaultDatacenterArgs" data-link-title="GetGtmDefaultDatacenterArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L27">
         interface <strong>GetGtmDefaultDatacenterArgs</strong>
     </a>
 </h3>
@@ -1187,17 +1187,17 @@ akamai.trafficmanagement.getGtmDefaultDatacenter has been deprecated in favor of
 A collection of arguments for invoking getGtmDefaultDatacenter.
 
 <h4 class="pdoc-member-header" id="GetGtmDefaultDatacenterArgs-datacenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L28">property <b>datacenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L28">property <b>datacenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGtmDefaultDatacenterArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L29">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L29">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetGtmDefaultDatacenterResult" data-link-title="GetGtmDefaultDatacenterResult">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L35">
         interface <strong>GetGtmDefaultDatacenterResult</strong>
     </a>
 </h3>
@@ -1207,22 +1207,22 @@ A collection of arguments for invoking getGtmDefaultDatacenter.
 A collection of values returned by getGtmDefaultDatacenter.
 
 <h4 class="pdoc-member-header" id="GetGtmDefaultDatacenterResult-datacenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L36">property <b>datacenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L36">property <b>datacenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGtmDefaultDatacenterResult-datacenterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L37">property <b>datacenterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L37">property <b>datacenterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenterId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGtmDefaultDatacenterResult-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L38">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L38">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGtmDefaultDatacenterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1230,12 +1230,12 @@ A collection of values returned by getGtmDefaultDatacenter.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetGtmDefaultDatacenterResult-nickname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L43">property <b>nickname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/getGtmDefaultDatacenter.ts#L43">property <b>nickname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nickname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GtmASmapArgs" data-link-title="GtmASmapArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L105">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L105">
         interface <strong>GtmASmapArgs</strong>
     </a>
 </h3>
@@ -1245,32 +1245,32 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a GtmASmap resource.
 
 <h4 class="pdoc-member-header" id="GtmASmapArgs-assignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L106">property <b>assignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L106">property <b>assignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assignments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmASmapAssignment'>GtmASmapAssignment</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmASmapArgs-defaultDatacenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L107">property <b>defaultDatacenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L107">property <b>defaultDatacenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultDatacenter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmASmapDefaultDatacenter'>GtmASmapDefaultDatacenter</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmASmapArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L108">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L108">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmASmapArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L109">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L109">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmASmapArgs-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L110">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L110">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitOnComplete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmASmapState" data-link-title="GtmASmapState">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L94">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L94">
         interface <strong>GtmASmapState</strong>
     </a>
 </h3>
@@ -1280,32 +1280,32 @@ The set of arguments for constructing a GtmASmap resource.
 Input properties used for looking up and filtering GtmASmap resources.
 
 <h4 class="pdoc-member-header" id="GtmASmapState-assignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L95">property <b>assignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L95">property <b>assignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assignments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmASmapAssignment'>GtmASmapAssignment</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmASmapState-defaultDatacenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L96">property <b>defaultDatacenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L96">property <b>defaultDatacenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultDatacenter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmASmapDefaultDatacenter'>GtmASmapDefaultDatacenter</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmASmapState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L97">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L97">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmASmapState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L98">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L98">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmASmapState-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmASmap.ts#L99">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmASmap.ts#L99">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitOnComplete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmCidrmapArgs" data-link-title="GtmCidrmapArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L105">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L105">
         interface <strong>GtmCidrmapArgs</strong>
     </a>
 </h3>
@@ -1315,32 +1315,32 @@ Input properties used for looking up and filtering GtmASmap resources.
 The set of arguments for constructing a GtmCidrmap resource.
 
 <h4 class="pdoc-member-header" id="GtmCidrmapArgs-assignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L106">property <b>assignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L106">property <b>assignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assignments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmCidrmapAssignment'>GtmCidrmapAssignment</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmCidrmapArgs-defaultDatacenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L107">property <b>defaultDatacenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L107">property <b>defaultDatacenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultDatacenter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmCidrmapDefaultDatacenter'>GtmCidrmapDefaultDatacenter</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmCidrmapArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L108">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L108">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmCidrmapArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L109">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L109">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmCidrmapArgs-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L110">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L110">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitOnComplete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmCidrmapState" data-link-title="GtmCidrmapState">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L94">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L94">
         interface <strong>GtmCidrmapState</strong>
     </a>
 </h3>
@@ -1350,32 +1350,32 @@ The set of arguments for constructing a GtmCidrmap resource.
 Input properties used for looking up and filtering GtmCidrmap resources.
 
 <h4 class="pdoc-member-header" id="GtmCidrmapState-assignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L95">property <b>assignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L95">property <b>assignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assignments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmCidrmapAssignment'>GtmCidrmapAssignment</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmCidrmapState-defaultDatacenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L96">property <b>defaultDatacenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L96">property <b>defaultDatacenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultDatacenter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmCidrmapDefaultDatacenter'>GtmCidrmapDefaultDatacenter</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmCidrmapState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L97">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L97">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmCidrmapState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L98">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L98">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmCidrmapState-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L99">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmCidrmap.ts#L99">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitOnComplete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmDatacenterArgs" data-link-title="GtmDatacenterArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L166">
         interface <strong>GtmDatacenterArgs</strong>
     </a>
 </h3>
@@ -1385,72 +1385,72 @@ Input properties used for looking up and filtering GtmCidrmap resources.
 The set of arguments for constructing a GtmDatacenter resource.
 
 <h4 class="pdoc-member-header" id="GtmDatacenterArgs-city">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L167">property <b>city</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L167">property <b>city</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>city?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterArgs-cloneOf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L168">property <b>cloneOf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L168">property <b>cloneOf</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloneOf?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterArgs-cloudServerHostHeaderOverride">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L169">property <b>cloudServerHostHeaderOverride</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L169">property <b>cloudServerHostHeaderOverride</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudServerHostHeaderOverride?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterArgs-cloudServerTargeting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L170">property <b>cloudServerTargeting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L170">property <b>cloudServerTargeting</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudServerTargeting?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterArgs-continent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L171">property <b>continent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L171">property <b>continent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>continent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterArgs-country">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L172">property <b>country</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L172">property <b>country</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>country?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterArgs-defaultLoadObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L173">property <b>defaultLoadObject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L173">property <b>defaultLoadObject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLoadObject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmDatacenterDefaultLoadObject'>GtmDatacenterDefaultLoadObject</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L174">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L174">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterArgs-latitude">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L175">property <b>latitude</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L175">property <b>latitude</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>latitude?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterArgs-longitude">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L176">property <b>longitude</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L176">property <b>longitude</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>longitude?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterArgs-nickname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L177">property <b>nickname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L177">property <b>nickname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nickname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterArgs-stateOrProvince">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L178">property <b>stateOrProvince</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L178">property <b>stateOrProvince</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stateOrProvince?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterArgs-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L179">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L179">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitOnComplete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmDatacenterState" data-link-title="GtmDatacenterState">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L139">
         interface <strong>GtmDatacenterState</strong>
     </a>
 </h3>
@@ -1460,112 +1460,112 @@ The set of arguments for constructing a GtmDatacenter resource.
 Input properties used for looking up and filtering GtmDatacenter resources.
 
 <h4 class="pdoc-member-header" id="GtmDatacenterState-city">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L140">property <b>city</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L140">property <b>city</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>city?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-cloneOf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L141">property <b>cloneOf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L141">property <b>cloneOf</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloneOf?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-cloudServerHostHeaderOverride">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L142">property <b>cloudServerHostHeaderOverride</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L142">property <b>cloudServerHostHeaderOverride</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudServerHostHeaderOverride?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-cloudServerTargeting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L143">property <b>cloudServerTargeting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L143">property <b>cloudServerTargeting</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudServerTargeting?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-continent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L144">property <b>continent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L144">property <b>continent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>continent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-country">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L145">property <b>country</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L145">property <b>country</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>country?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-datacenterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L146">property <b>datacenterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L146">property <b>datacenterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-defaultLoadObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L147">property <b>defaultLoadObject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L147">property <b>defaultLoadObject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLoadObject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmDatacenterDefaultLoadObject'>GtmDatacenterDefaultLoadObject</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L148">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L148">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-latitude">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L149">property <b>latitude</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L149">property <b>latitude</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>latitude?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-longitude">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L150">property <b>longitude</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L150">property <b>longitude</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>longitude?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-nickname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L151">property <b>nickname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L151">property <b>nickname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nickname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-pingInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L152">property <b>pingInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L152">property <b>pingInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pingInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-pingPacketSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L153">property <b>pingPacketSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L153">property <b>pingPacketSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pingPacketSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-scorePenalty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L154">property <b>scorePenalty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L154">property <b>scorePenalty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scorePenalty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-servermonitorLivenessCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L155">property <b>servermonitorLivenessCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L155">property <b>servermonitorLivenessCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servermonitorLivenessCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-servermonitorLoadCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L156">property <b>servermonitorLoadCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L156">property <b>servermonitorLoadCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servermonitorLoadCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-servermonitorPool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L157">property <b>servermonitorPool</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L157">property <b>servermonitorPool</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servermonitorPool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-stateOrProvince">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L158">property <b>stateOrProvince</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L158">property <b>stateOrProvince</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stateOrProvince?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-virtual">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L159">property <b>virtual</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L159">property <b>virtual</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>virtual?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterState-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L160">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDatacenter.ts#L160">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitOnComplete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmDomainArgs" data-link-title="GtmDomainArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L217">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L217">
         interface <strong>GtmDomainArgs</strong>
     </a>
 </h3>
@@ -1575,82 +1575,82 @@ Input properties used for looking up and filtering GtmDatacenter resources.
 The set of arguments for constructing a GtmDomain resource.
 
 <h4 class="pdoc-member-header" id="GtmDomainArgs-cnameCoalescingEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L218">property <b>cnameCoalescingEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L218">property <b>cnameCoalescingEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cnameCoalescingEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainArgs-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L219">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L219">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainArgs-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L220">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L220">property <b>contract</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contract?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainArgs-defaultErrorPenalty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L221">property <b>defaultErrorPenalty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L221">property <b>defaultErrorPenalty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultErrorPenalty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainArgs-defaultSslClientCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L222">property <b>defaultSslClientCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L222">property <b>defaultSslClientCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultSslClientCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainArgs-defaultSslClientPrivateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L223">property <b>defaultSslClientPrivateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L223">property <b>defaultSslClientPrivateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultSslClientPrivateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainArgs-defaultTimeoutPenalty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L224">property <b>defaultTimeoutPenalty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L224">property <b>defaultTimeoutPenalty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultTimeoutPenalty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainArgs-emailNotificationLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L225">property <b>emailNotificationLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L225">property <b>emailNotificationLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailNotificationLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainArgs-endUserMappingEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L226">property <b>endUserMappingEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L226">property <b>endUserMappingEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endUserMappingEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainArgs-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L227">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L227">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainArgs-loadFeedback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L228">property <b>loadFeedback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L228">property <b>loadFeedback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadFeedback?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainArgs-loadImbalancePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L229">property <b>loadImbalancePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L229">property <b>loadImbalancePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadImbalancePercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L230">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L230">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L231">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L231">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainArgs-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L232">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L232">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitOnComplete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmDomainState" data-link-title="GtmDomainState">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L177">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L177">
         interface <strong>GtmDomainState</strong>
     </a>
 </h3>
@@ -1660,177 +1660,177 @@ The set of arguments for constructing a GtmDomain resource.
 Input properties used for looking up and filtering GtmDomain resources.
 
 <h4 class="pdoc-member-header" id="GtmDomainState-cnameCoalescingEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L178">property <b>cnameCoalescingEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L178">property <b>cnameCoalescingEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cnameCoalescingEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L179">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L179">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-contract">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L180">property <b>contract</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L180">property <b>contract</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contract?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-defaultErrorPenalty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L181">property <b>defaultErrorPenalty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L181">property <b>defaultErrorPenalty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultErrorPenalty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-defaultHealthMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L182">property <b>defaultHealthMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L182">property <b>defaultHealthMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultHealthMax?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-defaultHealthMultiplier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L183">property <b>defaultHealthMultiplier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L183">property <b>defaultHealthMultiplier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultHealthMultiplier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-defaultHealthThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L184">property <b>defaultHealthThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L184">property <b>defaultHealthThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultHealthThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-defaultMaxUnreachablePenalty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L185">property <b>defaultMaxUnreachablePenalty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L185">property <b>defaultMaxUnreachablePenalty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultMaxUnreachablePenalty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-defaultSslClientCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L186">property <b>defaultSslClientCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L186">property <b>defaultSslClientCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultSslClientCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-defaultSslClientPrivateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L187">property <b>defaultSslClientPrivateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L187">property <b>defaultSslClientPrivateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultSslClientPrivateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-defaultTimeoutPenalty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L188">property <b>defaultTimeoutPenalty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L188">property <b>defaultTimeoutPenalty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultTimeoutPenalty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-defaultUnreachableThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L189">property <b>defaultUnreachableThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L189">property <b>defaultUnreachableThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultUnreachableThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-emailNotificationLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L190">property <b>emailNotificationLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L190">property <b>emailNotificationLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailNotificationLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-endUserMappingEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L191">property <b>endUserMappingEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L191">property <b>endUserMappingEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endUserMappingEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L192">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L192">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-loadFeedback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L193">property <b>loadFeedback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L193">property <b>loadFeedback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadFeedback?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-loadImbalancePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L194">property <b>loadImbalancePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L194">property <b>loadImbalancePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadImbalancePercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-mapUpdateInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L195">property <b>mapUpdateInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L195">property <b>mapUpdateInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mapUpdateInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-maxProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L196">property <b>maxProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L196">property <b>maxProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-maxResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L197">property <b>maxResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L197">property <b>maxResources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxResources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-maxTestTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L198">property <b>maxTestTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L198">property <b>maxTestTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTestTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L199">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L199">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-minPingableRegionFraction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L200">property <b>minPingableRegionFraction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L200">property <b>minPingableRegionFraction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minPingableRegionFraction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-minTestInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L201">property <b>minTestInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L201">property <b>minTestInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minTestInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-minTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L202">property <b>minTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L202">property <b>minTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L203">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L203">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-pingInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L204">property <b>pingInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L204">property <b>pingInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pingInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-pingPacketSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L205">property <b>pingPacketSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L205">property <b>pingPacketSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pingPacketSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-roundRobinPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L206">property <b>roundRobinPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L206">property <b>roundRobinPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roundRobinPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-servermonitorLivenessCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L207">property <b>servermonitorLivenessCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L207">property <b>servermonitorLivenessCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servermonitorLivenessCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-servermonitorLoadCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L208">property <b>servermonitorLoadCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L208">property <b>servermonitorLoadCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servermonitorLoadCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-servermonitorPool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L209">property <b>servermonitorPool</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L209">property <b>servermonitorPool</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servermonitorPool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L210">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L210">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDomainState-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmDomain.ts#L211">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmDomain.ts#L211">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitOnComplete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmGeomapArgs" data-link-title="GtmGeomapArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L105">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L105">
         interface <strong>GtmGeomapArgs</strong>
     </a>
 </h3>
@@ -1840,32 +1840,32 @@ Input properties used for looking up and filtering GtmDomain resources.
 The set of arguments for constructing a GtmGeomap resource.
 
 <h4 class="pdoc-member-header" id="GtmGeomapArgs-assignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L106">property <b>assignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L106">property <b>assignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assignments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmGeomapAssignment'>GtmGeomapAssignment</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmGeomapArgs-defaultDatacenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L107">property <b>defaultDatacenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L107">property <b>defaultDatacenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultDatacenter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmGeomapDefaultDatacenter'>GtmGeomapDefaultDatacenter</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmGeomapArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L108">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L108">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmGeomapArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L109">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L109">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmGeomapArgs-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L110">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L110">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitOnComplete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmGeomapState" data-link-title="GtmGeomapState">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L94">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L94">
         interface <strong>GtmGeomapState</strong>
     </a>
 </h3>
@@ -1875,32 +1875,32 @@ The set of arguments for constructing a GtmGeomap resource.
 Input properties used for looking up and filtering GtmGeomap resources.
 
 <h4 class="pdoc-member-header" id="GtmGeomapState-assignments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L95">property <b>assignments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L95">property <b>assignments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assignments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmGeomapAssignment'>GtmGeomapAssignment</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmGeomapState-defaultDatacenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L96">property <b>defaultDatacenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L96">property <b>defaultDatacenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultDatacenter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmGeomapDefaultDatacenter'>GtmGeomapDefaultDatacenter</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmGeomapState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L97">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L97">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmGeomapState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L98">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L98">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmGeomapState-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L99">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmGeomap.ts#L99">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitOnComplete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmPropertyArgs" data-link-title="GtmPropertyArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L233">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L233">
         interface <strong>GtmPropertyArgs</strong>
     </a>
 </h3>
@@ -1910,167 +1910,167 @@ Input properties used for looking up and filtering GtmGeomap resources.
 The set of arguments for constructing a GtmProperty resource.
 
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-backupCname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L234">property <b>backupCname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L234">property <b>backupCname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupCname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-backupIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L235">property <b>backupIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L235">property <b>backupIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-balanceByDownloadScore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L236">property <b>balanceByDownloadScore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L236">property <b>balanceByDownloadScore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>balanceByDownloadScore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-cname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L237">property <b>cname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L237">property <b>cname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-comments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L238">property <b>comments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L238">property <b>comments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L239">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L239">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-dynamicTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L240">property <b>dynamicTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L240">property <b>dynamicTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dynamicTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-failbackDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L241">property <b>failbackDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L241">property <b>failbackDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>failbackDelay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-failoverDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L242">property <b>failoverDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L242">property <b>failoverDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>failoverDelay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-ghostDemandReporting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L243">property <b>ghostDemandReporting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L243">property <b>ghostDemandReporting</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ghostDemandReporting?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-handoutLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L244">property <b>handoutLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L244">property <b>handoutLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>handoutLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-handoutMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L245">property <b>handoutMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L245">property <b>handoutMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>handoutMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-healthMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L246">property <b>healthMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L246">property <b>healthMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthMax?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-healthMultiplier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L247">property <b>healthMultiplier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L247">property <b>healthMultiplier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthMultiplier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-healthThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L248">property <b>healthThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L248">property <b>healthThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-ipv6">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L249">property <b>ipv6</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L249">property <b>ipv6</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-livenessTests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L250">property <b>livenessTests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L250">property <b>livenessTests</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>livenessTests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmPropertyLivenessTest'>GtmPropertyLivenessTest</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-loadImbalancePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L251">property <b>loadImbalancePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L251">property <b>loadImbalancePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadImbalancePercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-mapName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L252">property <b>mapName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L252">property <b>mapName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mapName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-maxUnreachablePenalty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L253">property <b>maxUnreachablePenalty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L253">property <b>maxUnreachablePenalty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxUnreachablePenalty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-minLiveFraction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L254">property <b>minLiveFraction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L254">property <b>minLiveFraction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minLiveFraction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L255">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L255">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-scoreAggregationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L256">property <b>scoreAggregationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L256">property <b>scoreAggregationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scoreAggregationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-staticRrSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L257">property <b>staticRrSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L257">property <b>staticRrSets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>staticRrSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmPropertyStaticRrSet'>GtmPropertyStaticRrSet</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-staticTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L258">property <b>staticTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L258">property <b>staticTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>staticTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-stickinessBonusConstant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L259">property <b>stickinessBonusConstant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L259">property <b>stickinessBonusConstant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stickinessBonusConstant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-stickinessBonusPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L260">property <b>stickinessBonusPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L260">property <b>stickinessBonusPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stickinessBonusPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-trafficTargets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L261">property <b>trafficTargets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L261">property <b>trafficTargets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trafficTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmPropertyTrafficTarget'>GtmPropertyTrafficTarget</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L262">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L262">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-unreachableThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L263">property <b>unreachableThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L263">property <b>unreachableThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unreachableThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-useComputedTargets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L264">property <b>useComputedTargets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L264">property <b>useComputedTargets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useComputedTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyArgs-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L265">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L265">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitOnComplete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmPropertyState" data-link-title="GtmPropertyState">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L193">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L193">
         interface <strong>GtmPropertyState</strong>
     </a>
 </h3>
@@ -2080,177 +2080,177 @@ The set of arguments for constructing a GtmProperty resource.
 Input properties used for looking up and filtering GtmProperty resources.
 
 <h4 class="pdoc-member-header" id="GtmPropertyState-backupCname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L194">property <b>backupCname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L194">property <b>backupCname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupCname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-backupIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L195">property <b>backupIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L195">property <b>backupIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-balanceByDownloadScore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L196">property <b>balanceByDownloadScore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L196">property <b>balanceByDownloadScore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>balanceByDownloadScore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-cname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L197">property <b>cname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L197">property <b>cname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-comments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L198">property <b>comments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L198">property <b>comments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L199">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L199">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-dynamicTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L200">property <b>dynamicTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L200">property <b>dynamicTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dynamicTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-failbackDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L201">property <b>failbackDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L201">property <b>failbackDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>failbackDelay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-failoverDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L202">property <b>failoverDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L202">property <b>failoverDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>failoverDelay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-ghostDemandReporting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L203">property <b>ghostDemandReporting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L203">property <b>ghostDemandReporting</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ghostDemandReporting?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-handoutLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L204">property <b>handoutLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L204">property <b>handoutLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>handoutLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-handoutMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L205">property <b>handoutMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L205">property <b>handoutMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>handoutMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-healthMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L206">property <b>healthMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L206">property <b>healthMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthMax?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-healthMultiplier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L207">property <b>healthMultiplier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L207">property <b>healthMultiplier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthMultiplier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-healthThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L208">property <b>healthThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L208">property <b>healthThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-ipv6">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L209">property <b>ipv6</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L209">property <b>ipv6</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-livenessTests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L210">property <b>livenessTests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L210">property <b>livenessTests</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>livenessTests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmPropertyLivenessTest'>GtmPropertyLivenessTest</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-loadImbalancePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L211">property <b>loadImbalancePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L211">property <b>loadImbalancePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadImbalancePercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-mapName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L212">property <b>mapName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L212">property <b>mapName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mapName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-maxUnreachablePenalty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L213">property <b>maxUnreachablePenalty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L213">property <b>maxUnreachablePenalty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxUnreachablePenalty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-minLiveFraction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L214">property <b>minLiveFraction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L214">property <b>minLiveFraction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minLiveFraction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L215">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L215">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-scoreAggregationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L216">property <b>scoreAggregationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L216">property <b>scoreAggregationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scoreAggregationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-staticRrSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L217">property <b>staticRrSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L217">property <b>staticRrSets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>staticRrSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmPropertyStaticRrSet'>GtmPropertyStaticRrSet</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-staticTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L218">property <b>staticTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L218">property <b>staticTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>staticTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-stickinessBonusConstant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L219">property <b>stickinessBonusConstant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L219">property <b>stickinessBonusConstant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stickinessBonusConstant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-stickinessBonusPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L220">property <b>stickinessBonusPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L220">property <b>stickinessBonusPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stickinessBonusPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-trafficTargets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L221">property <b>trafficTargets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L221">property <b>trafficTargets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trafficTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmPropertyTrafficTarget'>GtmPropertyTrafficTarget</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L222">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L222">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-unreachableThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L223">property <b>unreachableThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L223">property <b>unreachableThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unreachableThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-useComputedTargets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L224">property <b>useComputedTargets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L224">property <b>useComputedTargets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useComputedTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L225">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L225">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitOnComplete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-weightedHashBitsForIpv4">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L226">property <b>weightedHashBitsForIpv4</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L226">property <b>weightedHashBitsForIpv4</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weightedHashBitsForIpv4?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyState-weightedHashBitsForIpv6">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmProperty.ts#L227">property <b>weightedHashBitsForIpv6</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmProperty.ts#L227">property <b>weightedHashBitsForIpv6</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weightedHashBitsForIpv6?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmResourceArgs" data-link-title="GtmResourceArgs">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L148">
         interface <strong>GtmResourceArgs</strong>
     </a>
 </h3>
@@ -2260,82 +2260,82 @@ Input properties used for looking up and filtering GtmProperty resources.
 The set of arguments for constructing a GtmResource resource.
 
 <h4 class="pdoc-member-header" id="GtmResourceArgs-aggregationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L149">property <b>aggregationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L149">property <b>aggregationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aggregationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceArgs-constrainedProperty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L150">property <b>constrainedProperty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L150">property <b>constrainedProperty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>constrainedProperty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceArgs-decayRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L151">property <b>decayRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L151">property <b>decayRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decayRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L152">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L152">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L153">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L153">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceArgs-hostHeader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L154">property <b>hostHeader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L154">property <b>hostHeader</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostHeader?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceArgs-leaderString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L155">property <b>leaderString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L155">property <b>leaderString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leaderString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceArgs-leastSquaresDecay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L156">property <b>leastSquaresDecay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L156">property <b>leastSquaresDecay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leastSquaresDecay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceArgs-loadImbalancePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L157">property <b>loadImbalancePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L157">property <b>loadImbalancePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadImbalancePercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceArgs-maxUMultiplicativeIncrement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L158">property <b>maxUMultiplicativeIncrement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L158">property <b>maxUMultiplicativeIncrement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxUMultiplicativeIncrement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L159">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L159">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceArgs-resourceInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L160">property <b>resourceInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L160">property <b>resourceInstances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceInstances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmResourceResourceInstance'>GtmResourceResourceInstance</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L161">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L161">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceArgs-upperBound">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L162">property <b>upperBound</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L162">property <b>upperBound</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>upperBound?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceArgs-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L163">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L163">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitOnComplete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmResourceState" data-link-title="GtmResourceState">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L127">
         interface <strong>GtmResourceState</strong>
     </a>
 </h3>
@@ -2345,77 +2345,77 @@ The set of arguments for constructing a GtmResource resource.
 Input properties used for looking up and filtering GtmResource resources.
 
 <h4 class="pdoc-member-header" id="GtmResourceState-aggregationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L128">property <b>aggregationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L128">property <b>aggregationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aggregationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceState-constrainedProperty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L129">property <b>constrainedProperty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L129">property <b>constrainedProperty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>constrainedProperty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceState-decayRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L130">property <b>decayRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L130">property <b>decayRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decayRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L131">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L131">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L132">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L132">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceState-hostHeader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L133">property <b>hostHeader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L133">property <b>hostHeader</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostHeader?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceState-leaderString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L134">property <b>leaderString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L134">property <b>leaderString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leaderString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceState-leastSquaresDecay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L135">property <b>leastSquaresDecay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L135">property <b>leastSquaresDecay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leastSquaresDecay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceState-loadImbalancePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L136">property <b>loadImbalancePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L136">property <b>loadImbalancePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadImbalancePercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceState-maxUMultiplicativeIncrement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L137">property <b>maxUMultiplicativeIncrement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L137">property <b>maxUMultiplicativeIncrement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxUMultiplicativeIncrement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L138">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceState-resourceInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L139">property <b>resourceInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L139">property <b>resourceInstances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceInstances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#GtmResourceResourceInstance'>GtmResourceResourceInstance</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L140">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L140">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceState-upperBound">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L141">property <b>upperBound</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L141">property <b>upperBound</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>upperBound?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceState-waitOnComplete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/trafficmanagement/gtmResource.ts#L142">property <b>waitOnComplete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/252a5b7ed507b5da220e685e0df70bd30bd9b156/sdk/nodejs/trafficmanagement/gtmResource.ts#L142">property <b>waitOnComplete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitOnComplete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>

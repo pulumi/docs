@@ -68,6 +68,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-akamai/sdk/go/akamai"
+	"github.com/pulumi/pulumi-akamai/sdk/go/akamai/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
