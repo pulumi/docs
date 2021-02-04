@@ -10,9 +10,9 @@ tags:
     - InfluxDB
 ---
 
-In this article, I’ll show how Pulumi can be used with Aiven’s services to create a service infrastructure that can be migrated from cloud to cloud with no downtime.
+In this article, I’ll show how Pulumi can be used with Aiven’s services to create infrastructure that can be migrated from cloud to cloud with no downtime.
 
-This tutorial will use Python, Pulumi, Grafana, and an AWS Lambda function to simulate recording temperature data in InfluxDB.
+This tutorial will use Python, Pulumi, Grafana, and an AWS Lambda function to simulate recording temperature data in an InfluxDB database.
 
 <!--more-->
 
@@ -20,11 +20,11 @@ This tutorial will use Python, Pulumi, Grafana, and an AWS Lambda function to si
 
 [Pulumi](https://www.pulumi.com/) enables you to create, deploy, and manage infrastructure on any cloud using your favorite languages. Aiven augments this language agnosticism by giving developers and operators the ability to be cloud-agnostic for a variety of popular databases such as MySQL, PostgreSQL, Cassandra, Redis, and more.
 
-[Aiven](https://aiven.io/) offers a range of fully-managed open-source cloud database services. Using Aiven, you can accelerate application development on the open source data infrastructure and quickly deploy to public clouds (including AWS, GCP, and Azure).
+[Aiven](https://aiven.io/) offers a range of fully-managed open-source cloud database services. By using Aiven, you can accelerate application development on the open source data infrastructure and quickly deploy to public clouds (including AWS, GCP, and Azure).
 
-[InfluxDB](https://github.com/influxdata/influxdb) is one of the most popular open source time-series databases for storing metrics and events. InfluxDB also has a number of client libraries in a [variety](https://docs.influxdata.com/influxdb/v1.8/tools/api_client_libraries/) of languages, including Python. Aiven makes this database available as a fully managed single-tenant service in a variety of resource sizes.
+[InfluxDB](https://github.com/influxdata/influxdb) is one of the most popular open source time-series databases for storing metrics and events. InfluxDB also has a number of client libraries in a [variety](https://docs.influxdata.com/influxdb/v1.8/tools/api_client_libraries/) of languages, including Python. Aiven makes this database available as a fully managed, single-tenant service in a variety of resource sizes.
 
-I want to demonstrate how to migrate your services using Pulumi from one cloud to another with absolutely zero downtime in this tutorial. Data keeps streaming in the entire time, which you can visualize in Grafana. This gives you an added security factor in fault situations and great flexibility in terms of migrating services for any reason.
+I want to demonstrate how to migrate your services using Pulumi from one cloud to another with absolutely zero downtime in this tutorial. Data keeps streaming in the entire time, which you can visualize in [Grafana](https://grafana.com). This gives you an added security factor in fault situations and great flexibility in terms of migrating services for any reason.
 
 ## Demo outline
 
@@ -94,7 +94,8 @@ Set your preferred cloud regions and Aiven project name (these defaults are used
 
 ```bash
 $ pulumi config set aws:region <desired AWS region> Example: us-west-2
-$ pulumi config set aiven_cloud_region <desired cloud - region>
+$ pulumi config set aiven_cloud_region <desired cloud - region> Example: google-us-central1
+$ pulumi config set aiven_project <Aiven project> Example: sa-demo
 ```
 
 Example: google-us-central1
@@ -110,7 +111,7 @@ $ pulumi config set aiven_project <Aiven project> Example: sa-demo
 
 ### Use Pulumi to create two services in Aiven
 
-Now that you’re all set up, it’s time to create the services in the Aiven environment by using Pulumi. Issue the following commands to run and test:
+Now that you’re all set up, it’s time to create the services in the Aiven environment by using Pulumi. Issue the following commands to deploy the stack:
 
 ```bash
 $ pulumi up
@@ -130,7 +131,7 @@ To see the new services, log into the [Aiven console](https://console.aiven.io/)
 
 ### AWS console
 
-In the AWS console, the lambda function has also been created and executed by EventBridge every 60 seconds.
+In the AWS console, the lambda function has also been created and will be executed by EventBridge every 60 seconds.
 
 ![AWS Console](./aws_console.png)
 
@@ -148,7 +149,7 @@ Click on the Explore panel and search for the outside_temp value written by the 
 
 Now that the services are running, it’s time to demonstrate the power of cloud services operating in multiple clouds: migrating to a different cloud without losing any incoming data and without any downtime. Let’s perform a zero-downtime migration between regions.
 
-Start by changing your Aiven cloud region to West. Then run the up command a second time.
+Start by changing your Aiven cloud region to a region in AWS (such as us-east-1). Then run the up command a second time.
 
 ```bash
 $ pulumi config set aiven_cloud_region aws-us-east-1
@@ -216,7 +217,7 @@ lambda_layer
 
 ### Aiven services
 
-All of the Pulumi specific code resides in __main__.py.Even though creating Aiven services in Pulumi is very straightforward, I have created a wrapper function named create_service to make this even easier.
+All of the Pulumi specific code resides in `__main__.py`. Even though creating Aiven services in Pulumi is very straightforward, I have created a wrapper function named create_service to make this even easier.
 
 ```python
 grafana = create_service("pulumi-grafana", "startup-4", "grafana")
