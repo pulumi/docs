@@ -23,6 +23,8 @@ In order to configure SCIM for your Okta organization, you may need to email sup
 
 Once the feature is enabled, navigate to the Pulumi SAML app configured in your Okta org from the **Classic UI**. Under the **General** tab, in the **App Settings** dialog box, locate the **Provisioning** section and select **SCIM**. Click **Save** to save your changes and close the **App Settings** dialog box.
 
+For more information on how to enable SCIM provisioning in Okta, see [How to Enable SCIM Provisioning in Custom App](https://support.okta.com/help/s/article/SCIM-Provisioning-Enabled-in-Custom-App) in the Okta documentation.
+
 ## Changing the SAML SSO Settings For SCIM
 
 As part of the setup process, you need to adjust some of the parameters sent by a SAML SSO request. To make the changes, navigate to the **SAML Settings** section, click **Edit**, and make the following changes:
