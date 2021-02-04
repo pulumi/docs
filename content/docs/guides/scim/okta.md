@@ -99,7 +99,7 @@ Now that the SCIM connector knows how to connect to Pulumi, you need to adjust t
 
 The Pulumi console supports the provisioning of teams within your organization using SCIM. This is done by mapping the groups you have created using SCIM to create teams within your organization in the Pulumi console. Setting this up allows you to manage your teams' memberships solely in Okta.
 
-To set this up, you need to enable Push Groups as a supported provisioning action under the **Provisioning** settings and then specify which groups you would like to push. To do that, performing the following steps:
+To set this up, you need to enable Push Groups as a supported provisioning action under the **Provisioning** settings and then specify which groups you would like to push. To do that, perform the following steps:
 
 1. Navigate to the application that you created above by clicking the on the **Applications** tab and then selecting the application.
 
