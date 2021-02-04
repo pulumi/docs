@@ -3,7 +3,7 @@ title: "Module types/output"
 title_tag: "Module types/output | Package @pulumi/cloudinit | Node.js SDK"
 linktitle: "output"
 meta_desc: "Explore members of the output module in the @pulumi/cloudinit package."
-git_sha: "3ae1816033ee520774010ee5e25f9c4a9ddab82c"
+git_sha: "c004d5d134559d4b8daa58c7ac19c71764c3347b"
 block_external_search_index: true
 ---
 
@@ -28,41 +28,41 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="ConfigPart" data-link-title="ConfigPart">
-    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/types/output.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/c004d5d134559d4b8daa58c7ac19c71764c3347b/sdk/nodejs/types/output.ts#L7">
         interface <strong>ConfigPart</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ConfigPart</span></code></pre>
 <h4 class="pdoc-member-header" id="ConfigPart-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/types/output.ts#L8">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/c004d5d134559d4b8daa58c7ac19c71764c3347b/sdk/nodejs/types/output.ts#L8">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigPart-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/types/output.ts#L9">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/c004d5d134559d4b8daa58c7ac19c71764c3347b/sdk/nodejs/types/output.ts#L9">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigPart-filename">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/types/output.ts#L10">property <b>filename</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/c004d5d134559d4b8daa58c7ac19c71764c3347b/sdk/nodejs/types/output.ts#L10">property <b>filename</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filename?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigPart-mergeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/types/output.ts#L11">property <b>mergeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/c004d5d134559d4b8daa58c7ac19c71764c3347b/sdk/nodejs/types/output.ts#L11">property <b>mergeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mergeType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetConfigPart" data-link-title="GetConfigPart">
-    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/types/output.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/c004d5d134559d4b8daa58c7ac19c71764c3347b/sdk/nodejs/types/output.ts#L14">
         interface <strong>GetConfigPart</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetConfigPart</span></code></pre>
 <h4 class="pdoc-member-header" id="GetConfigPart-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/types/output.ts#L18">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/c004d5d134559d4b8daa58c7ac19c71764c3347b/sdk/nodejs/types/output.ts#L18">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -70,7 +70,7 @@ block_external_search_index: true
 Body content for the part.
 
 <h4 class="pdoc-member-header" id="GetConfigPart-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/types/output.ts#L22">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/c004d5d134559d4b8daa58c7ac19c71764c3347b/sdk/nodejs/types/output.ts#L22">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -78,7 +78,7 @@ Body content for the part.
 A MIME-style content type to report in the header for the part.
 
 <h4 class="pdoc-member-header" id="GetConfigPart-filename">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/types/output.ts#L26">property <b>filename</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/c004d5d134559d4b8daa58c7ac19c71764c3347b/sdk/nodejs/types/output.ts#L26">property <b>filename</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filename?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -86,7 +86,7 @@ A MIME-style content type to report in the header for the part.
 A filename to report in the header for the part.
 
 <h4 class="pdoc-member-header" id="GetConfigPart-mergeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/types/output.ts#L31">property <b>mergeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/c004d5d134559d4b8daa58c7ac19c71764c3347b/sdk/nodejs/types/output.ts#L31">property <b>mergeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mergeType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

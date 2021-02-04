@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/cloudinit | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/cloudinit package."
-git_sha: "3ae1816033ee520774010ee5e25f9c4a9ddab82c"
+git_sha: "c004d5d134559d4b8daa58c7ac19c71764c3347b"
 block_external_search_index: true
 ---
 
