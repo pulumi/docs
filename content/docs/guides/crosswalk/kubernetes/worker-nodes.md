@@ -437,11 +437,19 @@ const ngStandard = new eks.NodeGroup(`${projectName}-ng-standard`, {
          providers: { kubernetes: cluster.provider},
 });
 
-// Create a 2xlarge node group of t3.2xlarge workers with taints for special workloads.
+// Create a 2xlarge node group of t3.2xlarge workers with labels for special workloads.
 const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
         cluster: cluster,
         amiId: "ami-0ca5998dc2c88e64b", // k8s v1.14.7 in us-west-2
         instanceType: "t3.2xlarge",
+        // Below are the labels your nodes will have that you can use a `nodeSelector`
+        // to target.
+        labels: { "workload": "special" },
+        // The Auto Scaling Group must also be labelled for the cluster autoscaler to
+        // work properly.
+        autoScalingGroupTags: {
+          "k8s.io/cluster-autoscaler/node-template/label/workload": "special"
+        },
         cloudFormationTags: clusterName.apply(clusterName => ({
             "CloudFormationGroupTag": "true",
             "k8s.io/cluster-autoscaler/enabled": "true",
