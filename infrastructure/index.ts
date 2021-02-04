@@ -5,6 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 
 import { getLambdaFunctionAssociations } from "./cloudfrontLambdaAssociations";
+import { getEdgeRedirectAssociations } from "./edgeRedirectLambdaAssociations";
 
 const stackConfig = new pulumi.Config();
 
@@ -98,7 +99,10 @@ const oneHour = fiveMinutes * 12;
 const oneWeek = oneHour * 24 * 7;
 const oneYear = oneWeek * 52;
 
-const lambdaFunctionAssociations = getLambdaFunctionAssociations(config.addSecurityHeaders);
+const lambdaFunctionAssociations = [
+    ...getLambdaFunctionAssociations(config.addSecurityHeaders),
+    ...getEdgeRedirectAssociations(),
+];
 
 const baseCacheBehavior = {
     targetOriginId: originBucket.arn,

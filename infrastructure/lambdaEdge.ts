@@ -2,6 +2,7 @@
 
 import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
+import { createComputedPropertyName } from "typescript";
 
 export interface LambdaEdgeArgs {
     func: aws.lambda.Callback<any, any>;
@@ -11,17 +12,20 @@ export interface LambdaEdgeArgs {
 export class LambdaEdge extends pulumi.ComponentResource {
     private args: LambdaEdgeArgs;
 
+    private name: string;
     private role: aws.iam.Role;
     private lambdaEdgeFunc: aws.lambda.CallbackFunction<any, any>;
 
     constructor(name: string, args: LambdaEdgeArgs, opts: pulumi.ComponentResourceOptions) {
-        super("www-pulumi:infrastructure:LambdaEdge", name, undefined, opts);
+        super("www-pulumi:infrastructure:LambdaEdge", name, undefined, {
+            ...opts,
+            // Edge functions must be defined in us-east-1.
+            provider: new aws.Provider(`${name}-lambdaEdgeProvider`, {
+                region: aws.Region.USEast1,
+            }),
+        });
 
-        const defaultRegion = aws.config.region;
-        if (defaultRegion !== aws.Region.USEast1 && !opts.providers && !opts.provider) {
-            throw new Error("Lambda@Edge must be deployed in us-east-1. You must pass a custom provider option.");
-        }
-
+        this.name = name;
         this.args = args;
 
         this.createIam();
@@ -34,64 +38,80 @@ export class LambdaEdge extends pulumi.ComponentResource {
     }
 
     private createIam() {
-        this.role = new aws.iam.Role("lambdaEdgeRole", {
-            assumeRolePolicy: {
-                Statement: [{
-                    Effect: "Allow",
-                    Action: "sts:AssumeRole",
-                    Principal: {
-                        Service: [
-                            "lambda.amazonaws.com",
-                            "edgelambda.amazonaws.com",
-                        ],
-                    },
-                }],
-                Version: "2012-10-17",
+        this.role = new aws.iam.Role(`${this.name}-lambdaEdgeRole`,
+            {
+                assumeRolePolicy: {
+                    Statement: [{
+                        Effect: "Allow",
+                        Action: "sts:AssumeRole",
+                        Principal: {
+                            Service: [
+                                "lambda.amazonaws.com",
+                                "edgelambda.amazonaws.com",
+                            ],
+                        },
+                    }],
+                    Version: "2012-10-17",
+                },
             },
-        // tslint:disable-next-line:align
-        }, { parent: this });
+            {
+                parent: this,
+            },
+        );
 
-        const rolePolicy = new aws.iam.RolePolicy("lambdaCloudWatchPolicy", {
-            role: this.role,
-            policy: {
-                Version: "2012-10-17",
-                Statement: [
-                    {
-                    Action: [
-                        "logs:CreateLogStream",
-                        "logs:PutLogEvents",
-                        "logs:CreateLogGroup",
+        const rolePolicy = new aws.iam.RolePolicy(`${this.name}-lambdaCloudWatchPolicy`,
+            {
+                role: this.role,
+                policy: {
+                    Version: "2012-10-17",
+                    Statement: [
+                        {
+                        Action: [
+                            "logs:CreateLogStream",
+                            "logs:PutLogEvents",
+                            "logs:CreateLogGroup",
+                        ],
+                        Effect: "Allow",
+                        Resource: "*",
+                        },
                     ],
-                    Effect: "Allow",
-                    Resource: "*",
-                    },
-                ],
+                },
             },
-        // tslint:disable-next-line:align
-        }, { parent: this });
+            {
+                parent: this,
+            },
+        );
     }
 
     private createLambdaFunction() {
-        this.lambdaEdgeFunc = new aws.lambda.CallbackFunction("lambdaEdge", {
-            callback: this.args.func,
-            description: this.args.funcDescription,
-            // Minimum is 128MB.
-            memorySize: 128,
-            publish: true,
-            role: this.role,
-            runtime: "nodejs12.x",
-            // Note that Lambda@Edge functions have a different max timeout of 30 seconds
-            // than the regular Lambda functions.
-            timeout: 5,
-        // tslint:disable-next-line:align
-        }, { parent: this });
+        this.lambdaEdgeFunc = new aws.lambda.CallbackFunction(`${this.name}-lambdaEdge`,
+            {
+                callback: this.args.func,
+                description: this.args.funcDescription,
+                // Minimum is 128MB.
+                memorySize: 128,
+                publish: true,
+                role: this.role,
+                runtime: "nodejs12.x",
+                // Note that Lambda@Edge functions have a different max timeout of 30 seconds
+                // than the regular Lambda functions.
+                timeout: 5,
+            },
+            {
+                parent: this,
+            },
+        );
 
         // Grant permissions on the above Lambda function to the Lambda@Edge service.
-        const perm = new aws.lambda.Permission("getFuncPermission", {
-            action: "lambda:GetFunction",
-            principal: "edgelambda.amazonaws.com",
-            function: this.lambdaEdgeFunc,
-        // tslint:disable-next-line:align
-        }, { parent: this });
+        const perm = new aws.lambda.Permission(`${this.name}-getFuncPermission`,
+            {
+                action: "lambda:GetFunction",
+                principal: "edgelambda.amazonaws.com",
+                function: this.lambdaEdgeFunc,
+            },
+            {
+                parent: this,
+            },
+        );
     }
 }

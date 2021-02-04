@@ -2,7 +2,7 @@
 
 import * as aws from "@pulumi/aws";
 import { LambdaEdge } from "./lambdaEdge";
-import {CloudFrontResponse, CloudFrontResponseEvent} from "aws-lambda";
+import { CloudFrontResponse, CloudFrontResponseEvent } from "aws-lambda";
 
 /**
  * Returns the lambda function associations for the cloudfront distribution.
@@ -10,11 +10,11 @@ import {CloudFrontResponse, CloudFrontResponseEvent} from "aws-lambda";
  * origin responses and adds the lambda to the list of associated triggers.
  */
 export function getLambdaFunctionAssociations(addSecurityHeaders: boolean):
-    aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation[] | undefined {
+    aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation[] {
     if (!addSecurityHeaders) {
         // We only need to setup one lambda function right now, so if that's not requested
         // simply return.
-        return;
+        return [];
     }
 
     const provider = new aws.Provider("usEast1", {
@@ -31,7 +31,7 @@ export function getLambdaFunctionAssociations(addSecurityHeaders: boolean):
         lambdaArn: lambdaEdge.getLambdaEdgeArn(),
         // Origin response is a type of trigger that runs the function only when CF
         // contacts the origin for a file. Thus reducing the number of times the func
-        // is actually reduced.
+        // is actually invoked.
         //
         // See the following link for all trigger events supported by CF:
         // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-cloudfront-trigger-events.html
