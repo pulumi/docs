@@ -1,5 +1,5 @@
 ---
-title: "Use Amazon Elastic Kubernetes Service (EKS) in any Pulumi language"
+title: "Use Amazon Elastic Kubernetes Service (EKS) in any language supported by Pulumi"
 date: 2021-02-04
 draft: false
 meta_desc: The pulumi-eks package is now available in all Pulumi languages&#58; Python, Go, .NET, and TypeScript.
@@ -26,8 +26,8 @@ EKS package]. Check out our Modern Infrastructure Wednesday video to see it in a
 
 <!--more-->
 
-EKS in all languages is made possible by our ongoing work to enable "multi-language components". With multi-language components,
-a developer can author a Pulumi component in their preferred language and then publish it for all Pulumi languages—without needing
+EKS in all languages is made possible by our [ongoing work] to enable "multi-language components". With multi-language components,
+a developer will be able to author a Pulumi component in their preferred language and then publish it for all Pulumi languages—without needing
 detailed knowledge of the other Pulumi languages.
 
 EKS in all languages is just the start of this story. Multi-language components will enable all organizations to choose
@@ -38,6 +38,11 @@ author a component in the language they're most comfortable with and share it wi
 
 The next step in the story is a seamless authoring experience that enables component creators to write, build, and publish components
 without detailed knowledge of the various Pulumi languages. We're excited for you to try it soon - check back here for updates!
+
+### Next steps
+
+- Get started with the new pulumi-eks package  https://www.pulumi.com/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/
+- Subscribe to the [multi-language components issue] for updates on the public preview
 
 <!-- markdownlint-disable url -->
 [EKS package]: {{< relref "/docs/reference/pkg/eks" >}}
