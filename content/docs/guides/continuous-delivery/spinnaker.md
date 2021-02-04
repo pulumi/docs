@@ -237,10 +237,10 @@ Yes. Make sure that your custom image satisfies the following requirements:
 * If your container image is in a private registry, your Spinnaker cluster must have the proper credentials to pull
   from the registry.
 
-The following links may be helpful in building your own custom image based on Pulumi's own images:
+The following links may be helpful in building your own custom image:
 
-* https://github.com/pulumi/pulumi/tree/master/docker
-* https://hub.docker.com/u/pulumi
+* [Pulumi container images](https://github.com/pulumi/pulumi/tree/master/docker)
+* [Pulumi on Docker Hub](https://hub.docker.com/u/pulumi)
 
 ## Next Steps
 
