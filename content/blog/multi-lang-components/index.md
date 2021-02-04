@@ -1,5 +1,5 @@
 ---
-title: "Use Amazon EKS in all languages supported by Pulumi"
+title: "Create Amazon EKS clusters in your favorite language"
 date: 2021-02-04
 draft: false
 meta_desc: The pulumi-eks package is now available in all Pulumi languages&#58; Python, Go, .NET, and TypeScript.
