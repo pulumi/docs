@@ -3,7 +3,7 @@ title: "Module admissionregistration"
 title_tag: "Module admissionregistration | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "admissionregistration"
 meta_desc: "Explore members of the admissionregistration module in the @pulumi/kubernetes package."
-git_sha: "fe4bf57fb2aa9c06f0b85119ee05f2ccabfc4b0f"
+git_sha: "6dd27d181834e28cff7e1c18fa59900dfe963532"
 block_external_search_index: true
 ---
 

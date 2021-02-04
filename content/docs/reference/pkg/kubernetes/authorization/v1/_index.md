@@ -24,7 +24,7 @@ Explore the resources and functions of the authorization/v1 module in the Kubern
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.7.8</dd>
+	<dd>2.8.0</dd>
 </dl>
 
 
