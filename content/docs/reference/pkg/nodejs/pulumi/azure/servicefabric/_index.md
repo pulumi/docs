@@ -3,7 +3,7 @@ title: "Module servicefabric"
 title_tag: "Module servicefabric | Package @pulumi/azure | Node.js SDK"
 linktitle: "servicefabric"
 meta_desc: "Explore members of the servicefabric module in the @pulumi/azure package."
-git_sha: "ddb23e43788a327f80b21bf9dceb8eafe16876eb"
+git_sha: "9cb63907202e7b738279a1e51fb2090fbc75fa2c"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L44">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -85,7 +85,7 @@ Service Fabric Clusters can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L151"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L155"> <b>constructor</b></a>
 </h4>
 
 
@@ -99,7 +99,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -110,14 +110,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -128,7 +128,7 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-addOnFeatures">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L75">property <b>addOnFeatures</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L75">property <b>addOnFeatures</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addOnFeatures: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -136,7 +136,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A List of one or more features which should be enabled, such as `DnsService`.
 
 <h4 class="pdoc-member-header" id="Cluster-azureActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L79">property <b>azureActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L79">property <b>azureActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azureActiveDirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterAzureActiveDirectory'>ClusterAzureActiveDirectory</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ A List of one or more features which should be enabled, such as `DnsService`.
 An `azureActiveDirectory` block as defined below.
 
 <h4 class="pdoc-member-header" id="Cluster-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L83">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L83">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterCertificate'>ClusterCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ An `azureActiveDirectory` block as defined below.
 A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 
 <h4 class="pdoc-member-header" id="Cluster-certificateCommonNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L87">property <b>certificateCommonNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L87">property <b>certificateCommonNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateCommonNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterCertificateCommonNames'>ClusterCertificateCommonNames</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 
 <h4 class="pdoc-member-header" id="Cluster-clientCertificateCommonNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L91">property <b>clientCertificateCommonNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L91">property <b>clientCertificateCommonNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientCertificateCommonNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterClientCertificateCommonName'>ClusterClientCertificateCommonName</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -168,7 +168,7 @@ A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 A `clientCertificateCommonName` block as defined below.
 
 <h4 class="pdoc-member-header" id="Cluster-clientCertificateThumbprints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L95">property <b>clientCertificateThumbprints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L95">property <b>clientCertificateThumbprints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientCertificateThumbprints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterClientCertificateThumbprint'>ClusterClientCertificateThumbprint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -176,7 +176,7 @@ A `clientCertificateCommonName` block as defined below.
 One or more `clientCertificateThumbprint` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterCodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L99">property <b>clusterCodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L99">property <b>clusterCodeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterCodeVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -184,7 +184,7 @@ One or more `clientCertificateThumbprint` blocks as defined below.
 Required if Upgrade Mode set to `Manual`, Specifies the Version of the Cluster Code of the cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L103">property <b>clusterEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L103">property <b>clusterEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -192,7 +192,7 @@ Required if Upgrade Mode set to `Manual`, Specifies the Version of the Cluster C
 The Cluster Endpoint for this Service Fabric Cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-diagnosticsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L107">property <b>diagnosticsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L107">property <b>diagnosticsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diagnosticsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterDiagnosticsConfig'>ClusterDiagnosticsConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -200,7 +200,7 @@ The Cluster Endpoint for this Service Fabric Cluster.
 A `diagnosticsConfig` block as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cluster-fabricSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L111">property <b>fabricSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L111">property <b>fabricSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fabricSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterFabricSetting'>ClusterFabricSetting</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -208,7 +208,7 @@ A `diagnosticsConfig` block as defined below. Changing this forces a new resourc
 One or more `fabricSettings` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -217,7 +217,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L115">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L115">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -225,7 +225,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the Azure Region where the Service Fabric Cluster should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cluster-managementEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L119">property <b>managementEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L119">property <b>managementEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>managementEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -233,7 +233,7 @@ Specifies the Azure Region where the Service Fabric Cluster should exist. Changi
 Specifies the Management Endpoint of the cluster such as `http://example.com`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cluster-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L123">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L123">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -241,7 +241,7 @@ Specifies the Management Endpoint of the cluster such as `http://example.com`. C
 The name of the Service Fabric Cluster. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cluster-nodeTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L127">property <b>nodeTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L127">property <b>nodeTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterNodeType'>ClusterNodeType</a>[]&gt;;</code></pre>
@@ -249,7 +249,7 @@ The name of the Service Fabric Cluster. Changing this forces a new resource to b
 One or more `nodeType` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="Cluster-reliabilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L131">property <b>reliabilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L131">property <b>reliabilityLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>reliabilityLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -257,7 +257,7 @@ One or more `nodeType` blocks as defined below.
 Specifies the Reliability Level of the Cluster. Possible values include `None`, `Bronze`, `Silver`, `Gold` and `Platinum`.
 
 <h4 class="pdoc-member-header" id="Cluster-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L135">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L135">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -265,15 +265,23 @@ Specifies the Reliability Level of the Cluster. Possible values include `None`, 
 The name of the Resource Group in which the Service Fabric Cluster exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cluster-reverseProxyCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L139">property <b>reverseProxyCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L139">property <b>reverseProxyCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>reverseProxyCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterReverseProxyCertificate'>ClusterReverseProxyCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-A `reverseProxyCertificate` block as defined below.
+A `reverseProxyCertificate` block as defined below. Conflicts with `reverseProxyCertificateCommonNames`.
+
+<h4 class="pdoc-member-header" id="Cluster-reverseProxyCertificateCommonNames">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L143">property <b>reverseProxyCertificateCommonNames</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>reverseProxyCertificateCommonNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterReverseProxyCertificateCommonNames'>ClusterReverseProxyCertificateCommonNames</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+A `reverseProxyCertificateCommonNames` block as defined below. Conflicts with `reverseProxyCertificate`.
 
 <h4 class="pdoc-member-header" id="Cluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L143">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L147">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -281,7 +289,7 @@ A `reverseProxyCertificate` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Cluster-upgradeMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L147">property <b>upgradeMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L151">property <b>upgradeMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>upgradeMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -289,7 +297,7 @@ A mapping of tags to assign to the resource.
 Specifies the Upgrade Mode of the cluster. Possible values are `Automatic` or `Manual`.
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -298,7 +306,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Cluster-vmImage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L151">property <b>vmImage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L155">property <b>vmImage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vmImage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -306,41 +314,12 @@ deployments.
 Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="MeshApplication" data-link-title="MeshApplication">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L17">
         Resource <strong>MeshApplication</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>MeshApplication</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
-
-Manages a Service Fabric Mesh Application.
-
-#### Example Usage
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const exampleMeshApplication = new azure.servicefabric.MeshApplication("exampleMeshApplication", {
-    resourceGroupName: exampleResourceGroup.name,
-    location: exampleResourceGroup.location,
-    services: [{
-        name: "testservice1",
-        osType: "Linux",
-        codePackages: [{
-            name: "testcodepackage1",
-            imageName: "seabreeze/sbz-helloworld:1.0-alpine",
-            resources: {
-                requests: {
-                    memory: 1,
-                    cpu: 1,
-                },
-            },
-        }],
-    }],
-});
-```
 
 #### Import
 
@@ -351,7 +330,7 @@ Service Fabric Mesh Application can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="MeshApplication-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L93"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L64"> <b>constructor</b></a>
 </h4>
 
 
@@ -365,7 +344,7 @@ Create a MeshApplication resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MeshApplication-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L27">method <b>get</b></a>
 </h4>
 
 
@@ -376,14 +355,14 @@ Get an existing MeshApplication resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MeshApplication-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MeshApplication-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L38">method <b>isInstance</b></a>
 </h4>
 
 
@@ -394,7 +373,7 @@ Returns true if the given object is an instance of MeshApplication.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MeshApplication-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -403,7 +382,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MeshApplication-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L77">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L48">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -411,7 +390,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the Azure Region where the Service Fabric Mesh Application should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshApplication-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L52">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -419,7 +398,7 @@ Specifies the Azure Region where the Service Fabric Mesh Application should exis
 The name of the Service Fabric Mesh Application. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshApplication-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L85">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L56">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -427,7 +406,7 @@ The name of the Service Fabric Mesh Application. Changing this forces a new reso
 The name of the Resource Group in which the Service Fabric Mesh Application exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshApplication-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L89">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L60">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>services: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MeshApplicationService'>MeshApplicationService</a>[]&gt;;</code></pre>
@@ -435,7 +414,7 @@ The name of the Resource Group in which the Service Fabric Mesh Application exis
 Any number of `service` block as defined below.
 
 <h4 class="pdoc-member-header" id="MeshApplication-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L93">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L64">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -443,7 +422,7 @@ Any number of `service` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="MeshApplication-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -452,28 +431,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="MeshLocalNetwork" data-link-title="MeshLocalNetwork">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L16">
         Resource <strong>MeshLocalNetwork</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>MeshLocalNetwork</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
-
-Manages a Service Fabric Mesh Local Network.
-
-#### Example Usage
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const exampleMeshLocalNetwork = new azure.servicefabric.MeshLocalNetwork("exampleMeshLocalNetwork", {
-    resourceGroupName: exampleResourceGroup.name,
-    location: exampleResourceGroup.location,
-    networkAddressPrefix: "10.0.0.0/22",
-});
-```
 
 #### Import
 
@@ -484,7 +447,7 @@ Service Fabric Mesh Local Network can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="MeshLocalNetwork-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L67"> <b>constructor</b></a>
 </h4>
 
 
@@ -498,7 +461,7 @@ Create a MeshLocalNetwork resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetwork-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -509,14 +472,14 @@ Get an existing MeshLocalNetwork resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetwork-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MeshLocalNetwork-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -527,7 +490,7 @@ Returns true if the given object is an instance of MeshLocalNetwork.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetwork-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L63">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L47">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -535,7 +498,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A description of this Service Fabric Mesh Local Network.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetwork-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -544,7 +507,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetwork-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L67">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L51">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -552,7 +515,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the Azure Region where the Service Fabric Mesh Local Network should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetwork-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L55">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -560,7 +523,7 @@ Specifies the Azure Region where the Service Fabric Mesh Local Network should ex
 The name of the Service Fabric Mesh Local Network. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetwork-networkAddressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L75">property <b>networkAddressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L59">property <b>networkAddressPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkAddressPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -568,7 +531,7 @@ The name of the Service Fabric Mesh Local Network. Changing this forces a new re
 The address space for the local container network.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetwork-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L79">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L63">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -576,7 +539,7 @@ The address space for the local container network.
 The name of the Resource Group in which the Service Fabric Mesh Local Network exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetwork-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L83">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L67">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -584,7 +547,7 @@ The name of the Resource Group in which the Service Fabric Mesh Local Network ex
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetwork-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -593,27 +556,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="MeshSecret" data-link-title="MeshSecret">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L16">
         Resource <strong>MeshSecret</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>MeshSecret</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
-
-Manages a Service Fabric Mesh Secret.
-
-#### Example Usage
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const exampleMeshSecret = new azure.servicefabric.MeshSecret("exampleMeshSecret", {
-    resourceGroupName: exampleResourceGroup.name,
-    location: exampleResourceGroup.location,
-});
-```
 
 #### Import
 
@@ -624,7 +572,7 @@ Service Fabric Mesh Secret can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="MeshSecret-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L67"> <b>constructor</b></a>
 </h4>
 
 
@@ -638,7 +586,7 @@ Create a MeshSecret resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MeshSecret-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -649,14 +597,14 @@ Get an existing MeshSecret resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MeshSecret-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MeshSecret-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -667,7 +615,7 @@ Returns true if the given object is an instance of MeshSecret.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MeshSecret-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L62">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L47">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -675,7 +623,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The type of the content stored in the secret value. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecret-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L66">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L51">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -683,7 +631,7 @@ The type of the content stored in the secret value. Changing this forces a new r
 A description of this Service Fabric Mesh Secret.
 
 <h4 class="pdoc-member-header" id="MeshSecret-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -692,7 +640,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MeshSecret-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L70">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L55">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -700,7 +648,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the Azure Region where the Service Fabric Mesh Secret should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecret-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L59">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -708,7 +656,7 @@ Specifies the Azure Region where the Service Fabric Mesh Secret should exist. Ch
 The name of the Service Fabric Mesh Secret. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecret-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L78">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L63">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -716,7 +664,7 @@ The name of the Service Fabric Mesh Secret. Changing this forces a new resource 
 The name of the Resource Group in which the Service Fabric Mesh Secret exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecret-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L82">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L67">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -724,7 +672,7 @@ The name of the Resource Group in which the Service Fabric Mesh Secret exists. C
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="MeshSecret-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -733,32 +681,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="MeshSecretValue" data-link-title="MeshSecretValue">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L16">
         Resource <strong>MeshSecretValue</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>MeshSecretValue</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
-
-Manages a Service Fabric Mesh Secret Value.
-
-#### Example Usage
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const exampleMeshSecret = new azure.servicefabric.MeshSecret("exampleMeshSecret", {
-    resourceGroupName: exampleResourceGroup.name,
-    location: exampleResourceGroup.location,
-});
-const exampleMeshSecretValue = new azure.servicefabric.MeshSecretValue("exampleMeshSecretValue", {
-    serviceFabricMeshSecretId: azurerm_service_fabric_mesh_secret_inline.test.id,
-    location: azurerm_resource_group.test.location,
-    value: "testValue",
-});
-```
 
 #### Import
 
@@ -769,7 +697,7 @@ Service Fabric Mesh Secret Value can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="MeshSecretValue-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L63"> <b>constructor</b></a>
 </h4>
 
 
@@ -783,7 +711,7 @@ Create a MeshSecretValue resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MeshSecretValue-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -794,14 +722,14 @@ Get an existing MeshSecretValue resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MeshSecretValue-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MeshSecretValue-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -812,7 +740,7 @@ Returns true if the given object is an instance of MeshSecretValue.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MeshSecretValue-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -821,7 +749,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MeshSecretValue-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L67">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L47">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -829,7 +757,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the Azure Region where the Service Fabric Mesh Secret Value should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecretValue-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L51">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -837,7 +765,7 @@ Specifies the Azure Region where the Service Fabric Mesh Secret Value should exi
 The name of the Service Fabric Mesh Secret Value. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecretValue-serviceFabricMeshSecretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L75">property <b>serviceFabricMeshSecretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L55">property <b>serviceFabricMeshSecretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceFabricMeshSecretId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -845,7 +773,7 @@ The name of the Service Fabric Mesh Secret Value. Changing this forces a new res
 The id of the Service Fabric Mesh Secret in which the value will be applied to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecretValue-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L79">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L59">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -853,7 +781,7 @@ The id of the Service Fabric Mesh Secret in which the value will be applied to. 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="MeshSecretValue-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -862,7 +790,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="MeshSecretValue-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L83">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L63">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -873,7 +801,7 @@ Specifies the value that will be applied to the Service Fabric Mesh Secret. Chan
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L326">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L336">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -883,7 +811,7 @@ Specifies the value that will be applied to the Service Fabric Mesh Secret. Chan
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-addOnFeatures">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L330">property <b>addOnFeatures</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L340">property <b>addOnFeatures</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addOnFeatures?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -891,7 +819,7 @@ The set of arguments for constructing a Cluster resource.
 A List of one or more features which should be enabled, such as `DnsService`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-azureActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L334">property <b>azureActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L344">property <b>azureActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterAzureActiveDirectory'>ClusterAzureActiveDirectory</a>&gt;;</code></pre>
@@ -899,7 +827,7 @@ A List of one or more features which should be enabled, such as `DnsService`.
 An `azureActiveDirectory` block as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L338">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L348">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificate'>ClusterCertificate</a>&gt;;</code></pre>
@@ -907,7 +835,7 @@ An `azureActiveDirectory` block as defined below.
 A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-certificateCommonNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L342">property <b>certificateCommonNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L352">property <b>certificateCommonNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateCommonNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificateCommonNames'>ClusterCertificateCommonNames</a>&gt;;</code></pre>
@@ -915,7 +843,7 @@ A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clientCertificateCommonNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L346">property <b>clientCertificateCommonNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L356">property <b>clientCertificateCommonNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCertificateCommonNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterClientCertificateCommonName'>ClusterClientCertificateCommonName</a>&gt;[]&gt;;</code></pre>
@@ -923,7 +851,7 @@ A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 A `clientCertificateCommonName` block as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clientCertificateThumbprints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L350">property <b>clientCertificateThumbprints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L360">property <b>clientCertificateThumbprints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCertificateThumbprints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterClientCertificateThumbprint'>ClusterClientCertificateThumbprint</a>&gt;[]&gt;;</code></pre>
@@ -931,7 +859,7 @@ A `clientCertificateCommonName` block as defined below.
 One or more `clientCertificateThumbprint` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterCodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L354">property <b>clusterCodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L364">property <b>clusterCodeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterCodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -939,7 +867,7 @@ One or more `clientCertificateThumbprint` blocks as defined below.
 Required if Upgrade Mode set to `Manual`, Specifies the Version of the Cluster Code of the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-diagnosticsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L358">property <b>diagnosticsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L368">property <b>diagnosticsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diagnosticsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterDiagnosticsConfig'>ClusterDiagnosticsConfig</a>&gt;;</code></pre>
@@ -947,7 +875,7 @@ Required if Upgrade Mode set to `Manual`, Specifies the Version of the Cluster C
 A `diagnosticsConfig` block as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-fabricSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L362">property <b>fabricSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L372">property <b>fabricSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fabricSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterFabricSetting'>ClusterFabricSetting</a>&gt;[]&gt;;</code></pre>
@@ -955,7 +883,7 @@ A `diagnosticsConfig` block as defined below. Changing this forces a new resourc
 One or more `fabricSettings` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L366">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L376">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -963,7 +891,7 @@ One or more `fabricSettings` blocks as defined below.
 Specifies the Azure Region where the Service Fabric Cluster should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-managementEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L370">property <b>managementEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L380">property <b>managementEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managementEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -971,7 +899,7 @@ Specifies the Azure Region where the Service Fabric Cluster should exist. Changi
 Specifies the Management Endpoint of the cluster such as `http://example.com`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L374">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L384">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -979,7 +907,7 @@ Specifies the Management Endpoint of the cluster such as `http://example.com`. C
 The name of the Service Fabric Cluster. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-nodeTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L378">property <b>nodeTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L388">property <b>nodeTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterNodeType'>ClusterNodeType</a>&gt;[]&gt;;</code></pre>
@@ -987,7 +915,7 @@ The name of the Service Fabric Cluster. Changing this forces a new resource to b
 One or more `nodeType` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-reliabilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L382">property <b>reliabilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L392">property <b>reliabilityLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reliabilityLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -995,7 +923,7 @@ One or more `nodeType` blocks as defined below.
 Specifies the Reliability Level of the Cluster. Possible values include `None`, `Bronze`, `Silver`, `Gold` and `Platinum`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L386">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L396">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1003,15 +931,23 @@ Specifies the Reliability Level of the Cluster. Possible values include `None`, 
 The name of the Resource Group in which the Service Fabric Cluster exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-reverseProxyCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L390">property <b>reverseProxyCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L400">property <b>reverseProxyCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reverseProxyCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterReverseProxyCertificate'>ClusterReverseProxyCertificate</a>&gt;;</code></pre>
 
-A `reverseProxyCertificate` block as defined below.
+A `reverseProxyCertificate` block as defined below. Conflicts with `reverseProxyCertificateCommonNames`.
+
+<h4 class="pdoc-member-header" id="ClusterArgs-reverseProxyCertificateCommonNames">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L404">property <b>reverseProxyCertificateCommonNames</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>reverseProxyCertificateCommonNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterReverseProxyCertificateCommonNames'>ClusterReverseProxyCertificateCommonNames</a>&gt;;</code></pre>
+
+A `reverseProxyCertificateCommonNames` block as defined below. Conflicts with `reverseProxyCertificate`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L394">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L408">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1019,7 +955,7 @@ A `reverseProxyCertificate` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-upgradeMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L398">property <b>upgradeMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L412">property <b>upgradeMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>upgradeMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1027,7 +963,7 @@ A mapping of tags to assign to the resource.
 Specifies the Upgrade Mode of the cluster. Possible values are `Automatic` or `Manual`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-vmImage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L402">property <b>vmImage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L416">property <b>vmImage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vmImage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1035,7 +971,7 @@ Specifies the Upgrade Mode of the cluster. Possible values are `Automatic` or `M
 Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L240">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L246">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -1045,7 +981,7 @@ Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. 
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-addOnFeatures">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L244">property <b>addOnFeatures</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L250">property <b>addOnFeatures</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addOnFeatures?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1053,7 +989,7 @@ Input properties used for looking up and filtering Cluster resources.
 A List of one or more features which should be enabled, such as `DnsService`.
 
 <h4 class="pdoc-member-header" id="ClusterState-azureActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L248">property <b>azureActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L254">property <b>azureActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterAzureActiveDirectory'>ClusterAzureActiveDirectory</a>&gt;;</code></pre>
@@ -1061,7 +997,7 @@ A List of one or more features which should be enabled, such as `DnsService`.
 An `azureActiveDirectory` block as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L252">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L258">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificate'>ClusterCertificate</a>&gt;;</code></pre>
@@ -1069,7 +1005,7 @@ An `azureActiveDirectory` block as defined below.
 A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 
 <h4 class="pdoc-member-header" id="ClusterState-certificateCommonNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L256">property <b>certificateCommonNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L262">property <b>certificateCommonNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateCommonNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificateCommonNames'>ClusterCertificateCommonNames</a>&gt;;</code></pre>
@@ -1077,7 +1013,7 @@ A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 
 <h4 class="pdoc-member-header" id="ClusterState-clientCertificateCommonNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L260">property <b>clientCertificateCommonNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L266">property <b>clientCertificateCommonNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCertificateCommonNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterClientCertificateCommonName'>ClusterClientCertificateCommonName</a>&gt;[]&gt;;</code></pre>
@@ -1085,7 +1021,7 @@ A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 A `clientCertificateCommonName` block as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterState-clientCertificateThumbprints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L264">property <b>clientCertificateThumbprints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L270">property <b>clientCertificateThumbprints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCertificateThumbprints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterClientCertificateThumbprint'>ClusterClientCertificateThumbprint</a>&gt;[]&gt;;</code></pre>
@@ -1093,7 +1029,7 @@ A `clientCertificateCommonName` block as defined below.
 One or more `clientCertificateThumbprint` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterCodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L268">property <b>clusterCodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L274">property <b>clusterCodeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterCodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1101,7 +1037,7 @@ One or more `clientCertificateThumbprint` blocks as defined below.
 Required if Upgrade Mode set to `Manual`, Specifies the Version of the Cluster Code of the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L272">property <b>clusterEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L278">property <b>clusterEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1109,7 +1045,7 @@ Required if Upgrade Mode set to `Manual`, Specifies the Version of the Cluster C
 The Cluster Endpoint for this Service Fabric Cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-diagnosticsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L276">property <b>diagnosticsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L282">property <b>diagnosticsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diagnosticsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterDiagnosticsConfig'>ClusterDiagnosticsConfig</a>&gt;;</code></pre>
@@ -1117,7 +1053,7 @@ The Cluster Endpoint for this Service Fabric Cluster.
 A `diagnosticsConfig` block as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterState-fabricSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L280">property <b>fabricSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L286">property <b>fabricSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fabricSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterFabricSetting'>ClusterFabricSetting</a>&gt;[]&gt;;</code></pre>
@@ -1125,7 +1061,7 @@ A `diagnosticsConfig` block as defined below. Changing this forces a new resourc
 One or more `fabricSettings` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L284">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L290">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1133,7 +1069,7 @@ One or more `fabricSettings` blocks as defined below.
 Specifies the Azure Region where the Service Fabric Cluster should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterState-managementEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L288">property <b>managementEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L294">property <b>managementEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managementEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1141,7 +1077,7 @@ Specifies the Azure Region where the Service Fabric Cluster should exist. Changi
 Specifies the Management Endpoint of the cluster such as `http://example.com`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L292">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L298">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1149,7 +1085,7 @@ Specifies the Management Endpoint of the cluster such as `http://example.com`. C
 The name of the Service Fabric Cluster. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterState-nodeTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L296">property <b>nodeTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L302">property <b>nodeTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterNodeType'>ClusterNodeType</a>&gt;[]&gt;;</code></pre>
@@ -1157,7 +1093,7 @@ The name of the Service Fabric Cluster. Changing this forces a new resource to b
 One or more `nodeType` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterState-reliabilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L300">property <b>reliabilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L306">property <b>reliabilityLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reliabilityLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1165,7 +1101,7 @@ One or more `nodeType` blocks as defined below.
 Specifies the Reliability Level of the Cluster. Possible values include `None`, `Bronze`, `Silver`, `Gold` and `Platinum`.
 
 <h4 class="pdoc-member-header" id="ClusterState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L304">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L310">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1173,15 +1109,23 @@ Specifies the Reliability Level of the Cluster. Possible values include `None`, 
 The name of the Resource Group in which the Service Fabric Cluster exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterState-reverseProxyCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L308">property <b>reverseProxyCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L314">property <b>reverseProxyCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reverseProxyCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterReverseProxyCertificate'>ClusterReverseProxyCertificate</a>&gt;;</code></pre>
 
-A `reverseProxyCertificate` block as defined below.
+A `reverseProxyCertificate` block as defined below. Conflicts with `reverseProxyCertificateCommonNames`.
+
+<h4 class="pdoc-member-header" id="ClusterState-reverseProxyCertificateCommonNames">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L318">property <b>reverseProxyCertificateCommonNames</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>reverseProxyCertificateCommonNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterReverseProxyCertificateCommonNames'>ClusterReverseProxyCertificateCommonNames</a>&gt;;</code></pre>
+
+A `reverseProxyCertificateCommonNames` block as defined below. Conflicts with `reverseProxyCertificate`.
 
 <h4 class="pdoc-member-header" id="ClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L312">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L322">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1189,7 +1133,7 @@ A `reverseProxyCertificate` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ClusterState-upgradeMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L316">property <b>upgradeMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L326">property <b>upgradeMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>upgradeMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1197,7 +1141,7 @@ A mapping of tags to assign to the resource.
 Specifies the Upgrade Mode of the cluster. Possible values are `Automatic` or `Manual`.
 
 <h4 class="pdoc-member-header" id="ClusterState-vmImage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/cluster.ts#L320">property <b>vmImage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/cluster.ts#L330">property <b>vmImage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vmImage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1205,7 +1149,7 @@ Specifies the Upgrade Mode of the cluster. Possible values are `Automatic` or `M
 Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="MeshApplicationArgs" data-link-title="MeshApplicationArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L137">
         interface <strong>MeshApplicationArgs</strong>
     </a>
 </h3>
@@ -1215,7 +1159,7 @@ Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. 
 The set of arguments for constructing a MeshApplication resource.
 
 <h4 class="pdoc-member-header" id="MeshApplicationArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L170">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L141">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1223,7 +1167,7 @@ The set of arguments for constructing a MeshApplication resource.
 Specifies the Azure Region where the Service Fabric Mesh Application should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshApplicationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L174">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L145">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1231,7 +1175,7 @@ Specifies the Azure Region where the Service Fabric Mesh Application should exis
 The name of the Service Fabric Mesh Application. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshApplicationArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L178">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L149">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1239,7 +1183,7 @@ The name of the Service Fabric Mesh Application. Changing this forces a new reso
 The name of the Resource Group in which the Service Fabric Mesh Application exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshApplicationArgs-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L182">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L153">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>services: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MeshApplicationService'>MeshApplicationService</a>&gt;[]&gt;;</code></pre>
@@ -1247,7 +1191,7 @@ The name of the Resource Group in which the Service Fabric Mesh Application exis
 Any number of `service` block as defined below.
 
 <h4 class="pdoc-member-header" id="MeshApplicationArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L186">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L157">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1255,7 +1199,7 @@ Any number of `service` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="MeshApplicationState" data-link-title="MeshApplicationState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L111">
         interface <strong>MeshApplicationState</strong>
     </a>
 </h3>
@@ -1265,7 +1209,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering MeshApplication resources.
 
 <h4 class="pdoc-member-header" id="MeshApplicationState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L144">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L115">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1273,7 +1217,7 @@ Input properties used for looking up and filtering MeshApplication resources.
 Specifies the Azure Region where the Service Fabric Mesh Application should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshApplicationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L148">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L119">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1281,7 +1225,7 @@ Specifies the Azure Region where the Service Fabric Mesh Application should exis
 The name of the Service Fabric Mesh Application. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshApplicationState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L152">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L123">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1289,7 +1233,7 @@ The name of the Service Fabric Mesh Application. Changing this forces a new reso
 The name of the Resource Group in which the Service Fabric Mesh Application exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshApplicationState-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L156">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L127">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>services?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MeshApplicationService'>MeshApplicationService</a>&gt;[]&gt;;</code></pre>
@@ -1297,7 +1241,7 @@ The name of the Resource Group in which the Service Fabric Mesh Application exis
 Any number of `service` block as defined below.
 
 <h4 class="pdoc-member-header" id="MeshApplicationState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshApplication.ts#L160">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshApplication.ts#L131">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1305,7 +1249,7 @@ Any number of `service` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="MeshLocalNetworkArgs" data-link-title="MeshLocalNetworkArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L146">
         interface <strong>MeshLocalNetworkArgs</strong>
     </a>
 </h3>
@@ -1315,7 +1259,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a MeshLocalNetwork resource.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetworkArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L166">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L150">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1323,7 +1267,7 @@ The set of arguments for constructing a MeshLocalNetwork resource.
 A description of this Service Fabric Mesh Local Network.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetworkArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L170">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L154">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1331,7 +1275,7 @@ A description of this Service Fabric Mesh Local Network.
 Specifies the Azure Region where the Service Fabric Mesh Local Network should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetworkArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L174">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L158">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1339,7 +1283,7 @@ Specifies the Azure Region where the Service Fabric Mesh Local Network should ex
 The name of the Service Fabric Mesh Local Network. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetworkArgs-networkAddressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L178">property <b>networkAddressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L162">property <b>networkAddressPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkAddressPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1347,7 +1291,7 @@ The name of the Service Fabric Mesh Local Network. Changing this forces a new re
 The address space for the local container network.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetworkArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L182">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L166">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1355,7 +1299,7 @@ The address space for the local container network.
 The name of the Resource Group in which the Service Fabric Mesh Local Network exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetworkArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L186">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L170">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1363,7 +1307,7 @@ The name of the Resource Group in which the Service Fabric Mesh Local Network ex
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="MeshLocalNetworkState" data-link-title="MeshLocalNetworkState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L116">
         interface <strong>MeshLocalNetworkState</strong>
     </a>
 </h3>
@@ -1373,7 +1317,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering MeshLocalNetwork resources.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetworkState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L136">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L120">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1381,7 +1325,7 @@ Input properties used for looking up and filtering MeshLocalNetwork resources.
 A description of this Service Fabric Mesh Local Network.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetworkState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L140">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L124">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1389,7 +1333,7 @@ A description of this Service Fabric Mesh Local Network.
 Specifies the Azure Region where the Service Fabric Mesh Local Network should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetworkState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L128">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1397,7 +1341,7 @@ Specifies the Azure Region where the Service Fabric Mesh Local Network should ex
 The name of the Service Fabric Mesh Local Network. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetworkState-networkAddressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L148">property <b>networkAddressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L132">property <b>networkAddressPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkAddressPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1405,7 +1349,7 @@ The name of the Service Fabric Mesh Local Network. Changing this forces a new re
 The address space for the local container network.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetworkState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L152">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L136">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1413,7 +1357,7 @@ The address space for the local container network.
 The name of the Resource Group in which the Service Fabric Mesh Local Network exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshLocalNetworkState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L156">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshLocalNetwork.ts#L140">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1421,7 +1365,7 @@ The name of the Resource Group in which the Service Fabric Mesh Local Network ex
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="MeshSecretArgs" data-link-title="MeshSecretArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L143">
         interface <strong>MeshSecretArgs</strong>
     </a>
 </h3>
@@ -1431,7 +1375,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a MeshSecret resource.
 
 <h4 class="pdoc-member-header" id="MeshSecretArgs-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L162">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L147">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1439,7 +1383,7 @@ The set of arguments for constructing a MeshSecret resource.
 The type of the content stored in the secret value. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecretArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L166">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L151">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1447,7 +1391,7 @@ The type of the content stored in the secret value. Changing this forces a new r
 A description of this Service Fabric Mesh Secret.
 
 <h4 class="pdoc-member-header" id="MeshSecretArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L170">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L155">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1455,7 +1399,7 @@ A description of this Service Fabric Mesh Secret.
 Specifies the Azure Region where the Service Fabric Mesh Secret should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecretArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L174">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L159">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1463,7 +1407,7 @@ Specifies the Azure Region where the Service Fabric Mesh Secret should exist. Ch
 The name of the Service Fabric Mesh Secret. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecretArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L178">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L163">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1471,7 +1415,7 @@ The name of the Service Fabric Mesh Secret. Changing this forces a new resource 
 The name of the Resource Group in which the Service Fabric Mesh Secret exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecretArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L182">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L167">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1479,7 +1423,7 @@ The name of the Resource Group in which the Service Fabric Mesh Secret exists. C
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="MeshSecretState" data-link-title="MeshSecretState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L113">
         interface <strong>MeshSecretState</strong>
     </a>
 </h3>
@@ -1489,7 +1433,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering MeshSecret resources.
 
 <h4 class="pdoc-member-header" id="MeshSecretState-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L132">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L117">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1497,7 +1441,7 @@ Input properties used for looking up and filtering MeshSecret resources.
 The type of the content stored in the secret value. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecretState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L136">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L121">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1505,7 +1449,7 @@ The type of the content stored in the secret value. Changing this forces a new r
 A description of this Service Fabric Mesh Secret.
 
 <h4 class="pdoc-member-header" id="MeshSecretState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L140">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L125">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1513,7 +1457,7 @@ A description of this Service Fabric Mesh Secret.
 Specifies the Azure Region where the Service Fabric Mesh Secret should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecretState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L129">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1521,7 +1465,7 @@ Specifies the Azure Region where the Service Fabric Mesh Secret should exist. Ch
 The name of the Service Fabric Mesh Secret. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecretState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L148">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L133">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1529,7 +1473,7 @@ The name of the Service Fabric Mesh Secret. Changing this forces a new resource 
 The name of the Resource Group in which the Service Fabric Mesh Secret exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecretState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecret.ts#L152">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecret.ts#L137">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1537,7 +1481,7 @@ The name of the Resource Group in which the Service Fabric Mesh Secret exists. C
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="MeshSecretValueArgs" data-link-title="MeshSecretValueArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L136">
         interface <strong>MeshSecretValueArgs</strong>
     </a>
 </h3>
@@ -1547,7 +1491,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a MeshSecretValue resource.
 
 <h4 class="pdoc-member-header" id="MeshSecretValueArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L160">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L140">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1555,7 +1499,7 @@ The set of arguments for constructing a MeshSecretValue resource.
 Specifies the Azure Region where the Service Fabric Mesh Secret Value should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecretValueArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L164">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L144">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1563,7 +1507,7 @@ Specifies the Azure Region where the Service Fabric Mesh Secret Value should exi
 The name of the Service Fabric Mesh Secret Value. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecretValueArgs-serviceFabricMeshSecretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L168">property <b>serviceFabricMeshSecretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L148">property <b>serviceFabricMeshSecretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceFabricMeshSecretId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1571,7 +1515,7 @@ The name of the Service Fabric Mesh Secret Value. Changing this forces a new res
 The id of the Service Fabric Mesh Secret in which the value will be applied to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecretValueArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L172">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L152">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1579,7 +1523,7 @@ The id of the Service Fabric Mesh Secret in which the value will be applied to. 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="MeshSecretValueArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L176">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L156">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1587,7 +1531,7 @@ A mapping of tags to assign to the resource.
 Specifies the value that will be applied to the Service Fabric Mesh Secret. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="MeshSecretValueState" data-link-title="MeshSecretValueState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L110">
         interface <strong>MeshSecretValueState</strong>
     </a>
 </h3>
@@ -1597,7 +1541,7 @@ Specifies the value that will be applied to the Service Fabric Mesh Secret. Chan
 Input properties used for looking up and filtering MeshSecretValue resources.
 
 <h4 class="pdoc-member-header" id="MeshSecretValueState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L134">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L114">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1605,7 +1549,7 @@ Input properties used for looking up and filtering MeshSecretValue resources.
 Specifies the Azure Region where the Service Fabric Mesh Secret Value should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecretValueState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L118">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1613,7 +1557,7 @@ Specifies the Azure Region where the Service Fabric Mesh Secret Value should exi
 The name of the Service Fabric Mesh Secret Value. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecretValueState-serviceFabricMeshSecretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L142">property <b>serviceFabricMeshSecretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L122">property <b>serviceFabricMeshSecretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceFabricMeshSecretId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1621,7 +1565,7 @@ The name of the Service Fabric Mesh Secret Value. Changing this forces a new res
 The id of the Service Fabric Mesh Secret in which the value will be applied to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MeshSecretValueState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L146">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L126">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1629,7 +1573,7 @@ The id of the Service Fabric Mesh Secret in which the value will be applied to. 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="MeshSecretValueState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/servicefabric/meshSecretValue.ts#L150">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/servicefabric/meshSecretValue.ts#L130">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

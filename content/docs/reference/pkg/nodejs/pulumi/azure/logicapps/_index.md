@@ -3,7 +3,7 @@ title: "Module logicapps"
 title_tag: "Module logicapps | Package @pulumi/azure | Node.js SDK"
 linktitle: "logicapps"
 meta_desc: "Explore members of the logicapps module in the @pulumi/azure package."
-git_sha: "ddb23e43788a327f80b21bf9dceb8eafe16876eb"
+git_sha: "9cb63907202e7b738279a1e51fb2090fbc75fa2c"
 block_external_search_index: true
 ---
 
@@ -60,7 +60,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ActionCustom" data-link-title="ActionCustom">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L49">
         Resource <strong>ActionCustom</strong>
     </a>
 </h3>
@@ -109,7 +109,7 @@ Logic App Custom Actions can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ActionCustom-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L88"> <b>constructor</b></a>
 </h4>
 
 
@@ -123,7 +123,7 @@ Create a ActionCustom resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ActionCustom-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -134,14 +134,14 @@ Get an existing ActionCustom resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ActionCustom-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ActionCustom-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -152,7 +152,7 @@ Returns true if the given object is an instance of ActionCustom.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ActionCustom-body">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L80">property <b>body</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L80">property <b>body</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>body: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the JSON Blob defining the Body of this Custom Action.
 
 <h4 class="pdoc-member-header" id="ActionCustom-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -169,7 +169,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ActionCustom-logicAppId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L84">property <b>logicAppId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L84">property <b>logicAppId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logicAppId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionCustom-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L88">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L88">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -185,7 +185,7 @@ Specifies the ID of the Logic App Workflow. Changing this forces a new resource 
 Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionCustom-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -194,7 +194,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ActionHttp" data-link-title="ActionHttp">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L37">
         Resource <strong>ActionHttp</strong>
     </a>
 </h3>
@@ -230,7 +230,7 @@ Logic App HTTP Actions can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ActionHttp-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L92"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -244,7 +244,7 @@ Create a ActionHttp resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ActionHttp-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -255,14 +255,14 @@ Get an existing ActionHttp resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ActionHttp-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ActionHttp-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -273,7 +273,7 @@ Returns true if the given object is an instance of ActionHttp.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ActionHttp-body">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L68">property <b>body</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L68">property <b>body</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>body: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -281,7 +281,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the HTTP Body that should be sent to the `uri` when this HTTP Action is triggered.
 
 <h4 class="pdoc-member-header" id="ActionHttp-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L72">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L72">property <b>headers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>headers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -289,7 +289,7 @@ Specifies the HTTP Body that should be sent to the `uri` when this HTTP Action i
 Specifies a Map of Key-Value Pairs that should be sent to the `uri` when this HTTP Action is triggered.
 
 <h4 class="pdoc-member-header" id="ActionHttp-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -298,7 +298,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ActionHttp-logicAppId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L76">property <b>logicAppId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L76">property <b>logicAppId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logicAppId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -306,7 +306,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionHttp-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L80">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L80">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>method: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -314,7 +314,7 @@ Specifies the ID of the Logic App Workflow. Changing this forces a new resource 
 Specifies the HTTP Method which should be used for this HTTP Action. Possible values include `DELETE`, `GET`, `PATCH`, `POST` and `PUT`.
 
 <h4 class="pdoc-member-header" id="ActionHttp-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L84">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L84">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -322,7 +322,7 @@ Specifies the HTTP Method which should be used for this HTTP Action. Possible va
 Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionHttp-runAfters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L88">property <b>runAfters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L88">property <b>runAfters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runAfters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionHttpRunAfter'>ActionHttpRunAfter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -330,7 +330,7 @@ Specifies the name of the HTTP Action to be created within the Logic App Workflo
 Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A `runAfter` block is as defined below.
 
 <h4 class="pdoc-member-header" id="ActionHttp-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L92">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L92">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -338,7 +338,7 @@ Specifies the place of the HTTP Action in the Logic App Workflow. If not specifi
 Specifies the URI which will be called when this HTTP Action is triggered.
 
 <h4 class="pdoc-member-header" id="ActionHttp-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -347,7 +347,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="IntegrationAccount" data-link-title="IntegrationAccount">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L35">
         Resource <strong>IntegrationAccount</strong>
     </a>
 </h3>
@@ -382,7 +382,7 @@ Logic App Integration Accounts can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="IntegrationAccount-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L82"> <b>constructor</b></a>
 </h4>
 
 
@@ -396,7 +396,7 @@ Create a IntegrationAccount resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IntegrationAccount-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -407,14 +407,14 @@ Get an existing IntegrationAccount resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IntegrationAccount-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IntegrationAccount-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -425,7 +425,7 @@ Returns true if the given object is an instance of IntegrationAccount.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IntegrationAccount-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -434,7 +434,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IntegrationAccount-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L66">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L66">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -442,7 +442,7 @@ deployments and may be missing (undefined) during planning phases.
 The Azure Region where the Logic App Integration Account should exist. Changing this forces a new Logic App Integration Account to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationAccount-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L70">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L70">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -450,7 +450,7 @@ The Azure Region where the Logic App Integration Account should exist. Changing 
 The name which should be used for this Logic App Integration Account. Changing this forces a new Logic App Integration Account to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationAccount-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L74">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L74">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -458,7 +458,7 @@ The name which should be used for this Logic App Integration Account. Changing t
 The name of the Resource Group where the Logic App Integration Account should exist. Changing this forces a new Logic App Integration Account to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationAccount-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L78">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L78">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -466,7 +466,7 @@ The name of the Resource Group where the Logic App Integration Account should ex
 The sku name of the Logic App Integration Account. Possible Values are `Basic`, `Free` and `Standard`.
 
 <h4 class="pdoc-member-header" id="IntegrationAccount-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L82">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L82">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -474,7 +474,7 @@ The sku name of the Logic App Integration Account. Possible Values are `Basic`, 
 A mapping of tags which should be assigned to the Logic App Integration Account.
 
 <h4 class="pdoc-member-header" id="IntegrationAccount-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -483,7 +483,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="InterationServiceEnvironment" data-link-title="InterationServiceEnvironment">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L73">
         Resource <strong>InterationServiceEnvironment</strong>
     </a>
 </h3>
@@ -556,7 +556,7 @@ Integration Service Environments can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L144"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L144"> <b>constructor</b></a>
 </h4>
 
 
@@ -570,7 +570,7 @@ Create a InterationServiceEnvironment resource with the given unique name, argum
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L83">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L83">method <b>get</b></a>
 </h4>
 
 
@@ -581,14 +581,14 @@ Get an existing InterationServiceEnvironment resource's state with the given nam
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L73">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L73">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L94">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L94">method <b>isInstance</b></a>
 </h4>
 
 
@@ -599,7 +599,7 @@ Returns true if the given object is an instance of InterationServiceEnvironment.
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironment-accessEndpointType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L104">property <b>accessEndpointType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L104">property <b>accessEndpointType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessEndpointType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -607,7 +607,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The type of access endpoint to use for the Integration Service Environment. Possible Values are `Internal` and `External`. Changing this forces a new Integration Service Environment to be created.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironment-connectorEndpointIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L108">property <b>connectorEndpointIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L108">property <b>connectorEndpointIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectorEndpointIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -615,7 +615,7 @@ The type of access endpoint to use for the Integration Service Environment. Poss
 The list of access endpoint ip addresses of connector.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironment-connectorOutboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L112">property <b>connectorOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L112">property <b>connectorOutboundIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectorOutboundIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -623,7 +623,7 @@ The list of access endpoint ip addresses of connector.
 The list of outgoing ip addresses of connector.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L73">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L73">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -632,7 +632,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironment-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L116">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L116">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -640,7 +640,7 @@ deployments and may be missing (undefined) during planning phases.
 The Azure Region where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironment-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L120">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L120">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -648,7 +648,7 @@ The Azure Region where the Integration Service Environment should exist. Changin
 The name of the Integration Service Environment. Changing this forces a new Integration Service Environment to be created.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironment-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L124">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L124">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -656,7 +656,7 @@ The name of the Integration Service Environment. Changing this forces a new Inte
 The name of the Resource Group where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironment-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L128">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L128">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -664,7 +664,7 @@ The name of the Resource Group where the Integration Service Environment should 
 The sku name and capacity of the Integration Service Environment. Possible Values for `sku` element are `Developer` and `Premium` and possible values for the `capacity` element are from `0` to `10`.  Defaults to `sku` of `Developer` with a `Capacity` of `0` (e.g. `Developer_0`). Changing this forces a new Integration Service Environment to be created when `sku` element is not the same with existing one.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironment-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L132">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L132">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -672,7 +672,7 @@ The sku name and capacity of the Integration Service Environment. Possible Value
 A mapping of tags which should be assigned to the Integration Service Environment.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L73">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L73">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -681,7 +681,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironment-virtualNetworkSubnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L136">property <b>virtualNetworkSubnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L136">property <b>virtualNetworkSubnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>virtualNetworkSubnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -689,7 +689,7 @@ deployments.
 A list of virtual network subnet ids to be used by Integration Service Environment. Exactly four distinct ids to subnets must be provided. Changing this forces a new Integration Service Environment to be created.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironment-workflowEndpointIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L140">property <b>workflowEndpointIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L140">property <b>workflowEndpointIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workflowEndpointIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -697,7 +697,7 @@ A list of virtual network subnet ids to be used by Integration Service Environme
 The list of access endpoint ip addresses of workflow.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironment-workflowOutboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L144">property <b>workflowOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L144">property <b>workflowOutboundIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workflowOutboundIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -705,7 +705,7 @@ The list of access endpoint ip addresses of workflow.
 The list of outgoing ip addresses of workflow.
 
 <h3 class="pdoc-module-header" id="TriggerCustom" data-link-title="TriggerCustom">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L42">
         Resource <strong>TriggerCustom</strong>
     </a>
 </h3>
@@ -747,7 +747,7 @@ Logic App Custom Triggers can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="TriggerCustom-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L81"> <b>constructor</b></a>
 </h4>
 
 
@@ -761,7 +761,7 @@ Create a TriggerCustom resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TriggerCustom-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -772,14 +772,14 @@ Get an existing TriggerCustom resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TriggerCustom-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TriggerCustom-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -790,7 +790,7 @@ Returns true if the given object is an instance of TriggerCustom.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TriggerCustom-body">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L73">property <b>body</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L73">property <b>body</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>body: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -798,7 +798,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the JSON Blob defining the Body of this Custom Trigger.
 
 <h4 class="pdoc-member-header" id="TriggerCustom-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -807,7 +807,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TriggerCustom-logicAppId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L77">property <b>logicAppId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L77">property <b>logicAppId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logicAppId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -815,7 +815,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TriggerCustom-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -823,7 +823,7 @@ Specifies the ID of the Logic App Workflow. Changing this forces a new resource 
 Specifies the name of the HTTP Trigger to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TriggerCustom-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -832,7 +832,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TriggerHttpRequest" data-link-title="TriggerHttpRequest">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L43">
         Resource <strong>TriggerHttpRequest</strong>
     </a>
 </h3>
@@ -875,7 +875,7 @@ Logic App HTTP Request Triggers can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequest-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L90"> <b>constructor</b></a>
 </h4>
 
 
@@ -889,7 +889,7 @@ Create a TriggerHttpRequest resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequest-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -900,14 +900,14 @@ Get an existing TriggerHttpRequest resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequest-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequest-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -918,7 +918,7 @@ Returns true if the given object is an instance of TriggerHttpRequest.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequest-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -927,7 +927,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequest-logicAppId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L74">property <b>logicAppId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L74">property <b>logicAppId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logicAppId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -935,7 +935,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequest-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L78">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L78">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>method: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -943,7 +943,7 @@ Specifies the ID of the Logic App Workflow. Changing this forces a new resource 
 Specifies the HTTP Method which the request be using. Possible values include `DELETE`, `GET`, `PATCH`, `POST` or `PUT`.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequest-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -951,7 +951,7 @@ Specifies the HTTP Method which the request be using. Possible values include `D
 Specifies the name of the HTTP Request Trigger to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequest-relativePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L86">property <b>relativePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L86">property <b>relativePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>relativePath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -959,7 +959,7 @@ Specifies the name of the HTTP Request Trigger to be created within the Logic Ap
 Specifies the Relative Path used for this Request.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequest-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L90">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L90">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -967,7 +967,7 @@ Specifies the Relative Path used for this Request.
 A JSON Blob defining the Schema of the incoming request. This needs to be valid JSON.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequest-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -976,7 +976,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TriggerRecurrence" data-link-title="TriggerRecurrence">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L36">
         Resource <strong>TriggerRecurrence</strong>
     </a>
 </h3>
@@ -1012,7 +1012,7 @@ Logic App Recurrence Triggers can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="TriggerRecurrence-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -1026,7 +1026,7 @@ Create a TriggerRecurrence resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrence-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -1037,14 +1037,14 @@ Get an existing TriggerRecurrence resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrence-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TriggerRecurrence-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1055,7 +1055,7 @@ Returns true if the given object is an instance of TriggerRecurrence.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrence-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L67">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L67">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1063,7 +1063,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the Frequency at which this Trigger should be run. Possible values include `Month`, `Week`, `Day`, `Hour`, `Minute` and `Second`.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrence-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1072,7 +1072,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrence-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L71">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L71">property <b>interval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>interval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1080,7 +1080,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies interval used for the Frequency, for example a value of `4` for `interval` and `hour` for `frequency` would run the Trigger every 4 hours.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrence-logicAppId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L75">property <b>logicAppId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L75">property <b>logicAppId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logicAppId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1088,7 +1088,7 @@ Specifies interval used for the Frequency, for example a value of `4` for `inter
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrence-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1096,7 +1096,7 @@ Specifies the ID of the Logic App Workflow. Changing this forces a new resource 
 Specifies the name of the Recurrence Triggers to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrence-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L83">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L83">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>startTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1104,7 +1104,7 @@ Specifies the name of the Recurrence Triggers to be created within the Logic App
 Specifies the start date and time for this trigger in RFC3339 format: `2000-01-02T03:04:05Z`.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrence-timeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L87">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L87">property <b>timeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1112,7 +1112,7 @@ Specifies the start date and time for this trigger in RFC3339 format: `2000-01-0
 Specifies the time zone for this trigger.  Supported time zone options are listed [here](https://support.microsoft.com/en-us/help/973627/microsoft-time-zone-index-values)
 
 <h4 class="pdoc-member-header" id="TriggerRecurrence-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1121,7 +1121,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Workflow" data-link-title="Workflow">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L31">
         Resource <strong>Workflow</strong>
     </a>
 </h3>
@@ -1152,7 +1152,7 @@ Logic App Workflows can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Workflow-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L114"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L114"> <b>constructor</b></a>
 </h4>
 
 
@@ -1166,7 +1166,7 @@ Create a Workflow resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Workflow-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -1177,14 +1177,14 @@ Get an existing Workflow resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Workflow-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Workflow-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1195,7 +1195,7 @@ Returns true if the given object is an instance of Workflow.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Workflow-accessEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L62">property <b>accessEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L62">property <b>accessEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1203,7 +1203,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Access Endpoint for the Logic App Workflow.
 
 <h4 class="pdoc-member-header" id="Workflow-connectorEndpointIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L66">property <b>connectorEndpointIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L66">property <b>connectorEndpointIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectorEndpointIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1211,7 +1211,7 @@ The Access Endpoint for the Logic App Workflow.
 The list of access endpoint ip addresses of connector.
 
 <h4 class="pdoc-member-header" id="Workflow-connectorOutboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L70">property <b>connectorOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L70">property <b>connectorOutboundIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectorOutboundIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1219,7 +1219,7 @@ The list of access endpoint ip addresses of connector.
 The list of outgoing ip addresses of connector.
 
 <h4 class="pdoc-member-header" id="Workflow-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1228,7 +1228,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Workflow-integrationServiceEnvironmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L74">property <b>integrationServiceEnvironmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L74">property <b>integrationServiceEnvironmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationServiceEnvironmentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1236,7 +1236,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the Integration Service Environment to which this Logic App Workflow belongs.  Changing this forces a new Logic App Workflow to be created.
 
 <h4 class="pdoc-member-header" id="Workflow-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L78">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L78">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1244,7 +1244,7 @@ The ID of the Integration Service Environment to which this Logic App Workflow b
 Specifies the supported Azure location where the Logic App Workflow exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workflow-logicAppIntegrationAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L82">property <b>logicAppIntegrationAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L82">property <b>logicAppIntegrationAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logicAppIntegrationAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1252,7 +1252,7 @@ Specifies the supported Azure location where the Logic App Workflow exists. Chan
 The ID of the integration account linked by this Logic App Workflow.
 
 <h4 class="pdoc-member-header" id="Workflow-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L86">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1260,7 +1260,7 @@ The ID of the integration account linked by this Logic App Workflow.
 Specifies the name of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workflow-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L90">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L90">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1268,7 +1268,7 @@ Specifies the name of the Logic App Workflow. Changing this forces a new resourc
 A map of Key-Value pairs.
 
 <h4 class="pdoc-member-header" id="Workflow-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L94">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L94">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1276,7 +1276,7 @@ A map of Key-Value pairs.
 The name of the Resource Group in which the Logic App Workflow should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workflow-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L98">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L98">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1284,7 +1284,7 @@ The name of the Resource Group in which the Logic App Workflow should be created
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Workflow-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1293,7 +1293,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Workflow-workflowEndpointIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L102">property <b>workflowEndpointIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L102">property <b>workflowEndpointIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workflowEndpointIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1301,7 +1301,7 @@ deployments.
 The list of access endpoint ip addresses of workflow.
 
 <h4 class="pdoc-member-header" id="Workflow-workflowOutboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L106">property <b>workflowOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L106">property <b>workflowOutboundIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workflowOutboundIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1309,7 +1309,7 @@ The list of access endpoint ip addresses of workflow.
 The list of outgoing ip addresses of workflow.
 
 <h4 class="pdoc-member-header" id="Workflow-workflowSchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L110">property <b>workflowSchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L110">property <b>workflowSchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workflowSchema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1317,7 +1317,7 @@ The list of outgoing ip addresses of workflow.
 Specifies the Schema to use for this Logic App Workflow. Defaults to `https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workflow-workflowVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L114">property <b>workflowVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L114">property <b>workflowVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workflowVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1327,7 +1327,7 @@ Specifies the version of the Schema used for this Logic App Workflow. Defaults t
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getIntegrationAccount" data-link-title="getIntegrationAccount">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getIntegrationAccount.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getIntegrationAccount.ts#L24">
         Function <strong>getIntegrationAccount</strong>
     </a>
 </h3>
@@ -1352,7 +1352,7 @@ export const id = example.then(example => example.id);
 ```
 
 <h3 class="pdoc-module-header" id="getWorkflow" data-link-title="getWorkflow">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L24">
         Function <strong>getWorkflow</strong>
     </a>
 </h3>
@@ -1379,7 +1379,7 @@ export const accessEndpoint = example.then(example => example.accessEndpoint);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ActionCustomArgs" data-link-title="ActionCustomArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L149">
         interface <strong>ActionCustomArgs</strong>
     </a>
 </h3>
@@ -1389,7 +1389,7 @@ export const accessEndpoint = example.then(example => example.accessEndpoint);
 The set of arguments for constructing a ActionCustom resource.
 
 <h4 class="pdoc-member-header" id="ActionCustomArgs-body">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L153">property <b>body</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L153">property <b>body</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>body: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1397,7 +1397,7 @@ The set of arguments for constructing a ActionCustom resource.
 Specifies the JSON Blob defining the Body of this Custom Action.
 
 <h4 class="pdoc-member-header" id="ActionCustomArgs-logicAppId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L157">property <b>logicAppId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L157">property <b>logicAppId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicAppId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1405,7 +1405,7 @@ Specifies the JSON Blob defining the Body of this Custom Action.
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionCustomArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L161">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L161">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1413,7 +1413,7 @@ Specifies the ID of the Logic App Workflow. Changing this forces a new resource 
 Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ActionCustomState" data-link-title="ActionCustomState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L131">
         interface <strong>ActionCustomState</strong>
     </a>
 </h3>
@@ -1423,7 +1423,7 @@ Specifies the name of the HTTP Action to be created within the Logic App Workflo
 Input properties used for looking up and filtering ActionCustom resources.
 
 <h4 class="pdoc-member-header" id="ActionCustomState-body">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L135">property <b>body</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L135">property <b>body</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>body?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1431,7 +1431,7 @@ Input properties used for looking up and filtering ActionCustom resources.
 Specifies the JSON Blob defining the Body of this Custom Action.
 
 <h4 class="pdoc-member-header" id="ActionCustomState-logicAppId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L139">property <b>logicAppId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L139">property <b>logicAppId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicAppId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1439,7 +1439,7 @@ Specifies the JSON Blob defining the Body of this Custom Action.
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionCustomState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionCustom.ts#L143">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionCustom.ts#L143">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1447,7 +1447,7 @@ Specifies the ID of the Logic App Workflow. Changing this forces a new resource 
 Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ActionHttpArgs" data-link-title="ActionHttpArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L180">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L180">
         interface <strong>ActionHttpArgs</strong>
     </a>
 </h3>
@@ -1457,7 +1457,7 @@ Specifies the name of the HTTP Action to be created within the Logic App Workflo
 The set of arguments for constructing a ActionHttp resource.
 
 <h4 class="pdoc-member-header" id="ActionHttpArgs-body">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L184">property <b>body</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L184">property <b>body</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>body?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1465,7 +1465,7 @@ The set of arguments for constructing a ActionHttp resource.
 Specifies the HTTP Body that should be sent to the `uri` when this HTTP Action is triggered.
 
 <h4 class="pdoc-member-header" id="ActionHttpArgs-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L188">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L188">property <b>headers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1473,7 +1473,7 @@ Specifies the HTTP Body that should be sent to the `uri` when this HTTP Action i
 Specifies a Map of Key-Value Pairs that should be sent to the `uri` when this HTTP Action is triggered.
 
 <h4 class="pdoc-member-header" id="ActionHttpArgs-logicAppId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L192">property <b>logicAppId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L192">property <b>logicAppId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicAppId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1481,7 +1481,7 @@ Specifies a Map of Key-Value Pairs that should be sent to the `uri` when this HT
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionHttpArgs-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L196">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L196">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>method: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1489,7 +1489,7 @@ Specifies the ID of the Logic App Workflow. Changing this forces a new resource 
 Specifies the HTTP Method which should be used for this HTTP Action. Possible values include `DELETE`, `GET`, `PATCH`, `POST` and `PUT`.
 
 <h4 class="pdoc-member-header" id="ActionHttpArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L200">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L200">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1497,7 +1497,7 @@ Specifies the HTTP Method which should be used for this HTTP Action. Possible va
 Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionHttpArgs-runAfters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L204">property <b>runAfters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L204">property <b>runAfters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runAfters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionHttpRunAfter'>ActionHttpRunAfter</a>&gt;[]&gt;;</code></pre>
@@ -1505,7 +1505,7 @@ Specifies the name of the HTTP Action to be created within the Logic App Workflo
 Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A `runAfter` block is as defined below.
 
 <h4 class="pdoc-member-header" id="ActionHttpArgs-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L208">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L208">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1513,7 +1513,7 @@ Specifies the place of the HTTP Action in the Logic App Workflow. If not specifi
 Specifies the URI which will be called when this HTTP Action is triggered.
 
 <h3 class="pdoc-module-header" id="ActionHttpState" data-link-title="ActionHttpState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L146">
         interface <strong>ActionHttpState</strong>
     </a>
 </h3>
@@ -1523,7 +1523,7 @@ Specifies the URI which will be called when this HTTP Action is triggered.
 Input properties used for looking up and filtering ActionHttp resources.
 
 <h4 class="pdoc-member-header" id="ActionHttpState-body">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L150">property <b>body</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L150">property <b>body</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>body?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1531,7 +1531,7 @@ Input properties used for looking up and filtering ActionHttp resources.
 Specifies the HTTP Body that should be sent to the `uri` when this HTTP Action is triggered.
 
 <h4 class="pdoc-member-header" id="ActionHttpState-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L154">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L154">property <b>headers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1539,7 +1539,7 @@ Specifies the HTTP Body that should be sent to the `uri` when this HTTP Action i
 Specifies a Map of Key-Value Pairs that should be sent to the `uri` when this HTTP Action is triggered.
 
 <h4 class="pdoc-member-header" id="ActionHttpState-logicAppId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L158">property <b>logicAppId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L158">property <b>logicAppId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicAppId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1547,7 +1547,7 @@ Specifies a Map of Key-Value Pairs that should be sent to the `uri` when this HT
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionHttpState-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L162">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L162">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>method?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1555,7 +1555,7 @@ Specifies the ID of the Logic App Workflow. Changing this forces a new resource 
 Specifies the HTTP Method which should be used for this HTTP Action. Possible values include `DELETE`, `GET`, `PATCH`, `POST` and `PUT`.
 
 <h4 class="pdoc-member-header" id="ActionHttpState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L166">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L166">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1563,7 +1563,7 @@ Specifies the HTTP Method which should be used for this HTTP Action. Possible va
 Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionHttpState-runAfters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L170">property <b>runAfters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L170">property <b>runAfters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runAfters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionHttpRunAfter'>ActionHttpRunAfter</a>&gt;[]&gt;;</code></pre>
@@ -1571,7 +1571,7 @@ Specifies the name of the HTTP Action to be created within the Logic App Workflo
 Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A `runAfter` block is as defined below.
 
 <h4 class="pdoc-member-header" id="ActionHttpState-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/actionHttp.ts#L174">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/actionHttp.ts#L174">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1579,7 +1579,7 @@ Specifies the place of the HTTP Action in the Logic App Workflow. If not specifi
 Specifies the URI which will be called when this HTTP Action is triggered.
 
 <h3 class="pdoc-module-header" id="GetIntegrationAccountArgs" data-link-title="GetIntegrationAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getIntegrationAccount.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getIntegrationAccount.ts#L41">
         interface <strong>GetIntegrationAccountArgs</strong>
     </a>
 </h3>
@@ -1589,7 +1589,7 @@ Specifies the URI which will be called when this HTTP Action is triggered.
 A collection of arguments for invoking getIntegrationAccount.
 
 <h4 class="pdoc-member-header" id="GetIntegrationAccountArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getIntegrationAccount.ts#L45">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getIntegrationAccount.ts#L45">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1597,7 +1597,7 @@ A collection of arguments for invoking getIntegrationAccount.
 The name of this Logic App Integration Account.
 
 <h4 class="pdoc-member-header" id="GetIntegrationAccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getIntegrationAccount.ts#L49">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getIntegrationAccount.ts#L49">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1605,7 +1605,7 @@ The name of this Logic App Integration Account.
 The name of the Resource Group where the Logic App Integration Account exists.
 
 <h3 class="pdoc-module-header" id="GetIntegrationAccountResult" data-link-title="GetIntegrationAccountResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getIntegrationAccount.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getIntegrationAccount.ts#L55">
         interface <strong>GetIntegrationAccountResult</strong>
     </a>
 </h3>
@@ -1615,7 +1615,7 @@ The name of the Resource Group where the Logic App Integration Account exists.
 A collection of values returned by getIntegrationAccount.
 
 <h4 class="pdoc-member-header" id="GetIntegrationAccountResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getIntegrationAccount.ts#L59">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getIntegrationAccount.ts#L59">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1623,7 +1623,7 @@ A collection of values returned by getIntegrationAccount.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetIntegrationAccountResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getIntegrationAccount.ts#L63">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getIntegrationAccount.ts#L63">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1631,17 +1631,17 @@ The provider-assigned unique ID for this managed resource.
 The Azure Region where the Logic App Integration Account exists.
 
 <h4 class="pdoc-member-header" id="GetIntegrationAccountResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getIntegrationAccount.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getIntegrationAccount.ts#L64">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetIntegrationAccountResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getIntegrationAccount.ts#L65">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getIntegrationAccount.ts#L65">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetIntegrationAccountResult-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getIntegrationAccount.ts#L69">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getIntegrationAccount.ts#L69">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1649,7 +1649,7 @@ The Azure Region where the Logic App Integration Account exists.
 The sku name of the Logic App Integration Account.
 
 <h4 class="pdoc-member-header" id="GetIntegrationAccountResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getIntegrationAccount.ts#L73">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getIntegrationAccount.ts#L73">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1657,7 +1657,7 @@ The sku name of the Logic App Integration Account.
 A mapping of tags assigned to the Logic App Integration Account.
 
 <h3 class="pdoc-module-header" id="GetWorkflowArgs" data-link-title="GetWorkflowArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L41">
         interface <strong>GetWorkflowArgs</strong>
     </a>
 </h3>
@@ -1667,7 +1667,7 @@ A mapping of tags assigned to the Logic App Integration Account.
 A collection of arguments for invoking getWorkflow.
 
 <h4 class="pdoc-member-header" id="GetWorkflowArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L45">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L45">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1675,7 +1675,7 @@ A collection of arguments for invoking getWorkflow.
 The name of the Logic App Workflow.
 
 <h4 class="pdoc-member-header" id="GetWorkflowArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L49">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L49">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1683,7 +1683,7 @@ The name of the Logic App Workflow.
 The name of the Resource Group in which the Logic App Workflow exists.
 
 <h3 class="pdoc-module-header" id="GetWorkflowResult" data-link-title="GetWorkflowResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L55">
         interface <strong>GetWorkflowResult</strong>
     </a>
 </h3>
@@ -1693,7 +1693,7 @@ The name of the Resource Group in which the Logic App Workflow exists.
 A collection of values returned by getWorkflow.
 
 <h4 class="pdoc-member-header" id="GetWorkflowResult-accessEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L59">property <b>accessEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L59">property <b>accessEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1701,7 +1701,7 @@ A collection of values returned by getWorkflow.
 The Access Endpoint for the Logic App Workflow
 
 <h4 class="pdoc-member-header" id="GetWorkflowResult-connectorEndpointIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L63">property <b>connectorEndpointIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L63">property <b>connectorEndpointIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectorEndpointIpAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1709,7 +1709,7 @@ The Access Endpoint for the Logic App Workflow
 The list of access endpoint ip addresses of connector.
 
 <h4 class="pdoc-member-header" id="GetWorkflowResult-connectorOutboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L67">property <b>connectorOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L67">property <b>connectorOutboundIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectorOutboundIpAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1717,7 +1717,7 @@ The list of access endpoint ip addresses of connector.
 The list of outgoing ip addresses of connector.
 
 <h4 class="pdoc-member-header" id="GetWorkflowResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1725,7 +1725,7 @@ The list of outgoing ip addresses of connector.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetWorkflowResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L75">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L75">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1733,7 +1733,7 @@ The provider-assigned unique ID for this managed resource.
 The Azure location where the Logic App Workflow exists.
 
 <h4 class="pdoc-member-header" id="GetWorkflowResult-logicAppIntegrationAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L79">property <b>logicAppIntegrationAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L79">property <b>logicAppIntegrationAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicAppIntegrationAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1741,12 +1741,12 @@ The Azure location where the Logic App Workflow exists.
 The ID of the integration account linked by this Logic App Workflow.
 
 <h4 class="pdoc-member-header" id="GetWorkflowResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L80">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetWorkflowResult-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L84">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L84">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1754,12 +1754,12 @@ The ID of the integration account linked by this Logic App Workflow.
 A map of Key-Value pairs.
 
 <h4 class="pdoc-member-header" id="GetWorkflowResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L85">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L85">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetWorkflowResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L89">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L89">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1767,7 +1767,7 @@ A map of Key-Value pairs.
 A mapping of tags assigned to the resource.
 
 <h4 class="pdoc-member-header" id="GetWorkflowResult-workflowEndpointIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L93">property <b>workflowEndpointIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L93">property <b>workflowEndpointIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workflowEndpointIpAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1775,7 +1775,7 @@ A mapping of tags assigned to the resource.
 The list of access endpoint ip addresses of workflow.
 
 <h4 class="pdoc-member-header" id="GetWorkflowResult-workflowOutboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L97">property <b>workflowOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L97">property <b>workflowOutboundIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workflowOutboundIpAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1783,7 +1783,7 @@ The list of access endpoint ip addresses of workflow.
 The list of outgoing ip addresses of workflow.
 
 <h4 class="pdoc-member-header" id="GetWorkflowResult-workflowSchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L101">property <b>workflowSchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L101">property <b>workflowSchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workflowSchema: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1791,7 +1791,7 @@ The list of outgoing ip addresses of workflow.
 The Schema used for this Logic App Workflow.
 
 <h4 class="pdoc-member-header" id="GetWorkflowResult-workflowVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/getWorkflow.ts#L105">property <b>workflowVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/getWorkflow.ts#L105">property <b>workflowVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workflowVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1799,7 +1799,7 @@ The Schema used for this Logic App Workflow.
 The version of the Schema used for this Logic App Workflow. Defaults to `1.0.0.0`.
 
 <h3 class="pdoc-module-header" id="IntegrationAccountArgs" data-link-title="IntegrationAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L155">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L155">
         interface <strong>IntegrationAccountArgs</strong>
     </a>
 </h3>
@@ -1809,7 +1809,7 @@ The version of the Schema used for this Logic App Workflow. Defaults to `1.0.0.0
 The set of arguments for constructing a IntegrationAccount resource.
 
 <h4 class="pdoc-member-header" id="IntegrationAccountArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L159">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L159">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1817,7 +1817,7 @@ The set of arguments for constructing a IntegrationAccount resource.
 The Azure Region where the Logic App Integration Account should exist. Changing this forces a new Logic App Integration Account to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationAccountArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L163">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L163">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1825,7 +1825,7 @@ The Azure Region where the Logic App Integration Account should exist. Changing 
 The name which should be used for this Logic App Integration Account. Changing this forces a new Logic App Integration Account to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationAccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L167">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L167">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1833,7 +1833,7 @@ The name which should be used for this Logic App Integration Account. Changing t
 The name of the Resource Group where the Logic App Integration Account should exist. Changing this forces a new Logic App Integration Account to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationAccountArgs-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L171">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L171">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1841,7 +1841,7 @@ The name of the Resource Group where the Logic App Integration Account should ex
 The sku name of the Logic App Integration Account. Possible Values are `Basic`, `Free` and `Standard`.
 
 <h4 class="pdoc-member-header" id="IntegrationAccountArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L175">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L175">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1849,7 +1849,7 @@ The sku name of the Logic App Integration Account. Possible Values are `Basic`, 
 A mapping of tags which should be assigned to the Logic App Integration Account.
 
 <h3 class="pdoc-module-header" id="IntegrationAccountState" data-link-title="IntegrationAccountState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L129">
         interface <strong>IntegrationAccountState</strong>
     </a>
 </h3>
@@ -1859,7 +1859,7 @@ A mapping of tags which should be assigned to the Logic App Integration Account.
 Input properties used for looking up and filtering IntegrationAccount resources.
 
 <h4 class="pdoc-member-header" id="IntegrationAccountState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L133">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L133">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1867,7 +1867,7 @@ Input properties used for looking up and filtering IntegrationAccount resources.
 The Azure Region where the Logic App Integration Account should exist. Changing this forces a new Logic App Integration Account to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationAccountState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L137">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L137">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1875,7 +1875,7 @@ The Azure Region where the Logic App Integration Account should exist. Changing 
 The name which should be used for this Logic App Integration Account. Changing this forces a new Logic App Integration Account to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationAccountState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L141">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L141">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1883,7 +1883,7 @@ The name which should be used for this Logic App Integration Account. Changing t
 The name of the Resource Group where the Logic App Integration Account should exist. Changing this forces a new Logic App Integration Account to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationAccountState-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L145">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L145">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1891,7 +1891,7 @@ The name of the Resource Group where the Logic App Integration Account should ex
 The sku name of the Logic App Integration Account. Possible Values are `Basic`, `Free` and `Standard`.
 
 <h4 class="pdoc-member-header" id="IntegrationAccountState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/integrationAccount.ts#L149">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/integrationAccount.ts#L149">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1899,7 +1899,7 @@ The sku name of the Logic App Integration Account. Possible Values are `Basic`, 
 A mapping of tags which should be assigned to the Logic App Integration Account.
 
 <h3 class="pdoc-module-header" id="InterationServiceEnvironmentArgs" data-link-title="InterationServiceEnvironmentArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L256">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L256">
         interface <strong>InterationServiceEnvironmentArgs</strong>
     </a>
 </h3>
@@ -1909,7 +1909,7 @@ A mapping of tags which should be assigned to the Logic App Integration Account.
 The set of arguments for constructing a InterationServiceEnvironment resource.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentArgs-accessEndpointType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L260">property <b>accessEndpointType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L260">property <b>accessEndpointType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessEndpointType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1917,7 +1917,7 @@ The set of arguments for constructing a InterationServiceEnvironment resource.
 The type of access endpoint to use for the Integration Service Environment. Possible Values are `Internal` and `External`. Changing this forces a new Integration Service Environment to be created.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L264">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L264">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1925,7 +1925,7 @@ The type of access endpoint to use for the Integration Service Environment. Poss
 The Azure Region where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L268">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L268">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1933,7 +1933,7 @@ The Azure Region where the Integration Service Environment should exist. Changin
 The name of the Integration Service Environment. Changing this forces a new Integration Service Environment to be created.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L272">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L272">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1941,7 +1941,7 @@ The name of the Integration Service Environment. Changing this forces a new Inte
 The name of the Resource Group where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentArgs-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L276">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L276">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1949,7 +1949,7 @@ The name of the Resource Group where the Integration Service Environment should 
 The sku name and capacity of the Integration Service Environment. Possible Values for `sku` element are `Developer` and `Premium` and possible values for the `capacity` element are from `0` to `10`.  Defaults to `sku` of `Developer` with a `Capacity` of `0` (e.g. `Developer_0`). Changing this forces a new Integration Service Environment to be created when `sku` element is not the same with existing one.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L280">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L280">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1957,7 +1957,7 @@ The sku name and capacity of the Integration Service Environment. Possible Value
 A mapping of tags which should be assigned to the Integration Service Environment.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentArgs-virtualNetworkSubnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L284">property <b>virtualNetworkSubnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L284">property <b>virtualNetworkSubnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>virtualNetworkSubnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1965,7 +1965,7 @@ A mapping of tags which should be assigned to the Integration Service Environmen
 A list of virtual network subnet ids to be used by Integration Service Environment. Exactly four distinct ids to subnets must be provided. Changing this forces a new Integration Service Environment to be created.
 
 <h3 class="pdoc-module-header" id="InterationServiceEnvironmentState" data-link-title="InterationServiceEnvironmentState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L206">
         interface <strong>InterationServiceEnvironmentState</strong>
     </a>
 </h3>
@@ -1975,7 +1975,7 @@ A list of virtual network subnet ids to be used by Integration Service Environme
 Input properties used for looking up and filtering InterationServiceEnvironment resources.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentState-accessEndpointType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L210">property <b>accessEndpointType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L210">property <b>accessEndpointType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessEndpointType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1983,7 +1983,7 @@ Input properties used for looking up and filtering InterationServiceEnvironment 
 The type of access endpoint to use for the Integration Service Environment. Possible Values are `Internal` and `External`. Changing this forces a new Integration Service Environment to be created.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentState-connectorEndpointIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L214">property <b>connectorEndpointIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L214">property <b>connectorEndpointIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectorEndpointIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1991,7 +1991,7 @@ The type of access endpoint to use for the Integration Service Environment. Poss
 The list of access endpoint ip addresses of connector.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentState-connectorOutboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L218">property <b>connectorOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L218">property <b>connectorOutboundIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectorOutboundIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1999,7 +1999,7 @@ The list of access endpoint ip addresses of connector.
 The list of outgoing ip addresses of connector.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L222">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L222">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2007,7 +2007,7 @@ The list of outgoing ip addresses of connector.
 The Azure Region where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L226">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L226">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2015,7 +2015,7 @@ The Azure Region where the Integration Service Environment should exist. Changin
 The name of the Integration Service Environment. Changing this forces a new Integration Service Environment to be created.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L230">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L230">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2023,7 +2023,7 @@ The name of the Integration Service Environment. Changing this forces a new Inte
 The name of the Resource Group where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentState-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L234">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L234">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2031,7 +2031,7 @@ The name of the Resource Group where the Integration Service Environment should 
 The sku name and capacity of the Integration Service Environment. Possible Values for `sku` element are `Developer` and `Premium` and possible values for the `capacity` element are from `0` to `10`.  Defaults to `sku` of `Developer` with a `Capacity` of `0` (e.g. `Developer_0`). Changing this forces a new Integration Service Environment to be created when `sku` element is not the same with existing one.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L238">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L238">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2039,7 +2039,7 @@ The sku name and capacity of the Integration Service Environment. Possible Value
 A mapping of tags which should be assigned to the Integration Service Environment.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentState-virtualNetworkSubnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L242">property <b>virtualNetworkSubnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L242">property <b>virtualNetworkSubnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>virtualNetworkSubnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2047,7 +2047,7 @@ A mapping of tags which should be assigned to the Integration Service Environmen
 A list of virtual network subnet ids to be used by Integration Service Environment. Exactly four distinct ids to subnets must be provided. Changing this forces a new Integration Service Environment to be created.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentState-workflowEndpointIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L246">property <b>workflowEndpointIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L246">property <b>workflowEndpointIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workflowEndpointIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2055,7 +2055,7 @@ A list of virtual network subnet ids to be used by Integration Service Environme
 The list of access endpoint ip addresses of workflow.
 
 <h4 class="pdoc-member-header" id="InterationServiceEnvironmentState-workflowOutboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L250">property <b>workflowOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/interationServiceEnvironment.ts#L250">property <b>workflowOutboundIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workflowOutboundIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2063,7 +2063,7 @@ The list of access endpoint ip addresses of workflow.
 The list of outgoing ip addresses of workflow.
 
 <h3 class="pdoc-module-header" id="TriggerCustomArgs" data-link-title="TriggerCustomArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L142">
         interface <strong>TriggerCustomArgs</strong>
     </a>
 </h3>
@@ -2073,7 +2073,7 @@ The list of outgoing ip addresses of workflow.
 The set of arguments for constructing a TriggerCustom resource.
 
 <h4 class="pdoc-member-header" id="TriggerCustomArgs-body">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L146">property <b>body</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L146">property <b>body</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>body: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2081,7 +2081,7 @@ The set of arguments for constructing a TriggerCustom resource.
 Specifies the JSON Blob defining the Body of this Custom Trigger.
 
 <h4 class="pdoc-member-header" id="TriggerCustomArgs-logicAppId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L150">property <b>logicAppId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L150">property <b>logicAppId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicAppId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2089,7 +2089,7 @@ Specifies the JSON Blob defining the Body of this Custom Trigger.
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TriggerCustomArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L154">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L154">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2097,7 +2097,7 @@ Specifies the ID of the Logic App Workflow. Changing this forces a new resource 
 Specifies the name of the HTTP Trigger to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="TriggerCustomState" data-link-title="TriggerCustomState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L124">
         interface <strong>TriggerCustomState</strong>
     </a>
 </h3>
@@ -2107,7 +2107,7 @@ Specifies the name of the HTTP Trigger to be created within the Logic App Workfl
 Input properties used for looking up and filtering TriggerCustom resources.
 
 <h4 class="pdoc-member-header" id="TriggerCustomState-body">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L128">property <b>body</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L128">property <b>body</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>body?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2115,7 +2115,7 @@ Input properties used for looking up and filtering TriggerCustom resources.
 Specifies the JSON Blob defining the Body of this Custom Trigger.
 
 <h4 class="pdoc-member-header" id="TriggerCustomState-logicAppId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L132">property <b>logicAppId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L132">property <b>logicAppId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicAppId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2123,7 +2123,7 @@ Specifies the JSON Blob defining the Body of this Custom Trigger.
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TriggerCustomState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerCustom.ts#L136">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerCustom.ts#L136">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2131,7 +2131,7 @@ Specifies the ID of the Logic App Workflow. Changing this forces a new resource 
 Specifies the name of the HTTP Trigger to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="TriggerHttpRequestArgs" data-link-title="TriggerHttpRequestArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L163">
         interface <strong>TriggerHttpRequestArgs</strong>
     </a>
 </h3>
@@ -2141,7 +2141,7 @@ Specifies the name of the HTTP Trigger to be created within the Logic App Workfl
 The set of arguments for constructing a TriggerHttpRequest resource.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequestArgs-logicAppId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L167">property <b>logicAppId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L167">property <b>logicAppId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicAppId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2149,7 +2149,7 @@ The set of arguments for constructing a TriggerHttpRequest resource.
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequestArgs-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L171">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L171">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>method?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2157,7 +2157,7 @@ Specifies the ID of the Logic App Workflow. Changing this forces a new resource 
 Specifies the HTTP Method which the request be using. Possible values include `DELETE`, `GET`, `PATCH`, `POST` or `PUT`.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequestArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L175">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L175">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2165,7 +2165,7 @@ Specifies the HTTP Method which the request be using. Possible values include `D
 Specifies the name of the HTTP Request Trigger to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequestArgs-relativePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L179">property <b>relativePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L179">property <b>relativePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relativePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2173,7 +2173,7 @@ Specifies the name of the HTTP Request Trigger to be created within the Logic Ap
 Specifies the Relative Path used for this Request.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequestArgs-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L183">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L183">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2181,7 +2181,7 @@ Specifies the Relative Path used for this Request.
 A JSON Blob defining the Schema of the incoming request. This needs to be valid JSON.
 
 <h3 class="pdoc-module-header" id="TriggerHttpRequestState" data-link-title="TriggerHttpRequestState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L137">
         interface <strong>TriggerHttpRequestState</strong>
     </a>
 </h3>
@@ -2191,7 +2191,7 @@ A JSON Blob defining the Schema of the incoming request. This needs to be valid 
 Input properties used for looking up and filtering TriggerHttpRequest resources.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequestState-logicAppId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L141">property <b>logicAppId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L141">property <b>logicAppId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicAppId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2199,7 +2199,7 @@ Input properties used for looking up and filtering TriggerHttpRequest resources.
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequestState-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L145">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L145">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>method?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2207,7 +2207,7 @@ Specifies the ID of the Logic App Workflow. Changing this forces a new resource 
 Specifies the HTTP Method which the request be using. Possible values include `DELETE`, `GET`, `PATCH`, `POST` or `PUT`.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequestState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L149">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L149">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2215,7 +2215,7 @@ Specifies the HTTP Method which the request be using. Possible values include `D
 Specifies the name of the HTTP Request Trigger to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequestState-relativePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L153">property <b>relativePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L153">property <b>relativePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relativePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2223,7 +2223,7 @@ Specifies the name of the HTTP Request Trigger to be created within the Logic Ap
 Specifies the Relative Path used for this Request.
 
 <h4 class="pdoc-member-header" id="TriggerHttpRequestState-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerHttpRequest.ts#L157">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerHttpRequest.ts#L157">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2231,7 +2231,7 @@ Specifies the Relative Path used for this Request.
 A JSON Blob defining the Schema of the incoming request. This needs to be valid JSON.
 
 <h3 class="pdoc-module-header" id="TriggerRecurrenceArgs" data-link-title="TriggerRecurrenceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L169">
         interface <strong>TriggerRecurrenceArgs</strong>
     </a>
 </h3>
@@ -2241,7 +2241,7 @@ A JSON Blob defining the Schema of the incoming request. This needs to be valid 
 The set of arguments for constructing a TriggerRecurrence resource.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrenceArgs-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L173">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L173">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2249,7 +2249,7 @@ The set of arguments for constructing a TriggerRecurrence resource.
 Specifies the Frequency at which this Trigger should be run. Possible values include `Month`, `Week`, `Day`, `Hour`, `Minute` and `Second`.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrenceArgs-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L177">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L177">property <b>interval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>interval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2257,7 +2257,7 @@ Specifies the Frequency at which this Trigger should be run. Possible values inc
 Specifies interval used for the Frequency, for example a value of `4` for `interval` and `hour` for `frequency` would run the Trigger every 4 hours.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrenceArgs-logicAppId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L181">property <b>logicAppId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L181">property <b>logicAppId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicAppId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2265,7 +2265,7 @@ Specifies interval used for the Frequency, for example a value of `4` for `inter
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrenceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L185">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L185">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2273,7 +2273,7 @@ Specifies the ID of the Logic App Workflow. Changing this forces a new resource 
 Specifies the name of the Recurrence Triggers to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrenceArgs-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L189">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L189">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2281,7 +2281,7 @@ Specifies the name of the Recurrence Triggers to be created within the Logic App
 Specifies the start date and time for this trigger in RFC3339 format: `2000-01-02T03:04:05Z`.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrenceArgs-timeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L193">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L193">property <b>timeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2289,7 +2289,7 @@ Specifies the start date and time for this trigger in RFC3339 format: `2000-01-0
 Specifies the time zone for this trigger.  Supported time zone options are listed [here](https://support.microsoft.com/en-us/help/973627/microsoft-time-zone-index-values)
 
 <h3 class="pdoc-module-header" id="TriggerRecurrenceState" data-link-title="TriggerRecurrenceState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L139">
         interface <strong>TriggerRecurrenceState</strong>
     </a>
 </h3>
@@ -2299,7 +2299,7 @@ Specifies the time zone for this trigger.  Supported time zone options are liste
 Input properties used for looking up and filtering TriggerRecurrence resources.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrenceState-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L143">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L143">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2307,7 +2307,7 @@ Input properties used for looking up and filtering TriggerRecurrence resources.
 Specifies the Frequency at which this Trigger should be run. Possible values include `Month`, `Week`, `Day`, `Hour`, `Minute` and `Second`.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrenceState-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L147">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L147">property <b>interval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>interval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2315,7 +2315,7 @@ Specifies the Frequency at which this Trigger should be run. Possible values inc
 Specifies interval used for the Frequency, for example a value of `4` for `interval` and `hour` for `frequency` would run the Trigger every 4 hours.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrenceState-logicAppId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L151">property <b>logicAppId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L151">property <b>logicAppId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicAppId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2323,7 +2323,7 @@ Specifies interval used for the Frequency, for example a value of `4` for `inter
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrenceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L155">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L155">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2331,7 +2331,7 @@ Specifies the ID of the Logic App Workflow. Changing this forces a new resource 
 Specifies the name of the Recurrence Triggers to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrenceState-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L159">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L159">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2339,7 +2339,7 @@ Specifies the name of the Recurrence Triggers to be created within the Logic App
 Specifies the start date and time for this trigger in RFC3339 format: `2000-01-02T03:04:05Z`.
 
 <h4 class="pdoc-member-header" id="TriggerRecurrenceState-timeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/triggerRecurrence.ts#L163">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/triggerRecurrence.ts#L163">property <b>timeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2347,7 +2347,7 @@ Specifies the start date and time for this trigger in RFC3339 format: `2000-01-0
 Specifies the time zone for this trigger.  Supported time zone options are listed [here](https://support.microsoft.com/en-us/help/973627/microsoft-time-zone-index-values)
 
 <h3 class="pdoc-module-header" id="WorkflowArgs" data-link-title="WorkflowArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L238">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L238">
         interface <strong>WorkflowArgs</strong>
     </a>
 </h3>
@@ -2357,7 +2357,7 @@ Specifies the time zone for this trigger.  Supported time zone options are liste
 The set of arguments for constructing a Workflow resource.
 
 <h4 class="pdoc-member-header" id="WorkflowArgs-integrationServiceEnvironmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L242">property <b>integrationServiceEnvironmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L242">property <b>integrationServiceEnvironmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationServiceEnvironmentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2365,7 +2365,7 @@ The set of arguments for constructing a Workflow resource.
 The ID of the Integration Service Environment to which this Logic App Workflow belongs.  Changing this forces a new Logic App Workflow to be created.
 
 <h4 class="pdoc-member-header" id="WorkflowArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L246">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L246">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2373,7 +2373,7 @@ The ID of the Integration Service Environment to which this Logic App Workflow b
 Specifies the supported Azure location where the Logic App Workflow exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkflowArgs-logicAppIntegrationAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L250">property <b>logicAppIntegrationAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L250">property <b>logicAppIntegrationAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicAppIntegrationAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2381,7 +2381,7 @@ Specifies the supported Azure location where the Logic App Workflow exists. Chan
 The ID of the integration account linked by this Logic App Workflow.
 
 <h4 class="pdoc-member-header" id="WorkflowArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L254">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L254">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2389,7 +2389,7 @@ The ID of the integration account linked by this Logic App Workflow.
 Specifies the name of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkflowArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L258">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L258">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2397,7 +2397,7 @@ Specifies the name of the Logic App Workflow. Changing this forces a new resourc
 A map of Key-Value pairs.
 
 <h4 class="pdoc-member-header" id="WorkflowArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L262">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L262">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2405,7 +2405,7 @@ A map of Key-Value pairs.
 The name of the Resource Group in which the Logic App Workflow should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkflowArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L266">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L266">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2413,7 +2413,7 @@ The name of the Resource Group in which the Logic App Workflow should be created
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="WorkflowArgs-workflowSchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L270">property <b>workflowSchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L270">property <b>workflowSchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workflowSchema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2421,7 +2421,7 @@ A mapping of tags to assign to the resource.
 Specifies the Schema to use for this Logic App Workflow. Defaults to `https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkflowArgs-workflowVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L274">property <b>workflowVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L274">property <b>workflowVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workflowVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2429,7 +2429,7 @@ Specifies the Schema to use for this Logic App Workflow. Defaults to `https://sc
 Specifies the version of the Schema used for this Logic App Workflow. Defaults to `1.0.0.0`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="WorkflowState" data-link-title="WorkflowState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L176">
         interface <strong>WorkflowState</strong>
     </a>
 </h3>
@@ -2439,7 +2439,7 @@ Specifies the version of the Schema used for this Logic App Workflow. Defaults t
 Input properties used for looking up and filtering Workflow resources.
 
 <h4 class="pdoc-member-header" id="WorkflowState-accessEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L180">property <b>accessEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L180">property <b>accessEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2447,7 +2447,7 @@ Input properties used for looking up and filtering Workflow resources.
 The Access Endpoint for the Logic App Workflow.
 
 <h4 class="pdoc-member-header" id="WorkflowState-connectorEndpointIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L184">property <b>connectorEndpointIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L184">property <b>connectorEndpointIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectorEndpointIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2455,7 +2455,7 @@ The Access Endpoint for the Logic App Workflow.
 The list of access endpoint ip addresses of connector.
 
 <h4 class="pdoc-member-header" id="WorkflowState-connectorOutboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L188">property <b>connectorOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L188">property <b>connectorOutboundIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectorOutboundIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2463,7 +2463,7 @@ The list of access endpoint ip addresses of connector.
 The list of outgoing ip addresses of connector.
 
 <h4 class="pdoc-member-header" id="WorkflowState-integrationServiceEnvironmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L192">property <b>integrationServiceEnvironmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L192">property <b>integrationServiceEnvironmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationServiceEnvironmentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2471,7 +2471,7 @@ The list of outgoing ip addresses of connector.
 The ID of the Integration Service Environment to which this Logic App Workflow belongs.  Changing this forces a new Logic App Workflow to be created.
 
 <h4 class="pdoc-member-header" id="WorkflowState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L196">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L196">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2479,7 +2479,7 @@ The ID of the Integration Service Environment to which this Logic App Workflow b
 Specifies the supported Azure location where the Logic App Workflow exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkflowState-logicAppIntegrationAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L200">property <b>logicAppIntegrationAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L200">property <b>logicAppIntegrationAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicAppIntegrationAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2487,7 +2487,7 @@ Specifies the supported Azure location where the Logic App Workflow exists. Chan
 The ID of the integration account linked by this Logic App Workflow.
 
 <h4 class="pdoc-member-header" id="WorkflowState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L204">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L204">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2495,7 +2495,7 @@ The ID of the integration account linked by this Logic App Workflow.
 Specifies the name of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkflowState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L208">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L208">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2503,7 +2503,7 @@ Specifies the name of the Logic App Workflow. Changing this forces a new resourc
 A map of Key-Value pairs.
 
 <h4 class="pdoc-member-header" id="WorkflowState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L212">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L212">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2511,7 +2511,7 @@ A map of Key-Value pairs.
 The name of the Resource Group in which the Logic App Workflow should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkflowState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L216">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L216">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2519,7 +2519,7 @@ The name of the Resource Group in which the Logic App Workflow should be created
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="WorkflowState-workflowEndpointIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L220">property <b>workflowEndpointIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L220">property <b>workflowEndpointIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workflowEndpointIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2527,7 +2527,7 @@ A mapping of tags to assign to the resource.
 The list of access endpoint ip addresses of workflow.
 
 <h4 class="pdoc-member-header" id="WorkflowState-workflowOutboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L224">property <b>workflowOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L224">property <b>workflowOutboundIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workflowOutboundIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2535,7 +2535,7 @@ The list of access endpoint ip addresses of workflow.
 The list of outgoing ip addresses of workflow.
 
 <h4 class="pdoc-member-header" id="WorkflowState-workflowSchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L228">property <b>workflowSchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L228">property <b>workflowSchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workflowSchema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2543,7 +2543,7 @@ The list of outgoing ip addresses of workflow.
 Specifies the Schema to use for this Logic App Workflow. Defaults to `https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkflowState-workflowVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/logicapps/workflow.ts#L232">property <b>workflowVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/logicapps/workflow.ts#L232">property <b>workflowVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workflowVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

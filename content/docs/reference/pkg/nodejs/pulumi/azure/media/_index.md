@@ -3,7 +3,7 @@ title: "Module media"
 title_tag: "Module media | Package @pulumi/azure | Node.js SDK"
 linktitle: "media"
 meta_desc: "Explore members of the media module in the @pulumi/azure package."
-git_sha: "ddb23e43788a327f80b21bf9dceb8eafe16876eb"
+git_sha: "9cb63907202e7b738279a1e51fb2090fbc75fa2c"
 block_external_search_index: true
 ---
 
@@ -51,7 +51,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Asset" data-link-title="Asset">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L46">
         Resource <strong>Asset</strong>
     </a>
 </h3>
@@ -97,7 +97,7 @@ Media Assets can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Asset-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L101"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L101"> <b>constructor</b></a>
 </h4>
 
 
@@ -111,7 +111,7 @@ Create a Asset resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Asset-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -122,14 +122,14 @@ Get an existing Asset resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Asset-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Asset-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -140,7 +140,7 @@ Returns true if the given object is an instance of Asset.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Asset-alternateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L77">property <b>alternateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L77">property <b>alternateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alternateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -148,7 +148,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The alternate ID of the Asset.
 
 <h4 class="pdoc-member-header" id="Asset-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L81">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L81">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>container: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -156,7 +156,7 @@ The alternate ID of the Asset.
 The name of the asset blob container. Changing this forces a new Media Asset to be created.
 
 <h4 class="pdoc-member-header" id="Asset-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L85">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L85">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ The name of the asset blob container. Changing this forces a new Media Asset to 
 The Asset description.
 
 <h4 class="pdoc-member-header" id="Asset-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -173,7 +173,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Asset-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L89">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L89">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mediaServicesAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -181,7 +181,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the Media Services Account. Changing this forces a new Media Asset to be created.
 
 <h4 class="pdoc-member-header" id="Asset-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L93">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -189,7 +189,7 @@ Specifies the name of the Media Services Account. Changing this forces a new Med
 The name which should be used for this Media Asset. Changing this forces a new Media Asset to be created.
 
 <h4 class="pdoc-member-header" id="Asset-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L97">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L97">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -197,7 +197,7 @@ The name which should be used for this Media Asset. Changing this forces a new M
 The name of the Resource Group where the Media Asset should exist. Changing this forces a new Media Asset to be created.
 
 <h4 class="pdoc-member-header" id="Asset-storageAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L101">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L101">property <b>storageAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -205,7 +205,7 @@ The name of the Resource Group where the Media Asset should exist. Changing this
 The name of the storage account where to store the media asset. Changing this forces a new Media Asset to be created.
 
 <h4 class="pdoc-member-header" id="Asset-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -214,7 +214,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ContentKeyPolicy" data-link-title="ContentKeyPolicy">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L110">
         Resource <strong>ContentKeyPolicy</strong>
     </a>
 </h3>
@@ -323,7 +323,7 @@ Resource Groups can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L157"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L157"> <b>constructor</b></a>
 </h4>
 
 
@@ -337,7 +337,7 @@ Create a ContentKeyPolicy resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L120">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L120">method <b>get</b></a>
 </h4>
 
 
@@ -348,14 +348,14 @@ Get an existing ContentKeyPolicy resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L110">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L110">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L131">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L131">method <b>isInstance</b></a>
 </h4>
 
 
@@ -366,7 +366,7 @@ Returns true if the given object is an instance of ContentKeyPolicy.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L141">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L141">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -374,7 +374,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A description for the Policy.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L110">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L110">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -383,7 +383,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicy-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L145">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L145">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mediaServicesAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -391,7 +391,7 @@ deployments and may be missing (undefined) during planning phases.
 The Media Services account name. Changing this forces a new Content Key Policy to be created.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L149">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L149">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -399,7 +399,7 @@ The Media Services account name. Changing this forces a new Content Key Policy t
 The name which should be used for this Content Key Policy. Changing this forces a new Content Key Policy to be created.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicy-policyOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L153">property <b>policyOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L153">property <b>policyOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ContentKeyPolicyPolicyOption'>ContentKeyPolicyPolicyOption</a>[]&gt;;</code></pre>
@@ -407,7 +407,7 @@ The name which should be used for this Content Key Policy. Changing this forces 
 One or more `policyOption` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicy-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L157">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L157">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -415,7 +415,7 @@ One or more `policyOption` blocks as defined below.
 The name of the Resource Group where the Content Key Policy should exist. Changing this forces a new Content Key Policy to be created.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L110">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L110">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -424,7 +424,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Job" data-link-title="Job">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L77">
         Resource <strong>Job</strong>
     </a>
 </h3>
@@ -500,7 +500,7 @@ Media Jobs can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Job-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L136"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L136"> <b>constructor</b></a>
 </h4>
 
 
@@ -514,7 +514,7 @@ Create a Job resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Job-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L87">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L87">method <b>get</b></a>
 </h4>
 
 
@@ -525,14 +525,14 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Job-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L77">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L77">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Job-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L98">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L98">method <b>isInstance</b></a>
 </h4>
 
 
@@ -543,7 +543,7 @@ Returns true if the given object is an instance of Job.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Job-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L108">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L108">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -551,7 +551,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Optional customer supplied description of the Job.
 
 <h4 class="pdoc-member-header" id="Job-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L77">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -560,7 +560,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Job-inputAsset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L112">property <b>inputAsset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L112">property <b>inputAsset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputAsset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobInputAsset'>JobInputAsset</a>&gt;;</code></pre>
@@ -568,7 +568,7 @@ deployments and may be missing (undefined) during planning phases.
 A `inputAsset` block as defined below. Changing this forces a new Media Job to be created.
 
 <h4 class="pdoc-member-header" id="Job-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L116">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L116">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mediaServicesAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -576,7 +576,7 @@ A `inputAsset` block as defined below. Changing this forces a new Media Job to b
 The Media Services account name. Changing this forces a new Transform to be created.
 
 <h4 class="pdoc-member-header" id="Job-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L120">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L120">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -584,7 +584,7 @@ The Media Services account name. Changing this forces a new Transform to be crea
 The name which should be used for this Media Job. Changing this forces a new Media Job to be created.
 
 <h4 class="pdoc-member-header" id="Job-outputAssets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L124">property <b>outputAssets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L124">property <b>outputAssets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outputAssets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobOutputAsset'>JobOutputAsset</a>[]&gt;;</code></pre>
@@ -592,7 +592,7 @@ The name which should be used for this Media Job. Changing this forces a new Med
 One or more `outputAsset` blocks as defined below. Changing this forces a new Media Job to be created.
 
 <h4 class="pdoc-member-header" id="Job-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L128">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L128">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -600,7 +600,7 @@ One or more `outputAsset` blocks as defined below. Changing this forces a new Me
 Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal. Changing this forces a new Media Job to be created.
 
 <h4 class="pdoc-member-header" id="Job-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L132">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L132">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -608,7 +608,7 @@ Priority with which the job should be processed. Higher priority jobs are proces
 The name of the Resource Group where the Media Job should exist. Changing this forces a new Media Job to be created.
 
 <h4 class="pdoc-member-header" id="Job-transformName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L136">property <b>transformName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L136">property <b>transformName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transformName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -616,7 +616,7 @@ The name of the Resource Group where the Media Job should exist. Changing this f
 The Transform name. Changing this forces a new Media Job to be created.
 
 <h4 class="pdoc-member-header" id="Job-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L77">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L77">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -625,7 +625,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServiceAccount" data-link-title="ServiceAccount">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L42">
         Resource <strong>ServiceAccount</strong>
     </a>
 </h3>
@@ -666,7 +666,7 @@ Media Services Accounts can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ServiceAccount-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L99"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L99"> <b>constructor</b></a>
 </h4>
 
 
@@ -680,7 +680,7 @@ Create a ServiceAccount resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceAccount-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -691,14 +691,14 @@ Get an existing ServiceAccount resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceAccount-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceAccount-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -709,7 +709,7 @@ Returns true if the given object is an instance of ServiceAccount.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceAccount-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -718,7 +718,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceAccount-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L73">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L73">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceAccountIdentity'>ServiceAccountIdentity</a>&gt;;</code></pre>
@@ -726,7 +726,7 @@ deployments and may be missing (undefined) during planning phases.
 An `identity` block is documented below.
 
 <h4 class="pdoc-member-header" id="ServiceAccount-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L77">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L77">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -734,7 +734,7 @@ An `identity` block is documented below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceAccount-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -742,7 +742,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Media Services Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceAccount-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L85">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L85">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -750,7 +750,7 @@ Specifies the name of the Media Services Account. Changing this forces a new res
 The name of the resource group in which to create the Media Services Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceAccount-storageAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L89">property <b>storageAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L89">property <b>storageAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceAccountStorageAccount'>ServiceAccountStorageAccount</a>[]&gt;;</code></pre>
@@ -758,7 +758,7 @@ The name of the resource group in which to create the Media Services Account. Ch
 One or more `storageAccount` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceAccount-storageAuthenticationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L94">property <b>storageAuthenticationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L94">property <b>storageAuthenticationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAuthenticationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -767,7 +767,7 @@ Specifies the storage authentication type.
 Possible value is  `ManagedIdentity` or `System`.
 
 <h4 class="pdoc-member-header" id="ServiceAccount-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L99">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L99">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -776,7 +776,7 @@ A mapping of tags assigned to the resource.
 ---
 
 <h4 class="pdoc-member-header" id="ServiceAccount-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -785,7 +785,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="StreamingEndpoint" data-link-title="StreamingEndpoint">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L100">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L100">
         Resource <strong>StreamingEndpoint</strong>
     </a>
 </h3>
@@ -884,7 +884,7 @@ Streaming Endpoints can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L187"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L187"> <b>constructor</b></a>
 </h4>
 
 
@@ -898,7 +898,7 @@ Create a StreamingEndpoint resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L110">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L110">method <b>get</b></a>
 </h4>
 
 
@@ -909,14 +909,14 @@ Get an existing StreamingEndpoint resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L100">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L100">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L121">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L121">method <b>isInstance</b></a>
 </h4>
 
 
@@ -927,7 +927,7 @@ Returns true if the given object is an instance of StreamingEndpoint.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-accessControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L131">property <b>accessControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L131">property <b>accessControl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessControl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamingEndpointAccessControl'>StreamingEndpointAccessControl</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -935,7 +935,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A `accessControl` block as defined below.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-autoStartEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L135">property <b>autoStartEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L135">property <b>autoStartEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoStartEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -943,7 +943,7 @@ A `accessControl` block as defined below.
 The flag indicates if the resource should be automatically started on creation.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-cdnEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L139">property <b>cdnEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L139">property <b>cdnEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cdnEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -951,7 +951,7 @@ The flag indicates if the resource should be automatically started on creation.
 The CDN enabled flag.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-cdnProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L143">property <b>cdnProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L143">property <b>cdnProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cdnProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -959,7 +959,7 @@ The CDN enabled flag.
 The CDN profile name.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-cdnProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L147">property <b>cdnProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L147">property <b>cdnProvider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cdnProvider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -967,7 +967,7 @@ The CDN profile name.
 The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` and `StandardAkamai`
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-crossSiteAccessPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L151">property <b>crossSiteAccessPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L151">property <b>crossSiteAccessPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>crossSiteAccessPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamingEndpointCrossSiteAccessPolicy'>StreamingEndpointCrossSiteAccessPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -975,7 +975,7 @@ The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` an
 A `crossSiteAccessPolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-customHostNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L155">property <b>customHostNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L155">property <b>customHostNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customHostNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -983,7 +983,7 @@ A `crossSiteAccessPolicy` block as defined below.
 The custom host names of the streaming endpoint.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L159">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L159">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -991,7 +991,7 @@ The custom host names of the streaming endpoint.
 The streaming endpoint description.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L100">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L100">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1000,7 +1000,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L163">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L163">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1008,7 +1008,7 @@ deployments and may be missing (undefined) during planning phases.
 The Azure Region where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-maxCacheAgeSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L167">property <b>maxCacheAgeSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L167">property <b>maxCacheAgeSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxCacheAgeSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1016,7 +1016,7 @@ The Azure Region where the Streaming Endpoint should exist. Changing this forces
 Max cache age in seconds.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L171">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L171">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mediaServicesAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1024,7 +1024,7 @@ Max cache age in seconds.
 The Media Services account name. Changing this forces a new Streaming Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L175">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L175">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1032,7 +1032,7 @@ The Media Services account name. Changing this forces a new Streaming Endpoint t
 The name which should be used for this Streaming Endpoint maximum length is 24. Changing this forces a new Streaming Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L179">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L179">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1040,7 +1040,7 @@ The name which should be used for this Streaming Endpoint maximum length is 24. 
 The name of the Resource Group where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-scaleUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L183">property <b>scaleUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L183">property <b>scaleUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scaleUnits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1048,7 +1048,7 @@ The name of the Resource Group where the Streaming Endpoint should exist. Changi
 The number of scale units.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L187">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L187">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1056,7 +1056,7 @@ The number of scale units.
 A mapping of tags which should be assigned to the Streaming Endpoint.
 
 <h4 class="pdoc-member-header" id="StreamingEndpoint-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L100">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L100">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1065,7 +1065,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="StreamingLocator" data-link-title="StreamingLocator">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L53">
         Resource <strong>StreamingLocator</strong>
     </a>
 </h3>
@@ -1117,7 +1117,7 @@ Streaming Locators can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="StreamingLocator-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L124"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L124"> <b>constructor</b></a>
 </h4>
 
 
@@ -1131,7 +1131,7 @@ Create a StreamingLocator resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="StreamingLocator-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L63">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L63">method <b>get</b></a>
 </h4>
 
 
@@ -1142,14 +1142,14 @@ Get an existing StreamingLocator resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="StreamingLocator-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L53">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L53">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StreamingLocator-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L74">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L74">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1160,7 +1160,7 @@ Returns true if the given object is an instance of StreamingLocator.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StreamingLocator-alternativeMediaId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L84">property <b>alternativeMediaId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L84">property <b>alternativeMediaId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alternativeMediaId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1168,7 +1168,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Alternative Media ID of this Streaming Locator. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocator-assetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L88">property <b>assetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L88">property <b>assetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1176,7 +1176,7 @@ Alternative Media ID of this Streaming Locator. Changing this forces a new Strea
 Asset Name. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocator-contentKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L92">property <b>contentKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L92">property <b>contentKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamingLocatorContentKey'>StreamingLocatorContentKey</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1184,7 +1184,7 @@ Asset Name. Changing this forces a new Streaming Locator to be created.
 One or more `contentKey` blocks as defined below. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocator-defaultContentKeyPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L96">property <b>defaultContentKeyPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L96">property <b>defaultContentKeyPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultContentKeyPolicyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1192,7 +1192,7 @@ One or more `contentKey` blocks as defined below. Changing this forces a new Str
 Name of the default Content Key Policy used by this Streaming Locator.Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocator-endTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L100">property <b>endTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L100">property <b>endTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1200,7 +1200,7 @@ Name of the default Content Key Policy used by this Streaming Locator.Changing t
 The end time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocator-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1209,7 +1209,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="StreamingLocator-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L104">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L104">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mediaServicesAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1217,7 +1217,7 @@ deployments and may be missing (undefined) during planning phases.
 The Media Services account name. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocator-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L108">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L108">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1225,7 +1225,7 @@ The Media Services account name. Changing this forces a new Streaming Locator to
 The name which should be used for this Streaming Locator. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocator-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L112">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L112">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1233,7 +1233,7 @@ The name which should be used for this Streaming Locator. Changing this forces a
 The name of the Resource Group where the Streaming Locator should exist. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocator-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L116">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L116">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>startTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1241,7 +1241,7 @@ The name of the Resource Group where the Streaming Locator should exist. Changin
 The start time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocator-streamingLocatorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L120">property <b>streamingLocatorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L120">property <b>streamingLocatorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streamingLocatorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1249,7 +1249,7 @@ The start time of the Streaming Locator. Changing this forces a new Streaming Lo
 The ID of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocator-streamingPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L124">property <b>streamingPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L124">property <b>streamingPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streamingPolicyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1257,7 +1257,7 @@ The ID of the Streaming Locator. Changing this forces a new Streaming Locator to
 Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: `Predefined_DownloadOnly`, `Predefined_ClearStreamingOnly`, `Predefined_DownloadAndClearStreaming`, `Predefined_ClearKey`, `Predefined_MultiDrmCencStreaming` and `Predefined_MultiDrmStreaming`. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocator-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L53">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L53">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1266,7 +1266,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="StreamingPolicy" data-link-title="StreamingPolicy">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L71">
         Resource <strong>StreamingPolicy</strong>
     </a>
 </h3>
@@ -1336,7 +1336,7 @@ Streaming Policys can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="StreamingPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L126"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L126"> <b>constructor</b></a>
 </h4>
 
 
@@ -1350,7 +1350,7 @@ Create a StreamingPolicy resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="StreamingPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L81">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L81">method <b>get</b></a>
 </h4>
 
 
@@ -1361,14 +1361,14 @@ Get an existing StreamingPolicy resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="StreamingPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L71">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L71">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StreamingPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L92">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L92">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1379,7 +1379,7 @@ Returns true if the given object is an instance of StreamingPolicy.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StreamingPolicy-commonEncryptionCbcs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L102">property <b>commonEncryptionCbcs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L102">property <b>commonEncryptionCbcs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>commonEncryptionCbcs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamingPolicyCommonEncryptionCbcs'>StreamingPolicyCommonEncryptionCbcs</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1387,7 +1387,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A `commonEncryptionCbcs` block as defined below. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicy-commonEncryptionCenc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L106">property <b>commonEncryptionCenc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L106">property <b>commonEncryptionCenc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>commonEncryptionCenc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamingPolicyCommonEncryptionCenc'>StreamingPolicyCommonEncryptionCenc</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1395,7 +1395,7 @@ A `commonEncryptionCbcs` block as defined below. Changing this forces a new Stre
 A `commonEncryptionCenc` block as defined below. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicy-defaultContentKeyPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L110">property <b>defaultContentKeyPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L110">property <b>defaultContentKeyPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultContentKeyPolicyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1403,7 +1403,7 @@ A `commonEncryptionCenc` block as defined below. Changing this forces a new Stre
 Default Content Key used by current Streaming Policy. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1412,7 +1412,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="StreamingPolicy-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L114">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L114">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mediaServicesAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1420,7 +1420,7 @@ deployments and may be missing (undefined) during planning phases.
 The Media Services account name. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L118">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L118">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1428,7 +1428,7 @@ The Media Services account name. Changing this forces a new Streaming Policy to 
 The name which should be used for this Streaming Policy. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicy-noEncryptionEnabledProtocols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L122">property <b>noEncryptionEnabledProtocols</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L122">property <b>noEncryptionEnabledProtocols</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>noEncryptionEnabledProtocols: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamingPolicyNoEncryptionEnabledProtocols'>StreamingPolicyNoEncryptionEnabledProtocols</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1436,7 +1436,7 @@ The name which should be used for this Streaming Policy. Changing this forces a 
 A `noEncryptionEnabledProtocols` block as defined below. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicy-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L126">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L126">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1444,7 +1444,7 @@ A `noEncryptionEnabledProtocols` block as defined below. Changing this forces a 
 The name of the Resource Group where the Streaming Policy should exist. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L71">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L71">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1453,7 +1453,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Transform" data-link-title="Transform">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L105">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L105">
         Resource <strong>Transform</strong>
     </a>
 </h3>
@@ -1557,7 +1557,7 @@ Transforms can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Transform-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L152"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L152"> <b>constructor</b></a>
 </h4>
 
 
@@ -1571,7 +1571,7 @@ Create a Transform resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Transform-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L115">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L115">method <b>get</b></a>
 </h4>
 
 
@@ -1582,14 +1582,14 @@ Get an existing Transform resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Transform-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L105">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L105">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Transform-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L126">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L126">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1600,7 +1600,7 @@ Returns true if the given object is an instance of Transform.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Transform-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L136">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L136">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1608,7 +1608,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 An optional verbose description of the Transform.
 
 <h4 class="pdoc-member-header" id="Transform-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L105">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L105">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1617,7 +1617,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Transform-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L140">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L140">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mediaServicesAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1625,7 +1625,7 @@ deployments and may be missing (undefined) during planning phases.
 The Media Services account name. Changing this forces a new Transform to be created.
 
 <h4 class="pdoc-member-header" id="Transform-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L144">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1633,7 +1633,7 @@ The Media Services account name. Changing this forces a new Transform to be crea
 The name which should be used for this Transform. Changing this forces a new Transform to be created.
 
 <h4 class="pdoc-member-header" id="Transform-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L148">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L148">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TransformOutput'>TransformOutput</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1641,7 +1641,7 @@ The name which should be used for this Transform. Changing this forces a new Tra
 One or more `output` blocks as defined below. At least one `output` must be defined.
 
 <h4 class="pdoc-member-header" id="Transform-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L152">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L152">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1649,7 +1649,7 @@ One or more `output` blocks as defined below. At least one `output` must be defi
 The name of the Resource Group where the Transform should exist. Changing this forces a new Transform to be created.
 
 <h4 class="pdoc-member-header" id="Transform-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L105">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L105">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1661,7 +1661,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AssetArgs" data-link-title="AssetArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L186">
         interface <strong>AssetArgs</strong>
     </a>
 </h3>
@@ -1671,7 +1671,7 @@ deployments.
 The set of arguments for constructing a Asset resource.
 
 <h4 class="pdoc-member-header" id="AssetArgs-alternateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L190">property <b>alternateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L190">property <b>alternateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alternateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1679,7 +1679,7 @@ The set of arguments for constructing a Asset resource.
 The alternate ID of the Asset.
 
 <h4 class="pdoc-member-header" id="AssetArgs-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L194">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L194">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>container?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1687,7 +1687,7 @@ The alternate ID of the Asset.
 The name of the asset blob container. Changing this forces a new Media Asset to be created.
 
 <h4 class="pdoc-member-header" id="AssetArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L198">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L198">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1695,7 +1695,7 @@ The name of the asset blob container. Changing this forces a new Media Asset to 
 The Asset description.
 
 <h4 class="pdoc-member-header" id="AssetArgs-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L202">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L202">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaServicesAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1703,7 +1703,7 @@ The Asset description.
 Specifies the name of the Media Services Account. Changing this forces a new Media Asset to be created.
 
 <h4 class="pdoc-member-header" id="AssetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L206">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L206">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1711,7 +1711,7 @@ Specifies the name of the Media Services Account. Changing this forces a new Med
 The name which should be used for this Media Asset. Changing this forces a new Media Asset to be created.
 
 <h4 class="pdoc-member-header" id="AssetArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L210">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L210">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1719,7 +1719,7 @@ The name which should be used for this Media Asset. Changing this forces a new M
 The name of the Resource Group where the Media Asset should exist. Changing this forces a new Media Asset to be created.
 
 <h4 class="pdoc-member-header" id="AssetArgs-storageAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L214">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L214">property <b>storageAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1727,7 +1727,7 @@ The name of the Resource Group where the Media Asset should exist. Changing this
 The name of the storage account where to store the media asset. Changing this forces a new Media Asset to be created.
 
 <h3 class="pdoc-module-header" id="AssetState" data-link-title="AssetState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L152">
         interface <strong>AssetState</strong>
     </a>
 </h3>
@@ -1737,7 +1737,7 @@ The name of the storage account where to store the media asset. Changing this fo
 Input properties used for looking up and filtering Asset resources.
 
 <h4 class="pdoc-member-header" id="AssetState-alternateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L156">property <b>alternateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L156">property <b>alternateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alternateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1745,7 +1745,7 @@ Input properties used for looking up and filtering Asset resources.
 The alternate ID of the Asset.
 
 <h4 class="pdoc-member-header" id="AssetState-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L160">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L160">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>container?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1753,7 +1753,7 @@ The alternate ID of the Asset.
 The name of the asset blob container. Changing this forces a new Media Asset to be created.
 
 <h4 class="pdoc-member-header" id="AssetState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L164">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L164">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1761,7 +1761,7 @@ The name of the asset blob container. Changing this forces a new Media Asset to 
 The Asset description.
 
 <h4 class="pdoc-member-header" id="AssetState-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L168">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L168">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaServicesAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1769,7 +1769,7 @@ The Asset description.
 Specifies the name of the Media Services Account. Changing this forces a new Media Asset to be created.
 
 <h4 class="pdoc-member-header" id="AssetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L172">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L172">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1777,7 +1777,7 @@ Specifies the name of the Media Services Account. Changing this forces a new Med
 The name which should be used for this Media Asset. Changing this forces a new Media Asset to be created.
 
 <h4 class="pdoc-member-header" id="AssetState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L176">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L176">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1785,7 +1785,7 @@ The name which should be used for this Media Asset. Changing this forces a new M
 The name of the Resource Group where the Media Asset should exist. Changing this forces a new Media Asset to be created.
 
 <h4 class="pdoc-member-header" id="AssetState-storageAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/asset.ts#L180">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/asset.ts#L180">property <b>storageAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1793,7 +1793,7 @@ The name of the Resource Group where the Media Asset should exist. Changing this
 The name of the storage account where to store the media asset. Changing this forces a new Media Asset to be created.
 
 <h3 class="pdoc-module-header" id="ContentKeyPolicyArgs" data-link-title="ContentKeyPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L233">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L233">
         interface <strong>ContentKeyPolicyArgs</strong>
     </a>
 </h3>
@@ -1803,7 +1803,7 @@ The name of the storage account where to store the media asset. Changing this fo
 The set of arguments for constructing a ContentKeyPolicy resource.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L237">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L237">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1811,7 +1811,7 @@ The set of arguments for constructing a ContentKeyPolicy resource.
 A description for the Policy.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicyArgs-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L241">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L241">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaServicesAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1819,7 +1819,7 @@ A description for the Policy.
 The Media Services account name. Changing this forces a new Content Key Policy to be created.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L245">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L245">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1827,7 +1827,7 @@ The Media Services account name. Changing this forces a new Content Key Policy t
 The name which should be used for this Content Key Policy. Changing this forces a new Content Key Policy to be created.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicyArgs-policyOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L249">property <b>policyOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L249">property <b>policyOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ContentKeyPolicyPolicyOption'>ContentKeyPolicyPolicyOption</a>&gt;[]&gt;;</code></pre>
@@ -1835,7 +1835,7 @@ The name which should be used for this Content Key Policy. Changing this forces 
 One or more `policyOption` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicyArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L253">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L253">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1843,7 +1843,7 @@ One or more `policyOption` blocks as defined below.
 The name of the Resource Group where the Content Key Policy should exist. Changing this forces a new Content Key Policy to be created.
 
 <h3 class="pdoc-module-header" id="ContentKeyPolicyState" data-link-title="ContentKeyPolicyState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L207">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L207">
         interface <strong>ContentKeyPolicyState</strong>
     </a>
 </h3>
@@ -1853,7 +1853,7 @@ The name of the Resource Group where the Content Key Policy should exist. Changi
 Input properties used for looking up and filtering ContentKeyPolicy resources.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L211">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L211">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1861,7 +1861,7 @@ Input properties used for looking up and filtering ContentKeyPolicy resources.
 A description for the Policy.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicyState-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L215">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L215">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaServicesAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1869,7 +1869,7 @@ A description for the Policy.
 The Media Services account name. Changing this forces a new Content Key Policy to be created.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L219">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L219">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1877,7 +1877,7 @@ The Media Services account name. Changing this forces a new Content Key Policy t
 The name which should be used for this Content Key Policy. Changing this forces a new Content Key Policy to be created.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicyState-policyOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L223">property <b>policyOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L223">property <b>policyOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ContentKeyPolicyPolicyOption'>ContentKeyPolicyPolicyOption</a>&gt;[]&gt;;</code></pre>
@@ -1885,7 +1885,7 @@ The name which should be used for this Content Key Policy. Changing this forces 
 One or more `policyOption` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ContentKeyPolicyState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/contentKeyPolicy.ts#L227">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/contentKeyPolicy.ts#L227">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1893,7 +1893,7 @@ One or more `policyOption` blocks as defined below.
 The name of the Resource Group where the Content Key Policy should exist. Changing this forces a new Content Key Policy to be created.
 
 <h3 class="pdoc-module-header" id="JobArgs" data-link-title="JobArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L236">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L236">
         interface <strong>JobArgs</strong>
     </a>
 </h3>
@@ -1903,7 +1903,7 @@ The name of the Resource Group where the Content Key Policy should exist. Changi
 The set of arguments for constructing a Job resource.
 
 <h4 class="pdoc-member-header" id="JobArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L240">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L240">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1911,7 +1911,7 @@ The set of arguments for constructing a Job resource.
 Optional customer supplied description of the Job.
 
 <h4 class="pdoc-member-header" id="JobArgs-inputAsset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L244">property <b>inputAsset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L244">property <b>inputAsset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputAsset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobInputAsset'>JobInputAsset</a>&gt;;</code></pre>
@@ -1919,7 +1919,7 @@ Optional customer supplied description of the Job.
 A `inputAsset` block as defined below. Changing this forces a new Media Job to be created.
 
 <h4 class="pdoc-member-header" id="JobArgs-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L248">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L248">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaServicesAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1927,7 +1927,7 @@ A `inputAsset` block as defined below. Changing this forces a new Media Job to b
 The Media Services account name. Changing this forces a new Transform to be created.
 
 <h4 class="pdoc-member-header" id="JobArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L252">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L252">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1935,7 +1935,7 @@ The Media Services account name. Changing this forces a new Transform to be crea
 The name which should be used for this Media Job. Changing this forces a new Media Job to be created.
 
 <h4 class="pdoc-member-header" id="JobArgs-outputAssets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L256">property <b>outputAssets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L256">property <b>outputAssets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputAssets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobOutputAsset'>JobOutputAsset</a>&gt;[]&gt;;</code></pre>
@@ -1943,7 +1943,7 @@ The name which should be used for this Media Job. Changing this forces a new Med
 One or more `outputAsset` blocks as defined below. Changing this forces a new Media Job to be created.
 
 <h4 class="pdoc-member-header" id="JobArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L260">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L260">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1951,7 +1951,7 @@ One or more `outputAsset` blocks as defined below. Changing this forces a new Me
 Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal. Changing this forces a new Media Job to be created.
 
 <h4 class="pdoc-member-header" id="JobArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L264">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L264">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1959,7 +1959,7 @@ Priority with which the job should be processed. Higher priority jobs are proces
 The name of the Resource Group where the Media Job should exist. Changing this forces a new Media Job to be created.
 
 <h4 class="pdoc-member-header" id="JobArgs-transformName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L268">property <b>transformName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L268">property <b>transformName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transformName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1967,7 +1967,7 @@ The name of the Resource Group where the Media Job should exist. Changing this f
 The Transform name. Changing this forces a new Media Job to be created.
 
 <h3 class="pdoc-module-header" id="JobState" data-link-title="JobState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L198">
         interface <strong>JobState</strong>
     </a>
 </h3>
@@ -1977,7 +1977,7 @@ The Transform name. Changing this forces a new Media Job to be created.
 Input properties used for looking up and filtering Job resources.
 
 <h4 class="pdoc-member-header" id="JobState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L202">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L202">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1985,7 +1985,7 @@ Input properties used for looking up and filtering Job resources.
 Optional customer supplied description of the Job.
 
 <h4 class="pdoc-member-header" id="JobState-inputAsset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L206">property <b>inputAsset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L206">property <b>inputAsset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputAsset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobInputAsset'>JobInputAsset</a>&gt;;</code></pre>
@@ -1993,7 +1993,7 @@ Optional customer supplied description of the Job.
 A `inputAsset` block as defined below. Changing this forces a new Media Job to be created.
 
 <h4 class="pdoc-member-header" id="JobState-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L210">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L210">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaServicesAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2001,7 +2001,7 @@ A `inputAsset` block as defined below. Changing this forces a new Media Job to b
 The Media Services account name. Changing this forces a new Transform to be created.
 
 <h4 class="pdoc-member-header" id="JobState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L214">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L214">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2009,7 +2009,7 @@ The Media Services account name. Changing this forces a new Transform to be crea
 The name which should be used for this Media Job. Changing this forces a new Media Job to be created.
 
 <h4 class="pdoc-member-header" id="JobState-outputAssets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L218">property <b>outputAssets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L218">property <b>outputAssets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputAssets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobOutputAsset'>JobOutputAsset</a>&gt;[]&gt;;</code></pre>
@@ -2017,7 +2017,7 @@ The name which should be used for this Media Job. Changing this forces a new Med
 One or more `outputAsset` blocks as defined below. Changing this forces a new Media Job to be created.
 
 <h4 class="pdoc-member-header" id="JobState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L222">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L222">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2025,7 +2025,7 @@ One or more `outputAsset` blocks as defined below. Changing this forces a new Me
 Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal. Changing this forces a new Media Job to be created.
 
 <h4 class="pdoc-member-header" id="JobState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L226">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L226">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2033,7 +2033,7 @@ Priority with which the job should be processed. Higher priority jobs are proces
 The name of the Resource Group where the Media Job should exist. Changing this forces a new Media Job to be created.
 
 <h4 class="pdoc-member-header" id="JobState-transformName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/job.ts#L230">property <b>transformName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/job.ts#L230">property <b>transformName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transformName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2041,7 +2041,7 @@ The name of the Resource Group where the Media Job should exist. Changing this f
 The Transform name. Changing this forces a new Media Job to be created.
 
 <h3 class="pdoc-module-header" id="ServiceAccountArgs" data-link-title="ServiceAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L188">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L188">
         interface <strong>ServiceAccountArgs</strong>
     </a>
 </h3>
@@ -2051,7 +2051,7 @@ The Transform name. Changing this forces a new Media Job to be created.
 The set of arguments for constructing a ServiceAccount resource.
 
 <h4 class="pdoc-member-header" id="ServiceAccountArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L192">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L192">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAccountIdentity'>ServiceAccountIdentity</a>&gt;;</code></pre>
@@ -2059,7 +2059,7 @@ The set of arguments for constructing a ServiceAccount resource.
 An `identity` block is documented below.
 
 <h4 class="pdoc-member-header" id="ServiceAccountArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L196">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L196">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2067,7 +2067,7 @@ An `identity` block is documented below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceAccountArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L200">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L200">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2075,7 +2075,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Media Services Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceAccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L204">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L204">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2083,7 +2083,7 @@ Specifies the name of the Media Services Account. Changing this forces a new res
 The name of the resource group in which to create the Media Services Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceAccountArgs-storageAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L208">property <b>storageAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L208">property <b>storageAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAccountStorageAccount'>ServiceAccountStorageAccount</a>&gt;[]&gt;;</code></pre>
@@ -2091,7 +2091,7 @@ The name of the resource group in which to create the Media Services Account. Ch
 One or more `storageAccount` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceAccountArgs-storageAuthenticationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L213">property <b>storageAuthenticationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L213">property <b>storageAuthenticationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAuthenticationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2100,7 +2100,7 @@ Specifies the storage authentication type.
 Possible value is  `ManagedIdentity` or `System`.
 
 <h4 class="pdoc-member-header" id="ServiceAccountArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L218">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L218">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2109,7 +2109,7 @@ A mapping of tags assigned to the resource.
 ---
 
 <h3 class="pdoc-module-header" id="ServiceAccountState" data-link-title="ServiceAccountState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L152">
         interface <strong>ServiceAccountState</strong>
     </a>
 </h3>
@@ -2119,7 +2119,7 @@ A mapping of tags assigned to the resource.
 Input properties used for looking up and filtering ServiceAccount resources.
 
 <h4 class="pdoc-member-header" id="ServiceAccountState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L156">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L156">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAccountIdentity'>ServiceAccountIdentity</a>&gt;;</code></pre>
@@ -2127,7 +2127,7 @@ Input properties used for looking up and filtering ServiceAccount resources.
 An `identity` block is documented below.
 
 <h4 class="pdoc-member-header" id="ServiceAccountState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L160">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L160">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2135,7 +2135,7 @@ An `identity` block is documented below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceAccountState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L164">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L164">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2143,7 +2143,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Media Services Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceAccountState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L168">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L168">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2151,7 +2151,7 @@ Specifies the name of the Media Services Account. Changing this forces a new res
 The name of the resource group in which to create the Media Services Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceAccountState-storageAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L172">property <b>storageAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L172">property <b>storageAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAccountStorageAccount'>ServiceAccountStorageAccount</a>&gt;[]&gt;;</code></pre>
@@ -2159,7 +2159,7 @@ The name of the resource group in which to create the Media Services Account. Ch
 One or more `storageAccount` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceAccountState-storageAuthenticationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L177">property <b>storageAuthenticationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L177">property <b>storageAuthenticationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAuthenticationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2168,7 +2168,7 @@ Specifies the storage authentication type.
 Possible value is  `ManagedIdentity` or `System`.
 
 <h4 class="pdoc-member-header" id="ServiceAccountState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/serviceAccount.ts#L182">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/serviceAccount.ts#L182">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2177,7 +2177,7 @@ A mapping of tags assigned to the resource.
 ---
 
 <h3 class="pdoc-module-header" id="StreamingEndpointArgs" data-link-title="StreamingEndpointArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L323">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L323">
         interface <strong>StreamingEndpointArgs</strong>
     </a>
 </h3>
@@ -2187,7 +2187,7 @@ A mapping of tags assigned to the resource.
 The set of arguments for constructing a StreamingEndpoint resource.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointArgs-accessControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L327">property <b>accessControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L327">property <b>accessControl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamingEndpointAccessControl'>StreamingEndpointAccessControl</a>&gt;;</code></pre>
@@ -2195,7 +2195,7 @@ The set of arguments for constructing a StreamingEndpoint resource.
 A `accessControl` block as defined below.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointArgs-autoStartEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L331">property <b>autoStartEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L331">property <b>autoStartEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoStartEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2203,7 +2203,7 @@ A `accessControl` block as defined below.
 The flag indicates if the resource should be automatically started on creation.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointArgs-cdnEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L335">property <b>cdnEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L335">property <b>cdnEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cdnEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2211,7 +2211,7 @@ The flag indicates if the resource should be automatically started on creation.
 The CDN enabled flag.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointArgs-cdnProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L339">property <b>cdnProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L339">property <b>cdnProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cdnProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2219,7 +2219,7 @@ The CDN enabled flag.
 The CDN profile name.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointArgs-cdnProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L343">property <b>cdnProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L343">property <b>cdnProvider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cdnProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2227,7 +2227,7 @@ The CDN profile name.
 The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` and `StandardAkamai`
 
 <h4 class="pdoc-member-header" id="StreamingEndpointArgs-crossSiteAccessPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L347">property <b>crossSiteAccessPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L347">property <b>crossSiteAccessPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>crossSiteAccessPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamingEndpointCrossSiteAccessPolicy'>StreamingEndpointCrossSiteAccessPolicy</a>&gt;;</code></pre>
@@ -2235,7 +2235,7 @@ The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` an
 A `crossSiteAccessPolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointArgs-customHostNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L351">property <b>customHostNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L351">property <b>customHostNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customHostNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2243,7 +2243,7 @@ A `crossSiteAccessPolicy` block as defined below.
 The custom host names of the streaming endpoint.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L355">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L355">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2251,7 +2251,7 @@ The custom host names of the streaming endpoint.
 The streaming endpoint description.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L359">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L359">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2259,7 +2259,7 @@ The streaming endpoint description.
 The Azure Region where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointArgs-maxCacheAgeSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L363">property <b>maxCacheAgeSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L363">property <b>maxCacheAgeSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxCacheAgeSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2267,7 +2267,7 @@ The Azure Region where the Streaming Endpoint should exist. Changing this forces
 Max cache age in seconds.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointArgs-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L367">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L367">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaServicesAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2275,7 +2275,7 @@ Max cache age in seconds.
 The Media Services account name. Changing this forces a new Streaming Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L371">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L371">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2283,7 +2283,7 @@ The Media Services account name. Changing this forces a new Streaming Endpoint t
 The name which should be used for this Streaming Endpoint maximum length is 24. Changing this forces a new Streaming Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L375">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L375">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2291,7 +2291,7 @@ The name which should be used for this Streaming Endpoint maximum length is 24. 
 The name of the Resource Group where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointArgs-scaleUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L379">property <b>scaleUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L379">property <b>scaleUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scaleUnits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2299,7 +2299,7 @@ The name of the Resource Group where the Streaming Endpoint should exist. Changi
 The number of scale units.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L383">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L383">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2307,7 +2307,7 @@ The number of scale units.
 A mapping of tags which should be assigned to the Streaming Endpoint.
 
 <h3 class="pdoc-module-header" id="StreamingEndpointState" data-link-title="StreamingEndpointState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L257">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L257">
         interface <strong>StreamingEndpointState</strong>
     </a>
 </h3>
@@ -2317,7 +2317,7 @@ A mapping of tags which should be assigned to the Streaming Endpoint.
 Input properties used for looking up and filtering StreamingEndpoint resources.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointState-accessControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L261">property <b>accessControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L261">property <b>accessControl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamingEndpointAccessControl'>StreamingEndpointAccessControl</a>&gt;;</code></pre>
@@ -2325,7 +2325,7 @@ Input properties used for looking up and filtering StreamingEndpoint resources.
 A `accessControl` block as defined below.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointState-autoStartEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L265">property <b>autoStartEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L265">property <b>autoStartEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoStartEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2333,7 +2333,7 @@ A `accessControl` block as defined below.
 The flag indicates if the resource should be automatically started on creation.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointState-cdnEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L269">property <b>cdnEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L269">property <b>cdnEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cdnEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2341,7 +2341,7 @@ The flag indicates if the resource should be automatically started on creation.
 The CDN enabled flag.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointState-cdnProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L273">property <b>cdnProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L273">property <b>cdnProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cdnProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2349,7 +2349,7 @@ The CDN enabled flag.
 The CDN profile name.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointState-cdnProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L277">property <b>cdnProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L277">property <b>cdnProvider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cdnProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2357,7 +2357,7 @@ The CDN profile name.
 The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` and `StandardAkamai`
 
 <h4 class="pdoc-member-header" id="StreamingEndpointState-crossSiteAccessPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L281">property <b>crossSiteAccessPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L281">property <b>crossSiteAccessPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>crossSiteAccessPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamingEndpointCrossSiteAccessPolicy'>StreamingEndpointCrossSiteAccessPolicy</a>&gt;;</code></pre>
@@ -2365,7 +2365,7 @@ The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` an
 A `crossSiteAccessPolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointState-customHostNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L285">property <b>customHostNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L285">property <b>customHostNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customHostNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2373,7 +2373,7 @@ A `crossSiteAccessPolicy` block as defined below.
 The custom host names of the streaming endpoint.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L289">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L289">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2381,7 +2381,7 @@ The custom host names of the streaming endpoint.
 The streaming endpoint description.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L293">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L293">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2389,7 +2389,7 @@ The streaming endpoint description.
 The Azure Region where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointState-maxCacheAgeSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L297">property <b>maxCacheAgeSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L297">property <b>maxCacheAgeSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxCacheAgeSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2397,7 +2397,7 @@ The Azure Region where the Streaming Endpoint should exist. Changing this forces
 Max cache age in seconds.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointState-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L301">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L301">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaServicesAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2405,7 +2405,7 @@ Max cache age in seconds.
 The Media Services account name. Changing this forces a new Streaming Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L305">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L305">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2413,7 +2413,7 @@ The Media Services account name. Changing this forces a new Streaming Endpoint t
 The name which should be used for this Streaming Endpoint maximum length is 24. Changing this forces a new Streaming Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L309">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L309">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2421,7 +2421,7 @@ The name which should be used for this Streaming Endpoint maximum length is 24. 
 The name of the Resource Group where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointState-scaleUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L313">property <b>scaleUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L313">property <b>scaleUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scaleUnits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2429,7 +2429,7 @@ The name of the Resource Group where the Streaming Endpoint should exist. Changi
 The number of scale units.
 
 <h4 class="pdoc-member-header" id="StreamingEndpointState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingEndpoint.ts#L317">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingEndpoint.ts#L317">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2437,7 +2437,7 @@ The number of scale units.
 A mapping of tags which should be assigned to the Streaming Endpoint.
 
 <h3 class="pdoc-module-header" id="StreamingLocatorArgs" data-link-title="StreamingLocatorArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L239">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L239">
         interface <strong>StreamingLocatorArgs</strong>
     </a>
 </h3>
@@ -2447,7 +2447,7 @@ A mapping of tags which should be assigned to the Streaming Endpoint.
 The set of arguments for constructing a StreamingLocator resource.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorArgs-alternativeMediaId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L243">property <b>alternativeMediaId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L243">property <b>alternativeMediaId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alternativeMediaId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2455,7 +2455,7 @@ The set of arguments for constructing a StreamingLocator resource.
 Alternative Media ID of this Streaming Locator. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorArgs-assetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L247">property <b>assetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L247">property <b>assetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2463,7 +2463,7 @@ Alternative Media ID of this Streaming Locator. Changing this forces a new Strea
 Asset Name. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorArgs-contentKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L251">property <b>contentKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L251">property <b>contentKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamingLocatorContentKey'>StreamingLocatorContentKey</a>&gt;[]&gt;;</code></pre>
@@ -2471,7 +2471,7 @@ Asset Name. Changing this forces a new Streaming Locator to be created.
 One or more `contentKey` blocks as defined below. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorArgs-defaultContentKeyPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L255">property <b>defaultContentKeyPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L255">property <b>defaultContentKeyPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultContentKeyPolicyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2479,7 +2479,7 @@ One or more `contentKey` blocks as defined below. Changing this forces a new Str
 Name of the default Content Key Policy used by this Streaming Locator.Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorArgs-endTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L259">property <b>endTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L259">property <b>endTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2487,7 +2487,7 @@ Name of the default Content Key Policy used by this Streaming Locator.Changing t
 The end time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorArgs-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L263">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L263">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaServicesAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2495,7 +2495,7 @@ The end time of the Streaming Locator. Changing this forces a new Streaming Loca
 The Media Services account name. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L267">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L267">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2503,7 +2503,7 @@ The Media Services account name. Changing this forces a new Streaming Locator to
 The name which should be used for this Streaming Locator. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L271">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L271">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2511,7 +2511,7 @@ The name which should be used for this Streaming Locator. Changing this forces a
 The name of the Resource Group where the Streaming Locator should exist. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorArgs-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L275">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L275">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2519,7 +2519,7 @@ The name of the Resource Group where the Streaming Locator should exist. Changin
 The start time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorArgs-streamingLocatorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L279">property <b>streamingLocatorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L279">property <b>streamingLocatorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamingLocatorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2527,7 +2527,7 @@ The start time of the Streaming Locator. Changing this forces a new Streaming Lo
 The ID of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorArgs-streamingPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L283">property <b>streamingPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L283">property <b>streamingPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamingPolicyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2535,7 +2535,7 @@ The ID of the Streaming Locator. Changing this forces a new Streaming Locator to
 Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: `Predefined_DownloadOnly`, `Predefined_ClearStreamingOnly`, `Predefined_DownloadAndClearStreaming`, `Predefined_ClearKey`, `Predefined_MultiDrmCencStreaming` and `Predefined_MultiDrmStreaming`. Changing this forces a new Streaming Locator to be created.
 
 <h3 class="pdoc-module-header" id="StreamingLocatorState" data-link-title="StreamingLocatorState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L189">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L189">
         interface <strong>StreamingLocatorState</strong>
     </a>
 </h3>
@@ -2545,7 +2545,7 @@ Name of the Streaming Policy used by this Streaming Locator. Either specify the 
 Input properties used for looking up and filtering StreamingLocator resources.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorState-alternativeMediaId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L193">property <b>alternativeMediaId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L193">property <b>alternativeMediaId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alternativeMediaId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2553,7 +2553,7 @@ Input properties used for looking up and filtering StreamingLocator resources.
 Alternative Media ID of this Streaming Locator. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorState-assetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L197">property <b>assetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L197">property <b>assetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assetName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2561,7 +2561,7 @@ Alternative Media ID of this Streaming Locator. Changing this forces a new Strea
 Asset Name. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorState-contentKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L201">property <b>contentKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L201">property <b>contentKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamingLocatorContentKey'>StreamingLocatorContentKey</a>&gt;[]&gt;;</code></pre>
@@ -2569,7 +2569,7 @@ Asset Name. Changing this forces a new Streaming Locator to be created.
 One or more `contentKey` blocks as defined below. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorState-defaultContentKeyPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L205">property <b>defaultContentKeyPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L205">property <b>defaultContentKeyPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultContentKeyPolicyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2577,7 +2577,7 @@ One or more `contentKey` blocks as defined below. Changing this forces a new Str
 Name of the default Content Key Policy used by this Streaming Locator.Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorState-endTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L209">property <b>endTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L209">property <b>endTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2585,7 +2585,7 @@ Name of the default Content Key Policy used by this Streaming Locator.Changing t
 The end time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorState-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L213">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L213">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaServicesAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2593,7 +2593,7 @@ The end time of the Streaming Locator. Changing this forces a new Streaming Loca
 The Media Services account name. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L217">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L217">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2601,7 +2601,7 @@ The Media Services account name. Changing this forces a new Streaming Locator to
 The name which should be used for this Streaming Locator. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L221">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L221">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2609,7 +2609,7 @@ The name which should be used for this Streaming Locator. Changing this forces a
 The name of the Resource Group where the Streaming Locator should exist. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorState-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L225">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L225">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2617,7 +2617,7 @@ The name of the Resource Group where the Streaming Locator should exist. Changin
 The start time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorState-streamingLocatorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L229">property <b>streamingLocatorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L229">property <b>streamingLocatorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamingLocatorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2625,7 +2625,7 @@ The start time of the Streaming Locator. Changing this forces a new Streaming Lo
 The ID of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
 
 <h4 class="pdoc-member-header" id="StreamingLocatorState-streamingPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingLocator.ts#L233">property <b>streamingPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingLocator.ts#L233">property <b>streamingPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamingPolicyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2633,7 +2633,7 @@ The ID of the Streaming Locator. Changing this forces a new Streaming Locator to
 Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: `Predefined_DownloadOnly`, `Predefined_ClearStreamingOnly`, `Predefined_DownloadAndClearStreaming`, `Predefined_ClearKey`, `Predefined_MultiDrmCencStreaming` and `Predefined_MultiDrmStreaming`. Changing this forces a new Streaming Locator to be created.
 
 <h3 class="pdoc-module-header" id="StreamingPolicyArgs" data-link-title="StreamingPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L211">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L211">
         interface <strong>StreamingPolicyArgs</strong>
     </a>
 </h3>
@@ -2643,7 +2643,7 @@ Name of the Streaming Policy used by this Streaming Locator. Either specify the 
 The set of arguments for constructing a StreamingPolicy resource.
 
 <h4 class="pdoc-member-header" id="StreamingPolicyArgs-commonEncryptionCbcs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L215">property <b>commonEncryptionCbcs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L215">property <b>commonEncryptionCbcs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonEncryptionCbcs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamingPolicyCommonEncryptionCbcs'>StreamingPolicyCommonEncryptionCbcs</a>&gt;;</code></pre>
@@ -2651,7 +2651,7 @@ The set of arguments for constructing a StreamingPolicy resource.
 A `commonEncryptionCbcs` block as defined below. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicyArgs-commonEncryptionCenc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L219">property <b>commonEncryptionCenc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L219">property <b>commonEncryptionCenc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonEncryptionCenc?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamingPolicyCommonEncryptionCenc'>StreamingPolicyCommonEncryptionCenc</a>&gt;;</code></pre>
@@ -2659,7 +2659,7 @@ A `commonEncryptionCbcs` block as defined below. Changing this forces a new Stre
 A `commonEncryptionCenc` block as defined below. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicyArgs-defaultContentKeyPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L223">property <b>defaultContentKeyPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L223">property <b>defaultContentKeyPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultContentKeyPolicyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2667,7 +2667,7 @@ A `commonEncryptionCenc` block as defined below. Changing this forces a new Stre
 Default Content Key used by current Streaming Policy. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicyArgs-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L227">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L227">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaServicesAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2675,7 +2675,7 @@ Default Content Key used by current Streaming Policy. Changing this forces a new
 The Media Services account name. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L231">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L231">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2683,7 +2683,7 @@ The Media Services account name. Changing this forces a new Streaming Policy to 
 The name which should be used for this Streaming Policy. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicyArgs-noEncryptionEnabledProtocols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L235">property <b>noEncryptionEnabledProtocols</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L235">property <b>noEncryptionEnabledProtocols</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noEncryptionEnabledProtocols?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamingPolicyNoEncryptionEnabledProtocols'>StreamingPolicyNoEncryptionEnabledProtocols</a>&gt;;</code></pre>
@@ -2691,7 +2691,7 @@ The name which should be used for this Streaming Policy. Changing this forces a 
 A `noEncryptionEnabledProtocols` block as defined below. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicyArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L239">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L239">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2699,7 +2699,7 @@ A `noEncryptionEnabledProtocols` block as defined below. Changing this forces a 
 The name of the Resource Group where the Streaming Policy should exist. Changing this forces a new Streaming Policy to be created.
 
 <h3 class="pdoc-module-header" id="StreamingPolicyState" data-link-title="StreamingPolicyState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L177">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L177">
         interface <strong>StreamingPolicyState</strong>
     </a>
 </h3>
@@ -2709,7 +2709,7 @@ The name of the Resource Group where the Streaming Policy should exist. Changing
 Input properties used for looking up and filtering StreamingPolicy resources.
 
 <h4 class="pdoc-member-header" id="StreamingPolicyState-commonEncryptionCbcs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L181">property <b>commonEncryptionCbcs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L181">property <b>commonEncryptionCbcs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonEncryptionCbcs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamingPolicyCommonEncryptionCbcs'>StreamingPolicyCommonEncryptionCbcs</a>&gt;;</code></pre>
@@ -2717,7 +2717,7 @@ Input properties used for looking up and filtering StreamingPolicy resources.
 A `commonEncryptionCbcs` block as defined below. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicyState-commonEncryptionCenc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L185">property <b>commonEncryptionCenc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L185">property <b>commonEncryptionCenc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonEncryptionCenc?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamingPolicyCommonEncryptionCenc'>StreamingPolicyCommonEncryptionCenc</a>&gt;;</code></pre>
@@ -2725,7 +2725,7 @@ A `commonEncryptionCbcs` block as defined below. Changing this forces a new Stre
 A `commonEncryptionCenc` block as defined below. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicyState-defaultContentKeyPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L189">property <b>defaultContentKeyPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L189">property <b>defaultContentKeyPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultContentKeyPolicyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2733,7 +2733,7 @@ A `commonEncryptionCenc` block as defined below. Changing this forces a new Stre
 Default Content Key used by current Streaming Policy. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicyState-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L193">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L193">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaServicesAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2741,7 +2741,7 @@ Default Content Key used by current Streaming Policy. Changing this forces a new
 The Media Services account name. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L197">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L197">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2749,7 +2749,7 @@ The Media Services account name. Changing this forces a new Streaming Policy to 
 The name which should be used for this Streaming Policy. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicyState-noEncryptionEnabledProtocols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L201">property <b>noEncryptionEnabledProtocols</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L201">property <b>noEncryptionEnabledProtocols</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noEncryptionEnabledProtocols?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamingPolicyNoEncryptionEnabledProtocols'>StreamingPolicyNoEncryptionEnabledProtocols</a>&gt;;</code></pre>
@@ -2757,7 +2757,7 @@ The name which should be used for this Streaming Policy. Changing this forces a 
 A `noEncryptionEnabledProtocols` block as defined below. Changing this forces a new Streaming Policy to be created.
 
 <h4 class="pdoc-member-header" id="StreamingPolicyState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/streamingPolicy.ts#L205">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/streamingPolicy.ts#L205">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2765,7 +2765,7 @@ A `noEncryptionEnabledProtocols` block as defined below. Changing this forces a 
 The name of the Resource Group where the Streaming Policy should exist. Changing this forces a new Streaming Policy to be created.
 
 <h3 class="pdoc-module-header" id="TransformArgs" data-link-title="TransformArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L225">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L225">
         interface <strong>TransformArgs</strong>
     </a>
 </h3>
@@ -2775,7 +2775,7 @@ The name of the Resource Group where the Streaming Policy should exist. Changing
 The set of arguments for constructing a Transform resource.
 
 <h4 class="pdoc-member-header" id="TransformArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L229">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L229">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2783,7 +2783,7 @@ The set of arguments for constructing a Transform resource.
 An optional verbose description of the Transform.
 
 <h4 class="pdoc-member-header" id="TransformArgs-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L233">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L233">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaServicesAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2791,7 +2791,7 @@ An optional verbose description of the Transform.
 The Media Services account name. Changing this forces a new Transform to be created.
 
 <h4 class="pdoc-member-header" id="TransformArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L237">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L237">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2799,7 +2799,7 @@ The Media Services account name. Changing this forces a new Transform to be crea
 The name which should be used for this Transform. Changing this forces a new Transform to be created.
 
 <h4 class="pdoc-member-header" id="TransformArgs-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L241">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L241">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TransformOutput'>TransformOutput</a>&gt;[]&gt;;</code></pre>
@@ -2807,7 +2807,7 @@ The name which should be used for this Transform. Changing this forces a new Tra
 One or more `output` blocks as defined below. At least one `output` must be defined.
 
 <h4 class="pdoc-member-header" id="TransformArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L245">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L245">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2815,7 +2815,7 @@ One or more `output` blocks as defined below. At least one `output` must be defi
 The name of the Resource Group where the Transform should exist. Changing this forces a new Transform to be created.
 
 <h3 class="pdoc-module-header" id="TransformState" data-link-title="TransformState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L199">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L199">
         interface <strong>TransformState</strong>
     </a>
 </h3>
@@ -2825,7 +2825,7 @@ The name of the Resource Group where the Transform should exist. Changing this f
 Input properties used for looking up and filtering Transform resources.
 
 <h4 class="pdoc-member-header" id="TransformState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L203">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L203">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2833,7 +2833,7 @@ Input properties used for looking up and filtering Transform resources.
 An optional verbose description of the Transform.
 
 <h4 class="pdoc-member-header" id="TransformState-mediaServicesAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L207">property <b>mediaServicesAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L207">property <b>mediaServicesAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mediaServicesAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2841,7 +2841,7 @@ An optional verbose description of the Transform.
 The Media Services account name. Changing this forces a new Transform to be created.
 
 <h4 class="pdoc-member-header" id="TransformState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L211">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L211">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2849,7 +2849,7 @@ The Media Services account name. Changing this forces a new Transform to be crea
 The name which should be used for this Transform. Changing this forces a new Transform to be created.
 
 <h4 class="pdoc-member-header" id="TransformState-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L215">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L215">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TransformOutput'>TransformOutput</a>&gt;[]&gt;;</code></pre>
@@ -2857,7 +2857,7 @@ The name which should be used for this Transform. Changing this forces a new Tra
 One or more `output` blocks as defined below. At least one `output` must be defined.
 
 <h4 class="pdoc-member-header" id="TransformState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/media/transform.ts#L219">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/media/transform.ts#L219">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

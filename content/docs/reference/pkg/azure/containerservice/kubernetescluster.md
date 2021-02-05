@@ -4341,6 +4341,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enablehostencryption_csharp">
+<a href="#enablehostencryption_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Host<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the nodes in the Default Node Pool have host encryption enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_csharp">
 <a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
 </span>
@@ -4522,6 +4532,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should [the Kubernetes Auto Scaler](https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler) be enabled for this Node Pool? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablehostencryption_go">
+<a href="#enablehostencryption_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Host<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the nodes in the Default Node Pool have host encryption enabled? Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4709,6 +4729,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enablehostencryption_nodejs">
+<a href="#enablehostencryption_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Host<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the nodes in the Default Node Pool have host encryption enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_nodejs">
 <a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>Ip</a>
 </span>
@@ -4890,6 +4920,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should [the Kubernetes Auto Scaler](https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler) be enabled for this Node Pool? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_host_encryption_python">
+<a href="#enable_host_encryption_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>host_<wbr>encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the nodes in the Default Node Pool have host encryption enabled? Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6215,7 +6255,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network mode to be used with Azure CNI. Possible values are `bridge` or `transparent`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Network mode to be used with Azure CNI. Possible values are `bridge` and `transparent`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6321,7 +6361,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network mode to be used with Azure CNI. Possible values are `bridge` or `transparent`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Network mode to be used with Azure CNI. Possible values are `bridge` and `transparent`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6427,7 +6467,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network mode to be used with Azure CNI. Possible values are `bridge` or `transparent`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Network mode to be used with Azure CNI. Possible values are `bridge` and `transparent`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6533,7 +6573,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Network mode to be used with Azure CNI. Possible values are `bridge` or `transparent`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Network mode to be used with Azure CNI. Possible values are `bridge` and `transparent`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -7405,7 +7445,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Admin Password for Windows VMs.
+    <dd>{{% md %}}The Admin Password for Windows VMs. Length must be between 14 and 123 characters.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -7431,7 +7471,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Admin Password for Windows VMs.
+    <dd>{{% md %}}The Admin Password for Windows VMs. Length must be between 14 and 123 characters.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -7457,7 +7497,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Admin Password for Windows VMs.
+    <dd>{{% md %}}The Admin Password for Windows VMs. Length must be between 14 and 123 characters.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -7483,7 +7523,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Admin Password for Windows VMs.
+    <dd>{{% md %}}The Admin Password for Windows VMs. Length must be between 14 and 123 characters.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/azure | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/azure package."
-git_sha: "ddb23e43788a327f80b21bf9dceb8eafe16876eb"
+git_sha: "9cb63907202e7b738279a1e51fb2090fbc75fa2c"
 block_external_search_index: true
 ---
 
@@ -46,14 +46,14 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="auxiliaryTenantIds" data-link-title="auxiliaryTenantIds">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L10">
         let <strong>auxiliaryTenantIds</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> auxiliaryTenantIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;string[]&gt;(&#34;auxiliaryTenantIds&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="clientCertificatePassword" data-link-title="clientCertificatePassword">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L15">
         let <strong>clientCertificatePassword</strong>
     </a>
 </h3>
@@ -64,7 +64,7 @@ The password associated with the Client Certificate. For use when authenticating
 Certificate
 
 <h3 class="pdoc-module-header" id="clientCertificatePath" data-link-title="clientCertificatePath">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L20">
         let <strong>clientCertificatePath</strong>
     </a>
 </h3>
@@ -75,7 +75,7 @@ The path to the Client Certificate associated with the Service Principal for use
 Principal using a Client Certificate.
 
 <h3 class="pdoc-module-header" id="clientId" data-link-title="clientId">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L24">
         let <strong>clientId</strong>
     </a>
 </h3>
@@ -85,7 +85,7 @@ Principal using a Client Certificate.
 The Client ID which should be used.
 
 <h3 class="pdoc-module-header" id="clientSecret" data-link-title="clientSecret">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L28">
         let <strong>clientSecret</strong>
     </a>
 </h3>
@@ -95,7 +95,7 @@ The Client ID which should be used.
 The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
 
 <h3 class="pdoc-module-header" id="disableCorrelationRequestId" data-link-title="disableCorrelationRequestId">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L32">
         let <strong>disableCorrelationRequestId</strong>
     </a>
 </h3>
@@ -105,7 +105,7 @@ The Client Secret which should be used. For use When authenticating as a Service
 This will disable the x-ms-correlation-request-id header.
 
 <h3 class="pdoc-module-header" id="disableTerraformPartnerId" data-link-title="disableTerraformPartnerId">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L36">
         let <strong>disableTerraformPartnerId</strong>
     </a>
 </h3>
@@ -115,7 +115,7 @@ This will disable the x-ms-correlation-request-id header.
 This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
 
 <h3 class="pdoc-module-header" id="environment" data-link-title="environment">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L41">
         let <strong>environment</strong>
     </a>
 </h3>
@@ -126,21 +126,21 @@ The Cloud Environment which should be used. Possible values are public, usgovern
 public.
 
 <h3 class="pdoc-module-header" id="features" data-link-title="features">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L42">
         let <strong>features</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> features: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#Features'>Features</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;outputs.config.Features&gt;(&#34;features&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="location" data-link-title="location">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L43">
         let <strong>location</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;location&#34;) || utilities.getEnv(&#34;ARM_LOCATION&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="metadataHost" data-link-title="metadataHost">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L47">
         let <strong>metadataHost</strong>
     </a>
 </h3>
@@ -150,7 +150,7 @@ public.
 The Hostname which should be used for the Azure Metadata Service.
 
 <h3 class="pdoc-module-header" id="metadataUrl" data-link-title="metadataUrl">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L51">
         let <strong>metadataUrl</strong>
     </a>
 </h3>
@@ -160,7 +160,7 @@ The Hostname which should be used for the Azure Metadata Service.
 Deprecated - replaced by `metadata_host`.
 
 <h3 class="pdoc-module-header" id="msiEndpoint" data-link-title="msiEndpoint">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L56">
         let <strong>msiEndpoint</strong>
     </a>
 </h3>
@@ -171,7 +171,7 @@ The path to a custom endpoint for Managed Service Identity - in most circumstanc
 automatically.
 
 <h3 class="pdoc-module-header" id="partnerId" data-link-title="partnerId">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L60">
         let <strong>partnerId</strong>
     </a>
 </h3>
@@ -181,7 +181,7 @@ automatically.
 A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
 
 <h3 class="pdoc-module-header" id="skipCredentialsValidation" data-link-title="skipCredentialsValidation">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L64">
         let <strong>skipCredentialsValidation</strong>
     </a>
 </h3>
@@ -191,7 +191,7 @@ A GUID/UUID that is registered with Microsoft to facilitate partner resource usa
 This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
 
 <h3 class="pdoc-module-header" id="skipProviderRegistration" data-link-title="skipProviderRegistration">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L69">
         let <strong>skipProviderRegistration</strong>
     </a>
 </h3>
@@ -202,7 +202,7 @@ Should the AzureRM Provider skip registering all of the Resource Providers that 
 registered?
 
 <h3 class="pdoc-module-header" id="storageUseAzuread" data-link-title="storageUseAzuread">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L73">
         let <strong>storageUseAzuread</strong>
     </a>
 </h3>
@@ -212,7 +212,7 @@ registered?
 Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's?
 
 <h3 class="pdoc-module-header" id="subscriptionId" data-link-title="subscriptionId">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L77">
         let <strong>subscriptionId</strong>
     </a>
 </h3>
@@ -222,7 +222,7 @@ Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's?
 The Subscription ID which should be used.
 
 <h3 class="pdoc-module-header" id="tenantId" data-link-title="tenantId">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L81">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L81">
         let <strong>tenantId</strong>
     </a>
 </h3>
@@ -232,7 +232,7 @@ The Subscription ID which should be used.
 The Tenant ID which should be used.
 
 <h3 class="pdoc-module-header" id="useMsi" data-link-title="useMsi">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/ddb23e43788a327f80b21bf9dceb8eafe16876eb/sdk/nodejs/config/vars.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/9cb63907202e7b738279a1e51fb2090fbc75fa2c/sdk/nodejs/config/vars.ts#L85">
         let <strong>useMsi</strong>
     </a>
 </h3>
