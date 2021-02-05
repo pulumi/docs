@@ -50,7 +50,7 @@ components. That will be in public preview soon, and we're excited for you to tr
 
 ### Next steps
 
-If you haven't yet, try out the new pulumi-eks package with [this walkthrough]. 
+If you haven't yet, try out the new pulumi-eks package with [this walkthrough].
 
 <!-- markdownlint-disable url -->
 [EKS package]: {{< relref "/docs/reference/pkg/eks" >}}
