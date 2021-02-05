@@ -23,7 +23,8 @@ export function getLambdaFunctionAssociations(addSecurityHeaders: boolean, doEdg
     });
 
     if (addSecurityHeaders) {
-        const securityHeadersLambda = new LambdaEdge("security", "lambdaEdge",
+        const securityHeadersLambda = new LambdaEdge(
+            "security", "lambdaEdge", "lambdaEdgeRole", "lambdaCloudWatchPolicy", "getFuncPermission",
             {
                 func: getSecurityHeadersLambdaCallback(),
                 funcDescription: "Lambda function that sets security headers on a Cloudfront origin response.",
@@ -46,7 +47,8 @@ export function getLambdaFunctionAssociations(addSecurityHeaders: boolean, doEdg
     }
 
     if (doEdgeRedirects) {
-        const edgeRedirectsLambda = new LambdaEdge("redirects", "lambdaEdgeRedirects",
+        const edgeRedirectsLambda = new LambdaEdge(
+            "redirects", "redirectsCallback", "redirectsRole", "redirectsPolicy", "redirectsPermission",
             {
                 func: getEdgeRedirectsLambdaCallback(),
                 funcDescription: "Lambda function that conditionally redirects based on a path-matching expression.",
