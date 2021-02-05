@@ -1,6 +1,7 @@
 config:
   aws:region: us-west-2
-  www.pulumi.com:addSecurityHeaders: "true"
+  www.pulumi.com:addSecurityHeaders: true
+  www.pulumi.com:doEdgeRedirects: true
   www.pulumi.com:certificateArn: arn:aws:acm:us-east-1:058607598222:certificate/a3f72a2b-e715-4639-b126-1e4efc0b634b
   www.pulumi.com:originBucketNameOverride:
   www.pulumi.com:pathToOriginBucketMetadata: ../origin-bucket-metadata.json

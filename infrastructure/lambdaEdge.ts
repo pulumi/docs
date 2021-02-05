@@ -13,19 +13,15 @@ export class LambdaEdge extends pulumi.ComponentResource {
     private args: LambdaEdgeArgs;
 
     private name: string;
+    private callbackName: string;
     private role: aws.iam.Role;
     private lambdaEdgeFunc: aws.lambda.CallbackFunction<any, any>;
 
-    constructor(name: string, args: LambdaEdgeArgs, opts: pulumi.ComponentResourceOptions) {
-        super("www-pulumi:infrastructure:LambdaEdge", name, undefined, {
-            ...opts,
-            // Edge functions must be defined in us-east-1.
-            provider: new aws.Provider(`${name}-lambdaEdgeProvider`, {
-                region: aws.Region.USEast1,
-            }),
-        });
+    constructor(name: string, callbackName: string, args: LambdaEdgeArgs, opts: pulumi.ComponentResourceOptions) {
+        super("www-pulumi:infrastructure:LambdaEdge", name, undefined, opts);
 
         this.name = name;
+        this.callbackName = callbackName;
         this.args = args;
 
         this.createIam();
@@ -84,7 +80,7 @@ export class LambdaEdge extends pulumi.ComponentResource {
     }
 
     private createLambdaFunction() {
-        this.lambdaEdgeFunc = new aws.lambda.CallbackFunction(`${this.name}-lambdaEdge`,
+        this.lambdaEdgeFunc = new aws.lambda.CallbackFunction(this.callbackName,
             {
                 callback: this.args.func,
                 description: this.args.funcDescription,
