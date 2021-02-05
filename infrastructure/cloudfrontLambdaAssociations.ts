@@ -1,9 +1,14 @@
 // Copyright 2016-2021, Pulumi Corporation.  All rights reserved.
 
 import * as aws from "@pulumi/aws";
+import {
+    CloudFrontRequest,
+    CloudFrontRequestEvent,
+    CloudFrontResponse,
+    CloudFrontResponseEvent,
+} from "aws-lambda";
 import * as URLPattern from "url-pattern";
 import { LambdaEdge } from "./lambdaEdge";
-import { CloudFrontRequest, CloudFrontRequestEvent, CloudFrontResponse, CloudFrontResponseEvent } from "aws-lambda";
 
 /**
  * Returns the Lambda function associations for the CloudFront distribution.
@@ -24,8 +29,9 @@ export function getLambdaFunctionAssociations(addSecurityHeaders: boolean, doEdg
 
     if (addSecurityHeaders) {
         const securityHeadersLambda = new LambdaEdge(
-            "security", "lambdaEdge", "lambdaEdgeRole", "lambdaCloudWatchPolicy", "getFuncPermission",
+            "security",
             {
+                disableResourceNamePrefix: true,
                 func: getSecurityHeadersLambdaCallback(),
                 funcDescription: "Lambda function that sets security headers on a Cloudfront origin response.",
             },
@@ -48,7 +54,7 @@ export function getLambdaFunctionAssociations(addSecurityHeaders: boolean, doEdg
 
     if (doEdgeRedirects) {
         const edgeRedirectsLambda = new LambdaEdge(
-            "redirects", "redirectsCallback", "redirectsRole", "redirectsPolicy", "redirectsPermission",
+            "redirects",
             {
                 func: getEdgeRedirectsLambdaCallback(),
                 funcDescription: "Lambda function that conditionally redirects based on a path-matching expression.",
@@ -87,7 +93,8 @@ function getSecurityHeadersLambdaCallback(): aws.lambda.Callback<CloudFrontRespo
     };
 }
 
-function getEdgeRedirectsLambdaCallback(): aws.lambda.Callback<CloudFrontRequestEvent, CloudFrontRequest | CloudFrontResponse> {
+function getEdgeRedirectsLambdaCallback():
+    aws.lambda.Callback<CloudFrontRequestEvent, CloudFrontRequest | CloudFrontResponse> {
     // https://aws.amazon.com/blogs/networking-and-content-delivery/handling-redirectsedge-part1/
     return (event: CloudFrontRequestEvent, context, callback) => {
         const request = event.Records[0].cf.request;
@@ -97,14 +104,14 @@ function getEdgeRedirectsLambdaCallback(): aws.lambda.Callback<CloudFrontRequest
 
         // If there isn't one, just return with the original request.
         if (!redirect) {
-            callback(null, request)
+            callback(null, request);
             return;
         }
 
         // Return with a redirect.
         const modifiedResponse = {
             status: "301",
-            statusDescription: 'Moved Permanently',
+            statusDescription: "Moved Permanently",
             headers: {
                 "location": [
                     {
@@ -159,7 +166,7 @@ function nodeSDKRedirect(uri: string): string | undefined {
     }
 
     return undefined;
-};
+}
 
 function pythonSDKRedirect(uri: string): string | undefined {
     const pattern = new URLPattern("/docs/reference/pkg/python/pulumi_(:provider)(/:service)(*)");
@@ -178,7 +185,7 @@ function pythonSDKRedirect(uri: string): string | undefined {
     }
 
     return undefined;
-};
+}
 
 function dotnetSDKRedirect(uri: string): string | undefined {
     const pattern = new URLPattern("/docs/reference/pkg/dotnet/Pulumi.(:provider)/Pulumi.(:providerAgain)(.(:service)).html");
@@ -186,6 +193,7 @@ function dotnetSDKRedirect(uri: string): string | undefined {
 
     if (match && match.provider) {
         if (match.service) {
+            // tslint:disable-next-line:max-line-length
             return `/docs/reference/pkg/${match.provider.toLowerCase()}/${match.service.toLowerCase()}/?language=csharp`;
         }
         return `/docs/reference/pkg/${match.provider.toLowerCase()}/?language=csharp`;
@@ -196,4 +204,4 @@ function dotnetSDKRedirect(uri: string): string | undefined {
     }
 
     return undefined;
-};
+}

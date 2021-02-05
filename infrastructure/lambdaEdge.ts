@@ -2,41 +2,48 @@
 
 import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
-import { createComputedPropertyName } from "typescript";
 
 export interface LambdaEdgeArgs {
     func: aws.lambda.Callback<any, any>;
     funcDescription: string;
+
+    /**
+     * Setting this to `true` will not add the `name` arg of this
+     * component as a prefix for the resources it creates.
+     */
+    disableResourceNamePrefix?: boolean;
 }
 
 export class LambdaEdge extends pulumi.ComponentResource {
     private args: LambdaEdgeArgs;
 
-    private callbackName: string;
-    private roleName: string;
-    private rolePolicyName: string;
-    private permissionName: string;
+    private readonly resourceNamesPrefix: string;
 
     private role: aws.iam.Role;
     private lambdaEdgeFunc: aws.lambda.CallbackFunction<any, any>;
 
-    constructor(name: string, callbackName: string, roleName: string, rolePolicyName: string, permissionName: string, args: LambdaEdgeArgs, opts: pulumi.ComponentResourceOptions) {
+    constructor(name: string, args: LambdaEdgeArgs, opts: pulumi.ComponentResourceOptions) {
         super("www-pulumi:infrastructure:LambdaEdge", name, undefined, opts);
 
-        // You might be wondering why these names need to be passed in when they could easily have
-        // been created dynamically based on the `name` of the component resource. The answer has to do
-        // with restrictions AWS places on deleting Lambda@Edge replicated functions (namely that they don't
-        // let you do it). At update-time, if Pulumi determines that a Lambda@Edge function needs to be
-        // deleted, (for example, when it's renamed), our create-before-delete functionality does the right thing,
-        // creating the replacement function and the CloudFront association, but fails on attempting to delete the
-        // previously associated function because of a bug in the AWS provider. So to safeguard against these
-        // failures, we opt to have the component accept these names explicitly.
-        // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-edge-delete-replicas.html
+        const defaultRegion = aws.config.region;
+        if (defaultRegion !== aws.Region.USEast1 && !opts.providers && !opts.provider) {
+            throw new Error("Lambda@Edge must be deployed in us-east-1.");
+        }
 
-        this.callbackName = callbackName;
-        this.roleName = roleName;
-        this.rolePolicyName = rolePolicyName;
-        this.permissionName = permissionName;
+        // You might be wondering why the resources created in this component can't always have the prefix
+        // based on the `name` of the component resource. The answer has to do with restrictions AWS places
+        // on deleting Lambda@Edge replicated functions (namely that they don't let you do it).
+        // At update-time, if Pulumi determines that a Lambda@Edge function needs to be deleted,
+        // (for example, when it's renamed), our create-before-delete functionality does the right thing,
+        // creating the replacement function and the CloudFront association, but fails on attempting to delete
+        // the previously associated function because of a bug in the AWS provider. So to safeguard against
+        // these failures, we opt to have the component accept these names explicitly.
+        // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-edge-delete-replicas.html
+        if (!args.disableResourceNamePrefix) {
+            this.resourceNamesPrefix = `${name}-`;
+        } else {
+            this.resourceNamesPrefix = "";
+        }
 
         this.args = args;
 
@@ -50,7 +57,8 @@ export class LambdaEdge extends pulumi.ComponentResource {
     }
 
     private createIam() {
-        this.role = new aws.iam.Role(this.roleName,
+        this.role = new aws.iam.Role(
+            `${this.resourceNamesPrefix}lambdaEdgeRole`,
             {
                 assumeRolePolicy: {
                     Statement: [{
@@ -71,7 +79,8 @@ export class LambdaEdge extends pulumi.ComponentResource {
             },
         );
 
-        const rolePolicy = new aws.iam.RolePolicy(this.rolePolicyName,
+        const rolePolicy = new aws.iam.RolePolicy(
+            `${this.resourceNamesPrefix}lambdaCloudWatchPolicy`,
             {
                 role: this.role,
                 policy: {
@@ -96,7 +105,8 @@ export class LambdaEdge extends pulumi.ComponentResource {
     }
 
     private createLambdaFunction() {
-        this.lambdaEdgeFunc = new aws.lambda.CallbackFunction(this.callbackName,
+        this.lambdaEdgeFunc = new aws.lambda.CallbackFunction(
+            `${this.resourceNamesPrefix}lambdaEdge`,
             {
                 callback: this.args.func,
                 description: this.args.funcDescription,
@@ -115,7 +125,8 @@ export class LambdaEdge extends pulumi.ComponentResource {
         );
 
         // Grant permissions on the above Lambda function to the Lambda@Edge service.
-        const perm = new aws.lambda.Permission(this.permissionName,
+        const perm = new aws.lambda.Permission(
+            `${this.resourceNamesPrefix}getFuncPermission`,
             {
                 action: "lambda:GetFunction",
                 principal: "edgelambda.amazonaws.com",

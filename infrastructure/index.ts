@@ -102,7 +102,7 @@ const oneYear = oneWeek * 52;
 
 const lambdaFunctionAssociations = getLambdaFunctionAssociations(
     config.addSecurityHeaders,
-    config.doEdgeRedirects
+    config.doEdgeRedirects,
 );
 
 const baseCacheBehavior = {
