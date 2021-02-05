@@ -37,9 +37,7 @@ To change that, we're creating "[multi-language components]". With multi-languag
 language and automatically compile it to all other languages supported by Pulumi. This means anyone in the worldwide Pulumi community
 can take advantage of any component, even if it's written in a different language. Before multi-language components, unless a component
 was willing to write the code in all four Pulumi languages, their component would only be able to reach Pulumi users using the
-same language SDK. With multi-language components, that same component will now reach the other three language platforms and countless
-new users, with no extra code needed. Multi-language components take care of the conversion from one language to other Pulumi languages,
-so component developers don't need detailed knowledge of the other languages.
+same language SDK.
 
 In addition to expanding the library of publicly available components, multi-language components will also enable organizations to write
 Pulumi components in the right programming language, or languages, for each team and each product. Infrastructure or platform teams will
