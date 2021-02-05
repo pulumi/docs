@@ -107,17 +107,16 @@ function pythonSDKRedirect(uri: string): string | undefined {
 function dotnetSDKRedirect(uri: string): string | undefined {
     const pattern = new URLPattern("/docs/reference/pkg/dotnet/Pulumi.(:provider)/Pulumi.(:providerAgain)(.(:service)).html");
     const match = pattern.match(uri);
-    const exceptions = [
-        "Pulumi",
-        "Policy",
-        "Terraform",
-    ];
 
-    if (match && match.provider && !exceptions.includes(match.provider)) {
+    if (match && match.provider) {
         if (match.service) {
             return `/docs/reference/pkg/${match.provider.toLowerCase()}/${match.service.toLowerCase()}/?language=csharp`;
         }
         return `/docs/reference/pkg/${match.provider.toLowerCase()}/?language=csharp`;
+
+    // If the URI matches /dotnet/anything-else, we'll just direct you to the GitHub repo.
+    } else if (uri.startsWith("/docs/reference/pkg/dotnet/")) {
+        return "https://github.com/pulumi/pulumi/tree/master/sdk/dotnet";
     }
 
     return undefined;
