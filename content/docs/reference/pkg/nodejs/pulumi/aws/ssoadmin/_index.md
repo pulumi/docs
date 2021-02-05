@@ -3,7 +3,7 @@ title: "Module ssoadmin"
 title_tag: "Module ssoadmin | Package @pulumi/aws | Node.js SDK"
 linktitle: "ssoadmin"
 meta_desc: "Explore members of the ssoadmin module in the @pulumi/aws package."
-git_sha: "8e76d72238fd8b6509177ddc684ce7902374d390"
+git_sha: "5802798dac8d411c46bb2fb37c30cf538162f320"
 block_external_search_index: true
 ---
 
@@ -47,7 +47,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AccountAssignment" data-link-title="AccountAssignment">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L18">
         Resource <strong>AccountAssignment</strong>
     </a>
 </h3>
@@ -65,7 +65,7 @@ SSO Account Assignments can be imported using the `principal_id`, `principal_typ
 ```
 
 <h4 class="pdoc-member-header" id="AccountAssignment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -79,7 +79,7 @@ Create a AccountAssignment resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AccountAssignment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L28">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L28">method <b>get</b></a>
 </h4>
 
 
@@ -90,14 +90,14 @@ Get an existing AccountAssignment resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AccountAssignment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L18">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AccountAssignment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L39">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L39">method <b>isInstance</b></a>
 </h4>
 
 
@@ -108,7 +108,7 @@ Returns true if the given object is an instance of AccountAssignment.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AccountAssignment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L18">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -117,7 +117,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AccountAssignment-instanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L49">property <b>instanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L49">property <b>instanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -125,7 +125,7 @@ deployments and may be missing (undefined) during planning phases.
 The Amazon Resource Name (ARN) of the SSO Instance.
 
 <h4 class="pdoc-member-header" id="AccountAssignment-permissionSetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L53">property <b>permissionSetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L53">property <b>permissionSetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissionSetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -133,7 +133,7 @@ The Amazon Resource Name (ARN) of the SSO Instance.
 The Amazon Resource Name (ARN) of the Permission Set that the admin wants to grant the principal access to.
 
 <h4 class="pdoc-member-header" id="AccountAssignment-principalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L57">property <b>principalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L57">property <b>principalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -141,7 +141,7 @@ The Amazon Resource Name (ARN) of the Permission Set that the admin wants to gra
 An identifier for an object in SSO, such as a user or group. PrincipalIds are GUIDs (For example, `f81d4fae-7dec-11d0-a765-00a0c91e6bf6`).
 
 <h4 class="pdoc-member-header" id="AccountAssignment-principalType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L61">property <b>principalType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L61">property <b>principalType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principalType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -149,7 +149,7 @@ An identifier for an object in SSO, such as a user or group. PrincipalIds are GU
 The entity type for which the assignment will be created. Valid values: `USER`, `GROUP`.
 
 <h4 class="pdoc-member-header" id="AccountAssignment-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L65">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L65">property <b>targetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -157,7 +157,7 @@ The entity type for which the assignment will be created. Valid values: `USER`, 
 An AWS account identifier, typically a 10-12 digit string.
 
 <h4 class="pdoc-member-header" id="AccountAssignment-targetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L69">property <b>targetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L69">property <b>targetType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -165,7 +165,7 @@ An AWS account identifier, typically a 10-12 digit string.
 The entity type for which the assignment will be created. Valid values: `AWS_ACCOUNT`.
 
 <h4 class="pdoc-member-header" id="AccountAssignment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L18">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -174,7 +174,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ManagedPolicyAttachment" data-link-title="ManagedPolicyAttachment">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L20">
         Resource <strong>ManagedPolicyAttachment</strong>
     </a>
 </h3>
@@ -194,7 +194,7 @@ SSO Managed Policy Attachments can be imported using the `managed_policy_arn`, `
 ```
 
 <h4 class="pdoc-member-header" id="ManagedPolicyAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L63"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L63"> <b>constructor</b></a>
 </h4>
 
 
@@ -208,7 +208,7 @@ Create a ManagedPolicyAttachment resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ManagedPolicyAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -219,14 +219,14 @@ Get an existing ManagedPolicyAttachment resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ManagedPolicyAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ManagedPolicyAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -237,7 +237,7 @@ Returns true if the given object is an instance of ManagedPolicyAttachment.  Thi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ManagedPolicyAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -246,7 +246,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ManagedPolicyAttachment-instanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L51">property <b>instanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L51">property <b>instanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -254,7 +254,7 @@ deployments and may be missing (undefined) during planning phases.
 The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
 
 <h4 class="pdoc-member-header" id="ManagedPolicyAttachment-managedPolicyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L55">property <b>managedPolicyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L55">property <b>managedPolicyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>managedPolicyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -262,7 +262,7 @@ The Amazon Resource Name (ARN) of the SSO Instance under which the operation wil
 The IAM managed policy Amazon Resource Name (ARN) to be attached to the Permission Set.
 
 <h4 class="pdoc-member-header" id="ManagedPolicyAttachment-managedPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L59">property <b>managedPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L59">property <b>managedPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>managedPolicyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -270,7 +270,7 @@ The IAM managed policy Amazon Resource Name (ARN) to be attached to the Permissi
 The name of the IAM Managed Policy.
 
 <h4 class="pdoc-member-header" id="ManagedPolicyAttachment-permissionSetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L63">property <b>permissionSetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L63">property <b>permissionSetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissionSetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -278,7 +278,7 @@ The name of the IAM Managed Policy.
 The Amazon Resource Name (ARN) of the Permission Set.
 
 <h4 class="pdoc-member-header" id="ManagedPolicyAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -287,7 +287,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PermissionSet" data-link-title="PermissionSet">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L20">
         Resource <strong>PermissionSet</strong>
     </a>
 </h3>
@@ -307,7 +307,7 @@ SSO Permission Sets can be imported using the `arn` and `instance_arn` separated
 ```
 
 <h4 class="pdoc-member-header" id="PermissionSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -321,7 +321,7 @@ Create a PermissionSet resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PermissionSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -332,14 +332,14 @@ Get an existing PermissionSet resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PermissionSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PermissionSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -350,7 +350,7 @@ Returns true if the given object is an instance of PermissionSet.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PermissionSet-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L51">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L51">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -358,7 +358,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) of the Permission Set.
 
 <h4 class="pdoc-member-header" id="PermissionSet-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L55">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L55">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -366,7 +366,7 @@ The Amazon Resource Name (ARN) of the Permission Set.
 The date the Permission Set was created in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 
 <h4 class="pdoc-member-header" id="PermissionSet-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L59">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L59">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -374,7 +374,7 @@ The date the Permission Set was created in [RFC3339 format](https://tools.ietf.o
 The description of the Permission Set.
 
 <h4 class="pdoc-member-header" id="PermissionSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -383,7 +383,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PermissionSet-instanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L63">property <b>instanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L63">property <b>instanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -391,7 +391,7 @@ deployments and may be missing (undefined) during planning phases.
 The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
 
 <h4 class="pdoc-member-header" id="PermissionSet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -399,7 +399,7 @@ The Amazon Resource Name (ARN) of the SSO Instance under which the operation wil
 The name of the Permission Set.
 
 <h4 class="pdoc-member-header" id="PermissionSet-relayState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L71">property <b>relayState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L71">property <b>relayState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>relayState: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -407,7 +407,7 @@ The name of the Permission Set.
 The relay state URL used to redirect users within the application during the federation authentication process.
 
 <h4 class="pdoc-member-header" id="PermissionSet-sessionDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L75">property <b>sessionDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L75">property <b>sessionDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sessionDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -415,7 +415,7 @@ The relay state URL used to redirect users within the application during the fed
 The length of time that the application user sessions are valid in the ISO-8601 standard. Default: `PT1H`.
 
 <h4 class="pdoc-member-header" id="PermissionSet-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L79">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L79">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -423,7 +423,7 @@ The length of time that the application user sessions are valid in the ISO-8601 
 Key-value map of resource tags.
 
 <h4 class="pdoc-member-header" id="PermissionSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -432,7 +432,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PermissionSetInlinePolicy" data-link-title="PermissionSetInlinePolicy">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L21">
         Resource <strong>PermissionSetInlinePolicy</strong>
     </a>
 </h3>
@@ -453,7 +453,7 @@ SSO Permission Set Inline Policies can be imported using the `permission_set_arn
 ```
 
 <h4 class="pdoc-member-header" id="PermissionSetInlinePolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L60"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L60"> <b>constructor</b></a>
 </h4>
 
 
@@ -467,7 +467,7 @@ Create a PermissionSetInlinePolicy resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PermissionSetInlinePolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -478,14 +478,14 @@ Get an existing PermissionSetInlinePolicy resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PermissionSetInlinePolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PermissionSetInlinePolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -496,7 +496,7 @@ Returns true if the given object is an instance of PermissionSetInlinePolicy.  T
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PermissionSetInlinePolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -505,7 +505,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PermissionSetInlinePolicy-inlinePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L52">property <b>inlinePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L52">property <b>inlinePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inlinePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -513,7 +513,7 @@ deployments and may be missing (undefined) during planning phases.
 The IAM inline policy to attach to a Permission Set.
 
 <h4 class="pdoc-member-header" id="PermissionSetInlinePolicy-instanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L56">property <b>instanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L56">property <b>instanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -521,7 +521,7 @@ The IAM inline policy to attach to a Permission Set.
 The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
 
 <h4 class="pdoc-member-header" id="PermissionSetInlinePolicy-permissionSetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L60">property <b>permissionSetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L60">property <b>permissionSetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissionSetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -529,7 +529,7 @@ The Amazon Resource Name (ARN) of the SSO Instance under which the operation wil
 The Amazon Resource Name (ARN) of the Permission Set.
 
 <h4 class="pdoc-member-header" id="PermissionSetInlinePolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -540,7 +540,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getInstances" data-link-title="getInstances">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getInstances.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getInstances.ts#L11">
         Function <strong>getInstances</strong>
     </a>
 </h3>
@@ -552,7 +552,7 @@ deployments.
 Use this data source to get ARNs and Identity Store IDs of Single Sign-On (SSO) Instances.
 
 <h3 class="pdoc-module-header" id="getPermissionSet" data-link-title="getPermissionSet">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getPermissionSet.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getPermissionSet.ts#L11">
         Function <strong>getPermissionSet</strong>
     </a>
 </h3>
@@ -566,7 +566,7 @@ Use this data source to get a Single Sign-On (SSO) Permission Set.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AccountAssignmentArgs" data-link-title="AccountAssignmentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L157">
         interface <strong>AccountAssignmentArgs</strong>
     </a>
 </h3>
@@ -576,7 +576,7 @@ Use this data source to get a Single Sign-On (SSO) Permission Set.
 The set of arguments for constructing a AccountAssignment resource.
 
 <h4 class="pdoc-member-header" id="AccountAssignmentArgs-instanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L161">property <b>instanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L161">property <b>instanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -584,7 +584,7 @@ The set of arguments for constructing a AccountAssignment resource.
 The Amazon Resource Name (ARN) of the SSO Instance.
 
 <h4 class="pdoc-member-header" id="AccountAssignmentArgs-permissionSetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L165">property <b>permissionSetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L165">property <b>permissionSetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissionSetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -592,7 +592,7 @@ The Amazon Resource Name (ARN) of the SSO Instance.
 The Amazon Resource Name (ARN) of the Permission Set that the admin wants to grant the principal access to.
 
 <h4 class="pdoc-member-header" id="AccountAssignmentArgs-principalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L169">property <b>principalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L169">property <b>principalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -600,7 +600,7 @@ The Amazon Resource Name (ARN) of the Permission Set that the admin wants to gra
 An identifier for an object in SSO, such as a user or group. PrincipalIds are GUIDs (For example, `f81d4fae-7dec-11d0-a765-00a0c91e6bf6`).
 
 <h4 class="pdoc-member-header" id="AccountAssignmentArgs-principalType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L173">property <b>principalType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L173">property <b>principalType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -608,7 +608,7 @@ An identifier for an object in SSO, such as a user or group. PrincipalIds are GU
 The entity type for which the assignment will be created. Valid values: `USER`, `GROUP`.
 
 <h4 class="pdoc-member-header" id="AccountAssignmentArgs-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L177">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L177">property <b>targetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -616,7 +616,7 @@ The entity type for which the assignment will be created. Valid values: `USER`, 
 An AWS account identifier, typically a 10-12 digit string.
 
 <h4 class="pdoc-member-header" id="AccountAssignmentArgs-targetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L181">property <b>targetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L181">property <b>targetType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -624,7 +624,7 @@ An AWS account identifier, typically a 10-12 digit string.
 The entity type for which the assignment will be created. Valid values: `AWS_ACCOUNT`.
 
 <h3 class="pdoc-module-header" id="AccountAssignmentState" data-link-title="AccountAssignmentState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L127">
         interface <strong>AccountAssignmentState</strong>
     </a>
 </h3>
@@ -634,7 +634,7 @@ The entity type for which the assignment will be created. Valid values: `AWS_ACC
 Input properties used for looking up and filtering AccountAssignment resources.
 
 <h4 class="pdoc-member-header" id="AccountAssignmentState-instanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L131">property <b>instanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L131">property <b>instanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -642,7 +642,7 @@ Input properties used for looking up and filtering AccountAssignment resources.
 The Amazon Resource Name (ARN) of the SSO Instance.
 
 <h4 class="pdoc-member-header" id="AccountAssignmentState-permissionSetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L135">property <b>permissionSetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L135">property <b>permissionSetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissionSetArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -650,7 +650,7 @@ The Amazon Resource Name (ARN) of the SSO Instance.
 The Amazon Resource Name (ARN) of the Permission Set that the admin wants to grant the principal access to.
 
 <h4 class="pdoc-member-header" id="AccountAssignmentState-principalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L139">property <b>principalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L139">property <b>principalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -658,7 +658,7 @@ The Amazon Resource Name (ARN) of the Permission Set that the admin wants to gra
 An identifier for an object in SSO, such as a user or group. PrincipalIds are GUIDs (For example, `f81d4fae-7dec-11d0-a765-00a0c91e6bf6`).
 
 <h4 class="pdoc-member-header" id="AccountAssignmentState-principalType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L143">property <b>principalType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L143">property <b>principalType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -666,7 +666,7 @@ An identifier for an object in SSO, such as a user or group. PrincipalIds are GU
 The entity type for which the assignment will be created. Valid values: `USER`, `GROUP`.
 
 <h4 class="pdoc-member-header" id="AccountAssignmentState-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L147">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L147">property <b>targetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -674,7 +674,7 @@ The entity type for which the assignment will be created. Valid values: `USER`, 
 An AWS account identifier, typically a 10-12 digit string.
 
 <h4 class="pdoc-member-header" id="AccountAssignmentState-targetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/accountAssignment.ts#L151">property <b>targetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/accountAssignment.ts#L151">property <b>targetType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -682,7 +682,7 @@ An AWS account identifier, typically a 10-12 digit string.
 The entity type for which the assignment will be created. Valid values: `AWS_ACCOUNT`.
 
 <h3 class="pdoc-module-header" id="GetInstancesResult" data-link-title="GetInstancesResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getInstances.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getInstances.ts#L26">
         interface <strong>GetInstancesResult</strong>
     </a>
 </h3>
@@ -692,7 +692,7 @@ The entity type for which the assignment will be created. Valid values: `AWS_ACC
 A collection of values returned by getInstances.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-arns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getInstances.ts#L30">property <b>arns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getInstances.ts#L30">property <b>arns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -700,7 +700,7 @@ A collection of values returned by getInstances.
 Set of Amazon Resource Names (ARNs) of the SSO Instances.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getInstances.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getInstances.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -708,7 +708,7 @@ Set of Amazon Resource Names (ARNs) of the SSO Instances.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-identityStoreIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getInstances.ts#L38">property <b>identityStoreIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getInstances.ts#L38">property <b>identityStoreIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identityStoreIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -716,7 +716,7 @@ The provider-assigned unique ID for this managed resource.
 Set of identifiers of the identity stores connected to the SSO Instances.
 
 <h3 class="pdoc-module-header" id="GetPermissionSetArgs" data-link-title="GetPermissionSetArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getPermissionSet.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getPermissionSet.ts#L30">
         interface <strong>GetPermissionSetArgs</strong>
     </a>
 </h3>
@@ -726,7 +726,7 @@ Set of identifiers of the identity stores connected to the SSO Instances.
 A collection of arguments for invoking getPermissionSet.
 
 <h4 class="pdoc-member-header" id="GetPermissionSetArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getPermissionSet.ts#L34">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getPermissionSet.ts#L34">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -734,7 +734,7 @@ A collection of arguments for invoking getPermissionSet.
 The Amazon Resource Name (ARN) of the permission set.
 
 <h4 class="pdoc-member-header" id="GetPermissionSetArgs-instanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getPermissionSet.ts#L38">property <b>instanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getPermissionSet.ts#L38">property <b>instanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -742,7 +742,7 @@ The Amazon Resource Name (ARN) of the permission set.
 The Amazon Resource Name (ARN) of the SSO Instance associated with the permission set.
 
 <h4 class="pdoc-member-header" id="GetPermissionSetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getPermissionSet.ts#L42">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getPermissionSet.ts#L42">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -750,7 +750,7 @@ The Amazon Resource Name (ARN) of the SSO Instance associated with the permissio
 The name of the SSO Permission Set.
 
 <h4 class="pdoc-member-header" id="GetPermissionSetArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getPermissionSet.ts#L46">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getPermissionSet.ts#L46">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -758,7 +758,7 @@ The name of the SSO Permission Set.
 Key-value map of resource tags.
 
 <h3 class="pdoc-module-header" id="GetPermissionSetResult" data-link-title="GetPermissionSetResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getPermissionSet.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getPermissionSet.ts#L52">
         interface <strong>GetPermissionSetResult</strong>
     </a>
 </h3>
@@ -768,17 +768,17 @@ Key-value map of resource tags.
 A collection of values returned by getPermissionSet.
 
 <h4 class="pdoc-member-header" id="GetPermissionSetResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getPermissionSet.ts#L53">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getPermissionSet.ts#L53">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPermissionSetResult-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getPermissionSet.ts#L54">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getPermissionSet.ts#L54">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPermissionSetResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getPermissionSet.ts#L58">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getPermissionSet.ts#L58">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -786,7 +786,7 @@ A collection of values returned by getPermissionSet.
 The description of the Permission Set.
 
 <h4 class="pdoc-member-header" id="GetPermissionSetResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getPermissionSet.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getPermissionSet.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -794,17 +794,17 @@ The description of the Permission Set.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPermissionSetResult-instanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getPermissionSet.ts#L63">property <b>instanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getPermissionSet.ts#L63">property <b>instanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPermissionSetResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getPermissionSet.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getPermissionSet.ts#L64">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPermissionSetResult-relayState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getPermissionSet.ts#L68">property <b>relayState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getPermissionSet.ts#L68">property <b>relayState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relayState: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -812,7 +812,7 @@ The provider-assigned unique ID for this managed resource.
 The relay state URL used to redirect users within the application during the federation authentication process.
 
 <h4 class="pdoc-member-header" id="GetPermissionSetResult-sessionDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getPermissionSet.ts#L72">property <b>sessionDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getPermissionSet.ts#L72">property <b>sessionDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sessionDuration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -820,7 +820,7 @@ The relay state URL used to redirect users within the application during the fed
 The length of time that the application user sessions are valid in the ISO-8601 standard.
 
 <h4 class="pdoc-member-header" id="GetPermissionSetResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/getPermissionSet.ts#L76">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/getPermissionSet.ts#L76">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -828,7 +828,7 @@ The length of time that the application user sessions are valid in the ISO-8601 
 Key-value map of resource tags.
 
 <h3 class="pdoc-module-header" id="ManagedPolicyAttachmentArgs" data-link-title="ManagedPolicyAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L133">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L133">
         interface <strong>ManagedPolicyAttachmentArgs</strong>
     </a>
 </h3>
@@ -838,7 +838,7 @@ Key-value map of resource tags.
 The set of arguments for constructing a ManagedPolicyAttachment resource.
 
 <h4 class="pdoc-member-header" id="ManagedPolicyAttachmentArgs-instanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L137">property <b>instanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L137">property <b>instanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -846,7 +846,7 @@ The set of arguments for constructing a ManagedPolicyAttachment resource.
 The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
 
 <h4 class="pdoc-member-header" id="ManagedPolicyAttachmentArgs-managedPolicyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L141">property <b>managedPolicyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L141">property <b>managedPolicyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedPolicyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -854,7 +854,7 @@ The Amazon Resource Name (ARN) of the SSO Instance under which the operation wil
 The IAM managed policy Amazon Resource Name (ARN) to be attached to the Permission Set.
 
 <h4 class="pdoc-member-header" id="ManagedPolicyAttachmentArgs-permissionSetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L145">property <b>permissionSetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L145">property <b>permissionSetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissionSetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -862,7 +862,7 @@ The IAM managed policy Amazon Resource Name (ARN) to be attached to the Permissi
 The Amazon Resource Name (ARN) of the Permission Set.
 
 <h3 class="pdoc-module-header" id="ManagedPolicyAttachmentState" data-link-title="ManagedPolicyAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L111">
         interface <strong>ManagedPolicyAttachmentState</strong>
     </a>
 </h3>
@@ -872,7 +872,7 @@ The Amazon Resource Name (ARN) of the Permission Set.
 Input properties used for looking up and filtering ManagedPolicyAttachment resources.
 
 <h4 class="pdoc-member-header" id="ManagedPolicyAttachmentState-instanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L115">property <b>instanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L115">property <b>instanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -880,7 +880,7 @@ Input properties used for looking up and filtering ManagedPolicyAttachment resou
 The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
 
 <h4 class="pdoc-member-header" id="ManagedPolicyAttachmentState-managedPolicyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L119">property <b>managedPolicyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L119">property <b>managedPolicyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedPolicyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -888,7 +888,7 @@ The Amazon Resource Name (ARN) of the SSO Instance under which the operation wil
 The IAM managed policy Amazon Resource Name (ARN) to be attached to the Permission Set.
 
 <h4 class="pdoc-member-header" id="ManagedPolicyAttachmentState-managedPolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L123">property <b>managedPolicyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L123">property <b>managedPolicyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedPolicyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -896,7 +896,7 @@ The IAM managed policy Amazon Resource Name (ARN) to be attached to the Permissi
 The name of the IAM Managed Policy.
 
 <h4 class="pdoc-member-header" id="ManagedPolicyAttachmentState-permissionSetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L127">property <b>permissionSetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/managedPolicyAttachment.ts#L127">property <b>permissionSetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissionSetArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -904,7 +904,7 @@ The name of the IAM Managed Policy.
 The Amazon Resource Name (ARN) of the Permission Set.
 
 <h3 class="pdoc-module-header" id="PermissionSetArgs" data-link-title="PermissionSetArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L167">
         interface <strong>PermissionSetArgs</strong>
     </a>
 </h3>
@@ -914,7 +914,7 @@ The Amazon Resource Name (ARN) of the Permission Set.
 The set of arguments for constructing a PermissionSet resource.
 
 <h4 class="pdoc-member-header" id="PermissionSetArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L171">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L171">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -922,7 +922,7 @@ The set of arguments for constructing a PermissionSet resource.
 The description of the Permission Set.
 
 <h4 class="pdoc-member-header" id="PermissionSetArgs-instanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L175">property <b>instanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L175">property <b>instanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -930,7 +930,7 @@ The description of the Permission Set.
 The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
 
 <h4 class="pdoc-member-header" id="PermissionSetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L179">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L179">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -938,7 +938,7 @@ The Amazon Resource Name (ARN) of the SSO Instance under which the operation wil
 The name of the Permission Set.
 
 <h4 class="pdoc-member-header" id="PermissionSetArgs-relayState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L183">property <b>relayState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L183">property <b>relayState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relayState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -946,7 +946,7 @@ The name of the Permission Set.
 The relay state URL used to redirect users within the application during the federation authentication process.
 
 <h4 class="pdoc-member-header" id="PermissionSetArgs-sessionDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L187">property <b>sessionDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L187">property <b>sessionDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sessionDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -954,7 +954,7 @@ The relay state URL used to redirect users within the application during the fed
 The length of time that the application user sessions are valid in the ISO-8601 standard. Default: `PT1H`.
 
 <h4 class="pdoc-member-header" id="PermissionSetArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L191">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L191">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -962,7 +962,7 @@ The length of time that the application user sessions are valid in the ISO-8601 
 Key-value map of resource tags.
 
 <h3 class="pdoc-module-header" id="PermissionSetInlinePolicyArgs" data-link-title="PermissionSetInlinePolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L124">
         interface <strong>PermissionSetInlinePolicyArgs</strong>
     </a>
 </h3>
@@ -972,7 +972,7 @@ Key-value map of resource tags.
 The set of arguments for constructing a PermissionSetInlinePolicy resource.
 
 <h4 class="pdoc-member-header" id="PermissionSetInlinePolicyArgs-inlinePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L128">property <b>inlinePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L128">property <b>inlinePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inlinePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -980,7 +980,7 @@ The set of arguments for constructing a PermissionSetInlinePolicy resource.
 The IAM inline policy to attach to a Permission Set.
 
 <h4 class="pdoc-member-header" id="PermissionSetInlinePolicyArgs-instanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L132">property <b>instanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L132">property <b>instanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -988,7 +988,7 @@ The IAM inline policy to attach to a Permission Set.
 The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
 
 <h4 class="pdoc-member-header" id="PermissionSetInlinePolicyArgs-permissionSetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L136">property <b>permissionSetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L136">property <b>permissionSetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissionSetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -996,7 +996,7 @@ The Amazon Resource Name (ARN) of the SSO Instance under which the operation wil
 The Amazon Resource Name (ARN) of the Permission Set.
 
 <h3 class="pdoc-module-header" id="PermissionSetInlinePolicyState" data-link-title="PermissionSetInlinePolicyState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L106">
         interface <strong>PermissionSetInlinePolicyState</strong>
     </a>
 </h3>
@@ -1006,7 +1006,7 @@ The Amazon Resource Name (ARN) of the Permission Set.
 Input properties used for looking up and filtering PermissionSetInlinePolicy resources.
 
 <h4 class="pdoc-member-header" id="PermissionSetInlinePolicyState-inlinePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L110">property <b>inlinePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L110">property <b>inlinePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inlinePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1014,7 +1014,7 @@ Input properties used for looking up and filtering PermissionSetInlinePolicy res
 The IAM inline policy to attach to a Permission Set.
 
 <h4 class="pdoc-member-header" id="PermissionSetInlinePolicyState-instanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L114">property <b>instanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L114">property <b>instanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1022,7 +1022,7 @@ The IAM inline policy to attach to a Permission Set.
 The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
 
 <h4 class="pdoc-member-header" id="PermissionSetInlinePolicyState-permissionSetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L118">property <b>permissionSetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSetInlinePolicy.ts#L118">property <b>permissionSetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissionSetArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1030,7 +1030,7 @@ The Amazon Resource Name (ARN) of the SSO Instance under which the operation wil
 The Amazon Resource Name (ARN) of the Permission Set.
 
 <h3 class="pdoc-module-header" id="PermissionSetState" data-link-title="PermissionSetState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L129">
         interface <strong>PermissionSetState</strong>
     </a>
 </h3>
@@ -1040,7 +1040,7 @@ The Amazon Resource Name (ARN) of the Permission Set.
 Input properties used for looking up and filtering PermissionSet resources.
 
 <h4 class="pdoc-member-header" id="PermissionSetState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L133">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L133">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1048,7 +1048,7 @@ Input properties used for looking up and filtering PermissionSet resources.
 The Amazon Resource Name (ARN) of the Permission Set.
 
 <h4 class="pdoc-member-header" id="PermissionSetState-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L137">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L137">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1056,7 +1056,7 @@ The Amazon Resource Name (ARN) of the Permission Set.
 The date the Permission Set was created in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 
 <h4 class="pdoc-member-header" id="PermissionSetState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L141">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L141">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1064,7 +1064,7 @@ The date the Permission Set was created in [RFC3339 format](https://tools.ietf.o
 The description of the Permission Set.
 
 <h4 class="pdoc-member-header" id="PermissionSetState-instanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L145">property <b>instanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L145">property <b>instanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1072,7 +1072,7 @@ The description of the Permission Set.
 The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
 
 <h4 class="pdoc-member-header" id="PermissionSetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L149">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L149">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1080,7 +1080,7 @@ The Amazon Resource Name (ARN) of the SSO Instance under which the operation wil
 The name of the Permission Set.
 
 <h4 class="pdoc-member-header" id="PermissionSetState-relayState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L153">property <b>relayState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L153">property <b>relayState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relayState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1088,7 +1088,7 @@ The name of the Permission Set.
 The relay state URL used to redirect users within the application during the federation authentication process.
 
 <h4 class="pdoc-member-header" id="PermissionSetState-sessionDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L157">property <b>sessionDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L157">property <b>sessionDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sessionDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1096,7 +1096,7 @@ The relay state URL used to redirect users within the application during the fed
 The length of time that the application user sessions are valid in the ISO-8601 standard. Default: `PT1H`.
 
 <h4 class="pdoc-member-header" id="PermissionSetState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ssoadmin/permissionSet.ts#L161">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ssoadmin/permissionSet.ts#L161">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

@@ -3,7 +3,7 @@ title: "Module ec2transitgateway"
 title_tag: "Module ec2transitgateway | Package @pulumi/aws | Node.js SDK"
 linktitle: "ec2transitgateway"
 meta_desc: "Explore members of the ec2transitgateway module in the @pulumi/aws package."
-git_sha: "8e76d72238fd8b6509177ddc684ce7902374d390"
+git_sha: "5802798dac8d411c46bb2fb37c30cf538162f320"
 block_external_search_index: true
 ---
 
@@ -18,6 +18,7 @@ block_external_search_index: true
 <h3>Resources</h3>
 <ul class="api">
     <li><a href="#PeeringAttachment"><span class="symbol resource"></span>PeeringAttachment</a></li>
+    <li><a href="#PrefixListReference"><span class="symbol resource"></span>PrefixListReference</a></li>
     <li><a href="#Route"><span class="symbol resource"></span>Route</a></li>
     <li><a href="#RouteTable"><span class="symbol resource"></span>RouteTable</a></li>
     <li><a href="#RouteTableAssociation"><span class="symbol resource"></span>RouteTableAssociation</a></li>
@@ -53,6 +54,8 @@ block_external_search_index: true
     <li><a href="#GetVpnAttachmentResult"><span class="symbol api"></span>GetVpnAttachmentResult</a></li>
     <li><a href="#PeeringAttachmentArgs"><span class="symbol api"></span>PeeringAttachmentArgs</a></li>
     <li><a href="#PeeringAttachmentState"><span class="symbol api"></span>PeeringAttachmentState</a></li>
+    <li><a href="#PrefixListReferenceArgs"><span class="symbol api"></span>PrefixListReferenceArgs</a></li>
+    <li><a href="#PrefixListReferenceState"><span class="symbol api"></span>PrefixListReferenceState</a></li>
     <li><a href="#RouteArgs"><span class="symbol api"></span>RouteArgs</a></li>
     <li><a href="#RouteState"><span class="symbol api"></span>RouteState</a></li>
     <li><a href="#RouteTableArgs"><span class="symbol api"></span>RouteTableArgs</a></li>
@@ -72,7 +75,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="PeeringAttachment" data-link-title="PeeringAttachment">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L49">
         Resource <strong>PeeringAttachment</strong>
     </a>
 </h3>
@@ -121,7 +124,7 @@ const example = new aws.ec2transitgateway.PeeringAttachment("example", {
 ```
 
 <h4 class="pdoc-member-header" id="PeeringAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L96"> <b>constructor</b></a>
 </h4>
 
 
@@ -135,7 +138,7 @@ Create a PeeringAttachment resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PeeringAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -146,14 +149,14 @@ Get an existing PeeringAttachment resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PeeringAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PeeringAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -164,7 +167,7 @@ Returns true if the given object is an instance of PeeringAttachment.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PeeringAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -173,7 +176,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PeeringAttachment-peerAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L80">property <b>peerAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L80">property <b>peerAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>peerAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -181,7 +184,7 @@ deployments and may be missing (undefined) during planning phases.
 Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 
 <h4 class="pdoc-member-header" id="PeeringAttachment-peerRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L84">property <b>peerRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L84">property <b>peerRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>peerRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -189,7 +192,7 @@ Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the c
 Region of EC2 Transit Gateway to peer with.
 
 <h4 class="pdoc-member-header" id="PeeringAttachment-peerTransitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L88">property <b>peerTransitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L88">property <b>peerTransitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>peerTransitGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -197,7 +200,7 @@ Region of EC2 Transit Gateway to peer with.
 Identifier of EC2 Transit Gateway to peer with.
 
 <h4 class="pdoc-member-header" id="PeeringAttachment-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L92">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L92">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -205,7 +208,7 @@ Identifier of EC2 Transit Gateway to peer with.
 Key-value tags for the EC2 Transit Gateway Peering Attachment.
 
 <h4 class="pdoc-member-header" id="PeeringAttachment-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L96">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L96">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transitGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -213,7 +216,149 @@ Key-value tags for the EC2 Transit Gateway Peering Attachment.
 Identifier of EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="PeeringAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L49">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-module-header" id="PrefixListReference" data-link-title="PrefixListReference">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L44">
+        Resource <strong>PrefixListReference</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>PrefixListReference</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Manages an EC2 Transit Gateway Prefix List Reference.
+
+#### Example Usage
+##### Attachment Routing
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ec2transitgateway.PrefixListReference("example", {
+    prefixListId: aws_ec2_managed_prefix_list.example.id,
+    transitGatewayAttachmentId: aws_ec2_transit_gateway_vpc_attachment.example.id,
+    transitGatewayRouteTableId: aws_ec2_transit_gateway.example.association_default_route_table_id,
+});
+```
+##### Blackhole Routing
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ec2transitgateway.PrefixListReference("example", {
+    blackhole: true,
+    prefixListId: aws_ec2_managed_prefix_list.example.id,
+    transitGatewayRouteTableId: aws_ec2_transit_gateway.example.association_default_route_table_id,
+});
+```
+
+#### Import
+
+`aws_ec2_transit_gateway_prefix_list_reference` can be imported by using the EC2 Transit Gateway Route Table identifier and EC2 Prefix List identifier, separated by an underscore (`_`), e.g. console
+
+```sh
+ $ pulumi import aws:ec2transitgateway/prefixListReference:PrefixListReference example tgw-rtb-12345678_pl-12345678
+```
+
+<h4 class="pdoc-member-header" id="PrefixListReference-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L88"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> PrefixListReference(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#PrefixListReferenceArgs'>PrefixListReferenceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a PrefixListReference resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="PrefixListReference-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L54">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#PrefixListReferenceState'>PrefixListReferenceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PrefixListReference'>PrefixListReference</a></code></pre>
+
+
+Get an existing PrefixListReference resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="PrefixListReference-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L44">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="PrefixListReference-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L65">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is PrefixListReference</code></pre>
+
+
+Returns true if the given object is an instance of PrefixListReference.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="PrefixListReference-blackhole">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L75">property <b>blackhole</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>blackhole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Indicates whether to drop traffic that matches the Prefix List. Defaults to `false`.
+
+<h4 class="pdoc-member-header" id="PrefixListReference-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L44">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="PrefixListReference-prefixListId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L79">property <b>prefixListId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>prefixListId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Identifier of EC2 Prefix List.
+
+<h4 class="pdoc-member-header" id="PrefixListReference-prefixListOwnerId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L80">property <b>prefixListOwnerId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>prefixListOwnerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PrefixListReference-transitGatewayAttachmentId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L84">property <b>transitGatewayAttachmentId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>transitGatewayAttachmentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Identifier of EC2 Transit Gateway Attachment.
+
+<h4 class="pdoc-member-header" id="PrefixListReference-transitGatewayRouteTableId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L88">property <b>transitGatewayRouteTableId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>transitGatewayRouteTableId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Identifier of EC2 Transit Gateway Route Table.
+
+<h4 class="pdoc-member-header" id="PrefixListReference-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -222,7 +367,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Route" data-link-title="Route">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L44">
         Resource <strong>Route</strong>
     </a>
 </h3>
@@ -266,7 +411,7 @@ const example = new aws.ec2transitgateway.Route("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Route-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -280,7 +425,7 @@ Create a Route resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Route-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -291,14 +436,14 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Route-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Route-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -309,7 +454,7 @@ Returns true if the given object is an instance of Route.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Route-blackhole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L75">property <b>blackhole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L75">property <b>blackhole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blackhole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -317,7 +462,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Indicates whether to drop traffic that matches this route (default to `false`).
 
 <h4 class="pdoc-member-header" id="Route-destinationCidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L79">property <b>destinationCidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L79">property <b>destinationCidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinationCidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -325,7 +470,7 @@ Indicates whether to drop traffic that matches this route (default to `false`).
 IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are based on the most specific match.
 
 <h4 class="pdoc-member-header" id="Route-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -334,7 +479,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Route-transitGatewayAttachmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L83">property <b>transitGatewayAttachmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L83">property <b>transitGatewayAttachmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transitGatewayAttachmentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -342,7 +487,7 @@ deployments and may be missing (undefined) during planning phases.
 Identifier of EC2 Transit Gateway Attachment (required if `blackhole` is set to false).
 
 <h4 class="pdoc-member-header" id="Route-transitGatewayRouteTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L87">property <b>transitGatewayRouteTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L87">property <b>transitGatewayRouteTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transitGatewayRouteTableId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -350,7 +495,7 @@ Identifier of EC2 Transit Gateway Attachment (required if `blackhole` is set to 
 Identifier of EC2 Transit Gateway Route Table.
 
 <h4 class="pdoc-member-header" id="Route-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -359,7 +504,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RouteTable" data-link-title="RouteTable">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L27">
         Resource <strong>RouteTable</strong>
     </a>
 </h3>
@@ -386,7 +531,7 @@ const example = new aws.ec2transitgateway.RouteTable("example", {transitGatewayI
 ```
 
 <h4 class="pdoc-member-header" id="RouteTable-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L74"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L74"> <b>constructor</b></a>
 </h4>
 
 
@@ -400,7 +545,7 @@ Create a RouteTable resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RouteTable-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -411,14 +556,14 @@ Get an existing RouteTable resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RouteTable-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RouteTable-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -429,7 +574,7 @@ Returns true if the given object is an instance of RouteTable.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RouteTable-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L58">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L58">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -437,7 +582,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="RouteTable-defaultAssociationRouteTable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L62">property <b>defaultAssociationRouteTable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L62">property <b>defaultAssociationRouteTable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultAssociationRouteTable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -445,7 +590,7 @@ EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
 Boolean whether this is the default association route table for the EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="RouteTable-defaultPropagationRouteTable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L66">property <b>defaultPropagationRouteTable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L66">property <b>defaultPropagationRouteTable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultPropagationRouteTable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -453,7 +598,7 @@ Boolean whether this is the default association route table for the EC2 Transit 
 Boolean whether this is the default propagation route table for the EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="RouteTable-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -462,7 +607,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RouteTable-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L70">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L70">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -470,7 +615,7 @@ deployments and may be missing (undefined) during planning phases.
 Key-value tags for the EC2 Transit Gateway Route Table.
 
 <h4 class="pdoc-member-header" id="RouteTable-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L74">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L74">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transitGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -478,7 +623,7 @@ Key-value tags for the EC2 Transit Gateway Route Table.
 Identifier of EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="RouteTable-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -487,7 +632,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RouteTableAssociation" data-link-title="RouteTableAssociation">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L30">
         Resource <strong>RouteTableAssociation</strong>
     </a>
 </h3>
@@ -517,7 +662,7 @@ const example = new aws.ec2transitgateway.RouteTableAssociation("example", {
 ```
 
 <h4 class="pdoc-member-header" id="RouteTableAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L73"> <b>constructor</b></a>
 </h4>
 
 
@@ -531,7 +676,7 @@ Create a RouteTableAssociation resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RouteTableAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -542,14 +687,14 @@ Get an existing RouteTableAssociation resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RouteTableAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RouteTableAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -560,7 +705,7 @@ Returns true if the given object is an instance of RouteTableAssociation.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RouteTableAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -569,7 +714,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RouteTableAssociation-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L61">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L61">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -577,7 +722,7 @@ deployments and may be missing (undefined) during planning phases.
 Identifier of the resource
 
 <h4 class="pdoc-member-header" id="RouteTableAssociation-resourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L65">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L65">property <b>resourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -585,7 +730,7 @@ Identifier of the resource
 Type of the resource
 
 <h4 class="pdoc-member-header" id="RouteTableAssociation-transitGatewayAttachmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L69">property <b>transitGatewayAttachmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L69">property <b>transitGatewayAttachmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transitGatewayAttachmentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -593,7 +738,7 @@ Type of the resource
 Identifier of EC2 Transit Gateway Attachment.
 
 <h4 class="pdoc-member-header" id="RouteTableAssociation-transitGatewayRouteTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L73">property <b>transitGatewayRouteTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L73">property <b>transitGatewayRouteTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transitGatewayRouteTableId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -601,7 +746,7 @@ Identifier of EC2 Transit Gateway Attachment.
 Identifier of EC2 Transit Gateway Route Table.
 
 <h4 class="pdoc-member-header" id="RouteTableAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -610,7 +755,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RouteTablePropagation" data-link-title="RouteTablePropagation">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L30">
         Resource <strong>RouteTablePropagation</strong>
     </a>
 </h3>
@@ -640,7 +785,7 @@ const example = new aws.ec2transitgateway.RouteTablePropagation("example", {
 ```
 
 <h4 class="pdoc-member-header" id="RouteTablePropagation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L73"> <b>constructor</b></a>
 </h4>
 
 
@@ -654,7 +799,7 @@ Create a RouteTablePropagation resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RouteTablePropagation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -665,14 +810,14 @@ Get an existing RouteTablePropagation resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RouteTablePropagation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RouteTablePropagation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -683,7 +828,7 @@ Returns true if the given object is an instance of RouteTablePropagation.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RouteTablePropagation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -692,7 +837,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RouteTablePropagation-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L61">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L61">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -700,7 +845,7 @@ deployments and may be missing (undefined) during planning phases.
 Identifier of the resource
 
 <h4 class="pdoc-member-header" id="RouteTablePropagation-resourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L65">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L65">property <b>resourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -708,7 +853,7 @@ Identifier of the resource
 Type of the resource
 
 <h4 class="pdoc-member-header" id="RouteTablePropagation-transitGatewayAttachmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L69">property <b>transitGatewayAttachmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L69">property <b>transitGatewayAttachmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transitGatewayAttachmentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -716,7 +861,7 @@ Type of the resource
 Identifier of EC2 Transit Gateway Attachment.
 
 <h4 class="pdoc-member-header" id="RouteTablePropagation-transitGatewayRouteTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L73">property <b>transitGatewayRouteTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L73">property <b>transitGatewayRouteTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transitGatewayRouteTableId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -724,7 +869,7 @@ Identifier of EC2 Transit Gateway Attachment.
 Identifier of EC2 Transit Gateway Route Table.
 
 <h4 class="pdoc-member-header" id="RouteTablePropagation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -733,7 +878,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TransitGateway" data-link-title="TransitGateway">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L31">
         Resource <strong>TransitGateway</strong>
     </a>
 </h3>
@@ -762,7 +907,7 @@ const example = new aws.ec2transitgateway.TransitGateway("example", {
 ```
 
 <h4 class="pdoc-member-header" id="TransitGateway-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L106"> <b>constructor</b></a>
 </h4>
 
 
@@ -776,7 +921,7 @@ Create a TransitGateway resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TransitGateway-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -787,14 +932,14 @@ Get an existing TransitGateway resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TransitGateway-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TransitGateway-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -805,7 +950,7 @@ Returns true if the given object is an instance of TransitGateway.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TransitGateway-amazonSideAsn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L62">property <b>amazonSideAsn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L62">property <b>amazonSideAsn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>amazonSideAsn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -813,7 +958,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is `64512` to `65534` for 16-bit ASNs and `4200000000` to `4294967294` for 32-bit ASNs. Default value: `64512`.
 
 <h4 class="pdoc-member-header" id="TransitGateway-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L66">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L66">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
@@ -821,7 +966,7 @@ Private Autonomous System Number (ASN) for the Amazon side of a BGP session. The
 EC2 Transit Gateway Amazon Resource Name (ARN)
 
 <h4 class="pdoc-member-header" id="TransitGateway-associationDefaultRouteTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L70">property <b>associationDefaultRouteTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L70">property <b>associationDefaultRouteTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>associationDefaultRouteTableId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -829,7 +974,7 @@ EC2 Transit Gateway Amazon Resource Name (ARN)
 Identifier of the default association route table
 
 <h4 class="pdoc-member-header" id="TransitGateway-autoAcceptSharedAttachments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L74">property <b>autoAcceptSharedAttachments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L74">property <b>autoAcceptSharedAttachments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoAcceptSharedAttachments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -837,7 +982,7 @@ Identifier of the default association route table
 Whether resource attachment requests are automatically accepted. Valid values: `disable`, `enable`. Default value: `disable`.
 
 <h4 class="pdoc-member-header" id="TransitGateway-defaultRouteTableAssociation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L78">property <b>defaultRouteTableAssociation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L78">property <b>defaultRouteTableAssociation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultRouteTableAssociation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -845,7 +990,7 @@ Whether resource attachment requests are automatically accepted. Valid values: `
 Whether resource attachments are automatically associated with the default association route table. Valid values: `disable`, `enable`. Default value: `enable`.
 
 <h4 class="pdoc-member-header" id="TransitGateway-defaultRouteTablePropagation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L82">property <b>defaultRouteTablePropagation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L82">property <b>defaultRouteTablePropagation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultRouteTablePropagation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -853,7 +998,7 @@ Whether resource attachments are automatically associated with the default assoc
 Whether resource attachments automatically propagate routes to the default propagation route table. Valid values: `disable`, `enable`. Default value: `enable`.
 
 <h4 class="pdoc-member-header" id="TransitGateway-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L86">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L86">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -861,7 +1006,7 @@ Whether resource attachments automatically propagate routes to the default propa
 Description of the EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="TransitGateway-dnsSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L90">property <b>dnsSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L90">property <b>dnsSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsSupport: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -869,7 +1014,7 @@ Description of the EC2 Transit Gateway.
 Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
 
 <h4 class="pdoc-member-header" id="TransitGateway-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -878,7 +1023,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TransitGateway-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L94">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L94">property <b>ownerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ownerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -886,7 +1031,7 @@ deployments and may be missing (undefined) during planning phases.
 Identifier of the AWS account that owns the EC2 Transit Gateway
 
 <h4 class="pdoc-member-header" id="TransitGateway-propagationDefaultRouteTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L98">property <b>propagationDefaultRouteTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L98">property <b>propagationDefaultRouteTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>propagationDefaultRouteTableId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -894,7 +1039,7 @@ Identifier of the AWS account that owns the EC2 Transit Gateway
 Identifier of the default propagation route table
 
 <h4 class="pdoc-member-header" id="TransitGateway-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L102">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L102">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -902,7 +1047,7 @@ Identifier of the default propagation route table
 Key-value tags for the EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="TransitGateway-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -911,7 +1056,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="TransitGateway-vpnEcmpSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L106">property <b>vpnEcmpSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L106">property <b>vpnEcmpSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpnEcmpSupport: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -919,7 +1064,7 @@ deployments.
 Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
 
 <h3 class="pdoc-module-header" id="VpcAttachment" data-link-title="VpcAttachment">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L31">
         Resource <strong>VpcAttachment</strong>
     </a>
 </h3>
@@ -950,7 +1095,7 @@ const example = new aws.ec2transitgateway.VpcAttachment("example", {
 ```
 
 <h4 class="pdoc-member-header" id="VpcAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -964,7 +1109,7 @@ Create a VpcAttachment resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VpcAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -975,14 +1120,14 @@ Get an existing VpcAttachment resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VpcAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VpcAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -993,7 +1138,7 @@ Returns true if the given object is an instance of VpcAttachment.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VpcAttachment-applianceModeSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L62">property <b>applianceModeSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L62">property <b>applianceModeSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applianceModeSupport: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1001,7 +1146,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether Appliance Mode support is enabled. If enabled, a traffic flow between a source and destination uses the same Availability Zone for the VPC attachment for the lifetime of that flow. Valid values: `disable`, `enable`. Default value: `disable`.
 
 <h4 class="pdoc-member-header" id="VpcAttachment-dnsSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L66">property <b>dnsSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L66">property <b>dnsSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsSupport: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1009,7 +1154,7 @@ Whether Appliance Mode support is enabled. If enabled, a traffic flow between a 
 Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
 
 <h4 class="pdoc-member-header" id="VpcAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1018,7 +1163,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VpcAttachment-ipv6Support">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L70">property <b>ipv6Support</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L70">property <b>ipv6Support</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipv6Support: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1026,7 +1171,7 @@ deployments and may be missing (undefined) during planning phases.
 Whether IPv6 support is enabled. Valid values: `disable`, `enable`. Default value: `disable`.
 
 <h4 class="pdoc-member-header" id="VpcAttachment-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L74">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L74">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1034,7 +1179,7 @@ Whether IPv6 support is enabled. Valid values: `disable`, `enable`. Default valu
 Identifiers of EC2 Subnets.
 
 <h4 class="pdoc-member-header" id="VpcAttachment-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L78">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L78">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1042,7 +1187,7 @@ Identifiers of EC2 Subnets.
 Key-value tags for the EC2 Transit Gateway VPC Attachment.
 
 <h4 class="pdoc-member-header" id="VpcAttachment-transitGatewayDefaultRouteTableAssociation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L82">property <b>transitGatewayDefaultRouteTableAssociation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L82">property <b>transitGatewayDefaultRouteTableAssociation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transitGatewayDefaultRouteTableAssociation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1050,7 +1195,7 @@ Key-value tags for the EC2 Transit Gateway VPC Attachment.
 Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 
 <h4 class="pdoc-member-header" id="VpcAttachment-transitGatewayDefaultRouteTablePropagation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L86">property <b>transitGatewayDefaultRouteTablePropagation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L86">property <b>transitGatewayDefaultRouteTablePropagation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transitGatewayDefaultRouteTablePropagation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1058,7 +1203,7 @@ Boolean whether the VPC Attachment should be associated with the EC2 Transit Gat
 Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 
 <h4 class="pdoc-member-header" id="VpcAttachment-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L90">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L90">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transitGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1066,7 +1211,7 @@ Boolean whether the VPC Attachment should propagate routes with the EC2 Transit 
 Identifier of EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="VpcAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1075,7 +1220,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="VpcAttachment-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L94">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L94">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1083,7 +1228,7 @@ deployments.
 Identifier of EC2 VPC.
 
 <h4 class="pdoc-member-header" id="VpcAttachment-vpcOwnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L98">property <b>vpcOwnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L98">property <b>vpcOwnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcOwnerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1091,7 +1236,7 @@ Identifier of EC2 VPC.
 Identifier of the AWS account that owns the EC2 VPC.
 
 <h3 class="pdoc-module-header" id="VpcAttachmentAccepter" data-link-title="VpcAttachmentAccepter">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L38">
         Resource <strong>VpcAttachmentAccepter</strong>
     </a>
 </h3>
@@ -1129,7 +1274,7 @@ const example = new aws.ec2transitgateway.VpcAttachmentAccepter("example", {
 ```
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepter-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L109"> <b>constructor</b></a>
 </h4>
 
 
@@ -1143,7 +1288,7 @@ Create a VpcAttachmentAccepter resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepter-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -1154,14 +1299,14 @@ Get an existing VpcAttachmentAccepter resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepter-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepter-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1172,7 +1317,7 @@ Returns true if the given object is an instance of VpcAttachmentAccepter.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepter-applianceModeSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L69">property <b>applianceModeSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L69">property <b>applianceModeSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applianceModeSupport: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1180,7 +1325,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether Appliance Mode support is enabled. Valid values: `disable`, `enable`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepter-dnsSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L73">property <b>dnsSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L73">property <b>dnsSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsSupport: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1188,7 +1333,7 @@ Whether Appliance Mode support is enabled. Valid values: `disable`, `enable`.
 Whether DNS support is enabled. Valid values: `disable`, `enable`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepter-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1197,7 +1342,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepter-ipv6Support">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L77">property <b>ipv6Support</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L77">property <b>ipv6Support</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipv6Support: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1205,7 +1350,7 @@ deployments and may be missing (undefined) during planning phases.
 Whether IPv6 support is enabled. Valid values: `disable`, `enable`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepter-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L81">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L81">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1213,7 +1358,7 @@ Whether IPv6 support is enabled. Valid values: `disable`, `enable`.
 Identifiers of EC2 Subnets.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepter-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L85">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L85">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1221,7 +1366,7 @@ Identifiers of EC2 Subnets.
 Key-value tags for the EC2 Transit Gateway VPC Attachment.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepter-transitGatewayAttachmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L89">property <b>transitGatewayAttachmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L89">property <b>transitGatewayAttachmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transitGatewayAttachmentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1229,7 +1374,7 @@ Key-value tags for the EC2 Transit Gateway VPC Attachment.
 The ID of the EC2 Transit Gateway Attachment to manage.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepter-transitGatewayDefaultRouteTableAssociation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L93">property <b>transitGatewayDefaultRouteTableAssociation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L93">property <b>transitGatewayDefaultRouteTableAssociation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transitGatewayDefaultRouteTableAssociation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1237,7 +1382,7 @@ The ID of the EC2 Transit Gateway Attachment to manage.
 Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: `true`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepter-transitGatewayDefaultRouteTablePropagation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L97">property <b>transitGatewayDefaultRouteTablePropagation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L97">property <b>transitGatewayDefaultRouteTablePropagation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transitGatewayDefaultRouteTablePropagation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1245,7 +1390,7 @@ Boolean whether the VPC Attachment should be associated with the EC2 Transit Gat
 Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: `true`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepter-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L101">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L101">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transitGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1253,7 +1398,7 @@ Boolean whether the VPC Attachment should propagate routes with the EC2 Transit 
 Identifier of EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepter-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1262,7 +1407,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepter-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L105">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L105">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1270,7 +1415,7 @@ deployments.
 Identifier of EC2 VPC.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepter-vpcOwnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L109">property <b>vpcOwnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L109">property <b>vpcOwnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcOwnerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1280,7 +1425,7 @@ Identifier of the AWS account that owns the EC2 VPC.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDirectConnectGatewayAttachment" data-link-title="getDirectConnectGatewayAttachment">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L24">
         Function <strong>getDirectConnectGatewayAttachment</strong>
     </a>
 </h3>
@@ -1305,7 +1450,7 @@ const example = aws.ec2transitgateway.getDirectConnectGatewayAttachment({
 ```
 
 <h3 class="pdoc-module-header" id="getPeeringAttachment" data-link-title="getPeeringAttachment">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L36">
         Function <strong>getPeeringAttachment</strong>
     </a>
 </h3>
@@ -1342,7 +1487,7 @@ const attachment = pulumi.output(aws.ec2transitgateway.getPeeringAttachment({
 ```
 
 <h3 class="pdoc-module-header" id="getRouteTable" data-link-title="getRouteTable">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L42">
         Function <strong>getRouteTable</strong>
     </a>
 </h3>
@@ -1385,7 +1530,7 @@ const example = pulumi.output(aws.ec2transitgateway.getRouteTable({
 ```
 
 <h3 class="pdoc-module-header" id="getTransitGateway" data-link-title="getTransitGateway">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L36">
         Function <strong>getTransitGateway</strong>
     </a>
 </h3>
@@ -1422,7 +1567,7 @@ const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
 ```
 
 <h3 class="pdoc-module-header" id="getVpcAttachment" data-link-title="getVpcAttachment">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L36">
         Function <strong>getVpcAttachment</strong>
     </a>
 </h3>
@@ -1459,7 +1604,7 @@ const example = pulumi.output(aws.ec2transitgateway.getVpcAttachment({
 ```
 
 <h3 class="pdoc-module-header" id="getVpnAttachment" data-link-title="getVpnAttachment">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L39">
         Function <strong>getVpnAttachment</strong>
     </a>
 </h3>
@@ -1501,7 +1646,7 @@ const test = pulumi.output(aws.ec2transitgateway.getVpnAttachment({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetDirectConnectGatewayAttachmentArgs" data-link-title="GetDirectConnectGatewayAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L44">
         interface <strong>GetDirectConnectGatewayAttachmentArgs</strong>
     </a>
 </h3>
@@ -1511,7 +1656,7 @@ const test = pulumi.output(aws.ec2transitgateway.getVpnAttachment({
 A collection of arguments for invoking getDirectConnectGatewayAttachment.
 
 <h4 class="pdoc-member-header" id="GetDirectConnectGatewayAttachmentArgs-dxGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L48">property <b>dxGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L48">property <b>dxGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dxGatewayId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1519,7 +1664,7 @@ A collection of arguments for invoking getDirectConnectGatewayAttachment.
 Identifier of the Direct Connect Gateway.
 
 <h4 class="pdoc-member-header" id="GetDirectConnectGatewayAttachmentArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L52">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L52">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetDirectConnectGatewayAttachmentFilter'>GetDirectConnectGatewayAttachmentFilter</a>[];</code></pre>
@@ -1527,7 +1672,7 @@ Identifier of the Direct Connect Gateway.
 Configuration block(s) for filtering. Detailed below.
 
 <h4 class="pdoc-member-header" id="GetDirectConnectGatewayAttachmentArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L56">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L56">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1535,7 +1680,7 @@ Configuration block(s) for filtering. Detailed below.
 A map of tags, each pair of which must exactly match a pair on the desired Transit Gateway Direct Connect Gateway Attachment.
 
 <h4 class="pdoc-member-header" id="GetDirectConnectGatewayAttachmentArgs-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L60">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L60">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1543,7 +1688,7 @@ A map of tags, each pair of which must exactly match a pair on the desired Trans
 Identifier of the EC2 Transit Gateway.
 
 <h3 class="pdoc-module-header" id="GetDirectConnectGatewayAttachmentResult" data-link-title="GetDirectConnectGatewayAttachmentResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L66">
         interface <strong>GetDirectConnectGatewayAttachmentResult</strong>
     </a>
 </h3>
@@ -1553,17 +1698,17 @@ Identifier of the EC2 Transit Gateway.
 A collection of values returned by getDirectConnectGatewayAttachment.
 
 <h4 class="pdoc-member-header" id="GetDirectConnectGatewayAttachmentResult-dxGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L67">property <b>dxGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L67">property <b>dxGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dxGatewayId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDirectConnectGatewayAttachmentResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L68">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L68">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDirectConnectGatewayAttachmentFilter'>GetDirectConnectGatewayAttachmentFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDirectConnectGatewayAttachmentResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1571,7 +1716,7 @@ A collection of values returned by getDirectConnectGatewayAttachment.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDirectConnectGatewayAttachmentResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L76">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L76">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1579,12 +1724,12 @@ The provider-assigned unique ID for this managed resource.
 Key-value tags for the EC2 Transit Gateway Attachment
 
 <h4 class="pdoc-member-header" id="GetDirectConnectGatewayAttachmentResult-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L77">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getDirectConnectGatewayAttachment.ts#L77">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetPeeringAttachmentArgs" data-link-title="GetPeeringAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L55">
         interface <strong>GetPeeringAttachmentArgs</strong>
     </a>
 </h3>
@@ -1594,7 +1739,7 @@ Key-value tags for the EC2 Transit Gateway Attachment
 A collection of arguments for invoking getPeeringAttachment.
 
 <h4 class="pdoc-member-header" id="GetPeeringAttachmentArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L59">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L59">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetPeeringAttachmentFilter'>GetPeeringAttachmentFilter</a>[];</code></pre>
@@ -1602,7 +1747,7 @@ A collection of arguments for invoking getPeeringAttachment.
 One or more configuration blocks containing name-values filters. Detailed below.
 
 <h4 class="pdoc-member-header" id="GetPeeringAttachmentArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L63">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1610,7 +1755,7 @@ One or more configuration blocks containing name-values filters. Detailed below.
 Identifier of the EC2 Transit Gateway Peering Attachment.
 
 <h4 class="pdoc-member-header" id="GetPeeringAttachmentArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L68">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L68">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1619,7 +1764,7 @@ A mapping of tags, each pair of which must exactly match
 a pair on the specific EC2 Transit Gateway Peering Attachment to retrieve.
 
 <h3 class="pdoc-module-header" id="GetPeeringAttachmentResult" data-link-title="GetPeeringAttachmentResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L74">
         interface <strong>GetPeeringAttachmentResult</strong>
     </a>
 </h3>
@@ -1629,17 +1774,17 @@ a pair on the specific EC2 Transit Gateway Peering Attachment to retrieve.
 A collection of values returned by getPeeringAttachment.
 
 <h4 class="pdoc-member-header" id="GetPeeringAttachmentResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L75">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L75">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPeeringAttachmentFilter'>GetPeeringAttachmentFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetPeeringAttachmentResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L76">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPeeringAttachmentResult-peerAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L80">property <b>peerAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L80">property <b>peerAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1647,7 +1792,7 @@ A collection of values returned by getPeeringAttachment.
 Identifier of the peer AWS account
 
 <h4 class="pdoc-member-header" id="GetPeeringAttachmentResult-peerRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L84">property <b>peerRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L84">property <b>peerRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerRegion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1655,7 +1800,7 @@ Identifier of the peer AWS account
 Identifier of the peer AWS region
 
 <h4 class="pdoc-member-header" id="GetPeeringAttachmentResult-peerTransitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L88">property <b>peerTransitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L88">property <b>peerTransitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerTransitGatewayId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1663,12 +1808,12 @@ Identifier of the peer AWS region
 Identifier of the peer EC2 Transit Gateway
 
 <h4 class="pdoc-member-header" id="GetPeeringAttachmentResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L89">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L89">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetPeeringAttachmentResult-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L93">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getPeeringAttachment.ts#L93">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1676,7 +1821,7 @@ Identifier of the peer EC2 Transit Gateway
 Identifier of the local EC2 Transit Gateway
 
 <h3 class="pdoc-module-header" id="GetRouteTableArgs" data-link-title="GetRouteTableArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L61">
         interface <strong>GetRouteTableArgs</strong>
     </a>
 </h3>
@@ -1686,7 +1831,7 @@ Identifier of the local EC2 Transit Gateway
 A collection of arguments for invoking getRouteTable.
 
 <h4 class="pdoc-member-header" id="GetRouteTableArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L65">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L65">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetRouteTableFilter'>GetRouteTableFilter</a>[];</code></pre>
@@ -1694,7 +1839,7 @@ A collection of arguments for invoking getRouteTable.
 One or more configuration blocks containing name-values filters. Detailed below.
 
 <h4 class="pdoc-member-header" id="GetRouteTableArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L69">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L69">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1702,7 +1847,7 @@ One or more configuration blocks containing name-values filters. Detailed below.
 Identifier of the EC2 Transit Gateway Route Table.
 
 <h4 class="pdoc-member-header" id="GetRouteTableArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L73">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L73">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1710,7 +1855,7 @@ Identifier of the EC2 Transit Gateway Route Table.
 Key-value tags for the EC2 Transit Gateway Route Table
 
 <h3 class="pdoc-module-header" id="GetRouteTableResult" data-link-title="GetRouteTableResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L79">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L79">
         interface <strong>GetRouteTableResult</strong>
     </a>
 </h3>
@@ -1720,7 +1865,7 @@ Key-value tags for the EC2 Transit Gateway Route Table
 A collection of values returned by getRouteTable.
 
 <h4 class="pdoc-member-header" id="GetRouteTableResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L83">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L83">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1728,7 +1873,7 @@ A collection of values returned by getRouteTable.
 EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="GetRouteTableResult-defaultAssociationRouteTable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L87">property <b>defaultAssociationRouteTable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L87">property <b>defaultAssociationRouteTable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAssociationRouteTable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1736,7 +1881,7 @@ EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
 Boolean whether this is the default association route table for the EC2 Transit Gateway
 
 <h4 class="pdoc-member-header" id="GetRouteTableResult-defaultPropagationRouteTable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L91">property <b>defaultPropagationRouteTable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L91">property <b>defaultPropagationRouteTable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultPropagationRouteTable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1744,12 +1889,12 @@ Boolean whether this is the default association route table for the EC2 Transit 
 Boolean whether this is the default propagation route table for the EC2 Transit Gateway
 
 <h4 class="pdoc-member-header" id="GetRouteTableResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L92">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L92">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetRouteTableFilter'>GetRouteTableFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetRouteTableResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L96">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1757,7 +1902,7 @@ Boolean whether this is the default propagation route table for the EC2 Transit 
 EC2 Transit Gateway Route Table identifier
 
 <h4 class="pdoc-member-header" id="GetRouteTableResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L100">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L100">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1765,7 +1910,7 @@ EC2 Transit Gateway Route Table identifier
 Key-value tags for the EC2 Transit Gateway Route Table
 
 <h4 class="pdoc-member-header" id="GetRouteTableResult-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L104">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getRouteTable.ts#L104">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1773,7 +1918,7 @@ Key-value tags for the EC2 Transit Gateway Route Table
 EC2 Transit Gateway identifier
 
 <h3 class="pdoc-module-header" id="GetTransitGatewayArgs" data-link-title="GetTransitGatewayArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L55">
         interface <strong>GetTransitGatewayArgs</strong>
     </a>
 </h3>
@@ -1783,7 +1928,7 @@ EC2 Transit Gateway identifier
 A collection of arguments for invoking getTransitGateway.
 
 <h4 class="pdoc-member-header" id="GetTransitGatewayArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L59">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L59">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetTransitGatewayFilter'>GetTransitGatewayFilter</a>[];</code></pre>
@@ -1791,7 +1936,7 @@ A collection of arguments for invoking getTransitGateway.
 One or more configuration blocks containing name-values filters. Detailed below.
 
 <h4 class="pdoc-member-header" id="GetTransitGatewayArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L63">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1799,7 +1944,7 @@ One or more configuration blocks containing name-values filters. Detailed below.
 Identifier of the EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="GetTransitGatewayArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L67">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L67">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1807,7 +1952,7 @@ Identifier of the EC2 Transit Gateway.
 Key-value tags for the EC2 Transit Gateway
 
 <h3 class="pdoc-module-header" id="GetTransitGatewayResult" data-link-title="GetTransitGatewayResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L73">
         interface <strong>GetTransitGatewayResult</strong>
     </a>
 </h3>
@@ -1817,7 +1962,7 @@ Key-value tags for the EC2 Transit Gateway
 A collection of values returned by getTransitGateway.
 
 <h4 class="pdoc-member-header" id="GetTransitGatewayResult-amazonSideAsn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L77">property <b>amazonSideAsn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L77">property <b>amazonSideAsn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>amazonSideAsn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1825,7 +1970,7 @@ A collection of values returned by getTransitGateway.
 Private Autonomous System Number (ASN) for the Amazon side of a BGP session
 
 <h4 class="pdoc-member-header" id="GetTransitGatewayResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L81">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L81">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1833,7 +1978,7 @@ Private Autonomous System Number (ASN) for the Amazon side of a BGP session
 EC2 Transit Gateway Amazon Resource Name (ARN)
 
 <h4 class="pdoc-member-header" id="GetTransitGatewayResult-associationDefaultRouteTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L85">property <b>associationDefaultRouteTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L85">property <b>associationDefaultRouteTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>associationDefaultRouteTableId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1841,7 +1986,7 @@ EC2 Transit Gateway Amazon Resource Name (ARN)
 Identifier of the default association route table
 
 <h4 class="pdoc-member-header" id="GetTransitGatewayResult-autoAcceptSharedAttachments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L89">property <b>autoAcceptSharedAttachments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L89">property <b>autoAcceptSharedAttachments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoAcceptSharedAttachments: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1849,7 +1994,7 @@ Identifier of the default association route table
 Whether resource attachment requests are automatically accepted.
 
 <h4 class="pdoc-member-header" id="GetTransitGatewayResult-defaultRouteTableAssociation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L93">property <b>defaultRouteTableAssociation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L93">property <b>defaultRouteTableAssociation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultRouteTableAssociation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1857,7 +2002,7 @@ Whether resource attachment requests are automatically accepted.
 Whether resource attachments are automatically associated with the default association route table.
 
 <h4 class="pdoc-member-header" id="GetTransitGatewayResult-defaultRouteTablePropagation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L97">property <b>defaultRouteTablePropagation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L97">property <b>defaultRouteTablePropagation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultRouteTablePropagation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1865,7 +2010,7 @@ Whether resource attachments are automatically associated with the default assoc
 Whether resource attachments automatically propagate routes to the default propagation route table.
 
 <h4 class="pdoc-member-header" id="GetTransitGatewayResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L101">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L101">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1873,7 +2018,7 @@ Whether resource attachments automatically propagate routes to the default propa
 Description of the EC2 Transit Gateway
 
 <h4 class="pdoc-member-header" id="GetTransitGatewayResult-dnsSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L105">property <b>dnsSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L105">property <b>dnsSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsSupport: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1881,12 +2026,12 @@ Description of the EC2 Transit Gateway
 Whether DNS support is enabled.
 
 <h4 class="pdoc-member-header" id="GetTransitGatewayResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L106">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L106">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTransitGatewayFilter'>GetTransitGatewayFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetTransitGatewayResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L110">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L110">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1894,7 +2039,7 @@ Whether DNS support is enabled.
 EC2 Transit Gateway identifier
 
 <h4 class="pdoc-member-header" id="GetTransitGatewayResult-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L114">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L114">property <b>ownerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1902,7 +2047,7 @@ EC2 Transit Gateway identifier
 Identifier of the AWS account that owns the EC2 Transit Gateway
 
 <h4 class="pdoc-member-header" id="GetTransitGatewayResult-propagationDefaultRouteTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L118">property <b>propagationDefaultRouteTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L118">property <b>propagationDefaultRouteTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>propagationDefaultRouteTableId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1910,7 +2055,7 @@ Identifier of the AWS account that owns the EC2 Transit Gateway
 Identifier of the default propagation route table.
 
 <h4 class="pdoc-member-header" id="GetTransitGatewayResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L122">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L122">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1918,7 +2063,7 @@ Identifier of the default propagation route table.
 Key-value tags for the EC2 Transit Gateway
 
 <h4 class="pdoc-member-header" id="GetTransitGatewayResult-vpnEcmpSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L126">property <b>vpnEcmpSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getTransitGateway.ts#L126">property <b>vpnEcmpSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpnEcmpSupport: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1926,7 +2071,7 @@ Key-value tags for the EC2 Transit Gateway
 Whether VPN Equal Cost Multipath Protocol support is enabled.
 
 <h3 class="pdoc-module-header" id="GetVpcAttachmentArgs" data-link-title="GetVpcAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L55">
         interface <strong>GetVpcAttachmentArgs</strong>
     </a>
 </h3>
@@ -1936,7 +2081,7 @@ Whether VPN Equal Cost Multipath Protocol support is enabled.
 A collection of arguments for invoking getVpcAttachment.
 
 <h4 class="pdoc-member-header" id="GetVpcAttachmentArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L59">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L59">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpcAttachmentFilter'>GetVpcAttachmentFilter</a>[];</code></pre>
@@ -1944,7 +2089,7 @@ A collection of arguments for invoking getVpcAttachment.
 One or more configuration blocks containing name-values filters. Detailed below.
 
 <h4 class="pdoc-member-header" id="GetVpcAttachmentArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L63">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1952,7 +2097,7 @@ One or more configuration blocks containing name-values filters. Detailed below.
 Identifier of the EC2 Transit Gateway VPC Attachment.
 
 <h4 class="pdoc-member-header" id="GetVpcAttachmentArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L67">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L67">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1960,7 +2105,7 @@ Identifier of the EC2 Transit Gateway VPC Attachment.
 Key-value tags for the EC2 Transit Gateway VPC Attachment
 
 <h3 class="pdoc-module-header" id="GetVpcAttachmentResult" data-link-title="GetVpcAttachmentResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L73">
         interface <strong>GetVpcAttachmentResult</strong>
     </a>
 </h3>
@@ -1970,7 +2115,7 @@ Key-value tags for the EC2 Transit Gateway VPC Attachment
 A collection of values returned by getVpcAttachment.
 
 <h4 class="pdoc-member-header" id="GetVpcAttachmentResult-applianceModeSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L77">property <b>applianceModeSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L77">property <b>applianceModeSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applianceModeSupport: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1978,7 +2123,7 @@ A collection of values returned by getVpcAttachment.
 Whether Appliance Mode support is enabled.
 
 <h4 class="pdoc-member-header" id="GetVpcAttachmentResult-dnsSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L81">property <b>dnsSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L81">property <b>dnsSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsSupport: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1986,12 +2131,12 @@ Whether Appliance Mode support is enabled.
 Whether DNS support is enabled.
 
 <h4 class="pdoc-member-header" id="GetVpcAttachmentResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L82">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L82">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcAttachmentFilter'>GetVpcAttachmentFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcAttachmentResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L86">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1999,7 +2144,7 @@ Whether DNS support is enabled.
 EC2 Transit Gateway VPC Attachment identifier
 
 <h4 class="pdoc-member-header" id="GetVpcAttachmentResult-ipv6Support">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L90">property <b>ipv6Support</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L90">property <b>ipv6Support</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6Support: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2007,7 +2152,7 @@ EC2 Transit Gateway VPC Attachment identifier
 Whether IPv6 support is enabled.
 
 <h4 class="pdoc-member-header" id="GetVpcAttachmentResult-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L94">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L94">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2015,7 +2160,7 @@ Whether IPv6 support is enabled.
 Identifiers of EC2 Subnets.
 
 <h4 class="pdoc-member-header" id="GetVpcAttachmentResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L98">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L98">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2023,7 +2168,7 @@ Identifiers of EC2 Subnets.
 Key-value tags for the EC2 Transit Gateway VPC Attachment
 
 <h4 class="pdoc-member-header" id="GetVpcAttachmentResult-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L102">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L102">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2031,7 +2176,7 @@ Key-value tags for the EC2 Transit Gateway VPC Attachment
 EC2 Transit Gateway identifier
 
 <h4 class="pdoc-member-header" id="GetVpcAttachmentResult-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L106">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L106">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2039,7 +2184,7 @@ EC2 Transit Gateway identifier
 Identifier of EC2 VPC.
 
 <h4 class="pdoc-member-header" id="GetVpcAttachmentResult-vpcOwnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L110">property <b>vpcOwnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts#L110">property <b>vpcOwnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcOwnerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2047,7 +2192,7 @@ Identifier of EC2 VPC.
 Identifier of the AWS account that owns the EC2 VPC.
 
 <h3 class="pdoc-module-header" id="GetVpnAttachmentArgs" data-link-title="GetVpnAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L59">
         interface <strong>GetVpnAttachmentArgs</strong>
     </a>
 </h3>
@@ -2057,7 +2202,7 @@ Identifier of the AWS account that owns the EC2 VPC.
 A collection of arguments for invoking getVpnAttachment.
 
 <h4 class="pdoc-member-header" id="GetVpnAttachmentArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L63">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L63">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpnAttachmentFilter'>GetVpnAttachmentFilter</a>[];</code></pre>
@@ -2065,7 +2210,7 @@ A collection of arguments for invoking getVpnAttachment.
 Configuration block(s) for filtering. Detailed below.
 
 <h4 class="pdoc-member-header" id="GetVpnAttachmentArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L67">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L67">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2073,7 +2218,7 @@ Configuration block(s) for filtering. Detailed below.
 A map of tags, each pair of which must exactly match a pair on the desired Transit Gateway VPN Attachment.
 
 <h4 class="pdoc-member-header" id="GetVpnAttachmentArgs-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L71">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L71">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2081,7 +2226,7 @@ A map of tags, each pair of which must exactly match a pair on the desired Trans
 Identifier of the EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="GetVpnAttachmentArgs-vpnConnectionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L75">property <b>vpnConnectionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L75">property <b>vpnConnectionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpnConnectionId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2089,7 +2234,7 @@ Identifier of the EC2 Transit Gateway.
 Identifier of the EC2 VPN Connection.
 
 <h3 class="pdoc-module-header" id="GetVpnAttachmentResult" data-link-title="GetVpnAttachmentResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L81">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L81">
         interface <strong>GetVpnAttachmentResult</strong>
     </a>
 </h3>
@@ -2099,12 +2244,12 @@ Identifier of the EC2 VPN Connection.
 A collection of values returned by getVpnAttachment.
 
 <h4 class="pdoc-member-header" id="GetVpnAttachmentResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L82">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L82">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpnAttachmentFilter'>GetVpnAttachmentFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpnAttachmentResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L86">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2112,7 +2257,7 @@ A collection of values returned by getVpnAttachment.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetVpnAttachmentResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L90">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L90">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2120,17 +2265,17 @@ The provider-assigned unique ID for this managed resource.
 Key-value tags for the EC2 Transit Gateway VPN Attachment
 
 <h4 class="pdoc-member-header" id="GetVpnAttachmentResult-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L91">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L91">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpnAttachmentResult-vpnConnectionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L92">property <b>vpnConnectionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L92">property <b>vpnConnectionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpnConnectionId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="PeeringAttachmentArgs" data-link-title="PeeringAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L172">
         interface <strong>PeeringAttachmentArgs</strong>
     </a>
 </h3>
@@ -2140,7 +2285,7 @@ Key-value tags for the EC2 Transit Gateway VPN Attachment
 The set of arguments for constructing a PeeringAttachment resource.
 
 <h4 class="pdoc-member-header" id="PeeringAttachmentArgs-peerAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L176">property <b>peerAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L176">property <b>peerAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2148,7 +2293,7 @@ The set of arguments for constructing a PeeringAttachment resource.
 Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 
 <h4 class="pdoc-member-header" id="PeeringAttachmentArgs-peerRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L180">property <b>peerRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L180">property <b>peerRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2156,7 +2301,7 @@ Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the c
 Region of EC2 Transit Gateway to peer with.
 
 <h4 class="pdoc-member-header" id="PeeringAttachmentArgs-peerTransitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L184">property <b>peerTransitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L184">property <b>peerTransitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerTransitGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2164,7 +2309,7 @@ Region of EC2 Transit Gateway to peer with.
 Identifier of EC2 Transit Gateway to peer with.
 
 <h4 class="pdoc-member-header" id="PeeringAttachmentArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L188">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L188">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2172,7 +2317,7 @@ Identifier of EC2 Transit Gateway to peer with.
 Key-value tags for the EC2 Transit Gateway Peering Attachment.
 
 <h4 class="pdoc-member-header" id="PeeringAttachmentArgs-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L192">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L192">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2180,7 +2325,7 @@ Key-value tags for the EC2 Transit Gateway Peering Attachment.
 Identifier of EC2 Transit Gateway.
 
 <h3 class="pdoc-module-header" id="PeeringAttachmentState" data-link-title="PeeringAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L146">
         interface <strong>PeeringAttachmentState</strong>
     </a>
 </h3>
@@ -2190,7 +2335,7 @@ Identifier of EC2 Transit Gateway.
 Input properties used for looking up and filtering PeeringAttachment resources.
 
 <h4 class="pdoc-member-header" id="PeeringAttachmentState-peerAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L150">property <b>peerAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L150">property <b>peerAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2198,7 +2343,7 @@ Input properties used for looking up and filtering PeeringAttachment resources.
 Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
 
 <h4 class="pdoc-member-header" id="PeeringAttachmentState-peerRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L154">property <b>peerRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L154">property <b>peerRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2206,7 +2351,7 @@ Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the c
 Region of EC2 Transit Gateway to peer with.
 
 <h4 class="pdoc-member-header" id="PeeringAttachmentState-peerTransitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L158">property <b>peerTransitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L158">property <b>peerTransitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerTransitGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2214,7 +2359,7 @@ Region of EC2 Transit Gateway to peer with.
 Identifier of EC2 Transit Gateway to peer with.
 
 <h4 class="pdoc-member-header" id="PeeringAttachmentState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L162">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L162">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2222,15 +2367,104 @@ Identifier of EC2 Transit Gateway to peer with.
 Key-value tags for the EC2 Transit Gateway Peering Attachment.
 
 <h4 class="pdoc-member-header" id="PeeringAttachmentState-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L166">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/peeringAttachment.ts#L166">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Identifier of EC2 Transit Gateway.
 
+<h3 class="pdoc-module-header" id="PrefixListReferenceArgs" data-link-title="PrefixListReferenceArgs">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L158">
+        interface <strong>PrefixListReferenceArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PrefixListReferenceArgs</span></code></pre>
+
+The set of arguments for constructing a PrefixListReference resource.
+
+<h4 class="pdoc-member-header" id="PrefixListReferenceArgs-blackhole">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L162">property <b>blackhole</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>blackhole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Indicates whether to drop traffic that matches the Prefix List. Defaults to `false`.
+
+<h4 class="pdoc-member-header" id="PrefixListReferenceArgs-prefixListId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L166">property <b>prefixListId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>prefixListId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Identifier of EC2 Prefix List.
+
+<h4 class="pdoc-member-header" id="PrefixListReferenceArgs-transitGatewayAttachmentId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L170">property <b>transitGatewayAttachmentId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>transitGatewayAttachmentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Identifier of EC2 Transit Gateway Attachment.
+
+<h4 class="pdoc-member-header" id="PrefixListReferenceArgs-transitGatewayRouteTableId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L174">property <b>transitGatewayRouteTableId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>transitGatewayRouteTableId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Identifier of EC2 Transit Gateway Route Table.
+
+<h3 class="pdoc-module-header" id="PrefixListReferenceState" data-link-title="PrefixListReferenceState">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L135">
+        interface <strong>PrefixListReferenceState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PrefixListReferenceState</span></code></pre>
+
+Input properties used for looking up and filtering PrefixListReference resources.
+
+<h4 class="pdoc-member-header" id="PrefixListReferenceState-blackhole">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L139">property <b>blackhole</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>blackhole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Indicates whether to drop traffic that matches the Prefix List. Defaults to `false`.
+
+<h4 class="pdoc-member-header" id="PrefixListReferenceState-prefixListId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L143">property <b>prefixListId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>prefixListId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Identifier of EC2 Prefix List.
+
+<h4 class="pdoc-member-header" id="PrefixListReferenceState-prefixListOwnerId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L144">property <b>prefixListOwnerId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>prefixListOwnerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PrefixListReferenceState-transitGatewayAttachmentId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L148">property <b>transitGatewayAttachmentId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>transitGatewayAttachmentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Identifier of EC2 Transit Gateway Attachment.
+
+<h4 class="pdoc-member-header" id="PrefixListReferenceState-transitGatewayRouteTableId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/prefixListReference.ts#L152">property <b>transitGatewayRouteTableId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>transitGatewayRouteTableId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Identifier of EC2 Transit Gateway Route Table.
+
 <h3 class="pdoc-module-header" id="RouteArgs" data-link-title="RouteArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L154">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L154">
         interface <strong>RouteArgs</strong>
     </a>
 </h3>
@@ -2240,7 +2474,7 @@ Identifier of EC2 Transit Gateway.
 The set of arguments for constructing a Route resource.
 
 <h4 class="pdoc-member-header" id="RouteArgs-blackhole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L158">property <b>blackhole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L158">property <b>blackhole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blackhole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2248,7 +2482,7 @@ The set of arguments for constructing a Route resource.
 Indicates whether to drop traffic that matches this route (default to `false`).
 
 <h4 class="pdoc-member-header" id="RouteArgs-destinationCidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L162">property <b>destinationCidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L162">property <b>destinationCidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationCidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2256,7 +2490,7 @@ Indicates whether to drop traffic that matches this route (default to `false`).
 IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are based on the most specific match.
 
 <h4 class="pdoc-member-header" id="RouteArgs-transitGatewayAttachmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L166">property <b>transitGatewayAttachmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L166">property <b>transitGatewayAttachmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayAttachmentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2264,7 +2498,7 @@ IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are ba
 Identifier of EC2 Transit Gateway Attachment (required if `blackhole` is set to false).
 
 <h4 class="pdoc-member-header" id="RouteArgs-transitGatewayRouteTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L170">property <b>transitGatewayRouteTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L170">property <b>transitGatewayRouteTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayRouteTableId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2272,7 +2506,7 @@ Identifier of EC2 Transit Gateway Attachment (required if `blackhole` is set to 
 Identifier of EC2 Transit Gateway Route Table.
 
 <h3 class="pdoc-module-header" id="RouteState" data-link-title="RouteState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L132">
         interface <strong>RouteState</strong>
     </a>
 </h3>
@@ -2282,7 +2516,7 @@ Identifier of EC2 Transit Gateway Route Table.
 Input properties used for looking up and filtering Route resources.
 
 <h4 class="pdoc-member-header" id="RouteState-blackhole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L136">property <b>blackhole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L136">property <b>blackhole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blackhole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2290,7 +2524,7 @@ Input properties used for looking up and filtering Route resources.
 Indicates whether to drop traffic that matches this route (default to `false`).
 
 <h4 class="pdoc-member-header" id="RouteState-destinationCidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L140">property <b>destinationCidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L140">property <b>destinationCidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationCidrBlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2298,7 +2532,7 @@ Indicates whether to drop traffic that matches this route (default to `false`).
 IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are based on the most specific match.
 
 <h4 class="pdoc-member-header" id="RouteState-transitGatewayAttachmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L144">property <b>transitGatewayAttachmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L144">property <b>transitGatewayAttachmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayAttachmentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2306,7 +2540,7 @@ IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are ba
 Identifier of EC2 Transit Gateway Attachment (required if `blackhole` is set to false).
 
 <h4 class="pdoc-member-header" id="RouteState-transitGatewayRouteTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/route.ts#L148">property <b>transitGatewayRouteTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/route.ts#L148">property <b>transitGatewayRouteTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayRouteTableId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2314,7 +2548,7 @@ Identifier of EC2 Transit Gateway Attachment (required if `blackhole` is set to 
 Identifier of EC2 Transit Gateway Route Table.
 
 <h3 class="pdoc-module-header" id="RouteTableArgs" data-link-title="RouteTableArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L144">
         interface <strong>RouteTableArgs</strong>
     </a>
 </h3>
@@ -2324,7 +2558,7 @@ Identifier of EC2 Transit Gateway Route Table.
 The set of arguments for constructing a RouteTable resource.
 
 <h4 class="pdoc-member-header" id="RouteTableArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L148">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L148">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2332,7 +2566,7 @@ The set of arguments for constructing a RouteTable resource.
 Key-value tags for the EC2 Transit Gateway Route Table.
 
 <h4 class="pdoc-member-header" id="RouteTableArgs-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L152">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L152">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2340,7 +2574,7 @@ Key-value tags for the EC2 Transit Gateway Route Table.
 Identifier of EC2 Transit Gateway.
 
 <h3 class="pdoc-module-header" id="RouteTableAssociationArgs" data-link-title="RouteTableAssociationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L140">
         interface <strong>RouteTableAssociationArgs</strong>
     </a>
 </h3>
@@ -2350,7 +2584,7 @@ Identifier of EC2 Transit Gateway.
 The set of arguments for constructing a RouteTableAssociation resource.
 
 <h4 class="pdoc-member-header" id="RouteTableAssociationArgs-transitGatewayAttachmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L144">property <b>transitGatewayAttachmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L144">property <b>transitGatewayAttachmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayAttachmentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2358,7 +2592,7 @@ The set of arguments for constructing a RouteTableAssociation resource.
 Identifier of EC2 Transit Gateway Attachment.
 
 <h4 class="pdoc-member-header" id="RouteTableAssociationArgs-transitGatewayRouteTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L148">property <b>transitGatewayRouteTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L148">property <b>transitGatewayRouteTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayRouteTableId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2366,7 +2600,7 @@ Identifier of EC2 Transit Gateway Attachment.
 Identifier of EC2 Transit Gateway Route Table.
 
 <h3 class="pdoc-module-header" id="RouteTableAssociationState" data-link-title="RouteTableAssociationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L118">
         interface <strong>RouteTableAssociationState</strong>
     </a>
 </h3>
@@ -2376,7 +2610,7 @@ Identifier of EC2 Transit Gateway Route Table.
 Input properties used for looking up and filtering RouteTableAssociation resources.
 
 <h4 class="pdoc-member-header" id="RouteTableAssociationState-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L122">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L122">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2384,7 +2618,7 @@ Input properties used for looking up and filtering RouteTableAssociation resourc
 Identifier of the resource
 
 <h4 class="pdoc-member-header" id="RouteTableAssociationState-resourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L126">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L126">property <b>resourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2392,7 +2626,7 @@ Identifier of the resource
 Type of the resource
 
 <h4 class="pdoc-member-header" id="RouteTableAssociationState-transitGatewayAttachmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L130">property <b>transitGatewayAttachmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L130">property <b>transitGatewayAttachmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayAttachmentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2400,7 +2634,7 @@ Type of the resource
 Identifier of EC2 Transit Gateway Attachment.
 
 <h4 class="pdoc-member-header" id="RouteTableAssociationState-transitGatewayRouteTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L134">property <b>transitGatewayRouteTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts#L134">property <b>transitGatewayRouteTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayRouteTableId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2408,7 +2642,7 @@ Identifier of EC2 Transit Gateway Attachment.
 Identifier of EC2 Transit Gateway Route Table.
 
 <h3 class="pdoc-module-header" id="RouteTablePropagationArgs" data-link-title="RouteTablePropagationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L140">
         interface <strong>RouteTablePropagationArgs</strong>
     </a>
 </h3>
@@ -2418,7 +2652,7 @@ Identifier of EC2 Transit Gateway Route Table.
 The set of arguments for constructing a RouteTablePropagation resource.
 
 <h4 class="pdoc-member-header" id="RouteTablePropagationArgs-transitGatewayAttachmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L144">property <b>transitGatewayAttachmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L144">property <b>transitGatewayAttachmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayAttachmentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2426,7 +2660,7 @@ The set of arguments for constructing a RouteTablePropagation resource.
 Identifier of EC2 Transit Gateway Attachment.
 
 <h4 class="pdoc-member-header" id="RouteTablePropagationArgs-transitGatewayRouteTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L148">property <b>transitGatewayRouteTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L148">property <b>transitGatewayRouteTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayRouteTableId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2434,7 +2668,7 @@ Identifier of EC2 Transit Gateway Attachment.
 Identifier of EC2 Transit Gateway Route Table.
 
 <h3 class="pdoc-module-header" id="RouteTablePropagationState" data-link-title="RouteTablePropagationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L118">
         interface <strong>RouteTablePropagationState</strong>
     </a>
 </h3>
@@ -2444,7 +2678,7 @@ Identifier of EC2 Transit Gateway Route Table.
 Input properties used for looking up and filtering RouteTablePropagation resources.
 
 <h4 class="pdoc-member-header" id="RouteTablePropagationState-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L122">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L122">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2452,7 +2686,7 @@ Input properties used for looking up and filtering RouteTablePropagation resourc
 Identifier of the resource
 
 <h4 class="pdoc-member-header" id="RouteTablePropagationState-resourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L126">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L126">property <b>resourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2460,7 +2694,7 @@ Identifier of the resource
 Type of the resource
 
 <h4 class="pdoc-member-header" id="RouteTablePropagationState-transitGatewayAttachmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L130">property <b>transitGatewayAttachmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L130">property <b>transitGatewayAttachmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayAttachmentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2468,7 +2702,7 @@ Type of the resource
 Identifier of EC2 Transit Gateway Attachment.
 
 <h4 class="pdoc-member-header" id="RouteTablePropagationState-transitGatewayRouteTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L134">property <b>transitGatewayRouteTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts#L134">property <b>transitGatewayRouteTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayRouteTableId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2476,7 +2710,7 @@ Identifier of EC2 Transit Gateway Attachment.
 Identifier of EC2 Transit Gateway Route Table.
 
 <h3 class="pdoc-module-header" id="RouteTableState" data-link-title="RouteTableState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L118">
         interface <strong>RouteTableState</strong>
     </a>
 </h3>
@@ -2486,7 +2720,7 @@ Identifier of EC2 Transit Gateway Route Table.
 Input properties used for looking up and filtering RouteTable resources.
 
 <h4 class="pdoc-member-header" id="RouteTableState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L122">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L122">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2494,7 +2728,7 @@ Input properties used for looking up and filtering RouteTable resources.
 EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="RouteTableState-defaultAssociationRouteTable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L126">property <b>defaultAssociationRouteTable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L126">property <b>defaultAssociationRouteTable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAssociationRouteTable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2502,7 +2736,7 @@ EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
 Boolean whether this is the default association route table for the EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="RouteTableState-defaultPropagationRouteTable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L130">property <b>defaultPropagationRouteTable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L130">property <b>defaultPropagationRouteTable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultPropagationRouteTable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2510,7 +2744,7 @@ Boolean whether this is the default association route table for the EC2 Transit 
 Boolean whether this is the default propagation route table for the EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="RouteTableState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L134">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L134">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2518,7 +2752,7 @@ Boolean whether this is the default propagation route table for the EC2 Transit 
 Key-value tags for the EC2 Transit Gateway Route Table.
 
 <h4 class="pdoc-member-header" id="RouteTableState-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/routeTable.ts#L138">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/routeTable.ts#L138">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2526,7 +2760,7 @@ Key-value tags for the EC2 Transit Gateway Route Table.
 Identifier of EC2 Transit Gateway.
 
 <h3 class="pdoc-module-header" id="TransitGatewayArgs" data-link-title="TransitGatewayArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L215">
         interface <strong>TransitGatewayArgs</strong>
     </a>
 </h3>
@@ -2536,7 +2770,7 @@ Identifier of EC2 Transit Gateway.
 The set of arguments for constructing a TransitGateway resource.
 
 <h4 class="pdoc-member-header" id="TransitGatewayArgs-amazonSideAsn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L219">property <b>amazonSideAsn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L219">property <b>amazonSideAsn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>amazonSideAsn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2544,7 +2778,7 @@ The set of arguments for constructing a TransitGateway resource.
 Private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is `64512` to `65534` for 16-bit ASNs and `4200000000` to `4294967294` for 32-bit ASNs. Default value: `64512`.
 
 <h4 class="pdoc-member-header" id="TransitGatewayArgs-autoAcceptSharedAttachments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L223">property <b>autoAcceptSharedAttachments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L223">property <b>autoAcceptSharedAttachments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoAcceptSharedAttachments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2552,7 +2786,7 @@ Private Autonomous System Number (ASN) for the Amazon side of a BGP session. The
 Whether resource attachment requests are automatically accepted. Valid values: `disable`, `enable`. Default value: `disable`.
 
 <h4 class="pdoc-member-header" id="TransitGatewayArgs-defaultRouteTableAssociation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L227">property <b>defaultRouteTableAssociation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L227">property <b>defaultRouteTableAssociation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultRouteTableAssociation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2560,7 +2794,7 @@ Whether resource attachment requests are automatically accepted. Valid values: `
 Whether resource attachments are automatically associated with the default association route table. Valid values: `disable`, `enable`. Default value: `enable`.
 
 <h4 class="pdoc-member-header" id="TransitGatewayArgs-defaultRouteTablePropagation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L231">property <b>defaultRouteTablePropagation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L231">property <b>defaultRouteTablePropagation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultRouteTablePropagation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2568,7 +2802,7 @@ Whether resource attachments are automatically associated with the default assoc
 Whether resource attachments automatically propagate routes to the default propagation route table. Valid values: `disable`, `enable`. Default value: `enable`.
 
 <h4 class="pdoc-member-header" id="TransitGatewayArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L235">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L235">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2576,7 +2810,7 @@ Whether resource attachments automatically propagate routes to the default propa
 Description of the EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="TransitGatewayArgs-dnsSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L239">property <b>dnsSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L239">property <b>dnsSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsSupport?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2584,7 +2818,7 @@ Description of the EC2 Transit Gateway.
 Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
 
 <h4 class="pdoc-member-header" id="TransitGatewayArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L243">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L243">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2592,7 +2826,7 @@ Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value
 Key-value tags for the EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="TransitGatewayArgs-vpnEcmpSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L247">property <b>vpnEcmpSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L247">property <b>vpnEcmpSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpnEcmpSupport?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2600,7 +2834,7 @@ Key-value tags for the EC2 Transit Gateway.
 Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
 
 <h3 class="pdoc-module-header" id="TransitGatewayState" data-link-title="TransitGatewayState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L161">
         interface <strong>TransitGatewayState</strong>
     </a>
 </h3>
@@ -2610,7 +2844,7 @@ Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: `dis
 Input properties used for looking up and filtering TransitGateway resources.
 
 <h4 class="pdoc-member-header" id="TransitGatewayState-amazonSideAsn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L165">property <b>amazonSideAsn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L165">property <b>amazonSideAsn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>amazonSideAsn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2618,7 +2852,7 @@ Input properties used for looking up and filtering TransitGateway resources.
 Private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is `64512` to `65534` for 16-bit ASNs and `4200000000` to `4294967294` for 32-bit ASNs. Default value: `64512`.
 
 <h4 class="pdoc-member-header" id="TransitGatewayState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L169">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L169">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
@@ -2626,7 +2860,7 @@ Private Autonomous System Number (ASN) for the Amazon side of a BGP session. The
 EC2 Transit Gateway Amazon Resource Name (ARN)
 
 <h4 class="pdoc-member-header" id="TransitGatewayState-associationDefaultRouteTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L173">property <b>associationDefaultRouteTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L173">property <b>associationDefaultRouteTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>associationDefaultRouteTableId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2634,7 +2868,7 @@ EC2 Transit Gateway Amazon Resource Name (ARN)
 Identifier of the default association route table
 
 <h4 class="pdoc-member-header" id="TransitGatewayState-autoAcceptSharedAttachments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L177">property <b>autoAcceptSharedAttachments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L177">property <b>autoAcceptSharedAttachments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoAcceptSharedAttachments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2642,7 +2876,7 @@ Identifier of the default association route table
 Whether resource attachment requests are automatically accepted. Valid values: `disable`, `enable`. Default value: `disable`.
 
 <h4 class="pdoc-member-header" id="TransitGatewayState-defaultRouteTableAssociation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L181">property <b>defaultRouteTableAssociation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L181">property <b>defaultRouteTableAssociation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultRouteTableAssociation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2650,7 +2884,7 @@ Whether resource attachment requests are automatically accepted. Valid values: `
 Whether resource attachments are automatically associated with the default association route table. Valid values: `disable`, `enable`. Default value: `enable`.
 
 <h4 class="pdoc-member-header" id="TransitGatewayState-defaultRouteTablePropagation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L185">property <b>defaultRouteTablePropagation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L185">property <b>defaultRouteTablePropagation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultRouteTablePropagation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2658,7 +2892,7 @@ Whether resource attachments are automatically associated with the default assoc
 Whether resource attachments automatically propagate routes to the default propagation route table. Valid values: `disable`, `enable`. Default value: `enable`.
 
 <h4 class="pdoc-member-header" id="TransitGatewayState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L189">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L189">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2666,7 +2900,7 @@ Whether resource attachments automatically propagate routes to the default propa
 Description of the EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="TransitGatewayState-dnsSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L193">property <b>dnsSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L193">property <b>dnsSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsSupport?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2674,7 +2908,7 @@ Description of the EC2 Transit Gateway.
 Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
 
 <h4 class="pdoc-member-header" id="TransitGatewayState-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L197">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L197">property <b>ownerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2682,7 +2916,7 @@ Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value
 Identifier of the AWS account that owns the EC2 Transit Gateway
 
 <h4 class="pdoc-member-header" id="TransitGatewayState-propagationDefaultRouteTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L201">property <b>propagationDefaultRouteTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L201">property <b>propagationDefaultRouteTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>propagationDefaultRouteTableId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2690,7 +2924,7 @@ Identifier of the AWS account that owns the EC2 Transit Gateway
 Identifier of the default propagation route table
 
 <h4 class="pdoc-member-header" id="TransitGatewayState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L205">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L205">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2698,7 +2932,7 @@ Identifier of the default propagation route table
 Key-value tags for the EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="TransitGatewayState-vpnEcmpSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/transitGateway.ts#L209">property <b>vpnEcmpSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/transitGateway.ts#L209">property <b>vpnEcmpSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpnEcmpSupport?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2706,7 +2940,7 @@ Key-value tags for the EC2 Transit Gateway.
 Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
 
 <h3 class="pdoc-module-header" id="VpcAttachmentAccepterArgs" data-link-title="VpcAttachmentAccepterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L215">
         interface <strong>VpcAttachmentAccepterArgs</strong>
     </a>
 </h3>
@@ -2716,7 +2950,7 @@ Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: `dis
 The set of arguments for constructing a VpcAttachmentAccepter resource.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L219">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L219">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2724,7 +2958,7 @@ The set of arguments for constructing a VpcAttachmentAccepter resource.
 Key-value tags for the EC2 Transit Gateway VPC Attachment.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepterArgs-transitGatewayAttachmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L223">property <b>transitGatewayAttachmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L223">property <b>transitGatewayAttachmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayAttachmentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2732,7 +2966,7 @@ Key-value tags for the EC2 Transit Gateway VPC Attachment.
 The ID of the EC2 Transit Gateway Attachment to manage.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepterArgs-transitGatewayDefaultRouteTableAssociation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L227">property <b>transitGatewayDefaultRouteTableAssociation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L227">property <b>transitGatewayDefaultRouteTableAssociation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayDefaultRouteTableAssociation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2740,7 +2974,7 @@ The ID of the EC2 Transit Gateway Attachment to manage.
 Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: `true`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepterArgs-transitGatewayDefaultRouteTablePropagation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L231">property <b>transitGatewayDefaultRouteTablePropagation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L231">property <b>transitGatewayDefaultRouteTablePropagation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayDefaultRouteTablePropagation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2748,7 +2982,7 @@ Boolean whether the VPC Attachment should be associated with the EC2 Transit Gat
 Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: `true`.
 
 <h3 class="pdoc-module-header" id="VpcAttachmentAccepterState" data-link-title="VpcAttachmentAccepterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L165">
         interface <strong>VpcAttachmentAccepterState</strong>
     </a>
 </h3>
@@ -2758,7 +2992,7 @@ Boolean whether the VPC Attachment should propagate routes with the EC2 Transit 
 Input properties used for looking up and filtering VpcAttachmentAccepter resources.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepterState-applianceModeSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L169">property <b>applianceModeSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L169">property <b>applianceModeSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applianceModeSupport?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2766,7 +3000,7 @@ Input properties used for looking up and filtering VpcAttachmentAccepter resourc
 Whether Appliance Mode support is enabled. Valid values: `disable`, `enable`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepterState-dnsSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L173">property <b>dnsSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L173">property <b>dnsSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsSupport?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2774,7 +3008,7 @@ Whether Appliance Mode support is enabled. Valid values: `disable`, `enable`.
 Whether DNS support is enabled. Valid values: `disable`, `enable`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepterState-ipv6Support">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L177">property <b>ipv6Support</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L177">property <b>ipv6Support</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6Support?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2782,7 +3016,7 @@ Whether DNS support is enabled. Valid values: `disable`, `enable`.
 Whether IPv6 support is enabled. Valid values: `disable`, `enable`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepterState-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L181">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L181">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2790,7 +3024,7 @@ Whether IPv6 support is enabled. Valid values: `disable`, `enable`.
 Identifiers of EC2 Subnets.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L185">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L185">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2798,7 +3032,7 @@ Identifiers of EC2 Subnets.
 Key-value tags for the EC2 Transit Gateway VPC Attachment.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepterState-transitGatewayAttachmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L189">property <b>transitGatewayAttachmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L189">property <b>transitGatewayAttachmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayAttachmentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2806,7 +3040,7 @@ Key-value tags for the EC2 Transit Gateway VPC Attachment.
 The ID of the EC2 Transit Gateway Attachment to manage.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepterState-transitGatewayDefaultRouteTableAssociation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L193">property <b>transitGatewayDefaultRouteTableAssociation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L193">property <b>transitGatewayDefaultRouteTableAssociation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayDefaultRouteTableAssociation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2814,7 +3048,7 @@ The ID of the EC2 Transit Gateway Attachment to manage.
 Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: `true`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepterState-transitGatewayDefaultRouteTablePropagation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L197">property <b>transitGatewayDefaultRouteTablePropagation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L197">property <b>transitGatewayDefaultRouteTablePropagation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayDefaultRouteTablePropagation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2822,7 +3056,7 @@ Boolean whether the VPC Attachment should be associated with the EC2 Transit Gat
 Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: `true`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepterState-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L201">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L201">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2830,7 +3064,7 @@ Boolean whether the VPC Attachment should propagate routes with the EC2 Transit 
 Identifier of EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepterState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L205">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L205">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2838,7 +3072,7 @@ Identifier of EC2 Transit Gateway.
 Identifier of EC2 VPC.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentAccepterState-vpcOwnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L209">property <b>vpcOwnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachmentAccepter.ts#L209">property <b>vpcOwnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcOwnerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2846,7 +3080,7 @@ Identifier of EC2 VPC.
 Identifier of the AWS account that owns the EC2 VPC.
 
 <h3 class="pdoc-module-header" id="VpcAttachmentArgs" data-link-title="VpcAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L204">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L204">
         interface <strong>VpcAttachmentArgs</strong>
     </a>
 </h3>
@@ -2856,7 +3090,7 @@ Identifier of the AWS account that owns the EC2 VPC.
 The set of arguments for constructing a VpcAttachment resource.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentArgs-applianceModeSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L208">property <b>applianceModeSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L208">property <b>applianceModeSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applianceModeSupport?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2864,7 +3098,7 @@ The set of arguments for constructing a VpcAttachment resource.
 Whether Appliance Mode support is enabled. If enabled, a traffic flow between a source and destination uses the same Availability Zone for the VPC attachment for the lifetime of that flow. Valid values: `disable`, `enable`. Default value: `disable`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentArgs-dnsSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L212">property <b>dnsSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L212">property <b>dnsSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsSupport?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2872,7 +3106,7 @@ Whether Appliance Mode support is enabled. If enabled, a traffic flow between a 
 Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentArgs-ipv6Support">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L216">property <b>ipv6Support</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L216">property <b>ipv6Support</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6Support?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2880,7 +3114,7 @@ Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value
 Whether IPv6 support is enabled. Valid values: `disable`, `enable`. Default value: `disable`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L220">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L220">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2888,7 +3122,7 @@ Whether IPv6 support is enabled. Valid values: `disable`, `enable`. Default valu
 Identifiers of EC2 Subnets.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L224">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L224">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2896,7 +3130,7 @@ Identifiers of EC2 Subnets.
 Key-value tags for the EC2 Transit Gateway VPC Attachment.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentArgs-transitGatewayDefaultRouteTableAssociation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L228">property <b>transitGatewayDefaultRouteTableAssociation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L228">property <b>transitGatewayDefaultRouteTableAssociation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayDefaultRouteTableAssociation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2904,7 +3138,7 @@ Key-value tags for the EC2 Transit Gateway VPC Attachment.
 Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentArgs-transitGatewayDefaultRouteTablePropagation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L232">property <b>transitGatewayDefaultRouteTablePropagation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L232">property <b>transitGatewayDefaultRouteTablePropagation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayDefaultRouteTablePropagation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2912,7 +3146,7 @@ Boolean whether the VPC Attachment should be associated with the EC2 Transit Gat
 Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentArgs-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L236">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L236">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2920,7 +3154,7 @@ Boolean whether the VPC Attachment should propagate routes with the EC2 Transit 
 Identifier of EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentArgs-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L240">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L240">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2928,7 +3162,7 @@ Identifier of EC2 Transit Gateway.
 Identifier of EC2 VPC.
 
 <h3 class="pdoc-module-header" id="VpcAttachmentState" data-link-title="VpcAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L158">
         interface <strong>VpcAttachmentState</strong>
     </a>
 </h3>
@@ -2938,7 +3172,7 @@ Identifier of EC2 VPC.
 Input properties used for looking up and filtering VpcAttachment resources.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentState-applianceModeSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L162">property <b>applianceModeSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L162">property <b>applianceModeSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applianceModeSupport?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2946,7 +3180,7 @@ Input properties used for looking up and filtering VpcAttachment resources.
 Whether Appliance Mode support is enabled. If enabled, a traffic flow between a source and destination uses the same Availability Zone for the VPC attachment for the lifetime of that flow. Valid values: `disable`, `enable`. Default value: `disable`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentState-dnsSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L166">property <b>dnsSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L166">property <b>dnsSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsSupport?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2954,7 +3188,7 @@ Whether Appliance Mode support is enabled. If enabled, a traffic flow between a 
 Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentState-ipv6Support">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L170">property <b>ipv6Support</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L170">property <b>ipv6Support</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6Support?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2962,7 +3196,7 @@ Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value
 Whether IPv6 support is enabled. Valid values: `disable`, `enable`. Default value: `disable`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentState-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L174">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L174">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2970,7 +3204,7 @@ Whether IPv6 support is enabled. Valid values: `disable`, `enable`. Default valu
 Identifiers of EC2 Subnets.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L178">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L178">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2978,7 +3212,7 @@ Identifiers of EC2 Subnets.
 Key-value tags for the EC2 Transit Gateway VPC Attachment.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentState-transitGatewayDefaultRouteTableAssociation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L182">property <b>transitGatewayDefaultRouteTableAssociation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L182">property <b>transitGatewayDefaultRouteTableAssociation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayDefaultRouteTableAssociation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2986,7 +3220,7 @@ Key-value tags for the EC2 Transit Gateway VPC Attachment.
 Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentState-transitGatewayDefaultRouteTablePropagation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L186">property <b>transitGatewayDefaultRouteTablePropagation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L186">property <b>transitGatewayDefaultRouteTablePropagation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayDefaultRouteTablePropagation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2994,7 +3228,7 @@ Boolean whether the VPC Attachment should be associated with the EC2 Transit Gat
 Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentState-transitGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L190">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L190">property <b>transitGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3002,7 +3236,7 @@ Boolean whether the VPC Attachment should propagate routes with the EC2 Transit 
 Identifier of EC2 Transit Gateway.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L194">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L194">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3010,7 +3244,7 @@ Identifier of EC2 Transit Gateway.
 Identifier of EC2 VPC.
 
 <h4 class="pdoc-member-header" id="VpcAttachmentState-vpcOwnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8e76d72238fd8b6509177ddc684ce7902374d390/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L198">property <b>vpcOwnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5802798dac8d411c46bb2fb37c30cf538162f320/sdk/nodejs/ec2transitgateway/vpcAttachment.ts#L198">property <b>vpcOwnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcOwnerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
