@@ -25,5 +25,11 @@
     "tailwindcss": "^1.0.4",
     "typedoc": "^0.15.3",
     "typescript": "^3.9.6"
+  },
+  "devDependencies": {
+    "postcss": "^8.0.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.0.0"
   }
 }
