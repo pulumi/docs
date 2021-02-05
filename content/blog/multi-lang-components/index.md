@@ -27,19 +27,23 @@ EKS package]. Check out our Modern Infrastructure Wednesday video to see it in a
 
 <!--more-->
 
-EKS in all languages is made possible by our ongoing work to enable "[multi-language components]". With multi-language components,
+### Making components available in every language
+
+Pulumi's EKS module is an example of a Pulumi component. A component is a collection of Pulumi resources that are grouped together and can span multiple cloud providers. Components provide an easy way to package best practices for using cloud resources. Until now, components could only be used in Pulumi programs of the same language as the component's language.
+
+To change that, we're making "[multi-language components]". With multi-language components, 
 any member of the worldwide Pulumi community will be able to author a Pulumi component in the language they're most comfortable
 with and share it with all Pulumi users: even those that use a different language than the component was authored in. Multi-language
 components take care of the conversion from one language to other Pulumi languages, so component developers don't need detailed
 knowledge of the other languages. Multi-language components will also enable organizations to write Pulumi components in the right
-programming language, or languages, for each team and each product. An infrastructure or platform teams will be able to write
-components in Go and share them with a webapp team using TypeScript, or write in .NET and share with a machine learning team using
-Python, or any other combination that suits your business.
+programming language, or languages, for each team and each product. Infrastructure or platform teams will be able to write
+components in Go and share them with a webapp team using TypeScript, write components in .NET and share them with a machine learning team using
+Python, and any other combination that suits your business.
 
 ### Next steps
 
 The next step in the story is a public preview of a seamless authoring experience that will enable component creators to write, build,
-and publish multi-language components. If you'd like, follow along with our progress:
+and publish multi-language components. We're excited to make the Pulumi components you create easier, more accessible and reach more cloud engineers!  If you'd like, follow along with our progress:
 
 - Subscribe to the [multi-language components] issue for updates on the public preview
 - Try out the new pulumi-eks package with [this walkthrough]
