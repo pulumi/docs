@@ -77,7 +77,7 @@ from pulumi_kubernetes.yaml import ConfigFile
 
 example = ConfigFile(
     "example",
-    file_id="foo.yaml",
+    file="foo.yaml",
 )
 ```
 
@@ -256,7 +256,7 @@ def omit_resource(obj, opts):
 
 example = ConfigFile(
     "example",
-    file_id="foo.yaml",
+    file="foo.yaml",
     transformations=[make_service_private, alias, omit_resource],
 )
 ```
