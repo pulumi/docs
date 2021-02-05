@@ -46,7 +46,12 @@ As part of the setup process, you need to adjust some of the parameters sent by 
 To configure the SCIM connector, click the **Provisioning** tab, and then select the **Integration** option in the left nav. Click **Edit**. Fill out the form as follows:
 
 * SCIM connector base URL: `https://api.pulumi.com/scim/v2/{orgName}`, where `{orgName}` must be replaced with your organization’s login name (not display name). If you do not know this, navigate to your SAML settings and look at the SSO URL. It will have your organization’s login name in the URL.
-* Supported provisioning actions: check **Push New Users** and **Push Profile Updates**.
+* Supported provisioning actions: Check **Push New Users** and **Push Profile Updates**.
+    {{% notes "info" %}}
+If you also want to support pushing existing Okta groups, the steps in [Setting up Group Provisioning]({{< relref "#groupprovisioning" >}}) describe how to set that up.
+    {{% /notes %}}
+
+* Unique identifier field for users: Set to `userName`.
 * Authentication Mode: HTTP Header
 * For **HTTP HEADER**, you will use a token from the [Pulumi Console](https://app.pulumi.com) as the authorization bearer token. To generate a token, navigate to your org in the Pulumi Console, click on the **Settings** tab, and then click **SAML SSO**. Scroll down to the **SCIM** section and generate a new token if you have never generated one for your org, or regenerate it if you have already done so in the past.
 
@@ -95,7 +100,7 @@ Now that the SCIM connector knows how to connect to Pulumi, you need to adjust t
 5. Click **Save Mappings**.
 6. Click **Apply Updates**.
 
-## Setting up Group Provisioning
+## Setting up Group Provisioning {#groupprovisioning}
 
 The Pulumi console supports the provisioning of teams within your organization using SCIM. This is done by mapping the groups you have created using SCIM to create teams within your organization in the Pulumi console. Setting this up allows you to manage your teams' memberships solely in Okta.
 
