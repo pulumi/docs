@@ -31,7 +31,7 @@ EKS in all languages is made possible by our ongoing work to enable "[multi-lang
 any member of the worldwide Pulumi community will be able to author a Pulumi component in the language they're most comfortable
 with and share it with all Pulumi users: even those that use a different language than the component was authored in. Multi-language
 components take care of the conversion from one language to other Pulumi languages, so component developers don't need detailed
-knowledge of the other languages.Multi-language components will also enable organizations to write Pulumi components in the right
+knowledge of the other languages. Multi-language components will also enable organizations to write Pulumi components in the right
 programming language, or languages, for each team and each product. An infrastructure or platform teams will be able to write
 components in Go and share them with a webapp team using TypeScript, or write in .NET and share with a machine learning team using
 Python, or any other combination that suits your business.
