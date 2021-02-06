@@ -109,6 +109,6 @@ For an end-to-end application with a frontend, see the [URL shortener sample](ht
 
 <!-- LINKS -->
 [@pulumi/cloud]: {{< relref "./" >}}
-[cloud.API]: {{< relref "/docs/reference/pkg/nodejs/pulumi/cloud-aws#API" >}}
-[cloud.Table]: {{< relref "/docs/reference/pkg/nodejs/pulumi/cloud-aws#Table" >}}
+[cloud.API]: {{< relref "/docs/reference/pkg/nodejs/pulumi/cloud#API" >}}
+[cloud.Table]: {{< relref "/docs/reference/pkg/nodejs/pulumi/cloud#Table" >}}
 <!-- END LINKS -->

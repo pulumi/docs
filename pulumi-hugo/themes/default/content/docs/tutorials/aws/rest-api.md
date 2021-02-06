@@ -75,7 +75,7 @@ const endpoint = new awsx.apigateway.API("hello", {
 exports.url = endpoint.url;
 ```
 
-This example uses the [`@pulumi/awsx`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}) package in JavaScript and TypeScript to create a public HTTP endpoint, and define the static and event handler routes. See [Module apigateway]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/apigateway" >}}) to learn more about Pulumi's API Gateway module and components.
+This example uses the [`@pulumi/awsx`]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx" >}}) package in JavaScript and TypeScript to create a public HTTP endpoint, and define the static and event handler routes. See [Module apigateway]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/apigateway" >}}) to learn more about Pulumi's API Gateway module and components.
 
 ### Step 4: Preview and deploy your resources
 

@@ -441,26 +441,26 @@ exposed in the AWS package:
 
 - [`apigateway.x.API`](https://github.com/pulumi/examples/tree/master/aws-ts-apigateway):
   create serverless APIs using an Express.js style
-- [`cloudwatch.onSchedule`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#onSchedule" >}}):
+- `cloudwatch.onSchedule`:
   fire a CloudWatch event on a particular schedule, e.g. a cron
   expression
-- [`cloudwatch.Event.onEvent`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#EventRule-onEvent" >}}):
+- `cloudwatch.Event.onEvent`:
   fire an event when a particular CloudWatch event occurs
-- [`cloudwatch.LogGroup.onEvent`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#LogGroup-onEvent" >}}):
+- `cloudwatch.LogGroup.onEvent`:
   fire an event when a CloudWatch logs event occurs
-- [`dynamodb.Table.onEvent`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/dynamodb#Table-onEvent" >}}):
+- `dynamodb.Table.onEvent`:
   fire events for DynamoDB insert, modify, or remove operations
-- [`kinesis.Stream.onEvent`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/kinesis#Stream-onEvent" >}}):
+- `kinesis.Stream.onEvent`:
   fire Kinesis Stream events at particular times or batch sizes
-- [`s3.Bucket.onObjectCreated`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectCreated" >}}):
+- `s3.Bucket.onObjectCreated`:
   trigger a function anytime an object is created in an S3 Bucket
-- [`s3.Bucket.onObjectRemoved`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectRemoved" >}}):
+- `s3.Bucket.onObjectRemoved`:
   trigger a function anytime an object is removed from an S3 Bucket
-- [`s3.Bucket.onEvent`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onEvent" >}}):
+- `s3.Bucket.onEvent`:
   trigger a function for a wide range of S3 Bucket events
-- [`sns.Topic.onEvent`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/sns#Topic-onEvent" >}}):
+- `sns.Topic.onEvent`:
   fire SNS Topic events when new messages arrive
-- [`sqs.Queue.onEvent`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/sqs#Queue-onEvent" >}}):
+- `sqs.Queue.onEvent`:
   fire SQS Queue events when new messages are enqueued (or on DLQ
   events, etc)
 

@@ -417,7 +417,7 @@ For a complete example of this in action, see
 
 ## Deploying Kubernetes Apps to Your EKS Cluster
 
-Pulumi supports the entire Kubernetes object model in the [@pulumi/kubernetes]({{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
+Pulumi supports the entire Kubernetes object model in the [@pulumi/kubernetes]({{< relref "/docs/reference/pkg/kubernetes" >}})
 package. For more information on these object types, including Deployments, Services, and Pods, see
 [Understanding Kubernetes Objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/).
 
@@ -544,9 +544,9 @@ Specifying your Kubernetes object configurations in Pulumi lets you take advanta
 like variables, loops, conditionals, functions, and classes. It is possible, however, to deploy existing Kubernetes
 YAML. The two approaches can be mixed, which is useful when converting an existing project.
 
-The [`ConfigFile` class]({{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes/yaml#ConfigFile" >}}) can be
+The [`ConfigFile` class]({{< relref "/docs/reference/pkg/kubernetes/yaml/configfile" >}}) can be
 used to deploy a single YAML file, whereas the [`ConfigGroup` class](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes/yaml#ConfigFile" >}}) can deploy
+{{< relref "/docs/reference/pkg/kubernetes/yaml/configgroup" >}}) can deploy
 a collection of files, either from a set of files or in-memory representations.
 
 For example, imagine we have a directory, `yaml/`, containing the full YAML for the [Kubernetes Guestbook application](
@@ -571,7 +571,7 @@ export const frontendIp = guestbook.getResource("v1/Service", "frontend", "spec"
 ```
 
 The `ConfigFile` and `ConfigGroup` classes both support a [`transformations` property](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes#ConfigGroup-transformations" >}}) which can be used to ["monkey patch"](
+{{< relref "/docs/reference/pkg/kubernetes#transformations_nodejs" >}}) which can be used to ["monkey patch"](
 https://en.wikipedia.org/wiki/Monkey_patch) Kubernetes configuration on the fly. This can be used to rewrite
 configuration to include additional services (like Envoy sidecars), inject tags, and so on.
 
@@ -735,7 +735,7 @@ For more information about ECR, see [the Pulumi Crosswalk for AWS ECR documentat
 
 For more information about Kubernetes and EKS, see the following:
 
-* [Pulumi Kubernetes API Documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
+* [Pulumi Kubernetes API Documentation]({{< relref "/docs/reference/pkg/kubernetes" >}})
 * [Pulumi EKS API Documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks" >}})
 * [Amazon Elastic Kubernetes Service homepage](https://aws.amazon.com/eks/)
 * [Kubernetes Documentation](https://kubernetes.io)
