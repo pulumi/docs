@@ -88,6 +88,11 @@ Next, you will be asked for the name of a stack. Hit `ENTER` to accept the defau
 Next, you will be prompted for some configuration values for the stack.
 
 For Azure projects, you will be prompted for the Azure location. You can accept the default value of `WestUS` or choose another location.
+To list all available locations, you can use:
+
+```bash
+$ az account list-location -o table
+```
 
 {{% choosable language "javascript,typescript" %}}
 After some dependency installations from `npm`, the project and stack will be ready.
