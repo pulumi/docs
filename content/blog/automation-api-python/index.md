@@ -1,5 +1,5 @@
 ---
-title: "Pulumi Automation API, Now In Python"
+title: "Automate Your Infrastructure with Automation API and Python"
 date: 2021-02-09
 meta_desc: "Combine the power of Automation API with the flexibility of Python"
 meta_image: automation_api.png
@@ -20,7 +20,7 @@ Today, we are excited to announce Python support for this powerful feature, open
 
 The Automation API is a subpackage in Pulumi’s language-specific SDKs that provides a programmable interface for creating and managing [Stacks]({{< relref "/docs/intro/concepts/stack" >}}) and performing infrastructure updates, refresh, previews, and destroy. You can define a Pulumi program as a function within your codebase and use methods to get and set configuration parameters programmatically. The Automation API uses a gRPC interface to execute programs that control and communicate with the core Pulumi engine.
 
-To use Automation API, install the Pulumi CLI, which bundles and distributes the core engine. Today it’s available for [Python](https://github.com/pulumi/pulumi/tree/master/sdk/python/lib/pulumi/x/automation), with support for [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) under active development.
+To use Automation API, install the Pulumi CLI, which bundles and distributes the core engine. Today it’s available for [Python](https://github.com/pulumi/pulumi/tree/master/sdk/python/lib/pulumi/x/automation), [TypeScript/JavaScript](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/x/automation) and [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto), with support for [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) under active development.
 
 ## Automation Use Cases
 
@@ -150,11 +150,12 @@ See the full database deployment and migration Automation API program in [Python
 
 ## Automation API Resources
 
-To get started with Automation API checkout these links:
+To get started with Automation API checkout these links and watch our video.
 
 - [Python documentation]({{< relref "/docs/reference/pkg/python/pulumi#module-pulumi.x.automation" >}})
 - [Automation API examples](https://github.com/pulumi/automation-api-examples#python-examples)
-- [Generating S3 static websites using Pulumi's Automation API in Python](https://www.youtube.com/watch?v=8XFjqzX9ZK4&t=64s&ab_channel=PulumiTV)
+
+{{< youtube "8XFjqzX9ZK4" >}}
 
 Automation API is still in alpha. We maintain a list of [known issues](https://github.com/pulumi/pulumi/issues?q=is%3Aissue+is%3Aopen+label%3Aarea%2Fautomation-api). Please [file more](https://github.com/pulumi/pulumi/issues/new?assignees=&labels=needs-triage&template=bug_report.md&title=) as you find them!
 
