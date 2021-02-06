@@ -24,10 +24,12 @@ const config = {
     // pathToOriginBucketMetadata is the path to the file produced at the end of the
     // sync-and-test-bucket script (i.e., scripts/sync-and-test-bucket.sh).
     pathToOriginBucketMetadata: stackConfig.require("pathToOriginBucketMetadata"),
-
     // addSecurityHeaders indicates if standard security headers should be added.
     // Setting this true will add a Lambda@Edge function that adds the security headers.
     addSecurityHeaders: stackConfig.getBoolean("addSecurityHeaders") || false,
+    // doEdgeRedirects is whether to perform redirects at the CloudFront layer.
+    // Setting this true will add a Lambda@Edge function that handles that redirect logic.
+    doEdgeRedirects: stackConfig.getBoolean("doEdgeRedirects") || false,
 };
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
@@ -98,7 +100,10 @@ const oneHour = fiveMinutes * 12;
 const oneWeek = oneHour * 24 * 7;
 const oneYear = oneWeek * 52;
 
-const lambdaFunctionAssociations = getLambdaFunctionAssociations(config.addSecurityHeaders);
+const lambdaFunctionAssociations = getLambdaFunctionAssociations(
+    config.addSecurityHeaders,
+    config.doEdgeRedirects,
+);
 
 const baseCacheBehavior = {
     targetOriginId: originBucket.arn,

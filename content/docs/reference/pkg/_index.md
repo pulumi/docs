@@ -94,7 +94,7 @@ SDK reference documentation, organized by language.
 {{% choosable language csharp %}}
 <dl class="tabular">
     <dt>Pulumi SDK</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.html">Pulumi</a></dd>
+    <dd><a href="https://github.com/pulumi/pulumi/tree/master/sdk/dotnet">Pulumi</a></dd>
 </dl>
 {{% /choosable %}}
 
