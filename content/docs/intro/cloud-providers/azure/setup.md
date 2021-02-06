@@ -78,7 +78,7 @@ Once obtained, there are two ways to communicate your authorization tokens to Pu
     $ pulumi config set azure:clientId <clientID>
     $ pulumi config set azure:clientSecret <clientSecret> --secret
     $ pulumi config set azure:tenantId <tenantID>
-    $ pulumi config set azure:subscriptionId <subscriptionId>
+    $ pulumi config set azure:subscriptionId <subscriptionID>
     ```
 
 ### Creating a Service Principal
