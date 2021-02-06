@@ -8,8 +8,15 @@ export interface LambdaEdgeArgs {
     funcDescription: string;
 
     /**
-     * Setting this to `true` will not add the `name` arg of this
-     * component as a prefix for the resources it creates.
+     * Set this to `true` if you do not want the resources names
+     * to have a prefix of the component name. For resources that
+     * were created initially without the prefix should continue
+     * to be named that way. Any changes in names, will cause a replacement
+     * of all the resources, which will subsequently fail because a
+     * Lambda@Edge function cannot be deleted during a replacement.
+     *
+     * Lambda@Edge functions are only automatically deleted when the
+     * last CloudFront Distribution association to it is removed.
      */
     disableResourceNamePrefix?: boolean;
 }
@@ -30,15 +37,6 @@ export class LambdaEdge extends pulumi.ComponentResource {
             throw new Error("Lambda@Edge must be deployed in us-east-1.");
         }
 
-        // You might be wondering why the resources created in this component can't always have the prefix
-        // based on the `name` of the component resource. The answer has to do with restrictions AWS places
-        // on deleting Lambda@Edge replicated functions (namely that they don't let you do it).
-        // At update-time, if Pulumi determines that a Lambda@Edge function needs to be deleted,
-        // (for example, when it's renamed), our create-before-delete functionality does the right thing,
-        // creating the replacement function and the CloudFront association, but fails on attempting to delete
-        // the previously associated function because of a bug in the AWS provider. So to safeguard against
-        // these failures, we opt to have the component accept these names explicitly.
-        // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-edge-delete-replicas.html
         if (!args.disableResourceNamePrefix) {
             this.resourceNamesPrefix = `${name}-`;
         } else {

@@ -23,7 +23,7 @@ export function getLambdaFunctionAssociations(addSecurityHeaders: boolean, doEdg
     const associations = [];
 
     // Edge functions must be defined in us-east-1.
-    const provider = new aws.Provider("lambdaEdgeProvider", {
+    const provider = new aws.Provider("usEast1", {
         region: aws.Region.USEast1,
     });
 
