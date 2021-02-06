@@ -8,14 +8,17 @@ export interface LambdaEdgeArgs {
     funcDescription: string;
 
     /**
-     * Set this to `true` if you do not want the resources names
-     * to have a prefix of the component name. For resources that
-     * were created initially without the prefix should continue
-     * to be named that way. Any changes in names, will cause a replacement
-     * of all the resources, which will subsequently fail because a
-     * Lambda@Edge function cannot be deleted during a replacement.
+     * Set this to `true` if you do not want the component resources
+     * to have a prefix of the component name.
      *
-     * Lambda@Edge functions are only automatically deleted when the
+     * This was added to support backwards compatibility with resources
+     * that were created prior to having the default naming strategy use
+     * this component's name as prefix for all resources. Any changes in names,
+     * after the fact will cause a replacement of all the resources,
+     * which will subsequently fail because a Lambda@Edge function cannot be
+     * deleted during a replacement.
+     *
+     * Lambda@Edge functions are automatically deleted by AWS when the
      * last CloudFront Distribution association to it is removed.
      */
     disableResourceNamePrefix?: boolean;
