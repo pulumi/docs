@@ -32,23 +32,23 @@ class MyStack : Stack
     {
         var exampleAccelerator = new AliCloud.Ga.Accelerator("exampleAccelerator", new AliCloud.Ga.AcceleratorArgs
         {
-            AutoUseCoupon = true,
             Duration = 1,
+            AutoUseCoupon = true,
             Spec = "1",
         });
         var exampleBandwidthPackage = new AliCloud.Ga.BandwidthPackage("exampleBandwidthPackage", new AliCloud.Ga.BandwidthPackageArgs
         {
-            AutoPay = true,
             Bandwidth = 20,
+            Type = "Basic",
             BandwidthType = "Basic",
             Duration = "1",
+            AutoPay = true,
             Ratio = 30,
-            Type = "Basic",
         });
         var exampleBandwidthPackageAttachment = new AliCloud.Ga.BandwidthPackageAttachment("exampleBandwidthPackageAttachment", new AliCloud.Ga.BandwidthPackageAttachmentArgs
         {
-            AcceleratorId = "alicloud_ga_accelerator.example.id",
-            BandwidthPackageId = "alicloud_ga_bandwidth_package.example.id",
+            AcceleratorId = exampleAccelerator.Id,
+            BandwidthPackageId = exampleBandwidthPackage.Id,
         });
     }
 
@@ -68,28 +68,28 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := ga.NewAccelerator(ctx, "exampleAccelerator", &ga.AcceleratorArgs{
-			AutoUseCoupon: pulumi.Bool(true),
+		exampleAccelerator, err := ga.NewAccelerator(ctx, "exampleAccelerator", &ga.AcceleratorArgs{
 			Duration:      pulumi.Int(1),
+			AutoUseCoupon: pulumi.Bool(true),
 			Spec:          pulumi.String("1"),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = ga.NewBandwidthPackage(ctx, "exampleBandwidthPackage", &ga.BandwidthPackageArgs{
-			AutoPay:       pulumi.Bool(true),
+		exampleBandwidthPackage, err := ga.NewBandwidthPackage(ctx, "exampleBandwidthPackage", &ga.BandwidthPackageArgs{
 			Bandwidth:     pulumi.Int(20),
+			Type:          pulumi.String("Basic"),
 			BandwidthType: pulumi.String("Basic"),
 			Duration:      pulumi.String("1"),
+			AutoPay:       pulumi.Bool(true),
 			Ratio:         pulumi.Int(30),
-			Type:          pulumi.String("Basic"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = ga.NewBandwidthPackageAttachment(ctx, "exampleBandwidthPackageAttachment", &ga.BandwidthPackageAttachmentArgs{
-			AcceleratorId:      pulumi.String("alicloud_ga_accelerator.example.id"),
-			BandwidthPackageId: pulumi.String("alicloud_ga_bandwidth_package.example.id"),
+			AcceleratorId:      exampleAccelerator.ID(),
+			BandwidthPackageId: exampleBandwidthPackage.ID(),
 		})
 		if err != nil {
 			return err
@@ -107,19 +107,19 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 example_accelerator = alicloud.ga.Accelerator("exampleAccelerator",
-    auto_use_coupon=True,
     duration=1,
+    auto_use_coupon=True,
     spec="1")
 example_bandwidth_package = alicloud.ga.BandwidthPackage("exampleBandwidthPackage",
-    auto_pay=True,
     bandwidth=20,
+    type="Basic",
     bandwidth_type="Basic",
     duration="1",
-    ratio=30,
-    type="Basic")
+    auto_pay=True,
+    ratio=30)
 example_bandwidth_package_attachment = alicloud.ga.BandwidthPackageAttachment("exampleBandwidthPackageAttachment",
-    accelerator_id="alicloud_ga_accelerator.example.id",
-    bandwidth_package_id="alicloud_ga_bandwidth_package.example.id")
+    accelerator_id=example_accelerator.id,
+    bandwidth_package_id=example_bandwidth_package.id)
 ```
 
 {{% /example %}}
@@ -130,22 +130,22 @@ example_bandwidth_package_attachment = alicloud.ga.BandwidthPackageAttachment("e
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const exampleAccelerator = new alicloud.ga.Accelerator("example", {
-    autoUseCoupon: true,
+const exampleAccelerator = new alicloud.ga.Accelerator("exampleAccelerator", {
     duration: 1,
+    autoUseCoupon: true,
     spec: "1",
 });
-const exampleBandwidthPackage = new alicloud.ga.BandwidthPackage("example", {
-    autoPay: true,
+const exampleBandwidthPackage = new alicloud.ga.BandwidthPackage("exampleBandwidthPackage", {
     bandwidth: 20,
-    bandwidthType: "Basic",
-    duration: "1",
-    ratio: 30,
     type: "Basic",
+    bandwidthType: "Basic",
+    duration: 1,
+    autoPay: true,
+    ratio: 30,
 });
-const exampleBandwidthPackageAttachment = new alicloud.ga.BandwidthPackageAttachment("example", {
-    acceleratorId: "alicloud_ga_accelerator.example.id",
-    bandwidthPackageId: "alicloud_ga_bandwidth_package.example.id",
+const exampleBandwidthPackageAttachment = new alicloud.ga.BandwidthPackageAttachment("exampleBandwidthPackageAttachment", {
+    acceleratorId: exampleAccelerator.id,
+    bandwidthPackageId: exampleBandwidthPackage.id,
 });
 ```
 

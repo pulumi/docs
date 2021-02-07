@@ -1,8 +1,8 @@
 
 ---
 title: "GetProjectSshKey"
-title_tag: "Function GetProjectSshKey | Package equinix-metal"
-meta_desc: "Explore the GetProjectSshKey function of the equinix-metal package, including examples, input properties, output properties, and supporting types. Use this datasource to retrieve attributes of a Project SSH Key API resource."
+title_tag: "Function GetProjectSshKey | Package Equinix Metal"
+meta_desc: "Explore the GetProjectSshKey function of the Equinix Metal package, including examples, input properties, output properties, and supporting types. Use this datasource to retrieve attributes of a Project SSH Key API resource."
 ---
 
 
@@ -45,6 +45,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

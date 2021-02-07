@@ -689,6 +689,16 @@ tenant or not.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="subnets_csharp">
+<a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs belonging to the network.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -859,6 +869,16 @@ is enabled
     </dt>
     <dd>{{% md %}}Specifies whether the network resource can be accessed by any
 tenant or not.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="subnets_go">
+<a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs belonging to the network.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1035,6 +1055,16 @@ tenant or not.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="subnets_nodejs">
+<a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs belonging to the network.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1205,6 +1235,16 @@ is enabled
     </dt>
     <dd>{{% md %}}Specifies whether the network resource can be accessed by any
 tenant or not.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="subnets_python">
+<a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs belonging to the network.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">

@@ -18,19 +18,19 @@ meta_desc: "Explore the DatastoreCluster resource of the vSphere package, includ
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DatastoreCluster">DatastoreCluster</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DatastoreClusterArgs">DatastoreClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DatastoreCluster">DatastoreCluster</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DatastoreClusterArgs">DatastoreClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vsphere/#pulumi_vsphere.DatastoreCluster">DatastoreCluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_advanced_options</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">sdrs_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_default_intra_vm_affinity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_threshold_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_utilization_difference</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sdrs_io_balance_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_io_latency_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sdrs_io_load_balance_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_io_load_imbalance_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_iops_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_percent_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_threshold_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_load_balance_interval</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sdrs_policy_enforcement_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_rule_enforcement_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_space_balance_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_space_utilization_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sdrs_vm_evacuation_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vsphere/#pulumi_vsphere.DatastoreCluster">DatastoreCluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">sdrs_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_default_intra_vm_affinity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_threshold_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_utilization_difference</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_balance_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_io_latency_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_load_balance_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_io_load_imbalance_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_iops_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_percent_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_threshold_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_load_balance_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_policy_enforcement_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_rule_enforcement_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_space_balance_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_space_utilization_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_vm_evacuation_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DatastoreCluster">NewDatastoreCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DatastoreClusterArgs">DatastoreClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DatastoreCluster">DatastoreCluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DatastoreCluster">NewDatastoreCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DatastoreClusterArgs">DatastoreClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DatastoreCluster">DatastoreCluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DatastoreCluster.html">DatastoreCluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DatastoreClusterArgs.html">DatastoreClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DatastoreCluster.html">DatastoreCluster</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DatastoreClusterArgs.html">DatastoreClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -41,7 +41,7 @@ meta_desc: "Explore the DatastoreCluster resource of the vSphere package, includ
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -110,7 +110,7 @@ meta_desc: "Explore the DatastoreCluster resource of the vSphere package, includ
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -149,7 +149,7 @@ meta_desc: "Explore the DatastoreCluster resource of the vSphere package, includ
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -190,7 +190,6 @@ The DatastoreCluster resource accepts the following [input]({{< relref "/docs/in
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -198,20 +197,19 @@ The DatastoreCluster resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="datacenterid_csharp">
 <a href="#datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customattributes_csharp">
 <a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -220,14 +218,13 @@ value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="folder_csharp">
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this datastore
 cluster in.  This is a path relative to the datacenter you are deploying the
@@ -237,162 +234,149 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/datastore-cluster-test`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsadvancedoptions_csharp">
 <a href="#sdrsadvancedoptions_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Advanced<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsautomationlevel_csharp">
 <a href="#sdrsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsdefaultintravmaffinity_csharp">
 <a href="#sdrsdefaultintravmaffinity_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Default<wbr>Intra<wbr>Vm<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsenabled_csharp">
 <a href="#sdrsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespacethreshold_csharp">
 <a href="#sdrsfreespacethreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
 when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespacethresholdmode_csharp">
 <a href="#sdrsfreespacethresholdmode_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Threshold<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespaceutilizationdifference_csharp">
 <a href="#sdrsfreespaceutilizationdifference_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Utilization<wbr>Difference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsiobalanceautomationlevel_csharp">
 <a href="#sdrsiobalanceautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Balance<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsiolatencythreshold_csharp">
 <a href="#sdrsiolatencythreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Latency<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsioloadbalanceenabled_csharp">
 <a href="#sdrsioloadbalanceenabled_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Load<wbr>Balance<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsioloadimbalancethreshold_csharp">
 <a href="#sdrsioloadimbalancethreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Load<wbr>Imbalance<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservableiopsthreshold_csharp">
 <a href="#sdrsioreservableiopsthreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Iops<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold of reservable
 IOPS of all virtual machines on the datastore before storage DRS makes
@@ -401,120 +385,109 @@ only be set if `sdrs_io_reservable_percent_threshold` cannot make an accurate
 estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservablepercentthreshold_csharp">
 <a href="#sdrsioreservablepercentthreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Percent<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservablethresholdmode_csharp">
 <a href="#sdrsioreservablethresholdmode_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Threshold<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reservable IOPS
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
 of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsloadbalanceinterval_csharp">
 <a href="#sdrsloadbalanceinterval_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Load<wbr>Balance<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrspolicyenforcementautomationlevel_csharp">
 <a href="#sdrspolicyenforcementautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Policy<wbr>Enforcement<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsruleenforcementautomationlevel_csharp">
 <a href="#sdrsruleenforcementautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Rule<wbr>Enforcement<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsspacebalanceautomationlevel_csharp">
 <a href="#sdrsspacebalanceautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Space<wbr>Balance<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsspaceutilizationthreshold_csharp">
 <a href="#sdrsspaceutilizationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Space<wbr>Utilization<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsvmevacuationautomationlevel_csharp">
 <a href="#sdrsvmevacuationautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Vm<wbr>Evacuation<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -523,20 +496,19 @@ automation settings when generating recommendations for datastore evacuation.
             title="Required">
         <span id="datacenterid_go">
 <a href="#datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customattributes_go">
 <a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -545,14 +517,13 @@ value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="folder_go">
 <a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this datastore
 cluster in.  This is a path relative to the datacenter you are deploying the
@@ -562,162 +533,149 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/datastore-cluster-test`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsadvancedoptions_go">
 <a href="#sdrsadvancedoptions_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Advanced<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsautomationlevel_go">
 <a href="#sdrsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsdefaultintravmaffinity_go">
 <a href="#sdrsdefaultintravmaffinity_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Default<wbr>Intra<wbr>Vm<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsenabled_go">
 <a href="#sdrsenabled_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespacethreshold_go">
 <a href="#sdrsfreespacethreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
 when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespacethresholdmode_go">
 <a href="#sdrsfreespacethresholdmode_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Threshold<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespaceutilizationdifference_go">
 <a href="#sdrsfreespaceutilizationdifference_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Utilization<wbr>Difference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsiobalanceautomationlevel_go">
 <a href="#sdrsiobalanceautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Balance<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsiolatencythreshold_go">
 <a href="#sdrsiolatencythreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Latency<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsioloadbalanceenabled_go">
 <a href="#sdrsioloadbalanceenabled_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Load<wbr>Balance<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsioloadimbalancethreshold_go">
 <a href="#sdrsioloadimbalancethreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Load<wbr>Imbalance<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservableiopsthreshold_go">
 <a href="#sdrsioreservableiopsthreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Iops<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold of reservable
 IOPS of all virtual machines on the datastore before storage DRS makes
@@ -726,120 +684,109 @@ only be set if `sdrs_io_reservable_percent_threshold` cannot make an accurate
 estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservablepercentthreshold_go">
 <a href="#sdrsioreservablepercentthreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Percent<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservablethresholdmode_go">
 <a href="#sdrsioreservablethresholdmode_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Threshold<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reservable IOPS
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
 of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsloadbalanceinterval_go">
 <a href="#sdrsloadbalanceinterval_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Load<wbr>Balance<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrspolicyenforcementautomationlevel_go">
 <a href="#sdrspolicyenforcementautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Policy<wbr>Enforcement<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsruleenforcementautomationlevel_go">
 <a href="#sdrsruleenforcementautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Rule<wbr>Enforcement<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsspacebalanceautomationlevel_go">
 <a href="#sdrsspacebalanceautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Space<wbr>Balance<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsspaceutilizationthreshold_go">
 <a href="#sdrsspaceutilizationthreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Space<wbr>Utilization<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsvmevacuationautomationlevel_go">
 <a href="#sdrsvmevacuationautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Vm<wbr>Evacuation<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -848,20 +795,19 @@ automation settings when generating recommendations for datastore evacuation.
             title="Required">
         <span id="datacenterid_nodejs">
 <a href="#datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customattributes_nodejs">
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -870,14 +816,13 @@ value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="folder_nodejs">
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this datastore
 cluster in.  This is a path relative to the datacenter you are deploying the
@@ -887,162 +832,149 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/datastore-cluster-test`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsadvancedoptions_nodejs">
 <a href="#sdrsadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Advanced<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsautomationlevel_nodejs">
 <a href="#sdrsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsdefaultintravmaffinity_nodejs">
 <a href="#sdrsdefaultintravmaffinity_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Default<wbr>Intra<wbr>Vm<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsenabled_nodejs">
 <a href="#sdrsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespacethreshold_nodejs">
 <a href="#sdrsfreespacethreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
 when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespacethresholdmode_nodejs">
 <a href="#sdrsfreespacethresholdmode_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Threshold<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespaceutilizationdifference_nodejs">
 <a href="#sdrsfreespaceutilizationdifference_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Utilization<wbr>Difference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsiobalanceautomationlevel_nodejs">
 <a href="#sdrsiobalanceautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Balance<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsiolatencythreshold_nodejs">
 <a href="#sdrsiolatencythreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Latency<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsioloadbalanceenabled_nodejs">
 <a href="#sdrsioloadbalanceenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Load<wbr>Balance<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsioloadimbalancethreshold_nodejs">
 <a href="#sdrsioloadimbalancethreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Load<wbr>Imbalance<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservableiopsthreshold_nodejs">
 <a href="#sdrsioreservableiopsthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Iops<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold of reservable
 IOPS of all virtual machines on the datastore before storage DRS makes
@@ -1051,120 +983,109 @@ only be set if `sdrs_io_reservable_percent_threshold` cannot make an accurate
 estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservablepercentthreshold_nodejs">
 <a href="#sdrsioreservablepercentthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Percent<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservablethresholdmode_nodejs">
 <a href="#sdrsioreservablethresholdmode_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Threshold<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reservable IOPS
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
 of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsloadbalanceinterval_nodejs">
 <a href="#sdrsloadbalanceinterval_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Load<wbr>Balance<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrspolicyenforcementautomationlevel_nodejs">
 <a href="#sdrspolicyenforcementautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Policy<wbr>Enforcement<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsruleenforcementautomationlevel_nodejs">
 <a href="#sdrsruleenforcementautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Rule<wbr>Enforcement<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsspacebalanceautomationlevel_nodejs">
 <a href="#sdrsspacebalanceautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Space<wbr>Balance<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsspaceutilizationthreshold_nodejs">
 <a href="#sdrsspaceutilizationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Space<wbr>Utilization<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsvmevacuationautomationlevel_nodejs">
 <a href="#sdrsvmevacuationautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Vm<wbr>Evacuation<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1173,36 +1094,34 @@ automation settings when generating recommendations for datastore evacuation.
             title="Required">
         <span id="datacenter_id_python">
 <a href="#datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_attributes_python">
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="folder_python">
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this datastore
 cluster in.  This is a path relative to the datacenter you are deploying the
@@ -1212,162 +1131,149 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/datastore-cluster-test`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_advanced_options_python">
 <a href="#sdrs_advanced_options_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>advanced_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_automation_level_python">
 <a href="#sdrs_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>automation_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_default_intra_vm_affinity_python">
 <a href="#sdrs_default_intra_vm_affinity_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>default_<wbr>intra_<wbr>vm_<wbr>affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_enabled_python">
 <a href="#sdrs_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_free_space_threshold_python">
 <a href="#sdrs_free_space_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
 when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_free_space_threshold_mode_python">
 <a href="#sdrs_free_space_threshold_mode_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>threshold_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_free_space_utilization_difference_python">
 <a href="#sdrs_free_space_utilization_difference_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>utilization_<wbr>difference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_io_balance_automation_level_python">
 <a href="#sdrs_io_balance_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>balance_<wbr>automation_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_io_latency_threshold_python">
 <a href="#sdrs_io_latency_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>latency_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_io_load_balance_enabled_python">
 <a href="#sdrs_io_load_balance_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>load_<wbr>balance_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_io_load_imbalance_threshold_python">
 <a href="#sdrs_io_load_imbalance_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>load_<wbr>imbalance_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_io_reservable_iops_threshold_python">
 <a href="#sdrs_io_reservable_iops_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>iops_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold of reservable
 IOPS of all virtual machines on the datastore before storage DRS makes
@@ -1376,129 +1282,114 @@ only be set if `sdrs_io_reservable_percent_threshold` cannot make an accurate
 estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_io_reservable_percent_threshold_python">
 <a href="#sdrs_io_reservable_percent_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>percent_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_io_reservable_threshold_mode_python">
 <a href="#sdrs_io_reservable_threshold_mode_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>threshold_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reservable IOPS
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
 of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_load_balance_interval_python">
 <a href="#sdrs_load_balance_interval_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>load_<wbr>balance_<wbr>interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_policy_enforcement_automation_level_python">
 <a href="#sdrs_policy_enforcement_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>policy_<wbr>enforcement_<wbr>automation_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_rule_enforcement_automation_level_python">
 <a href="#sdrs_rule_enforcement_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>rule_<wbr>enforcement_<wbr>automation_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_space_balance_automation_level_python">
 <a href="#sdrs_space_balance_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>space_<wbr>balance_<wbr>automation_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_space_utilization_threshold_python">
 <a href="#sdrs_space_utilization_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>space_<wbr>utilization_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_vm_evacuation_automation_level_python">
 <a href="#sdrs_vm_evacuation_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>vm_<wbr>evacuation_<wbr>automation_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the DatastoreCluster resource produces the following output properties:
-
 
 
 
@@ -1509,15 +1400,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1526,15 +1415,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1543,15 +1430,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1560,18 +1445,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1581,20 +1461,20 @@ Get an existing DatastoreCluster resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DatastoreClusterState">DatastoreClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DatastoreCluster">DatastoreCluster</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DatastoreClusterState">DatastoreClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DatastoreCluster">DatastoreCluster</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_advanced_options</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">sdrs_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_default_intra_vm_affinity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_threshold_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_utilization_difference</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sdrs_io_balance_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_io_latency_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sdrs_io_load_balance_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_io_load_imbalance_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_iops_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_percent_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_threshold_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_load_balance_interval</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sdrs_policy_enforcement_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_rule_enforcement_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_space_balance_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_space_utilization_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sdrs_vm_evacuation_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> DatastoreCluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">sdrs_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_default_intra_vm_affinity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_threshold_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_utilization_difference</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_balance_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_io_latency_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_load_balance_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_io_load_imbalance_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_iops_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_percent_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_threshold_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_load_balance_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_policy_enforcement_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_rule_enforcement_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_space_balance_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_space_utilization_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_vm_evacuation_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> DatastoreCluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatastoreCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DatastoreClusterState">DatastoreClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DatastoreCluster">DatastoreCluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatastoreCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DatastoreClusterState">DatastoreClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DatastoreCluster">DatastoreCluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DatastoreCluster.html">DatastoreCluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..DatastoreClusterState.html">DatastoreClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DatastoreCluster.html">DatastoreCluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..DatastoreClusterState.html">DatastoreClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1696,7 +1576,6 @@ Get an existing DatastoreCluster resource's state with the given name, ID, and o
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1704,7 +1583,7 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_customattributes_csharp">
 <a href="#state_customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1713,27 +1592,25 @@ value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datacenterid_csharp">
 <a href="#state_datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_folder_csharp">
 <a href="#state_folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this datastore
 cluster in.  This is a path relative to the datacenter you are deploying the
@@ -1743,162 +1620,149 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/datastore-cluster-test`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsadvancedoptions_csharp">
 <a href="#state_sdrsadvancedoptions_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Advanced<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsautomationlevel_csharp">
 <a href="#state_sdrsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsdefaultintravmaffinity_csharp">
 <a href="#state_sdrsdefaultintravmaffinity_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Default<wbr>Intra<wbr>Vm<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsenabled_csharp">
 <a href="#state_sdrsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespacethreshold_csharp">
 <a href="#state_sdrsfreespacethreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
 when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespacethresholdmode_csharp">
 <a href="#state_sdrsfreespacethresholdmode_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Threshold<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespaceutilizationdifference_csharp">
 <a href="#state_sdrsfreespaceutilizationdifference_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Utilization<wbr>Difference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsiobalanceautomationlevel_csharp">
 <a href="#state_sdrsiobalanceautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Balance<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsiolatencythreshold_csharp">
 <a href="#state_sdrsiolatencythreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Latency<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioloadbalanceenabled_csharp">
 <a href="#state_sdrsioloadbalanceenabled_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Load<wbr>Balance<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioloadimbalancethreshold_csharp">
 <a href="#state_sdrsioloadimbalancethreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Load<wbr>Imbalance<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservableiopsthreshold_csharp">
 <a href="#state_sdrsioreservableiopsthreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Iops<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold of reservable
 IOPS of all virtual machines on the datastore before storage DRS makes
@@ -1907,120 +1771,109 @@ only be set if `sdrs_io_reservable_percent_threshold` cannot make an accurate
 estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservablepercentthreshold_csharp">
 <a href="#state_sdrsioreservablepercentthreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Percent<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservablethresholdmode_csharp">
 <a href="#state_sdrsioreservablethresholdmode_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Threshold<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reservable IOPS
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
 of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsloadbalanceinterval_csharp">
 <a href="#state_sdrsloadbalanceinterval_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Load<wbr>Balance<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrspolicyenforcementautomationlevel_csharp">
 <a href="#state_sdrspolicyenforcementautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Policy<wbr>Enforcement<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsruleenforcementautomationlevel_csharp">
 <a href="#state_sdrsruleenforcementautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Rule<wbr>Enforcement<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsspacebalanceautomationlevel_csharp">
 <a href="#state_sdrsspacebalanceautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Space<wbr>Balance<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsspaceutilizationthreshold_csharp">
 <a href="#state_sdrsspaceutilizationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Space<wbr>Utilization<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsvmevacuationautomationlevel_csharp">
 <a href="#state_sdrsvmevacuationautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Vm<wbr>Evacuation<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2029,7 +1882,7 @@ automation settings when generating recommendations for datastore evacuation.
             title="Optional">
         <span id="state_customattributes_go">
 <a href="#state_customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -2038,27 +1891,25 @@ value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datacenterid_go">
 <a href="#state_datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_folder_go">
 <a href="#state_folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this datastore
 cluster in.  This is a path relative to the datacenter you are deploying the
@@ -2068,162 +1919,149 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/datastore-cluster-test`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsadvancedoptions_go">
 <a href="#state_sdrsadvancedoptions_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Advanced<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsautomationlevel_go">
 <a href="#state_sdrsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsdefaultintravmaffinity_go">
 <a href="#state_sdrsdefaultintravmaffinity_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Default<wbr>Intra<wbr>Vm<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsenabled_go">
 <a href="#state_sdrsenabled_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespacethreshold_go">
 <a href="#state_sdrsfreespacethreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
 when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespacethresholdmode_go">
 <a href="#state_sdrsfreespacethresholdmode_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Threshold<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespaceutilizationdifference_go">
 <a href="#state_sdrsfreespaceutilizationdifference_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Utilization<wbr>Difference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsiobalanceautomationlevel_go">
 <a href="#state_sdrsiobalanceautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Balance<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsiolatencythreshold_go">
 <a href="#state_sdrsiolatencythreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Latency<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioloadbalanceenabled_go">
 <a href="#state_sdrsioloadbalanceenabled_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Load<wbr>Balance<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioloadimbalancethreshold_go">
 <a href="#state_sdrsioloadimbalancethreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Load<wbr>Imbalance<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservableiopsthreshold_go">
 <a href="#state_sdrsioreservableiopsthreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Iops<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold of reservable
 IOPS of all virtual machines on the datastore before storage DRS makes
@@ -2232,120 +2070,109 @@ only be set if `sdrs_io_reservable_percent_threshold` cannot make an accurate
 estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservablepercentthreshold_go">
 <a href="#state_sdrsioreservablepercentthreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Percent<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservablethresholdmode_go">
 <a href="#state_sdrsioreservablethresholdmode_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Threshold<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reservable IOPS
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
 of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsloadbalanceinterval_go">
 <a href="#state_sdrsloadbalanceinterval_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Load<wbr>Balance<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrspolicyenforcementautomationlevel_go">
 <a href="#state_sdrspolicyenforcementautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Policy<wbr>Enforcement<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsruleenforcementautomationlevel_go">
 <a href="#state_sdrsruleenforcementautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Rule<wbr>Enforcement<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsspacebalanceautomationlevel_go">
 <a href="#state_sdrsspacebalanceautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Space<wbr>Balance<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsspaceutilizationthreshold_go">
 <a href="#state_sdrsspaceutilizationthreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Space<wbr>Utilization<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsvmevacuationautomationlevel_go">
 <a href="#state_sdrsvmevacuationautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Vm<wbr>Evacuation<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2354,7 +2181,7 @@ automation settings when generating recommendations for datastore evacuation.
             title="Optional">
         <span id="state_customattributes_nodejs">
 <a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2363,27 +2190,25 @@ value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datacenterid_nodejs">
 <a href="#state_datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_folder_nodejs">
 <a href="#state_folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this datastore
 cluster in.  This is a path relative to the datacenter you are deploying the
@@ -2393,162 +2218,149 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/datastore-cluster-test`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsadvancedoptions_nodejs">
 <a href="#state_sdrsadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Advanced<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsautomationlevel_nodejs">
 <a href="#state_sdrsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsdefaultintravmaffinity_nodejs">
 <a href="#state_sdrsdefaultintravmaffinity_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Default<wbr>Intra<wbr>Vm<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsenabled_nodejs">
 <a href="#state_sdrsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespacethreshold_nodejs">
 <a href="#state_sdrsfreespacethreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
 when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespacethresholdmode_nodejs">
 <a href="#state_sdrsfreespacethresholdmode_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Threshold<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespaceutilizationdifference_nodejs">
 <a href="#state_sdrsfreespaceutilizationdifference_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Utilization<wbr>Difference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsiobalanceautomationlevel_nodejs">
 <a href="#state_sdrsiobalanceautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Balance<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsiolatencythreshold_nodejs">
 <a href="#state_sdrsiolatencythreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Latency<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioloadbalanceenabled_nodejs">
 <a href="#state_sdrsioloadbalanceenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Load<wbr>Balance<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioloadimbalancethreshold_nodejs">
 <a href="#state_sdrsioloadimbalancethreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Load<wbr>Imbalance<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservableiopsthreshold_nodejs">
 <a href="#state_sdrsioreservableiopsthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Iops<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold of reservable
 IOPS of all virtual machines on the datastore before storage DRS makes
@@ -2557,120 +2369,109 @@ only be set if `sdrs_io_reservable_percent_threshold` cannot make an accurate
 estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservablepercentthreshold_nodejs">
 <a href="#state_sdrsioreservablepercentthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Percent<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservablethresholdmode_nodejs">
 <a href="#state_sdrsioreservablethresholdmode_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Threshold<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reservable IOPS
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
 of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsloadbalanceinterval_nodejs">
 <a href="#state_sdrsloadbalanceinterval_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Load<wbr>Balance<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrspolicyenforcementautomationlevel_nodejs">
 <a href="#state_sdrspolicyenforcementautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Policy<wbr>Enforcement<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsruleenforcementautomationlevel_nodejs">
 <a href="#state_sdrsruleenforcementautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Rule<wbr>Enforcement<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsspacebalanceautomationlevel_nodejs">
 <a href="#state_sdrsspacebalanceautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Space<wbr>Balance<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsspaceutilizationthreshold_nodejs">
 <a href="#state_sdrsspaceutilizationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Space<wbr>Utilization<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsvmevacuationautomationlevel_nodejs">
 <a href="#state_sdrsvmevacuationautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Vm<wbr>Evacuation<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2679,36 +2480,34 @@ automation settings when generating recommendations for datastore evacuation.
             title="Optional">
         <span id="state_custom_attributes_python">
 <a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_id_python">
 <a href="#state_datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_folder_python">
 <a href="#state_folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this datastore
 cluster in.  This is a path relative to the datacenter you are deploying the
@@ -2718,162 +2517,149 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/datastore-cluster-test`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_advanced_options_python">
 <a href="#state_sdrs_advanced_options_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>advanced_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_automation_level_python">
 <a href="#state_sdrs_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>automation_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_default_intra_vm_affinity_python">
 <a href="#state_sdrs_default_intra_vm_affinity_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>default_<wbr>intra_<wbr>vm_<wbr>affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_enabled_python">
 <a href="#state_sdrs_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_free_space_threshold_python">
 <a href="#state_sdrs_free_space_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
 when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_free_space_threshold_mode_python">
 <a href="#state_sdrs_free_space_threshold_mode_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>threshold_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_free_space_utilization_difference_python">
 <a href="#state_sdrs_free_space_utilization_difference_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>utilization_<wbr>difference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_io_balance_automation_level_python">
 <a href="#state_sdrs_io_balance_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>balance_<wbr>automation_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_io_latency_threshold_python">
 <a href="#state_sdrs_io_latency_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>latency_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_io_load_balance_enabled_python">
 <a href="#state_sdrs_io_load_balance_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>load_<wbr>balance_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_io_load_imbalance_threshold_python">
 <a href="#state_sdrs_io_load_imbalance_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>load_<wbr>imbalance_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_io_reservable_iops_threshold_python">
 <a href="#state_sdrs_io_reservable_iops_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>iops_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold of reservable
 IOPS of all virtual machines on the datastore before storage DRS makes
@@ -2882,123 +2668,109 @@ only be set if `sdrs_io_reservable_percent_threshold` cannot make an accurate
 estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_io_reservable_percent_threshold_python">
 <a href="#state_sdrs_io_reservable_percent_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>percent_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_io_reservable_threshold_mode_python">
 <a href="#state_sdrs_io_reservable_threshold_mode_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>threshold_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reservable IOPS
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
 of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_load_balance_interval_python">
 <a href="#state_sdrs_load_balance_interval_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>load_<wbr>balance_<wbr>interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_policy_enforcement_automation_level_python">
 <a href="#state_sdrs_policy_enforcement_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>policy_<wbr>enforcement_<wbr>automation_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_rule_enforcement_automation_level_python">
 <a href="#state_sdrs_rule_enforcement_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>rule_<wbr>enforcement_<wbr>automation_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_space_balance_automation_level_python">
 <a href="#state_sdrs_space_balance_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>space_<wbr>balance_<wbr>automation_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_space_utilization_threshold_python">
 <a href="#state_sdrs_space_utilization_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>space_<wbr>utilization_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_vm_evacuation_automation_level_python">
 <a href="#state_sdrs_vm_evacuation_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>vm_<wbr>evacuation_<wbr>automation_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

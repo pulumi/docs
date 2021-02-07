@@ -1,8 +1,8 @@
 
 ---
 title: "Organization"
-title_tag: "Resource Organization | Package equinix-metal"
-meta_desc: "Explore the Organization resource of the equinix-metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage organization resource in Equinix Metal."
+title_tag: "Resource Organization | Package Equinix Metal"
+meta_desc: "Explore the Organization resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage organization resource in Equinix Metal."
 ---
 
 
@@ -44,7 +44,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

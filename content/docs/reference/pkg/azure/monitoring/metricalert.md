@@ -2323,6 +2323,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skipmetricvalidation_csharp">
+<a href="#skipmetricvalidation_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Metric<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Skip the metric validation to allow creating an alert rule on a custom metric that isn't yet emitted? Defaults to `false`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2388,6 +2398,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#metricalertcriteriadimension">[]Metric<wbr>Alert<wbr>Criteria<wbr>Dimension</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skipmetricvalidation_go">
+<a href="#skipmetricvalidation_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Metric<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Skip the metric validation to allow creating an alert rule on a custom metric that isn't yet emitted? Defaults to `false`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2455,6 +2475,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skipmetricvalidation_nodejs">
+<a href="#skipmetricvalidation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Metric<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Skip the metric validation to allow creating an alert rule on a custom metric that isn't yet emitted? Defaults to `false`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2520,6 +2550,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#metricalertcriteriadimension">Sequence[Metric<wbr>Alert<wbr>Criteria<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skip_metric_validation_python">
+<a href="#skip_metric_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>metric_<wbr>validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Skip the metric validation to allow creating an alert rule on a custom metric that isn't yet emitted? Defaults to `false`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2789,6 +2829,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) date from which to start learning the metric historical data and calculate the dynamic thresholds.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skipmetricvalidation_csharp">
+<a href="#skipmetricvalidation_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Metric<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Skip the metric validation to allow creating an alert rule on a custom metric that isn't yet emitted? Defaults to `false`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2884,6 +2934,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) date from which to start learning the metric historical data and calculate the dynamic thresholds.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skipmetricvalidation_go">
+<a href="#skipmetricvalidation_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Metric<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Skip the metric validation to allow creating an alert rule on a custom metric that isn't yet emitted? Defaults to `false`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2981,6 +3041,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) date from which to start learning the metric historical data and calculate the dynamic thresholds.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skipmetricvalidation_nodejs">
+<a href="#skipmetricvalidation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Metric<wbr>Validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Skip the metric validation to allow creating an alert rule on a custom metric that isn't yet emitted? Defaults to `false`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3076,6 +3146,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) date from which to start learning the metric historical data and calculate the dynamic thresholds.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skip_metric_validation_python">
+<a href="#skip_metric_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>metric_<wbr>validation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Skip the metric validation to allow creating an alert rule on a custom metric that isn't yet emitted? Defaults to `false`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

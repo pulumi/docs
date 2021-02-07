@@ -23,6 +23,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
     <li><a href="accountmember" title="AccountMember"><span class="symbol resource"></span>AccountMember</a></li>
     <li><a href="apitoken" title="ApiToken"><span class="symbol resource"></span>ApiToken</a></li>
     <li><a href="argo" title="Argo"><span class="symbol resource"></span>Argo</a></li>
+    <li><a href="argotunnel" title="ArgoTunnel"><span class="symbol resource"></span>ArgoTunnel</a></li>
     <li><a href="authenticatedoriginpulls" title="AuthenticatedOriginPulls"><span class="symbol resource"></span>AuthenticatedOriginPulls</a></li>
     <li><a href="authenticatedoriginpullscertificate" title="AuthenticatedOriginPullsCertificate"><span class="symbol resource"></span>AuthenticatedOriginPullsCertificate</a></li>
     <li><a href="byoipprefix" title="ByoIpPrefix"><span class="symbol resource"></span>ByoIpPrefix</a></li>
@@ -52,6 +53,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
     <li><a href="wafoverride" title="WafOverride"><span class="symbol resource"></span>WafOverride</a></li>
     <li><a href="wafpackage" title="WafPackage"><span class="symbol resource"></span>WafPackage</a></li>
     <li><a href="wafrule" title="WafRule"><span class="symbol resource"></span>WafRule</a></li>
+    <li><a href="workercrontrigger" title="WorkerCronTrigger"><span class="symbol resource"></span>WorkerCronTrigger</a></li>
     <li><a href="workerroute" title="WorkerRoute"><span class="symbol resource"></span>WorkerRoute</a></li>
     <li><a href="workerscript" title="WorkerScript"><span class="symbol resource"></span>WorkerScript</a></li>
     <li><a href="workerskv" title="WorkersKv"><span class="symbol resource"></span>WorkersKv</a></li>
@@ -82,7 +84,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 	<dt>Version</dt>
-	<dd>2.12.0</dd>
+	<dd>2.13.0</dd>
 </dl>
 
 

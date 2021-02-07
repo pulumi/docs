@@ -48,6 +48,7 @@ Explore the resources and functions of the networking module in the Open Stack p
     <li><a href="getrouter" title="GetRouter"><span class="symbol function"></span>GetRouter</a></li>
     <li><a href="getsecgroup" title="GetSecGroup"><span class="symbol function"></span>GetSecGroup</a></li>
     <li><a href="getsubnet" title="GetSubnet"><span class="symbol function"></span>GetSubnet</a></li>
+    <li><a href="getsubnetidsv2" title="GetSubnetIdsV2"><span class="symbol function"></span>GetSubnetIdsV2</a></li>
     <li><a href="getsubnetpool" title="GetSubnetPool"><span class="symbol function"></span>GetSubnetPool</a></li>
     <li><a href="gettrunk" title="GetTrunk"><span class="symbol function"></span>GetTrunk</a></li>
 </ul>
@@ -61,7 +62,7 @@ Explore the resources and functions of the networking module in the Open Stack p
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 	<dt>Version</dt>
-	<dd>2.12.0</dd>
+	<dd>2.13.0</dd>
 </dl>
 
 

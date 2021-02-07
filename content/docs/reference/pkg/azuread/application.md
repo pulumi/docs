@@ -161,6 +161,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread"
+	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1350,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application ID.
+    <dd>{{% md %}}The Application ID (Client ID).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1385,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application ID.
+    <dd>{{% md %}}The Application ID (Client ID).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1420,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application ID.
+    <dd>{{% md %}}The Application ID (Client ID).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1455,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Application ID.
+    <dd>{{% md %}}The Application ID (Client ID).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1623,7 +1624,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application ID.
+    <dd>{{% md %}}The Application ID (Client ID).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1819,7 +1820,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application ID.
+    <dd>{{% md %}}The Application ID (Client ID).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2015,7 +2016,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application ID.
+    <dd>{{% md %}}The Application ID (Client ID).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2211,7 +2212,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Application ID.
+    <dd>{{% md %}}The Application ID (Client ID).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2718,7 +2719,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
+    <dd>{{% md %}}The unique identifier of the app role. This attribute is computed and cannot be specified manually in this block. If you need to specify a custom `id`, it's recommended to use the azuread.ApplicationAppRole resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2804,7 +2805,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
+    <dd>{{% md %}}The unique identifier of the app role. This attribute is computed and cannot be specified manually in this block. If you need to specify a custom `id`, it's recommended to use the azuread.ApplicationAppRole resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2890,7 +2891,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
+    <dd>{{% md %}}The unique identifier of the app role. This attribute is computed and cannot be specified manually in this block. If you need to specify a custom `id`, it's recommended to use the azuread.ApplicationAppRole resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2976,7 +2977,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
+    <dd>{{% md %}}The unique identifier of the app role. This attribute is computed and cannot be specified manually in this block. If you need to specify a custom `id`, it's recommended to use the azuread.ApplicationAppRole resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

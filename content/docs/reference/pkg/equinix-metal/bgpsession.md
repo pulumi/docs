@@ -1,8 +1,8 @@
 
 ---
 title: "BgpSession"
-title_tag: "Resource BgpSession | Package equinix-metal"
-meta_desc: "Explore the BgpSession resource of the equinix-metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage BGP sessions in Equinix Metal Host. Refer to [Equinix Metal BGP documentation](https://metal.equinix.com/developers/docs/networking/local-global-bgp/) for more details."
+title_tag: "Resource BgpSession | Package Equinix Metal"
+meta_desc: "Explore the BgpSession resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage BGP sessions in Equinix Metal Host. Refer to [Equinix Metal BGP documentation](https://metal.equinix.com/developers/docs/networking/local-global-bgp/) for more details."
 ---
 
 

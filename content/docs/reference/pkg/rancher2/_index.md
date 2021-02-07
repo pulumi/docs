@@ -112,7 +112,7 @@ A Pulumi package for creating and managing rancher2 resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 	<dt>Version</dt>
-	<dd>2.6.1</dd>
+	<dd>2.7.0</dd>
 </dl>
 
 

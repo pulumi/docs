@@ -208,7 +208,7 @@ const inSecondaryCidr = new aws.ec2.Subnet("inSecondaryCidr", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.Subnet">Subnet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assign_ipv6_address_on_creation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">map_public_ip_on_launch</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">outpost_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.Subnet">Subnet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assign_ipv6_address_on_creation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_owned_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">map_customer_owned_ip_on_launch</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">map_public_ip_on_launch</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">outpost_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -433,6 +433,16 @@ assigned an IPv6 address. Default is `false`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="customerownedipv4pool_csharp">
+<a href="#customerownedipv4pool_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ipv6cidrblock_csharp">
 <a href="#ipv6cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block</a>
 </span>
@@ -441,6 +451,16 @@ assigned an IPv6 address. Default is `false`
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mapcustomerownediponlaunch_csharp">
+<a href="#mapcustomerownediponlaunch_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Customer<wbr>Owned<wbr>Ip<wbr>On<wbr>Launch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -534,6 +554,16 @@ assigned an IPv6 address. Default is `false`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="customerownedipv4pool_go">
+<a href="#customerownedipv4pool_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ipv6cidrblock_go">
 <a href="#ipv6cidrblock_go" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block</a>
 </span>
@@ -542,6 +572,16 @@ assigned an IPv6 address. Default is `false`
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mapcustomerownediponlaunch_go">
+<a href="#mapcustomerownediponlaunch_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Customer<wbr>Owned<wbr>Ip<wbr>On<wbr>Launch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -635,6 +675,16 @@ assigned an IPv6 address. Default is `false`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="customerownedipv4pool_nodejs">
+<a href="#customerownedipv4pool_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ipv4Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ipv6cidrblock_nodejs">
 <a href="#ipv6cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidr<wbr>Block</a>
 </span>
@@ -643,6 +693,16 @@ assigned an IPv6 address. Default is `false`
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mapcustomerownediponlaunch_nodejs">
+<a href="#mapcustomerownediponlaunch_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Customer<wbr>Owned<wbr>Ip<wbr>On<wbr>Launch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -736,6 +796,16 @@ assigned an IPv6 address. Default is `false`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="customer_owned_ipv4_pool_python">
+<a href="#customer_owned_ipv4_pool_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>owned_<wbr>ipv4_<wbr>pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ipv6_cidr_block_python">
 <a href="#ipv6_cidr_block_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>block</a>
 </span>
@@ -744,6 +814,16 @@ assigned an IPv6 address. Default is `false`
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="map_customer_owned_ip_on_launch_python">
+<a href="#map_customer_owned_ip_on_launch_python" style="color: inherit; text-decoration: inherit;">map_<wbr>customer_<wbr>owned_<wbr>ip_<wbr>on_<wbr>launch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -980,7 +1060,7 @@ Get an existing Subnet resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">assign_ipv6_address_on_creation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_cidr_block_association_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">map_public_ip_on_launch</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">outpost_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Subnet</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">assign_ipv6_address_on_creation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_owned_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_cidr_block_association_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">map_customer_owned_ip_on_launch</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">map_public_ip_on_launch</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">outpost_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Subnet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1147,6 +1227,16 @@ assigned an IPv6 address. Default is `false`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_customerownedipv4pool_csharp">
+<a href="#state_customerownedipv4pool_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ipv6cidrblock_csharp">
 <a href="#state_ipv6cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block</a>
 </span>
@@ -1165,6 +1255,16 @@ in CIDR notation. The subnet size must use a /64 prefix length.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_mapcustomerownediponlaunch_csharp">
+<a href="#state_mapcustomerownediponlaunch_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Customer<wbr>Owned<wbr>Ip<wbr>On<wbr>Launch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1278,6 +1378,16 @@ assigned an IPv6 address. Default is `false`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_customerownedipv4pool_go">
+<a href="#state_customerownedipv4pool_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ipv6cidrblock_go">
 <a href="#state_ipv6cidrblock_go" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block</a>
 </span>
@@ -1296,6 +1406,16 @@ in CIDR notation. The subnet size must use a /64 prefix length.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_mapcustomerownediponlaunch_go">
+<a href="#state_mapcustomerownediponlaunch_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Customer<wbr>Owned<wbr>Ip<wbr>On<wbr>Launch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1409,6 +1529,16 @@ assigned an IPv6 address. Default is `false`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_customerownedipv4pool_nodejs">
+<a href="#state_customerownedipv4pool_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ipv4Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ipv6cidrblock_nodejs">
 <a href="#state_ipv6cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidr<wbr>Block</a>
 </span>
@@ -1427,6 +1557,16 @@ in CIDR notation. The subnet size must use a /64 prefix length.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_mapcustomerownediponlaunch_nodejs">
+<a href="#state_mapcustomerownediponlaunch_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Customer<wbr>Owned<wbr>Ip<wbr>On<wbr>Launch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1540,6 +1680,16 @@ assigned an IPv6 address. Default is `false`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_customer_owned_ipv4_pool_python">
+<a href="#state_customer_owned_ipv4_pool_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>owned_<wbr>ipv4_<wbr>pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ipv6_cidr_block_python">
 <a href="#state_ipv6_cidr_block_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>block</a>
 </span>
@@ -1558,6 +1708,16 @@ in CIDR notation. The subnet size must use a /64 prefix length.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_map_customer_owned_ip_on_launch_python">
+<a href="#state_map_customer_owned_ip_on_launch_python" style="color: inherit; text-decoration: inherit;">map_<wbr>customer_<wbr>owned_<wbr>ip_<wbr>on_<wbr>launch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

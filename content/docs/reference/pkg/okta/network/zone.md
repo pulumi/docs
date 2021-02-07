@@ -133,7 +133,7 @@ const example = new okta.network.Zone("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/network/#pulumi_okta.network.Zone">Zone</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dynamic_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">gateways</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/network/#pulumi_okta.network.Zone">Zone</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dynamic_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">gateways</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">usage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -312,7 +312,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the Network Zone - can either be IP or DYNAMIC only.
+    <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -322,7 +322,8 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of locations ISO-3166-1(2). Format code: countryCode OR countryCode-regionCode.
+    <dd>{{% md %}}Array of locations [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: countryCode OR countryCode-regionCode.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -352,7 +353,17 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of values in CIDR/range form.
+    <dd>{{% md %}}Array of values in CIDR/range form. Can not be set if `usage` is set to `"BLOCKLIST"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usage_csharp">
+<a href="#usage_csharp" style="color: inherit; text-decoration: inherit;">Usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Usage of the Network Zone - can be either `"POLICY"` or `"BLOCKLIST"`. By default, it is `"POLICY"`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -368,7 +379,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the Network Zone - can either be IP or DYNAMIC only.
+    <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -378,7 +389,8 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of locations ISO-3166-1(2). Format code: countryCode OR countryCode-regionCode.
+    <dd>{{% md %}}Array of locations [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: countryCode OR countryCode-regionCode.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -408,7 +420,17 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of values in CIDR/range form.
+    <dd>{{% md %}}Array of values in CIDR/range form. Can not be set if `usage` is set to `"BLOCKLIST"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usage_go">
+<a href="#usage_go" style="color: inherit; text-decoration: inherit;">Usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Usage of the Network Zone - can be either `"POLICY"` or `"BLOCKLIST"`. By default, it is `"POLICY"`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -424,7 +446,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the Network Zone - can either be IP or DYNAMIC only.
+    <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -434,7 +456,8 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of locations ISO-3166-1(2). Format code: countryCode OR countryCode-regionCode.
+    <dd>{{% md %}}Array of locations [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: countryCode OR countryCode-regionCode.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -464,7 +487,17 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of values in CIDR/range form.
+    <dd>{{% md %}}Array of values in CIDR/range form. Can not be set if `usage` is set to `"BLOCKLIST"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usage_nodejs">
+<a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Usage of the Network Zone - can be either `"POLICY"` or `"BLOCKLIST"`. By default, it is `"POLICY"`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -480,7 +513,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the Network Zone - can either be IP or DYNAMIC only.
+    <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -490,7 +523,8 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of locations ISO-3166-1(2). Format code: countryCode OR countryCode-regionCode.
+    <dd>{{% md %}}Array of locations [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: countryCode OR countryCode-regionCode.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -520,7 +554,17 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of values in CIDR/range form.
+    <dd>{{% md %}}Array of values in CIDR/range form. Can not be set if `usage` is set to `"BLOCKLIST"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usage_python">
+<a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Usage of the Network Zone - can be either `"POLICY"` or `"BLOCKLIST"`. By default, it is `"POLICY"`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -605,7 +649,7 @@ Get an existing Zone resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dynamic_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">gateways</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Zone</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dynamic_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">gateways</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">usage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Zone</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -726,7 +770,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of locations ISO-3166-1(2). Format code: countryCode OR countryCode-regionCode.
+    <dd>{{% md %}}Array of locations [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: countryCode OR countryCode-regionCode.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -756,7 +801,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of values in CIDR/range form.
+    <dd>{{% md %}}Array of values in CIDR/range form. Can not be set if `usage` is set to `"BLOCKLIST"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -766,7 +811,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the Network Zone - can either be IP or DYNAMIC only.
+    <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usage_csharp">
+<a href="#state_usage_csharp" style="color: inherit; text-decoration: inherit;">Usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Usage of the Network Zone - can be either `"POLICY"` or `"BLOCKLIST"`. By default, it is `"POLICY"`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -782,7 +837,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of locations ISO-3166-1(2). Format code: countryCode OR countryCode-regionCode.
+    <dd>{{% md %}}Array of locations [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: countryCode OR countryCode-regionCode.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -812,7 +868,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of values in CIDR/range form.
+    <dd>{{% md %}}Array of values in CIDR/range form. Can not be set if `usage` is set to `"BLOCKLIST"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -822,7 +878,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the Network Zone - can either be IP or DYNAMIC only.
+    <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usage_go">
+<a href="#state_usage_go" style="color: inherit; text-decoration: inherit;">Usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Usage of the Network Zone - can be either `"POLICY"` or `"BLOCKLIST"`. By default, it is `"POLICY"`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -838,7 +904,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of locations ISO-3166-1(2). Format code: countryCode OR countryCode-regionCode.
+    <dd>{{% md %}}Array of locations [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: countryCode OR countryCode-regionCode.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -868,7 +935,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of values in CIDR/range form.
+    <dd>{{% md %}}Array of values in CIDR/range form. Can not be set if `usage` is set to `"BLOCKLIST"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -878,7 +945,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the Network Zone - can either be IP or DYNAMIC only.
+    <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usage_nodejs">
+<a href="#state_usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Usage of the Network Zone - can be either `"POLICY"` or `"BLOCKLIST"`. By default, it is `"POLICY"`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -894,7 +971,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of locations ISO-3166-1(2). Format code: countryCode OR countryCode-regionCode.
+    <dd>{{% md %}}Array of locations [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: countryCode OR countryCode-regionCode.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -924,7 +1002,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of values in CIDR/range form.
+    <dd>{{% md %}}Array of values in CIDR/range form. Can not be set if `usage` is set to `"BLOCKLIST"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -934,7 +1012,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the Network Zone - can either be IP or DYNAMIC only.
+    <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usage_python">
+<a href="#state_usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Usage of the Network Zone - can be either `"POLICY"` or `"BLOCKLIST"`. By default, it is `"POLICY"`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

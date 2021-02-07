@@ -44,7 +44,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread"
+	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -553,7 +553,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Object ID of the Group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -577,7 +578,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Object ID of the Group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -601,7 +603,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Object ID of the Group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -625,7 +628,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Object ID of the Group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -802,7 +806,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Object ID of the Group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_owners_csharp">
@@ -876,7 +881,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Object ID of the Group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_owners_go">
@@ -950,7 +956,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Object ID of the Group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_owners_nodejs">
@@ -1024,7 +1031,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Object ID of the Group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_owners_python">

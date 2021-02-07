@@ -13,6 +13,7 @@ Explore the resources and functions of the cosmosdb module in the Azure package.
 <ul class="api">
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
     <li><a href="cassandrakeyspace" title="CassandraKeyspace"><span class="symbol resource"></span>CassandraKeyspace</a></li>
+    <li><a href="cassandratable" title="CassandraTable"><span class="symbol resource"></span>CassandraTable</a></li>
     <li><a href="gremlindatabase" title="GremlinDatabase"><span class="symbol resource"></span>GremlinDatabase</a></li>
     <li><a href="gremlingraph" title="GremlinGraph"><span class="symbol resource"></span>GremlinGraph</a></li>
     <li><a href="mongocollection" title="MongoCollection"><span class="symbol resource"></span>MongoCollection</a></li>
@@ -37,7 +38,7 @@ Explore the resources and functions of the cosmosdb module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.45.0</dd>
+	<dd>3.46.0</dd>
 </dl>
 
 

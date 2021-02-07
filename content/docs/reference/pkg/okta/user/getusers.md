@@ -153,7 +153,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getuserssearch">List&lt;Get<wbr>Users<wbr>Search<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Map of search criteria to use to find users. It supports the following properties.
+    <dd>{{% md %}}Map of search criteria to find users. It supports the following properties.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -179,7 +179,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getuserssearch">[]Get<wbr>Users<wbr>Search</a></span>
     </dt>
-    <dd>{{% md %}}Map of search criteria to use to find users. It supports the following properties.
+    <dd>{{% md %}}Map of search criteria to find users. It supports the following properties.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -205,7 +205,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getuserssearch">Get<wbr>Users<wbr>Search[]</a></span>
     </dt>
-    <dd>{{% md %}}Map of search criteria to use to find users. It supports the following properties.
+    <dd>{{% md %}}Map of search criteria to find users. It supports the following properties.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -231,7 +231,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getuserssearch">Sequence[Get<wbr>Users<wbr>Search<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Map of search criteria to use to find users. It supports the following properties.
+    <dd>{{% md %}}Map of search criteria to find users. It supports the following properties.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -718,6 +718,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="lastname_csharp">
 <a href="#lastname_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Name</a>
 </span>
@@ -1072,6 +1081,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="lastname_go">
@@ -1430,6 +1448,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="lastname_nodejs">
 <a href="#lastname_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Name</a>
 </span>
@@ -1784,6 +1811,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="last_name_python">

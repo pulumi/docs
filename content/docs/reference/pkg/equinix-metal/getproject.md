@@ -1,8 +1,8 @@
 
 ---
 title: "GetProject"
-title_tag: "Function GetProject | Package equinix-metal"
-meta_desc: "Explore the GetProject function of the equinix-metal package, including examples, input properties, output properties, and supporting types. Use this datasource to retrieve attributes of the Project API resource."
+title_tag: "Function GetProject | Package Equinix Metal"
+meta_desc: "Explore the GetProject function of the Equinix Metal package, including examples, input properties, output properties, and supporting types. Use this datasource to retrieve attributes of the Project API resource."
 ---
 
 
@@ -47,6 +47,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

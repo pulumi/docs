@@ -50,9 +50,10 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "<cert key id>"
 		_, err := app.GetMetadataSaml(ctx, &app.GetMetadataSamlArgs{
 			AppId: "<app id>",
-			KeyId: "<cert key id>",
+			KeyId: &opt0,
 		}, nil)
 		if err != nil {
 			return err
@@ -137,8 +138,8 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="keyid_csharp">
 <a href="#keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
 </span>
@@ -163,8 +164,8 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="keyid_go">
 <a href="#keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
 </span>
@@ -189,8 +190,8 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="keyid_nodejs">
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
@@ -215,8 +216,8 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="key_id_python">
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
@@ -301,15 +302,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="keyid_csharp">
-<a href="#keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
@@ -328,6 +320,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether authn requests are signed.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="keyid_csharp">
+<a href="#keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -395,15 +396,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="keyid_go">
-<a href="#keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
@@ -422,6 +414,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether authn requests are signed.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="keyid_go">
+<a href="#keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -489,15 +490,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="keyid_nodejs">
-<a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
@@ -516,6 +508,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether authn requests are signed.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="keyid_nodejs">
+<a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -583,15 +584,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="key_id_python">
-<a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
@@ -610,6 +602,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether authn requests are signed.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="key_id_python">
+<a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

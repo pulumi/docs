@@ -144,18 +144,17 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human-readable description for the subnet.
+    <dd>{{% md %}}Human-readable description of the subnet.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="dhcpdisabled_csharp">
 <a href="#dhcpdisabled_csharp" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the subnet has DHCP disabled.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use dhcp_enabled instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dhcpenabled_csharp">
@@ -304,18 +303,17 @@ A Neutron client is needed to retrieve subnet ids. If omitted, the
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human-readable description for the subnet.
+    <dd>{{% md %}}Human-readable description of the subnet.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="dhcpdisabled_go">
 <a href="#dhcpdisabled_go" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the subnet has DHCP disabled.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use dhcp_enabled instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dhcpenabled_go">
@@ -464,18 +462,17 @@ A Neutron client is needed to retrieve subnet ids. If omitted, the
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human-readable description for the subnet.
+    <dd>{{% md %}}Human-readable description of the subnet.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="dhcpdisabled_nodejs">
 <a href="#dhcpdisabled_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If the subnet has DHCP disabled.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use dhcp_enabled instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dhcpenabled_nodejs">
@@ -624,18 +621,17 @@ A Neutron client is needed to retrieve subnet ids. If omitted, the
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Human-readable description for the subnet.
+    <dd>{{% md %}}Human-readable description of the subnet.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="dhcp_disabled_python">
 <a href="#dhcp_disabled_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>disabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the subnet has DHCP disabled.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use dhcp_enabled instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dhcp_enabled_python">
@@ -944,15 +940,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="dhcpdisabled_csharp">
 <a href="#dhcpdisabled_csharp" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use dhcp_enabled instead{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="dhcpenabled_csharp">
@@ -1146,15 +1142,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="dhcpdisabled_go">
 <a href="#dhcpdisabled_go" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use dhcp_enabled instead{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="dhcpenabled_go">
@@ -1348,15 +1344,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="dhcpdisabled_nodejs">
 <a href="#dhcpdisabled_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use dhcp_enabled instead{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="dhcpenabled_nodejs">
@@ -1550,15 +1546,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="dhcp_disabled_python">
 <a href="#dhcp_disabled_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>disabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use dhcp_enabled instead{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="dhcp_enabled_python">

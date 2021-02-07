@@ -682,6 +682,16 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="customerownedipv4pool_csharp">
+<a href="#customerownedipv4pool_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of customer owned IPv4 address pool.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="defaultforaz_csharp">
 <a href="#defaultforaz_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>For<wbr>Az</a>
 </span>
@@ -718,13 +728,24 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="mapcustomerownediponlaunch_csharp">
+<a href="#mapcustomerownediponlaunch_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Customer<wbr>Owned<wbr>Ip<wbr>On<wbr>Launch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether customer owned IP addresses are assigned on network interface creation.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="mappubliciponlaunch_csharp">
 <a href="#mappubliciponlaunch_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether public IP addresses are assigned on instance launch.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="outpostarn_csharp">
@@ -835,6 +856,16 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="customerownedipv4pool_go">
+<a href="#customerownedipv4pool_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of customer owned IPv4 address pool.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="defaultforaz_go">
 <a href="#defaultforaz_go" style="color: inherit; text-decoration: inherit;">Default<wbr>For<wbr>Az</a>
 </span>
@@ -871,13 +902,24 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="mapcustomerownediponlaunch_go">
+<a href="#mapcustomerownediponlaunch_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Customer<wbr>Owned<wbr>Ip<wbr>On<wbr>Launch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether customer owned IP addresses are assigned on network interface creation.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="mappubliciponlaunch_go">
 <a href="#mappubliciponlaunch_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether public IP addresses are assigned on instance launch.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="outpostarn_go">
@@ -988,6 +1030,16 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="customerownedipv4pool_nodejs">
+<a href="#customerownedipv4pool_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ipv4Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of customer owned IPv4 address pool.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="defaultforaz_nodejs">
 <a href="#defaultforaz_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>For<wbr>Az</a>
 </span>
@@ -1024,13 +1076,24 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="mapcustomerownediponlaunch_nodejs">
+<a href="#mapcustomerownediponlaunch_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Customer<wbr>Owned<wbr>Ip<wbr>On<wbr>Launch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether customer owned IP addresses are assigned on network interface creation.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="mappubliciponlaunch_nodejs">
 <a href="#mappubliciponlaunch_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether public IP addresses are assigned on instance launch.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="outpostarn_nodejs">
@@ -1141,6 +1204,16 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="customer_owned_ipv4_pool_python">
+<a href="#customer_owned_ipv4_pool_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>owned_<wbr>ipv4_<wbr>pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identifier of customer owned IPv4 address pool.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="default_for_az_python">
 <a href="#default_for_az_python" style="color: inherit; text-decoration: inherit;">default_<wbr>for_<wbr>az</a>
 </span>
@@ -1177,13 +1250,24 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="map_customer_owned_ip_on_launch_python">
+<a href="#map_customer_owned_ip_on_launch_python" style="color: inherit; text-decoration: inherit;">map_<wbr>customer_<wbr>owned_<wbr>ip_<wbr>on_<wbr>launch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether customer owned IP addresses are assigned on network interface creation.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="map_public_ip_on_launch_python">
 <a href="#map_public_ip_on_launch_python" style="color: inherit; text-decoration: inherit;">map_<wbr>public_<wbr>ip_<wbr>on_<wbr>launch</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether public IP addresses are assigned on instance launch.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="outpost_arn_python">

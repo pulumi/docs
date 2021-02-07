@@ -403,6 +403,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="protocolversion_csharp">
+<a href="#protocolversion_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="proxyprotocolv2_csharp">
 <a href="#proxyprotocolv2_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Protocol<wbr>V2</a>
 </span>
@@ -547,6 +556,15 @@ The following output properties are available:
             title="">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="protocolversion_go">
+<a href="#protocolversion_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -705,6 +723,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="protocolversion_nodejs">
+<a href="#protocolversion_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="proxyprotocolv2_nodejs">
 <a href="#proxyprotocolv2_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Protocol<wbr>V2</a>
 </span>
@@ -849,6 +876,15 @@ The following output properties are available:
             title="">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="protocol_version_python">
+<a href="#protocol_version_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

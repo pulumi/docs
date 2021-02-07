@@ -241,7 +241,7 @@ The SignonPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
+    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign-on attempt: DEVICE, SESSION or ALWAYS
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -312,7 +312,7 @@ The SignonPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -419,7 +419,7 @@ cookies.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
+    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign-on attempt: DEVICE, SESSION or ALWAYS
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -490,7 +490,7 @@ cookies.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -597,7 +597,7 @@ cookies.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
+    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign-on attempt: DEVICE, SESSION or ALWAYS
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -668,7 +668,7 @@ cookies.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -775,7 +775,7 @@ cookies.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
+    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign-on attempt: DEVICE, SESSION or ALWAYS
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -846,7 +846,7 @@ cookies.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1133,7 +1133,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
+    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign-on attempt: DEVICE, SESSION or ALWAYS
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1214,7 +1214,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1311,7 +1311,7 @@ cookies.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
+    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign-on attempt: DEVICE, SESSION or ALWAYS
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1392,7 +1392,7 @@ cookies.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1489,7 +1489,7 @@ cookies.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
+    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign-on attempt: DEVICE, SESSION or ALWAYS
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1570,7 +1570,7 @@ cookies.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1667,7 +1667,7 @@ cookies.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
+    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign-on attempt: DEVICE, SESSION or ALWAYS
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1748,7 +1748,7 @@ cookies.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
+invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

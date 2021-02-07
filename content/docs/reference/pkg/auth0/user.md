@@ -61,7 +61,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-auth0/sdk/go/auth0"
+	"github.com/pulumi/pulumi-auth0/sdk/go/auth0/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

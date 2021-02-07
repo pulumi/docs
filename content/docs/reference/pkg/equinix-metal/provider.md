@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package equinix-metal"
-meta_desc: "Explore the Provider resource of the equinix-metal package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the metal package. By default, resources use package-wide configuration"
+title_tag: "Resource Provider | Package Equinix Metal"
+meta_desc: "Explore the Provider resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the metal package. By default, resources use package-wide configuration"
 ---
 
 

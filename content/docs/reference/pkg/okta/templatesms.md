@@ -348,7 +348,7 @@ The TemplateSms resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#templatesmstranslation">List&lt;Template<wbr>Sms<wbr>Translation<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Set of translations for particular template.
+    <dd>{{% md %}}Set of translations for a particular template.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -384,7 +384,7 @@ The TemplateSms resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#templatesmstranslation">[]Template<wbr>Sms<wbr>Translation</a></span>
     </dt>
-    <dd>{{% md %}}Set of translations for particular template.
+    <dd>{{% md %}}Set of translations for a particular template.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -420,7 +420,7 @@ The TemplateSms resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#templatesmstranslation">Template<wbr>Sms<wbr>Translation[]</a></span>
     </dt>
-    <dd>{{% md %}}Set of translations for particular template.
+    <dd>{{% md %}}Set of translations for a particular template.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -456,7 +456,7 @@ The TemplateSms resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#templatesmstranslation">Sequence[Template<wbr>Sms<wbr>Translation<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Set of translations for particular template.
+    <dd>{{% md %}}Set of translations for a particular template.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -672,7 +672,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#templatesmstranslation">List&lt;Template<wbr>Sms<wbr>Translation<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Set of translations for particular template.
+    <dd>{{% md %}}Set of translations for a particular template.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -708,7 +708,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#templatesmstranslation">[]Template<wbr>Sms<wbr>Translation</a></span>
     </dt>
-    <dd>{{% md %}}Set of translations for particular template.
+    <dd>{{% md %}}Set of translations for a particular template.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -744,7 +744,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#templatesmstranslation">Template<wbr>Sms<wbr>Translation[]</a></span>
     </dt>
-    <dd>{{% md %}}Set of translations for particular template.
+    <dd>{{% md %}}Set of translations for a particular template.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -780,7 +780,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#templatesmstranslation">Sequence[Template<wbr>Sms<wbr>Translation<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Set of translations for particular template.
+    <dd>{{% md %}}Set of translations for a particular template.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

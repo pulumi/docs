@@ -145,6 +145,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/providers"

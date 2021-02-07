@@ -56,6 +56,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst"
+	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

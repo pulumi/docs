@@ -109,7 +109,7 @@ export const firstRoleId = example.roles[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_roles(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRolesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_roles(</span><span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRolesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -133,6 +133,16 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}-(Optional, Available in v1.114.0+) Default to `false`. Set it to true can output more details.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
@@ -170,6 +180,16 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}-(Optional, Available in v1.114.0+) Default to `false`. Set it to true can output more details.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span>
@@ -205,6 +225,16 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}-(Optional, Available in v1.114.0+) Default to `false`. Set it to true can output more details.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
@@ -238,6 +268,16 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}-(Optional, Available in v1.114.0+) Default to `false`. Set it to true can output more details.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ids_python">
@@ -324,6 +364,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
@@ -386,6 +435,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of roles. Each element contains the following attributes:
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="nameregex_go">
@@ -452,6 +510,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
 </span>
@@ -516,6 +583,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
 </span>
@@ -569,8 +645,8 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="createdate_csharp">
-<a href="#createdate_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Date</a>
+        <span id="assumerolepolicydocument_csharp">
+<a href="#assumerolepolicydocument_csharp" style="color: inherit; text-decoration: inherit;">Assume<wbr>Role<wbr>Policy<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -597,10 +673,11 @@ The following output properties are available:
 * `role_id`- The ID of the role.
 * `role_name`- The name of the role.
 * `arn`- The Alibaba Cloud Resource Name (ARN) of the RAM role.
-* `create_date`- The time when the RAM role was created.
+* `create_date`- (Removed form v1.114.0) The time when the RAM role was created.
 * `update_date`- The time when the RAM role was updated.
 * `description`- The description of the RAM role.
 * `max_session_duration`- The maximum session duration of the RAM role.
+* `assume_role_policy_document`- (Available in v1.114.0+) The assume role policy document.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -655,8 +732,8 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="createdate_go">
-<a href="#createdate_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Date</a>
+        <span id="assumerolepolicydocument_go">
+<a href="#assumerolepolicydocument_go" style="color: inherit; text-decoration: inherit;">Assume<wbr>Role<wbr>Policy<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -683,10 +760,11 @@ The following output properties are available:
 * `role_id`- The ID of the role.
 * `role_name`- The name of the role.
 * `arn`- The Alibaba Cloud Resource Name (ARN) of the RAM role.
-* `create_date`- The time when the RAM role was created.
+* `create_date`- (Removed form v1.114.0) The time when the RAM role was created.
 * `update_date`- The time when the RAM role was updated.
 * `description`- The description of the RAM role.
 * `max_session_duration`- The maximum session duration of the RAM role.
+* `assume_role_policy_document`- (Available in v1.114.0+) The assume role policy document.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -741,8 +819,8 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="createdate_nodejs">
-<a href="#createdate_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Date</a>
+        <span id="assumerolepolicydocument_nodejs">
+<a href="#assumerolepolicydocument_nodejs" style="color: inherit; text-decoration: inherit;">assume<wbr>Role<wbr>Policy<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -769,10 +847,11 @@ The following output properties are available:
 * `role_id`- The ID of the role.
 * `role_name`- The name of the role.
 * `arn`- The Alibaba Cloud Resource Name (ARN) of the RAM role.
-* `create_date`- The time when the RAM role was created.
+* `create_date`- (Removed form v1.114.0) The time when the RAM role was created.
 * `update_date`- The time when the RAM role was updated.
 * `description`- The description of the RAM role.
 * `max_session_duration`- The maximum session duration of the RAM role.
+* `assume_role_policy_document`- (Available in v1.114.0+) The assume role policy document.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -827,8 +906,8 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="create_date_python">
-<a href="#create_date_python" style="color: inherit; text-decoration: inherit;">create_<wbr>date</a>
+        <span id="assume_role_policy_document_python">
+<a href="#assume_role_policy_document_python" style="color: inherit; text-decoration: inherit;">assume_<wbr>role_<wbr>policy_<wbr>document</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -855,10 +934,11 @@ The following output properties are available:
 * `role_id`- The ID of the role.
 * `role_name`- The name of the role.
 * `arn`- The Alibaba Cloud Resource Name (ARN) of the RAM role.
-* `create_date`- The time when the RAM role was created.
+* `create_date`- (Removed form v1.114.0) The time when the RAM role was created.
 * `update_date`- The time when the RAM role was updated.
 * `description`- The description of the RAM role.
 * `max_session_duration`- The maximum session duration of the RAM role.
+* `assume_role_policy_document`- (Available in v1.114.0+) The assume role policy document.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">

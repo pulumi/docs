@@ -2298,6 +2298,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="schemareference_csharp">
+<a href="#schemareference_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Reference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareference">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="serdeinfo_csharp">
 <a href="#serdeinfo_csharp" style="color: inherit; text-decoration: inherit;">Ser<wbr>De<wbr>Info</a>
 </span>
@@ -2421,6 +2431,16 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemareference_go">
+<a href="#schemareference_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Reference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareference">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}An object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2550,6 +2570,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="schemareference_nodejs">
+<a href="#schemareference_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Reference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareference">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}An object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="serdeinfo_nodejs">
 <a href="#serdeinfo_nodejs" style="color: inherit; text-decoration: inherit;">ser<wbr>De<wbr>Info</a>
 </span>
@@ -2673,6 +2703,16 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schema_reference_python">
+<a href="#schema_reference_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>reference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareference">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2911,6 +2951,322 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datatype of data in the Column.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="catalogtablestoragedescriptorschemareference">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CatalogTableStorageDescriptorSchemaReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CatalogTableStorageDescriptorSchemaReference">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CatalogTableStorageDescriptorSchemaReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CatalogTableStorageDescriptorSchemaReferenceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.CatalogTableStorageDescriptorSchemaReferenceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptorSchemaReference.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="schemaversionnumber_csharp">
+<a href="#schemaversionnumber_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Version<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The version number of the schema.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaid_csharp">
+<a href="#schemaid_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareferenceschemaid">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Schema<wbr>Id<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A structure that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See Schema ID below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaversionid_csharp">
+<a href="#schemaversionid_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Version<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique ID assigned to a version of the schema. Either this or the `schema_id` has to be provided.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="schemaversionnumber_go">
+<a href="#schemaversionnumber_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Version<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The version number of the schema.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaid_go">
+<a href="#schemaid_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareferenceschemaid">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Schema<wbr>Id</a></span>
+    </dt>
+    <dd>{{% md %}}A structure that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See Schema ID below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaversionid_go">
+<a href="#schemaversionid_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Version<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique ID assigned to a version of the schema. Either this or the `schema_id` has to be provided.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="schemaversionnumber_nodejs">
+<a href="#schemaversionnumber_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Version<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The version number of the schema.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaid_nodejs">
+<a href="#schemaid_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareferenceschemaid">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Schema<wbr>Id</a></span>
+    </dt>
+    <dd>{{% md %}}A structure that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See Schema ID below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaversionid_nodejs">
+<a href="#schemaversionid_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Version<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique ID assigned to a version of the schema. Either this or the `schema_id` has to be provided.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="schema_version_number_python">
+<a href="#schema_version_number_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>version_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The version number of the schema.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schema_id_python">
+<a href="#schema_id_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareferenceschemaid">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Schema<wbr>Id<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A structure that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See Schema ID below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schema_version_id_python">
+<a href="#schema_version_id_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>version_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unique ID assigned to a version of the schema. Either this or the `schema_id` has to be provided.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="catalogtablestoragedescriptorschemareferenceschemaid">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Schema<wbr>Id</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CatalogTableStorageDescriptorSchemaReferenceSchemaId">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CatalogTableStorageDescriptorSchemaReferenceSchemaId">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CatalogTableStorageDescriptorSchemaReferenceSchemaIdArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CatalogTableStorageDescriptorSchemaReferenceSchemaIdOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.CatalogTableStorageDescriptorSchemaReferenceSchemaIdArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptorSchemaReferenceSchemaId.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registryname_csharp">
+<a href="#registryname_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the schema registry that contains the schema. Must be provided when `schema_name` is specified and conflicts with `schema_arn`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaarn_csharp">
+<a href="#schemaarn_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the schema. One of `schema_arn` or `schema_name` has to be provided.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaname_csharp">
+<a href="#schemaname_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the schema. One of `schema_arn` or `schema_name` has to be provided.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registryname_go">
+<a href="#registryname_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the schema registry that contains the schema. Must be provided when `schema_name` is specified and conflicts with `schema_arn`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaarn_go">
+<a href="#schemaarn_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the schema. One of `schema_arn` or `schema_name` has to be provided.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaname_go">
+<a href="#schemaname_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the schema. One of `schema_arn` or `schema_name` has to be provided.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registryname_nodejs">
+<a href="#registryname_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the schema registry that contains the schema. Must be provided when `schema_name` is specified and conflicts with `schema_arn`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaarn_nodejs">
+<a href="#schemaarn_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the schema. One of `schema_arn` or `schema_name` has to be provided.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaname_nodejs">
+<a href="#schemaname_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the schema. One of `schema_arn` or `schema_name` has to be provided.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registry_name_python">
+<a href="#registry_name_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the schema registry that contains the schema. Must be provided when `schema_name` is specified and conflicts with `schema_arn`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schema_arn_python">
+<a href="#schema_arn_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the schema. One of `schema_arn` or `schema_name` has to be provided.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schema_name_python">
+<a href="#schema_name_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the schema. One of `schema_arn` or `schema_name` has to be provided.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

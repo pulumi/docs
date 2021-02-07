@@ -62,6 +62,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -184,6 +185,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

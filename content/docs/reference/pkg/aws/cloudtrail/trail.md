@@ -31,42 +31,51 @@ class MyStack : Stack
     public MyStack()
     {
         var current = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
-        var foo = new Aws.S3.Bucket("foo", new Aws.S3.BucketArgs
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
         {
-            ForceDestroy = true,
-            Policy = current.Apply(current => @$"{{
-    ""Version"": ""2012-10-17"",
-    ""Statement"": [
-        {{
-            ""Sid"": ""AWSCloudTrailAclCheck"",
-            ""Effect"": ""Allow"",
-            ""Principal"": {{
-              ""Service"": ""cloudtrail.amazonaws.com""
-            }},
-            ""Action"": ""s3:GetBucketAcl"",
-            ""Resource"": ""arn:aws:s3:::tf-test-trail""
-        }},
-        {{
-            ""Sid"": ""AWSCloudTrailWrite"",
-            ""Effect"": ""Allow"",
-            ""Principal"": {{
-              ""Service"": ""cloudtrail.amazonaws.com""
-            }},
-            ""Action"": ""s3:PutObject"",
-            ""Resource"": ""arn:aws:s3:::tf-test-trail/prefix/AWSLogs/{current.AccountId}/*"",
-            ""Condition"": {{
-                ""StringEquals"": {{
-                    ""s3:x-amz-acl"": ""bucket-owner-full-control""
-                }}
-            }}
-        }}
-    ]
-}}
-"),
+        });
+        var bucketPolicy = new Aws.S3.BucketPolicy("bucketPolicy", new Aws.S3.BucketPolicyArgs
+        {
+            Bucket = bucket.Id,
+            Policy = Output.Tuple(bucket.Id, bucket.Id, current).Apply(values =>
+            {
+                var bucketId = values.Item1;
+                var bucketId1 = values.Item2;
+                var current = values.Item3;
+                return @$"  {{
+      ""Version"": ""2012-10-17"",
+      ""Statement"": [
+          {{
+              ""Sid"": ""AWSCloudTrailAclCheck"",
+              ""Effect"": ""Allow"",
+              ""Principal"": {{
+                ""Service"": ""cloudtrail.amazonaws.com""
+              }},
+              ""Action"": ""s3:GetBucketAcl"",
+              ""Resource"": ""arn:aws:s3:::{bucketId}""
+          }},
+          {{
+              ""Sid"": ""AWSCloudTrailWrite"",
+              ""Effect"": ""Allow"",
+              ""Principal"": {{
+                ""Service"": ""cloudtrail.amazonaws.com""
+              }},
+              ""Action"": ""s3:PutObject"",
+              ""Resource"": ""arn:aws:s3:::{bucketId1}/prefix/AWSLogs/{current.AccountId}/*"",
+              ""Condition"": {{
+                  ""StringEquals"": {{
+                      ""s3:x-amz-acl"": ""bucket-owner-full-control""
+                  }}
+              }}
+          }}
+      ]
+  }}
+";
+            }),
         });
         var foobar = new Aws.CloudTrail.Trail("foobar", new Aws.CloudTrail.TrailArgs
         {
-            S3BucketName = foo.Id,
+            S3BucketName = bucket.Id,
             S3KeyPrefix = "prefix",
             IncludeGlobalServiceEvents = false,
         });
@@ -96,15 +105,23 @@ func main() {
 		if err != nil {
 			return err
 		}
-		foo, err := s3.NewBucket(ctx, "foo", &s3.BucketArgs{
-			ForceDestroy: pulumi.Bool(true),
-			Policy:       pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "        {\n", "            \"Sid\": \"AWSCloudTrailAclCheck\",\n", "            \"Effect\": \"Allow\",\n", "            \"Principal\": {\n", "              \"Service\": \"cloudtrail.amazonaws.com\"\n", "            },\n", "            \"Action\": \"s3:GetBucketAcl\",\n", "            \"Resource\": \"arn:aws:s3:::tf-test-trail\"\n", "        },\n", "        {\n", "            \"Sid\": \"AWSCloudTrailWrite\",\n", "            \"Effect\": \"Allow\",\n", "            \"Principal\": {\n", "              \"Service\": \"cloudtrail.amazonaws.com\"\n", "            },\n", "            \"Action\": \"s3:PutObject\",\n", "            \"Resource\": \"arn:aws:s3:::tf-test-trail/prefix/AWSLogs/", current.AccountId, "/*\",\n", "            \"Condition\": {\n", "                \"StringEquals\": {\n", "                    \"s3:x-amz-acl\": \"bucket-owner-full-control\"\n", "                }\n", "            }\n", "        }\n", "    ]\n", "}\n")),
+		bucket, err := s3.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
+		_, err = s3.NewBucketPolicy(ctx, "bucketPolicy", &s3.BucketPolicyArgs{
+			Bucket: bucket.ID(),
+			Policy: pulumi.All(bucket.ID(), bucket.ID()).ApplyT(func(_args []interface{}) (string, error) {
+				bucketId := _args[0].(string)
+				bucketId1 := _args[1].(string)
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "  {\n", "      \"Version\": \"2012-10-17\",\n", "      \"Statement\": [\n", "          {\n", "              \"Sid\": \"AWSCloudTrailAclCheck\",\n", "              \"Effect\": \"Allow\",\n", "              \"Principal\": {\n", "                \"Service\": \"cloudtrail.amazonaws.com\"\n", "              },\n", "              \"Action\": \"s3:GetBucketAcl\",\n", "              \"Resource\": \"arn:aws:s3:::", bucketId, "\"\n", "          },\n", "          {\n", "              \"Sid\": \"AWSCloudTrailWrite\",\n", "              \"Effect\": \"Allow\",\n", "              \"Principal\": {\n", "                \"Service\": \"cloudtrail.amazonaws.com\"\n", "              },\n", "              \"Action\": \"s3:PutObject\",\n", "              \"Resource\": \"arn:aws:s3:::", bucketId1, "/prefix/AWSLogs/", current.AccountId, "/*\",\n", "              \"Condition\": {\n", "                  \"StringEquals\": {\n", "                      \"s3:x-amz-acl\": \"bucket-owner-full-control\"\n", "                  }\n", "              }\n", "          }\n", "      ]\n", "  }\n"), nil
+			}).(pulumi.StringOutput),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = cloudtrail.NewTrail(ctx, "foobar", &cloudtrail.TrailArgs{
-			S3BucketName:               foo.ID(),
+			S3BucketName:               bucket.ID(),
 			S3KeyPrefix:                pulumi.String("prefix"),
 			IncludeGlobalServiceEvents: pulumi.Bool(false),
 		})
@@ -124,39 +141,40 @@ import pulumi
 import pulumi_aws as aws
 
 current = aws.get_caller_identity()
-foo = aws.s3.Bucket("foo",
-    force_destroy=True,
-    policy=f"""{{
-    "Version": "2012-10-17",
-    "Statement": [
-        {{
-            "Sid": "AWSCloudTrailAclCheck",
-            "Effect": "Allow",
-            "Principal": {{
-              "Service": "cloudtrail.amazonaws.com"
-            }},
-            "Action": "s3:GetBucketAcl",
-            "Resource": "arn:aws:s3:::tf-test-trail"
-        }},
-        {{
-            "Sid": "AWSCloudTrailWrite",
-            "Effect": "Allow",
-            "Principal": {{
-              "Service": "cloudtrail.amazonaws.com"
-            }},
-            "Action": "s3:PutObject",
-            "Resource": "arn:aws:s3:::tf-test-trail/prefix/AWSLogs/{current.account_id}/*",
-            "Condition": {{
-                "StringEquals": {{
-                    "s3:x-amz-acl": "bucket-owner-full-control"
-                }}
-            }}
-        }}
-    ]
-}}
-""")
+bucket = aws.s3.Bucket("bucket")
+bucket_policy = aws.s3.BucketPolicy("bucketPolicy",
+    bucket=bucket.id,
+    policy=pulumi.Output.all(bucket.id, bucket.id).apply(lambda bucketId, bucketId1: f"""  {{
+      "Version": "2012-10-17",
+      "Statement": [
+          {{
+              "Sid": "AWSCloudTrailAclCheck",
+              "Effect": "Allow",
+              "Principal": {{
+                "Service": "cloudtrail.amazonaws.com"
+              }},
+              "Action": "s3:GetBucketAcl",
+              "Resource": "arn:aws:s3:::{bucket_id}"
+          }},
+          {{
+              "Sid": "AWSCloudTrailWrite",
+              "Effect": "Allow",
+              "Principal": {{
+                "Service": "cloudtrail.amazonaws.com"
+              }},
+              "Action": "s3:PutObject",
+              "Resource": "arn:aws:s3:::{bucket_id1}/prefix/AWSLogs/{current.account_id}/*",
+              "Condition": {{
+                  "StringEquals": {{
+                      "s3:x-amz-acl": "bucket-owner-full-control"
+                  }}
+              }}
+          }}
+      ]
+  }}
+"""))
 foobar = aws.cloudtrail.Trail("foobar",
-    s3_bucket_name=foo.id,
+    s3_bucket_name=bucket.id,
     s3_key_prefix="prefix",
     include_global_service_events=False)
 ```
@@ -170,40 +188,41 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const current = aws.getCallerIdentity({});
-const foo = new aws.s3.Bucket("foo", {
-    forceDestroy: true,
-    policy: current.then(current => `{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "AWSCloudTrailAclCheck",
-            "Effect": "Allow",
-            "Principal": {
-              "Service": "cloudtrail.amazonaws.com"
-            },
-            "Action": "s3:GetBucketAcl",
-            "Resource": "arn:aws:s3:::tf-test-trail"
-        },
-        {
-            "Sid": "AWSCloudTrailWrite",
-            "Effect": "Allow",
-            "Principal": {
-              "Service": "cloudtrail.amazonaws.com"
-            },
-            "Action": "s3:PutObject",
-            "Resource": "arn:aws:s3:::tf-test-trail/prefix/AWSLogs/${current.accountId}/*",
-            "Condition": {
-                "StringEquals": {
-                    "s3:x-amz-acl": "bucket-owner-full-control"
-                }
-            }
-        }
-    ]
-}
+const bucket = new aws.s3.Bucket("bucket", {});
+const bucketPolicy = new aws.s3.BucketPolicy("bucketPolicy", {
+    bucket: bucket.id,
+    policy: pulumi.all([bucket.id, bucket.id, current]).apply(([bucketId, bucketId1, current]) => `  {
+      "Version": "2012-10-17",
+      "Statement": [
+          {
+              "Sid": "AWSCloudTrailAclCheck",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "cloudtrail.amazonaws.com"
+              },
+              "Action": "s3:GetBucketAcl",
+              "Resource": "arn:aws:s3:::${bucketId}"
+          },
+          {
+              "Sid": "AWSCloudTrailWrite",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "cloudtrail.amazonaws.com"
+              },
+              "Action": "s3:PutObject",
+              "Resource": "arn:aws:s3:::${bucketId1}/prefix/AWSLogs/${current.accountId}/*",
+              "Condition": {
+                  "StringEquals": {
+                      "s3:x-amz-acl": "bucket-owner-full-control"
+                  }
+              }
+          }
+      ]
+  }
 `),
 });
 const foobar = new aws.cloudtrail.Trail("foobar", {
-    s3BucketName: foo.id,
+    s3BucketName: bucket.id,
     s3KeyPrefix: "prefix",
     includeGlobalServiceEvents: false,
 });
@@ -579,11 +598,50 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var current = Output.Create(Aws.GetPartition.InvokeAsync());
         var exampleLogGroup = new Aws.CloudWatch.LogGroup("exampleLogGroup", new Aws.CloudWatch.LogGroupArgs
         {
         });
+        var testRole = new Aws.Iam.Role("testRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = current.Apply(current => @$"{{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {{
+      ""Sid"": """",
+      ""Effect"": ""Allow"",
+      ""Principal"": {{
+        ""Service"": ""cloudtrail.{current.DnsSuffix}""
+      }},
+      ""Action"": ""sts:AssumeRole""
+    }}
+  ]
+}}
+"),
+        });
+        var testRolePolicy = new Aws.Iam.RolePolicy("testRolePolicy", new Aws.Iam.RolePolicyArgs
+        {
+            Role = testRole.Id,
+            Policy = @$"{{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {{
+      ""Sid"": ""AWSCloudTrailCreateLogStream"",
+      ""Effect"": ""Allow"",
+      ""Action"": [
+        ""logs:CreateLogStream"",
+        ""logs:PutLogEvents""
+      ],
+      ""Resource"": ""{aws_cloudwatch_log_group.Test.Arn}:*""
+    }}
+  ]
+}}
+",
+        });
+        // ... other configuration ...
         var exampleTrail = new Aws.CloudTrail.Trail("exampleTrail", new Aws.CloudTrail.TrailArgs
         {
+            CloudWatchLogsRoleArn = testRole.Arn,
             CloudWatchLogsGroupArn = exampleLogGroup.Arn.Apply(arn => $"{arn}:*"),
         });
         // CloudTrail requires the Log Stream wildcard
@@ -601,18 +659,38 @@ package main
 import (
 	"fmt"
 
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail"
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := aws.GetPartition(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
 		exampleLogGroup, err := cloudwatch.NewLogGroup(ctx, "exampleLogGroup", nil)
 		if err != nil {
 			return err
 		}
+		testRole, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"\",\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Service\": \"cloudtrail.", current.DnsSuffix, "\"\n", "      },\n", "      \"Action\": \"sts:AssumeRole\"\n", "    }\n", "  ]\n", "}\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicy(ctx, "testRolePolicy", &iam.RolePolicyArgs{
+			Role:   testRole.ID(),
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"AWSCloudTrailCreateLogStream\",\n", "      \"Effect\": \"Allow\",\n", "      \"Action\": [\n", "        \"logs:CreateLogStream\",\n", "        \"logs:PutLogEvents\"\n", "      ],\n", "      \"Resource\": \"", aws_cloudwatch_log_group.Test.Arn, ":*\"\n", "    }\n", "  ]\n", "}\n")),
+		})
+		if err != nil {
+			return err
+		}
 		_, err = cloudtrail.NewTrail(ctx, "exampleTrail", &cloudtrail.TrailArgs{
+			CloudWatchLogsRoleArn: testRole.Arn,
 			CloudWatchLogsGroupArn: exampleLogGroup.Arn.ApplyT(func(arn string) (string, error) {
 				return fmt.Sprintf("%v%v", arn, ":*"), nil
 			}).(pulumi.StringOutput),
@@ -632,8 +710,43 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
+current = aws.get_partition()
 example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup")
-example_trail = aws.cloudtrail.Trail("exampleTrail", cloud_watch_logs_group_arn=example_log_group.arn.apply(lambda arn: f"{arn}:*"))
+test_role = aws.iam.Role("testRole", assume_role_policy=f"""{{
+  "Version": "2012-10-17",
+  "Statement": [
+    {{
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {{
+        "Service": "cloudtrail.{current.dns_suffix}"
+      }},
+      "Action": "sts:AssumeRole"
+    }}
+  ]
+}}
+""")
+test_role_policy = aws.iam.RolePolicy("testRolePolicy",
+    role=test_role.id,
+    policy=f"""{{
+  "Version": "2012-10-17",
+  "Statement": [
+    {{
+      "Sid": "AWSCloudTrailCreateLogStream",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "{aws_cloudwatch_log_group["test"]["arn"]}:*"
+    }}
+  ]
+}}
+""")
+# ... other configuration ...
+example_trail = aws.cloudtrail.Trail("exampleTrail",
+    cloud_watch_logs_role_arn=test_role.arn,
+    cloud_watch_logs_group_arn=example_log_group.arn.apply(lambda arn: f"{arn}:*"))
 # CloudTrail requires the Log Stream wildcard
 ```
 
@@ -645,10 +758,46 @@ example_trail = aws.cloudtrail.Trail("exampleTrail", cloud_watch_logs_group_arn=
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleLogGroup = new aws.cloudwatch.LogGroup("example", {});
-const exampleTrail = new aws.cloudtrail.Trail("example", {
+const current = aws.getPartition({});
+const exampleLogGroup = new aws.cloudwatch.LogGroup("exampleLogGroup", {});
+const testRole = new aws.iam.Role("testRole", {assumeRolePolicy: current.then(current => `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "cloudtrail.${current.dnsSuffix}"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+`)});
+const testRolePolicy = new aws.iam.RolePolicy("testRolePolicy", {
+    role: testRole.id,
+    policy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AWSCloudTrailCreateLogStream",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "${aws_cloudwatch_log_group.test.arn}:*"
+    }
+  ]
+}
+`,
+});
+// ... other configuration ...
+const exampleTrail = new aws.cloudtrail.Trail("exampleTrail", {
+    cloudWatchLogsRoleArn: testRole.arn,
     cloudWatchLogsGroupArn: pulumi.interpolate`${exampleLogGroup.arn}:*`,
 });
+// CloudTrail requires the Log Stream wildcard
 ```
 
 {{% /example %}}

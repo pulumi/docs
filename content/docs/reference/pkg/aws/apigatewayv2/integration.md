@@ -484,7 +484,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration type of an integration.
-Valid values: `AWS`, `AWS_PROXY`, `HTTP`, `HTTP_PROXY`, `MOCK`.
+Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -675,7 +675,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration type of an integration.
-Valid values: `AWS`, `AWS_PROXY`, `HTTP`, `HTTP_PROXY`, `MOCK`.
+Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -866,7 +866,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration type of an integration.
-Valid values: `AWS`, `AWS_PROXY`, `HTTP`, `HTTP_PROXY`, `MOCK`.
+Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1057,7 +1057,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration type of an integration.
-Valid values: `AWS`, `AWS_PROXY`, `HTTP`, `HTTP_PROXY`, `MOCK`.
+Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1558,7 +1558,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration type of an integration.
-Valid values: `AWS`, `AWS_PROXY`, `HTTP`, `HTTP_PROXY`, `MOCK`.
+Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1759,7 +1759,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration type of an integration.
-Valid values: `AWS`, `AWS_PROXY`, `HTTP`, `HTTP_PROXY`, `MOCK`.
+Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1960,7 +1960,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration type of an integration.
-Valid values: `AWS`, `AWS_PROXY`, `HTTP`, `HTTP_PROXY`, `MOCK`.
+Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2161,7 +2161,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration type of an integration.
-Valid values: `AWS`, `AWS_PROXY`, `HTTP`, `HTTP_PROXY`, `MOCK`.
+Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

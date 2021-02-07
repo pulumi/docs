@@ -50,6 +50,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread"
+	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -379,7 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getusersuser">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Users<wbr>User&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An Array of Azure AD Users. Each `user` object consists of the fields documented below.
+    <dd>{{% md %}}A list of Azure AD Users. Each `user` object provides the attributes documented below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -444,7 +445,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getusersuser">[]Get<wbr>Users<wbr>User</a></span>
     </dt>
-    <dd>{{% md %}}An Array of Azure AD Users. Each `user` object consists of the fields documented below.
+    <dd>{{% md %}}A list of Azure AD Users. Each `user` object provides the attributes documented below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -509,7 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getusersuser">Get<wbr>Users<wbr>User[]</a></span>
     </dt>
-    <dd>{{% md %}}An Array of Azure AD Users. Each `user` object consists of the fields documented below.
+    <dd>{{% md %}}A list of Azure AD Users. Each `user` object provides the attributes documented below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -574,7 +575,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getusersuser">Sequence[Get<wbr>Users<wbr>User]</a></span>
     </dt>
-    <dd>{{% md %}}An Array of Azure AD Users. Each `user` object consists of the fields documented below.
+    <dd>{{% md %}}A list of Azure AD Users. Each `user` object provides the attributes documented below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">

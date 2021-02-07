@@ -1,8 +1,8 @@
 
 ---
 title: "GetSpotMarketPrice"
-title_tag: "Function GetSpotMarketPrice | Package equinix-metal"
-meta_desc: "Explore the GetSpotMarketPrice function of the equinix-metal package, including examples, input properties, output properties, and supporting types. Use this data source to get Equinix Metal Spot Market Price."
+title_tag: "Function GetSpotMarketPrice | Package Equinix Metal"
+meta_desc: "Explore the GetSpotMarketPrice function of the Equinix Metal package, including examples, input properties, output properties, and supporting types. Use this data source to get Equinix Metal Spot Market Price."
 ---
 
 
@@ -45,6 +45,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

@@ -105,6 +105,16 @@ class MyStack : Stack
                 },
             },
             OidcConformant = false,
+            RefreshToken = new Auth0.Inputs.ClientRefreshTokenArgs
+            {
+                ExpirationType = "expiring",
+                IdleTokenLifetime = 1296000,
+                InfiniteIdleTokenLifetime = true,
+                InfiniteTokenLifetime = false,
+                Leeway = 15,
+                RotationType = "rotating",
+                TokenLifetime = 84600,
+            },
             TokenEndpointAuthMethod = "client_secret_post",
             WebOrigins = 
             {
@@ -124,6 +134,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-auth0/sdk/go/auth0"
+	"github.com/pulumi/pulumi-auth0/sdk/go/auth0/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -191,7 +202,16 @@ func main() {
 					TeamId:              pulumi.String("9JA89QQLNQ"),
 				},
 			},
-			OidcConformant:          pulumi.Bool(false),
+			OidcConformant: pulumi.Bool(false),
+			RefreshToken: &auth0.ClientRefreshTokenArgs{
+				ExpirationType:            pulumi.String("expiring"),
+				IdleTokenLifetime:         pulumi.Int(1296000),
+				InfiniteIdleTokenLifetime: pulumi.Bool(true),
+				InfiniteTokenLifetime:     pulumi.Bool(false),
+				Leeway:                    pulumi.Int(15),
+				RotationType:              pulumi.String("rotating"),
+				TokenLifetime:             pulumi.Int(84600),
+			},
 			TokenEndpointAuthMethod: pulumi.String("client_secret_post"),
 			WebOrigins: pulumi.StringArray{
 				pulumi.String("https://example.com"),
@@ -267,6 +287,15 @@ my_client = auth0.Client("myClient",
         ),
     ),
     oidc_conformant=False,
+    refresh_token=auth0.ClientRefreshTokenArgs(
+        expiration_type="expiring",
+        idle_token_lifetime=1296000,
+        infinite_idle_token_lifetime=True,
+        infinite_token_lifetime=False,
+        leeway=15,
+        rotation_type="rotating",
+        token_lifetime=84600,
+    ),
     token_endpoint_auth_method="client_secret_post",
     web_origins=["https://example.com"])
 ```
@@ -334,6 +363,15 @@ const myClient = new auth0.Client("my_client", {
         },
     },
     oidcConformant: false,
+    refreshToken: {
+        expirationType: "expiring",
+        idleTokenLifetime: 1296000,
+        infiniteIdleTokenLifetime: true,
+        infiniteTokenLifetime: false,
+        leeway: 15,
+        rotationType: "rotating",
+        tokenLifetime: 84600,
+    },
     tokenEndpointAuthMethod: "client_secret_post",
     webOrigins: ["https://example.com"],
 });
@@ -771,7 +809,8 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientrefreshtoken">Client<wbr>Refresh<wbr>Token<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List(Resource). Configuration settings for the refresh tokens issued for this client.  For details, see Refresh Token Configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sso_csharp">
@@ -1065,7 +1104,8 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientrefreshtoken">Client<wbr>Refresh<wbr>Token</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List(Resource). Configuration settings for the refresh tokens issued for this client.  For details, see Refresh Token Configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sso_go">
@@ -1359,7 +1399,8 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientrefreshtoken">Client<wbr>Refresh<wbr>Token</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List(Resource). Configuration settings for the refresh tokens issued for this client.  For details, see Refresh Token Configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sso_nodejs">
@@ -1653,7 +1694,8 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientrefreshtoken">Client<wbr>Refresh<wbr>Token<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List(Resource). Configuration settings for the refresh tokens issued for this client.  For details, see Refresh Token Configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sso_python">
@@ -2237,7 +2279,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientrefreshtoken">Client<wbr>Refresh<wbr>Token<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List(Resource). Configuration settings for the refresh tokens issued for this client.  For details, see Refresh Token Configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_sso_csharp">
@@ -2551,7 +2594,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientrefreshtoken">Client<wbr>Refresh<wbr>Token</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List(Resource). Configuration settings for the refresh tokens issued for this client.  For details, see Refresh Token Configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_sso_go">
@@ -2865,7 +2909,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientrefreshtoken">Client<wbr>Refresh<wbr>Token</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List(Resource). Configuration settings for the refresh tokens issued for this client.  For details, see Refresh Token Configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_sso_nodejs">
@@ -3179,7 +3224,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientrefreshtoken">Client<wbr>Refresh<wbr>Token<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List(Resource). Configuration settings for the refresh tokens issued for this client.  For details, see Refresh Token Configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_sso_python">
@@ -5883,7 +5929,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}String. Options include `expiring`, `non-expiring`. Whether a refresh token will expire based on an absolute lifetime, after which the token can no longer be used. If rotation is `rotating`, this must be set to `expiring`.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="rotationtype_csharp">
@@ -5892,7 +5939,38 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}String. Options include `rotating`, `non-rotating`. When `rotating`, exchanging a refresh token will cause a new refresh token to be issued and the existing token will be invalidated. This allows for automatic detection of token reuse if the token is leaked.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idletokenlifetime_csharp">
+<a href="#idletokenlifetime_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Integer. The time in seconds after which inactive refresh tokens will expire.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infiniteidletokenlifetime_csharp">
+<a href="#infiniteidletokenlifetime_csharp" style="color: inherit; text-decoration: inherit;">Infinite<wbr>Idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, (Default=false) Whether or not inactive refresh tokens should be remain valid indefinitely.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infinitetokenlifetime_csharp">
+<a href="#infinitetokenlifetime_csharp" style="color: inherit; text-decoration: inherit;">Infinite<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, (Default=false) Whether or not refresh tokens should remain valid indefinitely. If false, `token_lifetime` should also be set
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="leeway_csharp">
@@ -5901,7 +5979,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Integer. The amount of time in seconds in which a refresh token may be reused without trigging reuse detection.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tokenlifetime_csharp">
@@ -5910,7 +5989,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Integer. The absolute lifetime of a refresh token in seconds.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5925,7 +6005,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}String. Options include `expiring`, `non-expiring`. Whether a refresh token will expire based on an absolute lifetime, after which the token can no longer be used. If rotation is `rotating`, this must be set to `expiring`.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="rotationtype_go">
@@ -5934,7 +6015,38 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}String. Options include `rotating`, `non-rotating`. When `rotating`, exchanging a refresh token will cause a new refresh token to be issued and the existing token will be invalidated. This allows for automatic detection of token reuse if the token is leaked.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idletokenlifetime_go">
+<a href="#idletokenlifetime_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Integer. The time in seconds after which inactive refresh tokens will expire.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infiniteidletokenlifetime_go">
+<a href="#infiniteidletokenlifetime_go" style="color: inherit; text-decoration: inherit;">Infinite<wbr>Idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, (Default=false) Whether or not inactive refresh tokens should be remain valid indefinitely.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infinitetokenlifetime_go">
+<a href="#infinitetokenlifetime_go" style="color: inherit; text-decoration: inherit;">Infinite<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, (Default=false) Whether or not refresh tokens should remain valid indefinitely. If false, `token_lifetime` should also be set
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="leeway_go">
@@ -5943,7 +6055,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Integer. The amount of time in seconds in which a refresh token may be reused without trigging reuse detection.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tokenlifetime_go">
@@ -5952,7 +6065,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Integer. The absolute lifetime of a refresh token in seconds.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5967,7 +6081,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}String. Options include `expiring`, `non-expiring`. Whether a refresh token will expire based on an absolute lifetime, after which the token can no longer be used. If rotation is `rotating`, this must be set to `expiring`.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="rotationtype_nodejs">
@@ -5976,7 +6091,38 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}String. Options include `rotating`, `non-rotating`. When `rotating`, exchanging a refresh token will cause a new refresh token to be issued and the existing token will be invalidated. This allows for automatic detection of token reuse if the token is leaked.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idletokenlifetime_nodejs">
+<a href="#idletokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Integer. The time in seconds after which inactive refresh tokens will expire.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infiniteidletokenlifetime_nodejs">
+<a href="#infiniteidletokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">infinite<wbr>Idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean, (Default=false) Whether or not inactive refresh tokens should be remain valid indefinitely.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infinitetokenlifetime_nodejs">
+<a href="#infinitetokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">infinite<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean, (Default=false) Whether or not refresh tokens should remain valid indefinitely. If false, `token_lifetime` should also be set
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="leeway_nodejs">
@@ -5985,7 +6131,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Integer. The amount of time in seconds in which a refresh token may be reused without trigging reuse detection.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tokenlifetime_nodejs">
@@ -5994,7 +6141,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Integer. The absolute lifetime of a refresh token in seconds.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6009,7 +6157,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}String. Options include `expiring`, `non-expiring`. Whether a refresh token will expire based on an absolute lifetime, after which the token can no longer be used. If rotation is `rotating`, this must be set to `expiring`.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="rotation_type_python">
@@ -6018,7 +6167,38 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}String. Options include `rotating`, `non-rotating`. When `rotating`, exchanging a refresh token will cause a new refresh token to be issued and the existing token will be invalidated. This allows for automatic detection of token reuse if the token is leaked.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_token_lifetime_python">
+<a href="#idle_token_lifetime_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>token_<wbr>lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Integer. The time in seconds after which inactive refresh tokens will expire.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infinite_idle_token_lifetime_python">
+<a href="#infinite_idle_token_lifetime_python" style="color: inherit; text-decoration: inherit;">infinite_<wbr>idle_<wbr>token_<wbr>lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, (Default=false) Whether or not inactive refresh tokens should be remain valid indefinitely.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infinite_token_lifetime_python">
+<a href="#infinite_token_lifetime_python" style="color: inherit; text-decoration: inherit;">infinite_<wbr>token_<wbr>lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, (Default=false) Whether or not refresh tokens should remain valid indefinitely. If false, `token_lifetime` should also be set
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="leeway_python">
@@ -6027,7 +6207,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Integer. The amount of time in seconds in which a refresh token may be reused without trigging reuse detection.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="token_lifetime_python">
@@ -6036,7 +6217,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Integer. The absolute lifetime of a refresh token in seconds.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

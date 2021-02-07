@@ -1,8 +1,8 @@
 
 ---
 title: "IpAttachment"
-title_tag: "Resource IpAttachment | Package equinix-metal"
-meta_desc: "Explore the IpAttachment resource of the equinix-metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to attach elastic IP subnets to devices."
+title_tag: "Resource IpAttachment | Package Equinix Metal"
+meta_desc: "Explore the IpAttachment resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to attach elastic IP subnets to devices."
 ---
 
 

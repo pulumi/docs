@@ -49,6 +49,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread"
+	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -574,7 +575,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the permission
+    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -759,7 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the permission
+    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -944,7 +945,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the permission
+    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1129,7 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the permission
+    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1205,7 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1215,7 +1216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the app role is enabled.
+    <dd>{{% md %}}Is this permission enabled?
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1225,7 +1226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
+    <dd>{{% md %}}The name of this permission
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1271,7 +1272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1281,7 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the app role is enabled.
+    <dd>{{% md %}}Is this permission enabled?
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1291,7 +1292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
+    <dd>{{% md %}}The name of this permission
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1337,7 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1347,7 +1348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Determines if the app role is enabled.
+    <dd>{{% md %}}Is this permission enabled?
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1357,7 +1358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
+    <dd>{{% md %}}The name of this permission
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1403,7 +1404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1413,7 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the app role is enabled.
+    <dd>{{% md %}}Is this permission enabled?
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1423,7 +1424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
+    <dd>{{% md %}}The name of this permission
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1473,7 +1474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1483,7 +1484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the app role is enabled.
+    <dd>{{% md %}}Is this permission enabled?
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1493,7 +1494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the permission
+    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1523,7 +1524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
+    <dd>{{% md %}}The name of this permission
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1559,7 +1560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1569,7 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the app role is enabled.
+    <dd>{{% md %}}Is this permission enabled?
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1579,7 +1580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the permission
+    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1609,7 +1610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
+    <dd>{{% md %}}The name of this permission
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1645,7 +1646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1655,7 +1656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Determines if the app role is enabled.
+    <dd>{{% md %}}Is this permission enabled?
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1665,7 +1666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the permission
+    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1695,7 +1696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
+    <dd>{{% md %}}The name of this permission
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1731,7 +1732,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1741,7 +1742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the app role is enabled.
+    <dd>{{% md %}}Is this permission enabled?
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1751,7 +1752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the permission
+    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1781,7 +1782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
+    <dd>{{% md %}}The name of this permission
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2435,7 +2436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2445,7 +2446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the permission
+    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2461,7 +2462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2471,7 +2472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the permission
+    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2487,7 +2488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2497,7 +2498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the permission
+    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2513,7 +2514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2523,7 +2524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the permission
+    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

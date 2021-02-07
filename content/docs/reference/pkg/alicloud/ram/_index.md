@@ -23,6 +23,7 @@ Explore the resources and functions of the ram module in the AliCloud package.
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
     <li><a href="roleattachment" title="RoleAttachment"><span class="symbol resource"></span>RoleAttachment</a></li>
     <li><a href="rolepolicyattachment" title="RolePolicyAttachment"><span class="symbol resource"></span>RolePolicyAttachment</a></li>
+    <li><a href="samlprovider" title="SamlProvider"><span class="symbol resource"></span>SamlProvider</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
     <li><a href="userpolicyattachment" title="UserPolicyAttachment"><span class="symbol resource"></span>UserPolicyAttachment</a></li>
 </ul>
@@ -34,6 +35,7 @@ Explore the resources and functions of the ram module in the AliCloud package.
     <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
     <li><a href="getpolicies" title="GetPolicies"><span class="symbol function"></span>GetPolicies</a></li>
     <li><a href="getroles" title="GetRoles"><span class="symbol function"></span>GetRoles</a></li>
+    <li><a href="getsamlproviders" title="GetSamlProviders"><span class="symbol function"></span>GetSamlProviders</a></li>
     <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
 </ul>
 
@@ -46,7 +48,7 @@ Explore the resources and functions of the ram module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.32.0</dd>
+	<dd>2.34.0</dd>
 </dl>
 
 

@@ -18,19 +18,19 @@ meta_desc: "Explore the VappContainer resource of the vSphere package, including
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappContainer">VappContainer</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappContainerArgs">VappContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappContainer">VappContainer</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappContainerArgs">VappContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vsphere/#pulumi_vsphere.VappContainer">VappContainer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cpu_expandable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_limit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cpu_reservation</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cpu_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">memory_expandable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">memory_limit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_reservation</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory_shares</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_resource_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vsphere/#pulumi_vsphere.VappContainer">VappContainer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cpu_expandable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_reservation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">memory_expandable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">memory_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_reservation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_resource_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappContainer">NewVappContainer</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappContainerArgs">VappContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappContainer">VappContainer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappContainer">NewVappContainer</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappContainerArgs">VappContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappContainer">VappContainer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VappContainer.html">VappContainer</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VappContainerArgs.html">VappContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VappContainer.html">VappContainer</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VappContainerArgs.html">VappContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -41,7 +41,7 @@ meta_desc: "Explore the VappContainer resource of the vSphere package, including
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -110,7 +110,7 @@ meta_desc: "Explore the VappContainer resource of the vSphere package, including
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -149,7 +149,7 @@ meta_desc: "Explore the VappContainer resource of the vSphere package, including
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -190,7 +190,6 @@ The VappContainer resource accepts the following [input]({{< relref "/docs/intro
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -198,9 +197,9 @@ The VappContainer resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="parentresourcepoolid_csharp">
 <a href="#parentresourcepoolid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -208,53 +207,49 @@ or standalone host, or a resource pool itself. When moving a vApp container
 from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuexpandable_csharp">
 <a href="#cpuexpandable_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Expandable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpulimit_csharp">
 <a href="#cpulimit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
 unlimited.
 Default: `-1`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpureservation_csharp">
 <a href="#cpureservation_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpusharelevel_csharp">
 <a href="#cpusharelevel_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -262,77 +257,71 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `cpu_shares` will be
 ignored.  Default: `normal`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpushares_csharp">
 <a href="#cpushares_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customattributes_csharp">
 <a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryexpandable_csharp">
 <a href="#memoryexpandable_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Expandable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorylimit_csharp">
 <a href="#memorylimit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
 unlimited.
 Default: `-1`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryreservation_csharp">
 <a href="#memoryreservation_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorysharelevel_csharp">
 <a href="#memorysharelevel_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -340,57 +329,51 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `memory_shares` will be
 ignored.  Default: `normal`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryshares_csharp">
 <a href="#memoryshares_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vApp container.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentfolderid_csharp">
 <a href="#parentfolderid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Folder<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the vApp container's parent folder.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -399,9 +382,9 @@ the vApp container's parent folder.
             title="Required">
         <span id="parentresourcepoolid_go">
 <a href="#parentresourcepoolid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -409,53 +392,49 @@ or standalone host, or a resource pool itself. When moving a vApp container
 from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuexpandable_go">
 <a href="#cpuexpandable_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Expandable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpulimit_go">
 <a href="#cpulimit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
 unlimited.
 Default: `-1`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpureservation_go">
 <a href="#cpureservation_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpusharelevel_go">
 <a href="#cpusharelevel_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -463,77 +442,71 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `cpu_shares` will be
 ignored.  Default: `normal`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpushares_go">
 <a href="#cpushares_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customattributes_go">
 <a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryexpandable_go">
 <a href="#memoryexpandable_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Expandable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorylimit_go">
 <a href="#memorylimit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
 unlimited.
 Default: `-1`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryreservation_go">
 <a href="#memoryreservation_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorysharelevel_go">
 <a href="#memorysharelevel_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -541,57 +514,51 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `memory_shares` will be
 ignored.  Default: `normal`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryshares_go">
 <a href="#memoryshares_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vApp container.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentfolderid_go">
 <a href="#parentfolderid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Folder<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the vApp container's parent folder.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -600,9 +567,9 @@ the vApp container's parent folder.
             title="Required">
         <span id="parentresourcepoolid_nodejs">
 <a href="#parentresourcepoolid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Resource<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -610,53 +577,49 @@ or standalone host, or a resource pool itself. When moving a vApp container
 from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuexpandable_nodejs">
 <a href="#cpuexpandable_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Expandable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpulimit_nodejs">
 <a href="#cpulimit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
 unlimited.
 Default: `-1`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpureservation_nodejs">
 <a href="#cpureservation_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpusharelevel_nodejs">
 <a href="#cpusharelevel_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -664,77 +627,71 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `cpu_shares` will be
 ignored.  Default: `normal`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpushares_nodejs">
 <a href="#cpushares_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customattributes_nodejs">
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryexpandable_nodejs">
 <a href="#memoryexpandable_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Expandable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorylimit_nodejs">
 <a href="#memorylimit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
 unlimited.
 Default: `-1`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryreservation_nodejs">
 <a href="#memoryreservation_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorysharelevel_nodejs">
 <a href="#memorysharelevel_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -742,57 +699,51 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `memory_shares` will be
 ignored.  Default: `normal`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryshares_nodejs">
 <a href="#memoryshares_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vApp container.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentfolderid_nodejs">
 <a href="#parentfolderid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Folder<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the vApp container's parent folder.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -801,9 +752,9 @@ the vApp container's parent folder.
             title="Required">
         <span id="parent_resource_pool_id_python">
 <a href="#parent_resource_pool_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>resource_<wbr>pool_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -811,53 +762,49 @@ or standalone host, or a resource pool itself. When moving a vApp container
 from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_expandable_python">
 <a href="#cpu_expandable_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>expandable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_limit_python">
 <a href="#cpu_limit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
 unlimited.
 Default: `-1`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_reservation_python">
 <a href="#cpu_reservation_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_share_level_python">
 <a href="#cpu_share_level_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -865,77 +812,71 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `cpu_shares` will be
 ignored.  Default: `normal`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_shares_python">
 <a href="#cpu_shares_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_attributes_python">
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_expandable_python">
 <a href="#memory_expandable_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>expandable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_limit_python">
 <a href="#memory_limit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
 unlimited.
 Default: `-1`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_reservation_python">
 <a href="#memory_reservation_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_share_level_python">
 <a href="#memory_share_level_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -943,66 +884,56 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `memory_shares` will be
 ignored.  Default: `normal`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_shares_python">
 <a href="#memory_shares_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the vApp container.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parent_folder_id_python">
 <a href="#parent_folder_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>folder_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the vApp container's parent folder.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the VappContainer resource produces the following output properties:
-
 
 
 
@@ -1013,15 +944,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1030,15 +959,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1047,15 +974,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1064,18 +989,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1085,20 +1005,20 @@ Get an existing VappContainer resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappContainerState">VappContainerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappContainer">VappContainer</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappContainerState">VappContainerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappContainer">VappContainer</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cpu_expandable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_limit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cpu_reservation</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cpu_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">memory_expandable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">memory_limit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_reservation</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory_shares</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_resource_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> VappContainer</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cpu_expandable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_reservation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">memory_expandable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">memory_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_reservation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_resource_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> VappContainer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVappContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappContainerState">VappContainerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappContainer">VappContainer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVappContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappContainerState">VappContainerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappContainer">VappContainer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VappContainer.html">VappContainer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..VappContainerState.html">VappContainerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VappContainer.html">VappContainer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..VappContainerState.html">VappContainerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1200,7 +1120,6 @@ Get an existing VappContainer resource's state with the given name, ID, and opti
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1208,48 +1127,45 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cpuexpandable_csharp">
 <a href="#state_cpuexpandable_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Expandable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpulimit_csharp">
 <a href="#state_cpulimit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
 unlimited.
 Default: `-1`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpureservation_csharp">
 <a href="#state_cpureservation_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpusharelevel_csharp">
 <a href="#state_cpusharelevel_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1257,77 +1173,71 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `cpu_shares` will be
 ignored.  Default: `normal`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpushares_csharp">
 <a href="#state_cpushares_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_csharp">
 <a href="#state_customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memoryexpandable_csharp">
 <a href="#state_memoryexpandable_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Expandable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorylimit_csharp">
 <a href="#state_memorylimit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
 unlimited.
 Default: `-1`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memoryreservation_csharp">
 <a href="#state_memoryreservation_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorysharelevel_csharp">
 <a href="#state_memorysharelevel_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1335,50 +1245,46 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `memory_shares` will be
 ignored.  Default: `normal`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memoryshares_csharp">
 <a href="#state_memoryshares_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vApp container.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parentfolderid_csharp">
 <a href="#state_parentfolderid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Folder<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the vApp container's parent folder.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parentresourcepoolid_csharp">
 <a href="#state_parentresourcepoolid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -1386,21 +1292,18 @@ or standalone host, or a resource pool itself. When moving a vApp container
 from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1409,48 +1312,45 @@ resource pool or the move will fail.
             title="Optional">
         <span id="state_cpuexpandable_go">
 <a href="#state_cpuexpandable_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Expandable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpulimit_go">
 <a href="#state_cpulimit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
 unlimited.
 Default: `-1`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpureservation_go">
 <a href="#state_cpureservation_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpusharelevel_go">
 <a href="#state_cpusharelevel_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1458,77 +1358,71 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `cpu_shares` will be
 ignored.  Default: `normal`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpushares_go">
 <a href="#state_cpushares_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_go">
 <a href="#state_customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memoryexpandable_go">
 <a href="#state_memoryexpandable_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Expandable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorylimit_go">
 <a href="#state_memorylimit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
 unlimited.
 Default: `-1`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memoryreservation_go">
 <a href="#state_memoryreservation_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorysharelevel_go">
 <a href="#state_memorysharelevel_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1536,50 +1430,46 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `memory_shares` will be
 ignored.  Default: `normal`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memoryshares_go">
 <a href="#state_memoryshares_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vApp container.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parentfolderid_go">
 <a href="#state_parentfolderid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Folder<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the vApp container's parent folder.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parentresourcepoolid_go">
 <a href="#state_parentresourcepoolid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -1587,21 +1477,18 @@ or standalone host, or a resource pool itself. When moving a vApp container
 from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1610,48 +1497,45 @@ resource pool or the move will fail.
             title="Optional">
         <span id="state_cpuexpandable_nodejs">
 <a href="#state_cpuexpandable_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Expandable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpulimit_nodejs">
 <a href="#state_cpulimit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
 unlimited.
 Default: `-1`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpureservation_nodejs">
 <a href="#state_cpureservation_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpusharelevel_nodejs">
 <a href="#state_cpusharelevel_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1659,77 +1543,71 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `cpu_shares` will be
 ignored.  Default: `normal`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpushares_nodejs">
 <a href="#state_cpushares_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_nodejs">
 <a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memoryexpandable_nodejs">
 <a href="#state_memoryexpandable_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Expandable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorylimit_nodejs">
 <a href="#state_memorylimit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
 unlimited.
 Default: `-1`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memoryreservation_nodejs">
 <a href="#state_memoryreservation_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorysharelevel_nodejs">
 <a href="#state_memorysharelevel_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1737,50 +1615,46 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `memory_shares` will be
 ignored.  Default: `normal`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memoryshares_nodejs">
 <a href="#state_memoryshares_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vApp container.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parentfolderid_nodejs">
 <a href="#state_parentfolderid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Folder<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the vApp container's parent folder.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parentresourcepoolid_nodejs">
 <a href="#state_parentresourcepoolid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Resource<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -1788,21 +1662,18 @@ or standalone host, or a resource pool itself. When moving a vApp container
 from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1811,48 +1682,45 @@ resource pool or the move will fail.
             title="Optional">
         <span id="state_cpu_expandable_python">
 <a href="#state_cpu_expandable_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>expandable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpu_limit_python">
 <a href="#state_cpu_limit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
 unlimited.
 Default: `-1`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpu_reservation_python">
 <a href="#state_cpu_reservation_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpu_share_level_python">
 <a href="#state_cpu_share_level_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1860,77 +1728,71 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `cpu_shares` will be
 ignored.  Default: `normal`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpu_shares_python">
 <a href="#state_cpu_shares_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_custom_attributes_python">
 <a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memory_expandable_python">
 <a href="#state_memory_expandable_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>expandable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memory_limit_python">
 <a href="#state_memory_limit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
 unlimited.
 Default: `-1`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memory_reservation_python">
 <a href="#state_memory_reservation_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memory_share_level_python">
 <a href="#state_memory_share_level_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1938,50 +1800,46 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `memory_shares` will be
 ignored.  Default: `normal`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memory_shares_python">
 <a href="#state_memory_shares_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the vApp container.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_folder_id_python">
 <a href="#state_parent_folder_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>folder_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the vApp container's parent folder.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_resource_pool_id_python">
 <a href="#state_parent_resource_pool_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>resource_<wbr>pool_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -1989,24 +1847,18 @@ or standalone host, or a resource pool itself. When moving a vApp container
 from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

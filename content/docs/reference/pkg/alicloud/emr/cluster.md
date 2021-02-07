@@ -14,7 +14,6 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
 
 > **NOTE:** Available in 1.57.0+.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4169,6 +4168,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+Aliclioud E-MapReduce cluster can be imported using the id e.g.
+
+```sh
+ $ pulumi import alicloud:emr/cluster:Cluster default C-B47FB8FE96C67XXXX
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

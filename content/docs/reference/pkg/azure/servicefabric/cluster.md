@@ -168,7 +168,7 @@ const exampleCluster = new azure.servicefabric.Cluster("exampleCluster", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/servicefabric/#pulumi_azure.servicefabric.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_on_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[ClusterAzureActiveDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ClusterCertificateCommonNamesArgs]</span> = None<span class="p">, </span><span class="nx">client_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClientCertificateCommonNameArgs]]</span> = None<span class="p">, </span><span class="nx">client_certificate_thumbprints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClientCertificateThumbprintArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">diagnostics_config</span><span class="p">:</span> <span class="nx">Optional[ClusterDiagnosticsConfigArgs]</span> = None<span class="p">, </span><span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterFabricSettingArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodeTypeArgs]]</span> = None<span class="p">, </span><span class="nx">reliability_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterReverseProxyCertificateArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/servicefabric/#pulumi_azure.servicefabric.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_on_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[ClusterAzureActiveDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ClusterCertificateCommonNamesArgs]</span> = None<span class="p">, </span><span class="nx">client_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClientCertificateCommonNameArgs]]</span> = None<span class="p">, </span><span class="nx">client_certificate_thumbprints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClientCertificateThumbprintArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">diagnostics_config</span><span class="p">:</span> <span class="nx">Optional[ClusterDiagnosticsConfigArgs]</span> = None<span class="p">, </span><span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterFabricSettingArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodeTypeArgs]]</span> = None<span class="p">, </span><span class="nx">reliability_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterReverseProxyCertificateArgs]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ClusterReverseProxyCertificateCommonNamesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -517,7 +517,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below.
+    <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below. Conflicts with `reverse_proxy_certificate_common_names`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reverseproxycertificatecommonnames_csharp">
+<a href="#reverseproxycertificatecommonnames_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -713,7 +723,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate</a></span>
     </dt>
-    <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below.
+    <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below. Conflicts with `reverse_proxy_certificate_common_names`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reverseproxycertificatecommonnames_go">
+<a href="#reverseproxycertificatecommonnames_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a></span>
+    </dt>
+    <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -909,7 +929,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate</a></span>
     </dt>
-    <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below.
+    <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below. Conflicts with `reverse_proxy_certificate_common_names`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reverseproxycertificatecommonnames_nodejs">
+<a href="#reverseproxycertificatecommonnames_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a></span>
+    </dt>
+    <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1105,7 +1135,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below.
+    <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below. Conflicts with `reverse_proxy_certificate_common_names`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reverse_proxy_certificate_common_names_python">
+<a href="#reverse_proxy_certificate_common_names_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>proxy_<wbr>certificate_<wbr>common_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1240,7 +1280,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_on_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[ClusterAzureActiveDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ClusterCertificateCommonNamesArgs]</span> = None<span class="p">, </span><span class="nx">client_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClientCertificateCommonNameArgs]]</span> = None<span class="p">, </span><span class="nx">client_certificate_thumbprints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClientCertificateThumbprintArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">diagnostics_config</span><span class="p">:</span> <span class="nx">Optional[ClusterDiagnosticsConfigArgs]</span> = None<span class="p">, </span><span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterFabricSettingArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodeTypeArgs]]</span> = None<span class="p">, </span><span class="nx">reliability_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterReverseProxyCertificateArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_on_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[ClusterAzureActiveDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ClusterCertificateCommonNamesArgs]</span> = None<span class="p">, </span><span class="nx">client_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClientCertificateCommonNameArgs]]</span> = None<span class="p">, </span><span class="nx">client_certificate_thumbprints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterClientCertificateThumbprintArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">diagnostics_config</span><span class="p">:</span> <span class="nx">Optional[ClusterDiagnosticsConfigArgs]</span> = None<span class="p">, </span><span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterFabricSettingArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodeTypeArgs]]</span> = None<span class="p">, </span><span class="nx">reliability_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterReverseProxyCertificateArgs]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ClusterReverseProxyCertificateCommonNamesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1521,7 +1561,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below.
+    <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below. Conflicts with `reverse_proxy_certificate_common_names`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_reverseproxycertificatecommonnames_csharp">
+<a href="#state_reverseproxycertificatecommonnames_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1727,7 +1777,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate</a></span>
     </dt>
-    <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below.
+    <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below. Conflicts with `reverse_proxy_certificate_common_names`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_reverseproxycertificatecommonnames_go">
+<a href="#state_reverseproxycertificatecommonnames_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a></span>
+    </dt>
+    <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1933,7 +1993,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate</a></span>
     </dt>
-    <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below.
+    <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below. Conflicts with `reverse_proxy_certificate_common_names`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_reverseproxycertificatecommonnames_nodejs">
+<a href="#state_reverseproxycertificatecommonnames_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a></span>
+    </dt>
+    <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2139,7 +2209,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below.
+    <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below. Conflicts with `reverse_proxy_certificate_common_names`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_reverse_proxy_certificate_common_names_python">
+<a href="#state_reverse_proxy_certificate_common_names_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>proxy_<wbr>certificate_<wbr>common_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4231,6 +4311,242 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secondary Thumbprint of the Certificate.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="clusterreverseproxycertificatecommonnames">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterReverseProxyCertificateCommonNames">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterReverseProxyCertificateCommonNames">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterReverseProxyCertificateCommonNamesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterReverseProxyCertificateCommonNamesOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Inputs.ClusterReverseProxyCertificateCommonNamesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Outputs.ClusterReverseProxyCertificateCommonNames.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="commonnames_csharp">
+<a href="#commonnames_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnamescommonname">List&lt;Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `common_names` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="x509storename_csharp">
+<a href="#x509storename_csharp" style="color: inherit; text-decoration: inherit;">X509Store<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The X509 Store where the Certificate Exists, such as `My`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="commonnames_go">
+<a href="#commonnames_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnamescommonname">[]Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name</a></span>
+    </dt>
+    <dd>{{% md %}}A `common_names` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="x509storename_go">
+<a href="#x509storename_go" style="color: inherit; text-decoration: inherit;">X509Store<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The X509 Store where the Certificate Exists, such as `My`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="commonnames_nodejs">
+<a href="#commonnames_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnamescommonname">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `common_names` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="x509storename_nodejs">
+<a href="#x509storename_nodejs" style="color: inherit; text-decoration: inherit;">x509Store<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The X509 Store where the Certificate Exists, such as `My`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="common_names_python">
+<a href="#common_names_python" style="color: inherit; text-decoration: inherit;">common_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnamescommonname">Sequence[Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `common_names` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="x509_store_name_python">
+<a href="#x509_store_name_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>store_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The X509 Store where the Certificate Exists, such as `My`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="clusterreverseproxycertificatecommonnamescommonname">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterReverseProxyCertificateCommonNamesCommonName">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterReverseProxyCertificateCommonNamesCommonName">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterReverseProxyCertificateCommonNamesCommonNameArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterReverseProxyCertificateCommonNamesCommonNameOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Inputs.ClusterReverseProxyCertificateCommonNamesCommonNameArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Outputs.ClusterReverseProxyCertificateCommonNamesCommonName.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatecommonname_csharp">
+<a href="#certificatecommonname_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Common<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The common or subject name of the certificate.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="certificateissuerthumbprint_csharp">
+<a href="#certificateissuerthumbprint_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Issuer<wbr>Thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Issuer Thumbprint of the Certificate.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatecommonname_go">
+<a href="#certificatecommonname_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Common<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The common or subject name of the certificate.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="certificateissuerthumbprint_go">
+<a href="#certificateissuerthumbprint_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Issuer<wbr>Thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Issuer Thumbprint of the Certificate.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatecommonname_nodejs">
+<a href="#certificatecommonname_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Common<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The common or subject name of the certificate.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="certificateissuerthumbprint_nodejs">
+<a href="#certificateissuerthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Issuer<wbr>Thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Issuer Thumbprint of the Certificate.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificate_common_name_python">
+<a href="#certificate_common_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>common_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The common or subject name of the certificate.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="certificate_issuer_thumbprint_python">
+<a href="#certificate_issuer_thumbprint_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>issuer_<wbr>thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Issuer Thumbprint of the Certificate.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

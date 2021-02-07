@@ -12,6 +12,7 @@ Explore the resources and functions of the ec2transitgateway module in the AWS p
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="peeringattachment" title="PeeringAttachment"><span class="symbol resource"></span>PeeringAttachment</a></li>
+    <li><a href="prefixlistreference" title="PrefixListReference"><span class="symbol resource"></span>PrefixListReference</a></li>
     <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
     <li><a href="routetable" title="RouteTable"><span class="symbol resource"></span>RouteTable</a></li>
     <li><a href="routetableassociation" title="RouteTableAssociation"><span class="symbol resource"></span>RouteTableAssociation</a></li>
@@ -40,7 +41,7 @@ Explore the resources and functions of the ec2transitgateway module in the AWS p
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
+	<dd>3.28.0</dd>
 </dl>
 
 

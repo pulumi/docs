@@ -535,7 +535,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last/lowest if not provided.
+    <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last (lowest) if not provided.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -545,7 +545,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default it is `"ACTIVE"`.
+    <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -565,7 +565,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set. Otherwise multiple elements of matching patterns may be provided.
+    <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set, otherwise multiple elements of matching patterns may be provided.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -690,7 +690,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last/lowest if not provided.
+    <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last (lowest) if not provided.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -700,7 +700,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default it is `"ACTIVE"`.
+    <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -720,7 +720,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">[]Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set. Otherwise multiple elements of matching patterns may be provided.
+    <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set, otherwise multiple elements of matching patterns may be provided.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -845,7 +845,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last/lowest if not provided.
+    <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last (lowest) if not provided.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -855,7 +855,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default it is `"ACTIVE"`.
+    <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -875,7 +875,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set. Otherwise multiple elements of matching patterns may be provided.
+    <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set, otherwise multiple elements of matching patterns may be provided.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1000,7 +1000,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last/lowest if not provided.
+    <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last (lowest) if not provided.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1010,7 +1010,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default it is `"ACTIVE"`.
+    <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1030,7 +1030,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">Sequence[Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set. Otherwise multiple elements of matching patterns may be provided.
+    <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set, otherwise multiple elements of matching patterns may be provided.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1345,7 +1345,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last/lowest if not provided.
+    <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last (lowest) if not provided.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1355,7 +1355,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default it is `"ACTIVE"`.
+    <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1375,7 +1375,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set. Otherwise multiple elements of matching patterns may be provided.
+    <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set, otherwise multiple elements of matching patterns may be provided.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1500,7 +1500,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last/lowest if not provided.
+    <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last (lowest) if not provided.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1510,7 +1510,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default it is `"ACTIVE"`.
+    <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1530,7 +1530,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">[]Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set. Otherwise multiple elements of matching patterns may be provided.
+    <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set, otherwise multiple elements of matching patterns may be provided.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1655,7 +1655,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last/lowest if not provided.
+    <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last (lowest) if not provided.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1665,7 +1665,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default it is `"ACTIVE"`.
+    <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1685,7 +1685,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set. Otherwise multiple elements of matching patterns may be provided.
+    <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set, otherwise multiple elements of matching patterns may be provided.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1810,7 +1810,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last/lowest if not provided.
+    <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last (lowest) if not provided.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1820,7 +1820,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default it is `"ACTIVE"`.
+    <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1840,7 +1840,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">Sequence[Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set. Otherwise multiple elements of matching patterns may be provided.
+    <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set, otherwise multiple elements of matching patterns may be provided.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1889,7 +1889,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application Id to include.
+    <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application id to include.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1925,7 +1925,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application Id to include.
+    <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application id to include.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1961,7 +1961,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application Id to include.
+    <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application id to include.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1997,7 +1997,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application Id to include.
+    <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application id to include.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2047,7 +2047,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application Id to include.
+    <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application id to include.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2083,7 +2083,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application Id to include.
+    <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application id to include.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2119,7 +2119,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application Id to include.
+    <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application id to include.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2155,7 +2155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application Id to include.
+    <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application id to include.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

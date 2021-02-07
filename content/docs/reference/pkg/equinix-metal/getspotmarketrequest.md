@@ -1,8 +1,8 @@
 
 ---
 title: "GetSpotMarketRequest"
-title_tag: "Function GetSpotMarketRequest | Package equinix-metal"
-meta_desc: "Explore the GetSpotMarketRequest function of the equinix-metal package, including examples, input properties, output properties, and supporting types. "
+title_tag: "Function GetSpotMarketRequest | Package Equinix Metal"
+meta_desc: "Explore the GetSpotMarketRequest function of the Equinix Metal package, including examples, input properties, output properties, and supporting types. "
 ---
 
 

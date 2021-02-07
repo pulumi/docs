@@ -1,6 +1,6 @@
 ---
-title: "equinix-metal"
-title_tag: "Module equinix-metal | Package equinix-metal"
+title: "Equinix Metal"
+title_tag: "Module Equinix Metal | Package Equinix Metal"
 meta_desc: "A Pulumi package for creating and managing equinix-metal cloud resources."
 menu:
     reference:
@@ -55,7 +55,7 @@ A Pulumi package for creating and managing equinix-metal cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`metal` Terraform Provider](https://github.com/equinix/terraform-provider-metal).</dd>
 	<dt>Version</dt>
-	<dd>1.0.0</dd>
+	<dd>1.1.0</dd>
 </dl>
 
 

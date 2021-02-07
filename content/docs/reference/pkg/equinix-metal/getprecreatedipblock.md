@@ -1,8 +1,8 @@
 
 ---
 title: "GetPrecreatedIpBlock"
-title_tag: "Function GetPrecreatedIpBlock | Package equinix-metal"
-meta_desc: "Explore the GetPrecreatedIpBlock function of the equinix-metal package, including examples, input properties, output properties, and supporting types. Use this data source to get CIDR expression for precreated IPv6 and IPv4 blocks in Equinix Metal."
+title_tag: "Function GetPrecreatedIpBlock | Package Equinix Metal"
+meta_desc: "Explore the GetPrecreatedIpBlock function of the Equinix Metal package, including examples, input properties, output properties, and supporting types. Use this data source to get CIDR expression for precreated IPv6 and IPv4 blocks in Equinix Metal."
 ---
 
 

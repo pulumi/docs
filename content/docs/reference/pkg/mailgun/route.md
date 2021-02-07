@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-mailgun/sdk/v2/go/mailgun"
+	"github.com/pulumi/pulumi-mailgun/sdk/v2/go/mailgun/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

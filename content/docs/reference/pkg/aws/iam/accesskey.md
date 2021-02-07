@@ -12,7 +12,6 @@ meta_desc: "Documentation for the aws.iam.AccessKey resource with examples, inpu
 
 Provides an IAM access key. This is a set of credentials that allow API requests to be made as an IAM user.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -513,6 +512,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="createdate_csharp">
+<a href="#createdate_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the access key was created.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="encryptedsecret_csharp">
 <a href="#encryptedsecret_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Secret</a>
 </span>
@@ -537,8 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt
-the secret
+    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -548,11 +556,7 @@ the secret
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key. Note that this will be written
-to the state file. If you use this, please protect your backend state file
-judiciously. Alternatively, you may supply a `pgp_key` instead, which will
-prevent the secret from being stored in plaintext, at the cost of preventing
-the use of the secret key in automation.
+    <dd>{{% md %}}The secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -562,10 +566,7 @@ the use of the secret key in automation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key converted into an SES SMTP
-password by applying [AWS's documented Sigv4 conversion
-algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert).
-As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region)
+    <dd>{{% md %}}The secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -573,6 +574,16 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="createdate_go">
+<a href="#createdate_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the access key was created.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="encryptedsecret_go">
@@ -599,8 +610,7 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt
-the secret
+    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -610,11 +620,7 @@ the secret
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key. Note that this will be written
-to the state file. If you use this, please protect your backend state file
-judiciously. Alternatively, you may supply a `pgp_key` instead, which will
-prevent the secret from being stored in plaintext, at the cost of preventing
-the use of the secret key in automation.
+    <dd>{{% md %}}The secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -624,10 +630,7 @@ the use of the secret key in automation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key converted into an SES SMTP
-password by applying [AWS's documented Sigv4 conversion
-algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert).
-As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region)
+    <dd>{{% md %}}The secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -635,6 +638,16 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="createdate_nodejs">
+<a href="#createdate_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the access key was created.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="encryptedsecret_nodejs">
@@ -661,8 +674,7 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt
-the secret
+    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -672,11 +684,7 @@ the secret
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key. Note that this will be written
-to the state file. If you use this, please protect your backend state file
-judiciously. Alternatively, you may supply a `pgp_key` instead, which will
-prevent the secret from being stored in plaintext, at the cost of preventing
-the use of the secret key in automation.
+    <dd>{{% md %}}The secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -686,10 +694,7 @@ the use of the secret key in automation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key converted into an SES SMTP
-password by applying [AWS's documented Sigv4 conversion
-algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert).
-As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region)
+    <dd>{{% md %}}The secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -697,6 +702,16 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="create_date_python">
+<a href="#create_date_python" style="color: inherit; text-decoration: inherit;">create_<wbr>date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the access key was created.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="encrypted_secret_python">
@@ -723,8 +738,7 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt
-the secret
+    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -734,11 +748,7 @@ the secret
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The secret access key. Note that this will be written
-to the state file. If you use this, please protect your backend state file
-judiciously. Alternatively, you may supply a `pgp_key` instead, which will
-prevent the secret from being stored in plaintext, at the cost of preventing
-the use of the secret key in automation.
+    <dd>{{% md %}}The secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -748,10 +758,7 @@ the use of the secret key in automation.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The secret access key converted into an SES SMTP
-password by applying [AWS's documented Sigv4 conversion
-algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert).
-As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region)
+    <dd>{{% md %}}The secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -769,7 +776,7 @@ Get an existing AccessKey resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">encrypted_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pgp_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ses_smtp_password_v4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessKey</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pgp_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ses_smtp_password_v4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessKey</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -884,6 +891,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_createdate_csharp">
+<a href="#state_createdate_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the access key was created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_encryptedsecret_csharp">
 <a href="#state_encryptedsecret_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Secret</a>
 </span>
@@ -899,8 +916,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt
-the secret
+    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -922,11 +938,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key. Note that this will be written
-to the state file. If you use this, please protect your backend state file
-judiciously. Alternatively, you may supply a `pgp_key` instead, which will
-prevent the secret from being stored in plaintext, at the cost of preventing
-the use of the secret key in automation.
+    <dd>{{% md %}}The secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -936,10 +948,7 @@ the use of the secret key in automation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key converted into an SES SMTP
-password by applying [AWS's documented Sigv4 conversion
-algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert).
-As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region)
+    <dd>{{% md %}}The secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -970,6 +979,16 @@ Valid values are `Active` and `Inactive`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_createdate_go">
+<a href="#state_createdate_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the access key was created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_encryptedsecret_go">
 <a href="#state_encryptedsecret_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Secret</a>
 </span>
@@ -985,8 +1004,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt
-the secret
+    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1008,11 +1026,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key. Note that this will be written
-to the state file. If you use this, please protect your backend state file
-judiciously. Alternatively, you may supply a `pgp_key` instead, which will
-prevent the secret from being stored in plaintext, at the cost of preventing
-the use of the secret key in automation.
+    <dd>{{% md %}}The secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1022,10 +1036,7 @@ the use of the secret key in automation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key converted into an SES SMTP
-password by applying [AWS's documented Sigv4 conversion
-algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert).
-As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region)
+    <dd>{{% md %}}The secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1056,6 +1067,16 @@ Valid values are `Active` and `Inactive`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_createdate_nodejs">
+<a href="#state_createdate_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the access key was created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_encryptedsecret_nodejs">
 <a href="#state_encryptedsecret_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Secret</a>
 </span>
@@ -1071,8 +1092,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt
-the secret
+    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1094,11 +1114,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key. Note that this will be written
-to the state file. If you use this, please protect your backend state file
-judiciously. Alternatively, you may supply a `pgp_key` instead, which will
-prevent the secret from being stored in plaintext, at the cost of preventing
-the use of the secret key in automation.
+    <dd>{{% md %}}The secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1108,10 +1124,7 @@ the use of the secret key in automation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key converted into an SES SMTP
-password by applying [AWS's documented Sigv4 conversion
-algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert).
-As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region)
+    <dd>{{% md %}}The secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1142,6 +1155,16 @@ Valid values are `Active` and `Inactive`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_create_date_python">
+<a href="#state_create_date_python" style="color: inherit; text-decoration: inherit;">create_<wbr>date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the access key was created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_encrypted_secret_python">
 <a href="#state_encrypted_secret_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>secret</a>
 </span>
@@ -1157,8 +1180,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt
-the secret
+    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1180,11 +1202,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The secret access key. Note that this will be written
-to the state file. If you use this, please protect your backend state file
-judiciously. Alternatively, you may supply a `pgp_key` instead, which will
-prevent the secret from being stored in plaintext, at the cost of preventing
-the use of the secret key in automation.
+    <dd>{{% md %}}The secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1194,10 +1212,7 @@ the use of the secret key in automation.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The secret access key converted into an SES SMTP
-password by applying [AWS's documented Sigv4 conversion
-algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert).
-As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region)
+    <dd>{{% md %}}The secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1225,6 +1240,18 @@ Valid values are `Active` and `Inactive`.
 
 
 
+
+
+## Import
+
+
+IAM Access Keys can be imported using the identifier, e.g.
+
+```sh
+ $ pulumi import aws:iam/accessKey:AccessKey example AKIA1234567890
+```
+
+ Resource attributes such as `encrypted_secret`, `key_fingerprint`, `pgp_key`, `secret`, and `ses_smtp_password_v4` are not available for imported resources as this information cannot be read from the IAM API.
 
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Project"
-title_tag: "Resource Project | Package equinix-metal"
-meta_desc: "Explore the Project resource of the equinix-metal package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "Resource Project | Package Equinix Metal"
+meta_desc: "Explore the Project resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
