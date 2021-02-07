@@ -24,24 +24,6 @@ Explore the resources and functions of the identitystore module in the AWS packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.IdentityStore.html" title="Pulumi.Aws.IdentityStore">Pulumi.Aws.IdentityStore</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/identitystore?tab=doc#" title="aws/identitystore">aws/identitystore</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/identitystore/#" title="@pulumi/aws/identitystore">@pulumi/aws/identitystore</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/identitystore" title="pulumi_aws/identitystore">pulumi_aws/identitystore</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

@@ -23,24 +23,6 @@ Explore the resources and functions of the simpledb module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.SimpleDB.html" title="Pulumi.Aws.SimpleDB">Pulumi.Aws.SimpleDB</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/simpledb?tab=doc#" title="aws/simpledb">aws/simpledb</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/simpledb/#" title="@pulumi/aws/simpledb">@pulumi/aws/simpledb</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/simpledb" title="pulumi_aws/simpledb">pulumi_aws/simpledb</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

@@ -44,24 +44,6 @@ Explore the resources and functions of the glue module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.html" title="Pulumi.Aws.Glue">Pulumi.Aws.Glue</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#" title="aws/glue">aws/glue</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#" title="@pulumi/aws/glue">@pulumi/aws/glue</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/glue" title="pulumi_aws/glue">pulumi_aws/glue</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

@@ -29,24 +29,6 @@ Explore the resources and functions of the acm module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acm.html" title="Pulumi.Aws.Acm">Pulumi.Aws.Acm</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/acm?tab=doc#" title="aws/acm">aws/acm</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/acm/#" title="@pulumi/aws/acm">@pulumi/aws/acm</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/acm" title="pulumi_aws/acm">pulumi_aws/acm</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

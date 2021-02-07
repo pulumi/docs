@@ -38,24 +38,6 @@ Explore the resources and functions of the opsworks module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.html" title="Pulumi.Aws.OpsWorks">Pulumi.Aws.OpsWorks</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#" title="aws/opsworks">aws/opsworks</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#" title="@pulumi/aws/opsworks">@pulumi/aws/opsworks</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/opsworks" title="pulumi_aws/opsworks">pulumi_aws/opsworks</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

@@ -177,24 +177,6 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.html" title="Pulumi.Aws">Pulumi.Aws</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#" title="aws">aws</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/#" title="@pulumi/aws">@pulumi/aws</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws" title="pulumi_aws">pulumi_aws</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

@@ -25,24 +25,6 @@ Explore the resources and functions of the appautoscaling module in the AWS pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.html" title="Pulumi.Aws.AppAutoScaling">Pulumi.Aws.AppAutoScaling</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#" title="aws/appautoscaling">aws/appautoscaling</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#" title="@pulumi/aws/appautoscaling">@pulumi/aws/appautoscaling</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/appautoscaling" title="pulumi_aws/appautoscaling">pulumi_aws/appautoscaling</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

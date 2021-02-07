@@ -23,24 +23,6 @@ Explore the resources and functions of the swf module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Swf.html" title="Pulumi.Aws.Swf">Pulumi.Aws.Swf</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/swf?tab=doc#" title="aws/swf">aws/swf</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/swf/#" title="@pulumi/aws/swf">@pulumi/aws/swf</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/swf" title="pulumi_aws/swf">pulumi_aws/swf</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

@@ -39,24 +39,6 @@ Explore the resources and functions of the ssm module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.html" title="Pulumi.Aws.Ssm">Pulumi.Aws.Ssm</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#" title="aws/ssm">aws/ssm</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#" title="@pulumi/aws/ssm">@pulumi/aws/ssm</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/ssm" title="pulumi_aws/ssm">pulumi_aws/ssm</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

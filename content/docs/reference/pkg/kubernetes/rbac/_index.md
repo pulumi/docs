@@ -26,18 +26,3 @@ meta_desc: ""
 	<dd>2.8.0</dd>
 </dl>
 
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/rbac?tab=doc#" title="kubernetes/rbac">kubernetes/rbac</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/rbac/#" title="@pulumi/kubernetes/rbac">@pulumi/kubernetes/rbac</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/rbac" title="pulumi_kubernetes/rbac">pulumi_kubernetes/rbac</a></dd>
-
-</dl>
-

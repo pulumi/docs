@@ -2755,6 +2755,16 @@ for load balancers of type `network` will force a recreation of the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ipv6address_csharp">
+<a href="#ipv6address_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An ipv6 address within the subnet to assign to the internet-facing load balancer.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="outpostid_csharp">
 <a href="#outpostid_csharp" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Id</a>
 </span>
@@ -2797,6 +2807,16 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation ID of the Elastic IP address.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipv6address_go">
+<a href="#ipv6address_go" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An ipv6 address within the subnet to assign to the internet-facing load balancer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2845,6 +2865,16 @@ for load balancers of type `network` will force a recreation of the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ipv6address_nodejs">
+<a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An ipv6 address within the subnet to assign to the internet-facing load balancer.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="outpostid_nodejs">
 <a href="#outpostid_nodejs" style="color: inherit; text-decoration: inherit;">outpost<wbr>Id</a>
 </span>
@@ -2887,6 +2917,16 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation ID of the Elastic IP address.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipv6_address_python">
+<a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An ipv6 address within the subnet to assign to the internet-facing load balancer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

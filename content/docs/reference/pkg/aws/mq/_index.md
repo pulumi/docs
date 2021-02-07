@@ -29,24 +29,6 @@ Explore the resources and functions of the mq module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mq.html" title="Pulumi.Aws.Mq">Pulumi.Aws.Mq</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/mq?tab=doc#" title="aws/mq">aws/mq</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/mq/#" title="@pulumi/aws/mq">@pulumi/aws/mq</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/mq" title="pulumi_aws/mq">pulumi_aws/mq</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

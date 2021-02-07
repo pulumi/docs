@@ -31,24 +31,6 @@ Explore the resources and functions of the eks module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.html" title="Pulumi.Aws.Eks">Pulumi.Aws.Eks</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/eks?tab=doc#" title="aws/eks">aws/eks</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/eks/#" title="@pulumi/aws/eks">@pulumi/aws/eks</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/eks" title="pulumi_aws/eks">pulumi_aws/eks</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

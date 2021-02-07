@@ -27,24 +27,6 @@ Explore the resources and functions of the networkfirewall module in the AWS pac
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.html" title="Pulumi.Aws.NetworkFirewall">Pulumi.Aws.NetworkFirewall</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#" title="aws/networkfirewall">aws/networkfirewall</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/networkfirewall/#" title="@pulumi/aws/networkfirewall">@pulumi/aws/networkfirewall</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/networkfirewall" title="pulumi_aws/networkfirewall">pulumi_aws/networkfirewall</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

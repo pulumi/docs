@@ -27,24 +27,6 @@ Explore the resources and functions of the emr module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.html" title="Pulumi.Aws.Emr">Pulumi.Aws.Emr</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#" title="aws/emr">aws/emr</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/emr/#" title="@pulumi/aws/emr">@pulumi/aws/emr</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/emr" title="pulumi_aws/emr">pulumi_aws/emr</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

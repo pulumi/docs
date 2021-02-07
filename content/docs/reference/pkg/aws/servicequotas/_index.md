@@ -29,24 +29,6 @@ Explore the resources and functions of the servicequotas module in the AWS packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ServiceQuotas.html" title="Pulumi.Aws.ServiceQuotas">Pulumi.Aws.ServiceQuotas</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/servicequotas?tab=doc#" title="aws/servicequotas">aws/servicequotas</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/servicequotas/#" title="@pulumi/aws/servicequotas">@pulumi/aws/servicequotas</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/servicequotas" title="pulumi_aws/servicequotas">pulumi_aws/servicequotas</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

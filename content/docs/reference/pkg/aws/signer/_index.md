@@ -31,24 +31,6 @@ Explore the resources and functions of the signer module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Signer.html" title="Pulumi.Aws.Signer">Pulumi.Aws.Signer</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/signer?tab=doc#" title="aws/signer">aws/signer</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/signer/#" title="@pulumi/aws/signer">@pulumi/aws/signer</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/signer" title="pulumi_aws/signer">pulumi_aws/signer</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

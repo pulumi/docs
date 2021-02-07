@@ -32,24 +32,6 @@ Explore the resources and functions of the sns module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.html" title="Pulumi.Aws.Sns">Pulumi.Aws.Sns</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#" title="aws/sns">aws/sns</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#" title="@pulumi/aws/sns">@pulumi/aws/sns</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/sns" title="pulumi_aws/sns">pulumi_aws/sns</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

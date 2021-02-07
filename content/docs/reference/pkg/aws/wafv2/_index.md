@@ -36,24 +36,6 @@ Explore the resources and functions of the wafv2 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.html" title="Pulumi.Aws.WafV2">Pulumi.Aws.WafV2</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#" title="aws/wafv2">aws/wafv2</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafv2/#" title="@pulumi/aws/wafv2">@pulumi/aws/wafv2</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/wafv2" title="pulumi_aws/wafv2">pulumi_aws/wafv2</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

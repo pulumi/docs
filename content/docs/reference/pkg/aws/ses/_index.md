@@ -37,24 +37,6 @@ Explore the resources and functions of the ses module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ses.html" title="Pulumi.Aws.Ses">Pulumi.Aws.Ses</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses?tab=doc#" title="aws/ses">aws/ses</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/ses/#" title="@pulumi/aws/ses">@pulumi/aws/ses</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/ses" title="pulumi_aws/ses">pulumi_aws/ses</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

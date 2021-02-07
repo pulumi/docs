@@ -13,6 +13,7 @@ Explore the resources and functions of the route53 module in the AWS package.
 <ul class="api">
     <li><a href="delegationset" title="DelegationSet"><span class="symbol resource"></span>DelegationSet</a></li>
     <li><a href="healthcheck" title="HealthCheck"><span class="symbol resource"></span>HealthCheck</a></li>
+    <li><a href="keysigningkey" title="KeySigningKey"><span class="symbol resource"></span>KeySigningKey</a></li>
     <li><a href="querylog" title="QueryLog"><span class="symbol resource"></span>QueryLog</a></li>
     <li><a href="record" title="Record"><span class="symbol resource"></span>Record</a></li>
     <li><a href="resolverdnssecconfig" title="ResolverDnsSecConfig"><span class="symbol resource"></span>ResolverDnsSecConfig</a></li>
@@ -44,24 +45,6 @@ Explore the resources and functions of the route53 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.html" title="Pulumi.Aws.Route53">Pulumi.Aws.Route53</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#" title="aws/route53">aws/route53</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#" title="@pulumi/aws/route53">@pulumi/aws/route53</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/route53" title="pulumi_aws/route53">pulumi_aws/route53</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

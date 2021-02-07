@@ -33,24 +33,6 @@ Explore the resources and functions of the elasticache module in the AWS package
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.html" title="Pulumi.Aws.ElastiCache">Pulumi.Aws.ElastiCache</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticache?tab=doc#" title="aws/elasticache">aws/elasticache</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticache/#" title="@pulumi/aws/elasticache">@pulumi/aws/elasticache</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/elasticache" title="pulumi_aws/elasticache">pulumi_aws/elasticache</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

@@ -38,24 +38,6 @@ Explore the resources and functions of the imagebuilder module in the AWS packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ImageBuilder.html" title="Pulumi.Aws.ImageBuilder">Pulumi.Aws.ImageBuilder</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/imagebuilder?tab=doc#" title="aws/imagebuilder">aws/imagebuilder</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/imagebuilder/#" title="@pulumi/aws/imagebuilder">@pulumi/aws/imagebuilder</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/imagebuilder" title="pulumi_aws/imagebuilder">pulumi_aws/imagebuilder</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

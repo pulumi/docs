@@ -23,24 +23,6 @@ Explore the resources and functions of the pricing module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Pricing.html" title="Pulumi.Aws.Pricing">Pulumi.Aws.Pricing</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/pricing?tab=doc#" title="aws/pricing">aws/pricing</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/pricing/#" title="@pulumi/aws/pricing">@pulumi/aws/pricing</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/pricing" title="pulumi_aws/pricing">pulumi_aws/pricing</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

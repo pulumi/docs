@@ -37,24 +37,6 @@ Explore the resources and functions of the ebs module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ebs.html" title="Pulumi.Aws.Ebs">Pulumi.Aws.Ebs</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ebs?tab=doc#" title="aws/ebs">aws/ebs</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/ebs/#" title="@pulumi/aws/ebs">@pulumi/aws/ebs</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/ebs" title="pulumi_aws/ebs">pulumi_aws/ebs</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

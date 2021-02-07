@@ -23,24 +23,6 @@ Explore the resources and functions of the codestarconnections module in the AWS
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeStarConnections.html" title="Pulumi.Aws.CodeStarConnections">Pulumi.Aws.CodeStarConnections</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codestarconnections?tab=doc#" title="aws/codestarconnections">aws/codestarconnections</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/codestarconnections/#" title="@pulumi/aws/codestarconnections">@pulumi/aws/codestarconnections</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/codestarconnections" title="pulumi_aws/codestarconnections">pulumi_aws/codestarconnections</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

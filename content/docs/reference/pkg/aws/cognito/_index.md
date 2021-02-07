@@ -35,24 +35,6 @@ Explore the resources and functions of the cognito module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.html" title="Pulumi.Aws.Cognito">Pulumi.Aws.Cognito</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito?tab=doc#" title="aws/cognito">aws/cognito</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#" title="@pulumi/aws/cognito">@pulumi/aws/cognito</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/cognito" title="pulumi_aws/cognito">pulumi_aws/cognito</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

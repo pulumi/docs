@@ -28,24 +28,6 @@ Explore the resources and functions of the serverlessrepository module in the AW
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ServerlessRepository.html" title="Pulumi.Aws.ServerlessRepository">Pulumi.Aws.ServerlessRepository</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/serverlessrepository?tab=doc#" title="aws/serverlessrepository">aws/serverlessrepository</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/serverlessrepository/#" title="@pulumi/aws/serverlessrepository">@pulumi/aws/serverlessrepository</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/serverlessrepository" title="pulumi_aws/serverlessrepository">pulumi_aws/serverlessrepository</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

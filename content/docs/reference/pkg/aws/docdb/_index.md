@@ -33,24 +33,6 @@ Explore the resources and functions of the docdb module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DocDB.html" title="Pulumi.Aws.DocDB">Pulumi.Aws.DocDB</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/docdb?tab=doc#" title="aws/docdb">aws/docdb</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/docdb/#" title="@pulumi/aws/docdb">@pulumi/aws/docdb</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/docdb" title="pulumi_aws/docdb">pulumi_aws/docdb</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

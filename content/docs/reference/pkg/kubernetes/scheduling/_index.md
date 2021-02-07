@@ -26,18 +26,3 @@ meta_desc: ""
 	<dd>2.8.0</dd>
 </dl>
 
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/scheduling?tab=doc#" title="kubernetes/scheduling">kubernetes/scheduling</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/scheduling/#" title="@pulumi/kubernetes/scheduling">@pulumi/kubernetes/scheduling</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/scheduling" title="pulumi_kubernetes/scheduling">pulumi_kubernetes/scheduling</a></dd>
-
-</dl>
-

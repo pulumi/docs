@@ -23,24 +23,6 @@ Explore the resources and functions of the cloud9 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloud9.html" title="Pulumi.Aws.Cloud9">Pulumi.Aws.Cloud9</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloud9?tab=doc#" title="aws/cloud9">aws/cloud9</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloud9/#" title="@pulumi/aws/cloud9">@pulumi/aws/cloud9</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/cloud9" title="pulumi_aws/cloud9">pulumi_aws/cloud9</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

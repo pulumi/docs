@@ -35,24 +35,6 @@ Explore the resources and functions of the lb module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.html" title="Pulumi.Aws.LB">Pulumi.Aws.LB</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#" title="aws/lb">aws/lb</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/lb/#" title="@pulumi/aws/lb">@pulumi/aws/lb</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/lb" title="pulumi_aws/lb">pulumi_aws/lb</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

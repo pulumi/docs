@@ -32,24 +32,6 @@ Explore the resources and functions of the ssoadmin module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.SsoAdmin.html" title="Pulumi.Aws.SsoAdmin">Pulumi.Aws.SsoAdmin</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssoadmin?tab=doc#" title="aws/ssoadmin">aws/ssoadmin</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssoadmin/#" title="@pulumi/aws/ssoadmin">@pulumi/aws/ssoadmin</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/ssoadmin" title="pulumi_aws/ssoadmin">pulumi_aws/ssoadmin</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 

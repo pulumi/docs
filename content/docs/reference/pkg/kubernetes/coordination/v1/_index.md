@@ -25,18 +25,3 @@ Explore the resources and functions of the coordination/v1 module in the Kuberne
 	<dd>2.8.0</dd>
 </dl>
 
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/coordination/v1?tab=doc#" title="kubernetes/coordination/v1">kubernetes/coordination/v1</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/coordination/v1/#" title="@pulumi/kubernetes/coordination/v1">@pulumi/kubernetes/coordination/v1</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/coordination/v1" title="pulumi_kubernetes/coordination/v1">pulumi_kubernetes/coordination/v1</a></dd>
-
-</dl>
-

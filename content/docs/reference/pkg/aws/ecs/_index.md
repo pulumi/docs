@@ -34,24 +34,6 @@ Explore the resources and functions of the ecs module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.27.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.html" title="Pulumi.Aws.Ecs">Pulumi.Aws.Ecs</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs?tab=doc#" title="aws/ecs">aws/ecs</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/ecs/#" title="@pulumi/aws/ecs">@pulumi/aws/ecs</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/ecs" title="pulumi_aws/ecs">pulumi_aws/ecs</a></dd>
-
+	<dd>3.28.0</dd>
 </dl>
 
