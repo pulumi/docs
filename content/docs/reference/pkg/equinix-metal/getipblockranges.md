@@ -1,8 +1,8 @@
 
 ---
 title: "GetIpBlockRanges"
-title_tag: "Function GetIpBlockRanges | Package equinix-metal"
-meta_desc: "Explore the GetIpBlockRanges function of the equinix-metal package, including examples, input properties, output properties, and supporting types. Use this datasource to get CIDR expressions for allocated IP blocks of all the types in a project, optionally filtered by facility."
+title_tag: "Function GetIpBlockRanges | Package Equinix Metal"
+meta_desc: "Explore the GetIpBlockRanges function of the Equinix Metal package, including examples, input properties, output properties, and supporting types. Use this datasource to get CIDR expressions for allocated IP blocks of all the types in a project, optionally filtered by facility."
 ---
 
 
@@ -52,6 +52,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

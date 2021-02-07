@@ -1,8 +1,8 @@
 
 ---
 title: "Vlan"
-title_tag: "Resource Vlan | Package equinix-metal"
-meta_desc: "Explore the Vlan resource of the equinix-metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to allow users to manage Virtual Networks in their projects."
+title_tag: "Resource Vlan | Package Equinix Metal"
+meta_desc: "Explore the Vlan resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to allow users to manage Virtual Networks in their projects."
 ---
 
 
@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -887,6 +887,24 @@ The following state arguments are supported:
     <dd>yyz1</dd>
     <dt>FRA2</dt>
     <dd>fra2</dd>
+    <dt>AM6</dt>
+    <dd>am6</dd>
+    <dt>DC13</dt>
+    <dd>dc13</dd>
+    <dt>CH3</dt>
+    <dd>ch3</dd>
+    <dt>DA3</dt>
+    <dd>da3</dd>
+    <dt>DA11</dt>
+    <dd>da11</dd>
+    <dt>LA4</dt>
+    <dd>la4</dd>
+    <dt>NY5</dt>
+    <dd>ny5</dd>
+    <dt>SG1</dt>
+    <dd>sg1</dd>
+    <dt>SV15</dt>
+    <dd>sv15</dd>
 </dl>
 {{% /choosable %}}
 
@@ -926,6 +944,24 @@ The following state arguments are supported:
     <dd>yyz1</dd>
     <dt>Facility<wbr>FRA2</dt>
     <dd>fra2</dd>
+    <dt>Facility<wbr>AM6</dt>
+    <dd>am6</dd>
+    <dt>Facility<wbr>DC13</dt>
+    <dd>dc13</dd>
+    <dt>Facility<wbr>CH3</dt>
+    <dd>ch3</dd>
+    <dt>Facility<wbr>DA3</dt>
+    <dd>da3</dd>
+    <dt>Facility<wbr>DA11</dt>
+    <dd>da11</dd>
+    <dt>Facility<wbr>LA4</dt>
+    <dd>la4</dd>
+    <dt>Facility<wbr>NY5</dt>
+    <dd>ny5</dd>
+    <dt>Facility<wbr>SG1</dt>
+    <dd>sg1</dd>
+    <dt>Facility<wbr>SV15</dt>
+    <dd>sv15</dd>
 </dl>
 {{% /choosable %}}
 
@@ -965,6 +1001,24 @@ The following state arguments are supported:
     <dd>yyz1</dd>
     <dt>FRA2</dt>
     <dd>fra2</dd>
+    <dt>AM6</dt>
+    <dd>am6</dd>
+    <dt>DC13</dt>
+    <dd>dc13</dd>
+    <dt>CH3</dt>
+    <dd>ch3</dd>
+    <dt>DA3</dt>
+    <dd>da3</dd>
+    <dt>DA11</dt>
+    <dd>da11</dd>
+    <dt>LA4</dt>
+    <dd>la4</dd>
+    <dt>NY5</dt>
+    <dd>ny5</dd>
+    <dt>SG1</dt>
+    <dd>sg1</dd>
+    <dt>SV15</dt>
+    <dd>sv15</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1004,6 +1058,24 @@ The following state arguments are supported:
     <dd>yyz1</dd>
     <dt>FRA2</dt>
     <dd>fra2</dd>
+    <dt>AM6</dt>
+    <dd>am6</dd>
+    <dt>DC13</dt>
+    <dd>dc13</dd>
+    <dt>CH3</dt>
+    <dd>ch3</dd>
+    <dt>DA3</dt>
+    <dd>da3</dd>
+    <dt>DA11</dt>
+    <dd>da11</dd>
+    <dt>LA4</dt>
+    <dd>la4</dd>
+    <dt>NY5</dt>
+    <dd>ny5</dd>
+    <dt>SG1</dt>
+    <dd>sg1</dd>
+    <dt>SV15</dt>
+    <dd>sv15</dd>
 </dl>
 {{% /choosable %}}
 

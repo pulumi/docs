@@ -1,8 +1,8 @@
 
 ---
 title: "SpotMarketRequest"
-title_tag: "Resource SpotMarketRequest | Package equinix-metal"
-meta_desc: "Explore the SpotMarketRequest resource of the equinix-metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Equinix Metal Spot Market Request resource to allow you to"
+title_tag: "Resource SpotMarketRequest | Package Equinix Metal"
+meta_desc: "Explore the SpotMarketRequest resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Equinix Metal Spot Market Request resource to allow you to"
 ---
 
 
@@ -60,6 +60,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

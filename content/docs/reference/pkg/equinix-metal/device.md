@@ -1,8 +1,8 @@
 
 ---
 title: "Device"
-title_tag: "Resource Device | Package equinix-metal"
-meta_desc: "Explore the Device resource of the equinix-metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Equinix Metal device resource. This can be used to create,"
+title_tag: "Resource Device | Package Equinix Metal"
+meta_desc: "Explore the Device resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Equinix Metal device resource. This can be used to create,"
 ---
 
 
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -3885,6 +3885,24 @@ The fields of the network attributes are:
     <dd>yyz1</dd>
     <dt>FRA2</dt>
     <dd>fra2</dd>
+    <dt>AM6</dt>
+    <dd>am6</dd>
+    <dt>DC13</dt>
+    <dd>dc13</dd>
+    <dt>CH3</dt>
+    <dd>ch3</dd>
+    <dt>DA3</dt>
+    <dd>da3</dd>
+    <dt>DA11</dt>
+    <dd>da11</dd>
+    <dt>LA4</dt>
+    <dd>la4</dd>
+    <dt>NY5</dt>
+    <dd>ny5</dd>
+    <dt>SG1</dt>
+    <dd>sg1</dd>
+    <dt>SV15</dt>
+    <dd>sv15</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3924,6 +3942,24 @@ The fields of the network attributes are:
     <dd>yyz1</dd>
     <dt>Facility<wbr>FRA2</dt>
     <dd>fra2</dd>
+    <dt>Facility<wbr>AM6</dt>
+    <dd>am6</dd>
+    <dt>Facility<wbr>DC13</dt>
+    <dd>dc13</dd>
+    <dt>Facility<wbr>CH3</dt>
+    <dd>ch3</dd>
+    <dt>Facility<wbr>DA3</dt>
+    <dd>da3</dd>
+    <dt>Facility<wbr>DA11</dt>
+    <dd>da11</dd>
+    <dt>Facility<wbr>LA4</dt>
+    <dd>la4</dd>
+    <dt>Facility<wbr>NY5</dt>
+    <dd>ny5</dd>
+    <dt>Facility<wbr>SG1</dt>
+    <dd>sg1</dd>
+    <dt>Facility<wbr>SV15</dt>
+    <dd>sv15</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3963,6 +3999,24 @@ The fields of the network attributes are:
     <dd>yyz1</dd>
     <dt>FRA2</dt>
     <dd>fra2</dd>
+    <dt>AM6</dt>
+    <dd>am6</dd>
+    <dt>DC13</dt>
+    <dd>dc13</dd>
+    <dt>CH3</dt>
+    <dd>ch3</dd>
+    <dt>DA3</dt>
+    <dd>da3</dd>
+    <dt>DA11</dt>
+    <dd>da11</dd>
+    <dt>LA4</dt>
+    <dd>la4</dd>
+    <dt>NY5</dt>
+    <dd>ny5</dd>
+    <dt>SG1</dt>
+    <dd>sg1</dd>
+    <dt>SV15</dt>
+    <dd>sv15</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4002,6 +4056,24 @@ The fields of the network attributes are:
     <dd>yyz1</dd>
     <dt>FRA2</dt>
     <dd>fra2</dd>
+    <dt>AM6</dt>
+    <dd>am6</dd>
+    <dt>DC13</dt>
+    <dd>dc13</dd>
+    <dt>CH3</dt>
+    <dd>ch3</dd>
+    <dt>DA3</dt>
+    <dd>da3</dd>
+    <dt>DA11</dt>
+    <dd>da11</dd>
+    <dt>LA4</dt>
+    <dd>la4</dd>
+    <dt>NY5</dt>
+    <dd>ny5</dd>
+    <dt>SG1</dt>
+    <dd>sg1</dd>
+    <dt>SV15</dt>
+    <dd>sv15</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4015,6 +4087,8 @@ The fields of the network attributes are:
     <dd>centos_6</dd>
     <dt>Cent<wbr>OS7</dt>
     <dd>centos_7</dd>
+    <dt>Cent<wbr>OS8</dt>
+    <dd>centos_8</dd>
     <dt>Core<wbr>OSAlpha</dt>
     <dd>coreos_alpha</dd>
     <dt>Core<wbr>OSBeta</dt>
@@ -4027,6 +4101,16 @@ The fields of the network attributes are:
     <dd>debian_8</dd>
     <dt>Debian9</dt>
     <dd>debian_9</dd>
+    <dt>Debian10</dt>
+    <dd>debian_10</dd>
+    <dt>Flatcar<wbr>Alpha</dt>
+    <dd>flatcar_alpha</dd>
+    <dt>Flatcar<wbr>Beta</dt>
+    <dd>flatcar_beta</dd>
+    <dt>Flatcar<wbr>Edge</dt>
+    <dd>flatcar_edge</dd>
+    <dt>Flatcar<wbr>Stable</dt>
+    <dd>flatcar_stable</dd>
     <dt>Free<wbr>BSD10_4</dt>
     <dd>freebsd_10_4</dd>
     <dt>Free<wbr>BSD11_1</dt>
@@ -4045,6 +4129,8 @@ The fields of the network attributes are:
     <dd>rancher</dd>
     <dt>RHEL7</dt>
     <dd>rhel_7</dd>
+    <dt>RHEL8</dt>
+    <dd>rhel_8</dd>
     <dt>Scientific<wbr>Linux6</dt>
     <dd>scientific_6</dd>
     <dt>SLES12SP3</dt>
@@ -4057,12 +4143,22 @@ The fields of the network attributes are:
     <dd>ubuntu_17_10</dd>
     <dt>Ubuntu1804</dt>
     <dd>ubuntu_18_04</dd>
+    <dt>Ubuntu2004</dt>
+    <dd>ubuntu_20_04</dd>
+    <dt>Ubuntu2010</dt>
+    <dd>ubuntu_20_10</dd>
     <dt>VMWare<wbr>Esxi6_5</dt>
     <dd>vmware_esxi_6_5</dd>
+    <dt>VMWare<wbr>Esxi6_7</dt>
+    <dd>vmware_esxi_6_7</dd>
+    <dt>VMWare<wbr>Esxi7_0</dt>
+    <dd>vmware_esxi_7_0</dd>
     <dt>Windows2012R2</dt>
     <dd>windows_2012_r2</dd>
     <dt>Windows2016</dt>
     <dd>windows_2016</dd>
+    <dt>Windows2019</dt>
+    <dd>windows_2019</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4074,6 +4170,8 @@ The fields of the network attributes are:
     <dd>centos_6</dd>
     <dt>Operating<wbr>System<wbr>Cent<wbr>OS7</dt>
     <dd>centos_7</dd>
+    <dt>Operating<wbr>System<wbr>Cent<wbr>OS8</dt>
+    <dd>centos_8</dd>
     <dt>Operating<wbr>System<wbr>Core<wbr>OSAlpha</dt>
     <dd>coreos_alpha</dd>
     <dt>Operating<wbr>System<wbr>Core<wbr>OSBeta</dt>
@@ -4086,6 +4184,16 @@ The fields of the network attributes are:
     <dd>debian_8</dd>
     <dt>Operating<wbr>System<wbr>Debian9</dt>
     <dd>debian_9</dd>
+    <dt>Operating<wbr>System<wbr>Debian10</dt>
+    <dd>debian_10</dd>
+    <dt>Operating<wbr>System<wbr>Flatcar<wbr>Alpha</dt>
+    <dd>flatcar_alpha</dd>
+    <dt>Operating<wbr>System<wbr>Flatcar<wbr>Beta</dt>
+    <dd>flatcar_beta</dd>
+    <dt>Operating<wbr>System<wbr>Flatcar<wbr>Edge</dt>
+    <dd>flatcar_edge</dd>
+    <dt>Operating<wbr>System<wbr>Flatcar<wbr>Stable</dt>
+    <dd>flatcar_stable</dd>
     <dt>Operating<wbr>System_Free<wbr>BSD10_4</dt>
     <dd>freebsd_10_4</dd>
     <dt>Operating<wbr>System_Free<wbr>BSD11_1</dt>
@@ -4104,6 +4212,8 @@ The fields of the network attributes are:
     <dd>rancher</dd>
     <dt>Operating<wbr>System<wbr>RHEL7</dt>
     <dd>rhel_7</dd>
+    <dt>Operating<wbr>System<wbr>RHEL8</dt>
+    <dd>rhel_8</dd>
     <dt>Operating<wbr>System<wbr>Scientific<wbr>Linux6</dt>
     <dd>scientific_6</dd>
     <dt>Operating<wbr>System<wbr>SLES12SP3</dt>
@@ -4116,12 +4226,22 @@ The fields of the network attributes are:
     <dd>ubuntu_17_10</dd>
     <dt>Operating<wbr>System<wbr>Ubuntu1804</dt>
     <dd>ubuntu_18_04</dd>
+    <dt>Operating<wbr>System<wbr>Ubuntu2004</dt>
+    <dd>ubuntu_20_04</dd>
+    <dt>Operating<wbr>System<wbr>Ubuntu2010</dt>
+    <dd>ubuntu_20_10</dd>
     <dt>Operating<wbr>System_VMWare<wbr>Esxi6_5</dt>
     <dd>vmware_esxi_6_5</dd>
+    <dt>Operating<wbr>System_VMWare<wbr>Esxi6_7</dt>
+    <dd>vmware_esxi_6_7</dd>
+    <dt>Operating<wbr>System_VMWare<wbr>Esxi7_0</dt>
+    <dd>vmware_esxi_7_0</dd>
     <dt>Operating<wbr>System<wbr>Windows2012R2</dt>
     <dd>windows_2012_r2</dd>
     <dt>Operating<wbr>System<wbr>Windows2016</dt>
     <dd>windows_2016</dd>
+    <dt>Operating<wbr>System<wbr>Windows2019</dt>
+    <dd>windows_2019</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4133,6 +4253,8 @@ The fields of the network attributes are:
     <dd>centos_6</dd>
     <dt>Cent<wbr>OS7</dt>
     <dd>centos_7</dd>
+    <dt>Cent<wbr>OS8</dt>
+    <dd>centos_8</dd>
     <dt>Core<wbr>OSAlpha</dt>
     <dd>coreos_alpha</dd>
     <dt>Core<wbr>OSBeta</dt>
@@ -4145,6 +4267,16 @@ The fields of the network attributes are:
     <dd>debian_8</dd>
     <dt>Debian9</dt>
     <dd>debian_9</dd>
+    <dt>Debian10</dt>
+    <dd>debian_10</dd>
+    <dt>Flatcar<wbr>Alpha</dt>
+    <dd>flatcar_alpha</dd>
+    <dt>Flatcar<wbr>Beta</dt>
+    <dd>flatcar_beta</dd>
+    <dt>Flatcar<wbr>Edge</dt>
+    <dd>flatcar_edge</dd>
+    <dt>Flatcar<wbr>Stable</dt>
+    <dd>flatcar_stable</dd>
     <dt>Free<wbr>BSD10_4</dt>
     <dd>freebsd_10_4</dd>
     <dt>Free<wbr>BSD11_1</dt>
@@ -4163,6 +4295,8 @@ The fields of the network attributes are:
     <dd>rancher</dd>
     <dt>RHEL7</dt>
     <dd>rhel_7</dd>
+    <dt>RHEL8</dt>
+    <dd>rhel_8</dd>
     <dt>Scientific<wbr>Linux6</dt>
     <dd>scientific_6</dd>
     <dt>SLES12SP3</dt>
@@ -4175,12 +4309,22 @@ The fields of the network attributes are:
     <dd>ubuntu_17_10</dd>
     <dt>Ubuntu1804</dt>
     <dd>ubuntu_18_04</dd>
+    <dt>Ubuntu2004</dt>
+    <dd>ubuntu_20_04</dd>
+    <dt>Ubuntu2010</dt>
+    <dd>ubuntu_20_10</dd>
     <dt>VMWare<wbr>Esxi6_5</dt>
     <dd>vmware_esxi_6_5</dd>
+    <dt>VMWare<wbr>Esxi6_7</dt>
+    <dd>vmware_esxi_6_7</dd>
+    <dt>VMWare<wbr>Esxi7_0</dt>
+    <dd>vmware_esxi_7_0</dd>
     <dt>Windows2012R2</dt>
     <dd>windows_2012_r2</dd>
     <dt>Windows2016</dt>
     <dd>windows_2016</dd>
+    <dt>Windows2019</dt>
+    <dd>windows_2019</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4192,6 +4336,8 @@ The fields of the network attributes are:
     <dd>centos_6</dd>
     <dt>CENT_OS7</dt>
     <dd>centos_7</dd>
+    <dt>CENT_OS8</dt>
+    <dd>centos_8</dd>
     <dt>CORE_OS_ALPHA</dt>
     <dd>coreos_alpha</dd>
     <dt>CORE_OS_BETA</dt>
@@ -4204,6 +4350,16 @@ The fields of the network attributes are:
     <dd>debian_8</dd>
     <dt>DEBIAN9</dt>
     <dd>debian_9</dd>
+    <dt>DEBIAN10</dt>
+    <dd>debian_10</dd>
+    <dt>FLATCAR_ALPHA</dt>
+    <dd>flatcar_alpha</dd>
+    <dt>FLATCAR_BETA</dt>
+    <dd>flatcar_beta</dd>
+    <dt>FLATCAR_EDGE</dt>
+    <dd>flatcar_edge</dd>
+    <dt>FLATCAR_STABLE</dt>
+    <dd>flatcar_stable</dd>
     <dt>FREE_BSD10_4</dt>
     <dd>freebsd_10_4</dd>
     <dt>FREE_BSD11_1</dt>
@@ -4222,6 +4378,8 @@ The fields of the network attributes are:
     <dd>rancher</dd>
     <dt>RHEL7</dt>
     <dd>rhel_7</dd>
+    <dt>RHEL8</dt>
+    <dd>rhel_8</dd>
     <dt>SCIENTIFIC_LINUX6</dt>
     <dd>scientific_6</dd>
     <dt>SLES12_SP3</dt>
@@ -4234,12 +4392,22 @@ The fields of the network attributes are:
     <dd>ubuntu_17_10</dd>
     <dt>UBUNTU1804</dt>
     <dd>ubuntu_18_04</dd>
+    <dt>UBUNTU2004</dt>
+    <dd>ubuntu_20_04</dd>
+    <dt>UBUNTU2010</dt>
+    <dd>ubuntu_20_10</dd>
     <dt>VM_WARE_ESXI6_5</dt>
     <dd>vmware_esxi_6_5</dd>
+    <dt>VM_WARE_ESXI6_7</dt>
+    <dd>vmware_esxi_6_7</dd>
+    <dt>VM_WARE_ESXI7_0</dt>
+    <dd>vmware_esxi_7_0</dd>
     <dt>WINDOWS2012_R2</dt>
     <dd>windows_2012_r2</dd>
     <dt>WINDOWS2016</dt>
     <dd>windows_2016</dd>
+    <dt>WINDOWS2019</dt>
+    <dd>windows_2019</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4271,6 +4439,20 @@ The fields of the network attributes are:
     <dd>baremetal_0</dd>
     <dt>S1Large<wbr>X86</dt>
     <dd>baremetal_s</dd>
+    <dt>C3Small<wbr>X86</dt>
+    <dd>c3.small.x86</dd>
+    <dt>C3Medium<wbr>X86</dt>
+    <dd>c3.medium.x86</dd>
+    <dt>F3Medium<wbr>X86</dt>
+    <dd>f3.medium.x86</dd>
+    <dt>F3Large<wbr>X86</dt>
+    <dd>f3.large.x86</dd>
+    <dt>M3Large<wbr>X86</dt>
+    <dd>m3.large.x86</dd>
+    <dt>S3XLarge<wbr>X86</dt>
+    <dd>s3.xlarge.x86</dd>
+    <dt>N2XLarge<wbr>X86</dt>
+    <dd>n2.xlarge.x86</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4300,6 +4482,20 @@ The fields of the network attributes are:
     <dd>baremetal_0</dd>
     <dt>Plan<wbr>S1Large<wbr>X86</dt>
     <dd>baremetal_s</dd>
+    <dt>Plan<wbr>C3Small<wbr>X86</dt>
+    <dd>c3.small.x86</dd>
+    <dt>Plan<wbr>C3Medium<wbr>X86</dt>
+    <dd>c3.medium.x86</dd>
+    <dt>Plan<wbr>F3Medium<wbr>X86</dt>
+    <dd>f3.medium.x86</dd>
+    <dt>Plan<wbr>F3Large<wbr>X86</dt>
+    <dd>f3.large.x86</dd>
+    <dt>Plan<wbr>M3Large<wbr>X86</dt>
+    <dd>m3.large.x86</dd>
+    <dt>Plan<wbr>S3XLarge<wbr>X86</dt>
+    <dd>s3.xlarge.x86</dd>
+    <dt>Plan<wbr>N2XLarge<wbr>X86</dt>
+    <dd>n2.xlarge.x86</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4329,6 +4525,20 @@ The fields of the network attributes are:
     <dd>baremetal_0</dd>
     <dt>S1Large<wbr>X86</dt>
     <dd>baremetal_s</dd>
+    <dt>C3Small<wbr>X86</dt>
+    <dd>c3.small.x86</dd>
+    <dt>C3Medium<wbr>X86</dt>
+    <dd>c3.medium.x86</dd>
+    <dt>F3Medium<wbr>X86</dt>
+    <dd>f3.medium.x86</dd>
+    <dt>F3Large<wbr>X86</dt>
+    <dd>f3.large.x86</dd>
+    <dt>M3Large<wbr>X86</dt>
+    <dd>m3.large.x86</dd>
+    <dt>S3XLarge<wbr>X86</dt>
+    <dd>s3.xlarge.x86</dd>
+    <dt>N2XLarge<wbr>X86</dt>
+    <dd>n2.xlarge.x86</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4358,6 +4568,20 @@ The fields of the network attributes are:
     <dd>baremetal_0</dd>
     <dt>S1_LARGE_X86</dt>
     <dd>baremetal_s</dd>
+    <dt>C3_SMALL_X86</dt>
+    <dd>c3.small.x86</dd>
+    <dt>C3_MEDIUM_X86</dt>
+    <dd>c3.medium.x86</dd>
+    <dt>F3_MEDIUM_X86</dt>
+    <dd>f3.medium.x86</dd>
+    <dt>F3_LARGE_X86</dt>
+    <dd>f3.large.x86</dd>
+    <dt>M3_LARGE_X86</dt>
+    <dd>m3.large.x86</dd>
+    <dt>S3_X_LARGE_X86</dt>
+    <dd>s3.xlarge.x86</dd>
+    <dt>N2_X_LARGE_X86</dt>
+    <dd>n2.xlarge.x86</dd>
 </dl>
 {{% /choosable %}}
 

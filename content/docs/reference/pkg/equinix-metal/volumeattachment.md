@@ -1,8 +1,8 @@
 
 ---
 title: "VolumeAttachment"
-title_tag: "Resource VolumeAttachment | Package equinix-metal"
-meta_desc: "Explore the VolumeAttachment resource of the equinix-metal package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "Resource VolumeAttachment | Package Equinix Metal"
+meta_desc: "Explore the VolumeAttachment resource of the Equinix Metal package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

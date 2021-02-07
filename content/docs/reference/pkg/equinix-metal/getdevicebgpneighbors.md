@@ -1,8 +1,8 @@
 
 ---
 title: "GetDeviceBgpNeighbors"
-title_tag: "Function GetDeviceBgpNeighbors | Package equinix-metal"
-meta_desc: "Explore the GetDeviceBgpNeighbors function of the equinix-metal package, including examples, input properties, output properties, and supporting types. Use this datasource to retrieve list of BGP neighbors of a device in the Equinix Metal host."
+title_tag: "Function GetDeviceBgpNeighbors | Package Equinix Metal"
+meta_desc: "Explore the GetDeviceBgpNeighbors function of the Equinix Metal package, including examples, input properties, output properties, and supporting types. Use this datasource to retrieve list of BGP neighbors of a device in the Equinix Metal host."
 ---
 
 
@@ -51,6 +51,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

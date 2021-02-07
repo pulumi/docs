@@ -1,8 +1,8 @@
 
 ---
 title: "GetOrganization"
-title_tag: "Function GetOrganization | Package equinix-metal"
-meta_desc: "Explore the GetOrganization function of the equinix-metal package, including examples, input properties, output properties, and supporting types. Provides an Equinix Metal organization datasource."
+title_tag: "Function GetOrganization | Package Equinix Metal"
+meta_desc: "Explore the GetOrganization function of the Equinix Metal package, including examples, input properties, output properties, and supporting types. Provides an Equinix Metal organization datasource."
 ---
 
 
@@ -47,6 +47,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
