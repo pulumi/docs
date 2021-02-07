@@ -75,17 +75,8 @@ jobs:
           go get -u github.com/pkg/errors
           go get -u gopkg.in/russross/blackfriday.v2
         working-directory: docs
-      - name: run yarn install in nodejs sdk
-        run: yarn install && yarn run tsc
-        working-directory: ${{ env.PROVIDER_NAME }}/sdk/nodejs
-      - name: run typedoc
-        run: PKGS=${{ env.PROVIDER_SHORT_NAME }} NOBUILD=true ./scripts/run_typedoc.sh
-        working-directory: docs
       - name: generate resource docs
         run: ./scripts/gen_resource_docs.sh "${{ env.PROVIDER_SHORT_NAME }}" true "${{ env.PROVIDER_VERSION }}"
-        working-directory: docs
-      - name: generate python docs
-        run: ./scripts/generate_python_docs.sh "${{ env.PROVIDER_SHORT_NAME }}"
         working-directory: docs
       - name: git status
         run: git status && git diff
