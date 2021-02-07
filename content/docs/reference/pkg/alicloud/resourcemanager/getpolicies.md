@@ -655,16 +655,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="createdate_csharp">
-<a href="#createdate_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The time when the policy was created.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="defaultversion_csharp">
 <a href="#defaultversion_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
 </span>
@@ -739,16 +729,6 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times the policy is referenced.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="createdate_go">
-<a href="#createdate_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The time when the policy was created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -829,16 +809,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="createdate_nodejs">
-<a href="#createdate_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The time when the policy was created.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="defaultversion_nodejs">
 <a href="#defaultversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Version</a>
 </span>
@@ -913,16 +883,6 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times the policy is referenced.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="create_date_python">
-<a href="#create_date_python" style="color: inherit; text-decoration: inherit;">create_<wbr>date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The time when the policy was created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">

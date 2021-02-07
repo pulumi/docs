@@ -32,6 +32,7 @@ class MyStack : Stack
         var example = new AliCloud.ResourceManager.ResourceGroup("example", new AliCloud.ResourceManager.ResourceGroupArgs
         {
             DisplayName = "testrd",
+            ResourceGroupName = "testrd",
         });
     }
 
@@ -52,7 +53,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := resourcemanager.NewResourceGroup(ctx, "example", &resourcemanager.ResourceGroupArgs{
-			DisplayName: pulumi.String("testrd"),
+			DisplayName:       pulumi.String("testrd"),
+			ResourceGroupName: pulumi.String("testrd"),
 		})
 		if err != nil {
 			return err
@@ -69,7 +71,9 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
-example = alicloud.resourcemanager.ResourceGroup("example", display_name="testrd")
+example = alicloud.resourcemanager.ResourceGroup("example",
+    display_name="testrd",
+    resource_group_name="testrd")
 ```
 
 {{% /example %}}
@@ -82,6 +86,7 @@ import * as alicloud from "@pulumi/alicloud";
 
 const example = new alicloud.resourcemanager.ResourceGroup("example", {
     displayName: "testrd",
+    resourceGroupName: "testrd",
 });
 ```
 
@@ -99,7 +104,7 @@ const example = new alicloud.resourcemanager.ResourceGroup("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/resourcemanager/#pulumi_alicloud.resourcemanager.ResourceGroup">ResourceGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/resourcemanager/#pulumi_alicloud.resourcemanager.ResourceGroup">ResourceGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -280,16 +285,25 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}The display name of the resource group. The name must be 1 to 30 characters in length and can contain letters, digits, periods (.), at signs (@), and hyphens (-).
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the resource group.The identifier must be 3 to 12 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The identifier must start with a letter.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Field `name` has been deprecated from version 1.114.0. Use `resource_group_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.114.0. Use &#39;resource_group_name&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -306,16 +320,25 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}The display name of the resource group. The name must be 1 to 30 characters in length and can contain letters, digits, periods (.), at signs (@), and hyphens (-).
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the resource group.The identifier must be 3 to 12 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The identifier must start with a letter.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Field `name` has been deprecated from version 1.114.0. Use `resource_group_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.114.0. Use &#39;resource_group_name&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -332,16 +355,25 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}The display name of the resource group. The name must be 1 to 30 characters in length and can contain letters, digits, periods (.), at signs (@), and hyphens (-).
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the resource group.The identifier must be 3 to 12 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The identifier must start with a letter.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Field `name` has been deprecated from version 1.114.0. Use `resource_group_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.114.0. Use &#39;resource_group_name&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -358,16 +390,25 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}The display name of the resource group. The name must be 1 to 30 characters in length and can contain letters, digits, periods (.), at signs (@), and hyphens (-).
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the resource group.The identifier must be 3 to 12 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The identifier must start with a letter.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Field `name` has been deprecated from version 1.114.0. Use `resource_group_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.114.0. Use &#39;resource_group_name&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -390,17 +431,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Alibaba Cloud account to which the resource group belongs.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="createdate_csharp">
-<a href="#createdate_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The time when the resource group was created.
-* `region_statuses` -The status of the resource group in all regions.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -448,17 +478,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="createdate_go">
-<a href="#createdate_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The time when the resource group was created.
-* `region_statuses` -The status of the resource group in all regions.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -500,17 +519,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Alibaba Cloud account to which the resource group belongs.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="createdate_nodejs">
-<a href="#createdate_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The time when the resource group was created.
-* `region_statuses` -The status of the resource group in all regions.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -558,17 +566,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="create_date_python">
-<a href="#create_date_python" style="color: inherit; text-decoration: inherit;">create_<wbr>date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The time when the resource group was created.
-* `region_statuses` -The status of the resource group in all regions.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -611,7 +608,7 @@ Get an existing ResourceGroup resource's state with the given name, ID, and opti
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region_statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceGroupRegionStatusArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ResourceGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region_statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceGroupRegionStatusArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ResourceGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -736,17 +733,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_createdate_csharp">
-<a href="#state_createdate_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The time when the resource group was created.
-* `region_statuses` -The status of the resource group in all regions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span>
@@ -755,16 +741,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The display name of the resource group. The name must be 1 to 30 characters in length and can contain letters, digits, periods (.), at signs (@), and hyphens (-).
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the resource group.The identifier must be 3 to 12 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The identifier must start with a letter.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Field `name` has been deprecated from version 1.114.0. Use `resource_group_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.114.0. Use &#39;resource_group_name&#39; instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_regionstatuses_csharp">
@@ -772,6 +758,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcegroupregionstatus">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Resource<wbr>Manager.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Region<wbr>Status<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resourcegroupname_csharp">
+<a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -802,17 +797,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_createdate_go">
-<a href="#state_createdate_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The time when the resource group was created.
-* `region_statuses` -The status of the resource group in all regions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span>
@@ -821,16 +805,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The display name of the resource group. The name must be 1 to 30 characters in length and can contain letters, digits, periods (.), at signs (@), and hyphens (-).
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the resource group.The identifier must be 3 to 12 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The identifier must start with a letter.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Field `name` has been deprecated from version 1.114.0. Use `resource_group_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.114.0. Use &#39;resource_group_name&#39; instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_regionstatuses_go">
@@ -838,6 +822,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcegroupregionstatus">[]Resource<wbr>Group<wbr>Region<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resourcegroupname_go">
+<a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -868,17 +861,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_createdate_nodejs">
-<a href="#state_createdate_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The time when the resource group was created.
-* `region_statuses` -The status of the resource group in all regions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
@@ -887,16 +869,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The display name of the resource group. The name must be 1 to 30 characters in length and can contain letters, digits, periods (.), at signs (@), and hyphens (-).
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the resource group.The identifier must be 3 to 12 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The identifier must start with a letter.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Field `name` has been deprecated from version 1.114.0. Use `resource_group_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.114.0. Use &#39;resource_group_name&#39; instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_regionstatuses_nodejs">
@@ -904,6 +886,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcegroupregionstatus">Resource<wbr>Group<wbr>Region<wbr>Status[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resourcegroupname_nodejs">
+<a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -934,17 +925,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_create_date_python">
-<a href="#state_create_date_python" style="color: inherit; text-decoration: inherit;">create_<wbr>date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The time when the resource group was created.
-* `region_statuses` -The status of the resource group in all regions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
@@ -953,16 +933,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The display name of the resource group. The name must be 1 to 30 characters in length and can contain letters, digits, periods (.), at signs (@), and hyphens (-).
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the resource group.The identifier must be 3 to 12 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The identifier must start with a letter.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Field `name` has been deprecated from version 1.114.0. Use `resource_group_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.114.0. Use &#39;resource_group_name&#39; instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_statuses_python">
@@ -970,6 +950,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcegroupregionstatus">Sequence[Resource<wbr>Group<wbr>Region<wbr>Status<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resource_group_name_python">
+<a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"

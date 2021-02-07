@@ -18,6 +18,7 @@ Explore the resources and functions of the pvtz module in the AliCloud package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
     <li><a href="getzonerecords" title="GetZoneRecords"><span class="symbol function"></span>GetZoneRecords</a></li>
     <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
 </ul>
@@ -31,7 +32,7 @@ Explore the resources and functions of the pvtz module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.32.0</dd>
+	<dd>2.34.0</dd>
 </dl>
 
 

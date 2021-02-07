@@ -99,6 +99,7 @@ import (
 	"fmt"
 
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/mns"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"

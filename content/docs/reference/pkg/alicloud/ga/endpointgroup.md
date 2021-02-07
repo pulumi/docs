@@ -38,7 +38,7 @@ class MyStack : Stack
         });
         var exampleListener = new AliCloud.Ga.Listener("exampleListener", new AliCloud.Ga.ListenerArgs
         {
-            AcceleratorId = "alicloud_ga_accelerator.example.id",
+            AcceleratorId = exampleAccelerator.Id,
             PortRanges = 
             {
                 new AliCloud.Ga.Inputs.ListenerPortRangeArgs
@@ -87,7 +87,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := ga.NewAccelerator(ctx, "exampleAccelerator", &ga.AcceleratorArgs{
+		exampleAccelerator, err := ga.NewAccelerator(ctx, "exampleAccelerator", &ga.AcceleratorArgs{
 			Duration:      pulumi.Int(1),
 			AutoUseCoupon: pulumi.Bool(true),
 			Spec:          pulumi.String("1"),
@@ -96,7 +96,7 @@ func main() {
 			return err
 		}
 		exampleListener, err := ga.NewListener(ctx, "exampleListener", &ga.ListenerArgs{
-			AcceleratorId: pulumi.String("alicloud_ga_accelerator.example.id"),
+			AcceleratorId: exampleAccelerator.ID(),
 			PortRanges: ga.ListenerPortRangeArray{
 				&ga.ListenerPortRangeArgs{
 					FromPort: pulumi.Int(60),
@@ -146,7 +146,7 @@ example_accelerator = alicloud.ga.Accelerator("exampleAccelerator",
     auto_use_coupon=True,
     spec="1")
 example_listener = alicloud.ga.Listener("exampleListener",
-    accelerator_id="alicloud_ga_accelerator.example.id",
+    accelerator_id=example_accelerator.id,
     port_ranges=[alicloud.ga.ListenerPortRangeArgs(
         from_port=60,
         to_port=70,
@@ -179,7 +179,7 @@ const exampleAccelerator = new alicloud.ga.Accelerator("exampleAccelerator", {
     spec: "1",
 });
 const exampleListener = new alicloud.ga.Listener("exampleListener", {
-    acceleratorId: "alicloud_ga_accelerator.example.id",
+    acceleratorId: exampleAccelerator.id,
     portRanges: [{
         fromPort: 60,
         toPort: 70,
@@ -1967,26 +1967,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Indicates whether client IP addresses are reserved. Valid values: `true`: Client IP addresses are reserved, `false`: Client IP addresses are not reserved. Default value is `false`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="probeport_csharp">
-<a href="#probeport_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Probe Port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="probeprotocol_csharp">
-<a href="#probeprotocol_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Protocol</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Probe Protocol.
-{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2032,26 +2012,6 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether client IP addresses are reserved. Valid values: `true`: Client IP addresses are reserved, `false`: Client IP addresses are not reserved. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="probeport_go">
-<a href="#probeport_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Probe Port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="probeprotocol_go">
-<a href="#probeprotocol_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Protocol</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Probe Protocol.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2099,26 +2059,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Indicates whether client IP addresses are reserved. Valid values: `true`: Client IP addresses are reserved, `false`: Client IP addresses are not reserved. Default value is `false`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="probeport_nodejs">
-<a href="#probeport_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Probe Port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="probeprotocol_nodejs">
-<a href="#probeprotocol_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Protocol</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Probe Protocol.
-{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2164,26 +2104,6 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether client IP addresses are reserved. Valid values: `true`: Client IP addresses are reserved, `false`: Client IP addresses are not reserved. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="probe_port_python">
-<a href="#probe_port_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Probe Port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="probe_protocol_python">
-<a href="#probe_protocol_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>protocol</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Probe Protocol.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
